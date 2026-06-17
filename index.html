@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>仕事ストレスチェック</title>
+<title>仕事ストレスチェック診断｜3分で無料診断【Worelu】</title>
+<meta name="description" content="10問・約3分でストレス状態を無料診断。仕事・人間関係・心身の状態を4つの観点から分析し、AIによるアドバイスも受けられます。登録不要・完全無料。">
+<meta property="og:title" content="仕事ストレスチェック診断｜3分で無料診断【Worelu】">
+<meta property="og:description" content="10問・約3分でストレス状態を無料診断。仕事・人間関係・心身の状態を4つの観点から分析し、AIによるアドバイスも受けられます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://worelu.com/">
+<link rel="canonical" href="https://worelu.com/">
 <style>
   :root {
     --accent: #1D9E75;
@@ -268,13 +274,24 @@
 <body>
 
 <header class="site-header">
-  <div class="site-logo">仕事ストレスチェック</div>
-  <div class="site-tagline">仕事で壊れる前に。</div>
+  <div>
+    <div class="site-logo">Worelu</div>
+    <div class="site-tagline">無料ストレスチェック</div>
+  </div>
+  <div style="font-size:12px;color:var(--text-tertiary);">仕事で壊れる前に。</div>
 </header>
 
 <div class="app" id="app">
   <div class="question-panel">
-    <div>
+    <div style="background:var(--accent-light);border:0.5px solid var(--accent-border);border-radius:var(--radius-md);padding:16px 20px;display:flex;flex-direction:column;gap:8px;" id="introBlock">
+      <div style="font-size:13px;font-weight:700;color:var(--accent);">3分で分かる、無料ストレスチェック診断</div>
+      <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;">10問に答えるだけで、今のストレス状態を4つの視点からAIが分析します。</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:2px;">
+        <span style="font-size:12px;color:var(--accent);font-weight:600;">✓ 無料</span>
+        <span style="font-size:12px;color:var(--accent);font-weight:600;">✓ 登録不要</span>
+        <span style="font-size:12px;color:var(--accent);font-weight:600;">✓ AIアドバイス付き</span>
+      </div>
+    </div>
       <div class="q-meta">
         <span class="q-num" id="qNum">Q1 / 10</span>
         <span class="q-pct" id="qPct">10%</span>
@@ -296,7 +313,7 @@
 
   <div class="preview-panel">
     <div>
-      <div class="preview-badge">LIVE PREVIEW</div>
+      <div class="preview-badge">リアルタイム分析</div>
       <div class="preview-title">今の仕事コンディション</div>
     </div>
     <div class="total-score-wrap">
@@ -770,6 +787,9 @@ function calcRaw() {
 
 /* ========== 描画：診断画面 ========== */
 function renderQuestion() {
+  // 2問目以降はファーストビューブロックを非表示
+  const introBlock = document.getElementById('introBlock');
+  if (introBlock && cur > 0) introBlock.style.display = 'none';
   const q = QUESTIONS[cur];
   document.getElementById('qNum').textContent = `Q${cur+1} / ${QUESTIONS.length}`;
   const pct = Math.round((cur+1) / QUESTIONS.length * 100);
