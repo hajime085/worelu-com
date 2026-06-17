@@ -288,11 +288,11 @@
     gap: 10px;
     align-items: baseline;
   }
-  .axis-name { font-size: 13px; font-weight: 800; }
-  .axis-val { min-width: 32px; text-align: right; font-size: 13px; font-weight: 900; }
+  .axis-name { font-size: 15px; font-weight: 800; }
+  .axis-val { min-width: 36px; text-align: right; font-size: 18px; font-weight: 900; }
   .axis-delta {
-    min-width: 38px; text-align: right;
-    color: var(--muted); font-size: 12px; font-weight: 900;
+    min-width: 40px; text-align: right;
+    color: var(--muted); font-size: 13px; font-weight: 900;
     opacity: 0.78;
     transition: color 160ms ease;
   }
@@ -304,12 +304,12 @@
     45%  { transform:scale(1.18); opacity:1; }
     100% { transform:scale(1); opacity:0.78; }
   }
-  .bar-track { height: 11px; overflow: hidden; border-radius: 999px; background: #EEF3F1; }
+  .bar-track { height: 13px; overflow: hidden; border-radius: 999px; background: var(--sand-2); }
   .bar-fill { height: 100%; width: 0; border-radius: inherit; transition: width 420ms ease; }
-  .bar-stress      { background: var(--col-stress); }
-  .bar-burnout     { background: var(--col-burnout); }
-  .bar-environment { background: var(--col-environment); }
-  .bar-leaving     { background: var(--col-leaving); }
+  .bar-stress      { background: #E24B4A; }
+  .bar-burnout     { background: #D4860A; }
+  .bar-environment { background: #2E86C1; }
+  .bar-leaving     { background: #7D5BC6; }
 
   /* AI BOX */
   .ai-box {
@@ -562,9 +562,9 @@
 /* ===== 軸定義 ===== */
 const AXES = [
   { key:'stress',      label:'仕事ストレス',  color:'#E24B4A' },
-  { key:'burnout',     label:'燃え尽き傾向',  color:'#EF9F27' },
-  { key:'environment', label:'職場環境',       color:'#378ADD' },
-  { key:'leaving',     label:'転職意向',       color:'#7F77DD' }
+  { key:'burnout',     label:'燃え尽き傾向',  color:'#D4860A' },
+  { key:'environment', label:'職場環境',       color:'#2E86C1' },
+  { key:'leaving',     label:'転職意向',       color:'#7D5BC6' }
 ];
 
 const MAX_RAW = {
@@ -658,7 +658,7 @@ function buildAxisList() {
     item.innerHTML = `
       <div class="axis-top">
         <div class="axis-name">${a.label}</div>
-        <div class="axis-val" id="val-${a.key}">0</div>
+        <div class="axis-val" id="val-${a.key}" style="color:${a.color}">0</div>
         <div class="axis-delta" id="delta-${a.key}">±0</div>
       </div>
       <div class="bar-track"><div class="bar-fill bar-${a.key}" id="bar-${a.key}"></div></div>
