@@ -3,7 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>仕事ストレスチェック</title>
+<title>仕事ストレスチェック診断｜約1分で無料診断【Worelu】</title>
+<meta name="description" content="10問・約1分でストレス状態を無料診断。仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析します。登録不要・完全無料。">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="仕事ストレスチェック診断｜約1分で無料診断【Worelu】">
+<meta property="og:description" content="10問・約1分でストレス状態を無料診断。仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析します。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://worelu.com/">
+<meta property="og:image" content="https://worelu.com/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worelu.com/ogp.png">
+<link rel="canonical" href="https://worelu.com/">
+<link rel="icon" href="/favicon.ico">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Worelu ストレスチェック",
+  "url": "https://worelu.com/",
+  "description": "仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析する無料ストレスチェック診断",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  }
+}
+</script>
 <style>
   :root {
     --accent: #1D9E75;
@@ -268,12 +295,24 @@
 <body>
 
 <header class="site-header">
-  <div class="site-logo">仕事ストレスチェック</div>
-  <div class="site-tagline">仕事で壊れる前に。</div>
+  <div>
+    <div class="site-logo">Worelu</div>
+    <div class="site-tagline">無料ストレスチェック</div>
+  </div>
+  <div style="font-size:12px;color:var(--text-tertiary);">仕事で壊れる前に。</div>
 </header>
 
 <div class="app" id="app">
   <div class="question-panel">
+    <div id="introBlock" style="background:var(--accent-light);border:0.5px solid var(--accent-border);border-radius:var(--radius-md);padding:12px 16px;display:flex;flex-direction:column;gap:6px;">
+      <h1 style="font-size:15px;font-weight:700;color:var(--accent);margin:0;line-height:1.4;">仕事ストレスチェック診断</h1>
+      <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;">仕事・心身・燃え尽き・転職意向を、AIがリアルタイム分析します。</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <span style="font-size:11px;color:var(--accent);font-weight:600;">✓ 無料</span>
+        <span style="font-size:11px;color:var(--accent);font-weight:600;">✓ 登録不要</span>
+        <span style="font-size:11px;color:var(--accent);font-weight:600;">✓ AIアドバイス付き</span>
+      </div>
+    </div>
     <div>
       <div class="q-meta">
         <span class="q-num" id="qNum">Q1 / 10</span>
@@ -296,12 +335,12 @@
 
   <div class="preview-panel">
     <div>
-      <div class="preview-badge">LIVE PREVIEW</div>
+      <div class="preview-badge">リアルタイム分析</div>
       <div class="preview-title">今の仕事コンディション</div>
     </div>
     <div class="total-score-wrap">
       <div class="total-ring" id="totalRing">
-        <div class="total-num" id="totalNum">—</div>
+        <div class="total-num" id="totalNum">0</div>
         <div class="total-label">総合指数</div>
       </div>
     </div>
@@ -310,8 +349,8 @@
         <div class="axis-top">
           <span class="axis-name">仕事ストレス</span>
           <div class="axis-right">
-            <span class="axis-val" id="val-stress">—</span>
-            <span class="axis-delta delta-none" id="delta-stress">—</span>
+            <span class="axis-val" id="val-stress">0</span>
+            <span class="axis-delta delta-none" id="delta-stress"></span>
           </div>
         </div>
         <div class="bar-track"><div class="bar-fill bar-stress" id="bar-stress"></div></div>
@@ -320,8 +359,8 @@
         <div class="axis-top">
           <span class="axis-name">燃え尽き傾向</span>
           <div class="axis-right">
-            <span class="axis-val" id="val-burnout">—</span>
-            <span class="axis-delta delta-none" id="delta-burnout">—</span>
+            <span class="axis-val" id="val-burnout">0</span>
+            <span class="axis-delta delta-none" id="delta-burnout"></span>
           </div>
         </div>
         <div class="bar-track"><div class="bar-fill bar-burnout" id="bar-burnout"></div></div>
@@ -330,8 +369,8 @@
         <div class="axis-top">
           <span class="axis-name">職場環境</span>
           <div class="axis-right">
-            <span class="axis-val" id="val-environment">—</span>
-            <span class="axis-delta delta-none" id="delta-environment">—</span>
+            <span class="axis-val" id="val-environment">0</span>
+            <span class="axis-delta delta-none" id="delta-environment"></span>
           </div>
         </div>
         <div class="bar-track"><div class="bar-fill bar-environment" id="bar-environment"></div></div>
@@ -340,8 +379,8 @@
         <div class="axis-top">
           <span class="axis-name">転職意向</span>
           <div class="axis-right">
-            <span class="axis-val" id="val-leaving">—</span>
-            <span class="axis-delta delta-none" id="delta-leaving">—</span>
+            <span class="axis-val" id="val-leaving">0</span>
+            <span class="axis-delta delta-none" id="delta-leaving"></span>
           </div>
         </div>
         <div class="bar-track"><div class="bar-fill bar-leaving" id="bar-leaving"></div></div>
@@ -770,6 +809,8 @@ function calcRaw() {
 
 /* ========== 描画：診断画面 ========== */
 function renderQuestion() {
+  const introBlock = document.getElementById('introBlock');
+  if (introBlock) introBlock.style.display = cur === 0 ? '' : 'none';
   const q = QUESTIONS[cur];
   document.getElementById('qNum').textContent = `Q${cur+1} / ${QUESTIONS.length}`;
   const pct = Math.round((cur+1) / QUESTIONS.length * 100);
@@ -1021,6 +1062,12 @@ function renderResultPage() {
         <button class="btn-accent" onclick="resetApp()">もう一度診断する</button>
         <button class="btn-outline" onclick="shareResult(${JSON.stringify(norm)}, '${dominant}')">結果をコピー</button>
       </div>
+    </div>
+
+    <div class="result-card" style="background:linear-gradient(135deg,var(--accent-light) 0%,#fff 100%);border-color:var(--accent-border);text-align:center;padding:28px 22px;">
+      <div style="font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">もっと詳しく相談する</div>
+      <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">AIがあなたの診断結果をもとに、<br>具体的な改善方法を一緒に考えます。</div>
+      <button onclick="document.getElementById('chatIn').focus();document.getElementById('chatIn').scrollIntoView({behavior:'smooth'})" style="background:var(--accent);color:#fff;border:none;border-radius:var(--radius-md);padding:12px 28px;font-size:14px;font-weight:600;cursor:pointer;letter-spacing:-0.01em;">AIに相談する →</button>
     </div>
 
     <div class="result-card">
