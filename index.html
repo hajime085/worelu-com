@@ -27,24 +27,26 @@
 </script>
 <style>
   :root {
-    --accent: #C05A2E;
-    --accent-soft: #FAECE7;
-    --accent-dark: #993C1D;
-    --text: #1E1A17;
-    --muted: #7A6E68;
-    --line: #EDE8E3;
-    --panel: #FFFFFF;
-    --page: #FAF7F4;
-    --navy: #1B2B4B;
-    --navy-soft: #EBF0F8;
-    --warning: #BA7517;
-    --danger: #C0392B;
-    --col-stress: #C05A2E;
-    --col-burnout: #BA7517;
-    --col-environment: #2B6CB0;
-    --col-leaving: #6B46C1;
+    --accent: #8B6F47;
+    --accent-soft: #F5EFE6;
+    --accent-dark: #6B5236;
+    --text: #2C2416;
+    --muted: #8C7B6A;
+    --line: #E8DFD0;
+    --panel: #FFFDF9;
+    --page: #F5F0E8;
+    --sand-1: #FAF5EC;
+    --sand-2: #EDE4D3;
+    --sand-3: #D4C5AE;
+    --sand-dark: #4A3F2F;
+    --warning: #A0742A;
+    --danger: #B54A3A;
+    --col-stress: #C0603A;
+    --col-burnout: #A0742A;
+    --col-environment: #3A6E8A;
+    --col-leaving: #6E5A8E;
     --radius: 12px;
-    --shadow: 0 14px 38px rgba(30,20,15,0.08);
+    --shadow: 0 14px 38px rgba(44,36,22,0.09);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -67,7 +69,7 @@
     align-items: center;
     justify-content: space-between;
   }
-  .site-logo { font-size: 16px; font-weight: 800; color: var(--navy); letter-spacing: -0.02em; }
+  .site-logo { font-size: 16px; font-weight: 800; color: var(--sand-dark); letter-spacing: -0.02em; }
   .site-tagline { font-size: 11px; color: var(--muted); margin-top: 1px; }
   .site-right { font-size: 12px; color: var(--muted); }
 
@@ -96,8 +98,8 @@
 
   /* INTRO BLOCK */
   .intro-block {
-    background: var(--navy-soft);
-    border: 1px solid rgba(27,43,75,0.15);
+    background: var(--sand-2);
+    border: 1px solid var(--sand-3);
     border-radius: 10px;
     padding: 14px 18px;
     margin-bottom: 24px;
@@ -105,12 +107,12 @@
   .intro-block h1 {
     font-size: 14px;
     font-weight: 800;
-    color: var(--navy);
+    color: var(--sand-dark);
     margin-bottom: 5px;
   }
   .intro-block p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
   .intro-chips { display: flex; gap: 10px; flex-wrap: wrap; }
-  .intro-chip { font-size: 11px; color: var(--navy); font-weight: 700; }
+  .intro-chip { font-size: 11px; color: var(--accent); font-weight: 700; }
 
   /* TOPLINE */
   .topline {
@@ -119,7 +121,7 @@
     align-items: center;
     margin-bottom: 14px;
   }
-  .kicker { color: var(--navy); font-size: 12px; font-weight: 800; letter-spacing: 0.03em; }
+  .kicker { color: var(--sand-dark); font-size: 12px; font-weight: 800; letter-spacing: 0.03em; }
   .q-count { color: var(--muted); font-size: 14px; font-weight: 700; }
 
   /* PROGRESS */
@@ -147,9 +149,9 @@
     font-size: 11px;
     font-weight: 700;
     margin-bottom: 10px;
-    background: #FAEEDA;
-    color: #854F0B;
-    border: 1px solid rgba(186,117,23,0.25);
+    background: var(--sand-2);
+    color: var(--accent-dark);
+    border: 1px solid var(--sand-3);
   }
 
   /* QUESTION TEXT */
@@ -237,12 +239,12 @@
   .live-dot {
     display: inline-flex; width: 8px; height: 8px; margin-right: 7px;
     border-radius: 999px; background: var(--accent);
-    box-shadow: 0 0 0 5px rgba(192,90,46,0.12);
+    box-shadow: 0 0 0 5px rgba(139,111,71,0.15);
   }
   .risk-pill {
     padding: 6px 10px; border-radius: 999px;
-    background: var(--accent-soft); color: var(--accent-dark);
-    font-size: 12px; font-weight: 900;
+    background: var(--sand-2); color: var(--sand-dark);
+    font-size: 12px; font-weight: 900; border: 1px solid var(--sand-3);
   }
 
   /* TOTAL SCORE */
@@ -319,7 +321,7 @@
   }
   .ai-title {
     display: flex; justify-content: space-between; gap: 10px;
-    margin-bottom: 10px; color: var(--navy);
+    margin-bottom: 10px; color: var(--accent);
     font-size: 11px; font-weight: 900;
   }
   .answered { color: var(--muted); font-size: 11px; font-weight: 800; }
@@ -357,7 +359,7 @@
   .result-lead { max-width: 720px; color: var(--muted); font-size: 15px; font-weight: 650; line-height: 1.8; }
   .result-total-box {
     min-width: 130px; padding: 16px; text-align: center;
-    border: 1px solid var(--line); border-radius: 12px; background: #FAF7F4;
+    border: 1px solid var(--sand-3); border-radius: 12px; background: var(--sand-1);
   }
   .result-total-num { display: block; font-size: 46px; line-height: 1; color: var(--accent); font-weight: 900; }
   .result-total-label { color: var(--muted); font-size: 11px; font-weight: 900; }
@@ -377,8 +379,9 @@
   .analysis-text { color: var(--muted); font-size: 15px; font-weight: 650; line-height: 1.85; white-space: pre-wrap; }
   .reassurance {
     margin-top: 14px; padding: 12px 14px;
-    border-radius: 10px; background: #FAEEDA;
-    color: #633806; font-size: 13px; font-weight: 800;
+    border-radius: 10px; background: var(--sand-2);
+    color: var(--sand-dark); font-size: 13px; font-weight: 800;
+    border: 1px solid var(--sand-3);
   }
 
   .task-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
@@ -420,14 +423,14 @@
 
   /* CTA */
   .cta-card {
-    background: var(--navy-soft);
-    border: 1px solid rgba(27,43,75,0.15);
+    background: var(--sand-2);
+    border: 1px solid var(--sand-3);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     padding: 28px 30px;
     text-align: center;
   }
-  .cta-title { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .cta-title { font-size: 15px; font-weight: 800; color: var(--sand-dark); margin-bottom: 8px; }
   .cta-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
 
   .result-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -450,8 +453,8 @@
     max-width: 84%; padding: 11px 14px; border-radius: 12px;
     font-size: 13px; font-weight: 700; line-height: 1.65; white-space: pre-wrap;
   }
-  .bubble.ai { justify-self: start; background: #FAEEDA; color: #412402; }
-  .bubble.user { justify-self: end; background: #F1EEE9; color: var(--text); }
+  .bubble.ai { justify-self: start; background: var(--sand-1); color: var(--sand-dark); border: 1px solid var(--sand-2); }
+  .bubble.user { justify-self: end; background: var(--accent); color: #FFF8F0; }
   .bubble.crisis { justify-self: start; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
   .typing-dots {
     display: flex; gap: 4px; padding: 12px 14px;
@@ -935,6 +938,7 @@ function renderResultPage() {
   document.getElementById('app').classList.add('hidden');
   rp.classList.remove('hidden');
   window.scrollTo({top:0,behavior:'smooth'});
+  setChatContext(dominant, norm, total);
 
   const el = document.getElementById('analysisText');
   el.textContent = '';
@@ -947,19 +951,77 @@ const CRISIS_WORDS = ['消えたい','死にたい','生きるのがつらい','
 const BURNOUT_WORDS = ['限界','眠れない','涙が出','泣けてく','泣いてしまう','動悸','吐き気','胃が痛い','適応障害','メンタル限界','心が折れた','起き上がれない','体が動かない','しんどすぎ','もう無理かも','うつ','バーンアウト','燃え尽き','休職','病院','メンタルクリニック'];
 const CRISIS_REPLY = `今とてもつらい状況にあることが伝わってきました。\n\n一人で抱え込まず、信頼できる人や専門の相談窓口へ今すぐ相談してください。\n\n【相談窓口】\n・よりそいホットライン：0120-279-338（24時間）\n・こころの健康相談統一ダイヤル：0570-064-556\n・緊急性が高い場合は119番または最寄りの救急窓口\n\nもし今ここで気持ちを話したければ、私はあなたの話を聞きます。`;
 
-const COACH_REPLIES = {
-  '残業':'残業が続くと、心身のリカバリーが追いつかなくなります。\n\n試してみてほしいこと：今日の業務をすべて書き出し、「自分しかできないもの」「今日じゃなくていいもの」の2つに分けてみてください。「今日じゃなくていいもの」を1つ後回しにするだけで、少し楽になります。',
-  '業務量':'業務量が多すぎる場合、解決策は2つです。「断る」か「優先順位を整理する」かです。\n\n上司に相談するなら「業務量を減らしてほしい」より「優先順位を一緒に整理したい」という言い方の方が通りやすいです。',
-  '給料':'給料への不満は、「市場価値と自社の評価がズレている」か「評価制度そのものへの不満」のどちらかが多いです。\n\nまず転職サイトで同職種・同年齢の相場を調べてみてください。',
-  '評価':'評価されていないと感じるとき、原因は「成果が出ていない」「成果が見えていない」「評価者と合っていない」の3つのどれかです。\n\n「成果の見せ方」を変えることで改善できるケースが多いです。',
-  '上司':'上司との関係は、直接対立するより「業務上の課題」として伝える方が動きやすいです。\n\n「〇〇が難しい状況です、優先順位を一緒に整理したい」という形が通りやすいです。',
-  '人間関係':'職場の人間関係で消耗しているなら、まず「安全に話せる人」を1人だけ決めることが先決です。\n\n全員と仲良くする必要はありません。信頼できる1人がいるだけで、心理的負荷はかなり下がります。',
-  '転職':'転職を考えるのは自然なことです。ただ、「今の職場が嫌」と「転職先が良い」は別の問題です。\n\nまず「何を変えたいのか」を明確にしてから動くと、転職後の後悔が少なくなります。',
-  '辞め':'辞めたいという気持ちは、今の状態が限界に近いサインかもしれません。\n\n急いで結論を出す必要はありません。まず「何が一番つらいか」を書き出してみてください。',
-  'やる気':'やる気が出ないのは、意志の問題ではなく疲労やミスマッチのサインです。\n\nまず「何に対してやる気が出ないのか」を特定してみてください。仕事全体なのか、特定の業務なのかで対処が変わります。',
-  'キャリア':'キャリアへの不安は、多くの場合「現状の見えない化」が原因です。\n\n今の自分のスキルと経験を棚卸しすると、意外と選択肢があることに気づけます。',
-  'default':'今おっしゃっていることは、多くの働く人が感じていることです。\n\nもう少し具体的に教えてもらえますか？たとえば「残業が多い」「上司と合わない」「やる気が出ない」など、一番気になっていることを入れてもらうと、より具体的にお伝えできます。'
-};
+/* ===== ① キーワード辞書（拡充版） ===== */
+const KEYWORD_MAP = [
+  {
+    keys: ['残業','長時間','残業代','サービス残業','終わらない','仕事が多','タスク','業務量','キャパ','仕事量','締切','納期','忙しい','仕事が増'],
+    reply: '業務の負荷が高い状態が続いているようです。\n\nまず今日の仕事を全部書き出して「自分しかできないもの」と「今日でなくていいもの」に分けてみてください。後者を1つだけ後回しにするだけで、かなり楽になります。\n\n上司に相談するなら「業務量を減らして」より「優先順位を一緒に整理したい」という言い方の方が動いてもらいやすいです。'
+  },
+  {
+    keys: ['相談','話せない','話しにくい','相談できない','環境がない','孤立','一人','誰もいない','話す相手','聞いてもらえない'],
+    reply: '相談できる環境がないのは、じわじわと消耗する状況です。\n\n職場の全員と仲良くする必要はありません。まず「この人には少し話せる」という人を1人だけ決めて、そこから小さく始めてみてください。\n\n社内に誰もいなければ、産業医や社外の相談窓口も選択肢です。一人で抱えることだけは避けてください。'
+  },
+  {
+    keys: ['コミュニケーション','話し合い','意思疎通','伝わらない','噛み合わない','会話','ミーティング','会議','連携','報告'],
+    reply: 'コミュニケーションがうまくいかないとき、原因は大きく「タイミング」「伝え方」「相手との相性」の3つです。\n\nまず試せること：話したいことを「事実」「困っていること」「お願いしたいこと」の3つに分けて短く書いてから伝えると、受け取られ方がかなり変わります。\n\n相手の問題であれば、第三者（上司・人事・産業医）を挟む方法も有効です。'
+  },
+  {
+    keys: ['教えてもらえない','教わる時間','覚えられない','ついていけない','追いつかない','わからない','スキルがない','未経験','新しい業務','入社','新人'],
+    reply: '覚えることが多すぎて追いつかない感覚は、能力の問題ではなく「量と時間のミスマッチ」です。\n\n今日から試せること：「今日1つだけ覚える」に絞ってみてください。全部覚えようとするより、確実に身につく1つを積み上げる方が早く追いつけます。\n\n周囲に聞きにくい環境なら、質問をまとめてから一度に聞くスタイルに切り替えると相手の負担も減ります。'
+  },
+  {
+    keys: ['上司','マネージャー','manager','部長','課長','上の人','上長','リーダー','チームリーダー','合わない','怖い','威圧','パワハラ','怒鳴'],
+    reply: '上司との関係でのストレスは、直接対立より「業務上の課題」として伝える方が動きやすいです。\n\n「〇〇が難しい状況です、優先順位を一緒に整理したい」という形が通りやすいです。\n\nパワハラや威圧的な言動がある場合は、人事・産業医・社外相談窓口への相談も選択肢として持っておいてください。'
+  },
+  {
+    keys: ['人間関係','同僚','チーム','雰囲気','職場','派閥','陰口','無視','孤立感','居場所','仲間外れ'],
+    reply: '職場の人間関係の負荷は、ストレスの中でも特に消耗しやすいタイプです。\n\nまず「この人といると少し楽」という人を1人だけ探して、そこを安全地帯にすることが先決です。全員と仲良くしようとしなくていいです。\n\n居場所がないと感じるほどなら、環境を変えることも含めて真剣に考えていい段階かもしれません。'
+  },
+  {
+    keys: ['評価','昇進','昇格','給料','年収','報われない','認められない','査定','フィードバック','成果が見えない'],
+    reply: '評価されていないと感じるとき、原因は「成果が出ていない」「成果が見えていない」「評価者との認識のズレ」の3つのどれかです。\n\nまず上司が何を見て評価しているかを確認してみてください。自分が頑張っていることと、評価される指標がズレていることがよくあります。\n\n「成果の見せ方」を変えるだけで評価が変わることは多いです。'
+  },
+  {
+    keys: ['転職','退職','辞め','辞める','辞めたい','転職活動','求人','エージェント','次の仕事','転職先'],
+    reply: '転職を考えるのは自然なことです。\n\nただ「今の職場が嫌」と「転職先が良い」は別の問題です。まず変えたいものが「仕事内容」「職場環境」「人間関係」「給料」のどれなのかを特定してから動くと、転職後の後悔が少なくなります。\n\n転職エージェントに相談することで、今の状態を客観的に見てもらえることもあります。'
+  },
+  {
+    keys: ['やる気','モチベーション','意欲','気力','やる気が出ない','やる気がない','仕事が嫌','仕事したくない','気が重い','行きたくない'],
+    reply: 'やる気が出ないのは意志の問題ではなく、疲労・目的のズレ・評価への不満などのサインです。\n\nまず「何に対してやる気が出ないのか」を特定してみてください。仕事全体なのか、特定の業務なのか、特定の人との関係なのかで対処が変わります。\n\n疲れが原因であれば、まず回復が先決です。'
+  },
+  {
+    keys: ['休みたい','休息','疲れた','しんどい','きつい','つらい','しんどくなってきた','もう限界','余裕がない','余裕ない'],
+    reply: '疲れをしっかり感じているということは、それだけ頑張ってきたということです。\n\n「休むのは逃げ」ではなく、回復して次に動くための必要なステップです。\n\nまず今週、1日だけ意識的に「仕事のことを考えない時間」を30分作ってみてください。小さい回復を積み重ねることが、長期的に動き続ける唯一の方法です。'
+  },
+  {
+    keys: ['キャリア','将来','スキル','成長','このまま','先が見えない','方向性','何がしたいか','やりたいこと','目標'],
+    reply: 'キャリアへの不安は、多くの場合「今の自分の棚卸しができていない」ことから来ています。\n\nまず現職でのスキルと経験を書き出してみてください。意外と選択肢があることに気づけます。\n\n「何がしたいかわからない」という状態なら、転職エージェントへの相談が意外と整理になることもあります。'
+  }
+];
+
+/* ===== ② スコア連動のdefaultレスポンス ===== */
+let chatContext = { dominant:'stress', norm:{stress:0,burnout:0,environment:0,leaving:0}, total:0 };
+
+function setChatContext(dominant, norm, total) {
+  chatContext = { dominant, norm, total };
+}
+
+function getContextualDefault() {
+  const { dominant, norm, total } = chatContext;
+  if(total < 30) {
+    return '今の状態は比較的安定しているようです。\n\nこのコンディションを維持するために、休息のリズムと相談できる環境を崩さないことが大切です。\n\n気になっていることがあれば、もう少し具体的に教えてもらえますか？';
+  }
+  if(dominant === 'burnout') {
+    return '診断結果では燃え尽き傾向が強く出ています。\n\n「頑張り続けること」より「回復すること」を今は優先してください。\n\n具体的にどんなことが一番消耗しているか教えてもらえますか？仕事量なのか、人間関係なのか、意味が感じられないのか、によって対処が変わります。';
+  }
+  if(dominant === 'leaving') {
+    return '診断結果では転職意向が高めに出ています。\n\n辞めることを急いで決める必要はありませんが、今の状況を整理しておくことは大事です。\n\n「変えたいもの」が仕事内容なのか、職場環境なのか、人間関係なのか、給料なのか、教えてもらえますか？';
+  }
+  if(dominant === 'environment') {
+    return '診断結果では職場環境への負担が強く出ています。\n\n人間関係・評価・業務量のうち、どれが一番消耗していますか？\n\n具体的に教えてもらえると、今できることをより絞って伝えられます。';
+  }
+  return '今おっしゃっていることは、多くの働く人が感じていることです。\n\nもう少し具体的に教えてもらえますか？「残業が多い」「上司と合わない」「やる気が出ない」など、一番気になっていることを入れてもらうと、より具体的にお伝えできます。';
+}
 
 function classifyInput(text) {
   if(CRISIS_WORDS.some(w=>text.includes(w))) return 'crisis';
@@ -980,10 +1042,10 @@ function getBurnoutReply(text) {
 }
 
 function getNormalReply(text) {
-  for(const [k,v] of Object.entries(COACH_REPLIES)) {
-    if(k!=='default'&&text.includes(k)) return v;
+  for(const entry of KEYWORD_MAP) {
+    if(entry.keys.some(k=>text.includes(k))) return entry.reply;
   }
-  return COACH_REPLIES.default;
+  return getContextualDefault();
 }
 
 function sendChat() {
