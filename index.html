@@ -925,7 +925,7 @@ function renderResultPage() {
         <div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div>
       </div>
       <div class="chat-form">
-        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off" onkeydown="if(event.key==='Enter'){event.preventDefault();sendChat();}">
+        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off">
         <button class="btn primary" type="button" onclick="sendChat()">送る</button>
       </div>
     </section>
