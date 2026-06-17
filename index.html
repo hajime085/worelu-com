@@ -12,7 +12,6 @@
 <meta property="og:url" content="https://worelu.com/">
 <meta property="og:image" content="https://worelu.com/ogp.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://worelu.com/ogp.png">
 <link rel="canonical" href="https://worelu.com/">
 <link rel="icon" href="/favicon.ico">
 <script type="application/ld+json">
@@ -23,272 +22,471 @@
   "url": "https://worelu.com/",
   "description": "仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析する無料ストレスチェック診断",
   "applicationCategory": "HealthApplication",
-  "operatingSystem": "All",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "JPY"
-  }
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
 }
 </script>
 <style>
   :root {
     --accent: #1D9E75;
+    --accent-soft: #EAF8F3;
     --accent-dark: #0F6E56;
-    --accent-light: #E1F5EE;
-    --accent-border: #9FE1CB;
-    --bg: #ffffff;
-    --bg-secondary: #f7f7f5;
-    --bg-tertiary: #f0efeb;
-    --text: #1a1a1a;
-    --text-secondary: #6b6b6b;
-    --text-tertiary: #9a9a9a;
-    --border: rgba(0,0,0,0.10);
-    --border-md: rgba(0,0,0,0.15);
-    --radius-sm: 8px;
-    --radius-md: 10px;
-    --radius-lg: 14px;
+    --text: #18231F;
+    --muted: #68736F;
+    --line: #E5EBE8;
+    --panel: #FFFFFF;
+    --page: #F7FAF9;
+    --warning: #D97706;
+    --danger: #DC2626;
     --col-stress: #E24B4A;
     --col-burnout: #EF9F27;
     --col-environment: #378ADD;
     --col-leaving: #7F77DD;
+    --radius: 12px;
+    --shadow: 0 14px 38px rgba(23,43,36,0.08);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-    background: var(--bg-secondary);
-    color: var(--text);
     min-height: 100vh;
+    background: var(--page);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
     line-height: 1.6;
   }
+  button, input { font: inherit; }
   .hidden { display: none !important; }
 
   /* HEADER */
   .site-header {
-    background: var(--bg);
-    border-bottom: 0.5px solid var(--border);
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
     padding: 0 24px;
     height: 52px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .site-logo { font-size: 15px; font-weight: 600; color: var(--accent); letter-spacing: -0.02em; }
-  .site-tagline { font-size: 12px; color: var(--text-tertiary); }
+  .site-logo { font-size: 16px; font-weight: 800; color: var(--accent); letter-spacing: -0.02em; }
+  .site-tagline { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .site-right { font-size: 12px; color: var(--muted); }
 
   /* APP LAYOUT */
   .app {
+    width: min(1180px, calc(100% - 32px));
+    margin: 32px auto;
     display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 16px;
-    max-width: 900px;
-    margin: 24px auto;
-    padding: 0 16px;
+    grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+    gap: 20px;
+    align-items: stretch;
   }
 
-  /* QUESTION PANEL */
-  .question-panel {
-    background: var(--bg);
-    border-radius: var(--radius-lg);
-    border: 0.5px solid var(--border);
-    padding: 28px;
+  /* QUESTION AREA */
+  .question-area {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-height: 720px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    min-height: 480px;
+    gap: 0;
   }
-  .q-meta { display: flex; align-items: center; justify-content: space-between; }
-  .q-num { font-size: 13px; color: var(--text-tertiary); font-weight: 500; }
-  .q-pct { font-size: 12px; color: var(--accent); font-weight: 600; }
-  .progress-wrap { height: 4px; background: var(--bg-tertiary); border-radius: 2px; overflow: hidden; margin-top: 8px; }
-  .progress-fill { height: 4px; background: var(--accent); border-radius: 2px; transition: width 0.4s ease; }
-  .q-text { font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.5; letter-spacing: -0.02em; }
+
+  /* INTRO BLOCK */
+  .intro-block {
+    background: var(--accent-soft);
+    border: 1px solid rgba(29,158,117,0.25);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+  }
+  .intro-block h1 {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 5px;
+  }
+  .intro-block p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
+  .intro-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .intro-chip { font-size: 11px; color: var(--accent); font-weight: 700; }
+
+  /* TOPLINE */
+  .topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: 0.03em; }
+  .q-count { color: var(--muted); font-size: 14px; font-weight: 700; }
+
+  /* PROGRESS */
+  .progress {
+    height: 9px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #EEF3F1;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 10%;
+    border-radius: inherit;
+    background: var(--accent);
+    transition: width 320ms ease;
+  }
+
+  /* TYPE BADGE */
   .q-type-badge {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 999px;
     font-size: 11px;
-    color: var(--accent-dark);
-    background: var(--accent-light);
-    border: 0.5px solid var(--accent-border);
-    border-radius: 4px;
-    padding: 2px 8px;
-    font-weight: 500;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(29,158,117,0.2);
   }
-  .options { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-  .opt {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 13px 16px;
-    border: 0.5px solid var(--border);
-    border-radius: var(--radius-md);
+
+  /* QUESTION TEXT */
+  .q-text {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.38;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+
+  /* OPTIONS */
+  .options { display: grid; gap: 12px; margin-bottom: auto; }
+  .option {
+    position: relative;
+    display: grid;
+    grid-template-columns: 22px minmax(0,1fr);
+    gap: 14px;
+    min-height: 72px;
+    padding: 15px 18px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: #fff;
     cursor: pointer;
-    transition: all 0.15s;
-    background: var(--bg);
+    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
   }
-  .opt:hover { border-color: var(--accent); background: var(--accent-light); }
-  .opt.selected { border-color: var(--accent); background: var(--accent-light); }
+  .option:hover {
+    border-color: rgba(29,158,117,0.48);
+    transform: translateY(-1px);
+    box-shadow: 0 9px 20px rgba(21,40,35,0.06);
+  }
+  .option input { position: absolute; opacity: 0; pointer-events: none; }
   .opt-radio {
-    width: 18px; height: 18px; border-radius: 50%;
-    border: 1.5px solid var(--border-md);
+    width: 22px; height: 22px; margin-top: 2px;
+    border: 2px solid #CBD7D2; border-radius: 999px;
+    background: #fff;
+    box-shadow: inset 0 0 0 5px #fff;
+    transition: border-color 180ms ease, background 180ms ease;
     flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.15s;
   }
-  .opt.selected .opt-radio { background: var(--accent); border-color: var(--accent); }
-  .opt.selected .opt-radio::after { content: ''; width: 6px; height: 6px; background: #fff; border-radius: 50%; }
-  .opt-label { font-size: 14px; font-weight: 500; color: var(--text); }
-  .opt-note { font-size: 12px; color: var(--text-secondary); margin-top: 1px; }
-  .opt.selected .opt-label { color: var(--accent-dark); }
+  .opt-text { min-width: 0; }
+  .opt-label { font-size: 15px; font-weight: 700; line-height: 1.45; }
+  .opt-note { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; font-weight: 600; }
+  .option.selected { border-color: var(--accent); background: var(--accent-soft); }
+  .option.selected .opt-radio { border-color: var(--accent); background: var(--accent); }
+
+  /* NAV */
   .nav {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-top: 8px; border-top: 0.5px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 28px;
   }
   .btn {
-    padding: 9px 20px; border-radius: var(--radius-sm);
-    font-size: 14px; font-weight: 500; cursor: pointer;
-    border: 0.5px solid var(--border-md); background: transparent;
-    color: var(--text-secondary); transition: all 0.15s;
+    min-width: 116px; min-height: 46px; padding: 0 18px;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: #fff; color: var(--text);
+    font-weight: 800; cursor: pointer;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
   }
-  .btn:hover { background: var(--bg-secondary); }
-  .btn:disabled { opacity: 0.3; cursor: default; }
-  .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-primary:disabled { background: var(--bg-tertiary); color: var(--text-tertiary); border-color: var(--border); }
+  .btn:hover:not(:disabled) { transform: translateY(-1px); border-color: #BFD0CA; }
+  .btn:disabled { color: #A7B1AD; cursor: not-allowed; }
+  .btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+  .btn.primary:hover:not(:disabled) { background: var(--accent-dark); border-color: var(--accent-dark); }
 
-  /* LIVE PREVIEW */
+  /* PREVIEW PANEL */
   .preview-panel {
-    background: var(--bg);
-    border-radius: var(--radius-lg);
-    border: 0.5px solid var(--border);
-    padding: 20px;
-    display: flex; flex-direction: column; gap: 16px;
-    align-self: start; position: sticky; top: 24px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
-  .preview-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 4px; }
-  .preview-title { font-size: 14px; font-weight: 600; color: var(--text); }
-  .total-score-wrap { display: flex; flex-direction: column; align-items: center; padding: 8px 0; }
-  .total-ring {
-    width: 80px; height: 80px; border-radius: 50%;
-    border: 3px solid var(--bg-tertiary);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    transition: border-color 0.4s;
+  .preview-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
   }
-  .total-num { font-size: 28px; font-weight: 700; color: var(--text); line-height: 1; transition: all 0.4s; }
-  .total-label { font-size: 10px; color: var(--text-tertiary); margin-top: 2px; }
-  .axes { display: flex; flex-direction: column; gap: 10px; }
-  .axis-item { display: flex; flex-direction: column; gap: 4px; }
-  .axis-top { display: flex; justify-content: space-between; align-items: center; }
-  .axis-name { font-size: 12px; color: var(--text-secondary); }
-  .axis-right { display: flex; align-items: center; gap: 6px; }
-  .axis-val { font-size: 14px; font-weight: 600; color: var(--text); min-width: 24px; text-align: right; }
-  .axis-delta { font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 4px; min-width: 28px; text-align: center; transition: all 0.2s; }
-  .delta-up { background: #FAECE7; color: #993C1D; }
-  .delta-down { background: var(--accent-light); color: #085041; }
-  .delta-none { background: var(--bg-tertiary); color: var(--text-tertiary); }
-  @keyframes pop { 0%{transform:scale(1)} 50%{transform:scale(1.3)} 100%{transform:scale(1)} }
-  .delta-pop { animation: pop 0.3s ease; }
-  .bar-track { height: 7px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; }
-  .bar-fill { height: 7px; border-radius: 4px; transition: width 0.5s cubic-bezier(.4,0,.2,1); width: 0%; }
-  .bar-stress { background: var(--col-stress); }
-  .bar-burnout { background: var(--col-burnout); }
-  .bar-environment { background: var(--col-environment); }
-  .bar-leaving { background: var(--col-leaving); }
-  .divider { height: 0.5px; background: var(--border); }
-  .ai-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 6px; }
-  .ai-comment { font-size: 12px; color: var(--text-secondary); line-height: 1.7; background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 10px 12px; min-height: 60px; }
+  .live-label { color: var(--muted); font-size: 12px; font-weight: 900; }
+  .live-dot {
+    display: inline-flex; width: 8px; height: 8px; margin-right: 7px;
+    border-radius: 999px; background: var(--accent);
+    box-shadow: 0 0 0 5px rgba(29,158,117,0.12);
+  }
+  .risk-pill {
+    padding: 6px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 12px; font-weight: 900;
+  }
 
-  /* RESULT PAGE */
-  .result-page { max-width: 720px; margin: 24px auto; padding: 0 16px 48px; display: flex; flex-direction: column; gap: 16px; }
-  .result-hero {
-    background: var(--accent-light); border: 0.5px solid var(--accent-border);
-    border-radius: var(--radius-lg); padding: 28px;
+  /* TOTAL SCORE */
+  .total-card {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 12px;
+    align-items: end;
   }
-  .result-hero-badge { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; margin-bottom: 10px; }
-  .result-hero-title { font-size: 22px; font-weight: 700; color: #04342C; line-height: 1.4; margin-bottom: 10px; letter-spacing: -0.02em; }
-  .result-hero-desc { font-size: 14px; color: #0F6E56; line-height: 1.7; }
-  .result-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
-  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; color: var(--text-tertiary); text-transform: uppercase; margin-bottom: 14px; }
-  .score-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
-  .score-card { background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 14px 12px; display: flex; flex-direction: column; gap: 6px; }
-  .score-name { font-size: 11px; color: var(--text-secondary); }
-  .score-num { font-size: 26px; font-weight: 700; line-height: 1; }
-  .score-bar { height: 5px; border-radius: 3px; margin-top: 4px; }
-  .num-stress { color: var(--col-stress); }
-  .num-burnout { color: var(--col-burnout); }
-  .num-environment { color: var(--col-environment); }
-  .num-leaving { color: var(--col-leaving); }
-  .level-badge {
-    display: inline-block; font-size: 10px; font-weight: 700;
-    padding: 2px 6px; border-radius: 4px; margin-top: 4px;
+  .total-label { color: var(--muted); font-size: 13px; font-weight: 800; margin-bottom: 4px; }
+  .total-score-row { display: flex; align-items: baseline; gap: 8px; }
+  .score-number {
+    min-width: 100px;
+    font-size: clamp(54px,7vw,80px);
+    line-height: 0.92;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    transition: color 220ms ease, transform 220ms ease;
   }
-  .level-low { background: #E1F5EE; color: #085041; }
-  .level-moderate { background: #FAEEDA; color: #633806; }
-  .level-high { background: #FAECE7; color: #712B13; }
-  .level-very_high { background: #FCEBEB; color: #791F1F; }
-  .why-box { background: #FAEEDA; border: 0.5px solid #FAC775; border-radius: var(--radius-sm); padding: 14px 16px; font-size: 14px; color: #412402; line-height: 1.75; margin-bottom: 10px; }
-  .safe-box { border-left: 3px solid var(--accent); padding: 10px 14px; font-size: 13px; color: var(--text-secondary); line-height: 1.6; border-radius: 0; }
-  .tasks { display: flex; flex-direction: column; gap: 8px; }
+  .score-number.bump { color: var(--accent); transform: scale(1.035); }
+  .score-unit { color: var(--muted); font-size: 17px; font-weight: 800; }
+  .floating-delta {
+    justify-self: end;
+    min-width: 54px; text-align: right;
+    color: var(--accent); font-size: 24px; font-weight: 900;
+    opacity: 0; transform: translateY(8px);
+  }
+  .floating-delta.show { animation: floatDelta 680ms ease both; }
+  @keyframes floatDelta {
+    0%   { opacity:0; transform:translateY(10px); }
+    22%  { opacity:1; }
+    100% { opacity:0; transform:translateY(-16px); }
+  }
+
+  /* AXES */
+  .axes { display: grid; gap: 14px; }
+  .axis-item { display: grid; gap: 7px; }
+  .axis-top {
+    display: grid;
+    grid-template-columns: minmax(100px,1fr) auto auto;
+    gap: 10px;
+    align-items: baseline;
+  }
+  .axis-name { font-size: 13px; font-weight: 800; }
+  .axis-val { min-width: 32px; text-align: right; font-size: 13px; font-weight: 900; }
+  .axis-delta {
+    min-width: 38px; text-align: right;
+    color: var(--muted); font-size: 12px; font-weight: 900;
+    opacity: 0.78;
+    transition: color 160ms ease;
+  }
+  .axis-delta.delta-up { color: var(--danger); }
+  .axis-delta.delta-down { color: var(--accent); }
+  .axis-delta.delta-pop { animation: deltaPop 520ms ease; }
+  @keyframes deltaPop {
+    0%   { transform:scale(0.8); opacity:0; }
+    45%  { transform:scale(1.18); opacity:1; }
+    100% { transform:scale(1); opacity:0.78; }
+  }
+  .bar-track { height: 11px; overflow: hidden; border-radius: 999px; background: #EEF3F1; }
+  .bar-fill { height: 100%; width: 0; border-radius: inherit; transition: width 420ms ease; }
+  .bar-stress      { background: var(--col-stress); }
+  .bar-burnout     { background: var(--col-burnout); }
+  .bar-environment { background: var(--col-environment); }
+  .bar-leaving     { background: var(--col-leaving); }
+
+  /* AI BOX */
+  .ai-box {
+    min-height: 130px;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #FBFDFD;
+  }
+  .ai-title {
+    display: flex; justify-content: space-between; gap: 10px;
+    margin-bottom: 10px; color: var(--accent);
+    font-size: 11px; font-weight: 900;
+  }
+  .answered { color: var(--muted); font-size: 11px; font-weight: 800; }
+  .ai-comment { font-size: 14px; font-weight: 700; line-height: 1.7; min-height: 60px; }
+  .cursor {
+    display: inline-block; width: 8px; height: 1.05em; margin-left: 3px;
+    background: var(--accent); vertical-align: -0.16em;
+    animation: blink 780ms steps(2,start) infinite;
+  }
+  @keyframes blink { 50% { opacity:0; } }
+
+  /* ===== RESULT PAGE ===== */
+  .result-page {
+    width: min(1180px, calc(100% - 32px));
+    margin: 32px auto;
+    display: grid;
+    gap: 20px;
+  }
+  .result-panel, .result-card, .chat-panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .result-panel { padding: 30px; }
+  .result-header {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto;
+    gap: 18px; align-items: start;
+  }
+  .result-kicker { color: var(--accent); font-size: 12px; font-weight: 800; margin-bottom: 8px; }
+  .result-title {
+    font-size: clamp(28px,4vw,44px);
+    line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 10px;
+  }
+  .result-lead { max-width: 720px; color: var(--muted); font-size: 15px; font-weight: 650; line-height: 1.8; }
+  .result-total-box {
+    min-width: 130px; padding: 16px; text-align: center;
+    border: 1px solid var(--line); border-radius: 12px; background: #FBFDFD;
+  }
+  .result-total-num { display: block; font-size: 46px; line-height: 1; color: var(--accent); font-weight: 900; }
+  .result-total-label { color: var(--muted); font-size: 11px; font-weight: 900; }
+
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 14px;
+  }
+  .result-card { padding: 18px; }
+  .card-label { color: var(--muted); font-size: 12px; font-weight: 900; margin-bottom: 10px; }
+  .card-score { display: flex; align-items: baseline; gap: 5px; margin-bottom: 10px; }
+  .card-score strong { font-size: 34px; line-height: 1; font-weight: 900; }
+  .card-score span { color: var(--muted); font-weight: 800; }
+
+  .section-title { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .analysis-text { color: var(--muted); font-size: 15px; font-weight: 650; line-height: 1.85; white-space: pre-wrap; }
+  .reassurance {
+    margin-top: 14px; padding: 12px 14px;
+    border-radius: 10px; background: var(--accent-soft);
+    color: #13795A; font-size: 13px; font-weight: 800;
+  }
+
+  .task-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
   .task-card {
-    display: flex; align-items: flex-start; gap: 12px;
-    padding: 14px; border: 0.5px solid var(--border);
-    border-radius: var(--radius-md); cursor: pointer;
-    transition: all 0.15s; background: var(--bg);
+    display: grid; grid-template-columns: 26px minmax(0,1fr); gap: 12px;
+    align-items: start; min-height: 110px; padding: 16px;
+    border: 1px solid var(--line); border-radius: 12px;
+    background: #fff; cursor: pointer;
+    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+    text-align: left;
   }
-  .task-card:hover { background: var(--bg-secondary); }
-  .task-card.done { background: var(--accent-light); border-color: var(--accent-border); }
-  .task-checkbox {
-    width: 20px; height: 20px; border-radius: 50%;
-    border: 1.5px solid var(--border-md); flex-shrink: 0; margin-top: 1px;
-    display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+  .task-card:hover { border-color: rgba(29,158,117,0.5); transform: translateY(-1px); }
+  .task-card.done { border-color: var(--accent); background: var(--accent-soft); }
+  .task-check {
+    display: grid; place-items: center;
+    width: 26px; height: 26px;
+    border: 2px solid #CBD7D2; border-radius: 8px;
+    color: #fff; font-size: 16px; font-weight: 900;
+    transition: border-color 180ms, background 180ms;
   }
-  .task-checkbox .check-icon { display: none; }
-  .task-card.done .task-checkbox { background: var(--accent); border-color: var(--accent); }
-  .task-card.done .task-checkbox .check-icon { display: block; }
-  .task-body { flex: 1; }
-  .task-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-  .task-card.done .task-title { color: #085041; }
-  .task-desc { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
-  .sim-inner { background: var(--bg-secondary); border-radius: var(--radius-sm); padding: 16px; }
-  .sim-title { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
-  .sim-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  .sim-axis-name { font-size: 12px; color: var(--text-secondary); width: 76px; flex-shrink: 0; }
-  .sim-track { flex: 1; height: 8px; background: var(--bg-tertiary); border-radius: 4px; position: relative; overflow: hidden; }
-  .sim-bar-before { position: absolute; top: 0; left: 0; height: 8px; border-radius: 4px; opacity: 0.25; }
-  .sim-bar-after { position: absolute; top: 0; left: 0; height: 8px; border-radius: 4px; }
-  .sim-nums { font-size: 12px; color: var(--text-secondary); white-space: nowrap; }
-  .sim-note { font-size: 11px; color: var(--text-tertiary); margin-top: 10px; line-height: 1.5; }
-  .next-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 22px; display: flex; flex-direction: column; gap: 14px; }
-  .next-date { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-secondary); }
-  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn-accent { padding: 10px 22px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
-  .btn-accent:hover { background: var(--accent-dark); }
-  .btn-outline { padding: 10px 22px; background: transparent; color: var(--text-secondary); border: 0.5px solid var(--border-md); border-radius: var(--radius-sm); font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
-  .btn-outline:hover { background: var(--bg-secondary); }
+  .task-card.done .task-check { border-color: var(--accent); background: var(--accent); }
+  .task-title { font-size: 14px; font-weight: 900; line-height: 1.45; margin-bottom: 5px; }
+  .task-desc { color: var(--muted); font-size: 12px; font-weight: 650; line-height: 1.6; }
+
+  /* SIM */
+  .sim-note { color: var(--muted); font-size: 12px; font-weight: 800; margin-bottom: 16px; }
+  .sim-list { display: grid; gap: 16px; }
+  .sim-row { display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 12px; align-items: center; }
+  .sim-name { font-size: 12px; font-weight: 900; }
+  .sim-bars { display: grid; gap: 7px; }
+  .sim-line {
+    display: grid; grid-template-columns: 48px minmax(0,1fr) 36px;
+    gap: 8px; align-items: center;
+    color: var(--muted); font-size: 11px; font-weight: 800;
+  }
+  .sim-track { height: 10px; overflow: hidden; border-radius: 999px; background: #EEF3F1; }
+  .sim-fill { height: 100%; width: 0; border-radius: inherit; background: #AAB8B3; transition: width 480ms ease; }
+  .sim-fill.improved { background: var(--accent); }
+
+  /* CTA */
+  .cta-card {
+    background: var(--accent-soft);
+    border: 1px solid rgba(29,158,117,0.25);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 30px;
+    text-align: center;
+  }
+  .cta-title { font-size: 15px; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
+  .cta-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+
+  .result-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .wide-btn { min-width: 200px; }
 
   /* CHAT */
-  .chat-wrap { display: flex; flex-direction: column; gap: 12px; }
-  .chat-context { font-size: 12px; color: var(--text-tertiary); padding: 8px 12px; background: var(--bg-secondary); border-radius: var(--radius-sm); line-height: 1.5; }
-  .chat-messages { display: flex; flex-direction: column; gap: 8px; min-height: 100px; }
-  .bubble { padding: 10px 14px; border-radius: var(--radius-md); font-size: 13px; line-height: 1.65; max-width: 88%; white-space: pre-wrap; }
-  .bubble.ai { background: var(--bg-secondary); color: var(--text); align-self: flex-start; border-bottom-left-radius: 4px; }
-  .bubble.user { background: var(--accent); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
-  .typing-dots { display: flex; gap: 4px; padding: 12px 14px; align-self: flex-start; background: var(--bg-secondary); border-radius: var(--radius-md); border-bottom-left-radius: 4px; }
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-tertiary); animation: bounce 1.2s infinite; }
+  .chat-panel {
+    display: grid;
+    grid-template-rows: auto minmax(180px,auto) auto;
+    min-height: 380px;
+    padding: 22px;
+  }
+  .chat-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 0;
+  }
+  .chat-context { color: var(--muted); font-size: 12px; font-weight: 800; margin-top: 4px; }
+  .chat-log { display: grid; align-content: start; gap: 10px; padding: 16px 0; }
+  .bubble {
+    max-width: 84%; padding: 11px 14px; border-radius: 12px;
+    font-size: 13px; font-weight: 700; line-height: 1.65; white-space: pre-wrap;
+  }
+  .bubble.ai { justify-self: start; background: var(--accent-soft); color: #123D30; }
+  .bubble.user { justify-self: end; background: #F1F4F3; color: var(--text); }
+  .bubble.crisis { justify-self: start; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
+  .typing-dots {
+    display: flex; gap: 4px; padding: 12px 14px;
+    justify-self: start; background: var(--accent-soft);
+    border-radius: 12px;
+  }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: bounce 1.2s infinite; }
   .dot:nth-child(2) { animation-delay: 0.2s; }
   .dot:nth-child(3) { animation-delay: 0.4s; }
   @keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-6px)} }
-  .chat-input-row { display: flex; gap: 8px; }
-  .chat-input { flex: 1; padding: 10px 14px; border: 0.5px solid var(--border-md); border-radius: var(--radius-sm); font-size: 14px; color: var(--text); background: var(--bg); outline: none; font-family: inherit; transition: border-color 0.15s; }
-  .chat-input:focus { border-color: var(--accent); }
-  .chat-send { padding: 10px 18px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
-  .chat-send:hover { background: var(--accent-dark); }
+  .chat-form {
+    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px;
+    align-items: center; padding-top: 14px; border-top: 1px solid var(--line);
+  }
+  .chat-input {
+    min-height: 46px; padding: 0 14px;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: #fff; color: var(--text); outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .chat-input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(29,158,117,0.12); }
 
-  @media (max-width: 640px) {
-    .app { grid-template-columns: 1fr; }
-    .preview-panel { position: static; }
-    .score-grid { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 900px) {
+    .app { grid-template-columns: 1fr; width: min(100% - 22px, 700px); margin: 16px auto; }
+    .question-area { min-height: auto; padding: 22px; }
+    .result-page { width: min(100% - 22px, 700px); margin: 16px auto; }
+    .result-header, .score-grid, .task-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    .total-card { grid-template-columns: 1fr; }
+    .floating-delta { justify-self: start; }
+    .axis-top { grid-template-columns: minmax(0,1fr) auto; }
+    .nav, .result-actions { flex-direction: column; }
+    .btn, .wide-btn { width: 100%; }
+    .chat-form { grid-template-columns: 1fr; }
+    .bubble { max-width: 100%; }
   }
 </style>
 </head>
@@ -299,459 +497,175 @@
     <div class="site-logo">Worelu</div>
     <div class="site-tagline">無料ストレスチェック</div>
   </div>
-  <div style="font-size:12px;color:var(--text-tertiary);">仕事で壊れる前に。</div>
+  <div class="site-right">仕事で壊れる前に。</div>
 </header>
 
-<div class="app" id="app">
-  <div class="question-panel">
-    <div id="introBlock" style="background:var(--accent-light);border:0.5px solid var(--accent-border);border-radius:var(--radius-md);padding:12px 16px;display:flex;flex-direction:column;gap:6px;">
-      <h1 style="font-size:15px;font-weight:700;color:var(--accent);margin:0;line-height:1.4;">仕事ストレスチェック診断</h1>
-      <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;">仕事・心身・燃え尽き・転職意向を、AIがリアルタイム分析します。</div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <span style="font-size:11px;color:var(--accent);font-weight:600;">✓ 無料</span>
-        <span style="font-size:11px;color:var(--accent);font-weight:600;">✓ 登録不要</span>
-        <span style="font-size:11px;color:var(--accent);font-weight:600;">✓ AIアドバイス付き</span>
+<main class="app" id="app">
+  <section class="question-area" aria-labelledby="qText">
+    <div class="intro-block" id="introBlock">
+      <h1>仕事ストレスチェック診断</h1>
+      <p>仕事・心身・燃え尽き・転職意向を、AIがリアルタイム分析します。</p>
+      <div class="intro-chips">
+        <span class="intro-chip">✓ 無料</span>
+        <span class="intro-chip">✓ 登録不要</span>
+        <span class="intro-chip">✓ AIアドバイス付き</span>
       </div>
     </div>
-    <div>
-      <div class="q-meta">
-        <span class="q-num" id="qNum">Q1 / 10</span>
-        <span class="q-pct" id="qPct">10%</span>
-      </div>
-      <div class="progress-wrap">
-        <div class="progress-fill" id="progFill" style="width:10%"></div>
-      </div>
+    <div class="topline">
+      <div class="kicker">WORK STRESS CHECK</div>
+      <div class="q-count" id="qNum">Q1 / 10</div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:8px">
-      <div class="q-type-badge" id="qBadge"></div>
-      <div class="q-text" id="qText"></div>
+    <div class="progress" aria-label="進捗">
+      <div class="progress-fill" id="progFill"></div>
     </div>
+    <div class="q-type-badge" id="qBadge"></div>
+    <div class="q-text" id="qText"></div>
     <div class="options" id="optList"></div>
     <div class="nav">
-      <button class="btn" id="btnBack" onclick="goBack()" disabled>← 戻る</button>
-      <button class="btn btn-primary" id="btnNext" onclick="goNext()" disabled>次へ →</button>
+      <button class="btn" id="btnBack" type="button" onclick="goBack()" disabled>戻る</button>
+      <button class="btn primary" id="btnNext" type="button" onclick="goNext()" disabled>次へ</button>
     </div>
-  </div>
+  </section>
 
-  <div class="preview-panel">
-    <div>
-      <div class="preview-badge">リアルタイム分析</div>
-      <div class="preview-title">今の仕事コンディション</div>
+  <aside class="preview-panel" aria-label="リアルタイム分析">
+    <div class="preview-head">
+      <div class="live-label"><span class="live-dot"></span>リアルタイム分析</div>
+      <div class="risk-pill" id="riskLabel">低め</div>
     </div>
-    <div class="total-score-wrap">
-      <div class="total-ring" id="totalRing">
-        <div class="total-num" id="totalNum">0</div>
-        <div class="total-label">総合指数</div>
+    <div class="total-card">
+      <div>
+        <div class="total-label">総合ストレス指数</div>
+        <div class="total-score-row">
+          <span class="score-number" id="totalNum">0</span>
+          <span class="score-unit">/100</span>
+        </div>
       </div>
+      <div class="floating-delta" id="totalDelta"></div>
     </div>
-    <div class="axes">
-      <div class="axis-item">
-        <div class="axis-top">
-          <span class="axis-name">仕事ストレス</span>
-          <div class="axis-right">
-            <span class="axis-val" id="val-stress">0</span>
-            <span class="axis-delta delta-none" id="delta-stress"></span>
-          </div>
-        </div>
-        <div class="bar-track"><div class="bar-fill bar-stress" id="bar-stress"></div></div>
+    <div class="axes" id="axisList"></div>
+    <div class="ai-box">
+      <div class="ai-title">
+        <span>AI COMMENT</span>
+        <span class="answered" id="answeredCount">未回答 0/10</span>
       </div>
-      <div class="axis-item">
-        <div class="axis-top">
-          <span class="axis-name">燃え尽き傾向</span>
-          <div class="axis-right">
-            <span class="axis-val" id="val-burnout">0</span>
-            <span class="axis-delta delta-none" id="delta-burnout"></span>
-          </div>
-        </div>
-        <div class="bar-track"><div class="bar-fill bar-burnout" id="bar-burnout"></div></div>
-      </div>
-      <div class="axis-item">
-        <div class="axis-top">
-          <span class="axis-name">職場環境</span>
-          <div class="axis-right">
-            <span class="axis-val" id="val-environment">0</span>
-            <span class="axis-delta delta-none" id="delta-environment"></span>
-          </div>
-        </div>
-        <div class="bar-track"><div class="bar-fill bar-environment" id="bar-environment"></div></div>
-      </div>
-      <div class="axis-item">
-        <div class="axis-top">
-          <span class="axis-name">転職意向</span>
-          <div class="axis-right">
-            <span class="axis-val" id="val-leaving">0</span>
-            <span class="axis-delta delta-none" id="delta-leaving"></span>
-          </div>
-        </div>
-        <div class="bar-track"><div class="bar-fill bar-leaving" id="bar-leaving"></div></div>
-      </div>
+      <div class="ai-comment"><span id="aiComment">回答するとリアルタイムで分析が始まります。</span><span class="cursor"></span></div>
     </div>
-    <div class="divider"></div>
-    <div>
-      <div class="ai-label">AIコメント</div>
-      <div class="ai-comment" id="aiComment">回答するとリアルタイムで分析が始まります。</div>
-    </div>
-  </div>
-</div>
+  </aside>
+</main>
 
 <div class="result-page hidden" id="resultPage"></div>
 
 <script>
-/* ========== 軸定義 ========== */
+/* ===== 軸定義 ===== */
 const AXES = [
-  { key: 'stress',      label: '仕事ストレス',  color: '#E24B4A', weight: 0.32 },
-  { key: 'burnout',     label: '燃え尽き傾向',  color: '#EF9F27', weight: 0.28 },
-  { key: 'environment', label: '職場環境',       color: '#378ADD', weight: 0.23 },
-  { key: 'leaving',     label: '転職意向',       color: '#7F77DD', weight: 0.17 }
+  { key:'stress',      label:'仕事ストレス',  color:'#E24B4A' },
+  { key:'burnout',     label:'燃え尽き傾向',  color:'#EF9F27' },
+  { key:'environment', label:'職場環境',       color:'#378ADD' },
+  { key:'leaving',     label:'転職意向',       color:'#7F77DD' }
 ];
 
-/* ========== 正規化用最大値 ========== */
-/* 全問最悪回答（10点）時の各軸の生スコア合計 */
 const MAX_RAW = {
-  stress:      10*0.5 + 10*0.5 + 10*0.2 + 10*0.5 + 10*0.3 + 10*0.2 + 10*0.3,  // =25
-  burnout:     10*0.2 + 10*0.2 + 10*0.8 + 10*0.8 + 10*0.3 + 10*0.5,           // =28
-  environment: 10*0.8 + 10*0.8 + 10*0.8,                                        // =24
-  leaving:     10*0.3 + 10*0.2 + 10*1.0 + 10*1.0 + 10*0.8,                    // =33
-  engagement:  10*0.8 + 10*0.8 + 10*0.4 + 10*0.6 + 10*0.8                     // =34
+  stress:      10*0.5+10*0.5+10*0.2+10*0.5+10*0.3+10*0.2+10*0.3,
+  burnout:     10*0.2+10*0.2+10*0.8+10*0.8+10*0.3+10*0.5,
+  environment: 10*0.8+10*0.8+10*0.8,
+  leaving:     10*0.3+10*0.2+10*1.0+10*1.0+10*0.8,
+  engagement:  10*0.8+10*0.8+10*0.4+10*0.6+10*0.8
 };
 
-/* ========== 10問定義 ========== */
-/*
-  weights: 各軸への寄与係数
-  reverse: trueのとき回答値を反転（5→0, 4→2.5... 線形反転）
-  type: 表示バッジ用（state=状態, cause=原因, action=行動）
-*/
-const QUESTIONS = [
-  {
-    text: '朝、仕事のことを考えると気が重くなる',
-    type: 'state', reverse: false,
-    opts: [
-      { label: 'まったくない',     note: '仕事への憂鬱感はない' },
-      { label: 'あまりない',       note: '多少あるが許容範囲' },
-      { label: 'ときどきある',     note: '週に数回は感じる' },
-      { label: 'よくある',         note: 'ほぼ毎日感じる' },
-      { label: 'いつもある',       note: '毎朝のように感じる' }
-    ],
-    weights: { stress:0.5, burnout:0.2, environment:0.0, leaving:0.0, engagement:0.0 },
-    comments: [
-      '朝の仕事への気持ちは問題なさそうです。',
-      '多少の憂鬱感はあるようです。',
-      '朝の精神的負荷が少し気になります。',
-      '仕事への憂鬱感が蓄積されています。',
-      '朝から仕事の重さを感じている状態です。'
-    ]
-  },
-  {
-    text: '仕事中、消耗感や疲弊感を感じることが多い',
-    type: 'state', reverse: false,
-    opts: [
-      { label: 'まったくない',     note: '仕事中のエネルギーは十分' },
-      { label: 'あまりない',       note: 'たまに疲れる程度' },
-      { label: 'ときどきある',     note: '週の半分くらいは感じる' },
-      { label: 'よくある',         note: 'ほぼ毎日消耗している' },
-      { label: 'いつもある',       note: '慢性的に疲弊している' }
-    ],
-    weights: { stress:0.5, burnout:0.2, environment:0.0, leaving:0.0, engagement:0.0 },
-    comments: [
-      'エネルギーは十分に保たれているようです。',
-      '少し疲れが見られます。',
-      '仕事中の消耗感が気になります。',
-      '疲弊感が蓄積しています。注意が必要です。',
-      '慢性的な消耗状態の可能性があります。'
-    ]
-  },
-  {
-    text: '仕事で達成感や手応えを感じることがある',
-    type: 'state', reverse: true,
-    opts: [
-      { label: 'よく感じる',       note: 'やりがいを感じて取り組めている' },
-      { label: 'まあ感じる',       note: '概ね達成感はある' },
-      { label: 'あまり感じない',   note: '以前より減ってきた' },
-      { label: 'ほとんど感じない', note: '義務感だけで続けている' },
-      { label: 'まったく感じない', note: '仕事が苦痛に近い' }
-    ],
-    weights: { stress:0.2, burnout:0.8, environment:0.0, leaving:0.0, engagement:0.8 },
-    comments: [
-      '仕事への達成感は十分にあるようです。',
-      '達成感はまあまあ感じられているようです。',
-      '達成感が少し薄れてきています。',
-      '仕事への手応えが失われつつあります。',
-      '仕事への意味・達成感が大きく低下しています。'
-    ]
-  },
-  {
-    text: '業務量や残業が、自分の許容範囲を超えていると感じる',
-    type: 'cause', reverse: false,
-    opts: [
-      { label: 'まったくない',     note: '業務量は適切に感じている' },
-      { label: 'あまりない',       note: '多少多いが調整できている' },
-      { label: 'ときどきある',     note: '繁忙期に特に感じる' },
-      { label: 'よくある',         note: 'ほぼ常にキャパオーバー' },
-      { label: 'いつもある',       note: '慢性的にオーバーワーク' }
-    ],
-    weights: { stress:0.5, burnout:0.0, environment:0.8, leaving:0.0, engagement:0.0 },
-    comments: [
-      '業務量のバランスは取れているようです。',
-      '業務量に少し負荷がかかっているようです。',
-      '業務量への負荷が気になります。',
-      '業務過多の状態が続いている可能性があります。',
-      '業務量が限界に近い状態にある可能性があります。'
-    ]
-  },
-  {
-    text: '今の仕事を続けることに、やりがいや意味を感じている',
-    type: 'state', reverse: true,
-    opts: [
-      { label: 'とても感じる',     note: '仕事に意義を見出せている' },
-      { label: 'まあ感じる',       note: '概ね前向きに取り組めている' },
-      { label: 'あまり感じない',   note: '以前より意欲が落ちてきた' },
-      { label: 'ほとんど感じない', note: 'なんとなく続けているだけ' },
-      { label: 'まったく感じない', note: '仕事の意味を見失っている' }
-    ],
-    weights: { stress:0.0, burnout:0.8, environment:0.0, leaving:0.3, engagement:0.8 },
-    comments: [
-      '仕事へのやりがいは十分にあるようです。',
-      'やりがいはまあまあ感じられているようです。',
-      '仕事への意欲が少し低下しています。',
-      'やりがいの低下が離職意向に影響しています。',
-      '仕事への意味が失われている状態です。'
-    ]
-  },
-  {
-    text: '会社から適切に評価・尊重されていると感じる',
-    type: 'cause', reverse: true,
-    opts: [
-      { label: 'とても感じる',     note: '評価・待遇に納得している' },
-      { label: 'まあ感じる',       note: '概ね適切に扱われている' },
-      { label: 'あまり感じない',   note: '評価や扱いに疑問を感じる' },
-      { label: 'ほとんど感じない', note: '軽視されていると感じることが多い' },
-      { label: 'まったく感じない', note: '会社への不信感が強い' }
-    ],
-    weights: { stress:0.3, burnout:0.0, environment:0.8, leaving:0.2, engagement:0.4 },
-    comments: [
-      '会社からの評価・尊重は十分に感じられているようです。',
-      '会社からの扱いは概ね適切なようです。',
-      '評価や尊重への不満が少し出ています。',
-      '会社への不信感が職場環境を悪化させています。',
-      '会社との信頼関係が大きく損なわれています。'
-    ]
-  },
-  {
-    text: '困ったときに安心して相談できる人が職場にいる',
-    type: 'cause', reverse: true,
-    opts: [
-      { label: 'いる',             note: '気軽に相談できる人がいる' },
-      { label: 'まあいる',         note: '相談できなくはない' },
-      { label: 'あまりいない',     note: '相談しにくい環境' },
-      { label: 'ほとんどいない',   note: '一人で抱え込むことが多い' },
-      { label: 'まったくいない',   note: '完全に孤立している' }
-    ],
-    weights: { stress:0.2, burnout:0.3, environment:0.8, leaving:0.0, engagement:0.6 },
-    comments: [
-      '心理的安全性は確保されているようです。',
-      '相談できる環境はまあまあ整っているようです。',
-      '相談しにくさが職場環境のストレスになっています。',
-      '孤立感が燃え尽き傾向を強めています。',
-      '職場での孤立が深刻な状態にあります。'
-    ]
-  },
-  {
-    text: '「仕事を辞めたい」と思う頻度が増えている',
-    type: 'action', reverse: false,
-    opts: [
-      { label: 'まったくない',     note: '今の仕事を続けたい' },
-      { label: 'あまりない',       note: '偶に頭をよぎる程度' },
-      { label: 'ときどきある',     note: '週に数回は考える' },
-      { label: 'よくある',         note: 'ほぼ毎日考えている' },
-      { label: 'いつもある',       note: '常に辞めることを考えている' }
-    ],
-    weights: { stress:0.0, burnout:0.0, environment:0.0, leaving:1.0, engagement:0.0 },
-    comments: [
-      '離職への意向は低い状態です。',
-      '辞めたい気持ちは今のところ低いようです。',
-      '辞めたいという気持ちが出始めています。',
-      '離職意向が強まっています。',
-      '強い離職意向があります。'
-    ]
-  },
-  {
-    text: '転職サイトや求人を、意識的に調べたことがある',
-    type: 'action', reverse: false,
-    opts: [
-      { label: 'まったくない',     note: '転職は考えていない' },
-      { label: 'あまりない',       note: '気になる程度で調べていない' },
-      { label: 'ときどきある',     note: '気になって見ることがある' },
-      { label: 'よくある',         note: '定期的にチェックしている' },
-      { label: 'ほぼ毎日',         note: '転職を前提に動いている' }
-    ],
-    weights: { stress:0.0, burnout:0.0, environment:0.0, leaving:1.0, engagement:0.0 },
-    comments: [
-      '転職への行動はない状態です。',
-      '転職への関心は低いようです。',
-      '転職への関心が行動として現れています。',
-      '転職への具体的な行動が始まっています。',
-      '転職活動が本格化している状態です。'
-    ]
-  },
-  {
-    text: '1年後も今の会社で働いているイメージが持てる',
-    type: 'action', reverse: true,
-    opts: [
-      { label: 'はっきり持てる',   note: '長く働きたいと思っている' },
-      { label: 'まあ持てる',       note: '今のところ続けるつもり' },
-      { label: 'あまり持てない',   note: '先行きに不安がある' },
-      { label: 'ほとんど持てない', note: '環境が変わらなければ厳しい' },
-      { label: 'まったく持てない', note: '早く変わりたいと思っている' }
-    ],
-    weights: { stress:0.3, burnout:0.5, environment:0.0, leaving:0.8, engagement:0.8 },
-    comments: [
-      '今の会社への帰属意識は高いようです。',
-      '今のところ継続意向はあるようです。',
-      '将来への不安が少し出ています。',
-      '継続意向が大きく低下しています。',
-      '強い離職意向と意欲低下が同時に見られます。'
-    ]
-  }
-];
+const TYPE_LABELS = { state:'状態を測る', cause:'原因を測る', action:'行動を測る' };
+const LEVEL_LABELS = { low:'低', moderate:'やや高', high:'高', very_high:'非常に高' };
 
-const TYPE_LABELS = { state: '状態を測る', cause: '原因を測る', action: '行動を測る' };
+const QUESTIONS = [
+  { text:'朝、仕事のことを考えると気が重くなる', type:'state', reverse:false,
+    opts:[{label:'まったくない',note:'仕事への憂鬱感はない'},{label:'あまりない',note:'多少あるが許容範囲'},{label:'ときどきある',note:'週に数回は感じる'},{label:'よくある',note:'ほぼ毎日感じる'},{label:'いつもある',note:'毎朝のように感じる'}],
+    weights:{stress:0.5,burnout:0.2,environment:0.0,leaving:0.0,engagement:0.0},
+    comments:['朝の仕事への気持ちは問題なさそうです。','多少の憂鬱感はあるようです。','朝の精神的負荷が少し気になります。','仕事への憂鬱感が蓄積されています。','朝から仕事の重さを感じている状態です。']},
+  { text:'仕事中、消耗感や疲弊感を感じることが多い', type:'state', reverse:false,
+    opts:[{label:'まったくない',note:'仕事中のエネルギーは十分'},{label:'あまりない',note:'たまに疲れる程度'},{label:'ときどきある',note:'週の半分くらいは感じる'},{label:'よくある',note:'ほぼ毎日消耗している'},{label:'いつもある',note:'慢性的に疲弊している'}],
+    weights:{stress:0.5,burnout:0.2,environment:0.0,leaving:0.0,engagement:0.0},
+    comments:['エネルギーは十分に保たれているようです。','少し疲れが見られます。','仕事中の消耗感が気になります。','疲弊感が蓄積しています。注意が必要です。','慢性的な消耗状態の可能性があります。']},
+  { text:'仕事で達成感や手応えを感じることがある', type:'state', reverse:true,
+    opts:[{label:'よく感じる',note:'やりがいを感じて取り組めている'},{label:'まあ感じる',note:'概ね達成感はある'},{label:'あまり感じない',note:'以前より減ってきた'},{label:'ほとんど感じない',note:'義務感だけで続けている'},{label:'まったく感じない',note:'仕事が苦痛に近い'}],
+    weights:{stress:0.2,burnout:0.8,environment:0.0,leaving:0.0,engagement:0.8},
+    comments:['仕事への達成感は十分にあるようです。','達成感はまあまあ感じられているようです。','達成感が少し薄れてきています。','仕事への手応えが失われつつあります。','仕事への意味・達成感が大きく低下しています。']},
+  { text:'業務量や残業が、自分の許容範囲を超えていると感じる', type:'cause', reverse:false,
+    opts:[{label:'まったくない',note:'業務量は適切に感じている'},{label:'あまりない',note:'多少多いが調整できている'},{label:'ときどきある',note:'繁忙期に特に感じる'},{label:'よくある',note:'ほぼ常にキャパオーバー'},{label:'いつもある',note:'慢性的にオーバーワーク'}],
+    weights:{stress:0.5,burnout:0.0,environment:0.8,leaving:0.0,engagement:0.0},
+    comments:['業務量のバランスは取れているようです。','業務量に少し負荷がかかっているようです。','業務量への負荷が気になります。','業務過多の状態が続いている可能性があります。','業務量が限界に近い状態にある可能性があります。']},
+  { text:'今の仕事を続けることに、やりがいや意味を感じている', type:'state', reverse:true,
+    opts:[{label:'とても感じる',note:'仕事に意義を見出せている'},{label:'まあ感じる',note:'概ね前向きに取り組めている'},{label:'あまり感じない',note:'以前より意欲が落ちてきた'},{label:'ほとんど感じない',note:'なんとなく続けているだけ'},{label:'まったく感じない',note:'仕事の意味を見失っている'}],
+    weights:{stress:0.0,burnout:0.8,environment:0.0,leaving:0.3,engagement:0.8},
+    comments:['仕事へのやりがいは十分にあるようです。','やりがいはまあまあ感じられているようです。','仕事への意欲が少し低下しています。','やりがいの低下が離職意向に影響しています。','仕事への意味が失われている状態です。']},
+  { text:'会社から適切に評価・尊重されていると感じる', type:'cause', reverse:true,
+    opts:[{label:'とても感じる',note:'評価・待遇に納得している'},{label:'まあ感じる',note:'概ね適切に扱われている'},{label:'あまり感じない',note:'評価や扱いに疑問を感じる'},{label:'ほとんど感じない',note:'軽視されていると感じることが多い'},{label:'まったく感じない',note:'会社への不信感が強い'}],
+    weights:{stress:0.3,burnout:0.0,environment:0.8,leaving:0.2,engagement:0.4},
+    comments:['会社からの評価・尊重は十分に感じられているようです。','会社からの扱いは概ね適切なようです。','評価や尊重への不満が少し出ています。','会社への不信感が職場環境を悪化させています。','会社との信頼関係が大きく損なわれています。']},
+  { text:'困ったときに安心して相談できる人が職場にいる', type:'cause', reverse:true,
+    opts:[{label:'いる',note:'気軽に相談できる人がいる'},{label:'まあいる',note:'相談できなくはない'},{label:'あまりいない',note:'相談しにくい環境'},{label:'ほとんどいない',note:'一人で抱え込むことが多い'},{label:'まったくいない',note:'完全に孤立している'}],
+    weights:{stress:0.2,burnout:0.3,environment:0.8,leaving:0.0,engagement:0.6},
+    comments:['心理的安全性は確保されているようです。','相談できる環境はまあまあ整っているようです。','相談しにくさが職場環境のストレスになっています。','孤立感が燃え尽き傾向を強めています。','職場での孤立が深刻な状態にあります。']},
+  { text:'「仕事を辞めたい」と思う頻度が増えている', type:'action', reverse:false,
+    opts:[{label:'まったくない',note:'今の仕事を続けたい'},{label:'あまりない',note:'偶に頭をよぎる程度'},{label:'ときどきある',note:'週に数回は考える'},{label:'よくある',note:'ほぼ毎日考えている'},{label:'いつもある',note:'常に辞めることを考えている'}],
+    weights:{stress:0.0,burnout:0.0,environment:0.0,leaving:1.0,engagement:0.0},
+    comments:['離職への意向は低い状態です。','辞めたい気持ちは今のところ低いようです。','辞めたいという気持ちが出始めています。','離職意向が強まっています。','強い離職意向があります。']},
+  { text:'転職サイトや求人を、意識的に調べたことがある', type:'action', reverse:false,
+    opts:[{label:'まったくない',note:'転職は考えていない'},{label:'あまりない',note:'気になる程度で調べていない'},{label:'ときどきある',note:'気になって見ることがある'},{label:'よくある',note:'定期的にチェックしている'},{label:'ほぼ毎日',note:'転職を前提に動いている'}],
+    weights:{stress:0.0,burnout:0.0,environment:0.0,leaving:1.0,engagement:0.0},
+    comments:['転職への行動はない状態です。','転職への関心は低いようです。','転職への関心が行動として現れています。','転職への具体的な行動が始まっています。','転職活動が本格化している状態です。']},
+  { text:'1年後も今の会社で働いているイメージが持てる', type:'action', reverse:true,
+    opts:[{label:'はっきり持てる',note:'長く働きたいと思っている'},{label:'まあ持てる',note:'今のところ続けるつもり'},{label:'あまり持てない',note:'先行きに不安がある'},{label:'ほとんど持てない',note:'環境が変わらなければ厳しい'},{label:'まったく持てない',note:'早く変わりたいと思っている'}],
+    weights:{stress:0.3,burnout:0.5,environment:0.0,leaving:0.8,engagement:0.8},
+    comments:['今の会社への帰属意識は高いようです。','今のところ継続意向はあるようです。','将来への不安が少し出ています。','継続意向が大きく低下しています。','強い離職意向と意欲低下が同時に見られます。']}
+];
 
 const TASKS_BY_DOMINANT = {
-  stress: [
-    { title: '「今日終わらせなくていいこと」を1つ決めて帰る', desc: '完璧主義の負荷を意図的に下げる練習。小さくていい。' },
-    { title: '週2日、定時退社する日をカレンダーに先に入れる', desc: '強制的に回復時間を作る。業務調整より先に日を決める。' },
-    { title: '仕事後に15分だけ仕事と無関係なことをする', desc: '脳の切り替えを習慣化。散歩・音楽・読書なんでもいい。' }
-  ],
-  burnout: [
-    { title: '「なぜこの仕事をしているか」を1行だけ書き出す', desc: '意味を再確認することで燃え尽きを和らげる効果がある。' },
-    { title: '小さな達成を1つ意識的に見つけて今日記録する', desc: '「できたこと」の蓄積が燃え尽きへの処方箋になる。' },
-    { title: '週2日、定時で帰る日を強制的に決める', desc: '疲労の蓄積を止める最短の方法。' }
-  ],
-  environment: [
-    { title: '今の職場で「まだ試していないこと」を1つ書き出す', desc: '環境改善の余地があるかを客観的に確認する。' },
-    { title: '職場の人間関係で一番楽な人との時間を増やす', desc: '安全地帯を作ることで全体のストレスが下がる。' },
-    { title: 'ストレスになっている要因を上司に伝える準備をする', desc: '「業務量を減らして」より「優先順位を整理したい」と伝えると通りやすい。' }
-  ],
-  leaving: [
-    { title: '転職した場合の具体的なコストを試算してみる', desc: '感情ではなく数字で判断するための準備。' },
-    { title: '今の会社で「まだ試していないこと」を1つ確認する', desc: '転職前に改善の余地があるかを確認する。' },
-    { title: '信頼できる社外の人に現状を相談してみる', desc: '内側からだけでは見えない視点を得る。' }
-  ]
+  stress:[
+    {title:'「今日終わらせなくていいこと」を1つ決めて帰る',desc:'完璧主義の負荷を意図的に下げる練習。小さくていい。'},
+    {title:'週2日、定時退社する日をカレンダーに先に入れる',desc:'強制的に回復時間を作る。業務調整より先に日を決める。'},
+    {title:'仕事後に15分だけ仕事と無関係なことをする',desc:'脳の切り替えを習慣化。散歩・音楽・読書なんでもいい。'}],
+  burnout:[
+    {title:'「なぜこの仕事をしているか」を1行だけ書き出す',desc:'意味を再確認することで燃え尽きを和らげる効果がある。'},
+    {title:'小さな達成を1つ意識的に見つけて今日記録する',desc:'「できたこと」の蓄積が燃え尽きへの処方箋になる。'},
+    {title:'週2日、定時で帰る日を強制的に決める',desc:'疲労の蓄積を止める最短の方法。'}],
+  environment:[
+    {title:'今の職場で「まだ試していないこと」を1つ書き出す',desc:'環境改善の余地があるかを客観的に確認する。'},
+    {title:'職場の人間関係で一番楽な人との時間を増やす',desc:'安全地帯を作ることで全体のストレスが下がる。'},
+    {title:'ストレスになっている要因を上司に伝える準備をする',desc:'「業務量を減らして」より「優先順位を整理したい」と伝えると通りやすい。'}],
+  leaving:[
+    {title:'転職した場合の具体的なコストを試算してみる',desc:'感情ではなく数字で判断するための準備。'},
+    {title:'今の会社で「まだ試していないこと」を1つ確認する',desc:'転職前に改善の余地があるかを確認する。'},
+    {title:'信頼できる社外の人に現状を相談してみる',desc:'内側からだけでは見えない視点を得る。'}]
 };
 
-const COACH_REPLIES = {
-  /* ===== 業務・負荷系 ===== */
-  keywords_workload: ['残業','業務量','仕事量','仕事が多','タスク','キャパ','ついていけない','追いつかない','覚えられない','覚える業務','入社早々','新しい業務'],
-  '残業':           `残業が続くと、心身のリカバリーが追いつかなくなります。
-
-試してみてほしいこと：今日の業務をすべて書き出し、「自分しかできないもの」「今日じゃなくていいもの」の2つに分けてみてください。「今日じゃなくていいもの」を1つ後回しにするだけで、少し楽になります。`,
-  'ついていけない':  `入社直後や業務変更後は、誰でも「追いつけない」と感じる時期があります。今は覚えることが多すぎるだけで、あなたの能力の問題ではありません。
-
-試してみてほしいこと：今日覚えたことを1つだけメモする習慣をつける。「全部覚えよう」をやめて「今日は1つ」に絞ると、負荷が一気に下がります。`,
-  '業務量':         `業務量が多すぎる場合、解決策は2つです。「断る」か「優先順位を整理する」かです。
-
-上司に相談するなら「業務量を減らしてほしい」より「優先順位を一緒に整理したい」という言い方の方が通りやすいです。具体的なタスクリストを持って話すと、より動いてもらいやすくなります。`,
-  'タスク':         `タスクが多すぎて混乱しているときは、まず「見える化」から始めてください。
-
-紙でもメモアプリでも、頭の中にあるタスクを全部書き出す。書き出すだけで「思ったより少ない」または「本当に多い」かが客観的にわかります。そこから整理が始まります。`,
-  'キャパ':         `キャパオーバーの状態が続くと、判断力が落ちてミスが増え、さらに負荷が増えるという悪循環に入りやすいです。
-
-今すぐ試せること：今日1つだけ、「やらなくていいこと」を決めて帰る。完璧にこなすより、まず負荷を下げることが先決です。`,
-
-  /* ===== 給料・評価・待遇系 ===== */
-  keywords_salary: ['給料','給与','年収','評価','昇給','昇進','待遇','ボーナス','報われない','認められない'],
-  '給料':          `給料への不満は、「市場価値と自社の評価がズレている」か「評価制度そのものへの不満」のどちらかが多いです。
-
-まず転職サイトで同職種・同年齢の相場を調べてみてください。市場価値より低いなら交渉または転職の根拠になります。相場通りなら、評価制度や自分の見せ方を変えることが先決です。`,
-  '評価':          `評価されていないと感じるとき、原因は「成果が出ていない」「成果が見えていない」「評価者と合っていない」の3つのどれかです。
-
-自分では努力しているのに評価されない場合、多くは「成果の見せ方」の問題です。上司が見ている指標と自分が意識している指標がズレていないか、一度確認してみてください。`,
-  '報われない':    `頑張っているのに報われないと感じるのは、エネルギーが最も削られる状態です。
-
-一度立ち止まって「誰に向けて頑張っているか」を確認してみてください。会社の評価軸と自分の努力の方向がズレていると、いくら頑張っても評価に繋がりません。方向を合わせるか、別の場所で評価される環境に移るかを考えるタイミングかもしれません。`,
-
-  /* ===== 人間関係・職場環境系 ===== */
-  keywords_relations: ['上司','同僚','人間関係','職場','チーム','パワハラ','ハラスメント','怒られ','詰められ','相談できない','孤立','馴染め'],
-  '上司':          `上司との関係で消耗しているなら、まず「上司を変えようとしない」ことが大前提です。変えられるのは自分の関わり方だけです。
-
-相談するなら「業務量を減らして」より「優先順位を一緒に整理させてほしい」の方が通りやすいです。また、上司が好む報告形式（頻度・手段）に合わせるだけで関係が改善することも多いです。`,
-  '人間関係':      `職場の人間関係のストレスは、「特定の一人」が原因の場合と「職場全体の空気」が原因の場合で対処法が変わります。
-
-特定の人なら接触量を減らすことが最も効果的です。職場全体の空気が問題なら、環境を変えることも選択肢として現実的に考える価値があります。`,
-  '孤立':          `職場で孤立していると感じるのは、精神的にかなりしんどい状態です。
-
-全員と仲良くなる必要はありません。まず職場の中で「一番話しかけやすい人」を1人だけ選んで、業務の話だけでいいので少し接触頻度を増やしてみてください。安全地帯が1人いるだけで、全体のストレスが大きく下がります。`,
-  'パワハラ':      `パワハラは、我慢し続けても改善しないことがほとんどです。
-
-記録を残すことを今すぐ始めてください。日時・場所・発言内容・証人をメモしておく。これがあるとHR部門や外部窓口への相談・交渉が格段にしやすくなります。一人で抱え込まず、社内のHR・相談窓口、または外部の労働相談窓口に連絡することをおすすめします。`,
-
-  /* ===== 転職・離職系 ===== */
-  keywords_leaving: ['転職','辞め','退職','辞職','会社を出','別の会社','転活','内定','辞表'],
-  '転職':          `転職を考えているなら、まず「逃げたいから」と「もっと良い環境に行きたいから」を分けて整理してください。
-
-前者だけで動くと、次の職場でも同じ問題が出やすいです。後者の要素もあるなら、転職は十分合理的な選択です。焦らず、まず情報収集として転職サイトに登録するだけでも、選択肢が見えて気持ちが楽になります。`,
-  '辞め':          `辞めたいと思うのは、何かが限界に達しているサインです。
-
-まず「今すぐ辞めなければならない理由」があるかどうかを確認してください。健康や安全に関わる問題なら即行動すべきです。そうでなければ、あと1〜2ヶ月かけて次を探しながら動く方が、条件の良い転職につながりやすいです。`,
-  '退職':          `退職を具体的に考えているなら、準備を始めることが精神的な余裕を生みます。
-
-「いつでも辞められる状態」を作るだけで、今の仕事への向き合い方が変わることが多いです。履歴書を更新する・転職サイトに登録するだけでもOKです。選択肢があると分かるだけで、日々のストレスが少し下がります。`,
-
-  /* ===== メンタル・疲労系 ===== */
-  keywords_mental: ['疲れ','しんどい','辛い','つらい','眠れない','やる気','モチベ','燃え尽き','涙','泣き','限界','消えたい','消えたい'],
-  '疲れ':          `慢性的な疲れは「休む量」より「回復の質」を上げることが先決です。
-
-今週試せること：就寝前1時間だけスマホをやめてみる。仕事の思考を物理的に切り離す時間を作るだけで、回復力が変わります。`,
-  'しんどい':      `「しんどい」と言葉にできているのは、まだ自分の状態を客観視できているサインです。
-
-今すぐ何かを解決しようとしなくていいです。まず「何が一番しんどいか」を1つだけ言葉にしてみてください。問題が1つに絞れると、少し楽になります。`,
-  'つらい':        `つらい状態が続いているとき、「頑張れば乗り越えられる」は必ずしも正しくありません。
-
-まず今の状態を誰かに話すことが大切です。信頼できる人、社内外の相談窓口、どこでも構いません。一人で抱えていると、感覚が麻痺して判断力が下がります。`,
-  'やる気':        `やる気が出ないとき、根性論で乗り越えようとするのは逆効果なことが多いです。
-
-やる気は「行動の結果」として出てくることが多いです。まず5分だけ始めてみる。始めてしまえば続けられることがほとんどです。それでも動けない場合は、休息が必要なサインかもしれません。`,
-  '眠れない':      `眠れない状態が続くと、判断力・感情コントロール・体力すべてが低下します。
-
-まず就寝1時間前にスマホ・PCを閉じることから始めてください。それだけで睡眠の質が変わる人が多いです。2週間試しても改善しない場合は、医療機関への相談も選択肢に入れてください。`,
-  '限界':          `「限界」と感じているなら、それは本当に限界が近いサインです。無理に乗り越えようとしないでください。
-
-まず今日1つだけ、仕事の負荷を下げてください。早退する・タスクを1つ断る・誰かに話す、何でも構いません。限界を超えてから回復するのは、超える前に止まるより数倍時間がかかります。`,
-
-  /* ===== キャリア・将来系 ===== */
-  keywords_career: ['キャリア','将来','スキル','成長','やりがい','向いてない','向いていない','適職','転職先','何がしたい','方向性'],
-  'キャリア':      `キャリアに迷っているとき、「正解を探そうとする」と動けなくなります。
-
-まず「今の仕事で得られているもの」を書き出してください。スキル・人脈・経験・お金、何でも構いません。今持っているものが見えると、次のステップが見つけやすくなります。`,
-  'やりがい':      `やりがいを感じられなくなっているのは、燃え尽き傾向のサインのひとつです。
-
-やりがいは「大きな目標」より「小さな達成の積み重ね」から生まれることが多いです。今日1つだけ「完了させる」ことに集中してみてください。それだけで少し感覚が変わります。`,
-  '向いてない':    `「向いていない」という感覚は、今の環境との相性の問題であることが多く、能力そのものの問題ではないことがほとんどです。
-
-「何が向いていないか」を具体的にしてみてください。業務内容・職場の文化・上司との相性・業界全体、どれが問題かによって対処法が変わります。`,
-  '向いていない':  `「向いていない」という感覚は、今の環境との相性の問題であることが多く、能力そのものの問題ではないことがほとんどです。
-
-「何が向いていないか」を具体的にしてみてください。業務内容・職場の文化・上司との相性・業界全体、どれが問題かによって対処法が変わります。`,
-  'スキル':        `スキルへの不安は、「今すぐ全部身につけなければ」と思っているときに最も強くなります。
-
-今の仕事で身につけられるスキルと、外で身につける必要があるスキルを分けてみてください。まず今の仕事で得られるものを最大限取りに行く方が、効率的なことが多いです。`,
-
-  /* ===== その他・デフォルト ===== */
-  'default': `その悩み、今の状態のときに感じやすいことです。
-
-もう少し具体的に教えてもらえますか？たとえば「残業が多い」「上司と合わない」「給料が低い」「やる気が出ない」など、一番気になっていることを入力してもらうと、より具体的なアドバイスができます。`
-};
-
-/* ========== 状態 ========== */
+/* ===== 状態 ===== */
 let cur = 0;
 let answers = new Array(QUESTIONS.length).fill(-1);
-let rawScores = { stress:0, burnout:0, environment:0, leaving:0, engagement:0 };
-let prevRaw   = { stress:0, burnout:0, environment:0, leaving:0, engagement:0 };
+let rawScores = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
+let prevRaw   = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
 let typeTimer = null;
 
-/* ========== ユーティリティ ========== */
-function clamp(v) { return Math.min(100, Math.max(0, Math.round(v))); }
+/* ===== 初期化：軸リスト構築 ===== */
+function buildAxisList() {
+  const list = document.getElementById('axisList');
+  list.innerHTML = '';
+  AXES.forEach(a => {
+    const item = document.createElement('div');
+    item.className = 'axis-item';
+    item.dataset.axis = a.key;
+    item.innerHTML = `
+      <div class="axis-top">
+        <div class="axis-name">${a.label}</div>
+        <div class="axis-val" id="val-${a.key}">0</div>
+        <div class="axis-delta" id="delta-${a.key}">±0</div>
+      </div>
+      <div class="bar-track"><div class="bar-fill bar-${a.key}" id="bar-${a.key}"></div></div>
+    `;
+    list.appendChild(item);
+  });
+}
 
+/* ===== ユーティリティ ===== */
+function clamp(v) { return Math.min(100, Math.max(0, Math.round(v))); }
 function rawToNorm(raw) {
   return {
     stress:      clamp(raw.stress      / MAX_RAW.stress      * 100),
@@ -761,206 +675,156 @@ function rawToNorm(raw) {
     engagement:  clamp(raw.engagement  / MAX_RAW.engagement  * 100)
   };
 }
+function getLevel(v) { if(v<25)return'low'; if(v<50)return'moderate'; if(v<75)return'high'; return'very_high'; }
+function calcTotal(norm) { return clamp(norm.stress*0.32+norm.burnout*0.28+norm.environment*0.23+norm.leaving*0.17); }
+function getDominant(norm) { return ['stress','burnout','environment','leaving'].reduce((a,b)=>norm[a]>=norm[b]?a:b); }
+function answerToPoints(idx) { return [0,2.5,5,7.5,10][idx]; }
 
-function getLevel(v) {
-  if (v < 25) return 'low';
-  if (v < 50) return 'moderate';
-  if (v < 75) return 'high';
-  return 'very_high';
-}
-
-const LEVEL_LABELS = { low:'低', moderate:'やや高', high:'高', very_high:'非常に高' };
-
-function calcTotal(norm) {
-  return clamp(
-    norm.stress * 0.32 +
-    norm.burnout * 0.28 +
-    norm.environment * 0.23 +
-    norm.leaving * 0.17
-  );
-}
-
-function getDominant(norm) {
-  return ['stress','burnout','environment','leaving'].reduce((a,b) => norm[a] >= norm[b] ? a : b);
-}
-
-/* 回答値（0-4）→ 10点スケール
-   通常設問・逆スコア設問ともに、
-   選択肢の並びを「良い(index 0)→ 悪い(index 4)」に統一しているため
-   index をそのまま pts に対応させる。
-   reverseフラグは選択肢の並び順制御に使用（スコア計算では不要）。
-*/
-function answerToPoints(answerIdx) {
-  const pts = [0, 2.5, 5, 7.5, 10];
-  return pts[answerIdx];
-}
-
-/* ========== スコア計算 ========== */
 function calcRaw() {
-  const s = { stress:0, burnout:0, environment:0, leaving:0, engagement:0 };
-  answers.forEach((ai, qi) => {
-    if (ai < 0) return;
-    const q = QUESTIONS[qi];
+  const s = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
+  answers.forEach((ai,qi) => {
+    if(ai<0) return;
     const pts = answerToPoints(ai);
-    Object.keys(q.weights).forEach(k => { s[k] += pts * q.weights[k]; });
+    Object.keys(QUESTIONS[qi].weights).forEach(k => { s[k] += pts * QUESTIONS[qi].weights[k]; });
   });
   return s;
 }
 
-/* ========== 描画：診断画面 ========== */
+/* ===== 描画：質問 ===== */
 function renderQuestion() {
-  const introBlock = document.getElementById('introBlock');
-  if (introBlock) introBlock.style.display = cur === 0 ? '' : 'none';
+  const intro = document.getElementById('introBlock');
+  if(intro) intro.style.display = cur===0 ? '' : 'none';
+
   const q = QUESTIONS[cur];
   document.getElementById('qNum').textContent = `Q${cur+1} / ${QUESTIONS.length}`;
-  const pct = Math.round((cur+1) / QUESTIONS.length * 100);
-  document.getElementById('qPct').textContent = pct + '%';
-  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progFill').style.width = ((cur+1)/QUESTIONS.length*100) + '%';
   document.getElementById('qBadge').textContent = TYPE_LABELS[q.type];
   document.getElementById('qText').textContent = q.text;
-  document.getElementById('btnBack').disabled = cur === 0;
+  document.getElementById('btnBack').disabled = cur===0;
   const nb = document.getElementById('btnNext');
-  nb.textContent = cur === QUESTIONS.length - 1 ? '結果を見る →' : '次へ →';
-  nb.disabled = answers[cur] < 0;
+  nb.textContent = cur===QUESTIONS.length-1 ? '完了' : '次へ';
+  nb.disabled = answers[cur]<0;
 
   const ol = document.getElementById('optList');
   ol.innerHTML = '';
-  q.opts.forEach((o, i) => {
-    const div = document.createElement('div');
-    div.className = 'opt' + (answers[cur] === i ? ' selected' : '');
-    div.innerHTML = `<div class="opt-radio"></div><div><div class="opt-label">${o.label}</div><div class="opt-note">${o.note}</div></div>`;
-    div.onclick = () => selectAnswer(i);
-    ol.appendChild(div);
+  q.opts.forEach((o,i) => {
+    const lbl = document.createElement('label');
+    lbl.className = 'option' + (answers[cur]===i?' selected':'');
+    lbl.innerHTML = `<input type="radio" name="q${cur}" value="${i}" ${answers[cur]===i?'checked':''}><span class="opt-radio" aria-hidden="true"></span><span class="opt-text"><span class="opt-label">${o.label}</span><span class="opt-note">${o.note}</span></span>`;
+    lbl.addEventListener('click', () => selectAnswer(i));
+    ol.appendChild(lbl);
   });
 }
 
 function selectAnswer(idx) {
-  prevRaw = { ...rawScores };
+  if(answers[cur]===idx) return;
+  prevRaw = {...rawScores};
   answers[cur] = idx;
   rawScores = calcRaw();
   renderQuestion();
   updatePreview(QUESTIONS[cur].comments[idx]);
 }
 
+/* ===== プレビュー更新 ===== */
 function updatePreview(comment) {
-  const answered = answers.filter(a => a >= 0).length;
-  if (answered === 0) {
-    document.getElementById('totalNum').textContent = '—';
-    ['stress','burnout','environment','leaving'].forEach(k => {
-      document.getElementById('val-' + k).textContent = '—';
-      document.getElementById('bar-' + k).style.width = '0%';
-      const d = document.getElementById('delta-' + k);
-      d.textContent = '—'; d.className = 'axis-delta delta-none';
+  const answered = answers.filter(a=>a>=0).length;
+  document.getElementById('answeredCount').textContent = `回答済み ${answered}/${QUESTIONS.length}`;
+
+  if(answered===0) {
+    document.getElementById('totalNum').textContent = '0';
+    document.getElementById('totalDelta').textContent = '';
+    document.getElementById('totalDelta').classList.remove('show');
+    AXES.forEach(a => {
+      document.getElementById('val-'+a.key).textContent = '0';
+      document.getElementById('bar-'+a.key).style.width = '0%';
+      document.getElementById('delta-'+a.key).textContent = '±0';
+      document.getElementById('delta-'+a.key).className = 'axis-delta';
     });
-    document.getElementById('aiComment').textContent = '回答するとリアルタイムで分析が始まります。';
     return;
   }
 
   const norm = rawToNorm(rawScores);
   const prevNorm = rawToNorm(prevRaw);
   const total = calcTotal(norm);
-  document.getElementById('totalNum').textContent = total;
+  const prevTotal = calcTotal(prevNorm);
+  const totalDiff = total - prevTotal;
 
-  ['stress','burnout','environment','leaving'].forEach(k => {
-    const v = norm[k], pv = prevNorm[k];
-    document.getElementById('val-' + k).textContent = v;
-    document.getElementById('bar-' + k).style.width = v + '%';
-    const d = document.getElementById('delta-' + k);
+  const numEl = document.getElementById('totalNum');
+  numEl.textContent = total;
+  numEl.classList.remove('bump');
+  requestAnimationFrame(() => numEl.classList.add('bump'));
+  setTimeout(() => numEl.classList.remove('bump'), 260);
+
+  const deltaEl = document.getElementById('totalDelta');
+  deltaEl.textContent = totalDiff===0 ? '±0' : (totalDiff>0?'↑':'↓')+Math.abs(totalDiff);
+  deltaEl.style.color = totalDiff>0 ? 'var(--danger)' : totalDiff<0 ? 'var(--accent)' : 'var(--muted)';
+  deltaEl.classList.remove('show');
+  requestAnimationFrame(() => deltaEl.classList.add('show'));
+
+  const riskLabel = document.getElementById('riskLabel');
+  riskLabel.textContent = total>=72?'高リスク':total>=46?'注意':'低め';
+
+  AXES.forEach(a => {
+    const v = norm[a.key], pv = prevNorm[a.key];
     const diff = v - pv;
-    if (diff > 0)      { d.textContent = '↑' + diff;           d.className = 'axis-delta delta-up'; }
-    else if (diff < 0) { d.textContent = '↓' + Math.abs(diff); d.className = 'axis-delta delta-down'; }
-    else               { d.textContent = v > 0 ? '±0' : '—';   d.className = 'axis-delta delta-none'; }
-    d.classList.add('delta-pop');
-    setTimeout(() => d.classList.remove('delta-pop'), 400);
+    document.getElementById('val-'+a.key).textContent = v;
+    document.getElementById('bar-'+a.key).style.width = v+'%';
+    const d = document.getElementById('delta-'+a.key);
+    d.textContent = diff===0 ? '±0' : (diff>0?'↑':'↓')+Math.abs(diff);
+    d.className = 'axis-delta' + (diff>0?' delta-up':diff<0?' delta-down':'');
+    d.classList.remove('delta-pop');
+    requestAnimationFrame(() => d.classList.add('delta-pop'));
   });
 
-  if (comment) typeComment(comment);
+  if(comment) typeComment(comment);
 }
 
 function typeComment(text) {
-  if (typeTimer) clearInterval(typeTimer);
+  if(typeTimer) clearInterval(typeTimer);
   const el = document.getElementById('aiComment');
   el.textContent = '';
   let i = 0;
   typeTimer = setInterval(() => {
-    if (i < text.length) { el.textContent += text[i++]; }
+    if(i<text.length) { el.textContent += text[i++]; }
     else clearInterval(typeTimer);
   }, 22);
 }
 
 function goNext() {
-  if (answers[cur] < 0) return;
-  if (cur < QUESTIONS.length - 1) { cur++; renderQuestion(); }
+  if(answers[cur]<0) return;
+  if(cur<QUESTIONS.length-1) { cur++; renderQuestion(); }
   else renderResultPage();
 }
+function goBack() { if(cur>0) { cur--; renderQuestion(); } }
 
-function goBack() {
-  if (cur > 0) { cur--; renderQuestion(); }
-}
-
-/* ========== 結果ページ生成 ========== */
+/* ===== 結果ページ ===== */
 function buildAnalysisContext(norm) {
-  const ctx = { scores: {}, subScores: {} };
+  const ctx = {scores:{},subScores:{}};
   ['stress','burnout','environment','leaving','engagement'].forEach(k => {
-    ctx.scores[k] = { value: norm[k], level: getLevel(norm[k]) };
-  });
-  QUESTIONS.forEach((q, i) => {
-    const key = ['morningDread','exhaustion','achievement','workload','meaning','recognition','safety','quitFreq','jobSearch','futureVision'][i];
-    ctx.subScores[key] = answers[i] >= 0 ? answerToPoints(answers[i]) : 0;
+    ctx.scores[k] = {value:norm[k],level:getLevel(norm[k])};
   });
   return ctx;
 }
 
-function getHeroTitle(dominant, norm) {
-  const titles = {
-    stress:      '仕事ストレスが高い状態です',
-    burnout:     '燃え尽き傾向が見られます',
-    environment: '職場環境への負担が大きい状態です',
-    leaving:     '転職意向が高まっています'
-  };
-  return titles[dominant];
+function getHeroTitle(dominant) {
+  return {stress:'仕事ストレスが高い状態です',burnout:'燃え尽き傾向が見られます',environment:'職場環境への負担が大きい状態です',leaving:'転職意向が高まっています'}[dominant];
 }
 
 function getAiAnalysis(ctx) {
   const s = ctx.scores;
-  const sub = ctx.subScores;
   const lines = [];
-
-  /* 主因の説明 */
-  if (s.stress.level === 'very_high' || s.stress.level === 'high') {
-    if (s.environment.level === 'high' || s.environment.level === 'very_high') {
-      lines.push('業務量や職場環境への負担が、ストレスの主な原因になっています。');
-    } else {
-      lines.push('業務そのものよりも、自身のコンディションや働き方の影響が大きい可能性があります。');
-    }
+  if(s.stress.level==='very_high'||s.stress.level==='high') {
+    if(s.environment.level==='high'||s.environment.level==='very_high') lines.push('業務量や職場環境への負担が、ストレスの主な原因になっています。');
+    else lines.push('業務そのものよりも、自身のコンディションや働き方の影響が大きい可能性があります。');
   }
-
-  if (s.burnout.level === 'high' || s.burnout.level === 'very_high') {
-    if (s.leaving.level === 'low' || s.leaving.level === 'moderate') {
-      lines.push('辞めたい気持ちはまだ強くない一方で、仕事への意欲や意味が薄れています。まずは業務負荷の調整から始めることが有効です。');
-    } else if (s.engagement.value < 40) {
-      lines.push('疲労だけでなく、仕事への希望も薄れている状態です。まず休息を最優先にしてください。');
-    } else {
-      lines.push('現在は消耗していますが、仕事への意味はまだ残っています。改善できる余力は十分あります。');
-    }
+  if(s.burnout.level==='high'||s.burnout.level==='very_high') {
+    if(s.leaving.level==='low'||s.leaving.level==='moderate') lines.push('辞めたい気持ちはまだ強くない一方で、仕事への意欲や意味が薄れています。まずは業務負荷の調整から始めることが有効です。');
+    else if(s.engagement.value<40) lines.push('疲労だけでなく、仕事への希望も薄れている状態です。まず休息を最優先にしてください。');
+    else lines.push('現在は消耗していますが、仕事への意味はまだ残っています。改善できる余力は十分あります。');
   }
-
-  if (s.leaving.level === 'high' || s.leaving.level === 'very_high') {
-    if (s.stress.level === 'low' || s.stress.level === 'moderate') {
-      lines.push('身体的な疲弊よりも、キャリアへの迷いが転職意向を高めているようです。');
-    }
-  }
-
-  if (s.environment.level === 'high' || s.environment.level === 'very_high') {
-    if (s.engagement.value >= 50) {
-      lines.push('仕事内容よりも組織や人間関係が主な負担になっています。仕事への意欲は残っているので、環境が変われば改善しやすい状態です。');
-    }
-  }
-
-  if (lines.length === 0) {
-    lines.push('今の状態は複数の要因が絡み合っています。まずは一番気になる点から、小さく改善を試みてください。');
-  }
-
+  if((s.leaving.level==='high'||s.leaving.level==='very_high')&&(s.stress.level==='low'||s.stress.level==='moderate')) lines.push('身体的な疲弊よりも、キャリアへの迷いが転職意向を高めているようです。');
+  if((s.environment.level==='high'||s.environment.level==='very_high')&&s.engagement.value>=50) lines.push('仕事内容よりも組織や人間関係が主な負担になっています。仕事への意欲は残っているので、環境が変われば改善しやすい状態です。');
+  if(lines.length===0) lines.push('今の状態は複数の要因が絡み合っています。まずは一番気になる点から、小さく改善を試みてください。');
   return lines.join('\n\n');
 }
 
@@ -968,266 +832,163 @@ function renderResultPage() {
   const norm = rawToNorm(rawScores);
   const ctx = buildAnalysisContext(norm);
   const dominant = getDominant(norm);
-  const axisLabels = { stress:'仕事ストレス', burnout:'燃え尽き傾向', environment:'職場環境', leaving:'転職意向' };
-  const second = ['stress','burnout','environment','leaving']
-    .filter(k => k !== dominant)
-    .reduce((a,b) => norm[a] >= norm[b] ? a : b);
+  const axisLabels = {stress:'仕事ストレス',burnout:'燃え尽き傾向',environment:'職場環境',leaving:'転職意向'};
+  const second = ['stress','burnout','environment','leaving'].filter(k=>k!==dominant).reduce((a,b)=>norm[a]>=norm[b]?a:b);
   const tasks = TASKS_BY_DOMINANT[dominant];
   const analysis = getAiAnalysis(ctx);
   const total = calcTotal(norm);
-  const simRate = { stress:0.78, burnout:0.76, environment:0.80, leaving:0.82 };
+  const simRate = {stress:0.78,burnout:0.76,environment:0.80,leaving:0.82};
 
   const rp = document.getElementById('resultPage');
   rp.innerHTML = `
-    <div class="result-hero">
-      <div class="result-hero-badge">診断結果</div>
-      <div class="result-hero-title">${getHeroTitle(dominant, norm)}</div>
-      <div class="result-hero-desc">${axisLabels[dominant]}と${axisLabels[second]}に高い値が出ています。今すぐ対処することで改善できます。</div>
+    <section class="result-panel">
+      <div class="result-header">
+        <div>
+          <div class="result-kicker">DIAGNOSIS RESULT</div>
+          <h1 class="result-title">${getHeroTitle(dominant)}</h1>
+          <p class="result-lead">${axisLabels[dominant]}と${axisLabels[second]}に高い値が出ています。今すぐ対処することで改善できます。</p>
+        </div>
+        <div class="result-total-box">
+          <strong class="result-total-num">${total}</strong>
+          <span class="result-total-label">総合ストレス指数</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="score-grid">
+      ${AXES.map(a=>`
+        <article class="result-card">
+          <p class="card-label">${a.label}</p>
+          <div class="card-score"><strong style="color:${a.color}">${norm[a.key]}</strong><span>/100</span></div>
+          <div class="bar-track"><div class="bar-fill bar-${a.key}" style="width:${norm[a.key]}%"></div></div>
+        </article>
+      `).join('')}
     </div>
 
-    <div class="result-card">
-      <div class="section-label">4軸スコア</div>
-      <div class="score-grid">
-        ${AXES.map(a => `
-          <div class="score-card">
-            <div class="score-name">${a.label}</div>
-            <div class="score-num num-${a.key}">${norm[a.key]}</div>
-            <div class="score-bar bar-${a.key}" style="width:${norm[a.key]}%"></div>
-            <div class="level-badge level-${ctx.scores[a.key].level}">${LEVEL_LABELS[ctx.scores[a.key].level]}</div>
-          </div>
+    <section class="result-panel">
+      <h2 class="section-title">AI分析</h2>
+      <p class="analysis-text" id="analysisText"></p>
+      <div class="reassurance">こうした状態は、責任感が強く仕事に真剣に向き合う人に多く見られます。あなただけではありません。</div>
+    </section>
+
+    <section class="result-panel">
+      <h2 class="section-title">今週やること 3つ</h2>
+      <div class="task-grid">
+        ${tasks.map(t=>`
+          <button class="task-card" type="button" onclick="this.classList.toggle('done');this.querySelector('.task-check').textContent=this.classList.contains('done')?'✓':'';">
+            <span class="task-check"></span>
+            <span>
+              <p class="task-title">${t.title}</p>
+              <p class="task-desc">${t.desc}</p>
+            </span>
+          </button>
         `).join('')}
       </div>
-    </div>
+    </section>
 
-    <div class="result-card">
-      <div class="section-label">AI分析</div>
-      <div class="why-box" id="analysisText"></div>
-      <div class="safe-box">こうした状態は、責任感が強く仕事に真剣に向き合う人に多く見られます。あなただけではありません。</div>
-    </div>
-
-    <div class="result-card">
-      <div class="section-label">今週やること 3つ</div>
-      <div class="tasks">
-        ${tasks.map(t => `
-          <div class="task-card" onclick="this.classList.toggle('done')">
-            <div class="task-checkbox">
-              <svg class="check-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M2 6l3 3 5-5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+    <section class="result-panel">
+      <h2 class="section-title">改善シミュレーション</h2>
+      <p class="sim-note">予測ではなく参考イメージです。今週の行動で負荷が少し下がった場合の見え方として表示しています。</p>
+      <div class="sim-list">
+        ${AXES.map(a=>{
+          const after=clamp(Math.round(norm[a.key]*simRate[a.key]));
+          return `<div class="sim-row">
+            <div class="sim-name">${a.label}</div>
+            <div class="sim-bars">
+              <div class="sim-line"><span>現在</span><div class="sim-track"><div class="sim-fill" style="width:${norm[a.key]}%"></div></div><span>${norm[a.key]}</span></div>
+              <div class="sim-line"><span>参考</span><div class="sim-track"><div class="sim-fill improved" style="width:${after}%"></div></div><span>${after}</span></div>
             </div>
-            <div class="task-body">
-              <div class="task-title">${t.title}</div>
-              <div class="task-desc">${t.desc}</div>
-            </div>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-
-    <div class="result-card">
-      <div class="section-label">改善シミュレーション</div>
-      <div class="sim-inner">
-        <div class="sim-title">この3つを実践した場合の参考イメージ</div>
-        ${AXES.map(a => {
-          const after = clamp(Math.round(norm[a.key] * simRate[a.key]));
-          return `
-            <div class="sim-row">
-              <div class="sim-axis-name">${a.label}</div>
-              <div class="sim-track">
-                <div class="sim-bar-before bar-${a.key}" style="width:${norm[a.key]}%"></div>
-                <div class="sim-bar-after bar-${a.key}" style="width:${after}%"></div>
-              </div>
-              <div class="sim-nums">${norm[a.key]} → <strong style="color:${a.color}">${after}</strong></div>
-            </div>
-          `;
+          </div>`;
         }).join('')}
-        <div class="sim-note">※ 予測ではなく参考イメージです。来週もう一度チェックして実際の変化を確かめましょう。</div>
       </div>
+    </section>
+
+    <div class="cta-card">
+      <div class="cta-title">もっと詳しく相談する</div>
+      <div class="cta-desc">AIがあなたの診断結果をもとに、具体的な改善方法を一緒に考えます。</div>
+      <button class="btn primary wide-btn" type="button" onclick="document.getElementById('chatInput').focus();document.getElementById('chatInput').scrollIntoView({behavior:'smooth'})">AIに相談する →</button>
     </div>
 
-    <div class="next-card">
-      <div class="section-label">来週の再チェック</div>
-      <div class="next-date">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink:0;color:#1D9E75">
-          <rect x="1.5" y="3" width="15" height="13.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/>
-          <path d="M1.5 7.5h15" stroke="currentColor" stroke-width="1.3"/>
-          <path d="M5.25 1.5v3M12.75 1.5v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
-          <rect x="4.5" y="10" width="2" height="2" rx="0.5" fill="currentColor"/>
-          <rect x="8" y="10" width="2" height="2" rx="0.5" fill="currentColor"/>
-          <rect x="11.5" y="10" width="2" height="2" rx="0.5" fill="currentColor"/>
-        </svg>
-        <span>7日後にもう一度チェックして、変化を確かめましょう</span>
-      </div>
-      <div class="btn-row">
-        <button class="btn-accent" onclick="resetApp()">もう一度診断する</button>
-        <button class="btn-outline" onclick="shareResult(${JSON.stringify(norm)}, '${dominant}')">結果をコピー</button>
-      </div>
+    <div class="result-actions">
+      <button class="btn primary wide-btn" type="button" onclick="resetApp()">もう一度診断する</button>
     </div>
 
-    <div class="result-card" style="background:linear-gradient(135deg,var(--accent-light) 0%,#fff 100%);border-color:var(--accent-border);text-align:center;padding:28px 22px;">
-      <div style="font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">もっと詳しく相談する</div>
-      <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">AIがあなたの診断結果をもとに、<br>具体的な改善方法を一緒に考えます。</div>
-      <button onclick="document.getElementById('chatIn').focus();document.getElementById('chatIn').scrollIntoView({behavior:'smooth'})" style="background:var(--accent);color:#fff;border:none;border-radius:var(--radius-md);padding:12px 28px;font-size:14px;font-weight:600;cursor:pointer;letter-spacing:-0.01em;">AIに相談する →</button>
-    </div>
-
-    <div class="result-card">
-      <div class="section-label">AIコーチに相談する</div>
-      <div class="chat-wrap">
-        <div class="chat-context">
-          診断コンテキスト：${axisLabels[dominant]} ${norm[dominant]}（${LEVEL_LABELS[ctx.scores[dominant].level]}）/ ${axisLabels[second]} ${norm[second]}（${LEVEL_LABELS[ctx.scores[second].level]}）/ 総合 ${total}
+    <section class="chat-panel" aria-label="AIコーチチャット">
+      <div class="chat-head">
+        <div>
+          <div class="kicker">AI COACH CHAT</div>
+          <div class="chat-context">診断コンテキスト：${axisLabels[dominant]} ${norm[dominant]}（${LEVEL_LABELS[ctx.scores[dominant].level]}）/ ${axisLabels[second]} ${norm[second]}（${LEVEL_LABELS[ctx.scores[second].level]}）/ 総合 ${total}</div>
         </div>
-        <div class="chat-messages" id="chatMsgs">
-          <div class="bubble ai">${getHeroTitle(dominant, norm)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div>
-        </div>
-        <div class="chat-input-row">
-          <input class="chat-input" id="chatIn" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" onkeydown="if(event.key==='Enter')sendChat()">
-          <button class="chat-send" onclick="sendChat()">送る</button>
-        </div>
+        <div class="risk-pill">結果連動</div>
       </div>
-    </div>
+      <div class="chat-log" id="chatMsgs">
+        <div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div>
+      </div>
+      <div class="chat-form">
+        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off" onkeydown="if(event.key==='Enter'){event.preventDefault();sendChat();}">
+        <button class="btn primary" type="button" onclick="sendChat()">送る</button>
+      </div>
+    </section>
   `;
 
-  /* AI分析テキストをタイプライター表示 */
   document.getElementById('app').classList.add('hidden');
   rp.classList.remove('hidden');
-  window.scrollTo(0, 0);
+  window.scrollTo({top:0,behavior:'smooth'});
 
-  const analysisEl = document.getElementById('analysisText');
-  analysisEl.textContent = '';
+  const el = document.getElementById('analysisText');
+  el.textContent = '';
   let i = 0;
-  const t = setInterval(() => {
-    if (i < analysis.length) { analysisEl.textContent += analysis[i++]; }
-    else clearInterval(t);
-  }, 16);
+  const t = setInterval(()=>{ if(i<analysis.length){el.textContent+=analysis[i++];}else clearInterval(t); },16);
 }
 
-/* ========== チャット ========== */
-/* ========== チャット意図分類 ========== */
+/* ===== チャット ===== */
+const CRISIS_WORDS = ['消えたい','死にたい','生きるのがつらい','もう終わりたい','全部終わらせたい','いなくなりたい','消えてしまいたい','楽になりたい','死んでしまいたい','自殺','死ぬ','終わりにしたい','生きていたくない'];
+const BURNOUT_WORDS = ['限界','眠れない','涙が出','泣けてく','泣いてしまう','動悸','吐き気','胃が痛い','適応障害','メンタル限界','心が折れた','起き上がれない','体が動かない','しんどすぎ','もう無理かも','うつ','バーンアウト','燃え尽き','休職','病院','メンタルクリニック'];
+const CRISIS_REPLY = `今とてもつらい状況にあることが伝わってきました。\n\n一人で抱え込まず、信頼できる人や専門の相談窓口へ今すぐ相談してください。\n\n【相談窓口】\n・よりそいホットライン：0120-279-338（24時間）\n・こころの健康相談統一ダイヤル：0570-064-556\n・緊急性が高い場合は119番または最寄りの救急窓口\n\nもし今ここで気持ちを話したければ、私はあなたの話を聞きます。`;
 
-// Level 3：危機ワード（完全別フロー）
-const CRISIS_WORDS = [
-  '消えたい','死にたい','生きるのがつらい','もう終わりたい','全部終わらせたい',
-  'いなくなりたい','消えてしまいたい','もう無理','楽になりたい','死んでしまいたい',
-  '消えたい','自殺','死ぬ','終わりにしたい','生きていたくない'
-];
-
-// Level 2：強いストレス・バーンアウト疑い
-const BURNOUT_WORDS = [
-  '限界','眠れない','涙が出','泣けてく','泣いてしまう','泣いてしまい','動悸','吐き気','胃が痛い',
-  '適応障害','メンタル限界','心が折れた','起き上がれない','体が動かない',
-  'しんどすぎ','もう無理かも','精神的に','うつ','バーンアウト','燃え尽き',
-  '休職','病院','メンタルクリニック'
-];
-
-const CRISIS_REPLY = `今とてもつらい状況にあることが伝わってきました。
-
-一人で抱え込まず、信頼できる人や専門の相談窓口へ今すぐ相談してください。
-
-【相談窓口】
-・よりそいホットライン：0120-279-338（24時間）
-・こころの健康相談統一ダイヤル：0570-064-556
-・緊急性が高い場合は119番または最寄りの救急窓口
-
-もし今ここで気持ちを話したければ、私はあなたの話を聞きます。`;
-
-const BURNOUT_REPLY = {
-  '限界':      `限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。
-
-今週の3つ：
-① 有給または半休を1日取る計画を立てる
-② 信頼できる人（家族・友人・産業医）に今の状態を話す
-③ 気になる症状があれば、まずかかりつけ医か内科を受診する
-
-無理に解決しなくていいです。今は回復が最初の仕事です。`,
-  '眠れない':  `眠れない状態が続くと、判断力・感情・体力すべてが低下します。これ自体が身体のSOSサインです。
-
-今週の3つ：
-① 就寝1時間前にスマホ・PCを閉じる
-② 仕事のことを考えそうになったらメモに書き出して「頭の外に出す」
-③ 2週間改善しなければ、内科またはメンタルクリニックへの相談を検討する`,
-  '涙が出る':  `涙が出るのは、心が「もう十分すぎるほど頑張った」と言っているサインです。
-
-今週の3つ：
-① 今日だけは「仕事のことを考えない時間」を30分作る
-② 信頼できる人に「最近しんどい」と一言だけ話してみる
-③ 症状が続くようであれば、産業医やメンタルクリニックへの相談も検討する
-
-弱いのではありません。限界まで頑張ってきた証拠です。`,
-  '動悸':      `動悸・吐き気・胃の痛みなど身体症状が出ているなら、それは精神的負荷が身体限界に達しているサインです。
-
-今週の優先事項：
-① まず内科を受診して身体的な問題がないか確認する
-② 可能であれば1〜2日休む
-③ 職場の産業医または上司に「体調不良」として相談する
-
-我慢して続けると回復に時間がかかります。今が動くタイミングです。`,
-  'default':   `心身に強い負荷がかかっている状態です。今は「解決」より「回復」を優先してください。
-
-今週の3つ：
-① まず1日、仕事から離れる時間を作る
-② 信頼できる人に今の状態を話す
-③ 症状が続くようであれば、医療機関や相談窓口への相談も検討する
-
-産業医・メンタルクリニック・よりそいホットライン（0120-279-338）も活用できます。`
+const COACH_REPLIES = {
+  '残業':'残業が続くと、心身のリカバリーが追いつかなくなります。\n\n試してみてほしいこと：今日の業務をすべて書き出し、「自分しかできないもの」「今日じゃなくていいもの」の2つに分けてみてください。「今日じゃなくていいもの」を1つ後回しにするだけで、少し楽になります。',
+  '業務量':'業務量が多すぎる場合、解決策は2つです。「断る」か「優先順位を整理する」かです。\n\n上司に相談するなら「業務量を減らしてほしい」より「優先順位を一緒に整理したい」という言い方の方が通りやすいです。',
+  '給料':'給料への不満は、「市場価値と自社の評価がズレている」か「評価制度そのものへの不満」のどちらかが多いです。\n\nまず転職サイトで同職種・同年齢の相場を調べてみてください。',
+  '評価':'評価されていないと感じるとき、原因は「成果が出ていない」「成果が見えていない」「評価者と合っていない」の3つのどれかです。\n\n「成果の見せ方」を変えることで改善できるケースが多いです。',
+  '上司':'上司との関係は、直接対立するより「業務上の課題」として伝える方が動きやすいです。\n\n「〇〇が難しい状況です、優先順位を一緒に整理したい」という形が通りやすいです。',
+  '人間関係':'職場の人間関係で消耗しているなら、まず「安全に話せる人」を1人だけ決めることが先決です。\n\n全員と仲良くする必要はありません。信頼できる1人がいるだけで、心理的負荷はかなり下がります。',
+  '転職':'転職を考えるのは自然なことです。ただ、「今の職場が嫌」と「転職先が良い」は別の問題です。\n\nまず「何を変えたいのか」を明確にしてから動くと、転職後の後悔が少なくなります。',
+  '辞め':'辞めたいという気持ちは、今の状態が限界に近いサインかもしれません。\n\n急いで結論を出す必要はありません。まず「何が一番つらいか」を書き出してみてください。',
+  'やる気':'やる気が出ないのは、意志の問題ではなく疲労やミスマッチのサインです。\n\nまず「何に対してやる気が出ないのか」を特定してみてください。仕事全体なのか、特定の業務なのかで対処が変わります。',
+  'キャリア':'キャリアへの不安は、多くの場合「現状の見えない化」が原因です。\n\n今の自分のスキルと経験を棚卸しすると、意外と選択肢があることに気づけます。',
+  'default':'今おっしゃっていることは、多くの働く人が感じていることです。\n\nもう少し具体的に教えてもらえますか？たとえば「残業が多い」「上司と合わない」「やる気が出ない」など、一番気になっていることを入れてもらうと、より具体的にお伝えできます。'
 };
 
 function classifyInput(text) {
-  if (CRISIS_WORDS.some(w => text.includes(w))) return 'crisis';
-  if (BURNOUT_WORDS.some(w => text.includes(w))) return 'burnout';
+  if(CRISIS_WORDS.some(w=>text.includes(w))) return 'crisis';
+  if(BURNOUT_WORDS.some(w=>text.includes(w))) return 'burnout';
   return 'normal';
 }
 
 function getBurnoutReply(text) {
-  const key = Object.keys(BURNOUT_REPLY).find(k => k !== 'default' && text.includes(k));
-  return BURNOUT_REPLY[key || 'default'];
+  const map = {
+    '限界':'限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。\n\n今週の3つ：\n① 有給または半休を1日取る計画を立てる\n② 信頼できる人に今の状態を話す\n③ 気になる症状があれば、かかりつけ医か内科を受診する',
+    '眠れない':'眠れない状態が続くと、判断力・感情・体力すべてが低下します。\n\n今週の3つ：\n① 就寝1時間前にスマホ・PCを閉じる\n② 仕事のことを考えそうになったらメモに書き出す\n③ 2週間改善しなければ、内科またはメンタルクリニックへの相談を検討する',
+    '涙が出':'涙が出るのは、心が「もう十分すぎるほど頑張った」と言っているサインです。\n\n弱いのではありません。限界まで頑張ってきた証拠です。\n\n① 今日だけは「仕事のことを考えない時間」を30分作る\n② 信頼できる人に「最近しんどい」と一言だけ話してみる',
+    '動悸':'動悸・吐き気・胃の痛みなど身体症状が出ているなら、それは精神的負荷が身体限界に達しているサインです。\n\n① まず内科を受診して身体的な問題がないか確認する\n② 可能であれば1〜2日休む\n③ 職場の産業医または上司に「体調不良」として相談する',
+    'default':'心身に強い負荷がかかっている状態です。今は「解決」より「回復」を優先してください。\n\n産業医・メンタルクリニック・よりそいホットライン（0120-279-338）も活用できます。'
+  };
+  for(const [k,v] of Object.entries(map)) { if(k!=='default'&&text.includes(k)) return v; }
+  return map.default;
 }
 
 function getNormalReply(text) {
-  let reply = null;
-  for (const [k, v] of Object.entries(COACH_REPLIES)) {
-    if (k.startsWith('keywords_') && Array.isArray(v)) {
-      if (v.some(kw => text.includes(kw))) {
-        const matchedKw = v.find(kw => text.includes(kw));
-        if (matchedKw && COACH_REPLIES[matchedKw]) { reply = COACH_REPLIES[matchedKw]; break; }
-      }
-    }
+  for(const [k,v] of Object.entries(COACH_REPLIES)) {
+    if(k!=='default'&&text.includes(k)) return v;
   }
-  if (!reply) {
-    const directKey = Object.keys(COACH_REPLIES).find(k => !k.startsWith('keywords_') && k !== 'default' && text.includes(k));
-    reply = directKey ? COACH_REPLIES[directKey] : COACH_REPLIES['default'];
-  }
-  return reply;
-}
-
-function typeReply(msgs, text) {
-  const ab = document.createElement('div');
-  ab.className = 'bubble ai';
-  ab.textContent = '';
-  msgs.appendChild(ab);
-  let i = 0;
-  const t = setInterval(() => {
-    if (i < text.length) { ab.textContent += text[i++]; msgs.scrollTop = msgs.scrollHeight; }
-    else clearInterval(t);
-  }, 16);
-}
-
-function showCrisisReply(msgs) {
-  const ab = document.createElement('div');
-  ab.className = 'bubble ai crisis-bubble';
-  ab.style.cssText = 'background:#FEF2F2;border:1px solid #FCA5A5;color:#7F1D1D;white-space:pre-wrap;';
-  ab.textContent = '';
-  msgs.appendChild(ab);
-  let i = 0;
-  const t = setInterval(() => {
-    if (i < CRISIS_REPLY.length) { ab.textContent += CRISIS_REPLY[i++]; msgs.scrollTop = msgs.scrollHeight; }
-    else clearInterval(t);
-  }, 14);
+  return COACH_REPLIES.default;
 }
 
 function sendChat() {
-  const inp = document.getElementById('chatIn');
+  const inp = document.getElementById('chatInput');
   const val = inp.value.trim();
-  if (!val) return;
+  if(!val) return;
   const msgs = document.getElementById('chatMsgs');
 
   const ub = document.createElement('div');
@@ -1243,48 +1004,32 @@ function sendChat() {
   msgs.scrollTop = msgs.scrollHeight;
 
   const level = classifyInput(val);
-  const delay = level === 'crisis' ? 400 : 800;
+  const delay = level==='crisis'?400:800;
 
-  setTimeout(() => {
+  setTimeout(()=>{
     typing.remove();
-    if (level === 'crisis') {
-      showCrisisReply(msgs);
-    } else if (level === 'burnout') {
-      typeReply(msgs, getBurnoutReply(val));
-    } else {
-      typeReply(msgs, getNormalReply(val));
-    }
+    const rb = document.createElement('div');
+    rb.className = level==='crisis' ? 'bubble crisis' : 'bubble ai';
+    rb.textContent = level==='crisis' ? CRISIS_REPLY : level==='burnout' ? getBurnoutReply(val) : getNormalReply(val);
+    msgs.appendChild(rb);
+    msgs.scrollTop = msgs.scrollHeight;
   }, delay);
 }
 
-/* ========== シェア ========== */
-function shareResult(norm, dominant) {
-  const labels = { stress:'仕事ストレス', burnout:'燃え尽き傾向', environment:'職場環境', leaving:'転職意向' };
-  const txt = `【仕事ストレスチェック結果】\n仕事ストレス：${norm.stress} / 燃え尽き傾向：${norm.burnout} / 職場環境：${norm.environment} / 転職意向：${norm.leaving}\n\n主な傾向：${labels[dominant]}\n今週の改善アクションに取り組みます。\n\n#仕事ストレスチェック #仕事で壊れる前に`;
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(txt).then(() => {
-      const btn = document.querySelector('.btn-outline');
-      const orig = btn.textContent;
-      btn.textContent = 'コピーしました';
-      setTimeout(() => btn.textContent = orig, 2000);
-    });
-  }
-}
-
-/* ========== リセット ========== */
 function resetApp() {
   cur = 0;
   answers = new Array(QUESTIONS.length).fill(-1);
-  rawScores = { stress:0, burnout:0, environment:0, leaving:0, engagement:0 };
-  prevRaw   = { stress:0, burnout:0, environment:0, leaving:0, engagement:0 };
+  rawScores = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
+  prevRaw   = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
   document.getElementById('resultPage').classList.add('hidden');
   document.getElementById('app').classList.remove('hidden');
   renderQuestion();
   updatePreview('');
-  window.scrollTo(0, 0);
+  window.scrollTo(0,0);
 }
 
-/* ========== 初期化 ========== */
+/* ===== 初期化 ===== */
+buildAxisList();
 renderQuestion();
 </script>
 </body>
