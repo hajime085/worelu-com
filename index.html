@@ -403,8 +403,8 @@
     transition: border-color 180ms, background 180ms;
   }
   .task-card.done .task-check { border-color: var(--accent); background: var(--accent); }
-  .task-title { font-size: 14px; font-weight: 900; line-height: 1.45; margin-bottom: 5px; }
-  .task-desc { color: var(--muted); font-size: 12px; font-weight: 650; line-height: 1.6; }
+  .task-title { font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 5px; }
+  .task-desc { color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1.7; }
 
   /* SIM */
   .sim-note { color: var(--muted); font-size: 12px; font-weight: 800; margin-bottom: 16px; }
@@ -839,8 +839,6 @@ function renderResultPage() {
   const tasks = TASKS_BY_DOMINANT[dominant];
   const analysis = getAiAnalysis(ctx);
   const total = calcTotal(norm);
-  const simRate = {stress:0.78,burnout:0.76,environment:0.80,leaving:0.82};
-
   const rp = document.getElementById('resultPage');
   rp.innerHTML = `
     <section class="result-panel">
@@ -874,7 +872,7 @@ function renderResultPage() {
     </section>
 
     <section class="result-panel">
-      <h2 class="section-title">今週やること 3つ</h2>
+      <h2 class="section-title">今後やること 3つ</h2>
       <div class="task-grid">
         ${tasks.map(t=>`
           <button class="task-card" type="button" onclick="this.classList.toggle('done');this.querySelector('.task-check').textContent=this.classList.contains('done')?'✓':'';">
@@ -885,23 +883,6 @@ function renderResultPage() {
             </span>
           </button>
         `).join('')}
-      </div>
-    </section>
-
-    <section class="result-panel">
-      <h2 class="section-title">改善シミュレーション</h2>
-      <p class="sim-note">予測ではなく参考イメージです。今週の行動で負荷が少し下がった場合の見え方として表示しています。</p>
-      <div class="sim-list">
-        ${AXES.map(a=>{
-          const after=clamp(Math.round(norm[a.key]*simRate[a.key]));
-          return `<div class="sim-row">
-            <div class="sim-name">${a.label}</div>
-            <div class="sim-bars">
-              <div class="sim-line"><span>現在</span><div class="sim-track"><div class="sim-fill" style="width:${norm[a.key]}%"></div></div><span>${norm[a.key]}</span></div>
-              <div class="sim-line"><span>参考</span><div class="sim-track"><div class="sim-fill improved" style="width:${after}%"></div></div><span>${after}</span></div>
-            </div>
-          </div>`;
-        }).join('')}
       </div>
     </section>
 
