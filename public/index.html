@@ -3,1327 +3,722 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>仕事ストレスチェック診断｜約1分で無料診断【Worelu】</title>
-<meta name="description" content="10問・約1分でストレス状態を無料診断。仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析します。登録不要・完全無料。">
+<title>Worelu（ワーレル）｜働く人のためのセルフケアメディア</title>
+<meta name="description" content="仕事がつらい・眠れない・転職すべきか迷っている。その悩み、一人で抱え込まないでください。AIストレス診断とセルフケア記事で今の状態を整理します。">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="仕事ストレスチェック診断｜約1分で無料診断【Worelu】">
-<meta property="og:description" content="10問・約1分でストレス状態を無料診断。仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析します。">
+<link rel="canonical" href="https://worelu.com/">
+<meta property="og:title" content="Worelu（ワーレル）｜働く人のためのセルフケアメディア">
+<meta property="og:description" content="仕事のストレス・燃え尽き・転職まで。AIストレス診断と記事で、働く人のセルフケアをサポートします。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://worelu.com/">
 <meta property="og:image" content="https://worelu.com/ogp.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://worelu.com/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Worelu｜働く人のためのセルフケアメディア">
 <link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script type="application/ld+json">
 [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Worelu ストレスチェック",
-    "url": "https://worelu.com/",
-    "description": "仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析する無料ストレスチェック診断",
-    "applicationCategory": "HealthApplication",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Worelu",
-    "url": "https://worelu.com/",
-    "logo": "https://worelu.com/favicon.ico",
-    "description": "仕事ストレスを無料診断・AIに相談できるサービス"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Worelu",
-    "url": "https://worelu.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://worelu.com/articles/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
+  {"@context":"https://schema.org","@type":"WebSite","name":"Worelu","url":"https://worelu.com/","potentialAction":{"@type":"SearchAction","target":"https://worelu.com/articles/?q={search_term_string}","query-input":"required name=search_term_string"}},
+  {"@context":"https://schema.org","@type":"Organization","name":"Worelu","url":"https://worelu.com/","logo":"https://worelu.com/favicon.ico","description":"働く人のためのセルフケアメディア"}
 ]
 </script>
 <style>
-  :root {
-    --accent: #2563EB;
-    --accent-soft: #EFF6FF;
-    --accent-dark: #1D4ED8;
-    --text: #0F172A;
-    --muted: #64748B;
-    --line: #E2E8F0;
-    --panel: #FFFFFF;
-    --page: #F8FAFC;
-    --sand-1: #EFF6FF;
-    --sand-2: #DBEAFE;
-    --sand-3: #BFDBFE;
-    --sand-dark: #1E3A5F;
-    --warning: #D97706;
-    --danger: #DC2626;
-    --col-stress: #DC2626;
-    --col-burnout: #D97706;
-    --col-environment: #2563EB;
-    --col-leaving: #7C3AED;
-    --radius: 12px;
-    --shadow: 0 14px 38px rgba(15,23,42,0.08);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    min-height: 100vh;
-    background: var(--page);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-    line-height: 1.6;
-  }
-  button, input { font: inherit; }
-  .hidden { display: none !important; }
+:root{
+  --blue:#2563EB;
+  --blue-lt:#EFF6FF;
+  --blue-md:#DBEAFE;
+  --text:#0F172A;
+  --text2:#334155;
+  --muted:#64748B;
+  --line:#E2E8F0;
+  --page:#F8FAFC;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
 
-  /* HEADER */
-  .site-header {
-    background: var(--panel);
-    border-bottom: 1px solid var(--line);
-    padding: 0 32px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .site-logo { font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.04em; text-decoration: none; }
-  .site-logo em { color: var(--accent); font-style: normal; }
-  .site-tagline { font-size: 11px; color: var(--muted); margin-top: 2px; }
-  .logo-read { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
-  .header-right { display: flex; align-items: center; gap: 20px; }
-  .header-nav-link { font-size: 13px; color: var(--muted); text-decoration: none; font-weight: 600; }
-  .header-nav-link:hover { color: var(--accent); }
-  .header-diag-btn { background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
-  .hamburger-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
-  .hamburger-btn span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
-  .hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger-btn.open span:nth-child(2) { opacity: 0; }
-  .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-  .mobile-menu { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--panel); border-bottom: 1px solid var(--line); padding: 16px 24px; z-index: 200; flex-direction: column; gap: 0; box-shadow: 0 8px 24px rgba(15,23,42,0.1); }
-  .mobile-menu a { font-size: 15px; color: var(--text); text-decoration: none; font-weight: 600; padding: 12px 0; border-bottom: 1px solid var(--line); display: block; }
-  .mobile-menu a:last-child { border-bottom: none; }
-  .mobile-menu.open { display: flex; }
-  @media (max-width: 768px) {
-    .header-right { display: none; }
-    .hamburger-btn { display: flex; }
-    .site-header { position: relative; }
-  }
+/* HEADER */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.hdr-logo{font-size:21px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
+.hdr-logo em{color:var(--blue);font-style:normal}
+.hdr-logo-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.hdr-nav{display:flex;align-items:center;gap:28px}
+.hdr-nav a{font-size:13px;color:var(--muted);font-weight:600}
+.hdr-nav a:hover{color:var(--blue)}
+.hdr-btn{background:var(--blue);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:6px}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;flex-direction:column;box-shadow:0 8px 24px rgba(15,23,42,0.1);z-index:200}
+.mobile-nav a{font-size:15px;color:var(--text);font-weight:600;padding:12px 0;border-bottom:1px solid var(--line);display:block}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav.open{display:flex}
 
-  /* APP LAYOUT */
-  .app {
-    width: min(1180px, calc(100% - 32px));
-    margin: 12px auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
-    gap: 20px;
-    align-items: stretch;
-  }
+/* HERO */
+.hero{padding:88px 48px 80px;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;max-width:1120px;margin:0 auto}
+.hero-eyebrow{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:0.12em;margin-bottom:20px}
+.hero-h1{font-size:clamp(28px,3.6vw,44px);font-weight:900;color:var(--text);line-height:1.22;letter-spacing:-0.03em;margin-bottom:20px}
+.hero-h1 em{color:var(--blue);font-style:normal}
+.hero-sub{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:32px}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px 30px;border-radius:8px}
+.btn-primary:hover{background:#1D4ED8;color:#fff}
+.btn-primary svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round}
+.btn-text{font-size:14px;color:var(--muted);font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.btn-text:hover{color:var(--blue)}
+.hero-trust{display:flex;gap:16px;flex-wrap:wrap}
+.trust-item{font-size:12px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:5px}
+.trust-item svg{width:13px;height:13px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-  /* QUESTION AREA */
-  .question-area {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    min-height: auto;
-    padding: 14px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    justify-content: space-between;
-  }
+/* Hero 右側：診断画面モック */
+.hero-mock{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(15,23,42,0.07)}
+.mock-bar{background:var(--page);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
+.mock-bar-title{font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.04em}
+.mock-live{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;color:#DC2626}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#DC2626;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.mock-body{padding:20px}
+.mock-score-row{display:flex;align-items:center;gap:16px;margin-bottom:16px}
+.mock-score-big{font-size:52px;font-weight:900;color:var(--blue);line-height:1;letter-spacing:-0.04em}
+.mock-score-sub{font-size:12px;color:var(--muted);font-weight:700}
+.mock-gauge{flex:1}
+.mock-gauge svg{width:100%;height:48px}
+.mock-bars{display:grid;gap:9px;margin-bottom:16px}
+.mock-bar-row{display:grid;grid-template-columns:68px 1fr 28px;align-items:center;gap:8px;font-size:11px;color:var(--muted);font-weight:700}
+.mock-track{height:7px;background:var(--line);border-radius:999px;overflow:hidden}
+.mock-fill{height:100%;border-radius:999px}
+.mock-comment{background:var(--blue-lt);border-radius:8px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+.mock-ai-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mock-ai-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
+.mock-comment-text{font-size:12px;color:var(--text2);line-height:1.65;font-weight:500}
 
-  /* INTRO BLOCK */
-  .intro-block {
-    background: var(--page);
-    border-left: 3px solid var(--accent);
-    border-radius: 0 8px 8px 0;
-    padding: 12px 16px;
-    margin-bottom: 14px;
-  }
-  .intro-block h1 {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--text);
-    margin-bottom: 3px;
-    letter-spacing: -0.01em;
-  }
-  .intro-block p { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
-  .intro-chips { display: flex; gap: 8px; flex-wrap: wrap; }
-  .intro-chip { font-size: 11px; color: var(--accent); font-weight: 700; background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--sand-3); }
+/* DIVIDER */
+.divider{border:none;border-top:1px solid var(--line);margin:0}
 
-  /* TOPLINE */
-  .topline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-  }
-  .kicker { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: 0.03em; }
-  .q-count { color: var(--muted); font-size: 14px; font-weight: 700; }
+/* COMMON */
+.sec{padding:80px 48px}
+.sec-inner{max-width:1120px;margin:0 auto}
+.sec-eyebrow{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.12em;margin-bottom:12px}
+.sec-title{font-size:clamp(20px,2.4vw,30px);font-weight:800;color:var(--text);line-height:1.3;letter-spacing:-0.02em;margin-bottom:10px}
+.sec-lead{font-size:15px;color:var(--muted);line-height:1.8}
 
-  /* PROGRESS */
-  .progress {
-    height: 7px;
-    margin-bottom: 14px;
-    overflow: hidden;
-    border-radius: 999px;
-    background: #EEF3F1;
-  }
-  .progress-fill {
-    height: 100%;
-    width: 10%;
-    border-radius: inherit;
-    background: var(--accent);
-    transition: width 320ms ease;
-  }
+/* WORRY（チェックリスト型） */
+.worry-sec{background:var(--page)}
+.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:32px}
+.check-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+.check-box{width:20px;height:20px;border-radius:4px;border:2px solid var(--blue-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.check-box svg{width:11px;height:11px;stroke:var(--blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.check-label{font-size:14px;font-weight:700;color:var(--text);line-height:1.4}
+.worry-cta{text-align:center;padding:28px 0 0}
+.worry-cta-text{font-size:15px;color:var(--text2);margin-bottom:16px;font-weight:600}
+.worry-cta-sub{font-size:13px;color:var(--muted);margin-top:10px}
 
-  /* TYPE BADGE */
-  .q-type-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 3px 10px;
-    border-radius: 999px;
-    font-size: 11px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    background: var(--sand-2);
-    color: var(--accent);
-    border: 1px solid var(--sand-3);
-  }
+/* 診断の流れ */
+.flow-sec{background:#fff}
+.flow-grid{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr;gap:0;align-items:start;margin-top:48px}
+.flow-card{background:var(--page);border-radius:10px;padding:24px 20px;text-align:center}
+.flow-step-num{display:inline-block;font-size:11px;font-weight:800;color:var(--blue);background:var(--blue-lt);border:1px solid var(--blue-md);padding:3px 10px;border-radius:999px;letter-spacing:0.06em;margin-bottom:12px}
+.flow-icon{width:48px;height:48px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.flow-icon svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.flow-title{font-size:14px;font-weight:800;color:var(--text);margin-bottom:4px}
+.flow-desc{font-size:12px;color:var(--muted);line-height:1.65}
+.flow-arrow{display:flex;align-items:center;justify-content:center;margin-top:60px}
+.flow-arrow svg{width:20px;height:20px;stroke:#CBD5E1;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
-  /* QUESTION TEXT */
-  .q-text {
-    font-size: clamp(16px, 2vw, 22px);
-    font-weight: 700;
-    line-height: 1.38;
-    letter-spacing: -0.01em;
-    margin-bottom: 24px;
-  }
+/* ARTICLES */
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.art-card{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:border-color 0.2s,transform 0.2s}
+.art-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.art-thumb{height:140px;display:flex;align-items:center;justify-content:center;position:relative}
+.art-thumb-cat{position:absolute;top:12px;left:12px;font-size:10px;font-weight:800;padding:4px 10px;border-radius:4px;letter-spacing:0.05em}
+.art-body{padding:18px 20px 20px}
+.art-title{font-size:14px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:8px}
+.art-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:12px}
+.art-footer{display:flex;align-items:center;justify-content:space-between}
+.art-date{font-size:11px;color:var(--muted)}
+.art-link{font-size:12px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:3px}
+.art-link svg{width:12px;height:12px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sec-more{text-align:center;margin-top:36px}
+.btn-outline{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);color:var(--text2);font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-outline svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-  /* OPTIONS */
-  .options { display: grid; gap: 8px; margin-bottom: auto; }
-  .option {
-    position: relative;
-    display: grid;
-    grid-template-columns: 22px minmax(0,1fr);
-    gap: 14px;
-    min-height: 46px;
-    padding: 8px 14px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: #fff;
-    cursor: pointer;
-    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
-  }
-  .option:hover {
-    border-color: rgba(29,158,117,0.48);
-    transform: translateY(-1px);
-    box-shadow: 0 9px 20px rgba(21,40,35,0.06);
-  }
-  .option input { position: absolute; opacity: 0; pointer-events: none; }
-  .opt-radio {
-    width: 22px; height: 22px; margin-top: 2px;
-    border: 2px solid #CBD7D2; border-radius: 999px;
-    background: #fff;
-    box-shadow: inset 0 0 0 5px #fff;
-    transition: border-color 180ms ease, background 180ms ease;
-    flex-shrink: 0;
-  }
-  .opt-text { min-width: 0; }
-  .opt-label { font-size: 15px; font-weight: 700; line-height: 1.45; }
-  .opt-note { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; font-weight: 600; }
-  .option.selected { border-color: var(--accent); background: var(--accent-soft); }
-  .option.selected .opt-radio { border-color: var(--accent); background: var(--accent); }
+/* CATEGORIES */
+.cat-sec{background:var(--page)}
+.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.cat-item{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--text)}
+.cat-icon{width:58px;height:58px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s,background 0.2s}
+.cat-icon svg{width:24px;height:24px;stroke:var(--muted);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s}
+.cat-item:hover .cat-icon{border-color:var(--blue);background:var(--blue-lt)}
+.cat-item:hover .cat-icon svg{stroke:var(--blue)}
+.cat-label{font-size:13px;font-weight:700;color:var(--text2)}
 
-  /* NAV */
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 12px;
-  }
-  .btn {
-    min-width: 116px; min-height: 46px; padding: 0 18px;
-    border: 1px solid var(--line); border-radius: 10px;
-    background: #fff; color: var(--text);
-    font-weight: 800; cursor: pointer;
-    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-  }
-  .btn:hover:not(:disabled) { transform: translateY(-1px); border-color: #BFD0CA; }
-  .btn:disabled { color: #A7B1AD; cursor: not-allowed; }
-  .btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
-  @media (max-width: 600px) {
-    .btn { min-height: 52px; font-size: 15px; }
-    .btn.primary { min-height: 52px; font-size: 15px; }
-  }
-  .btn.primary:hover:not(:disabled) { background: var(--accent-dark); border-color: var(--accent-dark); }
+/* AI相談紹介 */
+.chat-sec{background:#fff}
+.chat-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.chat-preview{background:var(--page);border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.chat-preview-head{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.chat-preview-title{font-size:12px;font-weight:800;color:var(--text)}
+.chat-badge{background:var(--blue-lt);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;border:1px solid var(--blue-md)}
+.chat-log{padding:16px;display:grid;gap:10px}
+.bubble-wrap{display:flex;align-items:flex-start;gap:8px}
+.bubble-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bubble-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
+.bubble-ai{background:#fff;border:1px solid var(--line);border-radius:4px 10px 10px 10px;padding:10px 13px;font-size:12px;color:var(--text2);line-height:1.65;font-weight:500;max-width:260px}
+.bubble-user{background:var(--blue);border-radius:10px 4px 10px 10px;padding:10px 13px;font-size:12px;color:#fff;line-height:1.65;font-weight:500;max-width:220px;justify-self:end}
+.chat-user-row{display:flex;justify-content:flex-end}
+.chat-input-area{padding:12px 16px;border-top:1px solid var(--line);background:#fff;display:flex;gap:8px}
+.chat-input-dummy{flex:1;background:var(--page);border:1px solid var(--line);border-radius:6px;padding:9px 12px;font-size:12px;color:var(--muted)}
+.chat-send{background:var(--blue);color:#fff;border:none;border-radius:6px;padding:9px 14px;font-size:12px;font-weight:700;cursor:pointer}
+.chat-features{display:grid;gap:14px;margin:24px 0}
+.chat-feat{display:flex;align-items:flex-start;gap:12px}
+.chat-feat-icon{width:34px;height:34px;border-radius:8px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.chat-feat-icon svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
+.chat-feat-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
+.chat-feat-desc{font-size:12px;color:var(--muted);line-height:1.6}
 
-  /* PREVIEW PANEL */
-  .preview-panel {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .preview-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 18px;
-    border-bottom: 1px solid var(--line);
-  }
-  .live-label { color: var(--muted); font-size: 12px; font-weight: 900; }
-  .live-dot {
-    display: inline-flex; width: 10px; height: 10px; margin-right: 7px;
-    border-radius: 999px; background: #E53E3E;
-    box-shadow: 0 0 0 0 rgba(229,62,62,0.4);
-    animation: livePulse 1.5s ease-in-out infinite;
-    flex-shrink: 0;
-  }
-  @keyframes livePulse {
-    0%   { box-shadow: 0 0 0 0 rgba(229,62,62,0.5); }
-    70%  { box-shadow: 0 0 0 8px rgba(229,62,62,0); }
-    100% { box-shadow: 0 0 0 0 rgba(229,62,62,0); }
-  }
-  .risk-pill {
-    padding: 6px 10px; border-radius: 999px;
-    background: var(--sand-2); color: var(--accent);
-    font-size: 12px; font-weight: 900; border: 1px solid var(--sand-3);
-  }
+/* ABOUT */
+.about-sec{background:var(--page)}
+.about-inner{max-width:720px;margin:0 auto;text-align:center}
+.about-desc{font-size:15px;color:var(--text2);line-height:1.9;margin:14px 0 40px}
+.about-points{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.about-point{background:#fff;border-radius:10px;border:1px solid var(--line);padding:20px 16px;text-align:center}
+.about-point-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.about-point-icon svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
+.about-point-title{font-size:14px;font-weight:800;color:var(--text);margin-bottom:4px}
+.about-point-desc{font-size:12px;color:var(--muted);line-height:1.65}
 
-  /* TOTAL SCORE */
-  .gauge-wrap {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 4px;
-  }
-  .gauge-svg { width: 130px; height: 78px; }
-  .gauge-center {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-  }
-  .score-number {
-    font-size: clamp(26px,3vw,36px);
-    line-height: 1;
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    transition: color 400ms ease;
-  }
-  .score-number.bump { transform: scale(1.04); }
-  .score-unit { color: var(--muted); font-size: 13px; font-weight: 800; }
-  .floating-delta {
-    font-size: 16px;
-    font-weight: 900;
-    opacity: 0;
-    margin-top: 2px;
-  }
-  .floating-delta.show { animation: floatDelta 680ms ease both; }
-  .floating-delta {
-    justify-self: end;
-    min-width: 54px; text-align: right;
-    color: var(--accent); font-size: 24px; font-weight: 900;
-    opacity: 0; transform: translateY(8px);
-  }
-  .floating-delta.show { animation: floatDelta 680ms ease both; }
-  @keyframes floatDelta {
-    0%   { opacity:0; transform:translateY(10px); }
-    22%  { opacity:1; }
-    100% { opacity:0; transform:translateY(-16px); }
-  }
+/* FOOTER */
+.footer{background:#fff;border-top:1px solid var(--line);padding:40px 48px 32px}
+.footer-inner{max-width:1120px;margin:0 auto}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:32px}
+.footer-logo{font-size:18px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
+.footer-logo em{color:var(--blue);font-style:normal}
+.footer-logo-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.footer-logo-desc{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.7;max-width:260px}
+.footer-nav-group{display:flex;gap:48px;flex-wrap:wrap}
+.footer-nav-col{}
+.footer-nav-title{font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.06em;margin-bottom:12px}
+.footer-nav-links{display:grid;gap:8px}
+.footer-nav-links a{font-size:13px;color:var(--muted);font-weight:500}
+.footer-nav-links a:hover{color:var(--blue)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap}
+.footer-legal a{font-size:12px;color:var(--muted)}
+.footer-legal a:hover{color:var(--blue)}
+.footer-copy{font-size:12px;color:var(--muted)}
 
-  /* AXES */
-  .axes { display: grid; gap: 8px; }
-  .axis-item { display: grid; gap: 7px; }
-  .axis-top {
-    display: grid;
-    grid-template-columns: minmax(100px,1fr) auto auto;
-    gap: 10px;
-    align-items: baseline;
-  }
-  .axis-name { font-size: 13px; font-weight: 800; }
-  .axis-val { min-width: 30px; text-align: right; font-size: 14px; font-weight: 900; }
-  .axis-delta {
-    min-width: 40px; text-align: right;
-    color: var(--muted); font-size: 13px; font-weight: 900;
-    opacity: 0.78;
-    transition: color 160ms ease;
-  }
-  .axis-delta.delta-up { color: var(--danger); }
-  .axis-delta.delta-down { color: var(--accent); }
-  .axis-delta.delta-pop { animation: deltaPop 520ms ease; }
-  @keyframes deltaPop {
-    0%   { transform:scale(0.8); opacity:0; }
-    45%  { transform:scale(1.18); opacity:1; }
-    100% { transform:scale(1); opacity:0.78; }
-  }
-  .bar-track { height: 8px; overflow: hidden; border-radius: 999px; background: var(--line); }
-  .bar-fill { height: 100%; width: 0; border-radius: inherit; transition: width 420ms ease; }
-  .bar-stress      { background: #E24B4A; }
-  .bar-burnout     { background: #D4860A; }
-  .bar-environment { background: #2E86C1; }
-  .bar-leaving     { background: #7D5BC6; }
-
-  /* AI BOX */
-  .ai-box {
-    min-height: 80px;
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: #FBFDFD;
-  }
-  .ai-title {
-    display: flex; justify-content: space-between; gap: 10px;
-    margin-bottom: 10px; color: var(--accent);
-    font-size: 11px; font-weight: 900;
-  }
-  .answered { color: var(--muted); font-size: 11px; font-weight: 800; }
-  .ai-comment { font-size: 13px; font-weight: 600; line-height: 1.6; min-height: 40px; }
-  .cursor {
-    display: inline-block; width: 8px; height: 1.05em; margin-left: 3px;
-    background: var(--accent); vertical-align: -0.16em;
-    animation: blink 780ms steps(2,start) infinite;
-  }  @keyframes blink { 50% { opacity:0; } }
-
-  /* ===== RESULT PAGE ===== */
-  .result-page {
-    width: min(1180px, calc(100% - 32px));
-    margin: 12px auto;
-    display: grid;
-    gap: 20px;
-  }
-  .result-panel, .result-card, .chat-panel {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-  }
-  .result-panel { padding: 20px 24px; }
-  .result-header {
-    display: grid;
-    grid-template-columns: minmax(0,1fr) auto;
-    gap: 18px; align-items: start;
-  }
-  .result-kicker { color: var(--navy); font-size: 12px; font-weight: 800; margin-bottom: 8px; }
-  .result-title {
-    font-size: clamp(20px,3vw,32px);
-    line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 10px;
-  }
-  .result-lead { max-width: 720px; color: var(--muted); font-size: 15px; font-weight: 650; line-height: 1.8; }
-  .result-total-box {
-    min-width: 130px; padding: 16px; text-align: center;
-    border: 1px solid var(--sand-3); border-radius: 12px; background: var(--sand-1);
-  }
-  .result-total-num { display: block; font-size: 46px; line-height: 1; color: var(--accent); font-weight: 900; }
-  .result-total-label { color: var(--muted); font-size: 11px; font-weight: 900; }
-
-  .score-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0,1fr));
-    gap: 10px;
-  }
-  .result-card { padding: 12px 14px; }
-  .card-label { color: var(--muted); font-size: 14px; font-weight: 900; margin-bottom: 10px; }
-  .card-score { display: flex; align-items: baseline; gap: 5px; margin-bottom: 10px; }
-  .card-score strong { font-size: 26px; line-height: 1; font-weight: 900; }
-  .card-score span { color: var(--muted); font-weight: 800; }
-
-  .section-title { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 14px; }
-  .analysis-text { color: var(--muted); font-size: 15px; font-weight: 650; line-height: 1.85; white-space: pre-wrap; }
-  .reassurance {
-    margin-top: 14px; padding: 12px 14px;
-    border-radius: 10px; background: var(--sand-2);
-    color: var(--accent-dark); font-size: 13px; font-weight: 800;
-    border: 1px solid var(--sand-3);
-  }
-
-  .task-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
-  .task-card {
-    display: grid; grid-template-columns: 26px minmax(0,1fr); gap: 12px;
-    align-items: start; min-height: 110px; padding: 16px;
-    border: 1px solid var(--line); border-radius: 12px;
-    background: #fff; cursor: pointer;
-    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
-    text-align: left;
-  }
-  .task-card:hover { border-color: rgba(29,158,117,0.5); transform: translateY(-1px); }
-  .task-card.done { border-color: var(--accent); background: var(--accent-soft); }
-  .task-check {
-    display: grid; place-items: center;
-    width: 26px; height: 26px;
-    border: 2px solid #CBD7D2; border-radius: 8px;
-    color: #fff; font-size: 16px; font-weight: 900;
-    transition: border-color 180ms, background 180ms;
-  }
-  .task-card.done .task-check { border-color: var(--accent); background: var(--accent); }
-  .task-title { font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 5px; }
-  .task-desc { color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1.7; }
-
-  /* SIM */
-  .sim-note { color: var(--muted); font-size: 12px; font-weight: 800; margin-bottom: 16px; }
-  .sim-list { display: grid; gap: 16px; }
-  .sim-row { display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 12px; align-items: center; }
-  .sim-name { font-size: 12px; font-weight: 900; }
-  .sim-bars { display: grid; gap: 7px; }
-  .sim-line {
-    display: grid; grid-template-columns: 48px minmax(0,1fr) 36px;
-    gap: 8px; align-items: center;
-    color: var(--muted); font-size: 11px; font-weight: 800;
-  }
-  .sim-track { height: 10px; overflow: hidden; border-radius: 999px; background: #EEF3F1; }
-  .sim-fill { height: 100%; width: 0; border-radius: inherit; background: #AAB8B3; transition: width 480ms ease; }
-  .sim-fill.improved { background: var(--accent); }
-
-  /* CTA */
-  .cta-card {
-    background: var(--sand-2);
-    border: 1px solid var(--sand-3);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 28px 30px;
-    text-align: center;
-  }
-  .cta-title { font-size: 15px; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
-  .cta-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
-
-  .result-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-  .rec-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
-  .rec-card { display: flex; flex-direction: column; background: var(--page); border: 1px solid var(--line); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: border-color 180ms, transform 180ms; }
-  .rec-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .rec-cat { font-size: 10px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 6px; }
-  .rec-title { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.55; margin-bottom: 8px; flex: 1; }
-  .rec-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
-  .rec-link { font-size: 12px; font-weight: 700; color: var(--accent); }
-  @media(max-width:600px){ .rec-grid { grid-template-columns: 1fr; } }
-  .wide-btn { min-width: 200px; }
-
-  /* CHAT */
-  .chat-panel {
-    display: grid;
-    grid-template-rows: auto minmax(180px,auto) auto;
-    min-height: 380px;
-    padding: 22px;
-  }
-  .chat-head {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 0;
-  }
-  .chat-context { color: var(--muted); font-size: 12px; font-weight: 800; margin-top: 4px; }
-  .chat-log { display: grid; align-content: start; gap: 10px; padding: 16px 0; }
-  .bubble {
-    max-width: 84%; padding: 11px 14px; border-radius: 12px;
-    font-size: 13px; font-weight: 700; line-height: 1.65; white-space: pre-wrap;
-  }
-  .bubble.ai { justify-self: start; background: var(--sand-1); color: var(--accent-dark); border: 1px solid var(--sand-2); }
-  .bubble.user { justify-self: end; background: var(--accent); color: #FFF8F0; }
-  .bubble.crisis { justify-self: start; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
-  .ai-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; justify-self: start; max-width: 90%; }
-  .ai-bubble-icon { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 2px; border: 2px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-  .ai-bubble-wrap .bubble.ai { max-width: 100%; margin: 0; }
-  .typing-dots {
-    display: flex; gap: 4px; padding: 12px 14px;
-    justify-self: start; background: var(--accent-soft);
-    border-radius: 12px;
-  }
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: bounce 1.2s infinite; }
-  .dot:nth-child(2) { animation-delay: 0.2s; }
-  .dot:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes bounce { 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-6px)} }
-  .chat-form {
-    display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px;
-    align-items: center; padding-top: 14px; border-top: 1px solid var(--line);
-  }
-  .chat-input {
-    min-height: 46px; padding: 0 14px;
-    border: 1px solid var(--line); border-radius: 10px;
-    background: #fff; color: var(--text); outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .chat-input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(192,90,46,0.1); }
-
-  @media (max-width: 900px) {
-    .app { grid-template-columns: 1fr; width: min(100% - 22px, 700px); margin: 16px auto; }
-    .question-area { min-height: auto; padding: 22px; }
-    .result-page { width: min(100% - 22px, 700px); margin: 16px auto; }
-    .result-header, .score-grid, .task-grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 520px) {
-    .total-card { grid-template-columns: 1fr; }
-    .floating-delta { justify-self: start; }
-    .axis-top { grid-template-columns: minmax(0,1fr) auto; }
-    .nav, .result-actions { flex-direction: column; }
-    .btn, .wide-btn { width: 100%; }
-    .chat-form { grid-template-columns: 1fr; }
-    .bubble { max-width: 100%; }
-  }
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;padding:64px 24px;gap:40px}
+  .hero-mock{display:none}
+  .chat-inner{grid-template-columns:1fr;gap:40px}
+  .art-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .flow-grid{grid-template-columns:1fr;gap:12px}
+  .flow-arrow{margin:0;transform:rotate(90deg)}
+  .about-points{grid-template-columns:1fr}
+  .hdr{padding:0 24px}
+  .hdr-nav{display:none}
+  .hamburger{display:flex}
+  .hdr{position:relative}
+  .sec{padding:56px 24px}
+}
+@media(max-width:600px){
+  .art-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+  .checklist{grid-template-columns:1fr}
+  .footer-nav-group{gap:24px}
+  .hero-h1{font-size:28px}
+}
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div>
-    <a href="/" class="site-logo">Wor<em>e</em>lu <span class="logo-read">— ワーレル</span></a>
-    <div class="site-tagline">仕事ストレスを無料診断・AIに相談できるサービス</div>
-  </div>
-  <div class="header-right">
-    <a href="/articles/" class="header-nav-link">記事一覧</a>
-    <a href="/articles/stress/" class="header-nav-link">症状</a>
-    <a href="/articles/burnout/" class="header-nav-link">バーンアウト</a>
-    <a href="/articles/quit/" class="header-nav-link">転職・退職</a>
-  </div>
-  <button class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く" onclick="toggleMenu()">
+<header class="hdr">
+  <a href="/">
+    <div class="hdr-logo">Wor<em>e</em>lu <span style="font-size:13px;font-weight:400;color:var(--muted)">— ワーレル</span></div>
+    <div class="hdr-logo-sub">働く人のためのセルフケアメディア</div>
+  </a>
+  <nav class="hdr-nav">
+    <a href="/articles/">記事一覧</a>
+    <a href="/articles/stress/">症状</a>
+    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/quit/">転職・退職</a>
+    <a href="/stress-check/" class="hdr-btn">無料で診断する</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="メニュー" onclick="toggleNav()">
     <span></span><span></span><span></span>
   </button>
 </header>
-<nav class="mobile-menu" id="mobileMenu">
+<nav class="mobile-nav" id="mobileNav">
   <a href="/articles/">記事一覧</a>
   <a href="/articles/stress/">症状</a>
   <a href="/articles/burnout/">バーンアウト</a>
   <a href="/articles/quit/">転職・退職</a>
+  <a href="/stress-check/">無料で診断する</a>
 </nav>
 
-<main class="app" id="app">
-  <section class="question-area" aria-labelledby="qText">
-    <div class="intro-block" id="introBlock">
-      <h1>仕事ストレスチェック診断</h1>
-      <div class="intro-chips">
-        <span class="intro-chip">✓ 約1分で診断</span>
-        <span class="intro-chip">✓ AIがリアルタイム分析</span>
-        <span class="intro-chip">✓ 登録不要・無料</span>
-        <span class="intro-chip">✓ バーンアウト・退職リスクもチェック</span>
+<!-- HERO -->
+<section style="border-bottom:1px solid var(--line)">
+  <div class="hero">
+    <div>
+      <div class="hero-eyebrow">WORELU — SELF-CARE MEDIA</div>
+      <h1 class="hero-h1">仕事がつらい。<br><em>AIストレス診断</em>で、<br>今の状態を知ろう。</h1>
+      <p class="hero-sub">その悩み、一人で抱え込まないでください。<br>AIストレス診断とセルフケア記事で、<br>今の状態を一緒に整理します。</p>
+      <div class="hero-actions">
+        <a href="/stress-check/" class="btn-primary">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
+          無料で診断する（1分）
+        </a>
+        <a href="/articles/" class="btn-text">記事を読む →</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>登録不要</span>
+        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>完全無料</span>
+        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>AIがリアルタイム分析</span>
+        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>バーンアウト・転職リスクも判定</span>
       </div>
     </div>
-    <div class="topline">
-      <div class="kicker">WORK STRESS CHECK</div>
-      <div class="q-count" id="qNum">Q1 / 10</div>
-    </div>
-    <div class="progress" aria-label="進捗">
-      <div class="progress-fill" id="progFill"></div>
-    </div>
-    <div class="q-text" id="qText"></div>
-    <div class="options" id="optList"></div>
-    <div class="nav">
-      <button class="btn" id="btnBack" type="button" onclick="goBack()" disabled>戻る</button>
-      <button class="btn primary" id="btnNext" type="button" onclick="goNext()" disabled>次へ</button>
-    </div>
-  </section>
 
-  <aside class="preview-panel" aria-label="リアルタイム分析">
-    <div class="preview-head">
-      <div class="live-label"><span class="live-dot"></span>リアルタイム分析</div>
-    </div>
-    <div class="gauge-wrap">
-      <svg class="gauge-svg" viewBox="0 0 120 70" aria-hidden="true">
-        <path class="gauge-bg" d="M10,65 A55,55 0 0,1 110,65" fill="none" stroke="#E2E8F0" stroke-width="10" stroke-linecap="round"/>
-        <path class="gauge-fill" id="gaugeFill" d="M10,65 A55,55 0 0,1 110,65" fill="none" stroke="#2563EB" stroke-width="10" stroke-linecap="round" stroke-dasharray="172.79" stroke-dashoffset="172.79" style="transition:stroke-dashoffset 0.5s ease,stroke 0.5s ease"/>
-      </svg>
-      <div class="gauge-center">
-        <div class="score-number" id="totalNum">0</div>
-        <div class="score-unit">/100</div>
+    <!-- 診断画面モック -->
+    <div class="hero-mock">
+      <div class="mock-bar">
+        <span class="mock-bar-title">診断結果</span>
+        <span style="font-size:10px;font-weight:700;color:var(--muted)">全10問回答済み</span>
       </div>
-      <div class="floating-delta" id="totalDelta"></div>
-    </div>
-    <div class="axes" id="axisList"></div>
-    <div class="ai-box">
-      <div class="ai-title">
-        <span>AI COMMENT</span>
-        <span class="answered" id="answeredCount">未回答 0/10</span>
+      <div class="mock-body">
+        <div style="background:var(--blue-lt);border-radius:8px;padding:14px 16px;margin-bottom:14px">
+          <div style="font-size:10px;font-weight:800;color:var(--blue);letter-spacing:0.06em;margin-bottom:6px">DIAGNOSIS RESULT</div>
+          <div style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:4px">仕事ストレスが高い状態です</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6">仕事ストレスと転職意向に高い値が出ています。今すぐ対処することで改善できます。</div>
+        </div>
+        <div class="mock-score-row">
+          <div>
+            <div class="mock-score-big">78</div>
+            <div class="mock-score-sub">/100 総合スコア</div>
+          </div>
+          <div class="mock-gauge">
+            <svg viewBox="0 0 120 64" fill="none" aria-hidden="true">
+              <path d="M10,58 A54,54 0 0,1 110,58" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round" fill="none"/>
+              <path d="M10,58 A54,54 0 0,1 110,58" stroke="#DC2626" stroke-width="8" stroke-linecap="round" fill="none" stroke-dasharray="169.6" stroke-dashoffset="37"/>
+            </svg>
+          </div>
+        </div>
+        <div class="mock-bars">
+          <div class="mock-bar-row">
+            <span>仕事ストレス</span>
+            <div class="mock-track"><div class="mock-fill" style="width:84%;background:#DC2626"></div></div>
+            <span>84</span>
+          </div>
+          <div class="mock-bar-row">
+            <span>燃え尽き</span>
+            <div class="mock-track"><div class="mock-fill" style="width:61%;background:#D97706"></div></div>
+            <span>61</span>
+          </div>
+          <div class="mock-bar-row">
+            <span>職場環境</span>
+            <div class="mock-track"><div class="mock-fill" style="width:44%;background:#2563EB"></div></div>
+            <span>44</span>
+          </div>
+          <div class="mock-bar-row">
+            <span>転職意向</span>
+            <div class="mock-track"><div class="mock-fill" style="width:79%;background:#7C3AED"></div></div>
+            <span>79</span>
+          </div>
+        </div>
+        <div class="mock-comment">
+          <div class="mock-ai-icon">
+            <svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg>
+          </div>
+          <div class="mock-comment-text">仕事ストレスと転職意向が同時に高く出ています。今の職場とのミスマッチも影響している可能性があります。</div>
+        </div>
       </div>
-      <div class="ai-comment"><span id="aiComment">回答するとリアルタイムで分析が始まります。</span><span class="cursor"></span></div>
     </div>
-  </aside>
-</main>
+  </div>
+</section>
 
-<div class="result-page hidden" id="resultPage"></div>
+<hr class="divider">
+
+<!-- こんなお悩みありませんか？ -->
+<section class="sec worry-sec">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:36px">
+      <div class="sec-eyebrow">FOR YOU</div>
+      <h2 class="sec-title">こんなお悩みはありませんか？</h2>
+    </div>
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-box"><svg viewBox="0 0 11 11" aria-hidden="true"><path d="M1.5 5.5l3 3 5-5"/></svg></div>
+        <span class="check-label">朝になると会社へ行きたくない</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"><svg viewBox="0 0 11 11" aria-hidden="true"><path d="M1.5 5.5l3 3 5-5"/></svg></div>
+        <span class="check-label">日曜の夜になると憂鬱になる</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"><svg viewBox="0 0 11 11" aria-hidden="true"><path d="M1.5 5.5l3 3 5-5"/></svg></div>
+        <span class="check-label">毎日疲れて何もしたくない</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"><svg viewBox="0 0 11 11" aria-hidden="true"><path d="M1.5 5.5l3 3 5-5"/></svg></div>
+        <span class="check-label">上司・職場の人間関係がつらい</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"><svg viewBox="0 0 11 11" aria-hidden="true"><path d="M1.5 5.5l3 3 5-5"/></svg></div>
+        <span class="check-label">転職すべきか迷っている</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"><svg viewBox="0 0 11 11" aria-hidden="true"><path d="M1.5 5.5l3 3 5-5"/></svg></div>
+        <span class="check-label">頑張っているのに評価されない</span>
+      </div>
+    </div>
+    <div class="worry-cta">
+      <div class="worry-cta-text">1つでも当てはまるなら、まずAIストレス診断を試してください。</div>
+      <a href="/stress-check/" class="btn-primary" style="display:inline-flex">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
+        無料で診断する（1分）
+      </a>
+      <div class="worry-cta-sub">登録不要・完全無料・AIがリアルタイム分析</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- 診断の流れ -->
+<section class="sec flow-sec">
+  <div class="sec-inner">
+    <div style="text-align:center">
+      <div class="sec-eyebrow">HOW IT WORKS</div>
+      <h2 class="sec-title">診断から改善まで、4つのステップ</h2>
+      <p class="sec-lead" style="margin-top:8px">何が起きるかが分かると、一歩を踏み出しやすくなります。</p>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-card">
+        <div class="flow-step-num">STEP 01</div>
+        <div class="flow-icon">
+          <svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8.5"/><path d="M11 7v4l3 2"/></svg>
+        </div>
+        <div class="flow-title">診断する</div>
+        <div class="flow-desc">10問・約1分。今のストレス状態を4軸でスコア化。</div>
+      </div>
+      <div class="flow-arrow">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step-num">STEP 02</div>
+        <div class="flow-icon">
+          <svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 16l4-3 3 2 7-9"/></svg>
+        </div>
+        <div class="flow-title">結果を見る</div>
+        <div class="flow-desc">4軸スコアとAIコメントで、自分の状態を客観的に把握。</div>
+      </div>
+      <div class="flow-arrow">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step-num">STEP 03</div>
+        <div class="flow-icon">
+          <svg viewBox="0 0 22 22" aria-hidden="true"><path d="M4 17l3-3h10a1 1 0 001-1V7a1 1 0 00-1-1H6a1 1 0 00-1 1v10z"/></svg>
+        </div>
+        <div class="flow-title">AIに相談する</div>
+        <div class="flow-desc">残業・転職・人間関係など、何でもAIコーチに相談できる。</div>
+      </div>
+      <div class="flow-arrow">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
+      </div>
+      <div class="flow-card">
+        <div class="flow-step-num">STEP 04</div>
+        <div class="flow-icon">
+          <svg viewBox="0 0 22 22" aria-hidden="true"><rect x="4" y="4" width="14" height="16" rx="2"/><path d="M8 9h6M8 13h4"/></svg>
+        </div>
+        <div class="flow-title">記事で学ぶ</div>
+        <div class="flow-desc">状態に合った関連記事で、原因と対処法を深く理解する。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- 人気記事 -->
+<section class="sec" style="background:var(--page)">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">POPULAR ARTICLES</div>
+    <h2 class="sec-title">人気の記事</h2>
+    <p class="sec-lead" style="margin-bottom:36px">多くの方に読まれている記事です。</p>
+    <div class="art-grid">
+      <a href="/articles/stress/nemurenai-asa/" class="art-card">
+        <div class="art-thumb" style="background:#FEF2F2">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="18" fill="#FECACA"/><path d="M18 26Q26 34 34 26Q42 18 38 12Q28 18 18 26Z" fill="#F87171"/><circle cx="32" cy="16" r="4" fill="#FCA5A5"/></svg>
+          <div class="art-thumb-cat" style="background:#FEE2E2;color:#B91C1C">症状・ストレス</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">眠れないまま朝になった…仕事のストレスで眠れない人へ</div>
+          <div class="art-desc">脳が仕事モードのまま固定されている状態の正体と、その夜を軽くする方法。</div>
+          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>
+      <a href="/articles/burnout/moeyuki-selfcheck/" class="art-card">
+        <div class="art-thumb" style="background:#FFFBEB">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="18" fill="#FDE68A"/><path d="M26 10c0 8-12 10-12 18a12 12 0 0024 0c0-8-12-10-12-18z" fill="#F59E0B"/><path d="M26 22c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z" fill="#FCD34D"/></svg>
+          <div class="art-thumb-cat" style="background:#FEF3C7;color:#92400E">バーンアウト</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認</div>
+          <div class="art-desc">燃え尽き症候群かどうかを10問で確認。結果別の対処法を整理します。</div>
+          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>
+      <a href="/articles/quit/yameru-yuuki/" class="art-card">
+        <div class="art-thumb" style="background:#F5F3FF">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="18" fill="#DDD6FE"/><path d="M18 26h12M26 20l6 6-6 6" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="16" width="4" height="20" rx="2" fill="#A78BFA"/></svg>
+          <div class="art-thumb-cat" style="background:#EDE9FE;color:#5B21B6">転職・退職</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">仕事を辞める勇気が出ない人へ。5つの理由と現実的な答え</div>
+          <div class="art-desc">辞めたいのに動けない理由を整理し、判断基準と次の一歩を提案します。</div>
+          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>
+    </div>
+    <div class="sec-more">
+      <a href="/articles/" class="btn-outline">記事をもっと見る <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- カテゴリー -->
+<section class="sec cat-sec">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:36px">
+      <div class="sec-eyebrow">CATEGORY</div>
+      <h2 class="sec-title">カテゴリーから探す</h2>
+    </div>
+    <div class="cat-grid">
+      <a href="/articles/work/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 014 0v2"/><path d="M2 12h20"/></svg></div>
+        <span class="cat-label">仕事</span>
+      </a>
+      <a href="/articles/stress/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
+        <span class="cat-label">ストレス</span>
+      </a>
+      <a href="/articles/stress/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C9 3 5 6 5 10c0 3 2 5.5 4 7v3h6v-3c2-1.5 4-4 4-7 0-4-3-7-7-7z"/><path d="M9 20h6"/></svg></div>
+        <span class="cat-label">睡眠</span>
+      </a>
+      <a href="/articles/burnout/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg></div>
+        <span class="cat-label">燃え尽き</span>
+      </a>
+      <a href="/articles/quit/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11h6M19 8l3 3-3 3"/><path d="M12 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg></div>
+        <span class="cat-label">転職・退職</span>
+      </a>
+      <a href="/articles/quit/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5A6 6 0 0112 12a6 6 0 018 5.5"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <span class="cat-label">キャリア</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- 新着記事 -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-eyebrow">NEW ARTICLES</div>
+    <h2 class="sec-title">新着記事</h2>
+    <p class="sec-lead" style="margin-bottom:32px"></p>
+    <div class="art-grid">
+      <a href="/articles/quit/black-kigyo-shindan/" class="art-card">
+        <div class="art-thumb" style="background:#F5F3FF">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="18" fill="#DDD6FE"/><rect x="16" y="14" width="20" height="24" rx="3" fill="#A78BFA"/><path d="M20 22h12M20 28h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="art-thumb-cat" style="background:#EDE9FE;color:#5B21B6">転職・退職</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">ブラック企業診断｜15の質問で今の職場をスコアリング</div>
+          <div class="art-desc">15問のスコアリングでブラック企業かどうかを判断。行動指針付き。</div>
+          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>
+      <a href="/articles/work/service-zangyo/" class="art-card">
+        <div class="art-thumb" style="background:#EFF6FF">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="18" fill="#BFDBFE"/><circle cx="26" cy="26" r="10" stroke="#2563EB" stroke-width="2" fill="none"/><path d="M26 18v8l5 3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="art-thumb-cat" style="background:#DBEAFE;color:#1D4ED8">労働問題</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">サービス残業は違法。残業代を取り戻す全手順【完全版】</div>
+          <div class="art-desc">残業代の計算・証拠の集め方・相談先まで一気通貫で解説。</div>
+          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>
+      <a href="/articles/burnout/burnout-symptoms/" class="art-card">
+        <div class="art-thumb" style="background:#FFFBEB">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true"><circle cx="26" cy="26" r="18" fill="#FDE68A"/><path d="M26 12c0 9-10 11-10 18a10 10 0 0020 0c0-7-10-9-10-18z" fill="#F59E0B"/></svg>
+          <div class="art-thumb-cat" style="background:#FEF3C7;color:#92400E">バーンアウト</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">バーンアウトの症状チェックリスト。燃え尽きのサインと回復法</div>
+          <div class="art-desc">バーンアウトの3段階・症状リスト・段階別の回復ステップ。</div>
+          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>
+    </div>
+    <div class="sec-more">
+      <a href="/articles/" class="btn-outline">すべての記事を見る <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AI相談紹介 -->
+<section class="sec chat-sec">
+  <div class="chat-inner">
+    <div>
+      <div class="sec-eyebrow">AI COACH CHAT</div>
+      <h2 class="sec-title" style="margin-bottom:12px">AIコーチに<br>何でも相談できる</h2>
+      <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:0">診断後は、AIコーチにあなたの悩みを直接相談できます。</p>
+      <div class="chat-features">
+        <div class="chat-feat">
+          <div class="chat-feat-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 13l3-3h8a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v8z"/></svg></div>
+          <div><div class="chat-feat-title">残業・上司・転職まで相談できる</div><div class="chat-feat-desc">キーワードを入れるだけで、あなたの状態に合わせたアドバイスが届きます。</div></div>
+        </div>
+        <div class="chat-feat">
+          <div class="chat-feat-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 4v4M8 11.5v.5"/></svg></div>
+          <div><div class="chat-feat-title">診断結果と連動したアドバイス</div><div class="chat-feat-desc">あなたのスコアを踏まえた、個別性のある返答が得られます。</div></div>
+        </div>
+        <div class="chat-feat">
+          <div class="chat-feat-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8h8M4 5h8M4 11h5"/></svg></div>
+          <div><div class="chat-feat-title">関連記事を自動でおすすめ</div><div class="chat-feat-desc">症状に合った記事へ自然に誘導し、より深く理解できます。</div></div>
+        </div>
+      </div>
+      <a href="/stress-check/" class="btn-primary" style="display:inline-flex">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
+        診断してAIに相談する
+      </a>
+    </div>
+    <div class="chat-preview">
+      <div class="chat-preview-head">
+        <span class="chat-preview-title">AI COACH CHAT</span>
+        <span class="chat-badge">診断後に利用可能</span>
+      </div>
+      <div class="chat-log">
+        <div class="bubble-wrap">
+          <div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>
+          <div class="bubble-ai">仕事ストレスと転職意向が高い結果でした。何か具体的に気になっていることや、相談したいことはありますか？</div>
+        </div>
+        <div class="chat-user-row">
+          <div class="bubble-user">毎日残業が続いていて、もう限界かもしれません</div>
+        </div>
+        <div class="bubble-wrap">
+          <div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>
+          <div class="bubble-ai">限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。まず有給を1日取る計画を立ててみませんか？</div>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <div class="chat-input-dummy">例：転職すべきか迷っています…</div>
+        <div class="chat-send">送る</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- Woreluとは -->
+<section class="sec about-sec">
+  <div class="about-inner">
+    <div class="sec-eyebrow" style="text-align:center">ABOUT WORELU</div>
+    <h2 class="sec-title" style="text-align:center">Woreluとは</h2>
+    <p class="about-desc">仕事がしんどいとき、その正体がわからないまま一人で抱え込んでいませんか。Woreluは、そのしんどさを言語化・可視化し、次の一歩を見つけるお手伝いをします。</p>
+    <div class="about-points">
+      <div class="about-point">
+        <div class="about-point-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg></div>
+        <div class="about-point-title">AIストレス診断</div>
+        <div class="about-point-desc">10問・約1分で今の状態を4軸スコアで可視化</div>
+      </div>
+      <div class="about-point">
+        <div class="about-point-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="16" rx="2"/><path d="M7 8h6M7 12h4"/></svg></div>
+        <div class="about-point-title">セルフケア記事</div>
+        <div class="about-point-desc">症状・労働問題・転職まで15本以上の記事</div>
+      </div>
+      <div class="about-point">
+        <div class="about-point-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 16l3-3h10a1 1 0 001-1V6a1 1 0 00-1-1H5a1 1 0 00-1 1v10z"/></svg></div>
+        <div class="about-point-title">AIコーチ相談</div>
+        <div class="about-point-desc">診断後、AIコーチに何でも相談できる</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">Wor<em>e</em>lu</div>
+        <div class="footer-logo-sub">働く人のためのセルフケアメディア</div>
+        <div class="footer-logo-desc">仕事のストレスや悩みを、AIと記事でサポートします。診断・記事・相談がすべて無料で使えます。</div>
+      </div>
+      <div class="footer-nav-group">
+        <div class="footer-nav-col">
+          <div class="footer-nav-title">サービス</div>
+          <div class="footer-nav-links">
+            <a href="/stress-check/">AIストレス診断</a>
+            <a href="/articles/">記事一覧</a>
+            <a href="/articles/stress/">症状・ストレス</a>
+            <a href="/articles/burnout/">バーンアウト</a>
+            <a href="/articles/quit/">転職・退職</a>
+          </div>
+        </div>
+        <div class="footer-nav-col">
+          <div class="footer-nav-title">サイト情報</div>
+          <div class="footer-nav-links">
+            <a href="/about/">運営者情報</a>
+            <a href="/privacy/">プライバシーポリシー</a>
+            <a href="/terms/">利用規約</a>
+            <a href="/contact/">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/terms/">利用規約</a>
+        <a href="/about/">運営者情報</a>
+      </div>
+      <div class="footer-copy">© 2026 Worelu</div>
+    </div>
+  </div>
+</footer>
 
 <script>
-/* ===== 記事データベース（Markdownビルドと連動・将来自動生成対象） ===== */
-const ARTICLE_DB = [
-  { slug:'nemurenai-asa',           category:'stress',  tags:['不眠','ストレス','燃え尽き'],        title:'眠れないまま朝になった…仕事のストレスで眠れない人へ',              desc:'脳が仕事モードのまま固定されている状態の正体と、その夜を軽くする方法。', url:'/articles/stress/nemurenai-asa/',           priority:1 },
-  { slug:'namida-ga-deru',          category:'stress',  tags:['涙','ストレス','感情'],               title:'仕事で涙が出るのは甘えじゃない。その涙が体に伝えていること',          desc:'涙が出る状態の正体と、今すぐできることを整理します。',                   url:'/articles/stress/namida-ga-deru/',           priority:2 },
-  { slug:'doki-ga-suru',            category:'stress',  tags:['動悸','ストレス','身体症状'],         title:'仕事で動悸がする…それは体が「もう限界」と伝えているサイン',           desc:'動悸が出る状態の正体と、放置するリスク・対処法を解説します。',           url:'/articles/stress/doki-ga-suru/',             priority:3 },
-  { slug:'moeyuki-selfcheck',       category:'burnout', tags:['燃え尽き','セルフチェック','診断'],   title:'燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認',             desc:'燃え尽き症候群かどうかを10問で確認。結果別の対処法。',                   url:'/articles/burnout/moeyuki-selfcheck/',        priority:1 },
-  { slug:'burnout-symptoms',        category:'burnout', tags:['バーンアウト','回復','症状'],         title:'バーンアウトの症状チェックリスト。燃え尽きのサインと回復法',           desc:'バーンアウトの3段階・症状リスト・段階別の回復ステップ。',                url:'/articles/burnout/burnout-symptoms/',         priority:2 },
-  { slug:'kyushoku-1month',         category:'burnout', tags:['休職','傷病手当金','回復'],           title:'休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する',         desc:'傷病手当金の計算方法・1ヶ月の過ごし方・復職か退職かの判断。',           url:'/articles/burnout/kyushoku-1month/',          priority:3 },
-  { slug:'service-zangyo',          category:'work',    tags:['サービス残業','残業代','労働基準法'], title:'サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】',         desc:'残業代の計算・証拠の集め方・相談先まで一気通貫で解説。',                 url:'/articles/work/service-zangyo/',              priority:1 },
-  { slug:'service-zangyo-atarimae', category:'work',    tags:['サービス残業','同調圧力'],            title:'サービス残業が当たり前の職場は異常。続けてはいけない理由',             desc:'「みんなやってるから」の空気の正体と心理的メカニズム。',                 url:'/articles/work/service-zangyo-atarimae/',     priority:2 },
-  { slug:'service-zangyo-voluntary',category:'work',    tags:['サービス残業','権利'],                title:'「自主的な残業」でも残業代は出る。違法になるケースと対処法',           desc:'「自主的だから出ない」は通らない。法的根拠と対処法。',                   url:'/articles/work/service-zangyo-voluntary/',    priority:3 },
-  { slug:'yameru-yuuki',            category:'quit',    tags:['退職','転職','決断'],                 title:'仕事を辞める勇気が出ない人へ。5つの理由と現実的な答え',               desc:'辞めたいのに動けない理由を整理し、判断基準と次の一歩を提案。',           url:'/articles/quit/yameru-yuuki/',                priority:1 },
-  { slug:'black-kigyo-shindan',     category:'quit',    tags:['ブラック企業','診断'],                title:'ブラック企業診断｜15の質問で今の職場をスコアリング',                   desc:'15問のスコアリングでブラック企業かどうかを判断。行動指針付き。',         url:'/articles/quit/black-kigyo-shindan/',         priority:2 },
-  { slug:'taisyoku-daikou-moumuri', category:'quit',    tags:['退職代行','モームリ'],                title:'退職代行モームリは違法？合法な理由と安全な使い方',                     desc:'労働組合型が合法とされる理由と安全な利用方法。',                         url:'/articles/quit/taisyoku-daikou-moumuri/',     priority:3 },
-  { slug:'kaisha-yabai',            category:'quit',    tags:['ブラック企業','違和感'],              title:'「この会社やばい」と感じたとき。その直感を言語化する方法',             desc:'「なんかおかしい」という違和感を言葉にする方法。',                       url:'/articles/quit/kaisha-yabai/',                priority:4 },
-  { slug:'hyouka-sarenai',          category:'quit',    tags:['評価','モチベーション'],              title:'仕事で評価されないと腐る前に。原因の見つけ方と立て直し方',             desc:'評価されない原因3つと、腐る前に試せる対処法。',                         url:'/articles/quit/hyouka-sarenai/',              priority:5 },
-  { slug:'black-kigyo-aruaru',      category:'quit',    tags:['ブラック企業','あるある'],            title:'ブラック企業あるある20選。読んで笑えたら要注意',                       desc:'笑えるが笑えないあるある20選。気づきを与えるエンタメ記事。',             url:'/articles/quit/black-kigyo-aruaru/',          priority:6 },
-];
-
-/* ===== 軸→カテゴリのマッピング ===== */
-const AXIS_CATEGORY_MAP = {
-  stress:      ['stress', 'burnout'],
-  burnout:     ['burnout', 'stress'],
-  environment: ['work', 'quit'],
-  leaving:     ['quit', 'work'],
-};
-
-/* ===== 上位2〜3軸から関連記事を選択 ===== */
-function getRecommendedArticles(norm, count = 3) {
-  // スコア降順でソート
-  const sorted = Object.entries(norm)
-    .filter(([k]) => ['stress','burnout','environment','leaving'].includes(k))
-    .sort((a, b) => b[1] - a[1]);
-
-  const selected = [];
-  const usedSlugs = new Set();
-
-  // 上位軸から順に1記事ずつ選ぶ
-  for (const [axis] of sorted) {
-    if (selected.length >= count) break;
-    const cats = AXIS_CATEGORY_MAP[axis] || [];
-    for (const cat of cats) {
-      const candidates = ARTICLE_DB
-        .filter(a => a.category === cat && !usedSlugs.has(a.slug))
-        .sort((a, b) => a.priority - b.priority);
-      if (candidates.length > 0) {
-        selected.push(candidates[0]);
-        usedSlugs.add(candidates[0].slug);
-        break;
-      }
-    }
-  }
-
-  // 足りない場合は残りから補完
-  if (selected.length < count) {
-    const remaining = ARTICLE_DB.filter(a => !usedSlugs.has(a.slug));
-    for (const art of remaining) {
-      if (selected.length >= count) break;
-      selected.push(art);
-    }
-  }
-
-  return selected;
-}
-</script>
-
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  const btn = document.getElementById('hamburgerBtn');
-  menu.classList.toggle('open');
+function toggleNav(){
+  const nav=document.getElementById('mobileNav');
+  const btn=document.getElementById('hamburger');
+  nav.classList.toggle('open');
   btn.classList.toggle('open');
 }
-document.addEventListener('click', function(e) {
-  const menu = document.getElementById('mobileMenu');
-  const btn = document.getElementById('hamburgerBtn');
-  if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.remove('open');
+document.addEventListener('click',function(e){
+  const nav=document.getElementById('mobileNav');
+  const btn=document.getElementById('hamburger');
+  if(nav&&btn&&!nav.contains(e.target)&&!btn.contains(e.target)){
+    nav.classList.remove('open');
+    btn.classList.remove('open');
   }
 });
-</script>
-<script>
-/* ===== 軸定義 ===== */
-const AXES = [
-  { key:'stress',      label:'仕事ストレス',  color:'#E24B4A' },
-  { key:'burnout',     label:'燃え尽き傾向',  color:'#D4860A' },
-  { key:'environment', label:'職場環境',       color:'#2E86C1' },
-  { key:'leaving',     label:'転職意向',       color:'#7D5BC6' }
-];
-
-const MAX_RAW = {
-  stress:      10*0.5+10*0.5+10*0.2+10*0.5+10*0.3+10*0.2+10*0.3,
-  burnout:     10*0.2+10*0.2+10*0.8+10*0.8+10*0.3+10*0.5,
-  environment: 10*0.8+10*0.8+10*0.8,
-  leaving:     10*0.3+10*0.2+10*1.0+10*1.0+10*0.8,
-  engagement:  10*0.8+10*0.8+10*0.4+10*0.6+10*0.8
-};
-
-const TYPE_LABELS = { state:'状態を測る', cause:'原因を測る', action:'行動を測る' };
-const LEVEL_LABELS = { low:'低', moderate:'やや高', high:'高', very_high:'非常に高' };
-
-const QUESTIONS = [
-  { text:'朝、仕事のことを考えると気が重くなる', type:'state', reverse:false,
-    opts:[{label:'まったくない',note:'仕事への憂鬱感はない'},{label:'あまりない',note:'多少あるが許容範囲'},{label:'ときどきある',note:'週に数回は感じる'},{label:'よくある',note:'ほぼ毎日感じる'},{label:'いつもある',note:'毎朝のように感じる'}],
-    weights:{stress:0.5,burnout:0.2,environment:0.0,leaving:0.0,engagement:0.0},
-    comments:['朝の仕事への気持ちは問題なさそうです。','多少の憂鬱感はあるようです。','朝の精神的負荷が少し気になります。','仕事への憂鬱感が蓄積されています。','朝から仕事の重さを感じている状態です。']},
-  { text:'仕事中、消耗感や疲弊感を感じることが多い', type:'state', reverse:false,
-    opts:[{label:'まったくない',note:'仕事中のエネルギーは十分'},{label:'あまりない',note:'たまに疲れる程度'},{label:'ときどきある',note:'週の半分くらいは感じる'},{label:'よくある',note:'ほぼ毎日消耗している'},{label:'いつもある',note:'慢性的に疲弊している'}],
-    weights:{stress:0.5,burnout:0.2,environment:0.0,leaving:0.0,engagement:0.0},
-    comments:['エネルギーは十分に保たれているようです。','少し疲れが見られます。','仕事中の消耗感が気になります。','疲弊感が蓄積しています。注意が必要です。','慢性的な消耗状態の可能性があります。']},
-  { text:'仕事で達成感や手応えを感じることがある', type:'state', reverse:true,
-    opts:[{label:'よく感じる',note:'やりがいを感じて取り組めている'},{label:'まあ感じる',note:'概ね達成感はある'},{label:'あまり感じない',note:'以前より減ってきた'},{label:'ほとんど感じない',note:'義務感だけで続けている'},{label:'まったく感じない',note:'仕事が苦痛に近い'}],
-    weights:{stress:0.2,burnout:0.8,environment:0.0,leaving:0.0,engagement:0.8},
-    comments:['仕事への達成感は十分にあるようです。','達成感はまあまあ感じられているようです。','達成感が少し薄れてきています。','仕事への手応えが失われつつあります。','仕事への意味・達成感が大きく低下しています。']},
-  { text:'業務量や残業が、自分の許容範囲を超えていると感じる', type:'cause', reverse:false,
-    opts:[{label:'まったくない',note:'業務量は適切に感じている'},{label:'あまりない',note:'多少多いが調整できている'},{label:'ときどきある',note:'繁忙期に特に感じる'},{label:'よくある',note:'ほぼ常にキャパオーバー'},{label:'いつもある',note:'慢性的にオーバーワーク'}],
-    weights:{stress:0.5,burnout:0.0,environment:0.8,leaving:0.0,engagement:0.0},
-    comments:['業務量のバランスは取れているようです。','業務量に少し負荷がかかっているようです。','業務量への負荷が気になります。','業務過多の状態が続いている可能性があります。','業務量が限界に近い状態にある可能性があります。']},
-  { text:'今の仕事を続けることに、やりがいや意味を感じている', type:'state', reverse:true,
-    opts:[{label:'とても感じる',note:'仕事に意義を見出せている'},{label:'まあ感じる',note:'概ね前向きに取り組めている'},{label:'あまり感じない',note:'以前より意欲が落ちてきた'},{label:'ほとんど感じない',note:'なんとなく続けているだけ'},{label:'まったく感じない',note:'仕事の意味を見失っている'}],
-    weights:{stress:0.0,burnout:0.8,environment:0.0,leaving:0.3,engagement:0.8},
-    comments:['仕事へのやりがいは十分にあるようです。','やりがいはまあまあ感じられているようです。','仕事への意欲が少し低下しています。','やりがいの低下が離職意向に影響しています。','仕事への意味が失われている状態です。']},
-  { text:'会社から適切に評価・尊重されていると感じる', type:'cause', reverse:true,
-    opts:[{label:'とても感じる',note:'評価・待遇に納得している'},{label:'まあ感じる',note:'概ね適切に扱われている'},{label:'あまり感じない',note:'評価や扱いに疑問を感じる'},{label:'ほとんど感じない',note:'軽視されていると感じることが多い'},{label:'まったく感じない',note:'会社への不信感が強い'}],
-    weights:{stress:0.3,burnout:0.0,environment:0.8,leaving:0.2,engagement:0.4},
-    comments:['会社からの評価・尊重は十分に感じられているようです。','会社からの扱いは概ね適切なようです。','評価や尊重への不満が少し出ています。','会社への不信感が職場環境を悪化させています。','会社との信頼関係が大きく損なわれています。']},
-  { text:'困ったときに安心して相談できる人が職場にいる', type:'cause', reverse:true,
-    opts:[{label:'いる',note:'気軽に相談できる人がいる'},{label:'まあいる',note:'相談できなくはない'},{label:'あまりいない',note:'相談しにくい環境'},{label:'ほとんどいない',note:'一人で抱え込むことが多い'},{label:'まったくいない',note:'完全に孤立している'}],
-    weights:{stress:0.2,burnout:0.3,environment:0.8,leaving:0.0,engagement:0.6},
-    comments:['心理的安全性は確保されているようです。','相談できる環境はまあまあ整っているようです。','相談しにくさが職場環境のストレスになっています。','孤立感が燃え尽き傾向を強めています。','職場での孤立が深刻な状態にあります。']},
-  { text:'「仕事を辞めたい」と思う頻度が増えている', type:'action', reverse:false,
-    opts:[{label:'まったくない',note:'今の仕事を続けたい'},{label:'あまりない',note:'偶に頭をよぎる程度'},{label:'ときどきある',note:'週に数回は考える'},{label:'よくある',note:'ほぼ毎日考えている'},{label:'いつもある',note:'常に辞めることを考えている'}],
-    weights:{stress:0.0,burnout:0.0,environment:0.0,leaving:1.0,engagement:0.0},
-    comments:['離職への意向は低い状態です。','辞めたい気持ちは今のところ低いようです。','辞めたいという気持ちが出始めています。','離職意向が強まっています。','強い離職意向があります。']},
-  { text:'転職サイトや求人を、意識的に調べたことがある', type:'action', reverse:false,
-    opts:[{label:'まったくない',note:'転職は考えていない'},{label:'あまりない',note:'気になる程度で調べていない'},{label:'ときどきある',note:'気になって見ることがある'},{label:'よくある',note:'定期的にチェックしている'},{label:'ほぼ毎日',note:'転職を前提に動いている'}],
-    weights:{stress:0.0,burnout:0.0,environment:0.0,leaving:1.0,engagement:0.0},
-    comments:['転職への行動はない状態です。','転職への関心は低いようです。','転職への関心が行動として現れています。','転職への具体的な行動が始まっています。','転職活動が本格化している状態です。']},
-  { text:'1年後も今の会社で働いているイメージが持てる', type:'action', reverse:true,
-    opts:[{label:'はっきり持てる',note:'長く働きたいと思っている'},{label:'まあ持てる',note:'今のところ続けるつもり'},{label:'あまり持てない',note:'先行きに不安がある'},{label:'ほとんど持てない',note:'環境が変わらなければ厳しい'},{label:'まったく持てない',note:'早く変わりたいと思っている'}],
-    weights:{stress:0.3,burnout:0.5,environment:0.0,leaving:0.8,engagement:0.8},
-    comments:['今の会社への帰属意識は高いようです。','今のところ継続意向はあるようです。','将来への不安が少し出ています。','継続意向が大きく低下しています。','強い離職意向と意欲低下が同時に見られます。']}
-];
-
-const TASKS_BY_DOMINANT = {
-  stress:[
-    {title:'「今日終わらせなくていいこと」を1つ決めて帰る',desc:'完璧主義の負荷を意図的に下げる練習。小さくていい。'},
-    {title:'週2日、定時退社する日をカレンダーに先に入れる',desc:'強制的に回復時間を作る。業務調整より先に日を決める。'},
-    {title:'仕事後に15分だけ仕事と無関係なことをする',desc:'脳の切り替えを習慣化。散歩・音楽・読書なんでもいい。'}],
-  burnout:[
-    {title:'「なぜこの仕事をしているか」を1行だけ書き出す',desc:'意味を再確認することで燃え尽きを和らげる効果がある。'},
-    {title:'小さな達成を1つ意識的に見つけて今日記録する',desc:'「できたこと」の蓄積が燃え尽きへの処方箋になる。'},
-    {title:'週2日、定時で帰る日を強制的に決める',desc:'疲労の蓄積を止める最短の方法。'}],
-  environment:[
-    {title:'今の職場で「まだ試していないこと」を1つ書き出す',desc:'環境改善の余地があるかを客観的に確認する。'},
-    {title:'職場の人間関係で一番楽な人との時間を増やす',desc:'安全地帯を作ることで全体のストレスが下がる。'},
-    {title:'ストレスになっている要因を上司に伝える準備をする',desc:'「業務量を減らして」より「優先順位を整理したい」と伝えると通りやすい。'}],
-  leaving:[
-    {title:'転職した場合の具体的なコストを試算してみる',desc:'感情ではなく数字で判断するための準備。'},
-    {title:'今の会社で「まだ試していないこと」を1つ確認する',desc:'転職前に改善の余地があるかを確認する。'},
-    {title:'信頼できる社外の人に現状を相談してみる',desc:'内側からだけでは見えない視点を得る。'}]
-};
-
-/* ===== 状態 ===== */
-let cur = 0;
-let answers = new Array(QUESTIONS.length).fill(-1);
-let rawScores = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
-let prevRaw   = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
-let typeTimer = null;
-
-/* ===== 初期化：軸リスト構築 ===== */
-function buildAxisList() {
-  const list = document.getElementById('axisList');
-  list.innerHTML = '';
-  AXES.forEach(a => {
-    const item = document.createElement('div');
-    item.className = 'axis-item';
-    item.dataset.axis = a.key;
-    item.innerHTML = `
-      <div class="axis-top">
-        <div class="axis-name">${a.label}</div>
-        <div class="axis-val" id="val-${a.key}" style="color:${a.color}">0</div>
-        <div class="axis-delta" id="delta-${a.key}">±0</div>
-      </div>
-      <div class="bar-track"><div class="bar-fill bar-${a.key}" id="bar-${a.key}"></div></div>
-    `;
-    list.appendChild(item);
-  });
-}
-
-/* ===== ユーティリティ ===== */
-function clamp(v) { return Math.min(100, Math.max(0, Math.round(v))); }
-function rawToNorm(raw) {
-  return {
-    stress:      clamp(raw.stress      / MAX_RAW.stress      * 100),
-    burnout:     clamp(raw.burnout     / MAX_RAW.burnout     * 100),
-    environment: clamp(raw.environment / MAX_RAW.environment * 100),
-    leaving:     clamp(raw.leaving     / MAX_RAW.leaving     * 100),
-    engagement:  clamp(raw.engagement  / MAX_RAW.engagement  * 100)
-  };
-}
-function getLevel(v) { if(v<25)return'low'; if(v<50)return'moderate'; if(v<75)return'high'; return'very_high'; }
-function calcTotal(norm) { return clamp(norm.stress*0.32+norm.burnout*0.28+norm.environment*0.23+norm.leaving*0.17); }
-function getDominant(norm) { return ['stress','burnout','environment','leaving'].reduce((a,b)=>norm[a]>=norm[b]?a:b); }
-function answerToPoints(idx) { return [0,2.5,5,7.5,10][idx]; }
-
-function calcRaw() {
-  const s = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
-  answers.forEach((ai,qi) => {
-    if(ai<0) return;
-    const pts = answerToPoints(ai);
-    Object.keys(QUESTIONS[qi].weights).forEach(k => { s[k] += pts * QUESTIONS[qi].weights[k]; });
-  });
-  return s;
-}
-
-/* ===== 描画：質問 ===== */
-function renderQuestion() {
-  const q = QUESTIONS[cur];
-  document.getElementById('qNum').textContent = `Q${cur+1} / ${QUESTIONS.length}`;
-  document.getElementById('progFill').style.width = ((cur+1)/QUESTIONS.length*100) + '%';
-  document.getElementById('qText').textContent = q.text;
-  document.getElementById('btnBack').disabled = cur===0;
-  const nb = document.getElementById('btnNext');
-  nb.textContent = cur===QUESTIONS.length-1 ? '完了' : '次へ';
-  nb.disabled = answers[cur]<0;
-
-  const ol = document.getElementById('optList');
-  ol.innerHTML = '';
-  q.opts.forEach((o,i) => {
-    const lbl = document.createElement('label');
-    lbl.className = 'option' + (answers[cur]===i?' selected':'');
-    lbl.innerHTML = `<input type="radio" name="q${cur}" value="${i}" ${answers[cur]===i?'checked':''}><span class="opt-radio" aria-hidden="true"></span><span class="opt-text"><span class="opt-label">${o.label}</span><span class="opt-note">${o.note}</span></span>`;
-    lbl.addEventListener('click', () => selectAnswer(i));
-    ol.appendChild(lbl);
-  });
-}
-
-function selectAnswer(idx) {
-  if(answers[cur]===idx) return;
-  prevRaw = {...rawScores};
-  answers[cur] = idx;
-  rawScores = calcRaw();
-  renderQuestion();
-  updatePreview(QUESTIONS[cur].comments[idx]);
-}
-
-/* ===== プレビュー更新 ===== */
-function updatePreview(comment) {
-  const answered = answers.filter(a=>a>=0).length;
-  document.getElementById('answeredCount').textContent = `回答済み ${answered}/${QUESTIONS.length}`;
-
-  if(answered===0) {
-    document.getElementById('totalNum').textContent = '0';
-    document.getElementById('totalDelta').textContent = '';
-    document.getElementById('totalDelta').classList.remove('show');
-    AXES.forEach(a => {
-      document.getElementById('val-'+a.key).textContent = '0';
-      document.getElementById('bar-'+a.key).style.width = '0%';
-      document.getElementById('delta-'+a.key).textContent = '±0';
-      document.getElementById('delta-'+a.key).className = 'axis-delta';
-    });
-    return;
-  }
-
-  const norm = rawToNorm(rawScores);
-  const prevNorm = rawToNorm(prevRaw);
-  const total = calcTotal(norm);
-  const prevTotal = calcTotal(prevNorm);
-  const totalDiff = total - prevTotal;
-
-  const numEl = document.getElementById('totalNum');
-  numEl.textContent = total;
-  numEl.classList.remove('bump');
-  requestAnimationFrame(() => numEl.classList.add('bump'));
-  setTimeout(() => numEl.classList.remove('bump'), 260);
-
-  // ゲージ更新（青→黄→赤のグラデーション）
-  const gaugeFill = document.getElementById('gaugeFill');
-  if (gaugeFill) {
-    const arcLen = 172.79;
-    const offset = arcLen - (arcLen * total / 100);
-    gaugeFill.style.strokeDashoffset = offset;
-    // 色：0-30青 / 31-60黄 / 61-80オレンジ / 81-100赤
-    let gaugeColor = '#2563EB';
-    if (total > 80) gaugeColor = '#DC2626';
-    else if (total > 60) gaugeColor = '#EA580C';
-    else if (total > 30) gaugeColor = '#D97706';
-    gaugeFill.style.stroke = gaugeColor;
-    numEl.style.color = gaugeColor;
-  }
-
-  const deltaEl = document.getElementById('totalDelta');
-  deltaEl.textContent = totalDiff===0 ? '±0' : (totalDiff>0?'↑':'↓')+Math.abs(totalDiff);
-  deltaEl.style.color = totalDiff>0 ? 'var(--danger)' : totalDiff<0 ? 'var(--accent)' : 'var(--muted)';
-  deltaEl.classList.remove('show');
-  requestAnimationFrame(() => deltaEl.classList.add('show'));
-
-  AXES.forEach(a => {
-    const v = norm[a.key], pv = prevNorm[a.key];
-    const diff = v - pv;
-    document.getElementById('val-'+a.key).textContent = v;
-    document.getElementById('bar-'+a.key).style.width = v+'%';
-    const d = document.getElementById('delta-'+a.key);
-    d.textContent = diff===0 ? '±0' : (diff>0?'↑':'↓')+Math.abs(diff);
-    d.className = 'axis-delta' + (diff>0?' delta-up':diff<0?' delta-down':'');
-    d.classList.remove('delta-pop');
-    requestAnimationFrame(() => d.classList.add('delta-pop'));
-  });
-
-  if(comment) typeComment(comment);
-}
-
-function typeComment(text) {
-  if(typeTimer) clearInterval(typeTimer);
-  const el = document.getElementById('aiComment');
-  el.textContent = '';
-  let i = 0;
-  typeTimer = setInterval(() => {
-    if(i<text.length) { el.textContent += text[i++]; }
-    else clearInterval(typeTimer);
-  }, 22);
-}
-
-function goNext() {
-  if(answers[cur]<0) return;
-  if(cur<QUESTIONS.length-1) { cur++; renderQuestion(); }
-  else renderResultPage();
-}
-function goBack() { if(cur>0) { cur--; renderQuestion(); } }
-
-/* ===== 結果ページ ===== */
-function buildAnalysisContext(norm) {
-  const ctx = {scores:{},subScores:{}};
-  ['stress','burnout','environment','leaving','engagement'].forEach(k => {
-    ctx.scores[k] = {value:norm[k],level:getLevel(norm[k])};
-  });
-  return ctx;
-}
-
-function getHeroTitle(dominant) {
-  return {stress:'仕事ストレスが高い状態です',burnout:'燃え尽き傾向が見られます',environment:'職場環境への負担が大きい状態です',leaving:'転職意向が高まっています'}[dominant];
-}
-
-function getAiAnalysis(ctx) {
-  const s = ctx.scores;
-  const lines = [];
-  if(s.stress.level==='very_high'||s.stress.level==='high') {
-    if(s.environment.level==='high'||s.environment.level==='very_high') lines.push('業務量や職場環境への負担が、ストレスの主な原因になっています。');
-    else lines.push('業務そのものよりも、自身のコンディションや働き方の影響が大きい可能性があります。');
-  }
-  if(s.burnout.level==='high'||s.burnout.level==='very_high') {
-    if(s.leaving.level==='low'||s.leaving.level==='moderate') lines.push('辞めたい気持ちはまだ強くない一方で、仕事への意欲や意味が薄れています。まずは業務負荷の調整から始めることが有効です。');
-    else if(s.engagement.value<40) lines.push('疲労だけでなく、仕事への希望も薄れている状態です。まず休息を最優先にしてください。');
-    else lines.push('現在は消耗していますが、仕事への意味はまだ残っています。改善できる余力は十分あります。');
-  }
-  if((s.leaving.level==='high'||s.leaving.level==='very_high')&&(s.stress.level==='low'||s.stress.level==='moderate')) lines.push('身体的な疲弊よりも、キャリアへの迷いが転職意向を高めているようです。');
-  if((s.environment.level==='high'||s.environment.level==='very_high')&&s.engagement.value>=50) lines.push('仕事内容よりも組織や人間関係が主な負担になっています。仕事への意欲は残っているので、環境が変われば改善しやすい状態です。');
-  if(lines.length===0) lines.push('今の状態は複数の要因が絡み合っています。まずは一番気になる点から、小さく改善を試みてください。');
-  return lines.join('\n\n');
-}
-
-function renderResultPage() {
-  const norm = rawToNorm(rawScores);
-  const ctx = buildAnalysisContext(norm);
-  const dominant = getDominant(norm);
-  const axisLabels = {stress:'仕事ストレス',burnout:'燃え尽き傾向',environment:'職場環境',leaving:'転職意向'};
-  const second = ['stress','burnout','environment','leaving'].filter(k=>k!==dominant).reduce((a,b)=>norm[a]>=norm[b]?a:b);
-  const tasks = TASKS_BY_DOMINANT[dominant];
-  const analysis = getAiAnalysis(ctx);
-  const total = calcTotal(norm);
-  const rp = document.getElementById('resultPage');
-  rp.innerHTML = `
-    <section class="result-panel">
-      <div class="result-header">
-        <div>
-          <div class="result-kicker">DIAGNOSIS RESULT</div>
-          <h1 class="result-title">${getHeroTitle(dominant)}</h1>
-          <p class="result-lead">${axisLabels[dominant]}と${axisLabels[second]}に高い値が出ています。今すぐ対処することで改善できます。</p>
-        </div>
-        <div class="result-total-box">
-          <strong class="result-total-num">${total}</strong>
-          <span class="result-total-label">総合ストレス指数</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="score-grid">
-      ${AXES.map(a=>`
-        <article class="result-card">
-          <p class="card-label">${a.label}</p>
-          <div class="card-score"><strong style="color:${a.color}">${norm[a.key]}</strong><span>/100</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${norm[a.key]}%;background:${a.color}"></div></div>
-        </article>
-      `).join('')}
-    </div>
-
-    <section class="result-panel">
-      <h2 class="section-title">AI分析</h2>
-      <p class="analysis-text" id="analysisText"></p>
-      <div class="reassurance">こうした状態は、責任感が強く仕事に真剣に向き合う人に多く見られます。あなただけではありません。</div>
-    </section>
-
-    <section class="result-panel">
-      <h2 class="section-title">今後やること 3つ</h2>
-      <div class="task-grid">
-        ${tasks.map(t=>`
-          <button class="task-card" type="button" onclick="this.classList.toggle('done');this.querySelector('.task-check').textContent=this.classList.contains('done')?'✓':'';">
-            <span class="task-check"></span>
-            <span>
-              <p class="task-title">${t.title}</p>
-              <p class="task-desc">${t.desc}</p>
-            </span>
-          </button>
-        `).join('')}
-      </div>
-    </section>
-
-    <section class="result-panel" id="recommended-articles-section">
-      <h2 class="section-title">あなたにおすすめの記事</h2>
-      <div class="rec-grid" id="recGrid"></div>
-    </section>
-
-    <div class="result-actions">
-      <button class="btn primary wide-btn" type="button" onclick="resetApp()">もう一度診断する</button>
-    </div>
-
-    <section class="chat-panel" aria-label="AIコーチチャット">
-      <div class="chat-head">
-        <div>
-          <div class="kicker">AI COACH CHAT</div>
-          <div class="chat-context">診断コンテキスト：${axisLabels[dominant]} ${norm[dominant]}（${LEVEL_LABELS[ctx.scores[dominant].level]}）/ ${axisLabels[second]} ${norm[second]}（${LEVEL_LABELS[ctx.scores[second].level]}）/ 総合 ${total}</div>
-        </div>
-        <div class="risk-pill">結果連動</div>
-      </div>
-      <div class="chat-log" id="chatMsgs">
-        <div class="ai-bubble-wrap"><img src="/images/ai-coach.png" class="ai-bubble-icon" alt="AIコーチ"><div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div></div>
-      </div>
-      <div class="chat-form">
-        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off">
-        <button class="btn primary" type="button" onclick="sendChat()">送る</button>
-      </div>
-    </section>
-  `;
-
-  document.getElementById('app').classList.add('hidden');
-  rp.classList.remove('hidden');
-  window.scrollTo({top:0,behavior:'smooth'});
-  setChatContext(dominant, norm, total);
-
-  // おすすめ記事を描画
-  const recGrid = document.getElementById('recGrid');
-  if (recGrid) {
-    const recs = getRecommendedArticles(norm, 3);
-    const catLabels = { stress:'症状・ストレス', burnout:'バーンアウト', work:'労働問題', quit:'転職・退職' };
-    recGrid.innerHTML = recs.map(art => `
-      <a href="${art.url}" class="rec-card">
-        <div class="rec-cat">${catLabels[art.category] || art.category}</div>
-        <div class="rec-title">${art.title}</div>
-        <div class="rec-desc">${art.desc}</div>
-        <div class="rec-link">続きを読む →</div>
-      </a>
-    `).join('');
-  }
-
-  const el = document.getElementById('analysisText');
-  el.textContent = '';
-  let i = 0;
-  const t = setInterval(()=>{ if(i<analysis.length){el.textContent+=analysis[i++];}else clearInterval(t); },16);
-}
-
-/* ===== チャット ===== */
-const CRISIS_WORDS = ['消えたい','死にたい','生きるのがつらい','もう終わりたい','全部終わらせたい','いなくなりたい','消えてしまいたい','楽になりたい','死んでしまいたい','自殺','死ぬ','終わりにしたい','生きていたくない'];
-const BURNOUT_WORDS = ['限界','眠れない','涙が出','泣けてく','泣いてしまう','動悸','吐き気','胃が痛い','適応障害','メンタル限界','心が折れた','起き上がれない','体が動かない','しんどすぎ','もう無理かも','うつ','バーンアウト','燃え尽き','休職','病院','メンタルクリニック'];
-const CRISIS_REPLY = `今とてもつらい状況にあることが伝わってきました。\n\n一人で抱え込まず、信頼できる人や専門の相談窓口へ今すぐ相談してください。\n\n【相談窓口】\n・よりそいホットライン：0120-279-338（24時間）\n・こころの健康相談統一ダイヤル：0570-064-556\n・緊急性が高い場合は119番または最寄りの救急窓口\n\nもし今ここで気持ちを話したければ、私はあなたの話を聞きます。`;
-
-/* ===== ① キーワード辞書（拡充版） ===== */
-const KEYWORD_MAP = [
-  {
-    keys: ['残業','長時間','残業代','サービス残業','終わらない','仕事が多','タスク','業務量','キャパ','仕事量','締切','納期','忙しい','仕事が増','仕事が終わらない','こなせない','オーバー'],
-    reply: '業務の負荷が高い状態が続いているようです。\n\nまず今日の仕事を全部書き出して「自分しかできないもの」と「今日でなくていいもの」に分けてみてください。後者を1つだけ後回しにするだけで、かなり楽になります。\n\n上司に相談するなら「業務量を減らして」より「優先順位を一緒に整理したい」という言い方の方が動いてもらいやすいです。もし断れない状況なら、「今週はA・B・Cのどれを優先すべきですか？」と選択肢を絞る形で聞くのが有効です。'
-  },
-  {
-    keys: ['相談','話せない','話しにくい','相談できない','環境がない','孤立','一人','誰もいない','話す相手','聞いてもらえない','打ち明けられない','言えない'],
-    reply: '相談できる環境がないのは、じわじわと消耗する状況です。\n\n職場の全員と仲良くする必要はありません。まず「この人には少し話せる」という人を1人だけ決めて、そこから小さく始めてみてください。\n\n社内に誰もいなければ、産業医・外部相談窓口・信頼できる社外の知人への相談も立派な選択肢です。一人で抱えることだけは避けてください。'
-  },
-  {
-    keys: ['コミュニケーション','話し合い','意思疎通','伝わらない','噛み合わない','会話','ミーティング','会議','連携','報告','まともな話し合い','話が通じない','言っても変わらない'],
-    reply: 'コミュニケーションがうまくいかないとき、原因は「タイミング」「伝え方」「相手との相性」の3つのどれかです。\n\n試してみてほしいこと：話したいことを「事実」「困っていること」「お願いしたいこと」の3つに分けて短く書いてから伝えると、受け取られ方がかなり変わります。\n\n話し合い自体が機能しない状況なら、人事・産業医・上位の上司を通じた第三者介入も選択肢に入れていいです。'
-  },
-  {
-    keys: ['教えてもらえない','教わる時間','覚えられない','ついていけない','追いつかない','わからない','未経験','新しい業務','入社','新人','忙しくて教わる','教えてもらう時間'],
-    reply: '覚えることが多い・教えてもらう時間がないという状況は、能力の問題ではなく「量と環境のミスマッチ」です。\n\n今日から試せること：「今日1つだけ覚える」に絞ってみてください。全部覚えようとするより、確実に身につく1つを積み上げる方が早く追いつけます。\n\n聞きにくい雰囲気なら、質問をまとめてから一度に聞くスタイルに切り替えると相手の負担も減ります。状況が改善しないなら、上司に「教わる時間を確保してほしい」と一度明示的に伝えることも必要です。'
-  },
-  {
-    keys: ['上司','マネージャー','部長','課長','上の人','上長','リーダー','上司と合わない','怖い','威圧','パワハラ','怒鳴','上司が','上司に','あいません','合いません'],
-    reply: '上司との関係でのストレスは、直接対立より「業務上の課題」として伝える方が動きやすいです。\n\n「〇〇が難しい状況です、優先順位を一緒に整理させてください」という形で、感情ではなく事実と要望を伝えるのがポイントです。\n\nパワハラや威圧的な言動がある場合は、記録をつけておくことと、人事・産業医・社外相談窓口への相談を並行して進めてください。'
-  },
-  {
-    keys: ['人間関係','同僚','チーム','雰囲気','派閥','陰口','無視','孤立感','居場所','仲間外れ','ギスギス','職場の空気'],
-    reply: '職場の人間関係の負荷は、ストレスの中でも特に消耗しやすいタイプです。\n\nまず「この人といると少し楽」という人を1人だけ探して、そこを安全地帯にすることが先決です。全員と仲良くしようとしなくていいです。\n\n居場所がないと感じるほどであれば、環境を変えることも含めて真剣に考えていい段階かもしれません。今の職場が全てではありません。'
-  },
-  {
-    keys: ['評価','昇進','昇格','査定','フィードバック','成果が見えない','認められない','報われない','正当に評価','評価されない','見てもらえない'],
-    reply: '評価されていないと感じるとき、原因は「成果が出ていない」「成果が見えていない」「評価者との認識のズレ」の3つのどれかです。\n\nまず上司が何を見て評価しているかを確認してみてください。自分が頑張っていることと、評価される指標がズレていることはよくあります。\n\n「成果の見せ方」を変えるだけで評価が変わることは多いです。1on1などで「自分の貢献として何が評価されていますか？」と直接聞くのも有効です。'
-  },
-  {
-    keys: ['給料','賃金','年収','給与','報酬','低い','上がらない','昇給','ボーナス','手取り','収入','給料が低い','賃金が低い','給料面','給料に','給与面','お金','給料上がらない'],
-    reply: '給与への不満は、「市場価値と自社の評価がズレている」か「評価制度そのものへの問題」のどちらかが多いです。\n\nまず転職サイト（リクナビNEXT・マイナビ転職など）で同職種・同年齢・同地域の相場を調べてみてください。市場価値より低いなら交渉または転職の根拠になります。\n\n相場通りであれば、評価制度を変えるか、より高く評価してくれる場所を探すかの2択です。給料だけを理由に転職する場合は、残業時間・福利厚生・安定性とのトレードオフも必ず確認してください。'
-  },
-  {
-    keys: ['転職','退職','辞め','辞める','辞めたい','転職活動','求人','エージェント','次の仕事','転職先','転職考えてる','転職しようか'],
-    reply: '転職を考えるのは自然なことです。\n\nただ「今の職場が嫌」と「転職先が良い」は別の問題です。まず変えたいものが「仕事内容」「職場環境」「人間関係」「給料」のどれなのかを特定してから動くと、転職後の後悔が少なくなります。\n\n転職エージェントへの相談は無料でできるので、今すぐ転職するつもりがなくても市場価値を確認するために使うのはアリです。'
-  },
-  {
-    keys: ['やる気','モチベーション','意欲','気力','やる気が出ない','やる気がない','仕事したくない','気が重い','行きたくない','仕事が嫌になった','やりたくない'],
-    reply: 'やる気が出ないのは意志の問題ではなく、疲労・目的のズレ・評価への不満などのサインです。\n\nまず「何に対してやる気が出ないのか」を特定してみてください。仕事全体なのか、特定の業務なのか、特定の人との関係なのかで対処が変わります。\n\n疲れが原因であれば回復が先決です。やりがいのなさが原因であれば、仕事の中で「自分が決められること」を1つ増やすだけでも変わることがあります。'
-  },
-  {
-    keys: ['休みたい','休息','疲れた','しんどい','きつい','つらい','もう限界','余裕がない','余裕ない','消耗','ぐったり','ボロボロ'],
-    reply: '疲れをしっかり感じているということは、それだけ頑張ってきたということです。\n\n「休むのは逃げ」ではなく、回復して次に動くための必要なステップです。\n\nまず今週、1日だけ意識的に「仕事のことを考えない時間」を30分作ってみてください。症状が身体に出ているなら、早めに医療機関に相談してください。'
-  },
-  {
-    keys: ['キャリア','将来','スキル','成長','このまま','先が見えない','方向性','何がしたいか','やりたいこと','目標','キャリアアップ','専門性'],
-    reply: 'キャリアへの不安は、多くの場合「今の自分の棚卸しができていない」ことから来ています。\n\nまず現職でのスキルと経験を箇条書きで書き出してみてください。意外と選択肢があることに気づけます。\n\n「何がしたいかわからない」という状態なら、転職エージェントへの相談が意外と整理になることもあります。他社からどう見えるかを知るだけで視野が広がります。'
-  }
-];
-
-/* ===== ② スコア連動のdefaultレスポンス ===== */
-let chatContext = { dominant:'stress', norm:{stress:0,burnout:0,environment:0,leaving:0}, total:0 };
-
-function setChatContext(dominant, norm, total) {
-  chatContext = { dominant, norm, total };
-}
-
-function getContextualDefault() {
-  const { dominant, norm, total } = chatContext;
-
-  // 上位2軸を取得
-  const sorted = ['stress','burnout','environment','leaving']
-    .map(k => ({ key: k, val: norm[k] || 0 }))
-    .sort((a, b) => b.val - a.val);
-  const top1 = sorted[0].key;
-  const top2 = sorted[1].key;
-  const top1val = sorted[0].val;
-  const top2val = sorted[1].val;
-
-  const axisLabel = { stress:'仕事ストレス', burnout:'燃え尽き傾向', environment:'職場環境', leaving:'転職意向' };
-
-  // 低ストレス
-  if(total < 30) {
-    return '今の状態は比較的安定しているようです。\n\nこのコンディションを維持するために、休息のリズムと相談できる環境を崩さないことが大切です。\n\n気になっていることがあれば、もう少し具体的に教えてもらえますか？';
-  }
-
-  // 上位2軸の組み合わせで個別化
-  if(top1 === 'stress' && top2 === 'burnout' && top2val > 40) {
-    return `仕事への消耗と、やりがいの低下が同時に出ています（仕事ストレス${top1val}・燃え尽き${top2val}）。\n\n疲れているだけでなく、「頑張る意味が見えにくくなっている」状態のことがあります。\n\n今一番つらいのは、量の問題ですか？それとも意味や手応えの問題ですか？`;
-  }
-  if(top1 === 'stress' && top2 === 'leaving' && top2val > 40) {
-    return `仕事のストレスと転職への気持ちが同時に強く出ています（仕事ストレス${top1val}・転職意向${top2val}）。\n\nストレスだけでなく、今の職場とのミスマッチも影響している可能性があります。\n\n「辞めたい」という気持ちは、今の状況への反応として自然なことです。変えたいのは何ですか？`;
-  }
-  if(top1 === 'burnout' && top2 === 'leaving' && top2val > 40) {
-    return `燃え尽きと転職意向が同時に高く出ています（燃え尽き${top1val}・転職意向${top2val}）。\n\n「もう頑張れない」という疲労感と、「ここにはいられない」という気持ちが重なっている状態のことがあります。\n\n今すぐ転職を決める必要はありません。まず何が一番消耗していますか？`;
-  }
-  if(top1 === 'environment' && top2 === 'leaving' && top2val > 40) {
-    return `職場環境への負担と転職意向が両方高く出ています（職場環境${top1val}・転職意向${top2val}）。\n\n仕事内容よりも、職場の人間関係や評価・制度への不満が転職を考えさせているケースが多いです。\n\n環境が変われば改善しますか？それとも仕事そのものへの問題もありますか？`;
-  }
-  if(top1 === 'burnout' && top2 === 'stress' && top2val > 40) {
-    return `燃え尽き傾向と仕事のストレスが同時に出ています（燃え尽き${top1val}・仕事ストレス${top2val}）。\n\n疲れているのに休めない、頑張っても報われないという感覚が続いていませんか？\n\n今一番きついことを教えてもらえますか？`;
-  }
-
-  // dominant1軸のみ
-  if(top1 === 'burnout') {
-    return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\n「頑張り続けること」より「回復すること」を今は優先してください。\n\n具体的にどんなことが一番消耗していますか？`;
-  }
-  if(top1 === 'leaving') {
-    return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\n急いで結論を出す必要はありませんが、今の状況を整理しておくことは大事です。\n\n変えたいのは何ですか？仕事内容・職場環境・人間関係・給料のどれに近いですか？`;
-  }
-  if(top1 === 'environment') {
-    return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\n人間関係・評価・業務量のうち、どれが一番消耗していますか？`;
-  }
-
-  return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\nもう少し具体的に教えてもらえますか？「残業が多い」「上司と合わない」「やる気が出ない」など、一番気になっていることを入れてもらうと、より具体的にお伝えできます。`;
-}
-
-function classifyInput(text) {
-  if(CRISIS_WORDS.some(w=>text.includes(w))) return 'crisis';
-  if(BURNOUT_WORDS.some(w=>text.includes(w))) return 'burnout';
-  return 'normal';
-}
-
-function getBurnoutReply(text) {
-  const map = {
-    '限界':'限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。\n\n今週の3つ：\n① 有給または半休を1日取る計画を立てる\n② 信頼できる人に今の状態を話す\n③ 気になる症状があれば、かかりつけ医か内科を受診する',
-    '眠れない':'眠れない状態が続くと、判断力・感情・体力すべてが低下します。\n\n今週の3つ：\n① 就寝1時間前にスマホ・PCを閉じる\n② 仕事のことを考えそうになったらメモに書き出す\n③ 2週間改善しなければ、内科またはメンタルクリニックへの相談を検討する',
-    '涙が出':'涙が出るのは、心が「もう十分すぎるほど頑張った」と言っているサインです。\n\n弱いのではありません。限界まで頑張ってきた証拠です。\n\n① 今日だけは「仕事のことを考えない時間」を30分作る\n② 信頼できる人に「最近しんどい」と一言だけ話してみる',
-    '動悸':'動悸・吐き気・胃の痛みなど身体症状が出ているなら、それは精神的負荷が身体限界に達しているサインです。\n\n① まず内科を受診して身体的な問題がないか確認する\n② 可能であれば1〜2日休む\n③ 職場の産業医または上司に「体調不良」として相談する',
-    'default':'心身に強い負荷がかかっている状態です。今は「解決」より「回復」を優先してください。\n\n産業医・メンタルクリニック・よりそいホットライン（0120-279-338）も活用できます。'
-  };
-  for(const [k,v] of Object.entries(map)) { if(k!=='default'&&text.includes(k)) return v; }
-  return map.default;
-}
-
-function getNormalReply(text) {
-  for(const entry of KEYWORD_MAP) {
-    if(entry.keys.some(k=>text.includes(k))) return entry.reply;
-  }
-  return getContextualDefault();
-}
-
-function sendChat() {
-  const inp = document.getElementById('chatInput');
-  const val = inp.value.trim();
-  if(!val) return;
-  const msgs = document.getElementById('chatMsgs');
-
-  const ub = document.createElement('div');
-  ub.className = 'bubble user';
-  ub.textContent = val;
-  msgs.appendChild(ub);
-  inp.value = '';
-
-  const typing = document.createElement('div');
-  typing.className = 'typing-dots';
-  typing.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
-  msgs.appendChild(typing);
-  msgs.scrollTop = msgs.scrollHeight;
-
-  const level = classifyInput(val);
-  const delay = level==='crisis'?400:800;
-
-  setTimeout(()=>{
-    typing.remove();
-    const rb = document.createElement('div');
-    if (level === 'crisis') {
-      rb.className = 'bubble crisis';
-      rb.textContent = CRISIS_REPLY;
-      msgs.appendChild(rb);
-    } else {
-      const wrap = document.createElement('div');
-      wrap.className = 'ai-bubble-wrap';
-      const icon = document.createElement('img');
-      icon.src = '/images/ai-coach.png';
-      icon.className = 'ai-bubble-icon';
-      icon.alt = 'AIコーチ';
-      const bub = document.createElement('div');
-      bub.className = 'bubble ai';
-      bub.textContent = level==='burnout' ? getBurnoutReply(val) : getNormalReply(val);
-      wrap.appendChild(icon);
-      wrap.appendChild(bub);
-      msgs.appendChild(wrap);
-    }
-    msgs.scrollTop = msgs.scrollHeight;
-  }, delay);
-}
-
-function resetApp() {
-  cur = 0;
-  answers = new Array(QUESTIONS.length).fill(-1);
-  rawScores = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
-  prevRaw   = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
-  document.getElementById('resultPage').classList.add('hidden');
-  document.getElementById('app').classList.remove('hidden');
-  renderQuestion();
-  updatePreview('');
-  window.scrollTo(0,0);
-}
-
-/* ===== 初期化 ===== */
-buildAxisList();
-renderQuestion();
 </script>
 </body>
 </html>
