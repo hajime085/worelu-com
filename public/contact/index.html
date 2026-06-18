@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://worelu.com/contact/">
 <link rel="icon" href="/favicon.ico">
 <style>
-:root{--blue:#2563EB;--text:#0F172A;--text2:#334155;--muted:#64748B;--line:#E2E8F0;--page:#F8FAFC;--white:#fff}
+:root{--blue:#2563EB;--blue-lt:#EFF6FF;--blue-md:#DBEAFE;--text:#0F172A;--text2:#334155;--muted:#64748B;--line:#E2E8F0;--page:#F8FAFC;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--white);color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
 a{text-decoration:none;color:inherit}
@@ -29,30 +29,31 @@ a{text-decoration:none;color:inherit}
 .mobile-nav a{font-size:15px;color:var(--text);font-weight:600;padding:12px 0;border-bottom:1px solid var(--line);display:block}
 .mobile-nav a:last-child{border-bottom:none}
 .mobile-nav.open{display:flex}
-@media(max-width:768px){.hdr-nav{display:none}.hamburger{display:flex}.hdr{position:relative}.hdr{padding:0 20px}}
-@media(max-width:600px){.main{padding:0 20px 60px}}
+@media(max-width:768px){.hdr-nav{display:none}.hamburger{display:flex}.hdr{position:relative;padding:0 20px}}
 .hero{background:var(--page);border-bottom:1px solid var(--line);padding:52px 40px}
-.hero-inner{max-width:720px;margin:0 auto}
+.hero-inner{max-width:640px;margin:0 auto}
 .hero-label{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;margin-bottom:10px}
-.hero-h1{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-0.02em}
-.main{max-width:720px;margin:48px auto;padding:0 40px 80px}
-.section{margin-bottom:48px}
-.sec-title{font-size:16px;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.table{width:100%;border-collapse:collapse}
-.table tr{border-bottom:1px solid var(--line)}
-.table th{width:160px;padding:14px 16px;font-size:13px;font-weight:700;color:var(--muted);text-align:left;background:var(--page);vertical-align:top}
-.table td{padding:14px 16px;font-size:14px;color:var(--text2);line-height:1.7}
-.note{font-size:13px;color:var(--muted);line-height:1.8;background:var(--page);border-radius:8px;padding:18px 20px;margin-top:16px}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;flex-direction:column;box-shadow:0 8px 24px rgba(15,23,42,0.1);z-index:200}
-.mobile-nav a{font-size:15px;color:var(--text);font-weight:600;padding:12px 0;border-bottom:1px solid var(--line);display:block}
-.mobile-nav a:last-child{border-bottom:none}
-.mobile-nav.open{display:flex}
-@media(max-width:768px){.hdr-nav{display:none !important}.hamburger{display:flex}.hdr{position:relative;padding:0 20px}}
+.hero-h1{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-0.02em;margin-bottom:10px}
+.hero-sub{font-size:14px;color:var(--muted);line-height:1.7}
+.main{max-width:640px;margin:48px auto;padding:0 40px 80px}
+.form-group{margin-bottom:24px}
+.form-label{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px}
+.form-label span{font-size:11px;font-weight:700;color:#fff;background:var(--blue);padding:2px 7px;border-radius:3px;margin-left:8px}
+.form-label span.opt{background:var(--muted)}
+.form-input{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:inherit;outline:none;transition:border-color 0.2s}
+.form-input:focus{border-color:var(--blue)}
+.form-textarea{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:inherit;outline:none;resize:vertical;min-height:160px;transition:border-color 0.2s}
+.form-textarea:focus{border-color:var(--blue)}
+.form-note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.6}
+.form-select{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:inherit;outline:none;background:var(--white);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M3 5l4 4 4-4' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.privacy-check{display:flex;align-items:flex-start;gap:10px;margin-bottom:24px}
+.privacy-check input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--blue)}
+.privacy-check label{font-size:13px;color:var(--text2);line-height:1.6}
+.privacy-check a{color:var(--blue)}
+.submit-btn{display:block;width:100%;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px;border-radius:8px;border:none;cursor:pointer;font-family:inherit;transition:background 0.2s}
+.submit-btn:hover{background:#1D4ED8}
+.info-box{background:var(--blue-lt);border:1px solid var(--blue-md);border-radius:10px;padding:18px 20px;margin-bottom:32px;font-size:13px;color:var(--text2);line-height:1.7}
+.info-box strong{color:var(--blue)}
 .ftr{background:var(--white);border-top:1px solid var(--line);padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .ftr-logo{font-size:16px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
 .ftr-logo em{color:var(--blue);font-style:normal}
@@ -147,22 +148,7 @@ a{text-decoration:none;color:inherit}
   </nav>
   <div class="ftr-copy">© 2026 Worelu</div>
 </footer>
-<script>
-function toggleNav(){
-  const nav=document.getElementById('mobileNav');
-  const btn=document.getElementById('hamburger');
-  nav.classList.toggle('open');
-  btn.classList.toggle('open');
-}
-document.addEventListener('click',function(e){
-  const nav=document.getElementById('mobileNav');
-  const btn=document.getElementById('hamburger');
-  if(nav&&btn&&!nav.contains(e.target)&&!btn.contains(e.target)){
-    nav.classList.remove('open');
-    btn.classList.remove('open');
-  }
-});
-</script>
+
 <script>
 function toggleNav(){
   const nav=document.getElementById('mobileNav');
