@@ -27,26 +27,26 @@
 </script>
 <style>
   :root {
-    --accent: #8B6F47;
-    --accent-soft: #F5EFE6;
-    --accent-dark: #6B5236;
-    --text: #2C2416;
-    --muted: #8C7B6A;
-    --line: #E8DFD0;
-    --panel: #FFFDF9;
-    --page: #F5F0E8;
-    --sand-1: #FAF5EC;
-    --sand-2: #EDE4D3;
-    --sand-3: #D4C5AE;
-    --sand-dark: #4A3F2F;
-    --warning: #A0742A;
-    --danger: #B54A3A;
-    --col-stress: #C0603A;
-    --col-burnout: #A0742A;
-    --col-environment: #3A6E8A;
-    --col-leaving: #6E5A8E;
+    --accent: #2563EB;
+    --accent-soft: #EFF6FF;
+    --accent-dark: #1D4ED8;
+    --text: #0F172A;
+    --muted: #64748B;
+    --line: #E2E8F0;
+    --panel: #FFFFFF;
+    --page: #F8FAFC;
+    --sand-1: #EFF6FF;
+    --sand-2: #DBEAFE;
+    --sand-3: #BFDBFE;
+    --sand-dark: #1E3A5F;
+    --warning: #D97706;
+    --danger: #DC2626;
+    --col-stress: #DC2626;
+    --col-burnout: #D97706;
+    --col-environment: #2563EB;
+    --col-leaving: #7C3AED;
     --radius: 12px;
-    --shadow: 0 14px 38px rgba(44,36,22,0.09);
+    --shadow: 0 14px 38px rgba(15,23,42,0.08);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -63,15 +63,19 @@
   .site-header {
     background: var(--panel);
     border-bottom: 1px solid var(--line);
-    padding: 0 24px;
-    height: 52px;
+    padding: 0 32px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .site-logo { font-size: 16px; font-weight: 800; color: var(--sand-dark); letter-spacing: -0.02em; }
-  .site-tagline { font-size: 11px; color: var(--muted); margin-top: 1px; }
-  .site-right { font-size: 12px; color: var(--muted); }
+  .site-logo { font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.04em; }
+  .site-logo em { color: var(--accent); font-style: normal; }
+  .site-tagline { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .header-right { display: flex; align-items: center; gap: 20px; }
+  .header-nav-link { font-size: 13px; color: var(--muted); text-decoration: none; font-weight: 600; }
+  .header-nav-link:hover { color: var(--accent); }
+  .header-diag-btn { background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
 
   /* APP LAYOUT */
   .app {
@@ -98,21 +102,22 @@
 
   /* INTRO BLOCK */
   .intro-block {
-    background: var(--sand-2);
-    border: 1px solid var(--sand-3);
-    border-radius: 10px;
-    padding: 14px 18px;
+    background: var(--page);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
     margin-bottom: 24px;
   }
   .intro-block h1 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 800;
-    color: var(--sand-dark);
-    margin-bottom: 5px;
+    color: var(--text);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
   }
-  .intro-block p { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
-  .intro-chips { display: flex; gap: 10px; flex-wrap: wrap; }
-  .intro-chip { font-size: 11px; color: var(--accent); font-weight: 700; }
+  .intro-block p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+  .intro-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .intro-chip { font-size: 11px; color: var(--accent); font-weight: 700; background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--sand-3); }
 
   /* TOPLINE */
   .topline {
@@ -121,7 +126,7 @@
     align-items: center;
     margin-bottom: 14px;
   }
-  .kicker { color: var(--sand-dark); font-size: 12px; font-weight: 800; letter-spacing: 0.03em; }
+  .kicker { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: 0.03em; }
   .q-count { color: var(--muted); font-size: 14px; font-weight: 700; }
 
   /* PROGRESS */
@@ -150,7 +155,7 @@
     font-weight: 700;
     margin-bottom: 10px;
     background: var(--sand-2);
-    color: var(--accent-dark);
+    color: var(--accent);
     border: 1px solid var(--sand-3);
   }
 
@@ -250,7 +255,7 @@
   }
   .risk-pill {
     padding: 6px 10px; border-radius: 999px;
-    background: var(--sand-2); color: var(--sand-dark);
+    background: var(--sand-2); color: var(--accent);
     font-size: 12px; font-weight: 900; border: 1px solid var(--sand-3);
   }
 
@@ -311,7 +316,7 @@
     45%  { transform:scale(1.18); opacity:1; }
     100% { transform:scale(1); opacity:0.78; }
   }
-  .bar-track { height: 13px; overflow: hidden; border-radius: 999px; background: var(--sand-2); }
+  .bar-track { height: 13px; overflow: hidden; border-radius: 999px; background: var(--line); }
   .bar-fill { height: 100%; width: 0; border-radius: inherit; transition: width 420ms ease; }
   .bar-stress      { background: #E24B4A; }
   .bar-burnout     { background: #D4860A; }
@@ -387,7 +392,7 @@
   .reassurance {
     margin-top: 14px; padding: 12px 14px;
     border-radius: 10px; background: var(--sand-2);
-    color: var(--sand-dark); font-size: 13px; font-weight: 800;
+    color: var(--accent-dark); font-size: 13px; font-weight: 800;
     border: 1px solid var(--sand-3);
   }
 
@@ -437,7 +442,7 @@
     padding: 28px 30px;
     text-align: center;
   }
-  .cta-title { font-size: 15px; font-weight: 800; color: var(--sand-dark); margin-bottom: 8px; }
+  .cta-title { font-size: 15px; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
   .cta-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
 
   .result-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -460,7 +465,7 @@
     max-width: 84%; padding: 11px 14px; border-radius: 12px;
     font-size: 13px; font-weight: 700; line-height: 1.65; white-space: pre-wrap;
   }
-  .bubble.ai { justify-self: start; background: var(--sand-1); color: var(--sand-dark); border: 1px solid var(--sand-2); }
+  .bubble.ai { justify-self: start; background: var(--sand-1); color: var(--accent-dark); border: 1px solid var(--sand-2); }
   .bubble.user { justify-self: end; background: var(--accent); color: #FFF8F0; }
   .bubble.crisis { justify-self: start; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
   .typing-dots {
@@ -505,10 +510,15 @@
 
 <header class="site-header">
   <div>
-    <div class="site-logo">Worelu</div>
-    <div class="site-tagline">無料ストレスチェック</div>
+    <div class="site-logo">Wor<em>e</em>lu</div>
+    <div class="site-tagline">仕事で壊れる前に。</div>
   </div>
-  <div class="site-right">仕事で壊れる前に。</div>
+  <div class="header-right">
+    <a href="/articles/" class="header-nav-link">記事一覧</a>
+    <a href="/articles/stress/" class="header-nav-link">症状</a>
+    <a href="/articles/burnout/" class="header-nav-link">バーンアウト</a>
+    <a href="/articles/quit/" class="header-nav-link">転職・退職</a>
+  </div>
 </header>
 
 <main class="app" id="app">
