@@ -115,6 +115,20 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 /* FOOTER */
 .site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
 
+/* 目次ボックス */
+.toc-box { background: var(--blue-soft); border: 1px solid var(--blue-mid); border-radius: 8px; padding: 20px 24px; margin: 0 0 32px; }
+.toc-box-title { font-size: 13px; font-weight: 800; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+.toc-box-title::before { content: ""; display: block; width: 3px; height: 14px; background: var(--blue); border-radius: 2px; }
+.toc-list { list-style: none; display: grid; gap: 6px; }
+.toc-list li { font-size: 14px; }
+.toc-list a { color: var(--blue-dark); text-decoration: none; display: flex; align-items: baseline; gap: 8px; }
+.toc-list a::before { content: "—"; color: var(--blue-mid); font-size: 12px; flex-shrink: 0; }
+.toc-list a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* 見出しにidを付けてスクロールオフセット調整 */
+.article-body h2 { scroll-margin-top: 72px; }
+.article-body h3 { scroll-margin-top: 72px; }
+
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
@@ -377,5 +391,62 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   © 2026 Worelu — 仕事で壊れる前に。
 </footer>
 
+<script>
+// 見出しにIDを付与して目次を自動生成
+(function() {
+  const article = document.querySelector('.article-body');
+  if (!article) return;
+
+  const headings = article.querySelectorAll('h2, h3');
+  if (headings.length < 2) return;
+
+  // 各見出しにIDを付与
+  headings.forEach(function(h, i) {
+    if (!h.id) {
+      const id = 'heading-' + i;
+      h.id = id;
+    }
+  });
+
+  // 目次ボックスを生成
+  const toc = document.createElement('div');
+  toc.className = 'toc-box';
+
+  const tocTitle = document.createElement('div');
+  tocTitle.className = 'toc-box-title';
+  tocTitle.textContent = '目次';
+  toc.appendChild(tocTitle);
+
+  const ul = document.createElement('ul');
+  ul.className = 'toc-list';
+
+  headings.forEach(function(h) {
+    const li = document.createElement('li');
+    li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    // スムーズスクロール
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById(h.id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, '#' + h.id);
+      }
+    });
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  toc.appendChild(ul);
+
+  // 記事の最初のh2の直前に挿入
+  const firstH2 = article.querySelector('h2');
+  if (firstH2) {
+    article.insertBefore(toc, firstH2);
+  }
+})();
+</script>
 </body>
 </html>
