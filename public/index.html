@@ -110,13 +110,13 @@
     margin-bottom: 14px;
   }
   .intro-block h1 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
     color: var(--text);
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     letter-spacing: -0.01em;
   }
-  .intro-block p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+  .intro-block p { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
   .intro-chips { display: flex; gap: 8px; flex-wrap: wrap; }
   .intro-chip { font-size: 11px; color: var(--accent); font-weight: 700; background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--sand-3); }
 
@@ -486,7 +486,7 @@
   .bubble.user { justify-self: end; background: var(--accent); color: #FFF8F0; }
   .bubble.crisis { justify-self: start; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
   .ai-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; justify-self: start; max-width: 90%; }
-  .ai-bubble-icon { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 2px; border: 1.5px solid var(--line); }
+  .ai-bubble-icon { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 2px; border: 2px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
   .ai-bubble-wrap .bubble.ai { max-width: 100%; margin: 0; }
   .typing-dots {
     display: flex; gap: 4px; padding: 12px 14px;
@@ -732,9 +732,6 @@ function calcRaw() {
 
 /* ===== 描画：質問 ===== */
 function renderQuestion() {
-  const intro = document.getElementById('introBlock');
-  if(intro) intro.style.display = cur===0 ? '' : 'none';
-
   const q = QUESTIONS[cur];
   document.getElementById('qNum').textContent = `Q${cur+1} / ${QUESTIONS.length}`;
   document.getElementById('progFill').style.width = ((cur+1)/QUESTIONS.length*100) + '%';
