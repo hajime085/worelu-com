@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ | Worelu（ワーレル）</title>
+<meta name="description" content="Worelu（ワーレル）へのお問い合わせはこちらから。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://worelu.com/contact/">
+<link rel="icon" href="/favicon.ico">
+<style>
+:root{--blue:#2563EB;--blue-lt:#EFF6FF;--blue-md:#DBEAFE;--text:#0F172A;--text2:#334155;--muted:#64748B;--line:#E2E8F0;--page:#F8FAFC;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+.hdr{background:var(--white);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:100}
+.logo{font-size:21px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
+.logo em{color:var(--blue);font-style:normal}
+.logo-sub{font-size:10px;color:#94A3B8;margin-top:1px}
+.hdr-nav{display:flex;align-items:center;gap:24px}
+.hdr-nav a{font-size:13px;color:var(--muted);font-weight:600}
+.hdr-btn{background:var(--blue);color:#fff !important;font-size:13px;font-weight:700;padding:10px 20px;border-radius:6px}
+.hero{background:var(--page);border-bottom:1px solid var(--line);padding:52px 40px}
+.hero-inner{max-width:640px;margin:0 auto}
+.hero-label{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;margin-bottom:10px}
+.hero-h1{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-0.02em;margin-bottom:10px}
+.hero-sub{font-size:14px;color:var(--muted);line-height:1.7}
+.main{max-width:640px;margin:48px auto;padding:0 40px 80px}
+.form-group{margin-bottom:24px}
+.form-label{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px}
+.form-label span{font-size:11px;font-weight:700;color:#fff;background:var(--blue);padding:2px 7px;border-radius:3px;margin-left:8px}
+.form-label span.opt{background:var(--muted)}
+.form-input{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:inherit;outline:none;transition:border-color 0.2s}
+.form-input:focus{border-color:var(--blue)}
+.form-textarea{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:inherit;outline:none;resize:vertical;min-height:160px;transition:border-color 0.2s}
+.form-textarea:focus{border-color:var(--blue)}
+.form-note{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.6}
+.form-select{display:block;width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:inherit;outline:none;background:var(--white);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M3 5l4 4 4-4' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.privacy-check{display:flex;align-items:flex-start;gap:10px;margin-bottom:24px}
+.privacy-check input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--blue)}
+.privacy-check label{font-size:13px;color:var(--text2);line-height:1.6}
+.privacy-check a{color:var(--blue)}
+.submit-btn{display:block;width:100%;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px;border-radius:8px;border:none;cursor:pointer;font-family:inherit;transition:background 0.2s}
+.submit-btn:hover{background:#1D4ED8}
+.info-box{background:var(--blue-lt);border:1px solid var(--blue-md);border-radius:10px;padding:18px 20px;margin-bottom:32px;font-size:13px;color:var(--text2);line-height:1.7}
+.info-box strong{color:var(--blue)}
+.ftr{background:var(--white);border-top:1px solid var(--line);padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.ftr-logo{font-size:16px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
+.ftr-logo em{color:var(--blue);font-style:normal}
+.ftr-nav{display:flex;gap:20px;flex-wrap:wrap}
+.ftr-nav a{font-size:12px;color:var(--muted)}
+.ftr-copy{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <a href="/">
+    <div class="logo">Wor<em>e</em>lu <span style="font-size:13px;font-weight:400;color:#94A3B8">— ワーレル</span></div>
+    <div class="logo-sub">働く人のためのセルフケアメディア</div>
+  </a>
+  <nav class="hdr-nav">
+    <a href="/articles/">記事一覧</a>
+    <a href="/articles/stress/">症状</a>
+    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/quit/">転職・退職</a>
+    <a href="/stress-check/" class="hdr-btn">無料で診断する</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">CONTACT</div>
+    <h1 class="hero-h1">お問い合わせ</h1>
+    <p class="hero-sub">ご意見・ご要望・記事に関するご質問など、お気軽にお送りください。</p>
+  </div>
+</div>
+
+<main class="main">
+  <div class="info-box">
+    <strong>ご回答までのお時間について</strong><br>
+    お問い合わせへの回答は、通常3〜5営業日以内を目安にご返信いたします。内容によってはお時間をいただく場合があります。<br><br>
+    なお、<strong>メンタルヘルスに関する緊急のご相談</strong>については、専門の相談窓口（よりそいホットライン：0120-279-338）にご連絡ください。
+  </div>
+
+  <form action="https://formspree.io/f/worelu" method="POST">
+    <div class="form-group">
+      <label class="form-label" for="name">お名前<span>必須</span></label>
+      <input type="text" id="name" name="name" class="form-input" placeholder="山田 太郎" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="email">メールアドレス<span>必須</span></label>
+      <input type="email" id="email" name="email" class="form-input" placeholder="example@email.com" required>
+      <div class="form-note">ご返信先のメールアドレスをご入力ください。</div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="category">お問い合わせ種別<span>必須</span></label>
+      <select id="category" name="category" class="form-select" required>
+        <option value="">選択してください</option>
+        <option value="article">記事の内容について</option>
+        <option value="diagnosis">診断ツールについて</option>
+        <option value="other">その他</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="message">お問い合わせ内容<span>必須</span></label>
+      <textarea id="message" name="message" class="form-textarea" placeholder="お問い合わせ内容をご記入ください。" required></textarea>
+    </div>
+
+    <div class="privacy-check">
+      <input type="checkbox" id="privacy" name="privacy" required>
+      <label for="privacy"><a href="/privacy/" target="_blank">プライバシーポリシー</a>に同意します</label>
+    </div>
+
+    <button type="submit" class="submit-btn">送信する</button>
+  </form>
+</main>
+
+<footer class="ftr">
+  <div class="ftr-logo">Wor<em>e</em>lu</div>
+  <nav class="ftr-nav">
+    <a href="/privacy/">プライバシーポリシー</a>
+    <a href="/terms/">利用規約</a>
+    <a href="/about/">運営者情報</a>
+    <a href="/contact/">お問い合わせ</a>
+  </nav>
+  <div class="ftr-copy">© 2026 Worelu</div>
+</footer>
+</body>
+</html>
