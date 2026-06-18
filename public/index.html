@@ -475,6 +475,14 @@
   .cta-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
 
   .result-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .rec-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+  .rec-card { display: flex; flex-direction: column; background: var(--page); border: 1px solid var(--line); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: border-color 180ms, transform 180ms; }
+  .rec-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .rec-cat { font-size: 10px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 6px; }
+  .rec-title { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.55; margin-bottom: 8px; flex: 1; }
+  .rec-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+  .rec-link { font-size: 12px; font-weight: 700; color: var(--accent); }
+  @media(max-width:600px){ .rec-grid { grid-template-columns: 1fr; } }
   .wide-btn { min-width: 200px; }
 
   /* CHAT */
@@ -566,11 +574,11 @@
   <section class="question-area" aria-labelledby="qText">
     <div class="intro-block" id="introBlock">
       <h1>仕事ストレスチェック診断</h1>
-      <p>仕事・心身・燃え尽き・転職意向を、AIがリアルタイム分析します。</p>
       <div class="intro-chips">
-        <span class="intro-chip">✓ 無料</span>
-        <span class="intro-chip">✓ 登録不要</span>
-        <span class="intro-chip">✓ AIアドバイス付き</span>
+        <span class="intro-chip">✓ 約1分で診断</span>
+        <span class="intro-chip">✓ AIがリアルタイム分析</span>
+        <span class="intro-chip">✓ 登録不要・無料</span>
+        <span class="intro-chip">✓ バーンアウト・退職リスクもチェック</span>
       </div>
     </div>
     <div class="topline">
@@ -615,6 +623,72 @@
 </main>
 
 <div class="result-page hidden" id="resultPage"></div>
+
+
+/* ===== 記事データベース（Markdownビルドと連動・将来自動生成対象） ===== */
+const ARTICLE_DB = [
+  { slug:'nemurenai-asa',           category:'stress',  tags:['不眠','ストレス','燃え尽き'],        title:'眠れないまま朝になった…仕事のストレスで眠れない人へ',              desc:'脳が仕事モードのまま固定されている状態の正体と、その夜を軽くする方法。', url:'/articles/stress/nemurenai-asa/',           priority:1 },
+  { slug:'namida-ga-deru',          category:'stress',  tags:['涙','ストレス','感情'],               title:'仕事で涙が出るのは甘えじゃない。その涙が体に伝えていること',          desc:'涙が出る状態の正体と、今すぐできることを整理します。',                   url:'/articles/stress/namida-ga-deru/',           priority:2 },
+  { slug:'doki-ga-suru',            category:'stress',  tags:['動悸','ストレス','身体症状'],         title:'仕事で動悸がする…それは体が「もう限界」と伝えているサイン',           desc:'動悸が出る状態の正体と、放置するリスク・対処法を解説します。',           url:'/articles/stress/doki-ga-suru/',             priority:3 },
+  { slug:'moeyuki-selfcheck',       category:'burnout', tags:['燃え尽き','セルフチェック','診断'],   title:'燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認',             desc:'燃え尽き症候群かどうかを10問で確認。結果別の対処法。',                   url:'/articles/burnout/moeyuki-selfcheck/',        priority:1 },
+  { slug:'burnout-symptoms',        category:'burnout', tags:['バーンアウト','回復','症状'],         title:'バーンアウトの症状チェックリスト。燃え尽きのサインと回復法',           desc:'バーンアウトの3段階・症状リスト・段階別の回復ステップ。',                url:'/articles/burnout/burnout-symptoms/',         priority:2 },
+  { slug:'kyushoku-1month',         category:'burnout', tags:['休職','傷病手当金','回復'],           title:'休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する',         desc:'傷病手当金の計算方法・1ヶ月の過ごし方・復職か退職かの判断。',           url:'/articles/burnout/kyushoku-1month/',          priority:3 },
+  { slug:'service-zangyo',          category:'work',    tags:['サービス残業','残業代','労働基準法'], title:'サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】',         desc:'残業代の計算・証拠の集め方・相談先まで一気通貫で解説。',                 url:'/articles/work/service-zangyo/',              priority:1 },
+  { slug:'service-zangyo-atarimae', category:'work',    tags:['サービス残業','同調圧力'],            title:'サービス残業が当たり前の職場は異常。続けてはいけない理由',             desc:'「みんなやってるから」の空気の正体と心理的メカニズム。',                 url:'/articles/work/service-zangyo-atarimae/',     priority:2 },
+  { slug:'service-zangyo-voluntary',category:'work',    tags:['サービス残業','権利'],                title:'「自主的な残業」でも残業代は出る。違法になるケースと対処法',           desc:'「自主的だから出ない」は通らない。法的根拠と対処法。',                   url:'/articles/work/service-zangyo-voluntary/',    priority:3 },
+  { slug:'yameru-yuuki',            category:'quit',    tags:['退職','転職','決断'],                 title:'仕事を辞める勇気が出ない人へ。5つの理由と現実的な答え',               desc:'辞めたいのに動けない理由を整理し、判断基準と次の一歩を提案。',           url:'/articles/quit/yameru-yuuki/',                priority:1 },
+  { slug:'black-kigyo-shindan',     category:'quit',    tags:['ブラック企業','診断'],                title:'ブラック企業診断｜15の質問で今の職場をスコアリング',                   desc:'15問のスコアリングでブラック企業かどうかを判断。行動指針付き。',         url:'/articles/quit/black-kigyo-shindan/',         priority:2 },
+  { slug:'taisyoku-daikou-moumuri', category:'quit',    tags:['退職代行','モームリ'],                title:'退職代行モームリは違法？合法な理由と安全な使い方',                     desc:'労働組合型が合法とされる理由と安全な利用方法。',                         url:'/articles/quit/taisyoku-daikou-moumuri/',     priority:3 },
+  { slug:'kaisha-yabai',            category:'quit',    tags:['ブラック企業','違和感'],              title:'「この会社やばい」と感じたとき。その直感を言語化する方法',             desc:'「なんかおかしい」という違和感を言葉にする方法。',                       url:'/articles/quit/kaisha-yabai/',                priority:4 },
+  { slug:'hyouka-sarenai',          category:'quit',    tags:['評価','モチベーション'],              title:'仕事で評価されないと腐る前に。原因の見つけ方と立て直し方',             desc:'評価されない原因3つと、腐る前に試せる対処法。',                         url:'/articles/quit/hyouka-sarenai/',              priority:5 },
+  { slug:'black-kigyo-aruaru',      category:'quit',    tags:['ブラック企業','あるある'],            title:'ブラック企業あるある20選。読んで笑えたら要注意',                       desc:'笑えるが笑えないあるある20選。気づきを与えるエンタメ記事。',             url:'/articles/quit/black-kigyo-aruaru/',          priority:6 },
+];
+
+/* ===== 軸→カテゴリのマッピング ===== */
+const AXIS_CATEGORY_MAP = {
+  stress:      ['stress', 'burnout'],
+  burnout:     ['burnout', 'stress'],
+  environment: ['work', 'quit'],
+  leaving:     ['quit', 'work'],
+};
+
+/* ===== 上位2〜3軸から関連記事を選択 ===== */
+function getRecommendedArticles(norm, count = 3) {
+  // スコア降順でソート
+  const sorted = Object.entries(norm)
+    .filter(([k]) => ['stress','burnout','environment','leaving'].includes(k))
+    .sort((a, b) => b[1] - a[1]);
+
+  const selected = [];
+  const usedSlugs = new Set();
+
+  // 上位軸から順に1記事ずつ選ぶ
+  for (const [axis] of sorted) {
+    if (selected.length >= count) break;
+    const cats = AXIS_CATEGORY_MAP[axis] || [];
+    for (const cat of cats) {
+      const candidates = ARTICLE_DB
+        .filter(a => a.category === cat && !usedSlugs.has(a.slug))
+        .sort((a, b) => a.priority - b.priority);
+      if (candidates.length > 0) {
+        selected.push(candidates[0]);
+        usedSlugs.add(candidates[0].slug);
+        break;
+      }
+    }
+  }
+
+  // 足りない場合は残りから補完
+  if (selected.length < count) {
+    const remaining = ARTICLE_DB.filter(a => !usedSlugs.has(a.slug));
+    for (const art of remaining) {
+      if (selected.length >= count) break;
+      selected.push(art);
+    }
+  }
+
+  return selected;
+}
 
 <script>
 function toggleMenu() {
@@ -966,6 +1040,11 @@ function renderResultPage() {
       </div>
     </section>
 
+    <section class="result-panel" id="recommended-articles-section">
+      <h2 class="section-title">あなたにおすすめの記事</h2>
+      <div class="rec-grid" id="recGrid"></div>
+    </section>
+
     <div class="result-actions">
       <button class="btn primary wide-btn" type="button" onclick="resetApp()">もう一度診断する</button>
     </div>
@@ -992,6 +1071,21 @@ function renderResultPage() {
   rp.classList.remove('hidden');
   window.scrollTo({top:0,behavior:'smooth'});
   setChatContext(dominant, norm, total);
+
+  // おすすめ記事を描画
+  const recGrid = document.getElementById('recGrid');
+  if (recGrid) {
+    const recs = getRecommendedArticles(norm, 3);
+    const catLabels = { stress:'症状・ストレス', burnout:'バーンアウト', work:'労働問題', quit:'転職・退職' };
+    recGrid.innerHTML = recs.map(art => `
+      <a href="${art.url}" class="rec-card">
+        <div class="rec-cat">${catLabels[art.category] || art.category}</div>
+        <div class="rec-title">${art.title}</div>
+        <div class="rec-desc">${art.desc}</div>
+        <div class="rec-link">続きを読む →</div>
+      </a>
+    `).join('');
+  }
 
   const el = document.getElementById('analysisText');
   el.textContent = '';
