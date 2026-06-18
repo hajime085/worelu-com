@@ -485,6 +485,9 @@
   .bubble.ai { justify-self: start; background: var(--sand-1); color: var(--accent-dark); border: 1px solid var(--sand-2); }
   .bubble.user { justify-self: end; background: var(--accent); color: #FFF8F0; }
   .bubble.crisis { justify-self: start; background: #FEE2E2; color: #991B1B; border: 1px solid #FCA5A5; }
+  .ai-bubble-wrap { display: flex; align-items: flex-start; gap: 8px; justify-self: start; max-width: 90%; }
+  .ai-bubble-icon { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; flex-shrink: 0; margin-top: 2px; border: 1.5px solid var(--line); }
+  .ai-bubble-wrap .bubble.ai { max-width: 100%; margin: 0; }
   .typing-dots {
     display: flex; gap: 4px; padding: 12px 14px;
     justify-self: start; background: var(--accent-soft);
@@ -945,7 +948,7 @@ function renderResultPage() {
         <div class="risk-pill">結果連動</div>
       </div>
       <div class="chat-log" id="chatMsgs">
-        <div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div>
+        <div class="ai-bubble-wrap"><img src="/images/ai-coach.png" class="ai-bubble-icon" alt="AIコーチ"><div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div></div>
       </div>
       <div class="chat-form">
         <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off">
@@ -1095,9 +1098,24 @@ function sendChat() {
   setTimeout(()=>{
     typing.remove();
     const rb = document.createElement('div');
-    rb.className = level==='crisis' ? 'bubble crisis' : 'bubble ai';
-    rb.textContent = level==='crisis' ? CRISIS_REPLY : level==='burnout' ? getBurnoutReply(val) : getNormalReply(val);
-    msgs.appendChild(rb);
+    if (level === 'crisis') {
+      rb.className = 'bubble crisis';
+      rb.textContent = CRISIS_REPLY;
+      msgs.appendChild(rb);
+    } else {
+      const wrap = document.createElement('div');
+      wrap.className = 'ai-bubble-wrap';
+      const icon = document.createElement('img');
+      icon.src = '/images/ai-coach.png';
+      icon.className = 'ai-bubble-icon';
+      icon.alt = 'AIコーチ';
+      const bub = document.createElement('div');
+      bub.className = 'bubble ai';
+      bub.textContent = level==='burnout' ? getBurnoutReply(val) : getNormalReply(val);
+      wrap.appendChild(icon);
+      wrap.appendChild(bub);
+      msgs.appendChild(wrap);
+    }
     msgs.scrollTop = msgs.scrollHeight;
   }, delay);
 }
