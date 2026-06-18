@@ -15,15 +15,36 @@
 <link rel="canonical" href="https://worelu.com/">
 <link rel="icon" href="/favicon.ico">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Worelu ストレスチェック",
-  "url": "https://worelu.com/",
-  "description": "仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析する無料ストレスチェック診断",
-  "applicationCategory": "HealthApplication",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
-}
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Worelu ストレスチェック",
+    "url": "https://worelu.com/",
+    "description": "仕事・心身・燃え尽き・転職意向を4つの観点からAIがリアルタイム分析する無料ストレスチェック診断",
+    "applicationCategory": "HealthApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Worelu",
+    "url": "https://worelu.com/",
+    "logo": "https://worelu.com/favicon.ico",
+    "description": "仕事ストレスを無料診断・AIに相談できるサービス"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Worelu",
+    "url": "https://worelu.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://worelu.com/articles/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+]
 </script>
 <style>
   :root {
@@ -79,6 +100,9 @@
   .header-diag-btn { background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
   .hamburger-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
   .hamburger-btn span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+  .hamburger-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger-btn.open span:nth-child(2) { opacity: 0; }
+  .hamburger-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .mobile-menu { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--panel); border-bottom: 1px solid var(--line); padding: 16px 24px; z-index: 200; flex-direction: column; gap: 0; box-shadow: 0 8px 24px rgba(15,23,42,0.1); }
   .mobile-menu a { font-size: 15px; color: var(--text); text-decoration: none; font-weight: 600; padding: 12px 0; border-bottom: 1px solid var(--line); display: block; }
   .mobile-menu a:last-child { border-bottom: none; }
@@ -233,6 +257,10 @@
   .btn:hover:not(:disabled) { transform: translateY(-1px); border-color: #BFD0CA; }
   .btn:disabled { color: #A7B1AD; cursor: not-allowed; }
   .btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+  @media (max-width: 600px) {
+    .btn { min-height: 52px; font-size: 15px; }
+    .btn.primary { min-height: 52px; font-size: 15px; }
+  }
   .btn.primary:hover:not(:disabled) { background: var(--accent-dark); border-color: var(--accent-dark); }
 
   /* PREVIEW PANEL */
@@ -624,7 +652,7 @@
 
 <div class="result-page hidden" id="resultPage"></div>
 
-<script>
+
 /* ===== 記事データベース（Markdownビルドと連動・将来自動生成対象） ===== */
 const ARTICLE_DB = [
   { slug:'nemurenai-asa',           category:'stress',  tags:['不眠','ストレス','燃え尽き'],        title:'眠れないまま朝になった…仕事のストレスで眠れない人へ',              desc:'脳が仕事モードのまま固定されている状態の正体と、その夜を軽くする方法。', url:'/articles/stress/nemurenai-asa/',           priority:1 },
@@ -693,7 +721,9 @@ function getRecommendedArticles(norm, count = 3) {
 <script>
 function toggleMenu() {
   const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburgerBtn');
   menu.classList.toggle('open');
+  btn.classList.toggle('open');
 }
 document.addEventListener('click', function(e) {
   const menu = document.getElementById('mobileMenu');
@@ -1159,19 +1189,52 @@ function setChatContext(dominant, norm, total) {
 
 function getContextualDefault() {
   const { dominant, norm, total } = chatContext;
+
+  // 上位2軸を取得
+  const sorted = ['stress','burnout','environment','leaving']
+    .map(k => ({ key: k, val: norm[k] || 0 }))
+    .sort((a, b) => b.val - a.val);
+  const top1 = sorted[0].key;
+  const top2 = sorted[1].key;
+  const top1val = sorted[0].val;
+  const top2val = sorted[1].val;
+
+  const axisLabel = { stress:'仕事ストレス', burnout:'燃え尽き傾向', environment:'職場環境', leaving:'転職意向' };
+
+  // 低ストレス
   if(total < 30) {
     return '今の状態は比較的安定しているようです。\n\nこのコンディションを維持するために、休息のリズムと相談できる環境を崩さないことが大切です。\n\n気になっていることがあれば、もう少し具体的に教えてもらえますか？';
   }
-  if(dominant === 'burnout') {
-    return '診断結果では燃え尽き傾向が強く出ています。\n\n「頑張り続けること」より「回復すること」を今は優先してください。\n\n具体的にどんなことが一番消耗しているか教えてもらえますか？仕事量なのか、人間関係なのか、意味が感じられないのか、によって対処が変わります。';
+
+  // 上位2軸の組み合わせで個別化
+  if(top1 === 'stress' && top2 === 'burnout' && top2val > 40) {
+    return `仕事への消耗と、やりがいの低下が同時に出ています（仕事ストレス${top1val}・燃え尽き${top2val}）。\n\n疲れているだけでなく、「頑張る意味が見えにくくなっている」状態のことがあります。\n\n今一番つらいのは、量の問題ですか？それとも意味や手応えの問題ですか？`;
   }
-  if(dominant === 'leaving') {
-    return '診断結果では転職意向が高めに出ています。\n\n辞めることを急いで決める必要はありませんが、今の状況を整理しておくことは大事です。\n\n「変えたいもの」が仕事内容なのか、職場環境なのか、人間関係なのか、給料なのか、教えてもらえますか？';
+  if(top1 === 'stress' && top2 === 'leaving' && top2val > 40) {
+    return `仕事のストレスと転職への気持ちが同時に強く出ています（仕事ストレス${top1val}・転職意向${top2val}）。\n\nストレスだけでなく、今の職場とのミスマッチも影響している可能性があります。\n\n「辞めたい」という気持ちは、今の状況への反応として自然なことです。変えたいのは何ですか？`;
   }
-  if(dominant === 'environment') {
-    return '診断結果では職場環境への負担が強く出ています。\n\n人間関係・評価・業務量のうち、どれが一番消耗していますか？\n\n具体的に教えてもらえると、今できることをより絞って伝えられます。';
+  if(top1 === 'burnout' && top2 === 'leaving' && top2val > 40) {
+    return `燃え尽きと転職意向が同時に高く出ています（燃え尽き${top1val}・転職意向${top2val}）。\n\n「もう頑張れない」という疲労感と、「ここにはいられない」という気持ちが重なっている状態のことがあります。\n\n今すぐ転職を決める必要はありません。まず何が一番消耗していますか？`;
   }
-  return '今おっしゃっていることは、多くの働く人が感じていることです。\n\nもう少し具体的に教えてもらえますか？「残業が多い」「上司と合わない」「やる気が出ない」など、一番気になっていることを入れてもらうと、より具体的にお伝えできます。';
+  if(top1 === 'environment' && top2 === 'leaving' && top2val > 40) {
+    return `職場環境への負担と転職意向が両方高く出ています（職場環境${top1val}・転職意向${top2val}）。\n\n仕事内容よりも、職場の人間関係や評価・制度への不満が転職を考えさせているケースが多いです。\n\n環境が変われば改善しますか？それとも仕事そのものへの問題もありますか？`;
+  }
+  if(top1 === 'burnout' && top2 === 'stress' && top2val > 40) {
+    return `燃え尽き傾向と仕事のストレスが同時に出ています（燃え尽き${top1val}・仕事ストレス${top2val}）。\n\n疲れているのに休めない、頑張っても報われないという感覚が続いていませんか？\n\n今一番きついことを教えてもらえますか？`;
+  }
+
+  // dominant1軸のみ
+  if(top1 === 'burnout') {
+    return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\n「頑張り続けること」より「回復すること」を今は優先してください。\n\n具体的にどんなことが一番消耗していますか？`;
+  }
+  if(top1 === 'leaving') {
+    return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\n急いで結論を出す必要はありませんが、今の状況を整理しておくことは大事です。\n\n変えたいのは何ですか？仕事内容・職場環境・人間関係・給料のどれに近いですか？`;
+  }
+  if(top1 === 'environment') {
+    return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\n人間関係・評価・業務量のうち、どれが一番消耗していますか？`;
+  }
+
+  return `診断では${axisLabel[top1]}が${top1val}と高めに出ています。\n\nもう少し具体的に教えてもらえますか？「残業が多い」「上司と合わない」「やる気が出ない」など、一番気になっていることを入れてもらうと、より具体的にお伝えできます。`;
 }
 
 function classifyInput(text) {
