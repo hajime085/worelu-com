@@ -123,6 +123,38 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .related-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 3px; }
 .related-text { font-size: 13px; font-weight: 600; line-height: 1.5; }
 
+/* 参考資料 */
+.ref-block{background:var(--page);border-radius:8px;padding:18px 22px;margin:24px 0;border:1px solid var(--line)}
+.ref-title{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:0.06em;margin-bottom:10px}
+.ref-list{list-style:none;display:grid;gap:6px}
+.ref-list a{font-size:13px;color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+
+/* 著者情報 */
+.author-block{display:flex;gap:16px;align-items:flex-start;padding:24px;background:var(--blue-soft);border-radius:10px;border:1px solid var(--blue-mid);margin:24px 0}
+.author-icon{width:48px;height:48px;flex-shrink:0}
+.author-icon svg{width:100%;height:100%}
+.author-name{font-size:14px;font-weight:800;color:var(--text);margin-bottom:6px}
+.author-desc{font-size:13px;color:var(--text-2);line-height:1.7;margin-bottom:10px}
+.author-cta{font-size:13px;color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+
+/* 記事末尾CTA */
+.bottom-cta{background:var(--text);border-radius:12px;margin:32px 0;overflow:hidden}
+.bottom-cta-inner{padding:32px 36px;text-align:center}
+.bottom-cta-label{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:0.1em;margin-bottom:10px}
+.bottom-cta-title{font-size:20px;font-weight:800;color:#FAF5EC;line-height:1.4;margin-bottom:12px}
+.bottom-cta-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto}
+.bottom-cta-btn{display:inline-flex;align-items:center;background:var(--blue);color:#fff;font-size:14px;font-weight:800;padding:14px 28px;border-radius:8px;text-decoration:none;margin-bottom:10px}
+.bottom-cta-note{font-size:11px;color:var(--muted)}
+
+/* 前後記事ナビ */
+.article-nav{background:var(--page);border-top:1px solid var(--line);padding:24px 28px}
+.article-nav-inner{max-width:740px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.article-nav-item{display:block;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--text)}
+.article-nav-item:hover{border-color:var(--blue)}
+.article-nav-dir{font-size:11px;font-weight:800;color:var(--blue);margin-bottom:4px;letter-spacing:0.04em}
+.article-nav-title{font-size:13px;font-weight:600;line-height:1.5;color:var(--text)}
+.article-nav-next{text-align:right}
+
 /* FOOTER */
 .site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
 
@@ -178,6 +210,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <div class="hero-meta">
       <span>2026-06-17</span>
       
+      <div class="hero-sep"></div>
+      <span>約分で読めます</span>
       <div class="hero-sep"></div>
       <span>Worelu編集部</span>
     </div>
@@ -237,6 +271,17 @@ Woreluのストレスチェック診断（無料・約1分）で、燃え尽き�
         <div class="cta-sub">仕事ストレス・燃え尽き・職場環境・転職意向の4軸で分析。無料・約1分。</div>
       </div>
       <a href="/stress-check/" class="cta-btn" style="color:#fff">無料で診断する →</a>
+    </div>
+
+    <!-- ⑥ 記事末尾CTA -->
+    <div class="bottom-cta">
+      <div class="bottom-cta-inner">
+        <div class="bottom-cta-label">この記事を読んで、気になった方へ</div>
+        <div class="bottom-cta-title">今のストレス状態を、AIで無料チェック</div>
+        <div class="bottom-cta-desc">10問・約1分で、仕事ストレス・燃え尽き・職場環境・転職意向を4軸で可視化。診断後はAIコーチに相談できます。</div>
+        <a href="/stress-check/" class="bottom-cta-btn">無料でストレスチェックを受ける →</a>
+        <div class="bottom-cta-note">登録不要・完全無料</div>
+      </div>
     </div>
   </div>
 

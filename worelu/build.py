@@ -62,6 +62,10 @@ def parse_markdown(filepath: Path) -> dict:
     category = meta.get("category", filepath.parent.name)
     slug = meta.get("slug", filepath.stem)
 
+    # 読み時間計算（日本語は1分300文字）
+    char_count = len(body_md.replace(' ', '').replace('\n', ''))
+    read_time = max(1, round(char_count / 300))
+
     return {
         "title":        meta.get("title", ""),
         "description":  meta.get("description", ""),
@@ -77,6 +81,7 @@ def parse_markdown(filepath: Path) -> dict:
         "url":          f"/articles/{category}/{slug}/",
         "full_url":     f"{BASE_URL}/articles/{category}/{slug}/",
         "content":      body_html,
+        "read_time":    read_time,
     }
 
 
@@ -122,9 +127,17 @@ def write_file(path: Path, content: str):
 def build_articles(env: Environment, articles: list):
     """記事HTMLを生成"""
     tpl = env.get_template("article.html")
-    for art in articles:
+    for i, art in enumerate(articles):
         related = get_related(art, articles)
-        html = tpl.render(**art, related_articles=related)
+        # 前後記事（日付順）
+        prev_article = articles[i + 1] if i + 1 < len(articles) else None
+        next_article = articles[i - 1] if i > 0 else None
+        html = tpl.render(
+            **art,
+            related_articles=related,
+            prev_article=prev_article,
+            next_article=next_article,
+        )
         out = OUTPUT_DIR / "articles" / art["category"] / art["slug"] / "index.html"
         write_file(out, html)
         print(f"  記事: {out}")
