@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>記事一覧 | Worelu</title>
+<meta name="description" content="仕事のストレス・燃え尽き・転職に関する記事一覧。症状・労働問題・転職まで、あなたの状況に近い記事を探せます。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://worelu.com/articles/">
+<meta property="og:title" content="記事一覧 | Worelu">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://worelu.com/articles/">
+<style>
+:root{--accent:#8B6F47;--accent-soft:#FAF5EC;--sand:#EDE4D3;--sand-dark:#4A3F2F;--text:#2C2416;--muted:#8C7B6A;--line:#E8DFD0;--page:#F5F0E8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--page);color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
+.site-header{background:#fff;border-bottom:1px solid var(--line);height:52px;display:flex;align-items:center;padding:0 24px;justify-content:space-between;position:sticky;top:0;z-index:100}
+.site-logo{font-size:18px;font-weight:800;color:var(--sand-dark);text-decoration:none;letter-spacing:-0.02em}
+.site-logo em{color:var(--accent);font-style:normal}
+.header-btn{background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:7px;text-decoration:none}
+.page-hero{background:#fff;border-bottom:1px solid var(--line);padding:36px 24px}
+.page-hero-inner{max-width:960px;margin:0 auto}
+.page-hero h1{font-size:28px;font-weight:800;color:var(--text);margin-bottom:8px;letter-spacing:-0.02em}
+.page-hero p{font-size:14px;color:var(--muted);line-height:1.7}
+.main{max-width:960px;margin:0 auto;padding:36px 24px 64px}
+.cat-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.cat-btn{background:#fff;border:1px solid var(--line);color:var(--muted);font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;text-decoration:none}
+.cat-btn.active,.cat-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.art-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;color:var(--text);display:block}
+.art-card:hover{border-color:var(--accent)}
+.art-card-bar{height:5px}
+.art-card-bar.stress{background:#E24B4A}
+.art-card-bar.burnout{background:#D4860A}
+.art-card-bar.quit{background:#7D5BC6}
+.art-card-bar.default{background:var(--accent)}
+.art-card-body{padding:18px}
+.art-card-cat{font-size:10px;font-weight:800;color:var(--accent);letter-spacing:0.07em;margin-bottom:7px}
+.art-card-title{font-size:14px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:8px}
+.art-card-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px}
+.art-card-meta{font-size:11px;color:var(--muted)}
+.site-footer{background:var(--accent-soft);border-top:1px solid var(--line);padding:24px;text-align:center;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="site-logo">Wor<em>e</em>lu</a>
+  <a href="/stress-check/" class="header-btn">無料で診断する</a>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>記事一覧</h1>
+    <p>症状・労働問題・転職まで、あなたの状況に近い記事を探してみてください。</p>
+  </div>
+</div>
+
+<main class="main">
+  <nav class="cat-nav">
+    <a href="/articles/" class="cat-btn active">すべて</a>
+    
+    <a href="/articles/stress/" class="cat-btn">症状・ストレス</a>
+    
+    <a href="/articles/burnout/" class="cat-btn">バーンアウト</a>
+    
+    <a href="/articles/quit/" class="cat-btn">転職・退職</a>
+    
+  </nav>
+
+  <div class="articles-grid">
+    
+    <a href="/articles/stress/doki-ga-suru/" class="art-card">
+      <div class="art-card-bar stress"></div>
+      <div class="art-card-body">
+        <div class="art-card-cat">症状・ストレス</div>
+        <div class="art-card-title">仕事で動悸がする…それは体が「もう限界」と伝えているサインかもしれない</div>
+        <div class="art-card-desc">仕事のことを考えると動悸がする状態の正体と、放置するリスク・今すぐできる対処法を解説します。</div>
+        <div class="art-card-meta">2026-06-17</div>
+      </div>
+    </a>
+    
+    <a href="/articles/stress/namida-ga-deru/" class="art-card">
+      <div class="art-card-bar stress"></div>
+      <div class="art-card-body">
+        <div class="art-card-cat">症状・ストレス</div>
+        <div class="art-card-title">仕事で涙が出るのは甘えじゃない。その涙が体に伝えていること</div>
+        <div class="art-card-desc">仕事で涙が出ることへの罪悪感に寄り添い、涙が出る状態の正体と今すぐできることを整理します。</div>
+        <div class="art-card-meta">2026-06-17</div>
+      </div>
+    </a>
+    
+    <a href="/articles/stress/nemurenai-asa/" class="art-card">
+      <div class="art-card-bar stress"></div>
+      <div class="art-card-body">
+        <div class="art-card-cat">症状・ストレス</div>
+        <div class="art-card-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
+        <div class="art-card-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。脳が仕事モードのまま固定される理由とその夜を軽くする方法。</div>
+        <div class="art-card-meta">2026-06-17</div>
+      </div>
+    </a>
+    
+  </div>
+</main>
+
+<footer class="site-footer">
+  © 2026 Worelu — 仕事で壊れる前に。
+</footer>
+
+</body>
+</html>
