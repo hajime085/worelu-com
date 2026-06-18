@@ -26,59 +26,128 @@
 }
 </script>
 <style>
-:root{--accent:#8B6F47;--accent-soft:#FAF5EC;--sand:#EDE4D3;--sand-dark:#4A3F2F;--text:#2C2416;--muted:#8C7B6A;--line:#E8DFD0;--page:#F5F0E8}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#fff;color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
-.site-header{background:#fff;border-bottom:1px solid var(--line);height:52px;display:flex;align-items:center;padding:0 24px;justify-content:space-between;position:sticky;top:0;z-index:100}
-.site-logo{font-size:18px;font-weight:800;color:var(--sand-dark);text-decoration:none;letter-spacing:-0.02em}
-.site-logo em{color:var(--accent);font-style:normal}
-.header-btn{background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:7px;text-decoration:none}
-.hero{background:var(--accent-soft);border-bottom:1px solid var(--line);padding:40px 24px 36px}
-.hero-inner{max-width:760px;margin:0 auto}
-.hero-cat{display:inline-flex;align-items:center;background:var(--sand);color:var(--sand-dark);font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;margin-bottom:14px;letter-spacing:0.05em}
-.hero-h1{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--text);line-height:1.35;letter-spacing:-0.01em;margin-bottom:14px}
-.hero-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted)}
-.hero-sep{width:1px;height:10px;background:var(--sand)}
-.main{max-width:760px;margin:0 auto;padding:40px 24px 64px}
-.article-body h2{font-size:20px;font-weight:800;color:var(--text);line-height:1.4;margin:36px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.article-body h3{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;margin:24px 0 10px}
-.article-body p{font-size:15px;line-height:1.95;color:#3A2E1E;margin-bottom:16px}
-.article-body ul,.article-body ol{font-size:15px;line-height:1.8;color:#3A2E1E;margin-bottom:16px;padding-left:22px}
-.article-body li{margin-bottom:6px}
-.article-body hr{border:none;border-top:1px solid var(--line);margin:32px 0}
-.article-body a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
-.article-body blockquote{border-left:3px solid var(--accent);background:var(--accent-soft);padding:14px 18px;margin:24px 0;border-radius:0 8px 8px 0}
-.article-body blockquote p{margin-bottom:0;font-size:14px;color:var(--sand-dark)}
-.article-body strong{font-weight:700;color:var(--text)}
-.article-tags{display:flex;flex-wrap:wrap;gap:8px;margin:32px 0 0}
-.tag{background:var(--accent-soft);border:1px solid var(--line);color:var(--muted);font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px}
-.related{background:var(--page);border-top:1px solid var(--line);padding:32px 24px}
-.related-inner{max-width:760px;margin:0 auto}
-.related-title{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:0.08em;margin-bottom:16px}
-.related-list{display:grid;gap:12px}
-.related-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--text)}
-.related-item:hover{border-color:var(--accent)}
-.related-cat{font-size:10px;font-weight:700;color:var(--accent);margin-bottom:3px}
-.related-text{font-size:13px;font-weight:600;line-height:1.5}
-.cta-block{background:var(--text);border-radius:14px;padding:28px 32px;margin:36px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.cta-body{}
-.cta-label{font-size:10px;font-weight:800;color:var(--accent);letter-spacing:0.1em;margin-bottom:8px}
-.cta-ttl{font-size:16px;font-weight:800;color:#FAF5EC;line-height:1.5;margin-bottom:6px}
-.cta-sub{font-size:12px;color:var(--muted);line-height:1.6}
-.cta-btn{background:var(--accent);color:#FAF5EC;font-size:13px;font-weight:800;padding:12px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0}
-.site-footer{background:var(--accent-soft);border-top:1px solid var(--line);padding:24px;text-align:center;font-size:12px;color:var(--muted)}
-@media(max-width:600px){.cta-block{flex-direction:column;align-items:flex-start}.hero-h1{font-size:22px}}
+:root {
+  --blue: #2563EB;
+  --blue-dark: #1D4ED8;
+  --blue-soft: #EFF6FF;
+  --blue-mid: #DBEAFE;
+  --text: #0F172A;
+  --text-2: #334155;
+  --muted: #64748B;
+  --line: #E2E8F0;
+  --page: #F8FAFC;
+  --white: #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; }
+
+/* HEADER */
+.site-header { background: var(--white); border-bottom: 1px solid var(--line); height: 56px; display: flex; align-items: center; padding: 0 28px; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.site-logo { font-size: 20px; font-weight: 900; color: var(--text); text-decoration: none; letter-spacing: -0.04em; }
+.site-logo em { color: var(--blue); font-style: normal; }
+.header-nav { display: flex; gap: 20px; }
+.header-nav a { font-size: 12px; color: var(--muted); text-decoration: none; font-weight: 600; }
+.header-btn { background: var(--blue); color: var(--white); font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
+
+/* HERO */
+.hero { background: var(--white); border-bottom: 1px solid var(--line); padding: 44px 28px 40px; }
+.hero-inner { max-width: 740px; margin: 0 auto; }
+.breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb-sep { color: var(--line); }
+.hero-cat { display: inline-flex; align-items: center; background: var(--blue-soft); color: var(--blue); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 4px; margin-bottom: 14px; letter-spacing: 0.06em; border: 1px solid var(--blue-mid); }
+.hero-h1 { font-size: clamp(22px, 3.5vw, 30px); font-weight: 800; color: var(--text); line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 16px; }
+.hero-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--muted); }
+.hero-sep { width: 1px; height: 10px; background: var(--line); }
+
+/* LAYOUT */
+.layout { max-width: 1040px; margin: 0 auto; padding: 36px 28px 64px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 36px; align-items: start; }
+
+/* ARTICLE */
+.article-body h2 { font-size: 19px; font-weight: 800; color: var(--text); line-height: 1.4; margin: 36px 0 14px; padding-left: 14px; border-left: 3px solid var(--blue); }
+.article-body h3 { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.4; margin: 24px 0 10px; }
+.article-body p { font-size: 15px; line-height: 1.95; color: var(--text-2); margin-bottom: 16px; }
+.article-body ul, .article-body ol { font-size: 15px; line-height: 1.8; color: var(--text-2); margin-bottom: 16px; padding-left: 22px; }
+.article-body li { margin-bottom: 6px; }
+.article-body hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+.article-body a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+.article-body blockquote { border-left: 3px solid var(--blue); background: var(--blue-soft); padding: 14px 18px; margin: 24px 0; }
+.article-body blockquote p { margin-bottom: 0; font-size: 14px; }
+.article-body strong { font-weight: 700; color: var(--text); }
+
+/* CTA */
+.cta-block { background: var(--text); border-radius: 10px; padding: 26px 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.cta-label { font-size: 10px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 7px; }
+.cta-ttl { font-size: 15px; font-weight: 800; color: var(--white); line-height: 1.5; margin-bottom: 5px; }
+.cta-sub { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.cta-btn { background: var(--blue); color: var(--white); font-size: 13px; font-weight: 700; padding: 12px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.cta-btn:hover { background: var(--blue-dark); }
+
+/* TAGS */
+.article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; }
+.tag { background: var(--page); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 4px; }
+
+/* SIDEBAR */
+.sidebar { position: sticky; top: 76px; }
+.sb-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+.sb-card-ttl { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.sb-diag-copy { font-size: 13px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+.sb-diag-btn { display: block; background: var(--blue); color: var(--white); font-size: 13px; font-weight: 700; padding: 12px; border-radius: 6px; text-decoration: none; text-align: center; margin-bottom: 6px; }
+.sb-diag-note { font-size: 11px; color: var(--muted); text-align: center; }
+.sb-item { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.sb-item:last-child { border-bottom: none; padding-bottom: 0; }
+.sb-item-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+.sb-item-ttl { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.5; }
+.sb-item-ttl a { text-decoration: none; color: inherit; }
+.sb-item-ttl a:hover { color: var(--blue); }
+
+/* RELATED */
+.related { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 32px 28px; margin-top: 0; }
+.related-inner { max-width: 740px; margin: 0 auto; }
+.related-title { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 16px; }
+.related-list { display: grid; gap: 10px; }
+.related-item { display: flex; align-items: center; gap: 12px; background: var(--page); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; text-decoration: none; color: var(--text); }
+.related-item:hover { border-color: var(--blue); }
+.related-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 3px; }
+.related-text { font-size: 13px; font-weight: 600; line-height: 1.5; }
+
+/* FOOTER */
+.site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+@media (max-width: 600px) {
+  .cta-block { flex-direction: column; align-items: flex-start; }
+  .hero-h1 { font-size: 20px; }
+  .header-nav { display: none; }
+}
 </style>
 </head>
 <body>
 
 <header class="site-header">
   <a href="/" class="site-logo">Wor<em>e</em>lu</a>
+  <nav class="header-nav">
+    <a href="/articles/">記事一覧</a>
+    <a href="/articles/stress/">症状</a>
+    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/quit/">転職・退職</a>
+  </nav>
   <a href="/stress-check/" class="header-btn">無料で診断する</a>
 </header>
 
 <div class="hero">
   <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Worelu</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/articles/">記事一覧</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/articles/quit/">転職・退職</a>
+    </div>
     <div class="hero-cat">転職・退職</div>
     <h1 class="hero-h1">ブラック企業診断｜15の質問で今の職場をスコアリングして判断する</h1>
     <div class="hero-meta">
@@ -90,9 +159,10 @@ body{background:#fff;color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI
   </div>
 </div>
 
-<main class="main">
-  <article class="article-body">
-    <p>「もしかして、私の会社ってブラック企業…？」そう感じながらも、確信が持てずに悩んでいませんか？ブラック企業は、あなたの心身を蝕み、キャリアを停滞させる可能性があります。この記事では、15の質問で今の職場環境を客観的にスコアリングし、ブラック企業かどうかを判断するための診断ツールを提供します。あなたの職場が本当に健全なのか、一緒にチェックしてみましょう。</p>
+<div class="layout">
+  <div>
+    <article class="article-body">
+      <p>「もしかして、私の会社ってブラック企業…？」そう感じながらも、確信が持てずに悩んでいませんか？ブラック企業は、あなたの心身を蝕み、キャリアを停滞させる可能性があります。この記事では、15の質問で今の職場環境を客観的にスコアリングし、ブラック企業かどうかを判断するための診断ツールを提供します。あなたの職場が本当に健全なのか、一緒にチェックしてみましょう。</p>
 <h2 id="_1">目次</h2>
 <ul>
 <li>ブラック企業とは？あなたの感覚が麻痺する前に</li>
@@ -211,22 +281,53 @@ body{background:#fff;color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI
 </ul>
 <hr />
 <p><strong>メタディスクリプション：</strong> ブラック企業診断で今の職場を客観的にスコアリング。15の質問で労働環境、給与、人間関係、組織文化をチェックし、ブラック企業かどうかを判断。診断結果に応じた行動指針も解説します。</p>
-  </article>
+    </article>
 
-  <div class="article-tags">
-    <span class="tag">ブラック企業</span><span class="tag">診断</span><span class="tag">職場環境</span><span class="tag">転職</span>
-  </div>
-
-  <div class="cta-block">
-    <div class="cta-body">
-      <div class="cta-label">STRESS CHECK</div>
-      <div class="cta-ttl">今の状態を数字で確認する</div>
-      <div class="cta-sub">仕事ストレス・燃え尽き傾向・職場環境・転職意向の4軸で分析。無料・約1分。</div>
+    <div class="article-tags">
+      <span class="tag">ブラック企業</span><span class="tag">診断</span><span class="tag">職場環境</span><span class="tag">転職</span>
     </div>
-    <a href="/stress-check/" class="cta-btn">無料で診断する →</a>
-  </div>
-</main>
 
+    <div class="cta-block">
+      <div>
+        <div class="cta-label">STRESS CHECK</div>
+        <div class="cta-ttl">今の状態を数字で確認する</div>
+        <div class="cta-sub">仕事ストレス・燃え尽き・職場環境・転職意向の4軸で分析。無料・約1分。</div>
+      </div>
+      <a href="/stress-check/" class="cta-btn">無料で診断する →</a>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sb-card">
+      <div class="sb-card-ttl">STRESS CHECK</div>
+      <div class="sb-diag-copy">今の状態を4軸で数値化。約1分・完全無料。</div>
+      <a href="/stress-check/" class="sb-diag-btn">無料で診断する</a>
+      <div class="sb-diag-note">登録不要 · worelu.com</div>
+    </div>
+
+    
+    <div class="sb-card">
+      <div class="sb-card-ttl">関連記事</div>
+      
+      <div class="sb-item">
+        <div class="sb-item-cat">転職・退職</div>
+        <div class="sb-item-ttl"><a href="/articles/quit/black-kigyo-aruaru/">ブラック企業あるある20選。読んで笑えたら要注意</a></div>
+      </div>
+      
+      <div class="sb-item">
+        <div class="sb-item-cat">転職・退職</div>
+        <div class="sb-item-ttl"><a href="/articles/quit/hyouka-sarenai/">仕事で評価されないと腐ってしまう前に。原因の見つけ方と立て直し方</a></div>
+      </div>
+      
+      <div class="sb-item">
+        <div class="sb-item-cat">転職・退職</div>
+        <div class="sb-item-ttl"><a href="/articles/quit/kaisha-yabai/">「この会社やばい」と感じたとき。その直感を言語化する方法</a></div>
+      </div>
+      
+    </div>
+    
+  </aside>
+</div>
 
 <div class="related">
   <div class="related-inner">
@@ -257,7 +358,6 @@ body{background:#fff;color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI
     </div>
   </div>
 </div>
-
 
 <footer class="site-footer">
   © 2026 Worelu — 仕事で壊れる前に。
