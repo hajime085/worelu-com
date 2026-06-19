@@ -246,5 +246,21 @@ document.querySelectorAll('.cat-item').forEach(function(item) {
   });
 });
 </script>
+<script>
+(function() {
+  var path = window.location.pathname;
+  document.querySelectorAll('.cat-item').forEach(function(item) {
+    var href = item.getAttribute('href');
+    // 完全一致（/articles/）または前方一致（/articles/stress/ など）
+    if (href === '/articles/' && path === '/articles/') {
+      item.classList.add('active');
+    } else if (href !== '/articles/' && path.indexOf(href) === 0) {
+      item.classList.add('active');
+      // 「すべて」のactiveを外す
+      document.querySelector('.cat-item[href="/articles/"]').classList.remove('active');
+    }
+  });
+})();
+</script>
 </body>
 </html>
