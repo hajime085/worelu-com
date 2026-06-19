@@ -149,7 +149,7 @@ a{text-decoration:none;color:inherit}
 
 /* CATEGORIES */
 .cat-sec{background:var(--page)}
-.cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 .cat-item{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--text)}
 .cat-icon{width:58px;height:58px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s,background 0.2s}
 .cat-icon svg{width:24px;height:24px;stroke:var(--muted);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s}
@@ -503,29 +503,25 @@ a{text-decoration:none;color:inherit}
       <h2 class="sec-title">カテゴリーから探す</h2>
     </div>
     <div class="cat-grid">
-      <a href="/articles/work/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 014 0v2"/><path d="M2 12h20"/></svg></div>
-        <span class="cat-label">仕事</span>
+      <a href="/articles/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <span class="cat-label">すべて</span>
       </a>
       <a href="/articles/stress/" class="cat-item">
         <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
-        <span class="cat-label">ストレス</span>
-      </a>
-      <a href="/articles/stress/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C9 3 5 6 5 10c0 3 2 5.5 4 7v3h6v-3c2-1.5 4-4 4-7 0-4-3-7-7-7z"/><path d="M9 20h6"/></svg></div>
-        <span class="cat-label">睡眠</span>
+        <span class="cat-label">症状・ストレス</span>
       </a>
       <a href="/articles/burnout/" class="cat-item">
         <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg></div>
-        <span class="cat-label">燃え尽き</span>
+        <span class="cat-label">バーンアウト</span>
+      </a>
+      <a href="/articles/work/" class="cat-item">
+        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 014 0v2"/><path d="M2 12h20"/></svg></div>
+        <span class="cat-label">労働問題</span>
       </a>
       <a href="/articles/quit/" class="cat-item">
         <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11h6M19 8l3 3-3 3"/><path d="M12 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg></div>
         <span class="cat-label">転職・退職</span>
-      </a>
-      <a href="/articles/quit/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5A6 6 0 0112 12a6 6 0 018 5.5"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <span class="cat-label">キャリア</span>
       </a>
     </div>
   </div>
