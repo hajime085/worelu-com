@@ -213,43 +213,65 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   .header-nav { display: none; }
 }
 
-/* 文字サイズ調整ボタン（スマホのみ表示） */
-.font-size-ctrl {
+/* 文字サイズ調整：右下フローティング（スマホのみ） */
+.font-size-float {
   display: none;
-  align-items: center; gap: 6px;
-  margin-bottom: 16px; justify-content: flex-end;
+  position: fixed; bottom: 24px; right: 16px; z-index: 200;
+  flex-direction: column; align-items: flex-end; gap: 8px;
 }
-@media (max-width: 860px) { .font-size-ctrl { display: flex; } }
-.font-size-label { font-size: 11px; color: var(--muted); font-weight: 600; }
+@media (max-width: 860px) { .font-size-float { display: flex; } }
+.fs-toggle {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--blue); color: #fff; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; line-height: 1.2; text-align: center;
+  transition: background 160ms, transform 160ms; flex-shrink: 0;
+}
+.fs-toggle:hover { background: var(--blue-dark); }
+.fs-panel {
+  display: none; flex-direction: column; align-items: center; gap: 0;
+  background: var(--white); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: 0 4px 20px rgba(15,23,42,0.13);
+  overflow: hidden; animation: fsIn 180ms ease;
+}
+.fs-panel.open { display: flex; }
+@keyframes fsIn {
+  from { opacity: 0; transform: scale(0.9) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.fs-panel-label {
+  font-size: 9px; font-weight: 800; color: var(--muted);
+  letter-spacing: 0.06em; padding: 7px 14px 5px; text-align: center;
+  border-bottom: 1px solid var(--line); width: 100%;
+}
 .fs-btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 6px;
-  border: 1px solid var(--line); background: var(--white);
-  color: var(--text); cursor: pointer; font-weight: 800;
-  transition: border-color 160ms, background 160ms, color 160ms;
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 40px; border: none; border-bottom: 1px solid var(--line);
+  background: var(--white); color: var(--text2); cursor: pointer;
+  font-weight: 800; transition: background 140ms, color 140ms;
 }
-.fs-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
-.fs-btn.fs-active { border-color: var(--blue); background: var(--blue); color: #fff; }
-
-/* 文字サイズ：小 */
+.fs-btn:last-child { border-bottom: none; }
+.fs-btn:hover { background: var(--blue-soft); color: var(--blue); }
+.fs-btn.fs-active { background: var(--blue); color: #fff; }
+.fs-btn.fs-s { font-size: 11px; }
+.fs-btn.fs-m { font-size: 14px; }
+.fs-btn.fs-l { font-size: 17px; }
 .font-small .article-body p,
 .font-small .article-body li,
 .font-small .article-body blockquote p { font-size: 13px !important; }
 .font-small .article-body h2 { font-size: 17px !important; }
 .font-small .article-body h3 { font-size: 15px !important; }
-
-/* 文字サイズ：中（デフォルト） */
 .font-medium .article-body p,
 .font-medium .article-body li { font-size: 15px !important; }
 .font-medium .article-body h2 { font-size: 19px !important; }
 .font-medium .article-body h3 { font-size: 16px !important; }
-
-/* 文字サイズ：大 */
 .font-large .article-body p,
 .font-large .article-body li,
 .font-large .article-body blockquote p { font-size: 18px !important; line-height: 2.05 !important; }
 .font-large .article-body h2 { font-size: 22px !important; }
 .font-large .article-body h3 { font-size: 19px !important; }
+@media (max-width: 860px) { .font-size-ctrl-dummy { display: none; } }
 </style>
 </head>
 <body>
@@ -295,12 +317,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
 <div class="layout">
   <div>
-    <div class="font-size-ctrl" aria-label="文字サイズ">
-      <span class="font-size-label">文字サイズ</span>
-      <button class="fs-btn" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
-      <button class="fs-btn fs-active" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
-      <button class="fs-btn" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
-    </div>
     <article class="article-body">
       <p>心身の不調で休職を検討しているけれど、「休職したらどうなるんだろう？」「お金の心配は？」「復職できるのかな？」といった不安を抱えていませんか？特に休職1ヶ月目は、今後の生活やキャリアを左右する大切な期間です。この記事では、休職1ヶ月で何が変わるのか、お金の心配、過ごし方、そして復職の判断まで、休職中の不安を解消するための情報を整理して解説します。</p>
 <h2 id="1">休職1ヶ月目の現実：心身の変化と直面する課題</h2>
@@ -619,5 +635,70 @@ function setFontSize(size) {
 
 })();
 </script>
+<!-- 文字サイズ調整フローティングボタン（スマホのみ） -->
+<div class="font-size-float" id="fontSizeFloat">
+  <div class="fs-panel" id="fsPanel">
+    <div class="fs-panel-label">文字サイズ</div>
+    <button class="fs-btn fs-s" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
+    <button class="fs-btn fs-m fs-active" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
+    <button class="fs-btn fs-l" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
+  </div>
+  <button class="fs-toggle" id="fsToggle" onclick="toggleFsPanel()" title="文字サイズ">文字</button>
+</div>
+
+<script>
+function toggleFsPanel() {
+  var panel = document.getElementById('fsPanel');
+  var toggle = document.getElementById('fsToggle');
+  var isOpen = panel.classList.contains('open');
+  if (isOpen) {
+    panel.classList.remove('open');
+    toggle.textContent = '文字';
+  } else {
+    panel.classList.add('open');
+    toggle.textContent = '×';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('click', function(e) {
+    var float = document.getElementById('fontSizeFloat');
+    if (float && !float.contains(e.target)) {
+      var panel = document.getElementById('fsPanel');
+      var toggle = document.getElementById('fsToggle');
+      if (panel) panel.classList.remove('open');
+      if (toggle) toggle.textContent = '文字';
+    }
+  });
+});
+
+function setFontSize(size) {
+  document.body.classList.remove('font-small', 'font-medium', 'font-large');
+  document.body.classList.add('font-' + size);
+  ['s','m','l'].forEach(function(k) {
+    var b = document.getElementById('fs-' + k);
+    if (b) b.classList.remove('fs-active');
+  });
+  var map = { small: 's', medium: 'm', large: 'l' };
+  var btn = document.getElementById('fs-' + map[size]);
+  if (btn) btn.classList.add('fs-active');
+  // パネルを閉じる
+  var panel = document.getElementById('fsPanel');
+  var toggle = document.getElementById('fsToggle');
+  if (panel) panel.classList.remove('open');
+  if (toggle) toggle.textContent = '文字';
+  try { localStorage.setItem('worelu-fontsize', size); } catch(e) {}
+}
+
+(function() {
+  var saved = 'medium';
+  try { saved = localStorage.getItem('worelu-fontsize') || 'medium'; } catch(e) {}
+  document.body.classList.add('font-' + saved);
+  var map = { small: 's', medium: 'm', large: 'l' };
+  var btn = document.getElementById('fs-' + map[saved]);
+  if (btn) btn.classList.add('fs-active');
+})();
+</script>
+
 </body>
 </html>
