@@ -37,9 +37,19 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .page-hero h1 { font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
 .page-hero p { font-size: 14px; color: var(--muted); }
 .main { max-width: 960px; margin: 0 auto; padding: 32px 28px 64px; }
-.cat-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
-.cat-btn { background: var(--white); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 4px; text-decoration: none; }
-.cat-btn:hover, .cat-btn.active { background: var(--blue); border-color: var(--blue); color: var(--white); }
+.cat-nav { margin-bottom: 36px; }
+.cat-nav-eyebrow { font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-align: center; margin-bottom: 8px; }
+.cat-nav-title { font-size: 22px; font-weight: 900; color: var(--text); text-align: center; margin-bottom: 28px; letter-spacing: -0.02em; }
+.cat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; }
+.cat-item { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
+.cat-icon { width: 72px; height: 72px; border-radius: 50%; background: var(--white); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, background 0.2s; }
+.cat-icon svg { width: 28px; height: 28px; stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
+.cat-item:hover .cat-icon { border-color: var(--blue); background: var(--blue-soft); }
+.cat-item:hover .cat-icon svg { stroke: var(--blue); }
+.cat-item.active .cat-icon { border-color: var(--blue); background: var(--blue); }
+.cat-item.active .cat-icon svg { stroke: #fff; }
+.cat-label { font-size: 12px; font-weight: 700; color: var(--text-2); text-align: center; }
+@media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
 .art-card:hover { border-color: var(--blue); }
@@ -82,16 +92,41 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
 <main class="main">
   <nav class="cat-nav">
-    <a href="/articles/" class="cat-btn active">すべて</a>
-    
-    <a href="/articles/stress/" class="cat-btn">症状・ストレス</a>
-    
-    <a href="/articles/burnout/" class="cat-btn">バーンアウト</a>
-    
-    <a href="/articles/work/" class="cat-btn">労働問題</a>
-    
-    <a href="/articles/quit/" class="cat-btn">転職・退職</a>
-    
+  <nav class="cat-nav" aria-label="カテゴリー">
+    <div class="cat-nav-eyebrow">CATEGORY</div>
+    <div class="cat-nav-title">カテゴリーから探す</div>
+    <div class="cat-grid">
+      <a href="/articles/" class="cat-item active">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <span class="cat-label">すべて</span>
+      </a>
+      <a href="/articles/stress/" class="cat-item">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        </div>
+        <span class="cat-label">症状・ストレス</span>
+      </a>
+      <a href="/articles/burnout/" class="cat-item">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg>
+        </div>
+        <span class="cat-label">バーンアウト</span>
+      </a>
+      <a href="/articles/work/" class="cat-item">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 014 0v2"/><path d="M2 12h20"/></svg>
+        </div>
+        <span class="cat-label">労働問題</span>
+      </a>
+      <a href="/articles/quit/" class="cat-item">
+        <div class="cat-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11h6M19 8l3 3-3 3"/><path d="M12 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg>
+        </div>
+        <span class="cat-label">転職・退職</span>
+      </a>
+    </div>
   </nav>
   <div class="articles-grid">
     
@@ -158,7 +193,12 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         </div>
       </div>
     </div>
-    <div style="border-top:1px solid var(--line);padding-top:18px;text-align:right">
+    <div style="border-top:1px solid var(--line);padding-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <div style="display:flex;gap:18px">
+        <a href="/privacy/" style="font-size:12px;color:var(--muted)">プライバシーポリシー</a>
+        <a href="/terms/" style="font-size:12px;color:var(--muted)">利用規約</a>
+        <a href="/about/" style="font-size:12px;color:var(--muted)">運営者情報</a>
+      </div>
       <div style="font-size:12px;color:var(--muted)">© 2026 Worelu</div>
     </div>
   </div>
