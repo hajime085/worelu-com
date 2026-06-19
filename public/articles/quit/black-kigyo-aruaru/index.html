@@ -173,6 +173,32 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .article-body h2 { scroll-margin-top: 72px; }
 .article-body h3 { scroll-margin-top: 72px; }
 
+/* FAQ アコーディオン */
+.faq-item { border: 1px solid var(--line); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+.faq-q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 18px; background: var(--white); border: none; cursor: pointer;
+  font-size: 15px; font-weight: 700; color: var(--text); text-align: left; line-height: 1.5;
+  transition: background 160ms;
+}
+.faq-q:hover { background: var(--blue-soft); }
+.faq-q[aria-expanded="true"] { background: var(--blue-soft); color: var(--blue-dark); }
+.faq-icon { font-size: 20px; font-weight: 400; color: var(--blue); flex-shrink: 0; line-height: 1; }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 280ms ease; }
+.faq-a[aria-hidden="false"] { max-height: 600px; }
+.faq-a-inner { padding: 14px 18px 18px; border-top: 1px solid var(--line); background: var(--page); }
+.faq-a-inner p { font-size: 14px; color: var(--text2); line-height: 1.85; margin-bottom: 0; }
+
+/* インタラクティブチェックリスト */
+.interactive-ul { list-style: none; padding: 0; margin: 16px 0; background: var(--page); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.checkable-li { display: flex; align-items: flex-start; gap: 12px; padding: 11px 16px; border-bottom: 1px solid var(--line); cursor: pointer; font-size: 14px; color: var(--text2); line-height: 1.6; transition: background 140ms; }
+.checkable-li:last-child { border-bottom: none; }
+.checkable-li::before { content: '☐'; font-size: 18px; color: var(--muted); flex-shrink: 0; margin-top: -1px; }
+.checkable-li:hover { background: var(--blue-soft); }
+.checkable-li.li-checked { background: var(--blue-soft); color: var(--blue-dark); font-weight: 700; }
+.checkable-li.li-checked::before { content: '☑'; color: var(--blue); }
+.check-counter-inline { text-align: right; font-size: 13px; font-weight: 800; color: var(--blue); margin-top: 8px; margin-bottom: 20px; }
+
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
@@ -458,60 +484,141 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 </footer>
 
 <script>
-// 見出しにIDを付与して目次を自動生成
 (function() {
   const article = document.querySelector('.article-body');
   if (!article) return;
 
-  const headings = article.querySelectorAll('h2, h3');
-  if (headings.length < 2) return;
-
-  // 各見出しにIDを付与
-  headings.forEach(function(h, i) {
-    if (!h.id) {
-      const id = 'heading-' + i;
-      h.id = id;
-    }
-  });
-
-  // 目次ボックスを生成
-  const toc = document.createElement('div');
-  toc.className = 'toc-box';
-
-  const tocTitle = document.createElement('div');
-  tocTitle.className = 'toc-box-title';
-  tocTitle.textContent = '目次';
-  toc.appendChild(tocTitle);
-
-  const ul = document.createElement('ul');
-  ul.className = 'toc-list';
-
-  headings.forEach(function(h) {
-    const li = document.createElement('li');
-    li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
-    const a = document.createElement('a');
-    a.href = '#' + h.id;
-    a.textContent = h.textContent;
-    // スムーズスクロール
-    a.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.getElementById(h.id);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, null, '#' + h.id);
+  // ① **太字** がHTMLに未変換で残っている場合の後処理
+  function fixBoldText(node) {
+    if (node.nodeType === 3) { // テキストノード
+      const text = node.textContent;
+      if (text.includes('**')) {
+        const span = document.createElement('span');
+        span.innerHTML = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        node.parentNode.replaceChild(span, node);
       }
+    } else if (node.nodeType === 1 && !['SCRIPT','STYLE'].includes(node.tagName)) {
+      Array.from(node.childNodes).forEach(fixBoldText);
+    }
+  }
+  fixBoldText(article);
+
+  // ② 目次を自動生成
+  const headings = article.querySelectorAll('h2, h3');
+  if (headings.length >= 2) {
+    headings.forEach(function(h, i) {
+      if (!h.id) h.id = 'heading-' + i;
     });
-    li.appendChild(a);
-    ul.appendChild(li);
+    const toc = document.createElement('div');
+    toc.className = 'toc-box';
+    const tocTitle = document.createElement('div');
+    tocTitle.className = 'toc-box-title';
+    tocTitle.textContent = '目次';
+    toc.appendChild(tocTitle);
+    const ul = document.createElement('ul');
+    ul.className = 'toc-list';
+    headings.forEach(function(h) {
+      const li = document.createElement('li');
+      li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
+      const a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, '#' + h.id);
+      });
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    toc.appendChild(ul);
+    const firstH2 = article.querySelector('h2');
+    if (firstH2) article.insertBefore(toc, firstH2);
+  }
+
+  // ③ FAQをアコーディオン化
+  // h4 要素で Q から始まるものを検出してアコーディオンに変換
+  const h4s = article.querySelectorAll('h4');
+  h4s.forEach(function(h4) {
+    if (!h4.textContent.trim().match(/^Q\d*[：:]/)) return;
+
+    // Q見出しとその次のAテキスト（p要素）を取得
+    const answerNodes = [];
+    let next = h4.nextElementSibling;
+    while (next && next.tagName !== 'H4' && next.tagName !== 'H3' && next.tagName !== 'H2') {
+      answerNodes.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!answerNodes.length) return;
+
+    // アコーディオンのラッパーを作成
+    const wrapper = document.createElement('div');
+    wrapper.className = 'faq-item';
+
+    const btn = document.createElement('button');
+    btn.className = 'faq-q';
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span>' + h4.innerHTML + '</span><span class="faq-icon">+</span>';
+
+    const body = document.createElement('div');
+    body.className = 'faq-a';
+    body.setAttribute('aria-hidden', 'true');
+    const inner = document.createElement('div');
+    inner.className = 'faq-a-inner';
+    answerNodes.forEach(function(n) { inner.appendChild(n.cloneNode(true)); });
+    body.appendChild(inner);
+
+    btn.addEventListener('click', function() {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      body.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+      btn.querySelector('.faq-icon').textContent = isOpen ? '+' : '−';
+    });
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(body);
+    h4.parentNode.insertBefore(wrapper, h4);
+    h4.remove();
+    answerNodes.forEach(function(n) { n.remove(); });
   });
 
-  toc.appendChild(ul);
+  // ④ チェックリスト（ul > li）をインタラクティブ化
+  // FAQ・目次以外のul内で、チェックリストっぽいものを検出
+  article.querySelectorAll('ul').forEach(function(ul) {
+    const parent = ul.closest('.toc-box, .faq-a');
+    if (parent) return; // TOC・FAQ内はスキップ
+    const items = ul.querySelectorAll('li');
+    if (items.length < 3) return; // 短いリストはスキップ
+    // チェックリストの見出しを探す（直前の要素）
+    const prev = ul.previousElementSibling;
+    const isChecklist = prev && prev.textContent.includes('チェック');
+    if (!isChecklist) return;
 
-  // 記事の最初のh2の直前に挿入
-  const firstH2 = article.querySelector('h2');
-  if (firstH2) {
-    article.insertBefore(toc, firstH2);
-  }
+    ul.classList.add('interactive-ul');
+    let count = 0;
+    const counter = document.createElement('div');
+    counter.className = 'check-counter-inline';
+    counter.innerHTML = 'チェックした数：<span class="cnt">0</span> / ' + items.length;
+
+    items.forEach(function(li) {
+      li.classList.add('checkable-li');
+      li.setAttribute('tabindex', '0');
+      li.setAttribute('role', 'checkbox');
+      li.setAttribute('aria-checked', 'false');
+      const toggle = function() {
+        const checked = li.getAttribute('aria-checked') === 'true';
+        li.setAttribute('aria-checked', checked ? 'false' : 'true');
+        li.classList.toggle('li-checked', !checked);
+        count += checked ? -1 : 1;
+        counter.querySelector('.cnt').textContent = count;
+      };
+      li.addEventListener('click', toggle);
+      li.addEventListener('keydown', function(e) { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+    });
+    ul.parentNode.insertBefore(counter, ul.nextSibling);
+  });
+
 })();
 </script>
 </body>

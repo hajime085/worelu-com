@@ -173,6 +173,32 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .article-body h2 { scroll-margin-top: 72px; }
 .article-body h3 { scroll-margin-top: 72px; }
 
+/* FAQ アコーディオン */
+.faq-item { border: 1px solid var(--line); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+.faq-q {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 18px; background: var(--white); border: none; cursor: pointer;
+  font-size: 15px; font-weight: 700; color: var(--text); text-align: left; line-height: 1.5;
+  transition: background 160ms;
+}
+.faq-q:hover { background: var(--blue-soft); }
+.faq-q[aria-expanded="true"] { background: var(--blue-soft); color: var(--blue-dark); }
+.faq-icon { font-size: 20px; font-weight: 400; color: var(--blue); flex-shrink: 0; line-height: 1; }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 280ms ease; }
+.faq-a[aria-hidden="false"] { max-height: 600px; }
+.faq-a-inner { padding: 14px 18px 18px; border-top: 1px solid var(--line); background: var(--page); }
+.faq-a-inner p { font-size: 14px; color: var(--text2); line-height: 1.85; margin-bottom: 0; }
+
+/* インタラクティブチェックリスト */
+.interactive-ul { list-style: none; padding: 0; margin: 16px 0; background: var(--page); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.checkable-li { display: flex; align-items: flex-start; gap: 12px; padding: 11px 16px; border-bottom: 1px solid var(--line); cursor: pointer; font-size: 14px; color: var(--text2); line-height: 1.6; transition: background 140ms; }
+.checkable-li:last-child { border-bottom: none; }
+.checkable-li::before { content: '☐'; font-size: 18px; color: var(--muted); flex-shrink: 0; margin-top: -1px; }
+.checkable-li:hover { background: var(--blue-soft); }
+.checkable-li.li-checked { background: var(--blue-soft); color: var(--blue-dark); font-weight: 700; }
+.checkable-li.li-checked::before { content: '☑'; color: var(--blue); }
+.check-counter-inline { text-align: right; font-size: 13px; font-weight: 800; color: var(--blue); margin-top: 8px; margin-bottom: 20px; }
+
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
@@ -311,7 +337,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <h3 id="1">1. 部署異動や配置転換：身近な環境変化でリフレッシュ</h3>
 <p>もし、社内に部署異動や配置転換の制度があるなら、まずはそれを検討してみるのも一つの手です。人間関係の悩みが特定の部署やチームに起因している場合、環境が変わるだけで驚くほど心が軽くなることがあります。新しい部署では、人間関係も一から築き直せるため、心機一転、リフレッシュできるチャンスにもなります。まずは、上司や人事担当者に相談し、可能性を探ってみましょう。</p>
 <h3 id="2">2. 休職：心身を休ませ、冷静に未来を考える時間</h3>
-<p>精神的に「もう限界だ」と感じているなら、休職も大切な選択肢の一つです。休職は、決して「逃げ」ではありません。心身が悲鳴を上げている時に、無理をして働き続けることは、あなたの健康をさらに損ねてしまいます。休職期間中は、仕事から完全に離れて心身を休ませ、冷静に今後のキャリアや人生について考える貴重な時間を得られます。(<a href="/articles/burnout/kyushoku-1month/">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</a>も参考に、休職中の過ごし方や復職の判断について理解を深めましょう。)</p>
+<p>精神的に「もう限界だ」と感じているなら、休職も大切な選択肢の一つです。休職は、決して「逃げ」ではありません。心身が悲鳴を上げている時に、無理をして働き続けることは、あなたの健康をさらに損ねてしまいます。休職期間中は、仕事から完全に離れて心身を休ませ、冷静に今後のキャリアや人生について考える貴重な時間を得られます。(<a href="/worelu_articles/article_11.md">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</a>も参考に、休職中の過ごし方や復職の判断について理解を深めましょう。)</p>
 <h3 id="3">3. 転職：あなたの特性に合った「新しい居場所」を見つける</h3>
 <p>根本的に職場環境や企業文化があなたの価値観や特性に合わないと感じる場合、転職は非常に有効な選択肢です。人間関係の悩みは、多くの場合、あなたの性格の問題ではなく、職場とのミスマッチから生じます。あなたの強みや個性を活かせる、より良い人間関係を築ける職場は必ず存在します。転職は大きな決断ですが、あなたの人生をより豊かにするための前向きな一歩となり得ます。</p>
 <h2 id="_10">転職を考える前にやること：後悔しないための「心の準備」と「具体的な行動」</h2>
@@ -374,10 +400,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <h2 id="_12">診断導線：あなたの人間関係の疲れ度をチェック！</h2>
 <p>「もしかして、自分は職場の人間関係でかなり疲れているのかもしれない…」</p>
 <p>そう感じたら、まずは自分の心の状態を客観的に知ることから始めてみましょう。Woreluのストレスチェック診断（無料・約1分）では、職場の人間関係によるストレス度合いや、あなたの心身への負荷を数値で確認できます。匿名で手軽にできるので、ぜひ一度試してみてください。あなたの心が少しでも軽くなるきっかけになるかもしれません。</p>
-<p>→ <a href="/stress-check/">無料でストレスチェックを受ける（worelu.com）</a></p>
+<p>→ 無料でストレスチェックを受ける（worelu.com）</p>
 <h2 id="_13">まとめ：人間関係の疲れは、あなたのせいじゃない</h2>
 <p>職場の人間関係で疲れるのは、あなたの性格の問題ではなく、あなたの特性と職場環境のミスマッチが原因であることが多いです。自分を責めるのではなく、まずはその原因を客観的に理解し、上司、同僚、部下といった相手の立場に応じた具体的な対処法を試してみましょう。</p>
 <p>また、心の健康を守るために、心理的な距離を適切に保つことも重要です。もし、様々な努力をしても状況が改善しない場合は、部署異動や休職、そして転職といった環境を変える選択肢も真剣に検討してください。あなたの心身の健康が何よりも大切です。後悔しないためにも、転職を考える前にしっかりと準備を整え、次の一歩を踏み出しましょう。</p>
+<p>▼ 職場の人間関係に悩む方へ
+Woreluのストレスチェック診断（無料・約1分）で、職場環境スコアを含む4軸から今の状態を可視化してみてください。
+→ 無料でストレスチェックを受ける（worelu.com）</p>
+<hr />
+<p><strong>メタディスクリプション：</strong> 職場の人間関係で疲れるのはなぜ？性格の問題ではなく、職場環境と特性のミスマッチが原因。上司・同僚・部下への対処法、心理的距離の置き方、転職を考える前の準備までを解説。</p>
     </article>
 
     <div class="article-tags">
@@ -504,60 +535,141 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 </footer>
 
 <script>
-// 見出しにIDを付与して目次を自動生成
 (function() {
   const article = document.querySelector('.article-body');
   if (!article) return;
 
-  const headings = article.querySelectorAll('h2, h3');
-  if (headings.length < 2) return;
-
-  // 各見出しにIDを付与
-  headings.forEach(function(h, i) {
-    if (!h.id) {
-      const id = 'heading-' + i;
-      h.id = id;
-    }
-  });
-
-  // 目次ボックスを生成
-  const toc = document.createElement('div');
-  toc.className = 'toc-box';
-
-  const tocTitle = document.createElement('div');
-  tocTitle.className = 'toc-box-title';
-  tocTitle.textContent = '目次';
-  toc.appendChild(tocTitle);
-
-  const ul = document.createElement('ul');
-  ul.className = 'toc-list';
-
-  headings.forEach(function(h) {
-    const li = document.createElement('li');
-    li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
-    const a = document.createElement('a');
-    a.href = '#' + h.id;
-    a.textContent = h.textContent;
-    // スムーズスクロール
-    a.addEventListener('click', function(e) {
-      e.preventDefault();
-      const target = document.getElementById(h.id);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, null, '#' + h.id);
+  // ① **太字** がHTMLに未変換で残っている場合の後処理
+  function fixBoldText(node) {
+    if (node.nodeType === 3) { // テキストノード
+      const text = node.textContent;
+      if (text.includes('**')) {
+        const span = document.createElement('span');
+        span.innerHTML = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+        node.parentNode.replaceChild(span, node);
       }
+    } else if (node.nodeType === 1 && !['SCRIPT','STYLE'].includes(node.tagName)) {
+      Array.from(node.childNodes).forEach(fixBoldText);
+    }
+  }
+  fixBoldText(article);
+
+  // ② 目次を自動生成
+  const headings = article.querySelectorAll('h2, h3');
+  if (headings.length >= 2) {
+    headings.forEach(function(h, i) {
+      if (!h.id) h.id = 'heading-' + i;
     });
-    li.appendChild(a);
-    ul.appendChild(li);
+    const toc = document.createElement('div');
+    toc.className = 'toc-box';
+    const tocTitle = document.createElement('div');
+    tocTitle.className = 'toc-box-title';
+    tocTitle.textContent = '目次';
+    toc.appendChild(tocTitle);
+    const ul = document.createElement('ul');
+    ul.className = 'toc-list';
+    headings.forEach(function(h) {
+      const li = document.createElement('li');
+      li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
+      const a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, '#' + h.id);
+      });
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    toc.appendChild(ul);
+    const firstH2 = article.querySelector('h2');
+    if (firstH2) article.insertBefore(toc, firstH2);
+  }
+
+  // ③ FAQをアコーディオン化
+  // h4 要素で Q から始まるものを検出してアコーディオンに変換
+  const h4s = article.querySelectorAll('h4');
+  h4s.forEach(function(h4) {
+    if (!h4.textContent.trim().match(/^Q\d*[：:]/)) return;
+
+    // Q見出しとその次のAテキスト（p要素）を取得
+    const answerNodes = [];
+    let next = h4.nextElementSibling;
+    while (next && next.tagName !== 'H4' && next.tagName !== 'H3' && next.tagName !== 'H2') {
+      answerNodes.push(next);
+      next = next.nextElementSibling;
+    }
+    if (!answerNodes.length) return;
+
+    // アコーディオンのラッパーを作成
+    const wrapper = document.createElement('div');
+    wrapper.className = 'faq-item';
+
+    const btn = document.createElement('button');
+    btn.className = 'faq-q';
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span>' + h4.innerHTML + '</span><span class="faq-icon">+</span>';
+
+    const body = document.createElement('div');
+    body.className = 'faq-a';
+    body.setAttribute('aria-hidden', 'true');
+    const inner = document.createElement('div');
+    inner.className = 'faq-a-inner';
+    answerNodes.forEach(function(n) { inner.appendChild(n.cloneNode(true)); });
+    body.appendChild(inner);
+
+    btn.addEventListener('click', function() {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      body.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
+      btn.querySelector('.faq-icon').textContent = isOpen ? '+' : '−';
+    });
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(body);
+    h4.parentNode.insertBefore(wrapper, h4);
+    h4.remove();
+    answerNodes.forEach(function(n) { n.remove(); });
   });
 
-  toc.appendChild(ul);
+  // ④ チェックリスト（ul > li）をインタラクティブ化
+  // FAQ・目次以外のul内で、チェックリストっぽいものを検出
+  article.querySelectorAll('ul').forEach(function(ul) {
+    const parent = ul.closest('.toc-box, .faq-a');
+    if (parent) return; // TOC・FAQ内はスキップ
+    const items = ul.querySelectorAll('li');
+    if (items.length < 3) return; // 短いリストはスキップ
+    // チェックリストの見出しを探す（直前の要素）
+    const prev = ul.previousElementSibling;
+    const isChecklist = prev && prev.textContent.includes('チェック');
+    if (!isChecklist) return;
 
-  // 記事の最初のh2の直前に挿入
-  const firstH2 = article.querySelector('h2');
-  if (firstH2) {
-    article.insertBefore(toc, firstH2);
-  }
+    ul.classList.add('interactive-ul');
+    let count = 0;
+    const counter = document.createElement('div');
+    counter.className = 'check-counter-inline';
+    counter.innerHTML = 'チェックした数：<span class="cnt">0</span> / ' + items.length;
+
+    items.forEach(function(li) {
+      li.classList.add('checkable-li');
+      li.setAttribute('tabindex', '0');
+      li.setAttribute('role', 'checkbox');
+      li.setAttribute('aria-checked', 'false');
+      const toggle = function() {
+        const checked = li.getAttribute('aria-checked') === 'true';
+        li.setAttribute('aria-checked', checked ? 'false' : 'true');
+        li.classList.toggle('li-checked', !checked);
+        count += checked ? -1 : 1;
+        counter.querySelector('.cnt').textContent = count;
+      };
+      li.addEventListener('click', toggle);
+      li.addEventListener('keydown', function(e) { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+    });
+    ul.parentNode.insertBefore(counter, ul.nextSibling);
+  });
+
 })();
 </script>
 </body>
