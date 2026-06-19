@@ -62,6 +62,10 @@ def parse_markdown(filepath: Path) -> dict:
     category = meta.get("category", filepath.parent.name)
     slug = meta.get("slug", filepath.stem)
 
+    # 読了時間の計算（日本語：400字/分）
+    char_count = len(body_md)
+    read_time = max(1, round(char_count / 400))
+
     return {
         "title":        meta.get("title", ""),
         "description":  meta.get("description", ""),
@@ -77,6 +81,7 @@ def parse_markdown(filepath: Path) -> dict:
         "url":          f"/articles/{category}/{slug}/",
         "full_url":     f"{BASE_URL}/articles/{category}/{slug}/",
         "content":      body_html,
+        "read_time":    read_time,
     }
 
 
