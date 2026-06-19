@@ -4,7 +4,7 @@ description: "「上司が怖くて、いつもビクビクしてしまう…」
 slug: "joushi-kowai-ishuku"
 category: "stress"
 tags: ["上司", "萎縮", "パワハラ"]
-date: "2026-06-09"
+date: "2026-06-20"
 draft: false
 ---
 「上司が怖くて、いつもビクビクしてしまう…」「会議で意見を言いたいのに、上司の顔色を伺って何も言えない」

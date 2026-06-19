@@ -4,7 +4,7 @@ description: "「もしかして、私、もう限界なのかもしれない…
 slug: "shigoto-genkai-sign"
 category: "stress"
 tags: ["限界", "サイン", "休職"]
-date: "2026-06-11"
+date: "2026-06-20"
 draft: false
 ---
 「もしかして、私、もう限界なのかもしれない…」<br><br>
