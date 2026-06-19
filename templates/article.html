@@ -412,7 +412,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   // h4 要素で Q から始まるものを検出してアコーディオンに変換
   const h4s = article.querySelectorAll('h4');
   h4s.forEach(function(h4) {
-    if (!h4.textContent.trim().match(/^Q\d*[：:]/)) return;
+    if (!h4.textContent.trim().match(/^Q\d+[.．：:]/)) return;
 
     // Q見出しとその次のAテキスト（p要素）を取得
     const answerNodes = [];
