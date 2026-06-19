@@ -212,6 +212,44 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   .hero-h1 { font-size: 20px; }
   .header-nav { display: none; }
 }
+
+/* 文字サイズ調整ボタン（スマホのみ表示） */
+.font-size-ctrl {
+  display: none;
+  align-items: center; gap: 6px;
+  margin-bottom: 16px; justify-content: flex-end;
+}
+@media (max-width: 860px) { .font-size-ctrl { display: flex; } }
+.font-size-label { font-size: 11px; color: var(--muted); font-weight: 600; }
+.fs-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--white);
+  color: var(--text); cursor: pointer; font-weight: 800;
+  transition: border-color 160ms, background 160ms, color 160ms;
+}
+.fs-btn:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.fs-btn.fs-active { border-color: var(--blue); background: var(--blue); color: #fff; }
+
+/* 文字サイズ：小 */
+.font-small .article-body p,
+.font-small .article-body li,
+.font-small .article-body blockquote p { font-size: 13px !important; }
+.font-small .article-body h2 { font-size: 17px !important; }
+.font-small .article-body h3 { font-size: 15px !important; }
+
+/* 文字サイズ：中（デフォルト） */
+.font-medium .article-body p,
+.font-medium .article-body li { font-size: 15px !important; }
+.font-medium .article-body h2 { font-size: 19px !important; }
+.font-medium .article-body h3 { font-size: 16px !important; }
+
+/* 文字サイズ：大 */
+.font-large .article-body p,
+.font-large .article-body li,
+.font-large .article-body blockquote p { font-size: 18px !important; line-height: 2.05 !important; }
+.font-large .article-body h2 { font-size: 22px !important; }
+.font-large .article-body h3 { font-size: 19px !important; }
 </style>
 </head>
 <body>
@@ -257,6 +295,12 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
 <div class="layout">
   <div>
+    <div class="font-size-ctrl" aria-label="文字サイズ">
+      <span class="font-size-label">文字サイズ</span>
+      <button class="fs-btn" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
+      <button class="fs-btn fs-active" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
+      <button class="fs-btn" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
+    </div>
     <article class="article-body">
       <p>「仕事を辞めたいけれど、なかなか一歩が踏み出せない…」そんな悩みを抱えていませんか？今の職場に不満があっても、退職という大きな決断は、多くの不安や恐れを伴います。この記事では、あなたが仕事を辞める勇気が出ない5つの理由を深掘りし、それぞれの理由に対する現実的な答えを提示します。あなたの「辞めたい」という気持ちに寄り添い、次の一歩を踏み出すためのヒントを見つけましょう。</p>
 <h2 id="_1">仕事を辞める勇気が出ないのはなぜ？あなたの内なる声に耳を傾ける</h2>
@@ -410,6 +454,24 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 </footer>
 
 <script>
+// 文字サイズ切り替え（スマホ用・localStorageで保持）
+function setFontSize(size) {
+  document.body.classList.remove('font-small', 'font-medium', 'font-large');
+  document.body.classList.add('font-' + size);
+  ['s','m','l'].forEach(function(k) {
+    document.getElementById('fs-' + k).classList.remove('fs-active');
+  });
+  var map = { small: 's', medium: 'm', large: 'l' };
+  var btn = document.getElementById('fs-' + map[size]);
+  if (btn) btn.classList.add('fs-active');
+  try { localStorage.setItem('worelu-fontsize', size); } catch(e) {}
+}
+(function() {
+  var saved = '';
+  try { saved = localStorage.getItem('worelu-fontsize') || 'medium'; } catch(e) { saved = 'medium'; }
+  setFontSize(saved);
+})();
+
 (function() {
   const article = document.querySelector('.article-body');
   if (!article) return;
