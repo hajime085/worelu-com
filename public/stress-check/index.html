@@ -572,6 +572,79 @@
     .chat-form { grid-template-columns: 1fr; }
     .bubble { max-width: 100%; }
   }
+
+  /* ===== 相談タイプ選択 ===== */
+  .topic-select {
+    padding: 14px 0 10px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 0;
+  }
+  .topic-select-label {
+    font-size: 11px; font-weight: 800; color: var(--muted);
+    letter-spacing: 0.05em; margin-bottom: 10px;
+  }
+  .topic-chips {
+    display: flex; flex-wrap: wrap; gap: 7px;
+  }
+  .topic-chip {
+    padding: 6px 13px; border-radius: 999px;
+    border: 1px solid var(--line); background: #fff;
+    font-size: 12px; font-weight: 700; color: var(--text);
+    cursor: pointer; transition: border-color 160ms, background 160ms, color 160ms;
+  }
+  .topic-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+  .topic-chip.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+
+  /* ===== AI分析カード ===== */
+  .ai-analysis-card {
+    margin: 4px 0 8px;
+    border: 1px solid var(--sand-3);
+    border-radius: 12px;
+    background: var(--sand-1);
+    overflow: hidden;
+    animation: cardIn 320ms ease both;
+  }
+  @keyframes cardIn {
+    from { opacity:0; transform:translateY(6px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .ai-analysis-header {
+    display: flex; align-items: center; gap: 8px;
+    padding: 9px 13px; background: var(--sand-2);
+    border-bottom: 1px solid var(--sand-3);
+    font-size: 11px; font-weight: 800; color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+  .ai-analysis-spinner {
+    width: 10px; height: 10px; border-radius: 50%;
+    border: 2px solid var(--accent-soft);
+    border-top-color: var(--accent);
+    animation: spin 0.7s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  .ai-analysis-body {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 0; padding: 0;
+  }
+  .ai-analysis-item {
+    padding: 10px 13px; border-right: 1px solid var(--sand-3);
+  }
+  .ai-analysis-item:last-child { border-right: none; }
+  .ai-analysis-key {
+    font-size: 10px; font-weight: 800; color: var(--muted);
+    letter-spacing: 0.05em; margin-bottom: 4px;
+  }
+  .ai-analysis-val {
+    font-size: 13px; font-weight: 800; color: var(--text); line-height: 1.35;
+  }
+  .ai-analysis-val .pct { color: var(--accent); font-size: 15px; }
+  @media (max-width: 520px) {
+    .ai-analysis-body { grid-template-columns: 1fr; }
+    .ai-analysis-item { border-right: none; border-bottom: 1px solid var(--sand-3); }
+    .ai-analysis-item:last-child { border-bottom: none; }
+    .topic-chip { font-size: 11px; padding: 5px 10px; }
+  }
 </style>
 </head>
 <body>
@@ -1088,11 +1161,24 @@ function renderResultPage() {
         </div>
         <div class="risk-pill">結果連動</div>
       </div>
+      <div class="topic-select">
+        <div class="topic-select-label">今日は何について話しますか？</div>
+        <div class="topic-chips">
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'ストレス・疲れ')">😮‍💨 ストレス・疲れ</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'バーンアウト')">🔥 バーンアウト</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'人間関係')">👥 人間関係</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'上司・ハラスメント')">⚡ 上司・ハラスメント</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'残業・労働問題')">⏰ 残業・労働問題</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'転職・退職')">🚀 転職・退職</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'眠れない・体の症状')">💤 眠れない・体の症状</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'その他')">💬 その他</button>
+        </div>
+      </div>
       <div class="chat-log" id="chatMsgs">
-        <div class="ai-bubble-wrap"><img src="/images/ai-coach.png" class="ai-bubble-icon" alt="AIコーチ"><div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。何か具体的に気になっていることや、相談したいことはありますか？</div></div>
+        <div class="ai-bubble-wrap"><img src="/images/ai-coach.png" class="ai-bubble-icon" alt="AIコーチ"><div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。上のボタンで話したいテーマを選ぶか、直接気になっていることを入力してください。</div></div>
       </div>
       <div class="chat-form">
-        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off">
+        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()">
         <button class="btn primary" type="button" onclick="sendChat()">送る</button>
       </div>
     </section>
@@ -1129,8 +1215,34 @@ const CRISIS_WORDS = ['消えたい','死にたい','生きるのがつらい','
 const BURNOUT_WORDS = ['限界','眠れない','涙が出','泣けてく','泣いてしまう','動悸','吐き気','胃が痛い','適応障害','メンタル限界','心が折れた','起き上がれない','体が動かない','しんどすぎ','もう無理かも','うつ','バーンアウト','燃え尽き','休職','病院','メンタルクリニック'];
 const CRISIS_REPLY = `今とてもつらい状況にあることが伝わってきました。\n\n一人で抱え込まず、信頼できる人や専門の相談窓口へ今すぐ相談してください。\n\n【相談窓口】\n・よりそいホットライン：0120-279-338（24時間）\n・こころの健康相談統一ダイヤル：0570-064-556\n・緊急性が高い場合は119番または最寄りの救急窓口\n\nもし今ここで気持ちを話したければ、私はあなたの話を聞きます。`;
 
-/* ===== ① キーワード辞書（拡充版） ===== */
+/* ===== ① キーワード辞書（拡充版＋知恵袋パターン） ===== */
 const KEYWORD_MAP = [
+  // ===== 知恵袋パターン：理不尽な扱い系 =====
+  {
+    keys: ['理不尽','怒鳴られ','怒鳴る','怒鳴って','殴られ','暴言','脅し','左遷','減給','罰則','不当'],
+    reply: 'それは明らかに理不尽な扱いです。あなたが我慢しなければならない状況ではありません。\n\nまず「いつ・どこで・何があったか」を日時と内容で記録しておいてください。メモでもスマホのメモアプリでも構いません。記録があると、後で相談や対応をするときに大きな武器になります。\n\n相談先として「総合労働相談コーナー（厚生労働省・無料）」が最初の一歩として使いやすいです。一人で抱えないことが大切です。'
+  },
+  // ===== 知恵袋パターン：罪悪感・申し訳ない系 =====
+  {
+    keys: ['申し訳','罪悪感','迷惑かけ','先輩に悪い','引き継ぎが','辞めると言えない','言い出せない','言いにくい','辞めづらい'],
+    reply: '「辞めることで迷惑をかける」という罪悪感は、とても自然な感情です。それはあなたが責任感の強い人だからこそ感じることです。\n\nでも、会社はあなたが辞めても必ず回ります。あなたの人生を犠牲にしてまで続けることと、罪悪感は釣り合いません。\n\n「辞める意思を伝える」ことと「迷惑をかけること」は別の話です。引き継ぎをしっかりすれば、あなたの役目は十分果たしています。まず自分を守ることを優先していいです。'
+  },
+  // ===== 知恵袋パターン：ハラスメント・パワハラ系 =====
+  {
+    keys: ['パワハラ','セクハラ','ハラスメント','触られ','つねられ','押し倒','体を触','プライベート聞','マタハラ','いじめ','嫌がらせ'],
+    reply: 'それはハラスメントです。あなたが我慢し続ける必要はありません。\n\n今すぐできること3つ：\n① 状況を記録する（日時・場所・発言・行動を具体的に）\n② 信頼できる人（社外でも可）に話す\n③ 会社の人事・コンプライアンス窓口、または外部の「総合労働相談コーナー」に相談する\n\n証拠が重要です。できればメッセージのスクリーンショットや音声記録（法的に問題のない範囲で）も残しておいてください。一人で抱えないでください。'
+  },
+  // ===== 知恵袋パターン：我慢し続けている系 =====
+  {
+    keys: ['我慢','言えない','気まずい','誰にも言えない','一人で抱え','黙って','耐えて','ずっと我慢'],
+    reply: '一人で抱えてきたんですね。それだけで、すごく消耗したと思います。\n\n「言えない」状況には必ず理由があります。怒られるのが怖い、揉めたくない、自分が悪いと思っている——どれも話してもらえれば一緒に整理できます。\n\n今すぐ全部解決しなくていいです。まず「誰かに話した」という事実だけで、少し楽になることがあります。ここで話してください。'
+  },
+  // ===== 知恵袋パターン：法律・権利疑問系 =====
+  {
+    keys: ['違法','労基','労働基準','訴え','請求できる','法律','権利','違反','不当解雇','解雇','有給','残業代が出ない'],
+    reply: '法律や権利に関わる問題は、専門家への相談が最も確実です。\n\n相談できる窓口：\n・労働基準監督署（残業代・有給・解雇など）\n・総合労働相談コーナー（厚生労働省・無料）\n・法テラス（法的トラブル全般・収入に応じて無料相談あり）\n\nこれらはすべて無料から使えます。「これって違法なの？」という疑問だけでも相談できます。一人で判断せず、プロに確認してください。'
+  },
+  // ===== 以下既存のキーワードマップ =====
   {
     keys: ['残業','長時間','残業代','サービス残業','終わらない','仕事が多','タスク','業務量','キャパ','仕事量','締切','納期','忙しい','仕事が増','仕事が終わらない','こなせない','オーバー'],
     reply: '業務の負荷が高い状態が続いているようです。\n\nまず今日の仕事を全部書き出して「自分しかできないもの」と「今日でなくていいもの」に分けてみてください。後者を1つだけ後回しにするだけで、かなり楽になります。\n\n上司に相談するなら「業務量を減らして」より「優先順位を一緒に整理したい」という言い方の方が動いてもらいやすいです。もし断れない状況なら、「今週はA・B・Cのどれを優先すべきですか？」と選択肢を絞る形で聞くのが有効です。'
@@ -1263,6 +1375,112 @@ function getNormalReply(text) {
   return getContextualDefault();
 }
 
+/* ===== 相談タイプ選択 ===== */
+let selectedTopic = '';
+function selectTopic(btn, topic) {
+  document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  selectedTopic = topic;
+  const inp = document.getElementById('chatInput');
+  inp.placeholder = `「${topic}」について具体的に教えてください`;
+  inp.focus();
+
+  // トピック選択時にAIから誘導メッセージを出す
+  const topicPrompts = {
+    'ストレス・疲れ': 'ストレスや疲れについて話しましょう。\n\n今一番しんどいのはどんな状況ですか？「残業が多い」「休めない」「気力がわかない」など、思いつくことを話してください。',
+    'バーンアウト': 'バーンアウト（燃え尽き）について話しましょう。\n\n「頑張れない」「意味を感じない」「何をしても空っぽな感じ」のどれに近いですか？',
+    '人間関係': '職場の人間関係について話しましょう。\n\n一番負担になっているのは誰との関係ですか？（上司・同僚・部下・取引先）',
+    '上司・ハラスメント': '上司やハラスメントについて話しましょう。\n\n状況を教えてください。怒鳴られる・無視される・理不尽な指示など、どんなことが起きていますか？',
+    '残業・労働問題': '残業や労働問題について話しましょう。\n\nサービス残業・残業代未払い・休日出勤など、どんなことが気になっていますか？',
+    '転職・退職': '転職・退職について話しましょう。\n\n「辞めたい気持ちはある」「でも踏み出せない」「転職が怖い」のどれに近いですか？',
+    '眠れない・体の症状': '体の症状について話しましょう。\n\n眠れない・動悸・吐き気・涙が出るなど、どんな症状が続いていますか？',
+    'その他': '何でも話してください。\n\n気になっていること、誰かに聞いてほしいことを自由に教えてください。',
+  };
+
+  const msgs = document.getElementById('chatMsgs');
+  const wrap = document.createElement('div');
+  wrap.className = 'ai-bubble-wrap';
+  const icon = document.createElement('img');
+  icon.src = '/images/ai-coach.png';
+  icon.className = 'ai-bubble-icon';
+  icon.alt = 'AIコーチ';
+  const bub = document.createElement('div');
+  bub.className = 'bubble ai';
+  bub.textContent = topicPrompts[topic] || 'そのテーマについて教えてください。';
+  wrap.appendChild(icon);
+  wrap.appendChild(bub);
+  msgs.appendChild(wrap);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+/* ===== AI分析カードを生成 ===== */
+function buildAnalysisCard(text) {
+  // 感情推定
+  const emotionMap = [
+    { words:['限界','消耗','ボロボロ','もう無理','辛すぎ','しんどすぎ'], label:'消耗・限界', pct:90 },
+    { words:['不安','怖い','心配','どうしよう','迷って','わからない'], label:'不安・迷い', pct:72 },
+    { words:['怒り','理不尽','おかしい','腹立','ムカ','納得いか'], label:'怒り・不満', pct:78 },
+    { words:['悲しい','涙','泣け','落ち込','辛い','悔し'], label:'悲しみ・落胆', pct:68 },
+    { words:['疲れ','疲労','ぐったり','眠れ','休めない'], label:'疲労・消耗', pct:65 },
+    { words:['辞めたい','転職','逃げ','もう嫌','辞める'], label:'離脱・葛藤', pct:74 },
+  ];
+  let detectedEmotion = { label:'ストレス', pct: 55 };
+  for (const e of emotionMap) {
+    if (e.words.some(w => text.includes(w))) { detectedEmotion = e; break; }
+  }
+
+  // テーマ推定
+  const themeMap = [
+    { words:['上司','パワハラ','怒鳴','暴言','ハラスメント','セクハラ'], label:'ハラスメント' },
+    { words:['残業','残業代','サービス残業','労基','違法','働きすぎ'], label:'労働条件' },
+    { words:['辞めたい','転職','退職','辞める','辞め'], label:'転職・退職' },
+    { words:['眠れ','動悸','吐き気','涙','頭痛','体'], label:'身体症状' },
+    { words:['やる気','モチベーション','燃え尽き','意欲','気力'], label:'バーンアウト' },
+    { words:['人間関係','同僚','チーム','孤立','無視','派閥'], label:'人間関係' },
+    { words:['評価','給料','昇進','報われない','認めてもらえ'], label:'評価・待遇' },
+  ];
+  let detectedTheme = '仕事ストレス';
+  if (selectedTopic && selectedTopic !== 'その他') detectedTheme = selectedTopic;
+  else {
+    for (const t of themeMap) {
+      if (t.words.some(w => text.includes(w))) { detectedTheme = t.label; break; }
+    }
+  }
+
+  // アドバイス優先度
+  const { dominant, norm, total } = chatContext;
+  let priority = '状況の整理';
+  if (total >= 70) priority = '休息・相談窓口';
+  else if (detectedTheme === 'ハラスメント') priority = '記録・相談窓口';
+  else if (detectedTheme === '転職・退職') priority = '選択肢を整理';
+  else if (detectedTheme === '身体症状') priority = '医療機関への相談';
+  else if (norm[dominant] >= 70) priority = '負荷の軽減';
+
+  const card = document.createElement('div');
+  card.className = 'ai-analysis-card';
+  card.innerHTML = `
+    <div class="ai-analysis-header">
+      <div class="ai-analysis-spinner"></div>
+      AI分析中...
+    </div>
+    <div class="ai-analysis-body">
+      <div class="ai-analysis-item">
+        <div class="ai-analysis-key">感情</div>
+        <div class="ai-analysis-val"><span class="pct">${detectedEmotion.pct}%</span> ${detectedEmotion.label}</div>
+      </div>
+      <div class="ai-analysis-item">
+        <div class="ai-analysis-key">相談テーマ</div>
+        <div class="ai-analysis-val">${detectedTheme}</div>
+      </div>
+      <div class="ai-analysis-item">
+        <div class="ai-analysis-key">優先アドバイス</div>
+        <div class="ai-analysis-val">${priority}</div>
+      </div>
+    </div>
+  `;
+  return card;
+}
+
 function sendChat() {
   const inp = document.getElementById('chatInput');
   const val = inp.value.trim();
@@ -1275,38 +1493,112 @@ function sendChat() {
   msgs.appendChild(ub);
   inp.value = '';
 
+  // AI分析カードを先に表示
+  const card = buildAnalysisCard(val);
+  msgs.appendChild(card);
+  msgs.scrollTop = msgs.scrollHeight;
+
   const typing = document.createElement('div');
   typing.className = 'typing-dots';
   typing.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
-  msgs.appendChild(typing);
-  msgs.scrollTop = msgs.scrollHeight;
 
   const level = classifyInput(val);
-  const delay = level==='crisis'?400:800;
+  const delay = level==='crisis' ? 600 : 1400;
 
   setTimeout(()=>{
-    typing.remove();
-    const rb = document.createElement('div');
-    if (level === 'crisis') {
-      rb.className = 'bubble crisis';
-      rb.textContent = CRISIS_REPLY;
-      msgs.appendChild(rb);
-    } else {
-      const wrap = document.createElement('div');
-      wrap.className = 'ai-bubble-wrap';
-      const icon = document.createElement('img');
-      icon.src = '/images/ai-coach.png';
-      icon.className = 'ai-bubble-icon';
-      icon.alt = 'AIコーチ';
-      const bub = document.createElement('div');
-      bub.className = 'bubble ai';
-      bub.textContent = level==='burnout' ? getBurnoutReply(val) : getNormalReply(val);
-      wrap.appendChild(icon);
-      wrap.appendChild(bub);
-      msgs.appendChild(wrap);
+    // カードのスピナーをチェックマークに変える
+    const header = card.querySelector('.ai-analysis-header');
+    if (header) {
+      header.innerHTML = '<span style="color:var(--accent);font-size:13px;">✓</span> 分析完了';
     }
+
+    msgs.appendChild(typing);
     msgs.scrollTop = msgs.scrollHeight;
+
+    setTimeout(()=>{
+      typing.remove();
+      if (level === 'crisis') {
+        const rb = document.createElement('div');
+        rb.className = 'bubble crisis';
+        rb.textContent = CRISIS_REPLY;
+        msgs.appendChild(rb);
+      } else {
+        const wrap = document.createElement('div');
+        wrap.className = 'ai-bubble-wrap';
+        const icon = document.createElement('img');
+        icon.src = '/images/ai-coach.png';
+        icon.className = 'ai-bubble-icon';
+        icon.alt = 'AIコーチ';
+        const bub = document.createElement('div');
+        bub.className = 'bubble ai';
+        const replyText = level==='burnout' ? getBurnoutReply(val) : getNormalReply(val);
+        bub.textContent = replyText;
+        wrap.appendChild(icon);
+        wrap.appendChild(bub);
+        msgs.appendChild(wrap);
+
+        // 関連記事を提示（5回に1回 or キーワードに記事が直結する場合）
+        maybeShowArticleSuggestion(val, msgs);
+      }
+      msgs.scrollTop = msgs.scrollHeight;
+    }, 700);
   }, delay);
+}
+
+/* ===== 関連記事サジェスト ===== */
+let chatTurnCount = 0;
+function maybeShowArticleSuggestion(text, msgs) {
+  chatTurnCount++;
+
+  // キーワードと記事の直結マップ
+  const articleKeywords = [
+    { words:['眠れ','不眠','朝になった'], slug:'nemurenai-asa' },
+    { words:['涙','泣け','泣いて'], slug:'namida-ga-deru' },
+    { words:['動悸'], slug:'doki-ga-suru' },
+    { words:['燃え尽き','バーンアウト','セルフチェック'], slug:'moeyuki-selfcheck' },
+    { words:['休職'], slug:'kyushoku-1month' },
+    { words:['サービス残業','残業代','違法'], slug:'service-zangyo' },
+    { words:['辞める勇気','辞められ','辞めたい'], slug:'yameru-yuuki' },
+    { words:['ブラック','やばい会社'], slug:'kaisha-yabai' },
+    { words:['退職代行','モームリ'], slug:'taisyoku-daikou-moumuri' },
+    { words:['評価されない','認めてもらえ'], slug:'hyouka-sarenai' },
+  ];
+
+  let matchedSlug = null;
+  for (const ak of articleKeywords) {
+    if (ak.words.some(w => text.includes(w))) { matchedSlug = ak.slug; break; }
+  }
+
+  // 直結キーワードがある or 3ターンおき
+  if (!matchedSlug && chatTurnCount % 3 !== 0) return;
+
+  const art = matchedSlug
+    ? ARTICLE_DB.find(a => a.slug === matchedSlug)
+    : (() => {
+        const { norm } = chatContext;
+        const recs = getRecommendedArticles(norm, 1);
+        return recs[0];
+      })();
+
+  if (!art) return;
+
+  const catLabels = { stress:'症状・ストレス', burnout:'バーンアウト', work:'労働問題', quit:'転職・退職' };
+  const suggWrap = document.createElement('div');
+  suggWrap.className = 'ai-bubble-wrap';
+  const icon2 = document.createElement('img');
+  icon2.src = '/images/ai-coach.png';
+  icon2.className = 'ai-bubble-icon';
+  icon2.alt = 'AIコーチ';
+  const suggBub = document.createElement('div');
+  suggBub.className = 'bubble ai';
+  suggBub.innerHTML = `この内容に関連する記事があります：<br><br><a href="${art.url}" style="color:var(--accent);font-weight:800;text-decoration:underline;">${art.title}</a><br><span style="font-size:11px;color:var(--muted);font-weight:600;">${art.desc}</span>`;
+  suggWrap.appendChild(icon2);
+  suggWrap.appendChild(suggBub);
+
+  setTimeout(() => {
+    msgs.appendChild(suggWrap);
+    msgs.scrollTop = msgs.scrollHeight;
+  }, 400);
 }
 
 function resetApp() {
@@ -1314,6 +1606,8 @@ function resetApp() {
   answers = new Array(QUESTIONS.length).fill(-1);
   rawScores = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
   prevRaw   = {stress:0,burnout:0,environment:0,leaving:0,engagement:0};
+  chatTurnCount = 0;
+  selectedTopic = '';
   document.getElementById('resultPage').classList.add('hidden');
   document.getElementById('app').classList.remove('hidden');
   renderQuestion();
