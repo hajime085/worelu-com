@@ -64,7 +64,7 @@ def parse_markdown(filepath: Path) -> dict:
 
     # 読了時間の計算（日本語：400字/分）
     char_count = len(body_md)
-    read_time = max(1, round(char_count / 400))
+    read_time = max(1, round(char_count / 700))
 
     return {
         "title":        meta.get("title", ""),
