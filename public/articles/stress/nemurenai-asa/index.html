@@ -161,9 +161,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
 
 /* 目次ボックス */
-.toc-box { background: var(--blue-soft); border: 1px solid var(--blue-mid); border-radius: 8px; padding: 20px 24px; margin: 0 0 32px; }
-.toc-box-title { font-size: 13px; font-weight: 800; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
-.toc-box-title::before { content: ""; display: block; width: 3px; height: 14px; background: var(--blue); border-radius: 2px; }
+.toc-box { background: var(--blue-soft); border: 1px solid var(--blue-mid); border-radius: 8px; margin: 0 0 32px; overflow: hidden; }
+.toc-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 16px 20px; background: none; border: none; cursor: pointer; font-size: 13px; font-weight: 800; color: var(--blue); letter-spacing: 0.06em; text-align: left; }
+.toc-toggle::before { content: ""; display: block; width: 3px; height: 14px; background: var(--blue); border-radius: 2px; flex-shrink: 0; }
+.toc-toggle-label { flex: 1; }
+.toc-toggle-icon { font-size: 18px; font-weight: 400; color: var(--blue); flex-shrink: 0; transition: transform 200ms; }
+.toc-toggle[aria-expanded="true"] .toc-toggle-icon { transform: rotate(45deg); }
+.toc-body { max-height: 0; overflow: hidden; transition: max-height 300ms ease; }
+.toc-body.open { max-height: 1200px; }
+.toc-body-inner { padding: 0 20px 16px; }
 .toc-list { list-style: none; display: grid; gap: 6px; }
 .toc-list li { font-size: 14px; }
 .toc-list a { color: var(--blue-dark); text-decoration: none; display: flex; align-items: baseline; gap: 8px; }
@@ -531,18 +537,29 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   }
   fixBoldText(article);
 
-  // ② 目次を自動生成
+  // ② 目次を自動生成（アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
   if (headings.length >= 2) {
     headings.forEach(function(h, i) {
       if (!h.id) h.id = 'heading-' + i;
     });
+
     const toc = document.createElement('div');
     toc.className = 'toc-box';
-    const tocTitle = document.createElement('div');
-    tocTitle.className = 'toc-box-title';
-    tocTitle.textContent = '目次';
-    toc.appendChild(tocTitle);
+
+    // トグルボタン
+    const btn = document.createElement('button');
+    btn.className = 'toc-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="toc-toggle-label">目次</span><span class="toc-toggle-icon">+</span>';
+
+    // 本体
+    const body = document.createElement('div');
+    body.className = 'toc-body';
+    const inner = document.createElement('div');
+    inner.className = 'toc-body-inner';
+
     const ul = document.createElement('ul');
     ul.className = 'toc-list';
     headings.forEach(function(h) {
@@ -555,11 +572,27 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
+        // クリック後に閉じる
+        body.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.querySelector('.toc-toggle-icon').textContent = '+';
       });
       li.appendChild(a);
       ul.appendChild(li);
     });
-    toc.appendChild(ul);
+    inner.appendChild(ul);
+    body.appendChild(inner);
+
+    btn.addEventListener('click', function() {
+      const isOpen = body.classList.contains('open');
+      body.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      btn.querySelector('.toc-toggle-icon').textContent = isOpen ? '+' : '−';
+    });
+
+    toc.appendChild(btn);
+    toc.appendChild(body);
+
     const firstH2 = article.querySelector('h2');
     if (firstH2) article.insertBefore(toc, firstH2);
   }
