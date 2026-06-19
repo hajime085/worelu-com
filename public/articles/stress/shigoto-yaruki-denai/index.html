@@ -176,6 +176,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
+  /* スマホでサイドバーの関連記事は非表示（本文後にも表示されるため重複防止） */
+  .sidebar .sb-card:nth-child(2) { display: none; }
 }
 @media (max-width: 600px) {
   .cta-block { flex-direction: column; align-items: flex-start; }
