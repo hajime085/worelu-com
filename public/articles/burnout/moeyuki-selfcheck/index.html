@@ -3,703 +3,478 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する【Worelu】</title>
-<meta name="description" content="燃え尽き症候群のセルフチェック。10の簡単な質問であなたの燃え尽き度を診断し、今の状態を客観的に把握する方法を解説。燃え尽き傾向への対処法も紹介します。">
+<title>燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する | Worelu</title>
+<meta name="description" content="燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する【Worelu】">
-<meta property="og:description" content="燃え尽き症候群のセルフチェック。10の簡単な質問であなたの燃え尽き度を診断し、今の状態を客観的に把握する方法を解説。">
+<link rel="canonical" href="https://worelu.com/articles/burnout/moeyuki-selfcheck/">
+<meta property="og:title" content="燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する">
+<meta property="og:description" content="燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://worelu.com/articles/burnout/moeyuki-selfcheck/">
-<meta property="og:image" content="https://worelu.com/ogp.png">
+
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://worelu.com/articles/burnout/moeyuki-selfcheck/">
-<link rel="icon" href="/favicon.ico">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する",
+  "description": "燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。",
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "author": {"@type": "Organization", "name": "Worelu"},
+  "publisher": {"@type": "Organization", "name": "Worelu", "url": "https://worelu.com"}
+}
+</script>
 <style>
 :root {
-  --accent: #2563EB;
-  --accent-soft: #EFF6FF;
-  --accent-dark: #1D4ED8;
+  --blue: #2563EB;
+  --blue-dark: #1D4ED8;
+  --blue-soft: #EFF6FF;
+  --blue-mid: #DBEAFE;
   --text: #0F172A;
-  --text2: #334155;
+  --text-2: #334155;
   --muted: #64748B;
   --line: #E2E8F0;
   --page: #F8FAFC;
   --white: #FFFFFF;
-  --sand-1: #EFF6FF;
-  --sand-2: #DBEAFE;
-  --sand-3: #BFDBFE;
-  --radius: 12px;
-  --shadow: 0 4px 24px rgba(15,23,42,0.07);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  min-height: 100vh; background: var(--page);
-  color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
-  line-height: 1.7;
-}
-button { font: inherit; cursor: pointer; }
+body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; }
 
 /* HEADER */
-.site-header {
-  background: var(--white); border-bottom: 1px solid var(--line);
-  padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between;
-}
-.site-logo { font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.04em; text-decoration: none; }
-.site-logo em { color: var(--accent); font-style: normal; }
-.header-right { display: flex; align-items: center; gap: 20px; }
-.header-nav-link { font-size: 13px; color: var(--muted); text-decoration: none; font-weight: 600; }
-.header-diag-btn { background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
-.hamburger-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
-.hamburger-btn span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
-.mobile-menu { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--line); padding: 16px 24px; z-index: 200; flex-direction: column; gap: 0; box-shadow: 0 8px 24px rgba(15,23,42,0.1); }
-.mobile-menu a { font-size: 15px; color: var(--text); text-decoration: none; font-weight: 600; padding: 12px 0; border-bottom: 1px solid var(--line); display: block; }
-.mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu.open { display: flex; }
-@media(max-width:768px){ .header-right{display:none;} .hamburger-btn{display:flex;} .site-header{position:relative;} }
+.site-header { background: var(--white); border-bottom: 1px solid var(--line); height: 56px; display: flex; align-items: center; padding: 0 28px; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.site-logo { font-size: 20px; font-weight: 900; color: var(--text); text-decoration: none; letter-spacing: -0.04em; }
+.site-logo em { color: var(--blue); font-style: normal; }
+.header-nav { display: flex; gap: 20px; }
+.header-nav a { font-size: 12px; color: var(--muted); text-decoration: none; font-weight: 600; }
+.header-btn { background: var(--blue); color: var(--white); font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
+
+/* HERO */
+.hero { background: var(--white); border-bottom: 1px solid var(--line); padding: 44px 28px 40px; }
+.hero-inner { max-width: 740px; margin: 0 auto; }
+.breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--blue); }
+.breadcrumb-sep { color: var(--line); }
+.hero-cat { display: inline-flex; align-items: center; background: var(--blue-soft); color: var(--blue); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 4px; margin-bottom: 14px; letter-spacing: 0.06em; border: 1px solid var(--blue-mid); }
+.hero-h1 { font-size: clamp(22px, 3.5vw, 30px); font-weight: 800; color: var(--text); line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 16px; }
+.hero-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--muted); }
+.hero-sep { width: 1px; height: 10px; background: var(--line); }
 
 /* LAYOUT */
-.page-wrap {
-  width: min(1100px, calc(100% - 32px));
-  margin: 0 auto; padding: 32px 0 64px;
-  display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 40px;
-}
-@media(max-width:900px){ .page-wrap{grid-template-columns:1fr;} .sidebar{display:none;} }
+.layout { max-width: 1040px; margin: 0 auto; padding: 36px 28px 64px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 36px; align-items: start; }
 
-/* BREADCRUMB */
-.breadcrumb { font-size: 12px; color: var(--muted); margin-bottom: 20px; display: flex; gap: 6px; flex-wrap: wrap; }
-.breadcrumb a { color: var(--muted); text-decoration: none; }
-.breadcrumb a:hover { color: var(--accent); }
+/* ARTICLE */
+.article-body h2 { font-size: 19px; font-weight: 800; color: var(--text); line-height: 1.4; margin: 36px 0 14px; padding-left: 14px; border-left: 3px solid var(--blue); }
+.article-body h3 { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.4; margin: 24px 0 10px; }
+.article-body p { font-size: 15px; line-height: 1.95; color: var(--text-2); margin-bottom: 16px; }
+.article-body ul, .article-body ol { font-size: 15px; line-height: 1.8; color: var(--text-2); margin-bottom: 16px; padding-left: 22px; }
+.article-body li { margin-bottom: 6px; }
+.article-body hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+.article-body a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+.article-body blockquote { border-left: 3px solid var(--blue); background: var(--blue-soft); padding: 14px 18px; margin: 24px 0; }
+.article-body blockquote p { margin-bottom: 0; font-size: 14px; }
+.article-body strong { font-weight: 700; color: var(--text); }
 
-/* ARTICLE HEADER */
-.article-cat { display: inline-block; background: var(--sand-2); color: var(--accent); font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--sand-3); margin-bottom: 14px; letter-spacing: 0.05em; }
-.article-title { font-size: clamp(22px, 3vw, 34px); font-weight: 900; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 12px; }
-.article-meta { font-size: 12px; color: var(--muted); font-weight: 600; margin-bottom: 24px; }
-.article-desc { font-size: 15px; color: var(--text2); line-height: 1.8; margin-bottom: 28px; padding: 16px 20px; background: var(--sand-1); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; }
-.article-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
-.tag { font-size: 11px; color: var(--muted); background: var(--white); border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; font-weight: 600; }
+/* CTA */
+.cta-block { background: var(--blue-soft); border: 1.5px solid var(--blue-mid); border-radius: 10px; padding: 26px 28px; margin: 36px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.cta-label { font-size: 10px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 7px; }
+.cta-ttl { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; margin-bottom: 5px; }
+.cta-sub { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.cta-btn { background: var(--blue); color: var(--white); font-size: 13px; font-weight: 700; padding: 12px 20px; border-radius: 6px; text-decoration: none; white-space: nowrap; flex-shrink: 0; }
+.cta-btn:hover { background: var(--blue-dark); }
 
-/* ARTICLE BODY */
-.article-body { font-size: 15px; color: var(--text2); line-height: 1.85; }
-.article-body h2 { font-size: 20px; font-weight: 800; color: var(--text); margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 2px solid var(--line); letter-spacing: -0.01em; }
-.article-body h3 { font-size: 17px; font-weight: 800; color: var(--text); margin: 28px 0 12px; padding-left: 12px; border-left: 3px solid var(--accent); }
-.article-body p { margin-bottom: 16px; }
-.article-body ul, .article-body ol { margin: 12px 0 20px 20px; }
-.article-body li { margin-bottom: 8px; }
-.article-body strong { color: var(--text); font-weight: 800; }
-
-/* ===== インタラクティブ診断コンポーネント ===== */
-.burnout-check {
-  margin: 32px 0;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-.check-header {
-  background: var(--accent);
-  padding: 18px 24px;
-  color: #fff;
-}
-.check-header-label { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; opacity: 0.85; margin-bottom: 4px; }
-.check-header-title { font-size: 17px; font-weight: 900; }
-.check-header-sub { font-size: 12px; opacity: 0.8; margin-top: 4px; }
-
-.check-progress-bar {
-  height: 4px; background: rgba(255,255,255,0.25);
-}
-.check-progress-fill {
-  height: 100%; background: #fff;
-  transition: width 320ms ease; width: 0%;
-}
-
-.check-body { padding: 24px; }
-.check-step { display: none; }
-.check-step.active { display: block; animation: fadeIn 220ms ease; }
-@keyframes fadeIn { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:translateY(0)} }
-
-.check-q-num { font-size: 11px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 10px; }
-.check-q-text { font-size: 17px; font-weight: 800; color: var(--text); line-height: 1.45; margin-bottom: 20px; }
-
-.check-options { display: grid; gap: 8px; }
-.check-option {
-  display: flex; align-items: center; gap: 14px;
-  padding: 12px 16px; border: 1px solid var(--line); border-radius: 10px;
-  background: var(--white); color: var(--text); font-size: 14px; font-weight: 700;
-  cursor: pointer; transition: border-color 160ms, background 160ms;
-  text-align: left;
-}
-.check-option:hover { border-color: var(--accent); background: var(--accent-soft); }
-.check-option.selected { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-dark); }
-.check-radio {
-  width: 20px; height: 20px; border-radius: 50%; border: 2px solid #CBD7D2;
-  flex-shrink: 0; transition: border-color 160ms, background 160ms;
-}
-.check-option.selected .check-radio { border-color: var(--accent); background: var(--accent); }
-
-.check-nav { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; }
-.check-btn {
-  min-height: 44px; min-width: 100px; padding: 0 20px;
-  border: 1px solid var(--line); border-radius: 10px;
-  background: var(--white); color: var(--text); font-weight: 800;
-  transition: background 160ms, border-color 160ms;
-}
-.check-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
-.check-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.check-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-.check-btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
-
-/* 結果エリア */
-.check-result { display: none; }
-.check-result.show { display: block; animation: fadeIn 320ms ease; }
-.result-score-box {
-  display: flex; align-items: center; gap: 20px;
-  padding: 20px 24px; background: var(--sand-1);
-  border-bottom: 1px solid var(--sand-3);
-}
-.result-score-num { font-size: 52px; font-weight: 900; line-height: 1; color: var(--accent); }
-.result-score-label { font-size: 12px; color: var(--muted); font-weight: 700; }
-.result-score-title { font-size: 20px; font-weight: 900; color: var(--text); margin-top: 4px; }
-
-.result-bar-wrap { padding: 20px 24px 0; }
-.result-bar-label { font-size: 12px; font-weight: 800; color: var(--muted); margin-bottom: 8px; }
-.result-bar-track { height: 10px; background: var(--line); border-radius: 999px; overflow: hidden; }
-.result-bar-fill { height: 100%; border-radius: 999px; background: var(--accent); transition: width 600ms ease; width: 0%; }
-
-.result-detail { padding: 20px 24px 24px; }
-.result-detail h3 { font-size: 15px; font-weight: 800; color: var(--text); margin-bottom: 10px; }
-.result-detail p { font-size: 14px; color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
-.result-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-.result-link { display: inline-block; padding: 10px 20px; border-radius: 8px; font-size: 13px; font-weight: 800; text-decoration: none; }
-.result-link.primary { background: var(--accent); color: #fff; }
-.result-link.secondary { background: var(--white); color: var(--accent); border: 1px solid var(--accent); }
-
-/* STRESS CHECK CTA（明るいバージョン） */
-.stress-check-cta {
-  margin: 36px 0;
-  background: var(--sand-1);
-  border: 1px solid var(--sand-3);
-  border-radius: var(--radius);
-  padding: 24px 28px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px; align-items: center;
-}
-@media(max-width:600px){ .stress-check-cta{grid-template-columns:1fr;} }
-.cta-label { font-size: 11px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 6px; }
-.cta-title { font-size: 17px; font-weight: 900; color: var(--text); margin-bottom: 6px; }
-.cta-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
-.cta-btn { display: inline-block; background: var(--accent); color: #fff; font-size: 14px; font-weight: 800; padding: 14px 24px; border-radius: 8px; text-decoration: none; white-space: nowrap; text-align: center; min-width: 160px; }
-.cta-btn:hover { background: var(--accent-dark); }
-
-/* BOTTOM CTA（全記事共通・明るいバージョン） */
-.article-bottom-cta {
-  margin: 48px 0 0;
-  background: var(--sand-1);
-  border: 2px solid var(--sand-3);
-  border-radius: var(--radius);
-  padding: 32px;
-  text-align: center;
-}
-.bottom-cta-label { font-size: 11px; font-weight: 800; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 10px; }
-.bottom-cta-title { font-size: clamp(18px,2.5vw,24px); font-weight: 900; color: var(--text); margin-bottom: 10px; }
-.bottom-cta-desc { font-size: 14px; color: var(--muted); line-height: 1.7; margin-bottom: 20px; }
-.bottom-cta-btn { display: inline-block; background: var(--accent); color: #fff; font-size: 15px; font-weight: 800; padding: 16px 36px; border-radius: 10px; text-decoration: none; }
-.bottom-cta-btn:hover { background: var(--accent-dark); }
-.bottom-cta-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
-
-/* RELATED */
-.related-articles { margin-top: 40px; }
-.related-title { font-size: 16px; font-weight: 800; margin-bottom: 14px; color: var(--text); }
-.related-grid { display: grid; gap: 10px; }
-.related-card { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: var(--white); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--text); transition: border-color 160ms, transform 160ms; }
-.related-card:hover { border-color: var(--accent); transform: translateX(2px); }
-.related-card-cat { font-size: 10px; font-weight: 800; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 4px; }
-.related-card-title { font-size: 13px; font-weight: 700; line-height: 1.5; }
+/* TAGS */
+.article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; }
+.tag { background: var(--page); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 4px; }
 
 /* SIDEBAR */
-.sidebar { display: flex; flex-direction: column; gap: 20px; }
-.sidebar-box { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; }
-.sidebar-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
-.sidebar-diag-btn { display: block; background: var(--accent); color: #fff; font-size: 13px; font-weight: 800; padding: 14px 16px; border-radius: 8px; text-decoration: none; text-align: center; margin-bottom: 10px; }
-.sidebar-diag-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
-.sidebar-links { display: flex; flex-direction: column; gap: 8px; }
-.sidebar-link { font-size: 13px; color: var(--text); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--line); font-weight: 600; }
-.sidebar-link:last-child { border-bottom: none; }
-.sidebar-link:hover { color: var(--accent); }
+.sidebar { position: sticky; top: 76px; }
+.sb-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 16px; }
+.sb-card-ttl { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.sb-diag-copy { font-size: 13px; color: var(--text-2); line-height: 1.65; margin-bottom: 14px; }
+.sb-diag-btn { display: block; background: var(--blue); color: var(--white); font-size: 13px; font-weight: 700; padding: 12px; border-radius: 6px; text-decoration: none; text-align: center; margin-bottom: 6px; }
+.sb-diag-note { font-size: 11px; color: var(--muted); text-align: center; }
+.sb-item { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.sb-item:last-child { border-bottom: none; padding-bottom: 0; }
+.sb-item-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+.sb-item-ttl { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.5; }
+.sb-item-ttl a { text-decoration: none; color: inherit; }
+.sb-item-ttl a:hover { color: var(--blue); }
+
+/* SNS SHARE */
+.share-block{margin:32px 0;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.share-label{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:0.08em;margin-bottom:12px}
+.share-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:10px 16px;border-radius:7px;text-decoration:none;transition:opacity 0.2s}
+.share-btn:hover{opacity:0.85}
+.share-btn svg{width:16px;height:16px;flex-shrink:0}
+.share-x{background:#000;color:#fff}
+.share-threads{background:#000;color:#fff}
+.share-line{background:#06C755;color:#fff}
+
+/* RELATED */
+.related { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 32px 28px; margin-top: 0; }
+.related-inner { max-width: 740px; margin: 0 auto; }
+.related-title { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 16px; }
+.related-list { display: grid; gap: 10px; }
+.related-item { display: flex; align-items: center; gap: 12px; background: var(--page); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; text-decoration: none; color: var(--text); }
+.related-item:hover { border-color: var(--blue); }
+.related-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 3px; }
+.related-text { font-size: 13px; font-weight: 600; line-height: 1.5; }
+
+/* 参考資料 */
+.ref-block{background:var(--page);border-radius:8px;padding:18px 22px;margin:24px 0;border:1px solid var(--line)}
+.ref-title{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:0.06em;margin-bottom:10px}
+.ref-list{list-style:none;display:grid;gap:6px}
+.ref-list a{font-size:13px;color:var(--blue);text-decoration:underline;text-underline-offset:2px}
+
+/* 著者情報 */
+.author-block{display:flex;gap:16px;align-items:flex-start;padding:24px;background:var(--blue-soft);border-radius:10px;border:1px solid var(--blue-mid);margin:24px 0}
+.author-icon{width:48px;height:48px;flex-shrink:0}
+.author-icon svg{width:100%;height:100%}
+.author-name{font-size:14px;font-weight:800;color:var(--text);margin-bottom:6px}
+.author-desc{font-size:13px;color:var(--text-2);line-height:1.7;margin-bottom:10px}
+.author-cta{font-size:13px;color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:2px}
+
+/* 記事末尾CTA */
+.bottom-cta{background:var(--blue-soft);border:2px solid var(--blue-mid);border-radius:12px;margin:32px 0;overflow:hidden}
+.bottom-cta-inner{padding:32px 36px;text-align:center}
+.bottom-cta-label{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:0.1em;margin-bottom:10px}
+.bottom-cta-title{font-size:20px;font-weight:800;color:var(--text);line-height:1.4;margin-bottom:12px}
+.bottom-cta-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto}
+.bottom-cta-btn{display:inline-flex;align-items:center;background:var(--blue);color:#fff;font-size:14px;font-weight:800;padding:14px 28px;border-radius:8px;text-decoration:none;margin-bottom:10px}
+.bottom-cta-btn:hover{background:var(--blue-dark)}
+.bottom-cta-note{font-size:11px;color:var(--muted)}
+
+/* 前後記事ナビ */
+.article-nav{background:var(--page);border-top:1px solid var(--line);padding:24px 28px}
+.article-nav-inner{max-width:740px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.article-nav-item{display:block;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--text)}
+.article-nav-item:hover{border-color:var(--blue)}
+.article-nav-dir{font-size:11px;font-weight:800;color:var(--blue);margin-bottom:4px;letter-spacing:0.04em}
+.article-nav-title{font-size:13px;font-weight:600;line-height:1.5;color:var(--text)}
+.article-nav-next{text-align:right}
 
 /* FOOTER */
-footer { background: var(--text); color: #94A3B8; padding: 40px 32px 24px; }
-.footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
-@media(max-width:600px){ .footer-inner{grid-template-columns:1fr;} }
-.footer-logo { font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 8px; letter-spacing: -0.04em; }
-.footer-desc { font-size: 12px; line-height: 1.7; }
-.footer-heading { font-size: 12px; font-weight: 800; color: #fff; margin-bottom: 12px; letter-spacing: 0.05em; }
-.footer-links { display: flex; flex-direction: column; gap: 8px; }
-.footer-link { font-size: 12px; color: #94A3B8; text-decoration: none; }
-.footer-link:hover { color: #fff; }
-.footer-bottom { max-width: 1100px; margin: 24px auto 0; padding-top: 16px; border-top: 1px solid #1E293B; font-size: 12px; color: #475569; }
+.site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
+
+/* 目次ボックス */
+.toc-box { background: var(--blue-soft); border: 1px solid var(--blue-mid); border-radius: 8px; padding: 20px 24px; margin: 0 0 32px; }
+.toc-box-title { font-size: 13px; font-weight: 800; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+.toc-box-title::before { content: ""; display: block; width: 3px; height: 14px; background: var(--blue); border-radius: 2px; }
+.toc-list { list-style: none; display: grid; gap: 6px; }
+.toc-list li { font-size: 14px; }
+.toc-list a { color: var(--blue-dark); text-decoration: none; display: flex; align-items: baseline; gap: 8px; }
+.toc-list a::before { content: "—"; color: var(--blue-mid); font-size: 12px; flex-shrink: 0; }
+.toc-list a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* 見出しにidを付けてスクロールオフセット調整 */
+.article-body h2 { scroll-margin-top: 72px; }
+.article-body h3 { scroll-margin-top: 72px; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+}
+@media (max-width: 600px) {
+  .cta-block { flex-direction: column; align-items: flex-start; }
+  .hero-h1 { font-size: 20px; }
+  .header-nav { display: none; }
+}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <div>
-    <a href="/" class="site-logo">Wor<em>e</em>lu</a>
-  </div>
-  <div class="header-right">
-    <a href="/articles/" class="header-nav-link">記事一覧</a>
-    <a href="/articles/stress/" class="header-nav-link">症状</a>
-    <a href="/articles/burnout/" class="header-nav-link">バーンアウト</a>
-    <a href="/articles/quit/" class="header-nav-link">転職・退職</a>
-    <a href="/stress-check/" class="header-diag-btn">無料で診断する</a>
-  </div>
-  <button class="hamburger-btn" id="hamburgerBtn" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
+  <a href="/" class="site-logo">Wor<em>e</em>lu</a>
+  <nav class="header-nav">
+    <a href="/articles/">記事一覧</a>
+    <a href="/articles/stress/">症状</a>
+    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/quit/">転職・退職</a>
+  </nav>
+  <a href="/stress-check/" class="header-btn">無料で診断する</a>
 </header>
-<nav class="mobile-menu" id="mobileMenu">
-  <a href="/articles/">記事一覧</a>
-  <a href="/articles/stress/">症状</a>
-  <a href="/articles/burnout/">バーンアウト</a>
-  <a href="/articles/quit/">転職・退職</a>
-  <a href="/stress-check/">無料で診断する</a>
-</nav>
 
-<div class="page-wrap">
-  <main>
-    <nav class="breadcrumb">
-      <a href="/">Worelu</a> &rsaquo;
-      <a href="/articles/">記事一覧</a> &rsaquo;
-      <a href="/articles/burnout/">バーンアウト</a> &rsaquo;
-      <span>燃え尽き症候群のセルフチェック</span>
-    </nav>
-
-    <div class="article-cat">バーンアウト</div>
-    <h1 class="article-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</h1>
-    <div class="article-meta">2026-06-17 &nbsp;|&nbsp; Worelu編集部</div>
-
-    <div class="article-desc">
-      「最近、仕事が空虚に感じる」「何か頑張れている気がしない」と感じていませんか？それは、もしかしたら燃え尽き傾向（バーンアウト）のサインかもしれません。燃え尽き症候群は、真面目で責任感が強い人に多く見られる状態です。この記事では、10問で今の状態をセルフチェックし、結果に合わせた対処法も紹介します。
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Worelu</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/articles/">記事一覧</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="/articles/burnout/">バーンアウト</a>
     </div>
+    <div class="hero-cat">バーンアウト</div>
+    <h1 class="hero-h1">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</h1>
+    <div class="hero-meta">
+      <span>2026-06-17</span>
+      
+      <div class="hero-sep"></div>
+      <span>約分で読めます</span>
+      <div class="hero-sep"></div>
+      <span>Worelu編集部</span>
+    </div>
+  </div>
+</div>
+
+<div class="layout">
+  <div>
+    <article class="article-body">
+      <p>「最近、仕事にやる気が出ない」「何だか疲れているのに休めない」と感じていませんか？それは、もしかしたら燃え尽き症候群（バーンアウト）のサインかもしれません。燃え尽き症候群は、真面目で責任感が強い人ほど陥りやすい心の状態です。この記事では、10の簡単な質問であなたの燃え尽き度をセルフチェックし、今の状態を客観的に把握する方法を解説します。</p>
+<h2 id="sos">燃え尽き症候群とは？あなたの心と体が発するSOS</h2>
+<p>燃え尽き症候群（バーンアウト）とは、仕事や活動に熱心に取り組んでいた人が、心身の極度の疲労により意欲を失い、社会生活に適応できなくなる状態を指します。強いストレス状態が続くと、心身の消耗が続いている状態のことがあります。特に、医療・介護職、教師、営業職など、人と接する機会が多く、感情労働の負担が大きい職種の人に多く見られる傾向があります。燃え尽き症候群は、あなたの心と体が「もう限界だ」と発しているSOSのサインなのです。</p>
+<h2 id="10">燃え尽き症候群セルフチェック：10の質問で今の状態を確認</h2>
+<p>以下の10の質問に「はい」か「いいえ」で答えてみてください。正直な気持ちで回答することが大切です。</p>
+<ol>
+<li>以前は好きだった仕事が、最近は面倒に感じる日が増えた<ul>
+<li>「はい」の場合：仕事への情熱が失われつつあるサインかもしれません。</li>
+</ul>
+</li>
+<li>朝、仕事のことを考えると気持ちが重く、起き上がるのがつらい<ul>
+<li>「はい」の場合：仕事への抵抗感が強まっている可能性があります。</li>
+</ul>
+</li>
+<li>仕事中に集中力が続かず、ミスが増えたと感じる<ul>
+<li>「はい」の場合：疲労やストレスが認知機能に影響を与えているかもしれません。</li>
+</ul>
+</li>
+<li>些細なことでイライラしたり、怒りっぽくなったりすることが増えた<ul>
+<li>「はい」の場合：感情のコントロールが難しくなっている可能性があります。</li>
+</ul>
+</li>
+<li>仕事が終わっても、心身の疲れがなかなか取れない<ul>
+<li>「はい」の場合：慢性的な疲労が蓄積しているサインです。</li>
+</ul>
+</li>
+<li>趣味や好きなことに対しても、以前ほど楽しめなくなった<ul>
+<li>「はい」の場合：喜びを感じる力が低下しているかもしれません。</li>
+</ul>
+</li>
+<li>人との交流を避け、一人でいる時間が増えた<ul>
+<li>「はい」の場合：社会的な孤立感を感じている可能性があります。</li>
+</ul>
+</li>
+<li>食欲不振や過食、不眠や過眠など、生活習慣に変化があった<ul>
+<li>「はい」の場合：心身のバランスが崩れているサインです。</li>
+</ul>
+</li>
+<li>「自分はもうダメだ」「何もできない」と自己否定的な感情にとらわれることがある<ul>
+<li>「はい」の場合：自己肯定感が低下している可能性があります。</li>
+</ul>
+</li>
+<li>仕事に対して「どうでもいい」という無関心な気持ちになることがある<ul>
+<li>「はい」の場合：感情の枯渇が始まっているかもしれません。</li>
+</ul>
+</li>
+</ol>
+<p><strong>チェック結果：</strong></p>
+<h2 id="_1">チェックリストで「これ自分だ」と感じたら：燃え尽き傾向への対処法</h2>
+<p>セルフチェックで燃え尽き傾向が見られた場合、早めに対処することが重要です。</p>
+<h3 id="_2">まずは休息を最優先に</h3>
+<p>何よりもまず、心身の休息を最優先に考えましょう。有給休暇を取得したり、可能であれば休職を検討したりして、仕事から一時的に離れる時間を作ることが大切です。十分な睡眠をとり、栄養のある食事を心がけましょう。</p>
+<h3 id="_3">仕事とプライベートの境界線を引く</h3>
+<p>仕事とプライベートの区別が曖昧になっていると、常に仕事モードから抜け出せなくなり、心身が休まりません。退勤後は仕事の連絡を見ない、休日は仕事のことを考えないなど、意識的に境界線を引くようにしましょう。</p>
+<h3 id="_4">完璧主義を手放す</h3>
+<p>真面目な人ほど、完璧に仕事をこなそうとして自分を追い詰めてしまいがちです。しかし、時には「これで十分」と割り切ることも必要です。全てのタスクを完璧にこなすことよりも、心身の健康を保つことの方がはるかに重要です。</p>
+<h2 id="_5">「休むべきか、まだ続けられるか」の判断が自分ではしにくいあなたへ</h2>
+<p>その状態だと「休むべきか、まだ続けられるか」の判断が自分ではしにくくなります。まず状態を数字で見ておくと、休む判断がしやすくなります。</p>
+<p>Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。
+→ 無料でストレスチェックを受ける（worelu.com）</p>
+<h2 id="_6">まとめ</h2>
+<p>燃え尽き症候群は、誰にでも起こりうる心の状態です。10の質問でセルフチェックを行い、自分の燃え尽き傾向を客観的に把握することが、回復への第一歩となります。もし燃え尽き傾向が見られたら、自分を責めずに、まずは休息を最優先に考え、仕事とプライベートの境界線を明確にしましょう。必要であれば、専門家のサポートを積極的に活用し、あなたの心と体を守る選択をしてください。</p>
+<p>▼ 休むべきか迷っている方へ
+Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。
+→ 無料でストレスチェックを受ける（worelu.com）</p>
+<hr />
+<p><strong>関連記事</strong></p>
+<ul>
+<li><a href="https://worelu.com/burnout-symptoms/">バーンアウトの症状チェックリスト</a></li>
+</ul>
+<hr />
+<p><strong>メタディスクリプション：</strong> 燃え尽き症候群のセルフチェック。10の簡単な質問であなたの燃え尽き度を診断し、今の状態を客観的に把握する方法を解説。燃え尽き傾向への対処法も紹介します。</p>
+    </article>
 
     <div class="article-tags">
-      <span class="tag">燃え尽き症候群</span>
-      <span class="tag">セルフチェック</span>
-      <span class="tag">バーンアウト</span>
-      <span class="tag">診断</span>
+      <span class="tag">燃え尽き症候群</span><span class="tag">セルフチェック</span><span class="tag">バーンアウト</span><span class="tag">診断</span>
     </div>
 
-    <div class="article-body">
-
-      <h2>燃え尽き症候群とは？あなたの心と体が発するSOS</h2>
-      <p>燃え尽き症候群（バーンアウト）とは、仕事や活動に心身を注ぎ込んだ結果、心の燃料が尽きてしまう状態を指します。単なる「疲れ」とは異なり、休んでも回復しにくいのが特徴です。</p>
-      <p>熱心に仕事に取り組んできた人ほど陥りやすく、「仕事が好きだったのに、何も感じなくなった」という声は知恵袋や相談窓口でも非常に多く見られます。</p>
-      <p><strong>主な3つの症状：</strong></p>
-      <ul>
-        <li>情緒的消耗感（ぐったりして何も感じない）</li>
-        <li>脱人格化（仕事や周囲に対してひどく冷めた感覚）</li>
-        <li>個人的達成感の低下（何をしても手応えがない）</li>
-      </ul>
-
-      <!-- ===== インタラクティブ診断 ===== -->
-      <h2>燃え尽き症候群セルフチェック：10の質問で今の状態を確認</h2>
-      <p>以下の10問に「はい」「どちらとも言えない」「いいえ」で答えてください。正直な気持ちで答えることが大切です。</p>
-
-      <div class="burnout-check">
-        <div class="check-header">
-          <div class="check-header-label">BURNOUT SELF CHECK</div>
-          <div class="check-header-title">燃え尽き症候群セルフチェック</div>
-          <div class="check-header-sub">10問・約2分｜登録不要・無料</div>
-        </div>
-        <div class="check-progress-bar">
-          <div class="check-progress-fill" id="checkProgFill"></div>
-        </div>
-
-        <div class="check-body" id="checkBody">
-          <!-- Q1 -->
-          <div class="check-step active" id="step-0">
-            <div class="check-q-num">Q1 / 10</div>
-            <div class="check-q-text">仕事をしていて、以前のような達成感や充実感を感じにくくなった</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,0)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,0)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,0)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" disabled>戻る</button>
-              <button class="check-btn primary" id="nextBtn-0" disabled onclick="goCheckNext(0)">次へ</button>
-            </div>
-          </div>
-          <!-- Q2 -->
-          <div class="check-step" id="step-1">
-            <div class="check-q-num">Q2 / 10</div>
-            <div class="check-q-text">仕事のことを考えると、気が重くなったり憂鬱になったりする</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,1)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,1)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,1)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(1)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-1" disabled onclick="goCheckNext(1)">次へ</button>
-            </div>
-          </div>
-          <!-- Q3 -->
-          <div class="check-step" id="step-2">
-            <div class="check-q-num">Q3 / 10</div>
-            <div class="check-q-text">休日も仕事のことが頭から離れず、十分に休めていない</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,2)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,2)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,2)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(2)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-2" disabled onclick="goCheckNext(2)">次へ</button>
-            </div>
-          </div>
-          <!-- Q4 -->
-          <div class="check-step" id="step-3">
-            <div class="check-q-num">Q4 / 10</div>
-            <div class="check-q-text">仕事上の感情コントロールが難しくなった（イライラ・涙・無気力など）</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,3)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,3)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,3)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(3)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-3" disabled onclick="goCheckNext(3)">次へ</button>
-            </div>
-          </div>
-          <!-- Q5 -->
-          <div class="check-step" id="step-4">
-            <div class="check-q-num">Q5 / 10</div>
-            <div class="check-q-text">仕事が好きだったのに、今は好きかどうかわからなくなってきた</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,4)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,4)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,4)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(4)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-4" disabled onclick="goCheckNext(4)">次へ</button>
-            </div>
-          </div>
-          <!-- Q6 -->
-          <div class="check-step" id="step-5">
-            <div class="check-q-num">Q6 / 10</div>
-            <div class="check-q-text">人と交流することを避けたくなり、一人でいることが増えた</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,5)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,5)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,5)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(5)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-5" disabled onclick="goCheckNext(5)">次へ</button>
-            </div>
-          </div>
-          <!-- Q7 -->
-          <div class="check-step" id="step-6">
-            <div class="check-q-num">Q7 / 10</div>
-            <div class="check-q-text">食欲不振、不眠や過眠、体調の変化を感じることが増えた</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,6)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,6)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,6)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(6)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-6" disabled onclick="goCheckNext(6)">次へ</button>
-            </div>
-          </div>
-          <!-- Q8 -->
-          <div class="check-step" id="step-7">
-            <div class="check-q-num">Q8 / 10</div>
-            <div class="check-q-text">「仕事をやめたい」という気持ちが、以前と比べて増えている</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,7)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,7)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,7)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(7)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-7" disabled onclick="goCheckNext(7)">次へ</button>
-            </div>
-          </div>
-          <!-- Q9 -->
-          <div class="check-step" id="step-8">
-            <div class="check-q-num">Q9 / 10</div>
-            <div class="check-q-text">「仕事は自分が分担しないといけない」という感覚が強く、自己犠牲を感じることがある</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,8)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,8)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,8)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(8)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-8" disabled onclick="goCheckNext(8)">次へ</button>
-            </div>
-          </div>
-          <!-- Q10 -->
-          <div class="check-step" id="step-9">
-            <div class="check-q-num">Q10 / 10</div>
-            <div class="check-q-text">仕事に対して「どうでもいい」という関心低下気持ちや無関心を感じることがある</div>
-            <div class="check-options">
-              <button class="check-option" data-val="2" onclick="selectOpt(this,9)"><span class="check-radio"></span>はい</button>
-              <button class="check-option" data-val="1" onclick="selectOpt(this,9)"><span class="check-radio"></span>どちらとも言えない</button>
-              <button class="check-option" data-val="0" onclick="selectOpt(this,9)"><span class="check-radio"></span>いいえ</button>
-            </div>
-            <div class="check-nav">
-              <button class="check-btn" onclick="goCheckBack(9)">戻る</button>
-              <button class="check-btn primary" id="nextBtn-9" disabled onclick="showCheckResult()">結果を見る</button>
-            </div>
-          </div>
-
-          <!-- 結果 -->
-          <div class="check-result" id="checkResult">
-            <div class="result-score-box">
-              <div>
-                <div class="result-score-num" id="resultNum">0</div>
-                <div class="result-score-label">/ 20点</div>
-              </div>
-              <div>
-                <div class="result-score-title" id="resultTitle"></div>
-              </div>
-            </div>
-            <div class="result-bar-wrap">
-              <div class="result-bar-label" id="resultBarLabel"></div>
-              <div class="result-bar-track"><div class="result-bar-fill" id="resultBarFill"></div></div>
-            </div>
-            <div class="result-detail">
-              <h3 id="resultHeading"></h3>
-              <p id="resultDesc"></p>
-              <p id="resultAction"></p>
-              <div class="result-actions">
-                <a href="/stress-check/" class="result-link primary">詳しくAIで診断する</a>
-                <button class="result-link secondary" onclick="resetCheck()" style="border:1px solid var(--accent);">もう一度チェック</button>
-              </div>
-            </div>
-          </div>
-
-        </div><!-- /check-body -->
-      </div><!-- /burnout-check -->
-
-      <h2>チェック結果の見方：「これ自分だ」と思ったら5点以上はバーンアウト傾向</h2>
-      <p>バーンアウトは段階的に進行します。スコアが高いほど回復に時間がかかるため、早期の対処が重要です。</p>
-
-      <h3>まず休息を最優先に</h3>
-      <p>バーンアウト傾向が見られる方が最初にすべきことは、心身の休息を優先させることです。休職も含め、体外的な休息を積極的に取ることが大切です。仕事から少しでも距離を置き、休日でも仕事の対応をしない時間を作ることから始めましょう。</p>
-
-      <h3>仕事とプライベートの境界線を引く</h3>
-      <p>バーンアウトの背景には仕事モードが出来上がってきた、仕事とプライベートの境界線がなくなってきた状態があります。仕事以外の生活に意識を向けて、休日は仕事のことを考えないようにするなど、意図的に境界線を作ってみましょう。</p>
-
-      <h3>完全主義を手放す</h3>
-      <p>真面目な人は「完璧にやらなければ」という完全主義の傾向があります。しかし、「今に仕事を70%の完成度で終わらせる」など、完璧主義を意識的に手放すことも、心の余裕を取り戻す上で欠かせないことです。</p>
-
-      <!-- CTA（明るいバージョン） -->
-      <div class="stress-check-cta">
-        <div>
-          <div class="cta-label">ストレスチェック</div>
-          <div class="cta-title">今の状態を数字で確認する</div>
-          <div class="cta-desc">仕事ストレス・燃え尽き・職場環境・転職意向の4軸で分析。無料・約1分。</div>
-        </div>
-        <a href="/stress-check/" class="cta-btn">無料で診断する →</a>
+    <div class="cta-block">
+      <div>
+        <div class="cta-label">ストレスチェック</div>
+        <div class="cta-ttl">今の状態を数字で確認する</div>
+        <div class="cta-sub">仕事ストレス・燃え尽き・職場環境・転職意向の4軸で分析。無料・約1分。</div>
       </div>
-
-      <h3>「休むべき、まだ続けられる」の判断が自分ではしにくいあなたへ</h3>
-      <p>それが分からなくなったら、「今週3日7時間以上眠れていますか」「仕事前に体が重いと感じますか」を自問してみてください。どちらも当てはまるなら、体は休息を求めているサインです。</p>
-
-      <h2>まとめ</h2>
-      <p>燃え尽き症候群は、誰にも起こりうることです。10問のセルフチェックで自分の燃え尽き傾向を客観的に記録することで、回復への一歩を踏み出しましょう。もし燃え尽き傾向が見られた場合は、仕事と生活の境界線を意識し、必要なら休職も含めたサポートを積極的に活用してください。一人で抱え込まず、あなたの心と体を大切にしてください。</p>
-      <p>Worelu の<a href="/stress-check/" style="color:var(--accent);font-weight:700;">ストレスチェック診断（無料・約1分）</a>で、仕事ストレス・心身の疲れを数字で把握し、AIコーチに相談してみてください。</p>
-
-      <div class="related-articles">
-        <div class="related-title">関連記事</div>
-        <div class="related-grid">
-          <a href="/articles/burnout/burnout-symptoms/" class="related-card">
-            <div><div class="related-card-cat">バーンアウト</div><div class="related-card-title">バーンアウトの症状チェックリスト。燃え尽きのサインと回復法</div></div>
-          </a>
-          <a href="/articles/burnout/kyushoku-1month/" class="related-card">
-            <div><div class="related-card-cat">バーンアウト</div><div class="related-card-title">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</div></div>
-          </a>
-        </div>
-      </div>
-
-    </div><!-- /article-body -->
-
-    <!-- ボトムCTA（明るいバージョン） -->
-    <div class="article-bottom-cta">
-      <div class="bottom-cta-label">この記事を読んで、気になった方へ</div>
-      <div class="bottom-cta-title">今のストレス状態を、AIで無料チェック</div>
-      <div class="bottom-cta-desc">10問・約1分で、仕事ストレス・燃え尽き・職場環境・転職意向を4軸で可視化。<br>診断後はAIコーチに相談できます。</div>
-      <a href="/stress-check/" class="bottom-cta-btn">無料でストレスチェックを受ける →</a>
-      <div class="bottom-cta-note">登録不要・完全無料</div>
+      <a href="/stress-check/" class="cta-btn" style="color:#fff">無料で診断する →</a>
     </div>
 
-  </main>
+    <!-- ⑥ 記事末尾CTA -->
+    <div class="bottom-cta">
+      <div class="bottom-cta-inner">
+        <div class="bottom-cta-label">この記事を読んで、気になった方へ</div>
+        <div class="bottom-cta-title">今のストレス状態を、AIで無料チェック</div>
+        <div class="bottom-cta-desc">10問・約1分で、仕事ストレス・燃え尽き・職場環境・転職意向を4軸で可視化。診断後はAIコーチに相談できます。</div>
+        <a href="/stress-check/" class="bottom-cta-btn">無料でストレスチェックを受ける →</a>
+        <div class="bottom-cta-note">登録不要・完全無料</div>
+      </div>
+    </div>
+  </div>
 
   <aside class="sidebar">
-    <div class="sidebar-box">
-      <div class="sidebar-title">ストレスチェック</div>
-      <a href="/stress-check/" class="sidebar-diag-btn">無料で診断する →</a>
-      <div class="sidebar-desc" style="font-size:12px;color:var(--muted);line-height:1.6;">仕事ストレス・燃え尽き・職場環境・転職意向を4軸で分析。約1分。</div>
+    <div class="sb-card">
+      <div class="sb-card-ttl">ストレスチェック</div>
+      <div class="sb-diag-copy">今の状態を4軸で数値化。約1分・完全無料。</div>
+      <a href="/stress-check/" class="sb-diag-btn" style="color:#fff">無料で診断する</a>
+      <div class="sb-diag-note">登録不要 · worelu.com</div>
     </div>
-    <div class="sidebar-box">
-      <div class="sidebar-title">バーンアウト関連記事</div>
-      <div class="sidebar-links">
-        <a href="/articles/burnout/burnout-symptoms/" class="sidebar-link">バーンアウトの症状チェックリスト</a>
-        <a href="/articles/burnout/kyushoku-1month/" class="sidebar-link">休職1ヶ月でどう変わる？</a>
-        <a href="/articles/stress/nemurenai-asa/" class="sidebar-link">眠れないまま朝になった…</a>
+
+    
+    <div class="sb-card">
+      <div class="sb-card-ttl">関連記事</div>
+      
+      <div class="sb-item">
+        <div class="sb-item-cat">バーンアウト</div>
+        <div class="sb-item-ttl"><a href="/articles/burnout/burnout-symptoms/">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</a></div>
       </div>
+      
+      <div class="sb-item">
+        <div class="sb-item-cat">バーンアウト</div>
+        <div class="sb-item-ttl"><a href="/articles/burnout/kyushoku-1month/">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</a></div>
+      </div>
+      
+      <div class="sb-item">
+        <div class="sb-item-cat">症状・ストレス</div>
+        <div class="sb-item-ttl"><a href="/articles/stress/asa-shigoto-ikitakunai/">朝、仕事に行きたくないのはなぜ？「今日だけ」と「ずっとつらい」の境界線</a></div>
+      </div>
+      
     </div>
+    
   </aside>
 </div>
 
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-logo">Worelu</div>
-      <div class="footer-desc">働く人のためのセルフケアメディア。仕事ストレス・バーンアウト・転職まで、一人で抱え込まないための情報を届けます。</div>
-    </div>
-    <div>
-      <div class="footer-heading">サービス</div>
-      <div class="footer-links">
-        <a href="/stress-check/" class="footer-link">AIストレス診断</a>
-        <a href="/articles/" class="footer-link">記事一覧</a>
-        <a href="/about/" class="footer-link">運営者情報</a>
-      </div>
-    </div>
-    <div>
-      <div class="footer-heading">サイト情報</div>
-      <div class="footer-links">
-        <a href="/privacy/" class="footer-link">プライバシーポリシー</a>
-        <a href="/terms/" class="footer-link">利用規約</a>
-        <a href="/contact/" class="footer-link">お問い合わせ</a>
-      </div>
+<div class="related">
+  <div class="related-inner">
+    <div class="related-title">関連記事</div>
+    <div class="related-list">
+      
+      <a href="/articles/burnout/burnout-symptoms/" class="related-item">
+        <div>
+          <div class="related-cat">バーンアウト</div>
+          <div class="related-text">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</div>
+        </div>
+      </a>
+      
+      <a href="/articles/burnout/kyushoku-1month/" class="related-item">
+        <div>
+          <div class="related-cat">バーンアウト</div>
+          <div class="related-text">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</div>
+        </div>
+      </a>
+      
+      <a href="/articles/stress/asa-shigoto-ikitakunai/" class="related-item">
+        <div>
+          <div class="related-cat">症状・ストレス</div>
+          <div class="related-text">朝、仕事に行きたくないのはなぜ？「今日だけ」と「ずっとつらい」の境界線</div>
+        </div>
+      </a>
+      
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Worelu</div>
+</div>
+
+<footer style="background:#fff;border-top:1px solid var(--line);padding:40px 32px 28px">
+  <div style="max-width:760px;margin:0 auto">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:28px;margin-bottom:28px">
+      <div>
+        <div style="font-size:18px;font-weight:900;color:var(--text);letter-spacing:-0.04em">Wor<span style="color:var(--blue)">e</span>lu</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:2px">働く人のためのセルフケアメディア</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:10px;line-height:1.7;max-width:240px">仕事のストレスや悩みを、AIと記事でサポートします。</div>
+      </div>
+      <div style="display:flex;gap:40px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.06em;margin-bottom:12px">サービス</div>
+          <div style="display:grid;gap:8px">
+            <a href="/stress-check/" style="font-size:13px;color:var(--muted);text-decoration:none">AIストレス診断</a>
+            <a href="/articles/" style="font-size:13px;color:var(--muted);text-decoration:none">記事一覧</a>
+            <a href="/articles/stress/" style="font-size:13px;color:var(--muted);text-decoration:none">症状・ストレス</a>
+            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted);text-decoration:none">バーンアウト</a>
+            <a href="/articles/quit/" style="font-size:13px;color:var(--muted);text-decoration:none">転職・退職</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.06em;margin-bottom:12px">サイト情報</div>
+          <div style="display:grid;gap:8px">
+            <a href="/about/" style="font-size:13px;color:var(--muted);text-decoration:none">運営者情報</a>
+            <a href="/privacy/" style="font-size:13px;color:var(--muted);text-decoration:none">プライバシーポリシー</a>
+            <a href="/terms/" style="font-size:13px;color:var(--muted);text-decoration:none">利用規約</a>
+            <a href="/contact/" style="font-size:13px;color:var(--muted);text-decoration:none">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--line);padding-top:18px;text-align:right">
+      <div style="font-size:12px;color:var(--muted)">© 2026 Worelu</div>
+    </div>
+  </div>
 </footer>
 
 <script>
-const TOTAL_Q = 10;
-const scores = new Array(TOTAL_Q).fill(-1);
+// 見出しにIDを付与して目次を自動生成
+(function() {
+  const article = document.querySelector('.article-body');
+  if (!article) return;
 
-function selectOpt(btn, qIdx) {
-  const step = document.getElementById('step-' + qIdx);
-  step.querySelectorAll('.check-option').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-  scores[qIdx] = parseInt(btn.dataset.val);
-  const nextBtn = document.getElementById('nextBtn-' + qIdx);
-  if (nextBtn) nextBtn.disabled = false;
-}
+  const headings = article.querySelectorAll('h2, h3');
+  if (headings.length < 2) return;
 
-function goCheckNext(qIdx) {
-  if (scores[qIdx] < 0) return;
-  document.getElementById('step-' + qIdx).classList.remove('active');
-  const nextStep = document.getElementById('step-' + (qIdx + 1));
-  if (nextStep) {
-    nextStep.classList.add('active');
-    updateProgress(qIdx + 2);
-  }
-}
-
-function goCheckBack(qIdx) {
-  document.getElementById('step-' + qIdx).classList.remove('active');
-  document.getElementById('step-' + (qIdx - 1)).classList.add('active');
-  updateProgress(qIdx);
-}
-
-function updateProgress(current) {
-  const pct = (current / TOTAL_Q) * 100;
-  document.getElementById('checkProgFill').style.width = pct + '%';
-}
-
-function showCheckResult() {
-  if (scores[9] < 0) return;
-
-  // 全ステップを非表示
-  for (let i = 0; i < TOTAL_Q; i++) {
-    const s = document.getElementById('step-' + i);
-    if (s) s.classList.remove('active');
-  }
-  document.getElementById('checkProgFill').style.width = '100%';
-
-  const total = scores.reduce((a, b) => a + (b >= 0 ? b : 0), 0);
-  document.getElementById('resultNum').textContent = total;
-
-  const resultEl = document.getElementById('checkResult');
-  resultEl.classList.add('show');
-
-  // スコア別結果
-  let title, barLabel, barPct, barColor, heading, desc, action;
-
-  if (total <= 4) {
-    title = '燃え尽き傾向：低';
-    barPct = (total / 20) * 100;
-    barColor = '#2563EB';
-    barLabel = '今の状態は比較的安定しています';
-    heading = '今の状態はほぼ問題なし';
-    desc = '今のところ燃え尽き傾向は低い状態です。今のコンディションを維持するために、休息のリズムと睡眠を大切にしてください。';
-    action = '定期的にセルフチェックを行い、変化に早めに気づくことが大切です。';
-  } else if (total <= 9) {
-    title = '燃え尽き傾向：中程度';
-    barPct = (total / 20) * 100;
-    barColor = '#D97706';
-    barLabel = '一部のサインが出ています';
-    heading = 'いくつかのバーンアウトサインあり';
-    desc = '疲れやモチベーションの低下など、燃え尽きの初期サインが見られます。今のうちに休息と境界線の確保を意識しましょう。';
-    action = '今週できること：週2日は定時で帰る、休日に仕事のことを考えない時間を30分作る。';
-  } else if (total <= 14) {
-    title = '燃え尽き傾向：高';
-    barPct = (total / 20) * 100;
-    barColor = '#EA580C';
-    barLabel = '複数のバーンアウトサインが出ています';
-    heading = 'バーンアウト傾向が強く出ています';
-    desc = '複数の燃え尽きサインが重なっています。今すぐ回復を最優先にしてください。一人で抱え込まず、上司・産業医・信頼できる人への相談を検討してください。';
-    action = '休職を含めたサポートも選択肢の一つです。「頑張ればなんとかなる」は通用しない段階かもしれません。';
-  } else {
-    title = '燃え尽き傾向：非常に高い';
-    barPct = 100;
-    barColor = '#DC2626';
-    barLabel = '深刻なバーンアウトサインが出ています';
-    heading = '今すぐ専門家への相談を';
-    desc = 'ほぼすべての燃え尽きサインが出ています。一人で抱え込むことは危険な状態です。産業医・メンタルクリニック・かかりつけ医に相談することを強くおすすめします。';
-    action = '相談窓口：よりそいホットライン 0120-279-338（24時間）';
-  }
-
-  document.getElementById('resultTitle').textContent = title;
-  document.getElementById('resultBarLabel').textContent = barLabel;
-  document.getElementById('resultHeading').textContent = heading;
-  document.getElementById('resultDesc').textContent = desc;
-  document.getElementById('resultAction').textContent = action;
-
-  const fillEl = document.getElementById('resultBarFill');
-  fillEl.style.background = barColor;
-  setTimeout(() => { fillEl.style.width = barPct + '%'; }, 100);
-
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function resetCheck() {
-  scores.fill(-1);
-  document.getElementById('checkResult').classList.remove('show');
-  for (let i = 0; i < TOTAL_Q; i++) {
-    const s = document.getElementById('step-' + i);
-    if (s) {
-      s.classList.remove('active');
-      s.querySelectorAll('.check-option').forEach(b => b.classList.remove('selected'));
-      const nb = document.getElementById('nextBtn-' + i);
-      if (nb) nb.disabled = true;
+  // 各見出しにIDを付与
+  headings.forEach(function(h, i) {
+    if (!h.id) {
+      const id = 'heading-' + i;
+      h.id = id;
     }
+  });
+
+  // 目次ボックスを生成
+  const toc = document.createElement('div');
+  toc.className = 'toc-box';
+
+  const tocTitle = document.createElement('div');
+  tocTitle.className = 'toc-box-title';
+  tocTitle.textContent = '目次';
+  toc.appendChild(tocTitle);
+
+  const ul = document.createElement('ul');
+  ul.className = 'toc-list';
+
+  headings.forEach(function(h) {
+    const li = document.createElement('li');
+    li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    // スムーズスクロール
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById(h.id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, null, '#' + h.id);
+      }
+    });
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  toc.appendChild(ul);
+
+  // 記事の最初のh2の直前に挿入
+  const firstH2 = article.querySelector('h2');
+  if (firstH2) {
+    article.insertBefore(toc, firstH2);
   }
-  document.getElementById('step-0').classList.add('active');
-  document.getElementById('checkProgFill').style.width = '0%';
-  document.getElementById('checkBody').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
+})();
 </script>
 </body>
 </html>

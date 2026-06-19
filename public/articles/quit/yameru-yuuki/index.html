@@ -138,12 +138,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .author-cta{font-size:13px;color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 
 /* 記事末尾CTA */
-.bottom-cta{background:var(--text);border-radius:12px;margin:32px 0;overflow:hidden}
+.bottom-cta{background:var(--blue-soft);border:2px solid var(--blue-mid);border-radius:12px;margin:32px 0;overflow:hidden}
 .bottom-cta-inner{padding:32px 36px;text-align:center}
 .bottom-cta-label{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:0.1em;margin-bottom:10px}
-.bottom-cta-title{font-size:20px;font-weight:800;color:#FAF5EC;line-height:1.4;margin-bottom:12px}
+.bottom-cta-title{font-size:20px;font-weight:800;color:var(--text);line-height:1.4;margin-bottom:12px}
 .bottom-cta-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px;max-width:440px;margin-left:auto;margin-right:auto}
 .bottom-cta-btn{display:inline-flex;align-items:center;background:var(--blue);color:#fff;font-size:14px;font-weight:800;padding:14px 28px;border-radius:8px;text-decoration:none;margin-bottom:10px}
+.bottom-cta-btn:hover{background:var(--blue-dark)}
 .bottom-cta-note{font-size:11px;color:var(--muted)}
 
 /* 前後記事ナビ */
@@ -378,12 +379,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         </div>
       </div>
     </div>
-    <div style="border-top:1px solid var(--line);padding-top:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
-      <div style="display:flex;gap:18px">
-        <a href="/privacy/" style="font-size:12px;color:var(--muted);text-decoration:none">プライバシーポリシー</a>
-        <a href="/terms/" style="font-size:12px;color:var(--muted);text-decoration:none">利用規約</a>
-        <a href="/about/" style="font-size:12px;color:var(--muted);text-decoration:none">運営者情報</a>
-      </div>
+    <div style="border-top:1px solid var(--line);padding-top:18px;text-align:right">
       <div style="font-size:12px;color:var(--muted)">© 2026 Worelu</div>
     </div>
   </div>
