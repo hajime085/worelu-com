@@ -35,7 +35,81 @@ CATEGORY_LABELS = {
     "quit":    "転職・退職",
 }
 
-# ===== ユーティリティ =====
+# カテゴリ別カード表示設定
+CAT_CARD_STYLES = {
+    "stress":  {"bg": "#FEF2F2", "circle": "#FECACA", "fill": "#F87171", "badge_bg": "#FEE2E2", "badge_color": "#B91C1C"},
+    "burnout": {"bg": "#FFFBEB", "circle": "#FDE68A", "fill": "#F59E0B", "badge_bg": "#FEF3C7", "badge_color": "#92400E"},
+    "work":    {"bg": "#EFF6FF", "circle": "#BFDBFE", "fill": "#2563EB", "badge_bg": "#DBEAFE", "badge_color": "#1D4ED8"},
+    "quit":    {"bg": "#F5F3FF", "circle": "#DDD6FE", "fill": "#A78BFA", "badge_bg": "#EDE9FE", "badge_color": "#5B21B6"},
+}
+CAT_ICONS = {
+    "stress":  '<circle cx="26" cy="26" r="18" fill="{circle}"/><path d="M26 10c0 8-12 10-12 18a12 12 0 0024 0c0-8-12-10-12-18z" fill="{fill}"/>',
+    "burnout": '<circle cx="26" cy="26" r="18" fill="{circle}"/><path d="M26 10c0 8-12 10-12 18a12 12 0 0024 0c0-8-12-10-12-18z" fill="{fill}"/><path d="M26 22c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z" fill="#FCD34D"/>',
+    "work":    '<circle cx="26" cy="26" r="18" fill="{circle}"/><circle cx="26" cy="26" r="10" stroke="{fill}" stroke-width="2" fill="none"/><path d="M26 18v8l5 3" stroke="{fill}" stroke-width="2" stroke-linecap="round"/>',
+    "quit":    '<circle cx="26" cy="26" r="18" fill="{circle}"/><rect x="16" y="14" width="20" height="24" rx="3" fill="{fill}"/><path d="M20 22h12M20 28h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>',
+}
+
+def make_art_card(art: dict) -> str:
+    """記事カードHTMLを生成"""
+    cat = art['category']
+    c = CAT_CARD_STYLES.get(cat, CAT_CARD_STYLES['stress'])
+    cat_label = CATEGORY_LABELS.get(cat, cat)
+    icon = CAT_ICONS.get(cat, CAT_ICONS['stress']).format(circle=c['circle'], fill=c['fill'])
+    date_disp = art['date'].replace('-', '.')
+    desc = art['description'][:60] + ('…' if len(art['description']) > 60 else '')
+    return f'''      <a href="{art['url']}" class="art-card">
+        <div class="art-thumb" style="background:{c['bg']}">
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">{icon}</svg>
+          <div class="art-thumb-cat" style="background:{c['badge_bg']};color:{c['badge_color']}">{cat_label}</div>
+        </div>
+        <div class="art-body">
+          <div class="art-title">{art['title']}</div>
+          <div class="art-desc">{desc}</div>
+          <div class="art-footer"><span class="art-date">{date_disp}</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        </div>
+      </a>'''
+
+
+def build_top(articles: list):
+    """TOPページ（index.html）を記事データから自動生成"""
+    # 人気記事：固定3本（最初期から読まれている代表記事）
+    popular_slugs = ["nemurenai-asa", "moeyuki-selfcheck", "yameru-yuuki"]
+    popular = [a for slug in popular_slugs for a in articles if a['slug'] == slug]
+
+    # 新着記事：日付順で最新3本（人気記事と被らないもの）
+    popular_set = {a['slug'] for a in popular}
+    recent = [a for a in articles if a['slug'] not in popular_set][:3]
+
+    popular_html = '\n'.join(make_art_card(a) for a in popular)
+    recent_html = '\n'.join(make_art_card(a) for a in recent)
+
+    # TOPページHTMLを読み込んで該当セクションを置き換え
+    top_src = OUTPUT_DIR / "index.html"
+    if not top_src.exists():
+        print("  警告: public/index.html が見つかりません。スキップします。")
+        return
+
+    html = top_src.read_text(encoding="utf-8")
+
+    # 人気記事セクションを置き換え
+    import re
+    html = re.sub(
+        r'(<!-- 人気記事 -->.*?<div class="art-grid">)\s*.*?(\s*</div>\s*<div class="sec-more">)',
+        lambda m: m.group(1) + '\n' + popular_html + '\n    ' + m.group(2).lstrip(),
+        html, flags=re.DOTALL
+    )
+
+    # 新着記事セクションを置き換え
+    html = re.sub(
+        r'(<!-- 新着記事 -->.*?<div class="art-grid">)\s*.*?(\s*</div>\s*<div class="sec-more">)',
+        lambda m: m.group(1) + '\n' + recent_html + '\n    ' + m.group(2).lstrip(),
+        html, flags=re.DOTALL
+    )
+
+    top_src.write_text(html, encoding="utf-8")
+    print(f"  TOPページ: {top_src}")
+    print(f"    人気記事: {[a['slug'] for a in popular]}")
+    print(f"    新着記事: {[a['slug'] for a in recent]}")
 
 def parse_markdown(filepath: Path) -> dict:
     """Markdownファイルをパースしてフロントマターと本文を返す"""
@@ -279,6 +353,9 @@ def main():
 
     print("\nrobots.txtを生成中...")
     build_robots()
+
+    print("\nTOPページを更新中...")
+    build_top(articles)
 
     print(f"\n=== ビルド完了: {len(articles)}本の記事を生成しました ===")
     print(f"出力先: {OUTPUT_DIR.resolve()}/")
