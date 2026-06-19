@@ -31,6 +31,7 @@ OUTPUT_DIR = Path("public")
 CATEGORY_LABELS = {
     "stress":  "症状・ストレス",
     "burnout": "バーンアウト",
+    "work":    "労働問題",
     "quit":    "転職・退職",
 }
 
