@@ -587,11 +587,13 @@
     display: flex; flex-wrap: wrap; gap: 7px;
   }
   .topic-chip {
+    display: inline-flex; align-items: center; gap: 5px;
     padding: 6px 13px; border-radius: 999px;
     border: 1px solid var(--line); background: #fff;
     font-size: 12px; font-weight: 700; color: var(--text);
     cursor: pointer; transition: border-color 160ms, background 160ms, color 160ms;
   }
+  .topic-chip svg { flex-shrink: 0; }
   .topic-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
   .topic-chip.active { border-color: var(--accent); background: var(--accent); color: #fff; }
 
@@ -1164,21 +1166,45 @@ function renderResultPage() {
       <div class="topic-select">
         <div class="topic-select-label">今日は何について話しますか？</div>
         <div class="topic-chips">
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'ストレス・疲れ')">😮‍💨 ストレス・疲れ</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'バーンアウト')">🔥 バーンアウト</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'人間関係')">👥 人間関係</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'上司・ハラスメント')">⚡ 上司・ハラスメント</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'残業・労働問題')">⏰ 残業・労働問題</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'転職・退職')">🚀 転職・退職</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'眠れない・体の症状')">💤 眠れない・体の症状</button>
-          <button class="topic-chip" type="button" onclick="selectTopic(this,'その他')">💬 その他</button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'ストレス・疲れ')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            ストレス・疲れ
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'バーンアウト')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            バーンアウト
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'人間関係')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            人間関係
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'上司・ハラスメント')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            上司・ハラスメント
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'残業・労働問題')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            残業・労働問題
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'転職・退職')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            転職・退職
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'眠れない・体の症状')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            眠れない・体の症状
+          </button>
+          <button class="topic-chip" type="button" onclick="selectTopic(this,'その他')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            その他
+          </button>
         </div>
       </div>
       <div class="chat-log" id="chatMsgs">
         <div class="ai-bubble-wrap"><img src="/images/ai-coach.png" class="ai-bubble-icon" alt="AIコーチ"><div class="bubble ai">${getHeroTitle(dominant)}という結果が出ました。上のボタンで話したいテーマを選ぶか、直接気になっていることを入力してください。</div></div>
       </div>
       <div class="chat-form">
-        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off" onkeydown="if(event.key==='Enter')sendChat()">
+        <input class="chat-input" id="chatInput" type="text" placeholder="例：残業が減らせない、転職すべきか迷っている" autocomplete="off">
         <button class="btn primary" type="button" onclick="sendChat()">送る</button>
       </div>
     </section>
