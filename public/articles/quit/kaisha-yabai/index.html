@@ -671,14 +671,14 @@ function setFontSize(size) {
   try { localStorage.setItem('worelu-fontsize', size); } catch(e) {}
 }
 
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var saved = 'medium';
   try { saved = localStorage.getItem('worelu-fontsize') || 'medium'; } catch(e) {}
   document.body.classList.add('font-' + saved);
   var map = { small: 's', medium: 'm', large: 'l' };
   var btn = document.getElementById('fs-' + map[saved]);
   if (btn) btn.classList.add('fs-active');
-})();
+});
 </script>
 
 </body>
