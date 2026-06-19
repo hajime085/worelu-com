@@ -552,24 +552,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 </footer>
 
 <script>
-// 文字サイズ切り替え（スマホ用・localStorageで保持）
-function setFontSize(size) {
-  document.body.classList.remove('font-small', 'font-medium', 'font-large');
-  document.body.classList.add('font-' + size);
-  ['s','m','l'].forEach(function(k) {
-    document.getElementById('fs-' + k).classList.remove('fs-active');
-  });
-  var map = { small: 's', medium: 'm', large: 'l' };
-  var btn = document.getElementById('fs-' + map[size]);
-  if (btn) btn.classList.add('fs-active');
-  try { localStorage.setItem('worelu-fontsize', size); } catch(e) {}
-}
-(function() {
-  var saved = '';
-  try { saved = localStorage.getItem('worelu-fontsize') || 'medium'; } catch(e) { saved = 'medium'; }
-  setFontSize(saved);
-})();
-
 (function() {
   const article = document.querySelector('.article-body');
   if (!article) return;
@@ -718,31 +700,26 @@ function setFontSize(size) {
   <button class="fs-toggle" id="fsToggle" onclick="toggleFsPanel()" title="文字サイズ">文字</button>
 </div>
 
+<!-- 文字サイズ調整フローティングボタン（スマホのみ） -->
+<div class="font-size-float" id="fontSizeFloat">
+  <div class="fs-panel" id="fsPanel">
+    <div class="fs-panel-label">文字サイズ</div>
+    <button class="fs-btn fs-s" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
+    <button class="fs-btn fs-m" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
+    <button class="fs-btn fs-l" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
+  </div>
+  <button class="fs-toggle" id="fsToggle" onclick="toggleFsPanel()" title="文字サイズ">文字</button>
+</div>
+
 <script>
 function toggleFsPanel() {
   var panel = document.getElementById('fsPanel');
   var toggle = document.getElementById('fsToggle');
+  if (!panel || !toggle) return;
   var isOpen = panel.classList.contains('open');
-  if (isOpen) {
-    panel.classList.remove('open');
-    toggle.textContent = '文字';
-  } else {
-    panel.classList.add('open');
-    toggle.textContent = '×';
-  }
+  panel.classList.toggle('open', !isOpen);
+  toggle.textContent = isOpen ? '文字' : '×';
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('click', function(e) {
-    var float = document.getElementById('fontSizeFloat');
-    if (float && !float.contains(e.target)) {
-      var panel = document.getElementById('fsPanel');
-      var toggle = document.getElementById('fsToggle');
-      if (panel) panel.classList.remove('open');
-      if (toggle) toggle.textContent = '文字';
-    }
-  });
-});
 
 function setFontSize(size) {
   document.body.classList.remove('font-small', 'font-medium', 'font-large');
@@ -754,7 +731,6 @@ function setFontSize(size) {
   var map = { small: 's', medium: 'm', large: 'l' };
   var btn = document.getElementById('fs-' + map[size]);
   if (btn) btn.classList.add('fs-active');
-  // パネルを閉じる
   var panel = document.getElementById('fsPanel');
   var toggle = document.getElementById('fsToggle');
   if (panel) panel.classList.remove('open');
@@ -763,12 +739,24 @@ function setFontSize(size) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  // 文字サイズ初期化
   var saved = 'medium';
   try { saved = localStorage.getItem('worelu-fontsize') || 'medium'; } catch(e) {}
   document.body.classList.add('font-' + saved);
   var map = { small: 's', medium: 'm', large: 'l' };
   var btn = document.getElementById('fs-' + map[saved]);
   if (btn) btn.classList.add('fs-active');
+
+  // パネル外タップで閉じる
+  document.addEventListener('click', function(e) {
+    var float = document.getElementById('fontSizeFloat');
+    if (float && !float.contains(e.target)) {
+      var panel = document.getElementById('fsPanel');
+      var toggle = document.getElementById('fsToggle');
+      if (panel) panel.classList.remove('open');
+      if (toggle) toggle.textContent = '文字';
+    }
+  });
 });
 </script>
 
