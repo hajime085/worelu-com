@@ -99,7 +99,7 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-moumuri/
 
 Woreluのストレスチェック診断（無料・約1分）で、転職意向スコアを含む4軸で現状を確認してみてください。
 
-→ [無料でストレスチェックを受ける（worelu.com）](/stress-check/)
+→ [無料でストレスチェックを受ける](https://worelu.com)
 
 ---
 

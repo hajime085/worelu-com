@@ -85,7 +85,9 @@ canonical: https://worelu.com/articles/quit/black-kigyo-aruaru/
 今は大丈夫でも、定期的に確認しておかないと「いつから変わったか」がわからなくなります。
 
 Woreluのストレスチェック診断（無料・約1分）は、つらい状態の人だけでなく、予防として使うこともできます。
-→ [無料でストレスチェックを受ける（worelu.com）](/stress-check/)
+
+
+→ [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ
 

@@ -58,7 +58,9 @@ canonical: https://worelu.com/articles/work/service-zangyo-voluntary/
 その状態だと「疲れているのか、環境が問題なのか」の判断が難しくなります。今の状態を客観的に整理しておくと、動くべきかどうかが見えてきます。
 
 Woreluのストレスチェック診断（無料・登録不要・約1分）で、仕事ストレス・燃え尽き傾向・職場環境・転職意向の4軸から今の状態を可視化してみてください。
-→ [無料でストレスチェックを受ける（worelu.com）](/stress-check/)
+
+
+→ [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ
 
