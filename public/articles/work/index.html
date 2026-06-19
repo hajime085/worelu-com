@@ -203,5 +203,18 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     </div>
   </div>
 </footer>
+<script>
+document.querySelectorAll('.cat-item').forEach(function(item) {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelectorAll('.cat-item').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    this.classList.add('active');
+    var href = this.getAttribute('href');
+    setTimeout(function() { window.location.href = href; }, 150);
+  });
+});
+</script>
 </body>
 </html>
