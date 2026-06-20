@@ -4,7 +4,7 @@ description: "「仕事行きたくない…」毎朝の憂鬱に悩んでいま
 slug: "shigoto-ikitakunai-asa"
 category: "stress"
 tags: ["仕事行きたくない", "朝", "憂鬱"]
-date: "2026-07-14"
+date: "2026-05-17"
 draft: false
 ---
 ## 導入文

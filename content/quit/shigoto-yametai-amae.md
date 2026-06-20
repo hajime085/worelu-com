@@ -4,7 +4,7 @@ description: "「仕事辞めたい」と感じるあなたへ。その気持ち
 slug: "shigoto-yametai-amae"
 category: "quit"
 tags: ["仕事辞めたい", "甘え", "退職"]
-date: "2026-07-17"
+date: "2026-05-24"
 draft: false
 ---
 ## 導入文

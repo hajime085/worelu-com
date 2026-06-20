@@ -4,7 +4,7 @@ description: "「仕事が辛い、もう限界…」と感じていませんか
 slug: "stress-genkai-sign"
 category: "stress"
 tags: ["限界", "ストレスサイン", "仕事"]
-date: "2026-07-31"
+date: "2026-06-17"
 draft: false
 ---
 ## 導入文
