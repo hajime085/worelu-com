@@ -11,7 +11,11 @@
 <meta property="og:description" content="「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://worelu.com/articles/work/service-zangyo-atarimae/">
-
+<meta property="og:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%AE%8B%E6%A5%AD%E3%81%8C%E5%BD%93%E3%81%9F%E3%82%8A%E5%89%8D%E3%81%AE%E8%81%B7%E5%A0%B4%E3%81%AF%E7%95%B0%E5%B8%B8%E3%80%82%E3%81%9D%E3%81%AE%E3%81%BE%E3%81%BE%E7%B6%9A%E3%81%91%E3%81%A6%E3%81%AF%E3%81%84%E3%81%91%E3%81%AA%E3%81%84%E7%90%86%E7%94%B1&category=work">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%AE%8B%E6%A5%AD%E3%81%8C%E5%BD%93%E3%81%9F%E3%82%8A%E5%89%8D%E3%81%AE%E8%81%B7%E5%A0%B4%E3%81%AF%E7%95%B0%E5%B8%B8%E3%80%82%E3%81%9D%E3%81%AE%E3%81%BE%E3%81%BE%E7%B6%9A%E3%81%91%E3%81%A6%E3%81%AF%E3%81%84%E3%81%91%E3%81%AA%E3%81%84%E7%90%86%E7%94%B1&category=work">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -490,7 +494,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -527,15 +531,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        // 先に目次を閉じてからスクロール（アニメーション干渉を防ぐ）
+        var headerOffset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
-        setTimeout(function() {
-          var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-          history.pushState(null, null, '#' + h.id);
-        }, 320);
       });
       li.appendChild(a);
       ul.appendChild(li);

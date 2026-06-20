@@ -11,7 +11,11 @@
 <meta property="og:description" content="「職場の人間関係に疲れた…」「毎日、人間関係のストレスでヘトヘトだ」">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://worelu.com/articles/stress/shokuba-ningen-kankei-tsukareta/">
-
+<meta property="og:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E8%81%B7%E5%A0%B4%E3%81%AE%E4%BA%BA%E9%96%93%E9%96%A2%E4%BF%82%E3%81%A7%E7%96%B2%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%9C%EF%BC%9F%E6%80%A7%E6%A0%BC%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%80%81%E7%92%B0%E5%A2%83%E3%81%A8%E3%81%AE%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81&category=stress">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E8%81%B7%E5%A0%B4%E3%81%AE%E4%BA%BA%E9%96%93%E9%96%A2%E4%BF%82%E3%81%A7%E7%96%B2%E3%82%8C%E3%82%8B%E3%81%AE%E3%81%AF%E3%81%AA%E3%81%9C%EF%BC%9F%E6%80%A7%E6%A0%BC%E3%81%AE%E5%95%8F%E9%A1%8C%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%80%81%E7%92%B0%E5%A2%83%E3%81%A8%E3%81%AE%E3%83%9F%E3%82%B9%E3%83%9E%E3%83%83%E3%83%81&category=stress">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -628,7 +632,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -665,15 +669,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        // 先に目次を閉じてからスクロール（アニメーション干渉を防ぐ）
+        var headerOffset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
-        setTimeout(function() {
-          var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-          history.pushState(null, null, '#' + h.id);
-        }, 320);
       });
       li.appendChild(a);
       ul.appendChild(li);

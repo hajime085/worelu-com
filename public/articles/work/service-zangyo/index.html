@@ -11,7 +11,11 @@
 <meta property="og:description" content="サービス残業の違法性・具体例・証拠の集め方・残業代の請求手順・労基署・弁護士への相談方法まで一気通貫で解説する完全版ガイドです。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://worelu.com/articles/work/service-zangyo/">
-
+<meta property="og:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%AE%8B%E6%A5%AD%E3%81%AF%E9%81%95%E6%B3%95%E3%80%82%E6%AE%8B%E6%A5%AD%E4%BB%A3%E3%82%92%E5%8F%96%E3%82%8A%E6%88%BB%E3%81%99%E5%85%A8%E6%89%8B%E9%A0%86%E3%81%A8%E5%AF%BE%E5%87%A6%E6%B3%95%E3%80%90%E5%AE%8C%E5%85%A8%E7%89%88%E3%80%91&category=work">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%AE%8B%E6%A5%AD%E3%81%AF%E9%81%95%E6%B3%95%E3%80%82%E6%AE%8B%E6%A5%AD%E4%BB%A3%E3%82%92%E5%8F%96%E3%82%8A%E6%88%BB%E3%81%99%E5%85%A8%E6%89%8B%E9%A0%86%E3%81%A8%E5%AF%BE%E5%87%A6%E6%B3%95%E3%80%90%E5%AE%8C%E5%85%A8%E7%89%88%E3%80%91&category=work">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -643,7 +647,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -680,15 +684,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        // 先に目次を閉じてからスクロール（アニメーション干渉を防ぐ）
+        var headerOffset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
-        setTimeout(function() {
-          var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-          history.pushState(null, null, '#' + h.id);
-        }, 320);
       });
       li.appendChild(a);
       ul.appendChild(li);

@@ -11,7 +11,11 @@
 <meta property="og:description" content="辞めたいのに動けない5つの理由を整理し、辞めていい状態の判断基準と具体的な次の一歩を提案します。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://worelu.com/articles/quit/yameru-yuuki/">
-
+<meta property="og:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E4%BB%95%E4%BA%8B%E3%82%92%E8%BE%9E%E3%82%81%E3%82%8B%E5%8B%87%E6%B0%97%E3%81%8C%E5%87%BA%E3%81%AA%E3%81%84%E4%BA%BA%E3%81%B8%E3%80%82%E8%B8%8F%E3%81%BF%E5%87%BA%E3%81%9B%E3%81%AA%E3%81%845%E3%81%A4%E3%81%AE%E7%90%86%E7%94%B1%E3%81%A8%E3%80%81%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%B8%E3%81%AE%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%81%AA%E7%AD%94%E3%81%88&category=quit">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://worelu-ogp-worker.bulibuli-mushi.workers.dev/?title=%E4%BB%95%E4%BA%8B%E3%82%92%E8%BE%9E%E3%82%81%E3%82%8B%E5%8B%87%E6%B0%97%E3%81%8C%E5%87%BA%E3%81%AA%E3%81%84%E4%BA%BA%E3%81%B8%E3%80%82%E8%B8%8F%E3%81%BF%E5%87%BA%E3%81%9B%E3%81%AA%E3%81%845%E3%81%A4%E3%81%AE%E7%90%86%E7%94%B1%E3%81%A8%E3%80%81%E3%81%9D%E3%82%8C%E3%81%9E%E3%82%8C%E3%81%B8%E3%81%AE%E7%8F%BE%E5%AE%9F%E7%9A%84%E3%81%AA%E7%AD%94%E3%81%88&category=quit">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -497,7 +501,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -534,15 +538,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        // 先に目次を閉じてからスクロール（アニメーション干渉を防ぐ）
+        var headerOffset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
-        setTimeout(function() {
-          var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-          history.pushState(null, null, '#' + h.id);
-        }, 320);
       });
       li.appendChild(a);
       ul.appendChild(li);

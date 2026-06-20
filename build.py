@@ -24,6 +24,7 @@ from jinja2 import Environment, FileSystemLoader
 
 # ===== 設定 =====
 BASE_URL = "https://worelu.com"
+OGP_WORKER_URL = "https://worelu-ogp-worker.bulibuli-mushi.workers.dev"
 CONTENT_DIR = Path("content")
 TEMPLATE_DIR = Path("templates")
 OUTPUT_DIR = Path("public")
@@ -141,6 +142,9 @@ def parse_markdown(filepath: Path) -> dict:
     char_count = len(body_md)
     read_time = max(1, round(char_count / 700))
 
+    from urllib.parse import quote
+    ogp_image = f"{OGP_WORKER_URL}/?title={quote(meta.get('title', ''))}&category={category}"
+
     return {
         "title":        meta.get("title", ""),
         "description":  meta.get("description", ""),
@@ -157,6 +161,7 @@ def parse_markdown(filepath: Path) -> dict:
         "full_url":     f"{BASE_URL}/articles/{category}/{slug}/",
         "content":      body_html,
         "read_time":    read_time,
+        "ogp_image":    ogp_image,
     }
 
 
