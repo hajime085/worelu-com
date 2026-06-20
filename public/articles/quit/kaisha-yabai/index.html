@@ -486,24 +486,29 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   }
   fixBoldText(article);
 
-  // ② 目次を自動生成（アコーディオン型）
-  const headings = article.querySelectorAll('h2, h3');
-  if (headings.length >= 2) {
-    headings.forEach(function(h, i) {
-      if (!h.id) h.id = 'heading-' + i;
+  // ② 目次を自動生成（h2のみ・アコーディオン型）
+  const headings = article.querySelectorAll('h2');
+  // 除外する見出しテキスト
+  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const tocHeadings = Array.from(headings).filter(function(h) {
+    return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
+  });
+
+  if (tocHeadings.length >= 2) {
+    // IDを必ず上書き（既存IDがあってもtoc-用に統一）
+    tocHeadings.forEach(function(h, i) {
+      h.id = 'toc-' + i;
     });
 
     const toc = document.createElement('div');
     toc.className = 'toc-box';
 
-    // トグルボタン
     const btn = document.createElement('button');
     btn.className = 'toc-toggle';
     btn.type = 'button';
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML = '<span class="toc-toggle-label">目次</span><span class="toc-toggle-icon">+</span>';
 
-    // 本体
     const body = document.createElement('div');
     body.className = 'toc-body';
     const inner = document.createElement('div');
@@ -511,9 +516,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
     const ul = document.createElement('ul');
     ul.className = 'toc-list';
-    headings.forEach(function(h) {
+    tocHeadings.forEach(function(h) {
       const li = document.createElement('li');
-      li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
       const a = document.createElement('a');
       a.href = '#' + h.id;
       a.textContent = h.textContent;
@@ -521,7 +525,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
-        // クリック後に閉じる
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
@@ -542,7 +545,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     toc.appendChild(btn);
     toc.appendChild(body);
 
-    const firstH2 = article.querySelector('h2');
+    const firstH2 = tocHeadings[0];
     if (firstH2) article.insertBefore(toc, firstH2);
   }
 

@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>30代で「仕事辞めたい」は甘えじゃない。後悔しないための見極めと次の一歩 | Worelu</title>
+<title>30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法 | Worelu</title>
 <meta name="description" content="30代で「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、自分らしく働く未来を見つけるための具体的なステップを解説します。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://worelu.com/articles/quit/30dai-shigoto-yametai/">
-<meta property="og:title" content="30代で「仕事辞めたい」は甘えじゃない。後悔しないための見極めと次の一歩">
+<meta property="og:title" content="30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法">
 <meta property="og:description" content="30代で「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、自分らしく働く未来を見つけるための具体的なステップを解説します。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://worelu.com/articles/quit/30dai-shigoto-yametai/">
@@ -17,7 +17,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "30代で「仕事辞めたい」は甘えじゃない。後悔しないための見極めと次の一歩",
+  "headline": "30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法",
   "description": "30代で「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、自分らしく働く未来を見つけるための具体的なステップを解説します。",
   "datePublished": "2026-06-14",
   "dateModified": "2026-06-14",
@@ -306,7 +306,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       <a href="/articles/quit/">転職・退職</a>
     </div>
     <div class="hero-cat">転職・退職</div>
-    <h1 class="hero-h1">30代で「仕事辞めたい」は甘えじゃない。後悔しないための見極めと次の一歩</h1>
+    <h1 class="hero-h1">30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法</h1>
     <div class="hero-meta">
       <div class="hero-meta-row">
         <span>2026-06-14</span>
@@ -685,24 +685,29 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   }
   fixBoldText(article);
 
-  // ② 目次を自動生成（アコーディオン型）
-  const headings = article.querySelectorAll('h2, h3');
-  if (headings.length >= 2) {
-    headings.forEach(function(h, i) {
-      if (!h.id) h.id = 'heading-' + i;
+  // ② 目次を自動生成（h2のみ・アコーディオン型）
+  const headings = article.querySelectorAll('h2');
+  // 除外する見出しテキスト
+  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const tocHeadings = Array.from(headings).filter(function(h) {
+    return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
+  });
+
+  if (tocHeadings.length >= 2) {
+    // IDを必ず上書き（既存IDがあってもtoc-用に統一）
+    tocHeadings.forEach(function(h, i) {
+      h.id = 'toc-' + i;
     });
 
     const toc = document.createElement('div');
     toc.className = 'toc-box';
 
-    // トグルボタン
     const btn = document.createElement('button');
     btn.className = 'toc-toggle';
     btn.type = 'button';
     btn.setAttribute('aria-expanded', 'false');
     btn.innerHTML = '<span class="toc-toggle-label">目次</span><span class="toc-toggle-icon">+</span>';
 
-    // 本体
     const body = document.createElement('div');
     body.className = 'toc-body';
     const inner = document.createElement('div');
@@ -710,9 +715,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
     const ul = document.createElement('ul');
     ul.className = 'toc-list';
-    headings.forEach(function(h) {
+    tocHeadings.forEach(function(h) {
       const li = document.createElement('li');
-      li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
       const a = document.createElement('a');
       a.href = '#' + h.id;
       a.textContent = h.textContent;
@@ -720,7 +724,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
-        // クリック後に閉じる
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
@@ -741,7 +744,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     toc.appendChild(btn);
     toc.appendChild(body);
 
-    const firstH2 = article.querySelector('h2');
+    const firstH2 = tocHeadings[0];
     if (firstH2) article.insertBefore(toc, firstH2);
   }
 
