@@ -493,16 +493,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   }
   fixBoldText(article);
 
-  // ② 目次を自動生成（h2のみ・アコーディオン型）
-  const headings = article.querySelectorAll('h2');
-  // 除外する見出しテキスト
+  // ② 目次を自動生成（h2・h3対象・アコーディオン型）
+  const headings = article.querySelectorAll('h2, h3');
   const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
 
   if (tocHeadings.length >= 2) {
-    // IDを必ず上書き（既存IDがあってもtoc-用に統一）
+    // IDを強制上書き（既存IDとの競合を防ぐ）
     tocHeadings.forEach(function(h, i) {
       h.id = 'toc-' + i;
     });
@@ -525,12 +524,17 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     ul.className = 'toc-list';
     tocHeadings.forEach(function(h) {
       const li = document.createElement('li');
+      li.style.paddingLeft = h.tagName === 'H3' ? '14px' : '0';
       const a = document.createElement('a');
       a.href = '#' + h.id;
       a.textContent = h.textContent;
       a.addEventListener('click', function(e) {
         e.preventDefault();
-        document.getElementById(h.id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var target = document.getElementById(h.id);
+        if (!target) return;
+        var headerOffset = 72;
+        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
@@ -552,8 +556,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     toc.appendChild(btn);
     toc.appendChild(body);
 
-    const firstH2 = tocHeadings[0];
-    if (firstH2) article.insertBefore(toc, firstH2);
+    const firstH = tocHeadings[0];
+    if (firstH) article.insertBefore(toc, firstH);
   }
 
   // ③ FAQをアコーディオン化
@@ -647,17 +651,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <div class="fs-panel-label">文字サイズ</div>
     <button class="fs-btn fs-s" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
     <button class="fs-btn fs-m fs-active" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
-    <button class="fs-btn fs-l" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
-  </div>
-  <button class="fs-toggle" id="fsToggle" onclick="toggleFsPanel()" title="文字サイズ">文字</button>
-</div>
-
-<!-- 文字サイズ調整フローティングボタン（スマホのみ） -->
-<div class="font-size-float" id="fontSizeFloat">
-  <div class="fs-panel" id="fsPanel">
-    <div class="fs-panel-label">文字サイズ</div>
-    <button class="fs-btn fs-s" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
-    <button class="fs-btn fs-m" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
     <button class="fs-btn fs-l" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
   </div>
   <button class="fs-toggle" id="fsToggle" onclick="toggleFsPanel()" title="文字サイズ">文字</button>
