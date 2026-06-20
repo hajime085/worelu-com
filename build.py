@@ -143,7 +143,7 @@ def parse_markdown(filepath: Path) -> dict:
     read_time = max(1, round(char_count / 700))
 
     from urllib.parse import quote
-    ogp_image = f"{OGP_WORKER_URL}/?title={quote(meta.get('title', ''))}&category={category}"
+    ogp_image = f"{OGP_WORKER_URL}/?title={quote(meta.get('title', ''))}&category={category}&slug={slug}"
 
     return {
         "title":        meta.get("title", ""),
