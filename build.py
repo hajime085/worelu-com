@@ -24,7 +24,7 @@ from jinja2 import Environment, FileSystemLoader
 
 # ===== 設定 =====
 BASE_URL = "https://worelu.com"
-OGP_WORKER_URL = "https://worelu-ogp-vercel.vercel.app/api/og"
+OGP_WORKER_URL = "https://worelu-ogp-next.vercel.app/api/og"
 CONTENT_DIR = Path("content")
 TEMPLATE_DIR = Path("templates")
 OUTPUT_DIR = Path("public")
