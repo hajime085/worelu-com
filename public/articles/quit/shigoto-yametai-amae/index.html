@@ -529,11 +529,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>そして、心身を休ませ、信頼できる人に相談し、自己分析を徹底することで、次のステップに進む準備を整えることができます。円満退職のためには、退職の意思表示のタイミングと伝え方、引き止められた場合の対処法、そして丁寧な業務の引き継ぎが重要です。</p>
 <p>自分を責めるのはもうやめて、あなたらしくより良い未来を見つけるための一歩を、勇気を持って踏み出しましょう。あなたの人生は、あなた自身が選択し、切り開いていくものです。</p>
 <h2 id="faq">FAQ：「仕事辞めたい」に関するよくある質問</h2>
-<h3 id="q1">Q1: 転職先が決まる前に会社を辞めても大丈夫ですか？</h3>
+<h4 id="q1">Q1: 転職先が決まる前に会社を辞めても大丈夫ですか？</h4>
 <p>A1: 転職先が決まる前に会社を辞めることは、経済的なリスクを伴います。しかし、心身の健康が著しく損なわれている場合や、今の職場にいることが精神的に耐えられない場合は、自分を守るために退職を選ぶことも重要です。その際は、最低でも3ヶ月〜半年分の生活費を確保し、失業保険の受給なども検討しましょう。転職活動は在職中に行うのが一般的ですが、状況によっては退職後の活動も選択肢の一つです。</p>
-<h3 id="q2">Q2: 退職理由を正直に伝えるべきですか？</h3>
+<h4 id="q2">Q2: 退職理由を正直に伝えるべきですか？</h4>
 <p>A2: 円満退職のためには、退職理由を正直に伝えすぎない方が良い場合もあります。「人間関係が嫌で辞めます」といったネガティブな理由ではなく、「新しい分野に挑戦したい」「キャリアアップのため」など、前向きな理由を伝えるようにしましょう。本音と建前を使い分けることも、スムーズな退職には必要なスキルです。</p>
-<h3 id="q3">Q3: 「辞めたい」気持ちが一時的なものかどうかの見極め方は？</h3>
+<h4 id="q3">Q3: 「辞めたい」気持ちが一時的なものかどうかの見極め方は？</h4>
 <p>A3: 「辞めたい」気持ちが一時的なものか、それとも根本的な問題なのかを見極めるためには、以下の点を考慮してみましょう。</p>
 <ul>
 <li><strong>期間</strong>：その気持ちがどのくらいの期間続いているか。一時的なストレスや疲労であれば、数日〜数週間で回復することが多いです。数ヶ月以上続いている場合は、根本的な問題の可能性があります。</li>
@@ -688,7 +688,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -725,9 +725,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        var headerOffset = 72;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');

@@ -575,11 +575,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>大切なのは、まずその辛さを認め、自分を責めるのをやめること。そして、具体的な原因を特定し、今日からできる対処法を一つずつ実践していくことです。小さな成功体験を積み重ね、報連相を徹底し、時には周囲に頼る勇気を持つこと。そして、何よりも「完璧でなくても大丈夫」と自分に優しくなることが、自己否定を手放し、前向きに仕事に取り組むための鍵となります。</p>
 <p>もし、それでも状況が改善しない場合は、部署異動や転職、休職・退職、そして専門機関への相談など、自分を守るための選択肢を検討することも重要です。一人で抱え込まず、さまざまなサポートを活用しながら、あなたらしく、心穏やかに働ける場所を一緒に見つけていきましょう。あなたはきっと大丈夫です。</p>
 <h2 id="faq">FAQ：「仕事できない」に関するよくある質問</h2>
-<h3 id="q1">Q1: 「仕事できない」と感じるのは、私だけでしょうか？</h3>
+<h4 id="q1">Q1: 「仕事できない」と感じるのは、私だけでしょうか？</h4>
 <p>A1: いいえ、決してあなただけではありません。多くの人が仕事で壁にぶつかり、「自分は仕事ができないのではないか」と感じた経験があります。特に、新しい環境に身を置いた時や、責任のある仕事を任された時など、誰にでも起こりうる感情です。一人で抱え込まず、周囲に相談してみましょう。</p>
-<h3 id="q2">Q2: 仕事ができないと上司に相談しても良いでしょうか？</h3>
+<h4 id="q2">Q2: 仕事ができないと上司に相談しても良いでしょうか？</h4>
 <p>A2: はい、積極的に相談すべきです。上司はあなたの状況を把握し、適切なサポートをする責任があります。ただし、漠然と「仕事ができません」と伝えるのではなく、具体的に何に困っているのか、どのようなサポートが欲しいのかを明確に伝えることが大切です。相談することで、業務内容の調整や指導を受けられる可能性があります。</p>
-<h3 id="q3">Q3: 転職しても「仕事できない」状況は変わらないでしょうか？</h3>
+<h4 id="q3">Q3: 転職しても「仕事できない」状況は変わらないでしょうか？</h4>
 <p>A3: 転職によって状況が改善する可能性は十分にあります。今の職場の環境や業務内容があなたに合っていないだけで、あなたの能力が低いわけではないことがあります。転職活動を通じて自己分析を深め、あなたの強みを活かせる職場や、働きやすい環境を見つけることができれば、自信を持って仕事に取り組めるようになるでしょう。ただし、転職は根本的な解決策ではなく、自己成長と環境選びの両方が重要です。</p>
     </article>
 
@@ -728,7 +728,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -765,9 +765,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        var headerOffset = 72;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');

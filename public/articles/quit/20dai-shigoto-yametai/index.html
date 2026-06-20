@@ -533,11 +533,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>20代での転職には、未経験分野への挑戦のしやすさや、キャリアの軌道修正のしやすさといった多くのメリットがあります。一方で、短期離職と見なされるリスクや、収入が一時的に不安定になる可能性といったデメリットも存在します。これらのメリット・デメリットを理解した上で、自分にとって最適な選択をすることが大切です。</p>
 <p>「辞めたい」という気持ちは、あなたの未来をより良いものに変えるための原動力となり得ます。自分を責めるのはもうやめて、勇気を持って次の一歩を踏み出しましょう。あなたの20代は、無限の可能性を秘めています。自分らしく活躍できる場所を、一緒に見つけていきましょう。</p>
 <h2 id="faq20">FAQ：20代の「仕事辞めたい」に関するよくある質問</h2>
-<h3 id="q1-20">Q1: 20代で短期離職は転職に不利ですか？</h3>
+<h4 id="q1-20">Q1: 20代で短期離職は転職に不利ですか？</h4>
 <p>A1: 短期離職は、一般的に転職活動において不利に働く可能性があります。企業は「すぐに辞めてしまうのではないか」という懸念を抱くことがあります。しかし、20代のうちはリカバリーが比較的容易であり、明確な理由と次のキャリアプランを説明できれば、不利を克服することは可能です。例えば、「前職では〇〇という経験を積んだが、自分の目指すキャリアパスと異なると感じ、貴社で〇〇に挑戦したい」といった前向きな理由を具体的に伝えることが重要です。</p>
-<h3 id="q2">Q2: 転職先が決まる前に会社を辞めても大丈夫ですか？</h3>
+<h4 id="q2">Q2: 転職先が決まる前に会社を辞めても大丈夫ですか？</h4>
 <p>A2: 転職先が決まる前に会社を辞めることは、経済的なリスクを伴います。収入が途絶えることで、生活費の負担や精神的な焦りが生じる可能性があります。そのため、基本的には在職中に転職活動を進めることをおすすめします。しかし、心身の健康が著しく損なわれている場合や、今の職場にいることが精神的に耐えられない場合は、自分を守るために退職を選ぶことも重要です。その際は、最低でも3ヶ月〜半年分の生活費を確保し、失業保険の受給なども検討しましょう。</p>
-<h3 id="q3">Q3: 転職理由を面接でどう伝えれば良いですか？</h3>
+<h4 id="q3">Q3: 転職理由を面接でどう伝えれば良いですか？</h4>
 <p>A3: 面接で転職理由を伝える際は、ネガティブな理由をそのまま伝えるのではなく、ポジティブな表現に変換して伝えることが重要です。例えば、「人間関係が悪かった」ではなく「チームで協力し、より大きな成果を出せる環境で働きたい」、「給与が低かった」ではなく「自分のスキルや経験を正当に評価してくれる環境で、より貢献したい」といったように、前向きな姿勢と成長意欲をアピールしましょう。また、応募企業でなければならない理由と、自分の経験やスキルがどのように活かせるのかを具体的に伝えることで、採用担当者に良い印象を与えることができます。</p>
     </article>
 
@@ -686,7 +686,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -723,9 +723,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        var headerOffset = 72;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');

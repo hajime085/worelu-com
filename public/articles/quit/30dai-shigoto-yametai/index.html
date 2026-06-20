@@ -534,11 +534,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>30代での転職には、キャリアアップや年収アップの可能性、経験を活かした転職、ワークライフバランスの改善といった多くのメリットがあります。一方で、即戦力としての期待値の高さや、年収が下がるリスク、人間関係の再構築といったデメリットも存在します。これらのメリット・デメリットを理解した上で、自分にとって最適な選択をすることが大切です。</p>
 <p>「辞めたい」という気持ちは、あなたの未来をより良いものに変えるための原動力となり得ます。自分を責めるのはもうやめて、勇気を持って次の一歩を踏み出しましょう。あなたの30代は、これまでの経験を活かし、さらなる飛躍を遂げるための大切な時期です。自分らしく活躍できる場所を、一緒に見つけていきましょう。</p>
 <h2 id="faq30">FAQ：30代の「仕事辞めたい」に関するよくある質問</h2>
-<h3 id="q1-30">Q1: 30代での転職は難しいですか？</h3>
+<h4 id="q1-30">Q1: 30代での転職は難しいですか？</h4>
 <p>A1: 30代での転職は、20代に比べて「難しい」と感じる人もいますが、決して不可能ではありません。むしろ、これまでの経験やスキルが評価されるため、即戦力として期待されるポジションへの転職チャンスが多くあります。重要なのは、自分の強みや専門性を明確にし、それを活かせる企業を見つけることです。また、マネジメント経験やリーダーシップも高く評価されるポイントとなります。転職エージェントなどを活用し、戦略的に転職活動を進めることが成功の鍵です。</p>
-<h3 id="q2">Q2: 転職先が決まる前に会社を辞めても大丈夫ですか？</h3>
+<h4 id="q2">Q2: 転職先が決まる前に会社を辞めても大丈夫ですか？</h4>
 <p>A2: 転職先が決まる前に会社を辞めることは、経済的なリスクを伴います。特に30代は、住宅ローンや教育費など、経済的な負担が大きい場合も多いため、慎重な判断が必要です。基本的には在職中に転職活動を進めることをおすすめします。しかし、心身の健康が著しく損なわれている場合や、今の職場にいることが精神的に耐えられない場合は、自分を守るために退職を選ぶことも重要です。その際は、最低でも半年〜1年分の生活費を確保し、失業保険の受給なども検討しましょう。</p>
-<h3 id="q3">Q3: 転職理由を面接でどう伝えれば良いですか？</h3>
+<h4 id="q3">Q3: 転職理由を面接でどう伝えれば良いですか？</h4>
 <p>A3: 面接で転職理由を伝える際は、ネガティブな理由をそのまま伝えるのではなく、ポジティブな表現に変換して伝えることが重要です。例えば、「給与が低かった」ではなく「自分の経験やスキルを活かし、より高いレベルで貢献できる環境を求めている」、「人間関係が悪かった」ではなく「チームで協力し、切磋琢磨できる環境で働きたい」といったように、前向きな姿勢と成長意欲をアピールしましょう。また、応募企業でなければならない理由と、自分の経験やスキルがどのように活かせるのかを具体的に伝えることで、採用担当者に良い印象を与えることができます。30代の面接では、これまでの実績と、入社後にどのように貢献できるかを具体的に伝えることが特に重要です。</p>
     </article>
 
@@ -687,7 +687,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -724,9 +724,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        var headerOffset = 72;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');

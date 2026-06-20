@@ -451,7 +451,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -488,9 +488,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        var headerOffset = 72;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');

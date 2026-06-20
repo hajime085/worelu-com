@@ -560,11 +560,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>大切なのは、自分の繊細な気質を理解し、受け入れること。そして、その特性を活かせる仕事や働き方を見つけることです。無理に自分を変えようとせず、あなたらしさを大切にできる場所を探しましょう。</p>
 <p>この記事で紹介したHSPに向いている仕事や、仕事を続けるためのコツ、そして今の職場が合わないと感じたときの選択肢が、あなたが自分らしく、心穏やかに働くための一助となれば幸いです。一人で抱え込まず、時には周囲のサポートも借りながら、あなたの繊細さを強みに変えて、自分らしいキャリアを築いていってください。</p>
 <h2 id="faqhsp">FAQ：HSPの仕事に関するよくある質問</h2>
-<h3 id="q1-hsp">Q1: HSPは病気ですか？</h3>
+<h4 id="q1-hsp">Q1: HSPは病気ですか？</h4>
 <p>A1: HSPは病気や障害ではなく、生まれつき持っている「気質」や「特性」の一つです。人口の約5人に1人がHSPの特性を持っていると言われています。治療の必要はありませんが、HSPの特性によって心身の不調を感じる場合は、専門家への相談も検討しましょう。</p>
-<h3 id="q2-hsp">Q2: HSPの人が仕事で一番気をつけるべきことは何ですか？</h3>
+<h4 id="q2-hsp">Q2: HSPの人が仕事で一番気をつけるべきことは何ですか？</h4>
 <p>A2: HSPの人が仕事で最も気をつけるべきは、「刺激の過剰摂取」と「自己否定」です。外部からの刺激に敏感なため、疲れやすく、また他人の言動を深く受け止めすぎて自分を責めてしまいがちです。自分のトリガーを知り、意識的に休息を取り、自分を肯定する視点を持つことが大切です。</p>
-<h3 id="q3-hsp">Q3: HSPの特性は治せますか？</h3>
+<h4 id="q3-hsp">Q3: HSPの特性は治せますか？</h4>
 <p>A3: HSPは生まれ持った気質であるため、「治す」というものではありません。しかし、自分の特性を理解し、それに合わせた環境選びや対処法を身につけることで、HSPの特性と上手に付き合い、より快適に生活したり仕事に取り組んだりすることは可能です。専門家やカウンセリングのサポートも有効です。</p>
     </article>
 
@@ -713,7 +713,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   // ② 目次を自動生成（h2・h3対象・アコーディオン型）
   const headings = article.querySelectorAll('h2, h3');
-  const TOC_EXCLUDE = ['目次', '導入文', 'FAQ', 'よくある質問', 'まとめ'];
+  const TOC_EXCLUDE = ['目次', '導入文', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8'];
   const tocHeadings = Array.from(headings).filter(function(h) {
     return !TOC_EXCLUDE.some(function(ex) { return h.textContent.trim().startsWith(ex); });
   });
@@ -750,9 +750,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        var headerOffset = 72;
-        var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: top, behavior: 'smooth' });
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         history.pushState(null, null, '#' + h.id);
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
