@@ -576,11 +576,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         e.preventDefault();
         var target = document.getElementById(h.id);
         if (!target) return;
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState(null, null, '#' + h.id);
+        // 先に目次を閉じてからスクロール（アニメーション干渉を防ぐ）
         body.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
         btn.querySelector('.toc-toggle-icon').textContent = '+';
+        setTimeout(function() {
+          var top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+          history.pushState(null, null, '#' + h.id);
+        }, 320);
       });
       li.appendChild(a);
       ul.appendChild(li);
