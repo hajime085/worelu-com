@@ -692,7 +692,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 /* 全記事データ（build.pyが自動生成） */
-window.WORELU_ARTICLES = {{ all_articles_json }};
+window.WORELU_ARTICLES = {{ all_articles_json | safe }};
 
 window.CATEGORY_LABELS = {
   'stress': '症状・ストレス',
