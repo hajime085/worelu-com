@@ -318,7 +318,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         
       </div>
       <div class="hero-meta-row">
-        <span>約33分で読めます</span>
+        <span>約34分で読めます</span>
         <div class="hero-sep"></div>
         <span>Worelu編集部</span>
       </div>
@@ -370,7 +370,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <div style="font-size:20px;font-weight:900;color:#0F172A;margin-bottom:6px">限界サイン チェックリスト</div>
 <div style="font-size:13px;color:#64748B;margin-bottom:24px">当てはまる項目にチェックを入れてください</div>
 
-<div style="font-size:14px;font-weight:800;color:#EF4444;margin:16px 0 10px;padding:6px 12px;background:#FEF2F2;border-radius:6px">🔴 体のサイン</div>
+<div style="font-size:14px;font-weight:800;color:#EF4444;margin:16px 0 10px;padding:6px 12px;background:#FEF2F2;border-radius:6px"><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px"><circle cx="6" cy="6" r="6" fill="#EF4444"/></svg> 体のサイン</div>
 <div id="body-checks">
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="body"> 朝、ベッドから起き上がるのがつらい・体が重い</label>
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="body"> 寝ても疲れが取れない・常にだるい</label>
@@ -383,7 +383,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="body"> 原因不明のじんましんや皮膚炎が出た</label>
 </div>
 
-<div style="font-size:14px;font-weight:800;color:#F59E0B;margin:20px 0 10px;padding:6px 12px;background:#FFFBEB;border-radius:6px">🟡 感情のサイン</div>
+<div style="font-size:14px;font-weight:800;color:#F59E0B;margin:20px 0 10px;padding:6px 12px;background:#FFFBEB;border-radius:6px"><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px"><circle cx="6" cy="6" r="6" fill="#F59E0B"/></svg> 感情のサイン</div>
 <div id="emotion-checks">
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="emotion"> 以前楽しかったことに興味が持てない・やる気が出ない</label>
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="emotion"> 常に気分が沈んでいる・憂鬱な気持ちが続く</label>
@@ -396,7 +396,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="emotion"> 悲しくもないのに涙が止まらないことがある</label>
 </div>
 
-<div style="font-size:14px;font-weight:800;color:#7C3AED;margin:20px 0 10px;padding:6px 12px;background:#F5F3FF;border-radius:6px">🟣 行動のサイン</div>
+<div style="font-size:14px;font-weight:800;color:#7C3AED;margin:20px 0 10px;padding:6px 12px;background:#F5F3FF;border-radius:6px"><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px"><circle cx="6" cy="6" r="6" fill="#7C3AED"/></svg> 行動のサイン</div>
 <div id="action-checks">
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="action"> 集中力が続かず・仕事のミスが増えた</label>
 <label class="gc-item"><input type="checkbox" class="gc-cb" data-group="action"> 仕事の効率が著しく落ちた・時間がかかる</label>
@@ -434,33 +434,41 @@ function calcGenkai(){
   var action=document.querySelectorAll('[data-group="action"]:checked').length;
   var total=body+emotion+action;
   var r=document.getElementById('gc-result');
-  var msg='',bg='',border='',icon='';
+  var msg='',bg='',border='',level='';
   if(total===0){
-    msg='チェックがありません。もう一度見直してみてください。'; bg='#F8FAFC'; border='#E2E8F0'; icon='📋';
+    msg='チェックがありません。もう一度見直してみてください。';
+    bg='#F8FAFC'; border='#E2E8F0'; level='';
   } else if(total<=5){
-    msg='<strong>今のところ、心身のバランスは保てています。</strong><br>気になる症状がある場合は、早めに休息を取るよう心がけましょう。'; bg='#F0FDF4'; border='#86EFAC'; icon='✅';
+    msg='<strong>今のところ、心身のバランスは保てています。</strong><br>気になる症状がある場合は、早めに休息を取るよう心がけましょう。';
+    bg='#F0FDF4'; border='#86EFAC'; level='OK';
   } else if(total<=10){
+    var cats='';
+    if(body>=3) cats+='[体] ';
+    if(emotion>=3) cats+='[感情] ';
+    if(action>=3) cats+='[行動] ';
     msg='<strong>心身に疲れがたまってきているサインです。</strong><br>'+
     '体・感情・行動に変化が出始めています。今すぐ休息を増やし、一人で抱え込まないようにしましょう。'+
-    '特に気になるカテゴリ：'+(body>=3?'🔴体 ':'')+(emotion>=3?'🟡感情 ':'')+(action>=3?'🟣行動 '':'')+'<br><br>→ <a href="/stress-check/" style="color:#2563EB;font-weight:700">AIコーチに相談する（無料）</a>'; 
-    bg='#FFFBEB'; border='#FCD34D'; icon='⚠️';
+    (cats ? '<br>特に気になるカテゴリ：'+cats : '')+
+    '<br><br><a href="/stress-check/" style="color:#2563EB;font-weight:700">AIコーチに相談する（無料）</a>';
+    bg='#FFFBEB'; border='#FCD34D'; level='WARNING';
   } else if(total<=19){
     msg='<strong>心身がかなり疲弊しています。限界サインが出ています。</strong><br>'+
     '全'+total+'項目が当てはまりました。仕事のペースを落とすか、信頼できる人や専門家への相談を強くおすすめします。一人で解決しようとしないでください。'+
-    '<br><br>→ <a href="/stress-check/" style="color:#DC2626;font-weight:700">今すぐAI診断で状態を確認する（無料）</a>'; 
-    bg='#FEF2F2'; border='#FCA5A5'; icon='🚨';
+    '<br><br><a href="/stress-check/" style="color:#DC2626;font-weight:700">今すぐAI診断で状態を確認する（無料）</a>';
+    bg='#FEF2F2'; border='#FCA5A5'; level='DANGER';
   } else {
     msg='<strong>深刻な限界サインです。今すぐ休んでください。</strong><br>'+
     '全'+total+'項目が当てはまりました。これだけ多くのサインが出ているなら、あなたの心身は今、本当に限界です。医療機関への受診や、信頼できる人への相談を最優先にしてください。仕事よりも、あなた自身が大切です。'+
-    '<br><br>→ <a href="/stress-check/" style="color:#DC2626;font-weight:700">AIコーチに相談する（無料）</a>'; 
-    bg='#FEF2F2'; border='#EF4444'; icon='🆘';
+    '<br><br><a href="/stress-check/" style="color:#DC2626;font-weight:700">AIコーチに相談する（無料）</a>';
+    bg='#FEF2F2'; border='#EF4444'; level='CRITICAL';
   }
   r.style.display='block';
   r.style.background=bg;
   r.style.borderColor=border;
-  r.innerHTML='<div style="font-size:22px;margin-bottom:8px">'+icon+'</div>'+
-    '<div style="font-size:13px;color:#64748B;margin-bottom:4px">チェック結果：計<strong style="font-size:18px;color:#0F172A;margin:0 2px">'+total+'</strong>項目（体:'+body+'/ 感情:'+emotion+'/ 行動:'+action+'）</div>'+
-    '<div style="font-size:15px;color:#0F172A;line-height:1.7;margin-top:8px">'+msg+'</div>';
+  r.innerHTML=
+    '<div style="font-size:11px;font-weight:800;color:#64748B;letter-spacing:0.08em;margin-bottom:6px">'+level+'</div>'+
+    '<div style="font-size:13px;color:#64748B;margin-bottom:8px">チェック結果：計 <strong style="font-size:20px;color:#0F172A;margin:0 2px">'+total+'</strong> 項目（体:'+body+' / 感情:'+emotion+' / 行動:'+action+'）</div>'+
+    '<div style="font-size:15px;color:#0F172A;line-height:1.7">'+msg+'</div>';
   r.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function resetGenkai(){
