@@ -130,7 +130,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 /* 診断結果カルーセル */
 .diag-carousel { margin-top: 28px; }
 .diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
-.diag-carousel-track-wrap { position: relative; }
+.diag-carousel-track-wrap { position: relative; overflow: hidden; }
 .diag-carousel-track { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; scrollbar-width: none; }
 .diag-carousel-track::-webkit-scrollbar { display: none; }
 .diag-carousel-card { flex: 0 0 220px; scroll-snap-align: start; background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
@@ -146,6 +146,10 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .diag-carousel-nav { display: flex; gap: 8px; margin-top: 12px; justify-content: flex-end; }
 .diag-carousel-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--white); cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 16px; transition: all 0.15s; }
 .diag-carousel-btn:hover { border-color: var(--blue); color: var(--blue); }
+/* スマホ：カード幅を2枚並び固定 */
+@media (max-width: 600px) {
+  .diag-carousel-card { flex: 0 0 calc(50% - 6px); }
+}
 
 /* 参考資料 */
 .ref-block{background:var(--page);border-radius:8px;padding:18px 22px;margin:24px 0;border:1px solid var(--line)}
@@ -924,20 +928,23 @@ window.showDiagCarousel = function(categories, containerId) {
 
   var articles = window.WORELU_ARTICLES || [];
   var currentSlug = 'asa-shigoto-ikitakunai';
+  var isMobile = window.innerWidth <= 600;
 
-  // カテゴリに合致する記事を抽出（現在記事除外・最大10本）
+  // カテゴリに合致する記事を抽出
   var matched = articles.filter(function(a) {
     return a.slug !== currentSlug && categories.indexOf(a.category) !== -1;
-  }).slice(0, 10);
+  });
 
   // 足りなければ全カテゴリから補完
-  if (matched.length < 5) {
+  if (matched.length < 4) {
     var extra = articles.filter(function(a) {
       return a.slug !== currentSlug && categories.indexOf(a.category) === -1;
-    }).slice(0, 5 - matched.length);
+    });
     matched = matched.concat(extra);
   }
 
+  // スマホは4記事、PCは最大10記事
+  matched = matched.slice(0, isMobile ? 4 : 10);
   if (matched.length === 0) return;
 
   var cards = matched.map(function(a) {
@@ -950,17 +957,34 @@ window.showDiagCarousel = function(categories, containerId) {
     '</a>';
   }).join('');
 
+  // スマホ：ナビボタン非表示
+  var navHtml = isMobile ? '' :
+    '<div class="diag-carousel-nav">' +
+      '<button class="diag-carousel-btn" onclick="diagCarouselScroll(-1)" aria-label="前へ">&#8592;</button>' +
+      '<button class="diag-carousel-btn" onclick="diagCarouselScroll(1)" aria-label="次へ">&#8594;</button>' +
+    '</div>';
+
   container.innerHTML =
     '<div class="diag-carousel">' +
       '<div class="diag-carousel-title">あなたの傾向に合った記事</div>' +
       '<div class="diag-carousel-track-wrap">' +
         '<div class="diag-carousel-track" id="diag-track">' + cards + '</div>' +
       '</div>' +
-      '<div class="diag-carousel-nav">' +
-        '<button class="diag-carousel-btn" onclick="diagCarouselScroll(-1)" aria-label="前へ">&#8592;</button>' +
-        '<button class="diag-carousel-btn" onclick="diagCarouselScroll(1)" aria-label="次へ">&#8594;</button>' +
-      '</div>' +
+      navHtml +
     '</div>';
+
+  // スマホ：2枚ずつ自動スライド
+  if (isMobile) {
+    var track = document.getElementById('diag-track');
+    if (!track) return;
+    var autoIdx = 0;
+    var total = matched.length;
+    setInterval(function() {
+      autoIdx = (autoIdx + 2) % total;
+      var cardWidth = track.clientWidth / 2 + 12;
+      track.scrollTo({ left: autoIdx * cardWidth, behavior: 'smooth' });
+    }, 3000);
+  }
 };
 
 window.diagCarouselScroll = function(dir) {
