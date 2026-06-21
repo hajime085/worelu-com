@@ -204,6 +204,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .toc-list a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 /* 見出しにidを付けてスクロールオフセット調整 */
+.article-body table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+.article-body th { background: var(--blue-soft); color: var(--text); font-weight: 700; padding: 10px 14px; border: 1px solid var(--blue-mid); text-align: left; }
+.article-body td { padding: 10px 14px; border: 1px solid var(--line); vertical-align: top; line-height: 1.6; }
+.article-body tr:nth-child(even) td { background: #F8FAFC; }
+@media (max-width: 600px) {
+  .article-body table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
 .article-body h2 { scroll-margin-top: 72px; }
 .article-body h3 { scroll-margin-top: 72px; }
 
