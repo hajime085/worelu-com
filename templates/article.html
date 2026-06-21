@@ -127,6 +127,25 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .related-item:hover { border-color: var(--blue); }
 .related-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 3px; }
 .related-text { font-size: 13px; font-weight: 600; line-height: 1.5; }
+/* 診断結果カルーセル */
+.diag-carousel { margin-top: 28px; }
+.diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
+.diag-carousel-track-wrap { position: relative; }
+.diag-carousel-track { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; scrollbar-width: none; }
+.diag-carousel-track::-webkit-scrollbar { display: none; }
+.diag-carousel-card { flex: 0 0 220px; scroll-snap-align: start; background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
+.diag-carousel-card:hover { border-color: var(--blue); }
+.diag-carousel-bar { height: 4px; }
+.diag-carousel-bar.stress { background: #DC2626; }
+.diag-carousel-bar.burnout { background: #D97706; }
+.diag-carousel-bar.work { background: #2563EB; }
+.diag-carousel-bar.quit { background: #7C3AED; }
+.diag-carousel-body { padding: 14px; }
+.diag-carousel-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
+.diag-carousel-text { font-size: 13px; font-weight: 700; line-height: 1.5; color: var(--text); }
+.diag-carousel-nav { display: flex; gap: 8px; margin-top: 12px; justify-content: flex-end; }
+.diag-carousel-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--white); cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 16px; transition: all 0.15s; }
+.diag-carousel-btn:hover { border-color: var(--blue); color: var(--blue); }
 
 /* 参考資料 */
 .ref-block{background:var(--page);border-radius:8px;padding:18px 22px;margin:24px 0;border:1px solid var(--line)}
@@ -667,5 +686,67 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+/* 全記事データ（build.pyが自動生成） */
+window.WORELU_ARTICLES = {{ all_articles_json }};
+
+window.CATEGORY_LABELS = {
+  'stress': '症状・ストレス',
+  'burnout': 'バーンアウト',
+  'work': '労働問題',
+  'quit': '転職・退職'
+};
+
+/* 診断結果カルーセルを表示する関数（チェックリスト診断から呼び出す） */
+window.showDiagCarousel = function(categories, containerId) {
+  var container = document.getElementById(containerId);
+  if (!container) return;
+
+  var articles = window.WORELU_ARTICLES || [];
+  var currentSlug = '{{ slug }}';
+
+  // カテゴリに合致する記事を抽出（現在記事除外・最大10本）
+  var matched = articles.filter(function(a) {
+    return a.slug !== currentSlug && categories.indexOf(a.category) !== -1;
+  }).slice(0, 10);
+
+  // 足りなければ全カテゴリから補完
+  if (matched.length < 5) {
+    var extra = articles.filter(function(a) {
+      return a.slug !== currentSlug && categories.indexOf(a.category) === -1;
+    }).slice(0, 5 - matched.length);
+    matched = matched.concat(extra);
+  }
+
+  if (matched.length === 0) return;
+
+  var cards = matched.map(function(a) {
+    return '<a href="' + a.url + '" class="diag-carousel-card">' +
+      '<div class="diag-carousel-bar ' + a.category + '"></div>' +
+      '<div class="diag-carousel-body">' +
+        '<div class="diag-carousel-cat">' + (CATEGORY_LABELS[a.category] || a.category) + '</div>' +
+        '<div class="diag-carousel-text">' + a.title + '</div>' +
+      '</div>' +
+    '</a>';
+  }).join('');
+
+  container.innerHTML =
+    '<div class="diag-carousel">' +
+      '<div class="diag-carousel-title">あなたの傾向に合った記事</div>' +
+      '<div class="diag-carousel-track-wrap">' +
+        '<div class="diag-carousel-track" id="diag-track">' + cards + '</div>' +
+      '</div>' +
+      '<div class="diag-carousel-nav">' +
+        '<button class="diag-carousel-btn" onclick="diagCarouselScroll(-1)" aria-label="前へ">&#8592;</button>' +
+        '<button class="diag-carousel-btn" onclick="diagCarouselScroll(1)" aria-label="次へ">&#8594;</button>' +
+      '</div>' +
+    '</div>';
+};
+
+window.diagCarouselScroll = function(dir) {
+  var track = document.getElementById('diag-track');
+  if (track) track.scrollBy({ left: dir * 232, behavior: 'smooth' });
+};
+</script>
 </body>
 </html>
