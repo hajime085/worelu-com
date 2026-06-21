@@ -215,34 +215,62 @@ def build_articles(env: Environment, articles: list):
         print(f"  記事: {out}")
 
 
+PER_PAGE = 10
+
+def build_paginated(env, tpl, all_articles, base_path, categories, base_url):
+    """ページネーション付きで記事一覧を生成"""
+    import math
+    total = len(all_articles)
+    total_pages = max(1, math.ceil(total / PER_PAGE))
+
+    for page in range(1, total_pages + 1):
+        start = (page - 1) * PER_PAGE
+        page_articles = all_articles[start:start + PER_PAGE]
+
+        pagination = {
+            "current": page,
+            "total": total_pages,
+            "has_prev": page > 1,
+            "has_next": page < total_pages,
+            "prev_url": f"{base_url}" if page == 2 else f"{base_url}page/{page - 1}/",
+            "next_url": f"{base_url}page/{page + 1}/",
+            "pages": list(range(1, total_pages + 1)),
+            "base_url": base_url,
+        }
+
+        html = tpl.render(
+            articles=page_articles,
+            categories=categories,
+            pagination=pagination,
+        )
+
+        if page == 1:
+            out = OUTPUT_DIR / base_path / "index.html"
+        else:
+            out = OUTPUT_DIR / base_path / "page" / str(page) / "index.html"
+
+        write_file(out, html)
+        print(f"    ページ{page}: {out}")
+
+
 def build_article_list(env: Environment, articles: list):
-    """記事一覧ページを生成"""
+    """記事一覧ページを生成（ページネーション付き）"""
     tpl = env.get_template("article-list.html")
-    cats = [
-        {"slug": slug, "label": label}
-        for slug, label in CATEGORY_LABELS.items()
-    ]
-    html = tpl.render(articles=articles, categories=cats)
-    out = OUTPUT_DIR / "articles" / "index.html"
-    write_file(out, html)
-    print(f"  記事一覧: {out}")
+    cats = [{"slug": slug, "label": label} for slug, label in CATEGORY_LABELS.items()]
+    print(f"  記事一覧（全{len(articles)}本）:")
+    build_paginated(env, tpl, articles, Path("articles"), cats, "/articles/")
 
 
 def build_category_pages(env: Environment, articles: list):
-    """カテゴリ別一覧ページを生成"""
+    """カテゴリ別一覧ページを生成（ページネーション付き）"""
     tpl = env.get_template("article-list.html")
-    cats = [
-        {"slug": slug, "label": label}
-        for slug, label in CATEGORY_LABELS.items()
-    ]
+    cats = [{"slug": slug, "label": label} for slug, label in CATEGORY_LABELS.items()]
     for cat_slug, cat_label in CATEGORY_LABELS.items():
         cat_articles = [a for a in articles if a["category"] == cat_slug]
         if not cat_articles:
             continue
-        html = tpl.render(articles=cat_articles, categories=cats)
-        out = OUTPUT_DIR / "articles" / cat_slug / "index.html"
-        write_file(out, html)
-        print(f"  カテゴリ: {out}")
+        print(f"  カテゴリ {cat_slug}（{len(cat_articles)}本）:")
+        build_paginated(env, tpl, cat_articles, Path("articles") / cat_slug, cats, f"/articles/{cat_slug}/")
 
 
 def build_sitemap(articles: list):
