@@ -25,19 +25,53 @@ draft: false
 
 ### ケース1：Aさん（30代・営業職）「体は正直。寝ても疲れが取れない日々」
 
-「毎日残業続きで、休日も仕事のことが頭から離れませんでした。朝起きると体が鉛のように重く、寝ても寝ても疲れが取れない。食欲もなくて、体重もどんどん減っていきました。<br><br>最初は『疲れているだけ』と思っていましたが、ある日、通勤電車の中で突然涙が止まらなくなって。病院に行ったら、『自律神経失調症』と診断されました。もっと早く自分の体のサインに気づいていれば…と後悔しています。」
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_011.webp" alt="Aさん・30代" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #BFDBFE">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Aさん・30代<br>営業職</div>
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #BFDBFE"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #EFF6FF"></div>
+    <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「毎日残業続きで、朝起きると体が鉛のように重く、寝ても疲れが取れない。ある日、通勤電車の中で突然涙が止まらなくなって。病院に行ったら自律神経失調症と診断されました。もっと早く体のサインに気づいていれば…と後悔しています。」</div>
+  </div>
+</div>
 
 Aさんのように、身体的な不調は、心のSOSが形となって現れる最も分かりやすいサインの一つです。特に、睡眠や食欲の変化は、見過ごされがちですが、重要な警告信号です。<br><br>
 
 ### ケース2：Bさん（20代・ITエンジニア）「些細なことでイライラ、感情のコントロールができない」
 
-「以前は温厚な性格だったのに、最近は些細なことでイライラして、同僚や家族にきつく当たってしまうことが増えました。仕事でも集中力が続かず、簡単なミスを連発。自分でも『こんなはずじゃないのに』と自己嫌悪に陥る毎日でした。ある時、友人に『最近、顔つきが変わったよ』と言われてハッとしました。感情のコントロールができないのは、心が疲弊している証拠だったんです。」<br><br>
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px;flex-direction:row-reverse">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_59.webp" alt="Bさん・20代" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #FECACA">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Bさん・20代<br>ITエンジニア</div>
+  </div>
+  <div style="flex:1;position:relative;padding-right:8px">
+    <div style="position:absolute;right:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid #FECACA"></div>
+    <div style="position:absolute;right:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #FFF8F8"></div>
+    <div style="background:#FFF8F8;border:1px solid #FECACA;border-radius:10px 0 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「些細なことでイライラして、同僚や家族にきつく当たってしまうことが増えました。友人に「最近、顔つきが変わったよ」と言われてハッとしました。感情のコントロールができないのは、心が疲弊している証拠だったんです。」</div>
+  </div>
+</div>
+
+
 
 ストレスが蓄積すると、感情の起伏が激しくなったり、イライラしやすくなったりすることがあります。これは、心がキャパオーバーになっているサインかもしれません。<br><br>
 
 ### ケース3：Cさん（40代・管理職）「仕事への情熱を失い、無気力な日々」
 
-「長年、仕事にやりがいを感じてバリバリ働いてきたのですが、ここ半年ほど、何に対してもやる気が起きなくなりました。以前は楽しかった趣味にも興味が持てず、休日はただ寝て過ごすだけ。<br><br>仕事でも『どうでもいいや』という気持ちが先行してしまい、責任感も薄れていくのを感じました。このままではいけないと思いながらも、どうすることもできない自分がいました。これは『燃え尽き症候群』だったんだと、後から気づきました。」<br><br>
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_020.webp" alt="Cさん・40代" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #BFDBFE">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Cさん・40代<br>管理職</div>
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #BFDBFE"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #EFF6FF"></div>
+    <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「長年やりがいを感じて働いてきたのですが、ここ半年、何に対してもやる気が起きなくなりました。仕事でも「どうでもいいや」という気持ちが先行し、後から「燃え尽き症候群」だったと気づきました。」</div>
+  </div>
+</div>
+
+
 
 仕事への情熱や意欲の喪失は、特に責任感が強い人に起こりやすい限界サインです。無気力感が続く場合は、心のエネルギーが枯渇している可能性があります。<br><br>
 

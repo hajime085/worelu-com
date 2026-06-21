@@ -23,19 +23,53 @@ draft: false
 
 #### ケース1：責任感の強さから燃え尽きてしまったBさんの場合
 
-「以前は仕事が大好きで、誰よりも早く出社し、遅くまで残業する毎日でした。新しいプロジェクトを任された時は、寝る間も惜しんで取り組み、周りからも『すごいね』と褒められていました。<br><br>でも、ある日突然、プツンと糸が切れたように、何もやる気が起きなくなってしまったんです。朝、ベッドから起き上がれず、会社に行くのが苦痛で仕方ありません。以前は楽しかった趣味にも興味が持てず、ただ時間が過ぎるのを待つだけ。自分がこんなになるなんて、信じられません。」<br><br>
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_34.webp" alt="Bさん・30代" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #FECACA">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Bさん・30代<br>会社員</div>
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #FECACA"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #FFF8F8"></div>
+    <div style="background:#FFF8F8;border:1px solid #FECACA;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「以前は誰よりも早く出社し、新しいプロジェクトに夢中で取り組んでいました。でも、ある日突然プツンと糸が切れたように、何もやる気が起きなくなってしまったんです。自分がこんなになるなんて、信じられません。」</div>
+  </div>
+</div>
+
+
 
 Bさんのように、真面目で責任感が強く、仕事に情熱を注いできた人ほど、燃え尽き症候群（バーンアウト）に陥りやすい傾向があります。頑張りすぎてしまうがゆえに、心身のエネルギーが枯渇し、突然やる気を失ってしまうのです。これは、決して「怠け」ではなく、体が「もう休んでほしい」と強く訴えているサインです。<br><br>
 
 #### ケース2：人間関係のストレスで疲弊したCさんの場合
 
-「仕事自体は嫌いじゃないんです。でも、職場の人間関係が本当にストレスで…。特に、上司からの理不尽な叱責や、同僚たちの陰口を聞くたびに、心がすり減っていくのを感じます。<br><br>会社に行くと、いつも胃がキリキリして、家に帰っても仕事のことが頭から離れません。休日も気分が晴れず、何もする気が起きない。こんな状態では、仕事のやる気なんて出るはずがありません。」<br><br>
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px;flex-direction:row-reverse">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_24.webp" alt="Cさん・20代" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #FECACA">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Cさん・20代<br>事務職</div>
+  </div>
+  <div style="flex:1;position:relative;padding-right:8px">
+    <div style="position:absolute;right:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid #FECACA"></div>
+    <div style="position:absolute;right:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #FFF8F8"></div>
+    <div style="background:#FFF8F8;border:1px solid #FECACA;border-radius:10px 0 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「仕事自体は嫌いじゃないんです。でも、上司からの理不尽な叱責や、同僚の陰口を聞くたびに心がすり減っていくのを感じます。会社に行くといつも胃がキリキリして、休日も気分が晴れず、何もする気が起きない。」</div>
+  </div>
+</div>
+
+
 
 職場の人間関係は、仕事のモチベーションに大きな影響を与えます。Cさんのように、人間関係のストレスが原因で心身が疲弊し、やる気を失ってしまうケースは少なくありません。精神的な負担が大きすぎると、仕事への意欲だけでなく、日常生活の楽しみまで奪われてしまうことがあります。一人で抱え込まず、信頼できる人に相談したり、環境を変えることを検討したりすることが大切です。<br><br>
 
 #### ケース3：仕事内容とのミスマッチに悩むDさんの場合
 
-「今の仕事は、入社前に想像していたものと全く違いました。毎日同じ作業の繰り返しで、自分の成長が感じられません。周りの同僚は楽しそうに仕事をしているのに、自分だけが取り残されているような気がして、焦りを感じています。<br><br>このままこの仕事を続けていて良いのか、自分の将来はどうなるのかと考えると、漠然とした不安に襲われ、仕事のやる気もどんどんなくなっていきます。」
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_009.webp" alt="Dさん・20代" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #DDD6FE">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Dさん・20代<br>新入社員</div>
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #DDD6FE"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #F5F3FF"></div>
+    <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「今の仕事は入社前に想像していたものと全く違いました。毎日同じ作業の繰り返しで、自分の成長が感じられません。このままでいいのか、自分の将来はどうなるのかと考えると、漠然とした不安に襲われ、やる気もどんどんなくなっていきます。」</div>
+  </div>
+</div>
 
 Dさんのように、仕事内容と自分の興味や価値観が合わない「ミスマッチ」も、やる気が出ない大きな原因となります。自分の能力や個性が活かせない環境では、どんなに頑張っても充実感を得られず、モチベーションを維持することが難しくなります。<br><br>この場合は、自己分析を深め、本当にやりたいことや、自分に合った仕事環境を見つけることが、やる気を取り戻すための第一歩となるでしょう。
 
