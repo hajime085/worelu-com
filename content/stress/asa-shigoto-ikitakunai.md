@@ -19,7 +19,7 @@ draft: false
 
 ## 朝、仕事に行きたくないのはなぜ？あなたの心と体が発するサイン
 
-![朝、仕事に行きたくない。その気持ち、あなただけじゃない。](/images/articles/asa-shigoto-ikitakunai/eyecatch.png)
+![朝、仕事に行きたくない。その気持ち、あなただけじゃない。](/images/articles/asa-shigoto-ikitakunai/h2-1.png)
 
 朝、仕事に行きたくないと感じる理由は多岐にわたります。
 
