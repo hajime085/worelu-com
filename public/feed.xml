@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 22 Jun 2026 02:52:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2026 11:19:25 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[休職したいのは甘え？罪悪感を消して自分を守るための判断基準]]></title>
@@ -48,13 +48,6 @@
       <guid>https://worelu.com/articles/stress/shokuba-ningen-kankei-tsukareta/</guid>
       <description><![CDATA[「職場の人間関係に疲れた…」「毎日、人間関係のストレスでヘトヘトだ」]]></description>
       <pubDate>2026-06-19</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[退職代行モームリは違法？合法な理由と安全な使い方]]></title>
-      <link>https://worelu.com/articles/quit/taisyoku-daikou-moumuri/</link>
-      <guid>https://worelu.com/articles/quit/taisyoku-daikou-moumuri/</guid>
-      <description><![CDATA[退職代行モームリが合法とされる理由・使うべき状況・安全に利用するためのポイントを整理します。]]></description>
-      <pubDate>2026-06-18</pubDate>
     </item>
     <item>
       <title><![CDATA[バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法]]></title>
@@ -146,6 +139,13 @@
       <guid>https://worelu.com/articles/work/service-zangyo/</guid>
       <description><![CDATA[サービス残業の違法性・具体例・証拠の集め方・残業代の請求手順・労基署・弁護士への相談方法まで一気通貫で解説する完全版ガイドです。]]></description>
       <pubDate>2026-06-17</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法]]></title>
+      <link>https://worelu.com/articles/quit/30dai-shigoto-yametai/</link>
+      <guid>https://worelu.com/articles/quit/30dai-shigoto-yametai/</guid>
+      <description><![CDATA[30代で「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、自分らしく働く未来を見つけるための具体的なステップを解説します。]]></description>
+      <pubDate>2026-06-14</pubDate>
     </item>
   </channel>
 </rss>
