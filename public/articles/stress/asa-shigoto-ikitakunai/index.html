@@ -349,7 +349,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         
       </div>
       <div class="hero-meta-row">
-        <span>約16分で読めます</span>
+        <span>約17分で読めます</span>
         <div class="hero-sep"></div>
         <span>Worelu編集部</span>
       </div>
@@ -394,9 +394,9 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>真面目な人ほど、一人で抱え込みがちです。</p>
 <p>朝のつらさは、体が「もうこれ以上は無理だ」と訴えているサインかもしれません。<br><br></p>
 <h4 id="2b">ケース2：職場の人間関係に悩むBさんの場合</h4>
-<div class="character-box">
+<div class="character-box character-box-reverse">
+  <div class="speech-bubble speech-bubble-pink">「毎朝、会社に行くのが憂鬱で仕方ありません。特に、部署の先輩からの嫌味や、同僚たちの陰口が耳に入ってくるのが本当に苦痛です。仕事自体は嫌いじゃないのに、職場の雰囲気が悪すぎて、毎日胃がキリキリします。朝、家を出る前に吐き気がすることもあります。こんな状態なのに、周りには『気にしすぎだよ』と言われるばかりで、誰にも相談できません。」</div>
   <img src="/images/characters/character_34.webp" alt="ストレスを感じる女性" class="character-img">
-  <div class="speech-bubble">「毎朝、会社に行くのが憂鬱で仕方ありません。特に、部署の先輩からの嫌味や、同僚たちの陰口が耳に入ってくるのが本当に苦痛です。仕事自体は嫌いじゃないのに、職場の雰囲気が悪すぎて、毎日胃がキリキリします。朝、家を出る前に吐き気がすることもあります。こんな状態なのに、周りには『気にしすぎだよ』と言われるばかりで、誰にも相談できません。」</div>
 </div>
 
 <p>職場の人間関係は、仕事のモチベーションを大きく左右する要因です。</p>
@@ -524,6 +524,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .speech-bubble { position: relative; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 14px 18px; font-size: 14px; color: #334155; line-height: 1.75; }
 .speech-bubble::before { content: ''; position: absolute; left: -12px; top: 20px; border-width: 6px 12px 6px 0; border-style: solid; border-color: transparent #BFDBFE transparent transparent; }
 .speech-bubble::after { content: ''; position: absolute; left: -9px; top: 21px; border-width: 5px 10px 5px 0; border-style: solid; border-color: transparent #EFF6FF transparent transparent; }
+.character-box-reverse { flex-direction: row-reverse; }
+.character-box-reverse .speech-bubble::before { left: auto; right: -12px; border-width: 6px 0 6px 12px; border-color: transparent transparent transparent #BFDBFE; }
+.character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
+.speech-bubble-pink { background: #FFF0F6; border-color: #FFADD2; }
+.speech-bubble-pink::before { border-color: transparent transparent transparent #FFADD2; }
+.speech-bubble-pink::after { border-color: transparent transparent transparent #FFF0F6; }
+.character-box-reverse .speech-bubble-pink::before { border-color: transparent transparent transparent #FFADD2; }
+.character-box-reverse .speech-bubble-pink::after { border-color: transparent transparent transparent #FFF0F6; }
 </style>
 
 <script>
