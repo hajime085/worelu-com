@@ -53,14 +53,9 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
 .cat-featured { max-width: 960px; margin: 0 auto 36px; padding: 0 28px; }
-.cat-featured-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-.cat-featured-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
-.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.cat-featured-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, transform 0.15s; }
-.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
-.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
-.cat-featured-title-text { font-size: 13px; font-weight: 700; line-height: 1.55; color: var(--text); }
-.cat-featured-arrow { font-size: 11px; color: var(--blue); font-weight: 700; margin-top: auto; }
+.cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -159,25 +154,37 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   
   <div class="cat-featured">
-    <div class="cat-featured-title">おすすめ記事</div>
+    <div class="cat-featured-label">おすすめ記事</div>
     <div class="cat-featured-grid">
       
-      <a href="/articles/stress/nemurenai-asa/" class="cat-featured-card">
-        <span class="cat-featured-cat">症状・ストレス</span>
-        <span class="cat-featured-title-text">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</span>
-        <span class="cat-featured-arrow">→ 読む</span>
+      <a href="/articles/stress/nemurenai-asa/" class="art-card">
+        <div class="art-card-bar stress"></div>
+        <div class="art-card-body">
+          <div class="art-card-cat">症状・ストレス</div>
+          <div class="art-card-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
+          <div class="art-card-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。朝になってしまったときの対応・今日の乗り切り方・今夜眠るためのポイントまで。</div>
+          <div class="art-card-meta">2026-06-05</div>
+        </div>
       </a>
       
-      <a href="/articles/stress/shigoto-genkai-sign/" class="cat-featured-card">
-        <span class="cat-featured-cat">症状・ストレス</span>
-        <span class="cat-featured-title-text">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</span>
-        <span class="cat-featured-arrow">→ 読む</span>
+      <a href="/articles/stress/shigoto-genkai-sign/" class="art-card">
+        <div class="art-card-bar stress"></div>
+        <div class="art-card-body">
+          <div class="art-card-cat">症状・ストレス</div>
+          <div class="art-card-title">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</div>
+          <div class="art-card-desc">「もしかして、私、もう限界なのかもしれない…」</div>
+          <div class="art-card-meta">2026-06-20</div>
+        </div>
       </a>
       
-      <a href="/articles/stress/shigoto-utsu/" class="cat-featured-card">
-        <span class="cat-featured-cat">症状・ストレス</span>
-        <span class="cat-featured-title-text">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</span>
-        <span class="cat-featured-arrow">→ 読む</span>
+      <a href="/articles/stress/shigoto-utsu/" class="art-card">
+        <div class="art-card-bar stress"></div>
+        <div class="art-card-body">
+          <div class="art-card-cat">症状・ストレス</div>
+          <div class="art-card-title">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
+          <div class="art-card-desc">「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく解説します。</div>
+          <div class="art-card-meta">2026-06-23</div>
+        </div>
       </a>
       
     </div>
