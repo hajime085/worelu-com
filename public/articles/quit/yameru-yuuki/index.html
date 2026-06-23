@@ -186,6 +186,23 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .author-desc{font-size:13px;color:var(--text-2);line-height:1.7;margin-bottom:10px}
 .author-cta{font-size:13px;color:var(--blue);font-weight:700;text-decoration:underline;text-underline-offset:2px}
 
+/* サイドバー目次 */
+.sb-toc { }
+.sb-toc-list { list-style: none; padding: 0; margin: 0; }
+.sb-toc-item { border-left: 2px solid var(--line); padding: 6px 0 6px 12px; margin-bottom: 4px; transition: border-color 0.2s; }
+.sb-toc-item.active { border-left-color: var(--blue); }
+.sb-toc-item a { font-size: 12px; color: var(--muted); text-decoration: none; line-height: 1.5; display: block; transition: color 0.2s; }
+.sb-toc-item.active a { color: var(--blue); font-weight: 700; }
+.sb-toc-item a:hover { color: var(--blue); }
+
+/* サイドバー人気記事カード */
+.sb-pop-card { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--text); transition: opacity 0.2s; }
+.sb-pop-card:last-child { border-bottom: none; padding-bottom: 0; }
+.sb-pop-card:hover { opacity: 0.7; }
+.sb-pop-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.sb-pop-title { font-size: 12px; font-weight: 700; line-height: 1.55; color: var(--text); }
+.sb-pop-num { font-size: 11px; color: var(--muted); font-weight: 700; }
+
 /* 記事末尾CTA */
 .bottom-cta{background:var(--blue-soft);border:2px solid var(--blue-mid);border-radius:12px;margin:32px 0;overflow:hidden}
 .bottom-cta-inner{padding:32px 36px;text-align:center}
@@ -381,7 +398,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <div class="layout">
   <div>
     <article class="article-body">
-      <p style="font-size:8px; color:var(--muted); margin-bottom:24px; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:var(--page); display:inline-block;">当サイトでは、一部の記事にアフィリエイト広告を掲載しています。</p>
+      <p style="font-size:11px; color:var(--muted); margin-bottom:24px; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:var(--page); display:inline-block;">当サイトでは、一部の記事にアフィリエイト広告を掲載しています。</p>
       <p>「仕事を辞めたいけれど、なかなか一歩が踏み出せない…」そんな悩みを抱えていませんか？今の職場に不満があっても、退職という大きな決断は、多くの不安や恐れを伴います。この記事では、あなたが仕事を辞める勇気が出ない5つの理由を深掘りし、それぞれの理由に対する現実的な答えを提示します。あなたの「辞めたい」という気持ちに寄り添い、次の一歩を踏み出すためのヒントを見つけましょう。</p>
 <h2 id="_1">仕事を辞める勇気が出ないのはなぜ？あなたの内なる声に耳を傾ける</h2>
 <p>仕事を辞める勇気が出ないのは、あなたが弱いからではありません。それは、人間が持つ自然な感情や心理的なメカニズムが働いているからです。強いストレス状態が続くと、心身の消耗が続いている状態のことがあります。この状態では、冷静な判断が難しくなり、「辞めたい」という気持ちと「辞められない」という気持ちの間で葛藤が生じます。まずは、その内なる声に耳を傾け、自分がなぜ踏み出せないのかを理解することが、次の一歩を踏み出すための重要なステップです。</p>
@@ -435,6 +452,29 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       <div class="sb-diag-copy">今の状態を4軸で数値化。約1分・完全無料。</div>
       <a href="/stress-check/" class="sb-diag-btn" style="color:#fff">無料で診断する</a>
       <div class="sb-diag-note">登録不要 · worelu.com</div>
+    </div>
+
+    <!-- 目次 -->
+    <div class="sb-card sb-toc" id="sb-toc" style="display:none">
+      <div class="sb-card-ttl">目次</div>
+      <ul class="sb-toc-list" id="sb-toc-list"></ul>
+    </div>
+
+    <!-- 人気記事 -->
+    <div class="sb-card">
+      <div class="sb-card-ttl">人気記事</div>
+      <a href="/articles/stress/nemurenai-asa/" class="sb-pop-card">
+        <span class="sb-pop-cat">症状・ストレス</span>
+        <span class="sb-pop-title">眠れないまま朝になった…仕事のストレスで眠れない人へ</span>
+      </a>
+      <a href="/articles/burnout/moeyuki-selfcheck/" class="sb-pop-card">
+        <span class="sb-pop-cat">バーンアウト</span>
+        <span class="sb-pop-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認</span>
+      </a>
+      <a href="/articles/quit/yameru-yuuki/" class="sb-pop-card">
+        <span class="sb-pop-cat">転職・退職</span>
+        <span class="sb-pop-title">仕事を辞める勇気が出ない人へ。5つの理由と現実的な答え</span>
+      </a>
     </div>
 
 
@@ -793,6 +833,50 @@ window.diagCarouselScroll = function(dir) {
   var track = document.getElementById('diag-track');
   if (track) track.scrollBy({ left: dir * 232, behavior: 'smooth' });
 };
+</script>
+<script>
+// 追従型目次の生成
+(function() {
+  const articleBody = document.querySelector('.article-body');
+  const tocList = document.getElementById('sb-toc-list');
+  const tocCard = document.getElementById('sb-toc');
+  if (!articleBody || !tocList) return;
+
+  const headings = articleBody.querySelectorAll('h2, h3');
+  if (headings.length < 2) return;
+
+  headings.forEach(function(h, i) {
+    if (!h.id) h.id = 'heading-' + i;
+    const li = document.createElement('li');
+    li.className = 'sb-toc-item' + (h.tagName === 'H3' ? ' sb-toc-h3' : '');
+    if (h.tagName === 'H3') li.style.paddingLeft = '24px';
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  tocCard.style.display = '';
+
+  // スクロール追従でアクティブ見出しをハイライト
+  const items = tocList.querySelectorAll('.sb-toc-item');
+  function updateActive() {
+    let current = 0;
+    headings.forEach(function(h, i) {
+      if (window.scrollY + 100 >= h.offsetTop) current = i;
+    });
+    items.forEach(function(item, i) {
+      item.classList.toggle('active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
 </script>
 </body>
 </html>
