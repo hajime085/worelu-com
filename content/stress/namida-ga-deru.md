@@ -51,6 +51,15 @@ canonical: https://worelu.com/articles/stress/namida-ga-deru/
 ### 専門家のサポートを検討する
 
 もし、頻繁に涙が出る、気分の落ち込みが続く、食欲不振や不眠などの症状が伴う場合は、心療内科や精神科の医師、カウンセラーなどの専門家に相談することを検討しましょう。早期に専門家のサポートを受けることで、症状の悪化を防ぎ、回復への道筋を見つけることができます。
+
+「病院に行くほどではないかも」と迷っている段階であれば、オンラインで公認心理師に話を聞いてもらうサービスも選択肢の一つです。自宅から匿名で相談できるため、一歩踏み出しやすいと感じる人も多いです。
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+60H7L" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260622882694&wid=003&eno=01&mid=s00000026504001010000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+60H7L" alt="">
+
+<a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76" rel="nofollow">オンラインカウンセリング「Kimochi」</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76" alt="">
 <br><br>
 
 ## 「休むべきか、まだ続けられるか」の判断が自分ではしにくいあなたへ
