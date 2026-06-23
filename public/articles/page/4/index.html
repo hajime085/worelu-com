@@ -65,12 +65,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .art-card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
 .art-card-meta { font-size: 11px; color: var(--muted); }
 .site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
-.pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 48px; flex-wrap: wrap; }
-.pagination a, .pagination span { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text-2); background: var(--white); transition: all 0.15s; }
-.pagination a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
-.pagination .current { background: var(--blue); color: #fff; border-color: var(--blue); }
-.pagination .prev, .pagination .next { width: auto; padding: 0 16px; gap: 4px; }
-.pagination .disabled { opacity: 0.35; pointer-events: none; }
+.pagination { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 48px; }
+.pagination-pages { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.pagination-nav { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.pagination-pages a, .pagination-pages span { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--white); transition: all 0.15s; }
+.pagination-pages a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.pagination-pages .current { background: var(--blue); color: #fff; border-color: var(--blue); }
+.pagination-nav a, .pagination-nav span { display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 20px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--white); transition: all 0.15s; }
+.pagination-nav a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.pagination-nav .disabled { opacity: 0.35; pointer-events: none; }
 @media (max-width: 600px) { .header-nav { display: none; } }
 </style>
 </head>
@@ -160,37 +163,39 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   
   <nav class="pagination" aria-label="ページネーション">
-    
-    <a href="/articles/page/3/" class="prev">← 前へ</a>
-    
-
-    
-    
-    
-    <a href="/articles/">1</a>
-    
-    
-    
-    
-    
-    <a href="/articles/page/2/">2</a>
-    
-    
-    
-    
-    
-    <a href="/articles/page/3/">3</a>
-    
-    
-    
-    
-    <span class="current">4</span>
-    
-    
-
-    
-    <span class="next disabled">次へ →</span>
-    
+    <div class="pagination-pages">
+      
+      
+      
+      <a href="/articles/">1</a>
+      
+      
+      
+      
+      
+      <a href="/articles/page/2/">2</a>
+      
+      
+      
+      
+      
+      <a href="/articles/page/3/">3</a>
+      
+      
+      
+      
+      <span class="current">4</span>
+      
+      
+    </div>
+    <div class="pagination-nav">
+      
+      <a href="/articles/page/3/">← 前へ</a>
+      
+      
+      <span class="disabled">次へ →</span>
+      
+    </div>
   </nav>
   
 </main>
