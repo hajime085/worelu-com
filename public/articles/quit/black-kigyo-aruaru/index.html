@@ -141,12 +141,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .also-read-bar { display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; flex-shrink: 0; }
 .also-read-grid { display: flex; flex-direction: column; gap: 12px; }
-.also-read-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid transparent; border-radius: 10px; padding: 18px 20px; text-decoration: none; color: var(--text); transition: border-left-color 0.2s, box-shadow 0.2s, transform 0.15s; }
-.also-read-card * { text-decoration: none; }
+.also-read-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid transparent; border-radius: 10px; padding: 18px 20px; text-decoration: none !important; color: var(--text); transition: border-left-color 0.2s, box-shadow 0.2s, transform 0.15s; }
+.also-read-card:link, .also-read-card:visited, .also-read-card:hover, .also-read-card:active { text-decoration: none !important; }
+.also-read-card *, .also-read-card *:link, .also-read-card *:visited { text-decoration: none !important; }
 .also-read-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateX(2px); }
 .also-read-cat { font-size: 10px; font-weight: 800; color: var(--blue); letter-spacing: 0.08em; }
-.also-read-text { font-size: 14px; font-weight: 700; line-height: 1.6; color: var(--text); text-decoration: none; }
-.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 700; text-decoration: none; }
+.also-read-text { font-size: 14px; font-weight: 700; line-height: 1.6; color: var(--text); }
+.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 700; }
 /* 診断結果カルーセル */
 .diag-carousel { margin-top: 28px; }
 .diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
@@ -547,7 +548,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>まず現状を客観的に整理したい場合は、Woreluのストレスチェック診断（無料・約1分）で今の状態をスコア化してみてください。</p>
 <hr />
 <div class="also-read-section"><div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div><div class="also-read-grid"><a href="/articles/quit/black-kigyo-shindan/" class="also-read-card"><span class="also-read-cat">転職・退職</span><span class="also-read-text">ブラック企業診断</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/quit/kaisha-yabai/" class="also-read-card"><span class="also-read-cat">転職・退職</span><span class="also-read-text">「この会社やばい」と感じたとき</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/work/service-zangyo/" class="also-read-card"><span class="also-read-cat">労働問題</span><span class="also-read-text">サービス残業は違法</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/quit/taisyoku-daikou-moumuri/" class="also-read-card"><span class="also-read-cat">転職・退職</span><span class="also-read-text">退職代行モームリに何があったのか</span><span class="also-read-arrow">→ 読む</span></a></div></div>
-<p>→ <a href="https://worelu.com/stress-check/">無料でストレスチェックを受ける</a></p>
 <p>転職を具体的に考え始めた方は、以下の記事も参考にしてください。</p>
 <ul>
 <li><a href="/articles/quit/shigoto-yametai-amae/">仕事辞めたいは甘えじゃない。後悔しない見極め方</a></li>

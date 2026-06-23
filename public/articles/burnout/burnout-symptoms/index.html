@@ -141,12 +141,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .also-read-bar { display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; flex-shrink: 0; }
 .also-read-grid { display: flex; flex-direction: column; gap: 12px; }
-.also-read-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid transparent; border-radius: 10px; padding: 18px 20px; text-decoration: none; color: var(--text); transition: border-left-color 0.2s, box-shadow 0.2s, transform 0.15s; }
-.also-read-card * { text-decoration: none; }
+.also-read-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid transparent; border-radius: 10px; padding: 18px 20px; text-decoration: none !important; color: var(--text); transition: border-left-color 0.2s, box-shadow 0.2s, transform 0.15s; }
+.also-read-card:link, .also-read-card:visited, .also-read-card:hover, .also-read-card:active { text-decoration: none !important; }
+.also-read-card *, .also-read-card *:link, .also-read-card *:visited { text-decoration: none !important; }
 .also-read-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateX(2px); }
 .also-read-cat { font-size: 10px; font-weight: 800; color: var(--blue); letter-spacing: 0.08em; }
-.also-read-text { font-size: 14px; font-weight: 700; line-height: 1.6; color: var(--text); text-decoration: none; }
-.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 700; text-decoration: none; }
+.also-read-text { font-size: 14px; font-weight: 700; line-height: 1.6; color: var(--text); }
+.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 700; }
 /* 診断結果カルーセル */
 .diag-carousel { margin-top: 28px; }
 .diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
@@ -401,8 +402,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>一人で抱え込まず、心療内科や精神科の医師、カウンセラーなどの専門家に相談しましょう。専門家は、あなたの状態を正確に診断し、適切な治療法や回復へのアドバイスを提供してくれます。早期に専門家のサポートを受けることで、回復への道筋が明確になります。</p>
 <h2 id="_11">「休むべきか、まだ続けられるか」の判断が自分ではしにくいあなたへ</h2>
 <p>その状態だと「休むべきか、まだ続けられるか」の判断が自分ではしにくくなります。まず状態を数字で見ておくと、休む判断がしやすくなります。</p>
-<p>Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。
-→ <a href="/stress-check/">無料でストレスチェックを受ける（worelu.com）</a></p>
 <h2 id="_12">まとめ</h2>
 <p>バーンアウトは、真面目に頑張りすぎた結果、誰にでも起こりうる心の状態です。初期のサインを見逃さず、段階的な症状チェックリストで自分の状態を客観的に把握することが重要です。もしバーンアウトの兆候が見られたら、自分を責めずに、まずは徹底的な休息をとり、必要であれば専門家のサポートを積極的に活用しましょう。あなたの心と体を守り、再び前向きに仕事に取り組めるようになるために、焦らず、着実に回復への道を歩んでください。</p>
 <hr />
