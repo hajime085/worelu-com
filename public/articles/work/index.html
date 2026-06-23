@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,33 +165,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <div class="cat-featured-label">おすすめ記事</div>
     <div class="cat-featured-grid">
       
-      <a href="/articles/work/service-zangyo/" class="art-card">
-        <div class="art-card-bar work"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">労働問題</div>
-          <div class="art-card-title">サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】</div>
-          <div class="art-card-desc">サービス残業の違法性・具体例・証拠の集め方・残業代の請求手順・労基署・弁護士への相談方法まで一気通貫で解説する完全版ガイドです。</div>
-          <div class="art-card-meta">2026-06-17</div>
+      <a href="/articles/work/service-zangyo/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">労働問題</div>
+          <div class="cat-featured-title">サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】</div>
+          <div class="cat-featured-desc">サービス残業の違法性・具体例・証拠の集め方・残業代の請求手順・労基署・弁護士への相談方法まで一気通貫で解説する完全版ガイ…</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
-      <a href="/articles/work/service-zangyo-atarimae/" class="art-card">
-        <div class="art-card-bar work"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">労働問題</div>
-          <div class="art-card-title">サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由</div>
-          <div class="art-card-desc">「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。</div>
-          <div class="art-card-meta">2026-06-17</div>
+      <a href="/articles/work/service-zangyo-atarimae/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">労働問題</div>
+          <div class="cat-featured-title">サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由</div>
+          <div class="cat-featured-desc">「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
-      <a href="/articles/work/service-zangyo-voluntary/" class="art-card">
-        <div class="art-card-bar work"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">労働問題</div>
-          <div class="art-card-title">「自主的な残業」でも残業代は出る。違法になるケースと対処法</div>
-          <div class="art-card-desc">「自主的だから残業代は出ない」は通らない。残業代が発生するケースと証拠の集め方を解説します。</div>
-          <div class="art-card-meta">2026-06-17</div>
+      <a href="/articles/work/service-zangyo-voluntary/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">労働問題</div>
+          <div class="cat-featured-title">「自主的な残業」でも残業代は出る。違法になるケースと対処法</div>
+          <div class="cat-featured-desc">「自主的だから残業代は出ない」は通らない。残業代が発生するケースと証拠の集め方を解説します。</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
@@ -199,7 +207,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">労働問題</div>
         <div class="art-card-title">サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由</div>
         <div class="art-card-desc">「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -209,7 +217,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">労働問題</div>
         <div class="art-card-title">「自主的な残業」でも残業代は出る。違法になるケースと対処法</div>
         <div class="art-card-desc">「自主的だから残業代は出ない」は通らない。残業代が発生するケースと証拠の集め方を解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -219,7 +227,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">労働問題</div>
         <div class="art-card-title">サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】</div>
         <div class="art-card-desc">サービス残業の違法性・具体例・証拠の集め方・残業代の請求手順・労基署・弁護士への相談方法まで一気通貫で解説する完全版ガイドです。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約9分で読めます</div>
       </div>
     </a>
     

@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,7 +165,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">「仕事できない」と辛いあなたへ。甘えじゃない、次の一歩を見つける方法</div>
         <div class="art-card-desc">「仕事ができない」と一人で抱え込み、辛い思いをしていませんか？それは甘えではありません。仕事ができないと感じる理由や特徴、今日からできる対処法、そして自己否定を…</div>
-        <div class="art-card-meta">2026-05-14</div>
+        <div class="art-card-meta">2026-05-14　約18分で読めます</div>
       </div>
     </a>
     
@@ -167,7 +175,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">HSPに向いてる仕事10選。繊細な特性を活かせる職場の選び方</div>
         <div class="art-card-desc">「HSPだけど仕事が辛い…」と感じるあなたへ。HSPの特性を活かせる仕事や、働きやすい環境を見つけるための具体的な方法を解説します。自分らしく働く一歩を踏み出し…</div>
-        <div class="art-card-meta">2026-05-10</div>
+        <div class="art-card-meta">2026-05-10　約17分で読めます</div>
       </div>
     </a>
     

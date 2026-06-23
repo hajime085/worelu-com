@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,33 +165,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <div class="cat-featured-label">おすすめ記事</div>
     <div class="cat-featured-grid">
       
-      <a href="/articles/burnout/moeyuki-selfcheck/" class="art-card">
-        <div class="art-card-bar burnout"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">燃え尽き・休職</div>
-          <div class="art-card-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</div>
-          <div class="art-card-desc">燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。</div>
-          <div class="art-card-meta">2026-06-17</div>
+      <a href="/articles/burnout/moeyuki-selfcheck/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">燃え尽き・休職</div>
+          <div class="cat-featured-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</div>
+          <div class="cat-featured-desc">燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
-      <a href="/articles/burnout/kyushoku-amae/" class="art-card">
-        <div class="art-card-bar burnout"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">燃え尽き・休職</div>
-          <div class="art-card-title">休職したいのは甘え？罪悪感を消して自分を守るための判断基準</div>
-          <div class="art-card-desc">「休職したいけど甘えじゃないか」と悩んでいませんか？休職を考えるのは、あなたが限界まで頑張った証拠です。休職が甘えではない理由や必要なサイン、具体的な手続きまで…</div>
-          <div class="art-card-meta">2026-06-22</div>
+      <a href="/articles/burnout/kyushoku-amae/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">燃え尽き・休職</div>
+          <div class="cat-featured-title">休職したいのは甘え？罪悪感を消して自分を守るための判断基準</div>
+          <div class="cat-featured-desc">「休職したいけど甘えじゃないか」と悩んでいませんか？休職を考えるのは、あなたが限界まで頑張った証拠です。休職が甘えではな…</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
-      <a href="/articles/burnout/burnout-symptoms/" class="art-card">
-        <div class="art-card-bar burnout"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">燃え尽き・休職</div>
-          <div class="art-card-title">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</div>
-          <div class="art-card-desc">バーンアウトの3つの特徴・症状リスト・進行段階・段階別の回復ステップを丁寧に解説します。</div>
-          <div class="art-card-meta">2026-06-17</div>
+      <a href="/articles/burnout/burnout-symptoms/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">燃え尽き・休職</div>
+          <div class="cat-featured-title">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</div>
+          <div class="cat-featured-desc">バーンアウトの3つの特徴・症状リスト・進行段階・段階別の回復ステップを丁寧に解説します。</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
@@ -199,7 +207,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職に診断書は必須？もらい方から費用・会社への提出方法まで解説</div>
         <div class="art-card-desc">休職を考えているけれど、診断書はどうやってもらうの？費用はいくら？もらい方・受診すべき病院・会社への伝え方をわかりやすく解説します。</div>
-        <div class="art-card-meta">2026-06-23</div>
+        <div class="art-card-meta">2026-06-23　約9分で読めます</div>
       </div>
     </a>
     
@@ -209,7 +217,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職したいのは甘え？罪悪感を消して自分を守るための判断基準</div>
         <div class="art-card-desc">「休職したいけど甘えじゃないか」と悩んでいませんか？休職を考えるのは、あなたが限界まで頑張った証拠です。休職が甘えではない理由や必要なサイン、具体的な手続きまで…</div>
-        <div class="art-card-meta">2026-06-22</div>
+        <div class="art-card-meta">2026-06-22　約6分で読めます</div>
       </div>
     </a>
     
@@ -219,7 +227,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</div>
         <div class="art-card-desc">バーンアウトの3つの特徴・症状リスト・進行段階・段階別の回復ステップを丁寧に解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -229,7 +237,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</div>
         <div class="art-card-desc">休職1ヶ月の変化・傷病手当金の計算方法・過ごし方・復職か退職かの判断基準を具体的に整理します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約4分で読めます</div>
       </div>
     </a>
     
@@ -239,7 +247,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</div>
         <div class="art-card-desc">燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -249,7 +257,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">HSPに向いてる仕事10選。繊細な特性を活かせる職場の選び方</div>
         <div class="art-card-desc">「HSPだけど仕事が辛い…」と感じるあなたへ。HSPの特性を活かせる仕事や、働きやすい環境を見つけるための具体的な方法を解説します。自分らしく働く一歩を踏み出し…</div>
-        <div class="art-card-meta">2026-05-10</div>
+        <div class="art-card-meta">2026-05-10　約17分で読めます</div>
       </div>
     </a>
     

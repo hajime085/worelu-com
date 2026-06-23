@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,13 +165,13 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <div class="cat-featured-label">おすすめ記事</div>
     <div class="cat-featured-grid">
       {% for art in featured_articles %}
-      <a href="{{ art.url }}" class="art-card">
-        <div class="art-card-bar {{ art.category }}"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">{{ art.category_label }}</div>
-          <div class="art-card-title">{{ art.title }}</div>
-          <div class="art-card-desc">{{ art.description[:80] }}{% if art.description|length > 80 %}…{% endif %}</div>
-          <div class="art-card-meta">{{ art.date }}</div>
+      <a href="{{ art.url }}" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">{{ art.category_label }}</div>
+          <div class="cat-featured-title">{{ art.title }}</div>
+          <div class="cat-featured-desc">{{ art.description[:60] }}{% if art.description|length > 60 %}…{% endif %}</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       {% endfor %}
@@ -179,7 +187,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">{{ art.category_label }}</div>
         <div class="art-card-title">{{ art.title }}</div>
         <div class="art-card-desc">{{ art.description[:80] }}{% if art.description|length > 80 %}…{% endif %}</div>
-        <div class="art-card-meta">{{ art.date }}</div>
+        <div class="art-card-meta">{{ art.date }}　約{{ art.read_time }}分で読めます</div>
       </div>
     </a>
     {% endfor %}

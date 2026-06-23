@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,7 +165,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">労働問題</div>
         <div class="art-card-title">サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由</div>
         <div class="art-card-desc">「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -167,7 +175,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">労働問題</div>
         <div class="art-card-title">「自主的な残業」でも残業代は出る。違法になるケースと対処法</div>
         <div class="art-card-desc">「自主的だから残業代は出ない」は通らない。残業代が発生するケースと証拠の集め方を解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -177,7 +185,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">労働問題</div>
         <div class="art-card-title">サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】</div>
         <div class="art-card-desc">サービス残業の違法性・具体例・証拠の集め方・残業代の請求手順・労基署・弁護士への相談方法まで一気通貫で解説する完全版ガイドです。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約9分で読めます</div>
       </div>
     </a>
     
@@ -187,7 +195,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法</div>
         <div class="art-card-desc">30代で「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、自分らしく働く未来を見つけるための具体的なステップを解説します。</div>
-        <div class="art-card-meta">2026-06-14</div>
+        <div class="art-card-meta">2026-06-14　約18分で読めます</div>
       </div>
     </a>
     
@@ -197,7 +205,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">20代で仕事辞めたいのは甘えじゃない。リスクゼロで動き出す具体的なステップ</div>
         <div class="art-card-desc">20代で「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、自分らしく働く未来を見つけるための具体的なステップを解説します。</div>
-        <div class="art-card-meta">2026-06-07</div>
+        <div class="art-card-meta">2026-06-07　約17分で読めます</div>
       </div>
     </a>
     
@@ -207,7 +215,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
         <div class="art-card-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。朝になってしまったときの対応・今日の乗り切り方・今夜眠るためのポイントまで。</div>
-        <div class="art-card-meta">2026-06-05</div>
+        <div class="art-card-meta">2026-06-05　約5分で読めます</div>
       </div>
     </a>
     
@@ -217,7 +225,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事で涙が出るのは甘えじゃない。その涙が体に伝えていること</div>
         <div class="art-card-desc">仕事で涙が出ることへの罪悪感に寄り添い、涙が出る状態の正体と今すぐできることを整理します。</div>
-        <div class="art-card-meta">2026-06-03</div>
+        <div class="art-card-meta">2026-06-03　約4分で読めます</div>
       </div>
     </a>
     
@@ -227,7 +235,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">職場の人間関係に疲れたあなたへ。心を軽くする対処法</div>
         <div class="art-card-desc">職場の人間関係に疲れていませんか？「もう無理…」と感じる前に、心を軽くする具体的な対処法を解説。人間関係の悩みを乗り越え、自分らしく働くためのヒントを見つけまし…</div>
-        <div class="art-card-meta">2026-05-31</div>
+        <div class="art-card-meta">2026-05-31　約15分で読めます</div>
       </div>
     </a>
     
@@ -237,7 +245,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩</div>
         <div class="art-card-desc">「仕事辞めたい」と感じるあなたへ。その気持ちは甘えじゃない！後悔しないための見極め方と、次の一歩を踏み出すための具体的な方法を解説。自分らしく働く未来を見つけま…</div>
-        <div class="art-card-meta">2026-05-24</div>
+        <div class="art-card-meta">2026-05-24　約14分で読めます</div>
       </div>
     </a>
     
@@ -247,7 +255,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">「仕事行きたくない」朝の憂鬱。心と体を軽くする対処法</div>
         <div class="art-card-desc">「仕事行きたくない…」毎朝の憂鬱に悩んでいませんか？その気持ちは甘えじゃない！原因を理解し、心と体を軽くする具体的な対処法で、あなたらしい働き方を見つけましょう…</div>
-        <div class="art-card-meta">2026-05-17</div>
+        <div class="art-card-meta">2026-05-17　約13分で読めます</div>
       </div>
     </a>
     

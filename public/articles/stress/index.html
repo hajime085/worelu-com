@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,33 +165,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <div class="cat-featured-label">おすすめ記事</div>
     <div class="cat-featured-grid">
       
-      <a href="/articles/stress/nemurenai-asa/" class="art-card">
-        <div class="art-card-bar stress"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">症状・ストレス</div>
-          <div class="art-card-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
-          <div class="art-card-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。朝になってしまったときの対応・今日の乗り切り方・今夜眠るためのポイントまで。</div>
-          <div class="art-card-meta">2026-06-05</div>
+      <a href="/articles/stress/nemurenai-asa/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">症状・ストレス</div>
+          <div class="cat-featured-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
+          <div class="cat-featured-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。朝になってしまったときの対応・今日の乗り切り方・今夜眠るためのポイン…</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
-      <a href="/articles/stress/shigoto-genkai-sign/" class="art-card">
-        <div class="art-card-bar stress"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">症状・ストレス</div>
-          <div class="art-card-title">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</div>
-          <div class="art-card-desc">「もしかして、私、もう限界なのかもしれない…」</div>
-          <div class="art-card-meta">2026-06-20</div>
+      <a href="/articles/stress/shigoto-genkai-sign/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">症状・ストレス</div>
+          <div class="cat-featured-title">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</div>
+          <div class="cat-featured-desc">「もしかして、私、もう限界なのかもしれない…」</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
-      <a href="/articles/stress/shigoto-utsu/" class="art-card">
-        <div class="art-card-bar stress"></div>
-        <div class="art-card-body">
-          <div class="art-card-cat">症状・ストレス</div>
-          <div class="art-card-title">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
-          <div class="art-card-desc">「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく解説します。</div>
-          <div class="art-card-meta">2026-06-23</div>
+      <a href="/articles/stress/shigoto-utsu/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">症状・ストレス</div>
+          <div class="cat-featured-title">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
+          <div class="cat-featured-desc">「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく…</div>
+          <span class="cat-featured-btn">続きを読む →</span>
         </div>
       </a>
       
@@ -199,7 +207,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説</div>
         <div class="art-card-desc">「これってモラハラ？」上司の言葉や態度に傷ついているあなたへ。モラハラの定義・特徴・対処法・逃げていい理由を解説します。</div>
-        <div class="art-card-meta">2026-06-23</div>
+        <div class="art-card-meta">2026-06-23　約8分で読めます</div>
       </div>
     </a>
     
@@ -209,7 +217,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事のミスで落ち込むあなたへ。立ち直るための正しい対処法と切り替え術</div>
         <div class="art-card-desc">仕事でミスをして落ち込んでいませんか？ミスを引きずってしまう心理、ミス後の正しい対処法、気持ちを切り替える具体的な方法を解説します。</div>
-        <div class="art-card-meta">2026-06-23</div>
+        <div class="art-card-meta">2026-06-23　約7分で読めます</div>
       </div>
     </a>
     
@@ -219,7 +227,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
         <div class="art-card-desc">「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく解説します。</div>
-        <div class="art-card-meta">2026-06-23</div>
+        <div class="art-card-meta">2026-06-23　約8分で読めます</div>
       </div>
     </a>
     
@@ -229,7 +237,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて</div>
         <div class="art-card-desc">「上司が怖くて、いつもビクビクしてしまう…」「会議で意見を言いたいのに、上司の顔色を伺って何も言えない」</div>
-        <div class="art-card-meta">2026-06-20</div>
+        <div class="art-card-meta">2026-06-20　約24分で読めます</div>
       </div>
     </a>
     
@@ -239,7 +247,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</div>
         <div class="art-card-desc">「もしかして、私、もう限界なのかもしれない…」</div>
-        <div class="art-card-meta">2026-06-20</div>
+        <div class="art-card-meta">2026-06-20　約36分で読めます</div>
       </div>
     </a>
     
@@ -249,7 +257,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">朝、仕事に行きたくないのはなぜ？「今日だけ」と「ずっとつらい」の境界線</div>
         <div class="art-card-desc">毎朝、目覚ましが鳴るたびに「仕事に行きたくない…」と感じていませんか？ベッドから起き上がるのが億劫で、体が鉛のように重く、会社に向かう足取りもなぜか重い。そんな…</div>
-        <div class="art-card-meta">2026-06-19</div>
+        <div class="art-card-meta">2026-06-19　約18分で読めます</div>
       </div>
     </a>
     
@@ -259,7 +267,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事のやる気が出ないのはなぜ？「怠け」じゃない3つの原因と対処法</div>
         <div class="art-card-desc">「仕事のやる気が出ない…」「何だか体が重くて、仕事に集中できない」</div>
-        <div class="art-card-meta">2026-06-19</div>
+        <div class="art-card-meta">2026-06-19　約19分で読めます</div>
       </div>
     </a>
     
@@ -269,7 +277,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">職場の人間関係で疲れるのはなぜ？性格の問題じゃない、環境とのミスマッチ</div>
         <div class="art-card-desc">「職場の人間関係に疲れた…」「毎日、人間関係のストレスでヘトヘトだ」</div>
-        <div class="art-card-meta">2026-06-19</div>
+        <div class="art-card-meta">2026-06-19　約26分で読めます</div>
       </div>
     </a>
     
@@ -279,7 +287,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事で動悸がする…それは体が「もう限界」と伝えているサインかもしれない</div>
         <div class="art-card-desc">仕事のことを考えると動悸がする状態の正体と、放置するリスク・今すぐできる対処法を解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -289,7 +297,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
         <div class="art-card-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。朝になってしまったときの対応・今日の乗り切り方・今夜眠るためのポイントまで。</div>
-        <div class="art-card-meta">2026-06-05</div>
+        <div class="art-card-meta">2026-06-05　約5分で読めます</div>
       </div>
     </a>
     
@@ -299,7 +307,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事で涙が出るのは甘えじゃない。その涙が体に伝えていること</div>
         <div class="art-card-desc">仕事で涙が出ることへの罪悪感に寄り添い、涙が出る状態の正体と今すぐできることを整理します。</div>
-        <div class="art-card-meta">2026-06-03</div>
+        <div class="art-card-meta">2026-06-03　約4分で読めます</div>
       </div>
     </a>
     
@@ -309,7 +317,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">職場の人間関係に疲れたあなたへ。心を軽くする対処法</div>
         <div class="art-card-desc">職場の人間関係に疲れていませんか？「もう無理…」と感じる前に、心を軽くする具体的な対処法を解説。人間関係の悩みを乗り越え、自分らしく働くためのヒントを見つけまし…</div>
-        <div class="art-card-meta">2026-05-31</div>
+        <div class="art-card-meta">2026-05-31　約15分で読めます</div>
       </div>
     </a>
     
@@ -319,7 +327,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">「仕事行きたくない」朝の憂鬱。心と体を軽くする対処法</div>
         <div class="art-card-desc">「仕事行きたくない…」毎朝の憂鬱に悩んでいませんか？その気持ちは甘えじゃない！原因を理解し、心と体を軽くする具体的な対処法で、あなたらしい働き方を見つけましょう…</div>
-        <div class="art-card-meta">2026-05-17</div>
+        <div class="art-card-meta">2026-05-17　約13分で読めます</div>
       </div>
     </a>
     
@@ -329,7 +337,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">「仕事できない」と辛いあなたへ。甘えじゃない、次の一歩を見つける方法</div>
         <div class="art-card-desc">「仕事ができない」と一人で抱え込み、辛い思いをしていませんか？それは甘えではありません。仕事ができないと感じる理由や特徴、今日からできる対処法、そして自己否定を…</div>
-        <div class="art-card-meta">2026-05-14</div>
+        <div class="art-card-meta">2026-05-14　約18分で読めます</div>
       </div>
     </a>
     

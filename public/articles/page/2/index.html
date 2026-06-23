@@ -56,6 +56,14 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
 .cat-featured-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; gap: 6px; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+.cat-featured-btn { display: inline-block; margin-top: 12px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; width: fit-content; }
 @media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
@@ -157,7 +165,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">職場の人間関係で疲れるのはなぜ？性格の問題じゃない、環境とのミスマッチ</div>
         <div class="art-card-desc">「職場の人間関係に疲れた…」「毎日、人間関係のストレスでヘトヘトだ」</div>
-        <div class="art-card-meta">2026-06-19</div>
+        <div class="art-card-meta">2026-06-19　約26分で読めます</div>
       </div>
     </a>
     
@@ -167,7 +175,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</div>
         <div class="art-card-desc">バーンアウトの3つの特徴・症状リスト・進行段階・段階別の回復ステップを丁寧に解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -177,7 +185,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</div>
         <div class="art-card-desc">休職1ヶ月の変化・傷病手当金の計算方法・過ごし方・復職か退職かの判断基準を具体的に整理します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約4分で読めます</div>
       </div>
     </a>
     
@@ -187,7 +195,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</div>
         <div class="art-card-desc">燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -197,7 +205,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">ブラック企業あるある20選。読んで笑えたら要注意【診断・見分け方つき】</div>
         <div class="art-card-desc">ブラック企業あるある20選に加え、入社前の見分け方・違法ケース・20項目セルフ診断まで。自分の会社がブラックか確かめたい人へ。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約8分で読めます</div>
       </div>
     </a>
     
@@ -207,7 +215,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">ブラック企業診断｜15の質問で今の職場をスコアリングして判断する</div>
         <div class="art-card-desc">15問のスコアリング形式でブラック企業かどうかを診断。結果別の行動指針と次のステップを明示します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約4分で読めます</div>
       </div>
     </a>
     
@@ -217,7 +225,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">仕事で評価されないと腐ってしまう前に。原因の見つけ方と立て直し方</div>
         <div class="art-card-desc">頑張っているのに評価されない原因3つと、腐る前に試せる具体的な対処法を整理します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
@@ -227,7 +235,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">「この会社やばい」と感じたとき。その直感を言語化する方法</div>
         <div class="art-card-desc">「なんかおかしい」という職場への違和感を言語化する方法と、やばい会社の特徴・次に取るべき行動を整理します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約2分で読めます</div>
       </div>
     </a>
     
@@ -237,7 +245,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">転職・退職</div>
         <div class="art-card-title">仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え</div>
         <div class="art-card-desc">辞めたいのに動けない5つの理由を整理し、辞めていい状態の判断基準と具体的な次の一歩を提案します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約4分で読めます</div>
       </div>
     </a>
     
@@ -247,7 +255,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事で動悸がする…それは体が「もう限界」と伝えているサインかもしれない</div>
         <div class="art-card-desc">仕事のことを考えると動悸がする状態の正体と、放置するリスク・今すぐできる対処法を解説します。</div>
-        <div class="art-card-meta">2026-06-17</div>
+        <div class="art-card-meta">2026-06-17　約3分で読めます</div>
       </div>
     </a>
     
