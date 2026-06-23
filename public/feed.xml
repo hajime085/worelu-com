@@ -5,13 +5,20 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 23 Jun 2026 01:49:01 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 02:03:37 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[休職に診断書は必須？もらい方から費用・会社への提出方法まで解説]]></title>
       <link>https://worelu.com/articles/burnout/kyushoku-shindan/</link>
       <guid>https://worelu.com/articles/burnout/kyushoku-shindan/</guid>
       <description><![CDATA[休職を考えているけれど、診断書はどうやってもらうの？費用はいくら？もらい方・受診すべき病院・会社への伝え方をわかりやすく解説します。]]></description>
+      <pubDate>2026-06-23</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[仕事のミスで落ち込むあなたへ。立ち直るための正しい対処法と切り替え術]]></title>
+      <link>https://worelu.com/articles/stress/shigoto-miss-ochikomi/</link>
+      <guid>https://worelu.com/articles/stress/shigoto-miss-ochikomi/</guid>
+      <description><![CDATA[仕事でミスをして落ち込んでいませんか？ミスを引きずってしまう心理、ミス後の正しい対処法、気持ちを切り替える具体的な方法を解説します。]]></description>
       <pubDate>2026-06-23</pubDate>
     </item>
     <item>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/work/service-zangyo-atarimae/</link>
       <guid>https://worelu.com/articles/work/service-zangyo-atarimae/</guid>
       <description><![CDATA[「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[「自主的な残業」でも残業代は出る。違法になるケースと対処法]]></title>
-      <link>https://worelu.com/articles/work/service-zangyo-voluntary/</link>
-      <guid>https://worelu.com/articles/work/service-zangyo-voluntary/</guid>
-      <description><![CDATA[「自主的だから残業代は出ない」は通らない。残業代が発生するケースと証拠の集め方を解説します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
