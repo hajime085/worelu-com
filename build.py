@@ -338,6 +338,31 @@ def build_article_list(env: Environment, articles: list):
         print(f"  記事一覧 p{page_num}: {out}")
 
 
+# カテゴリーごとのおすすめ記事（固定表示・スラッグで指定）
+CATEGORY_FEATURED = {
+    "stress": [
+        "nemurenai-asa",
+        "shigoto-genkai-sign",
+        "shigoto-utsu",
+    ],
+    "burnout": [
+        "moeyuki-selfcheck",
+        "kyushoku-amae",
+        "burnout-symptoms",
+    ],
+    "work": [
+        "service-zangyo",
+        "service-zangyo-atarimae",
+        "service-zangyo-voluntary",
+    ],
+    "quit": [
+        "yameru-yuuki",
+        "black-kigyo-shindan",
+        "taisyoku-daikou-moumuri",
+    ],
+}
+
+
 def build_category_pages(env: Environment, articles: list):
     """カテゴリ別一覧ページを生成"""
     tpl = env.get_template("article-list.html")
@@ -350,7 +375,9 @@ def build_category_pages(env: Environment, articles: list):
         if not cat_articles:
             continue
         cat_desc = CATEGORY_DESCS.get(cat_slug, {})
-        html = tpl.render(articles=cat_articles, categories=cats, cat_desc=cat_desc, current_cat=cat_slug)
+        featured_slugs = CATEGORY_FEATURED.get(cat_slug, [])
+        featured_articles = [a for slug in featured_slugs for a in articles if a["slug"] == slug]
+        html = tpl.render(articles=cat_articles, categories=cats, cat_desc=cat_desc, current_cat=cat_slug, featured_articles=featured_articles)
         out = OUTPUT_DIR / "articles" / cat_slug / "index.html"
         write_file(out, html)
         print(f"  カテゴリ: {out}")

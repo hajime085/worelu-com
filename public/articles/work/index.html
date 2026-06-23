@@ -52,6 +52,16 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
+.cat-featured { max-width: 960px; margin: 0 auto 36px; padding: 0 28px; }
+.cat-featured-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.cat-featured-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cat-featured-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title-text { font-size: 13px; font-weight: 700; line-height: 1.55; color: var(--text); }
+.cat-featured-arrow { font-size: 11px; color: var(--blue); font-weight: 700; margin-top: auto; }
+@media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
@@ -144,6 +154,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <div class="cat-desc-box">
     <p class="cat-desc-text">仕事でのサービス残業・長時間労働・有給休暇の未取得・パワハラなど、労働基準法に関わる問題は多くの職場で起きています。このカテゴリーでは、残業代の取り戻し方や、職場の問題に直面したときの対処法、労働基準監督署への相談方法など、働く人が自分の権利を守るための情報を解説しています。</p>
     <p class="cat-desc-lead">「これっておかしいのかな？」と感じたらまず確認してみてください。</p>
+  </div>
+  
+
+  
+  <div class="cat-featured">
+    <div class="cat-featured-title">おすすめ記事</div>
+    <div class="cat-featured-grid">
+      
+      <a href="/articles/work/service-zangyo/" class="cat-featured-card">
+        <span class="cat-featured-cat">労働問題</span>
+        <span class="cat-featured-title-text">サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+      <a href="/articles/work/service-zangyo-atarimae/" class="cat-featured-card">
+        <span class="cat-featured-cat">労働問題</span>
+        <span class="cat-featured-title-text">サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+      <a href="/articles/work/service-zangyo-voluntary/" class="cat-featured-card">
+        <span class="cat-featured-cat">労働問題</span>
+        <span class="cat-featured-title-text">「自主的な残業」でも残業代は出る。違法になるケースと対処法</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+    </div>
   </div>
   
 

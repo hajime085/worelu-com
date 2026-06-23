@@ -52,6 +52,16 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
+.cat-featured { max-width: 960px; margin: 0 auto 36px; padding: 0 28px; }
+.cat-featured-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.cat-featured-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cat-featured-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title-text { font-size: 13px; font-weight: 700; line-height: 1.55; color: var(--text); }
+.cat-featured-arrow { font-size: 11px; color: var(--blue); font-weight: 700; margin-top: auto; }
+@media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
@@ -144,6 +154,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <div class="cat-desc-box">
     <p class="cat-desc-text">仕事による燃え尽き症候群（バーンアウト）は、長期間にわたるストレスによって心身のエネルギーが枯渇してしまう状態です。このカテゴリーでは、バーンアウトの症状やセルフチェック、休職の判断・手続き、適応障害との違い、回復方法について解説しています。「甘えかな」と思いながら限界を迎えている方へ、休むための判断基準と具体的なステップをお届けします。</p>
     <p class="cat-desc-lead">今の自分の状態を確認することから始めましょう。</p>
+  </div>
+  
+
+  
+  <div class="cat-featured">
+    <div class="cat-featured-title">おすすめ記事</div>
+    <div class="cat-featured-grid">
+      
+      <a href="/articles/burnout/moeyuki-selfcheck/" class="cat-featured-card">
+        <span class="cat-featured-cat">燃え尽き・休職</span>
+        <span class="cat-featured-title-text">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+      <a href="/articles/burnout/kyushoku-amae/" class="cat-featured-card">
+        <span class="cat-featured-cat">燃え尽き・休職</span>
+        <span class="cat-featured-title-text">休職したいのは甘え？罪悪感を消して自分を守るための判断基準</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+      <a href="/articles/burnout/burnout-symptoms/" class="cat-featured-card">
+        <span class="cat-featured-cat">燃え尽き・休職</span>
+        <span class="cat-featured-title-text">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+    </div>
   </div>
   
 

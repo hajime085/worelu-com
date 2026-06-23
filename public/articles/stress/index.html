@@ -52,6 +52,16 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
+.cat-featured { max-width: 960px; margin: 0 auto 36px; padding: 0 28px; }
+.cat-featured-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.cat-featured-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cat-featured-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title-text { font-size: 13px; font-weight: 700; line-height: 1.55; color: var(--text); }
+.cat-featured-arrow { font-size: 11px; color: var(--blue); font-weight: 700; margin-top: auto; }
+@media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
@@ -144,6 +154,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <div class="cat-desc-box">
     <p class="cat-desc-text">仕事のストレスは、眠れない、涙が出る、動悸、吐き気、朝起きられないなど、さまざまな心身の不調として現れることがあります。このカテゴリーでは、仕事によるストレス症状や限界サイン、原因、セルフチェック、対処法について分かりやすく解説しています。「仕事がつらい」「最近体調がおかしい」と感じている方が、自分の状態を整理し、次の一歩を考えるための情報をまとめています。</p>
     <p class="cat-desc-lead">気になる症状から記事を探してください。</p>
+  </div>
+  
+
+  
+  <div class="cat-featured">
+    <div class="cat-featured-title">おすすめ記事</div>
+    <div class="cat-featured-grid">
+      
+      <a href="/articles/stress/nemurenai-asa/" class="cat-featured-card">
+        <span class="cat-featured-cat">症状・ストレス</span>
+        <span class="cat-featured-title-text">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+      <a href="/articles/stress/shigoto-genkai-sign/" class="cat-featured-card">
+        <span class="cat-featured-cat">症状・ストレス</span>
+        <span class="cat-featured-title-text">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+      <a href="/articles/stress/shigoto-utsu/" class="cat-featured-card">
+        <span class="cat-featured-cat">症状・ストレス</span>
+        <span class="cat-featured-title-text">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</span>
+        <span class="cat-featured-arrow">→ 読む</span>
+      </a>
+      
+    </div>
   </div>
   
 

@@ -52,6 +52,16 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
 .cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
+.cat-featured { max-width: 960px; margin: 0 auto 36px; padding: 0 28px; }
+.cat-featured-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.cat-featured-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cat-featured-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; }
+.cat-featured-title-text { font-size: 13px; font-weight: 700; line-height: 1.55; color: var(--text); }
+.cat-featured-arrow { font-size: 11px; color: var(--blue); font-weight: 700; margin-top: auto; }
+@media(max-width: 640px) { .cat-featured-grid { grid-template-columns: 1fr; } }
 .cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
 .cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
@@ -140,6 +150,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       </a>
     </div>
   </nav>
+  
+
   
 
   <div class="articles-grid">
