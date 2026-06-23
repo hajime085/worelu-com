@@ -137,15 +137,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .also-read-list li a:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
 @media(max-width:640px) { .related-list { grid-template-columns: 1fr; } .also-read-list { grid-template-columns: 1fr; } }
 /* あわせて読みたい（build.py変換後カード型） */
-.also-read-section { margin: 8px 0 32px; }
-.also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.also-read-section { margin: 8px 0 36px; }
+.also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .also-read-bar { display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; flex-shrink: 0; }
-.also-read-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.also-read-card { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, border-color 0.2s; min-height: 64px; gap: 8px; }
-.also-read-card:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
-.also-read-text { font-size: 13px; font-weight: 700; line-height: 1.55; flex: 1; }
-.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 800; flex-shrink: 0; }
-@media(max-width:640px) { .also-read-grid { grid-template-columns: 1fr; } }
+.also-read-grid { display: flex; flex-direction: column; gap: 12px; }
+.also-read-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid transparent; border-radius: 10px; padding: 18px 20px; text-decoration: none; color: var(--text); transition: border-left-color 0.2s, box-shadow 0.2s, transform 0.15s; }
+.also-read-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateX(2px); }
+.also-read-cat { font-size: 10px; font-weight: 800; color: var(--blue); letter-spacing: 0.08em; }
+.also-read-text { font-size: 14px; font-weight: 700; line-height: 1.6; color: var(--text); }
+.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 700; }
 /* 診断結果カルーセル */
 .diag-carousel { margin-top: 28px; }
 .diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
@@ -452,7 +452,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <h2 id="_16">休職を迷っているなら、まず今の状態を確認してみて</h2>
 <p>「本当に休職が必要なのか」「自分の状態はどのくらい深刻なのか」がわからないまま迷っている人は、まずWoreluのストレスチェック（無料・約1分）で今の状態を数値化してみてください。</p>
 <hr />
-<div class="also-read-section"><div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div><div class="also-read-grid"><a href="/articles/burnout/kyushoku-amae/" class="also-read-card"><span class="also-read-text">休職したいのは甘え？</span><span class="also-read-arrow">→</span></a><a href="/articles/burnout/kyushoku-1month/" class="also-read-card"><span class="also-read-text">休職1ヶ月でどう変わる？</span><span class="also-read-arrow">→</span></a><a href="/articles/stress/shigoto-utsu/" class="also-read-card"><span class="also-read-text">仕事が原因のうつ？</span><span class="also-read-arrow">→</span></a><a href="/articles/stress/shigoto-genkai-sign/" class="also-read-card"><span class="also-read-text">仕事の限界サインとは？</span><span class="also-read-arrow">→</span></a></div></div>
+<div class="also-read-section"><div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div><div class="also-read-grid"><a href="/articles/burnout/kyushoku-amae/" class="also-read-card"><span class="also-read-cat">バーンアウト</span><span class="also-read-text">休職したいのは甘え？</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/burnout/kyushoku-1month/" class="also-read-card"><span class="also-read-cat">バーンアウト</span><span class="also-read-text">休職1ヶ月でどう変わる？</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/stress/shigoto-utsu/" class="also-read-card"><span class="also-read-cat">症状・ストレス</span><span class="also-read-text">仕事が原因のうつ？</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/stress/shigoto-genkai-sign/" class="also-read-card"><span class="also-read-cat">症状・ストレス</span><span class="also-read-text">仕事の限界サインとは？</span><span class="also-read-arrow">→ 読む</span></a></div></div>
 <p>また、休職したいという気持ちが甘えではない理由については、こちらの記事も参考にしてください。</p>
 <p>→ <a href="/articles/burnout/kyushoku-amae/">休職したいのは甘えじゃない</a></p>
 <hr />

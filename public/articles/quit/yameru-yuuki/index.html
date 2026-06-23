@@ -137,15 +137,15 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .also-read-list li a:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
 @media(max-width:640px) { .related-list { grid-template-columns: 1fr; } .also-read-list { grid-template-columns: 1fr; } }
 /* あわせて読みたい（build.py変換後カード型） */
-.also-read-section { margin: 8px 0 32px; }
-.also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.also-read-section { margin: 8px 0 36px; }
+.also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
 .also-read-bar { display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; flex-shrink: 0; }
-.also-read-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.also-read-card { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, border-color 0.2s; min-height: 64px; gap: 8px; }
-.also-read-card:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
-.also-read-text { font-size: 13px; font-weight: 700; line-height: 1.55; flex: 1; }
-.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 800; flex-shrink: 0; }
-@media(max-width:640px) { .also-read-grid { grid-template-columns: 1fr; } }
+.also-read-grid { display: flex; flex-direction: column; gap: 12px; }
+.also-read-card { display: flex; flex-direction: column; gap: 8px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid transparent; border-radius: 10px; padding: 18px 20px; text-decoration: none; color: var(--text); transition: border-left-color 0.2s, box-shadow 0.2s, transform 0.15s; }
+.also-read-card:hover { border-left-color: var(--blue); box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateX(2px); }
+.also-read-cat { font-size: 10px; font-weight: 800; color: var(--blue); letter-spacing: 0.08em; }
+.also-read-text { font-size: 14px; font-weight: 700; line-height: 1.6; color: var(--text); }
+.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 700; }
 /* 診断結果カルーセル */
 .diag-carousel { margin-top: 28px; }
 .diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
@@ -404,7 +404,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>その状態だと「今の職場に問題があるのか、自分が限界なのか」が見えにくくなります。客観的なスコアで整理しておくと、転職すべきかどうかの判断材料になります。</p>
 <p>Woreluのストレスチェック診断（無料・約1分）で、転職意向スコアを含む4軸で現状を確認してみてください。</p>
 <hr />
-<div class="also-read-section"><div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div><div class="also-read-grid"><a href="/articles/quit/shigoto-yametai-amae/" class="also-read-card"><span class="also-read-text">「仕事辞めたい」は甘えじゃない</span><span class="also-read-arrow">→</span></a><a href="/articles/quit/taisyoku-daikou-moumuri/" class="also-read-card"><span class="also-read-text">退職代行モームリに何があったのか</span><span class="also-read-arrow">→</span></a><a href="/articles/quit/black-kigyo-shindan/" class="also-read-card"><span class="also-read-text">ブラック企業診断</span><span class="also-read-arrow">→</span></a><a href="/articles/stress/shigoto-genkai-sign/" class="also-read-card"><span class="also-read-text">仕事の限界サインとは？</span><span class="also-read-arrow">→</span></a></div></div>
+<div class="also-read-section"><div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div><div class="also-read-grid"><a href="/articles/quit/shigoto-yametai-amae/" class="also-read-card"><span class="also-read-cat">転職・退職</span><span class="also-read-text">「仕事辞めたい」は甘えじゃない</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/quit/taisyoku-daikou-moumuri/" class="also-read-card"><span class="also-read-cat">転職・退職</span><span class="also-read-text">退職代行モームリに何があったのか</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/quit/black-kigyo-shindan/" class="also-read-card"><span class="also-read-cat">転職・退職</span><span class="also-read-text">ブラック企業診断</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/stress/shigoto-genkai-sign/" class="also-read-card"><span class="also-read-cat">症状・ストレス</span><span class="also-read-text">仕事の限界サインとは？</span><span class="also-read-arrow">→ 読む</span></a></div></div>
 <p>→ <a href="https://worelu.com">無料でストレスチェックを受ける</a></p>
 <h2 id="_4">まとめ</h2>
 <p>仕事を辞める勇気が出ないのは、決してあなたが弱いからではありません。様々な心理的な要因や現実的な不安が絡み合っているからです。しかし、その理由を一つ一つ紐解き、現実的な答えを見つけることで、次の一歩を踏み出す勇気が湧いてくるはずです。一人で抱え込まず、時には外部のサポートを頼りながら、あなたの心身の健康とキャリアを守るための最善の選択をしてください。あなたの人生は、あなたが主役です。</p>

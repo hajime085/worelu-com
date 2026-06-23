@@ -155,15 +155,29 @@ def parse_markdown(filepath: Path) -> dict:
             r'<h2[^>]*>あわせて読みたい</h2>\s*<ul>(.*?)</ul>',
             _re.DOTALL
         )
+        cat_labels = {
+            'stress': '症状・ストレス',
+            'burnout': 'バーンアウト',
+            'work': '労働問題',
+            'quit': '転職・退職',
+        }
         def make_cards(m):
             items_html = m.group(1)
             links = _re.findall(r'<a href="([^"]+)">([^<]+)</a>', items_html)
             cards = ''
             for url, title in links:
+                # URLからカテゴリを推定
+                cat_key = 'stress'
+                for k in cat_labels:
+                    if f'/{k}/' in url:
+                        cat_key = k
+                        break
+                cat_label = cat_labels[cat_key]
                 cards += (
                     f'<a href="{url}" class="also-read-card">'
+                    f'<span class="also-read-cat">{cat_label}</span>'
                     f'<span class="also-read-text">{title}</span>'
-                    f'<span class="also-read-arrow">→</span>'
+                    f'<span class="also-read-arrow">→ 読む</span>'
                     f'</a>'
                 )
             return (
