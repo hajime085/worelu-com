@@ -252,6 +252,16 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 今の職場だけがすべてではありません。
 
 
+
+---
+
+## あわせて読みたい
+
+- [サービス残業が当たり前の職場は異常](/articles/work/service-zangyo-atarimae/)
+- [「自主的な残業」でも残業代は出る](/articles/work/service-zangyo-voluntary/)
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 ## よくある質問

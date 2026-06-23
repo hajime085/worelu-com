@@ -97,6 +97,16 @@ draft: false
 
 今の状態がどのくらい深刻か確かめたい場合は、Woreluのストレスチェック（無料・約1分）を使ってみてください。
 
+
+---
+
+## あわせて読みたい
+
+- [「仕事できない」と辛いあなたへ](/articles/stress/shigoto-dekinai-tsurai/)
+- [仕事のやる気が出ないのはなぜ？](/articles/stress/shigoto-yaruki-denai/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
+
 → [無料でストレスチェックを受ける](/stress-check/)
 
 ---

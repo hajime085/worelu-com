@@ -128,6 +128,16 @@ canonical: https://worelu.com/articles/stress/nemurenai-asa/
 
 それでも眠れない状態が2週間以上続く、日常生活への支障が大きいという場合は、心療内科や精神科への相談も選択肢の一つとして考えてみてください。
 
+
+---
+
+## あわせて読みたい
+
+- [朝、仕事に行きたくないのはなぜ？](/articles/stress/asa-shigoto-ikitakunai/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [バーンアウトの症状チェックリスト](/articles/burnout/burnout-symptoms/)
+- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
+
 今の状態がどのくらい積み重なっているか確認したい場合は、Woreluのストレスチェック（無料・約1分）もご活用ください。
 
 → [無料でストレスチェックを受ける](/stress-check/)

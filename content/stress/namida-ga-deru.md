@@ -68,6 +68,16 @@ canonical: https://worelu.com/articles/stress/namida-ga-deru/
 
 Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。<br><br>
 
+
+---
+
+## あわせて読みたい
+
+- [仕事で動悸がする](/articles/stress/doki-ga-suru/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [休職に診断書は必須？](/articles/burnout/kyushoku-shindan/)
+- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ

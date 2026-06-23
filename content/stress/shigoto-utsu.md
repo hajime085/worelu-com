@@ -111,6 +111,16 @@ draft: false
 
 → [休職したいのは甘えじゃない](/articles/burnout/kyushoku-amae/)
 → [休職に診断書は必須？](/articles/burnout/kyushoku-shindan/)
+
+---
+
+## あわせて読みたい
+
+- [休職に診断書は必須？](/articles/burnout/kyushoku-shindan/)
+- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [バーンアウトの症状チェックリスト](/articles/burnout/burnout-symptoms/)
+
 → [無料でストレスチェックを受ける](/stress-check/)
 
 ---

@@ -40,6 +40,16 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 Woreluのストレスチェック診断（無料・登録不要・約1分）で、仕事ストレス・燃え尽き傾向・職場環境・転職意向の4軸から今の状態を可視化してみてください。
 
 
+
+---
+
+## あわせて読みたい
+
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [ブラック企業あるある20選](/articles/quit/black-kigyo-aruaru/)
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+- [サービス残業は違法](/articles/work/service-zangyo/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 ## まとめ
 

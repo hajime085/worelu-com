@@ -54,6 +54,16 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 Woreluのストレスチェック診断（無料・約1分）で、転職意向スコアを含む4軸で現状を確認してみてください。
 
 
+
+---
+
+## あわせて読みたい
+
+- [仕事のやる気が出ないのはなぜ？](/articles/stress/shigoto-yaruki-denai/)
+- [上司が怖くて萎縮してしまうのはなぜ？](/articles/stress/joushi-kowai-ishuku/)
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+- [30代で仕事辞めたいのは甘えじゃない](/articles/quit/30dai-shigoto-yametai/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ

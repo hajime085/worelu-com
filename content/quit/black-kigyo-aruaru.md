@@ -218,6 +218,16 @@ tags:
 
 まず現状を客観的に整理したい場合は、Woreluのストレスチェック診断（無料・約1分）で今の状態をスコア化してみてください。
 
+
+---
+
+## あわせて読みたい
+
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [「この会社やばい」と感じたとき](/articles/quit/kaisha-yabai/)
+- [サービス残業は違法](/articles/work/service-zangyo/)
+- [退職代行モームリに何があったのか](/articles/quit/taisyoku-daikou-moumuri/)
+
 → [無料でストレスチェックを受ける](https://worelu.com/stress-check/)
 
 転職を具体的に考え始めた方は、以下の記事も参考にしてください。

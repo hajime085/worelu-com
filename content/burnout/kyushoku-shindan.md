@@ -134,6 +134,16 @@ draft: false
 
 「本当に休職が必要なのか」「自分の状態はどのくらい深刻なのか」がわからないまま迷っている人は、まずWoreluのストレスチェック（無料・約1分）で今の状態を数値化してみてください。
 
+
+---
+
+## あわせて読みたい
+
+- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
+- [休職1ヶ月でどう変わる？](/articles/burnout/kyushoku-1month/)
+- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+
 → [無料でストレスチェックを受ける](/stress-check/)
 
 また、休職したいという気持ちが甘えではない理由については、こちらの記事も参考にしてください。

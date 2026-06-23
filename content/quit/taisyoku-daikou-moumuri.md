@@ -138,6 +138,16 @@ tags:
 
 Woreluのストレスチェック診断（無料・約1分）で、仕事ストレス・燃え尽き・職場環境・転職意向の4軸で現状をスコア化できます。
 
+
+---
+
+## あわせて読みたい
+
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [「この会社やばい」と感じたとき](/articles/quit/kaisha-yabai/)
+- [「仕事辞めたい」は甘えじゃない](/articles/quit/shigoto-yametai-amae/)
+
 → [無料でストレスチェックを受ける](https://worelu.com/stress-check/)
 
 ---

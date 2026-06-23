@@ -58,6 +58,16 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 Woreluのストレスチェック診断（無料・約1分）で、転職意向スコアを含む4軸で現状を確認してみてください。
 
 
+
+---
+
+## あわせて読みたい
+
+- [「仕事辞めたい」は甘えじゃない](/articles/quit/shigoto-yametai-amae/)
+- [退職代行モームリに何があったのか](/articles/quit/taisyoku-daikou-moumuri/)
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ

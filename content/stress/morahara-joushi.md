@@ -104,6 +104,16 @@ draft: false
 
 → [退職を言い出せないあなたへ](/articles/quit/taisyoku-iidasenai/)
 → [仕事辞めたいは甘えじゃない](/articles/quit/shigoto-yametai-amae/)
+
+---
+
+## あわせて読みたい
+
+- [上司が怖くて萎縮してしまうのはなぜ？](/articles/stress/joushi-kowai-ishuku/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+- [退職代行モームリに何があったのか](/articles/quit/taisyoku-daikou-moumuri/)
+
 → [無料でストレスチェックを受ける](/stress-check/)
 
 ---

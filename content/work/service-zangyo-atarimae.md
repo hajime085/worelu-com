@@ -44,6 +44,16 @@ canonical: https://worelu.com/articles/work/service-zangyo-atarimae/
 Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。
 
 
+
+---
+
+## あわせて読みたい
+
+- [サービス残業は違法](/articles/work/service-zangyo/)
+- [「自主的な残業」でも残業代は出る](/articles/work/service-zangyo-voluntary/)
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ

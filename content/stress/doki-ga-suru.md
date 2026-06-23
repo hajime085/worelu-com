@@ -57,6 +57,16 @@ canonical: https://worelu.com/articles/stress/doki-ga-suru/
 その状態だと「休むべきか、まだ続けられるか」の判断が自分ではしにくくなります。まず状態を数字で見ておくと、休む判断がしやすくなります。
 
 Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。<br><br>
+
+---
+
+## あわせて読みたい
+
+- [仕事で涙が出るのは甘えじゃない](/articles/stress/namida-ga-deru/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
+- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 <br><br>
 ## まとめ

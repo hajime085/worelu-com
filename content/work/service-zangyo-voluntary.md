@@ -60,6 +60,16 @@ canonical: https://worelu.com/articles/work/service-zangyo-voluntary/
 Woreluのストレスチェック診断（無料・登録不要・約1分）で、仕事ストレス・燃え尽き傾向・職場環境・転職意向の4軸から今の状態を可視化してみてください。
 
 
+
+---
+
+## あわせて読みたい
+
+- [サービス残業は違法](/articles/work/service-zangyo/)
+- [サービス残業が当たり前の職場は異常](/articles/work/service-zangyo-atarimae/)
+- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
+- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 ## まとめ

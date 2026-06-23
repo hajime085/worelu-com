@@ -70,6 +70,16 @@ canonical: https://worelu.com/articles/burnout/moeyuki-selfcheck/
 
 Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。<br><br>
 
+
+---
+
+## あわせて読みたい
+
+- [バーンアウトの症状チェックリスト](/articles/burnout/burnout-symptoms/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
+- [仕事のやる気が出ないのはなぜ？](/articles/stress/shigoto-yaruki-denai/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 <br>

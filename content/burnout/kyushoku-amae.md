@@ -112,6 +112,16 @@ draft: false
 
 **退職・転職を選ぶ場合**は、休職期間中に「この職場には戻れない」と確信することもあります。それは弱さではなく、自分を正直に理解した上での判断です。ただし、焦って体が回復しないうちに動き出さず、**まず回復を優先してください**。転職活動は心が元気になってからでも十分間に合います。
 
+
+---
+
+## あわせて読みたい
+
+- [休職に診断書は必須？](/articles/burnout/kyushoku-shindan/)
+- [休職1ヶ月でどう変わる？](/articles/burnout/kyushoku-1month/)
+- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
+
 → [無料でストレスチェックを受ける](/stress-check/)
 
 ## まとめ

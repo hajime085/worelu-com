@@ -275,6 +275,16 @@ A8：人間関係のストレスは、仕事のモチベーションを著しく
 
 そう感じたら、まずは自分の心の状態を客観的に知ることから始めてみましょう。Woreluのストレスチェック診断（無料・約1分）では、職場の人間関係によるストレス度合いや、あなたの心身への負荷を数値で確認できます。匿名で手軽にできるので、ぜひ一度試してみてください。あなたの心が少しでも軽くなるきっかけになるかもしれません。
 
+
+---
+
+## あわせて読みたい
+
+- [上司が怖くて萎縮してしまうのはなぜ？](/articles/stress/joushi-kowai-ishuku/)
+- [モラハラ上司に限界を感じたら](/articles/stress/morahara-joushi/)
+- [職場の人間関係に疲れたあなたへ](/articles/stress/ningen-kankei-tsukareta/)
+- [仕事で評価されないと腐る前に](/articles/quit/hyouka-sarenai/)
+
 → [無料でストレスチェックを受ける](https://worelu.com)
 
 <div style="background:#EFF6FF;border:2px solid #2563EB;border-radius:10px;padding:20px 24px;margin:32px 0;text-align:center">
