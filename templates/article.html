@@ -412,36 +412,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       <div class="sb-diag-note">登録不要 · worelu.com</div>
     </div>
 
-    {% if related_articles %}
-    <div class="sb-card">
-      <div class="sb-card-ttl">関連記事</div>
-      {% for art in related_articles %}
-      <div class="sb-item">
-        <div class="sb-item-cat">{{ art.category_label }}</div>
-        <div class="sb-item-ttl"><a href="{{ art.url }}">{{ art.title }}</a></div>
-      </div>
-      {% endfor %}
-    </div>
-    {% endif %}
+
   </aside>
 </div>
 
-{% if related_articles %}
-<div class="related">
-  <div class="related-inner">
-    <div class="related-title">あわせて読みたい</div>
-    <div class="related-list">
-      {% for art in related_articles %}
-      <a href="{{ art.url }}" class="related-item">
-        <div class="related-cat">{{ art.category_label }}</div>
-        <div class="related-text">{{ art.title }}</div>
-        <div class="related-arrow">→ 読む</div>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-{% endif %}
+
 
 <footer style="background:#fff;border-top:1px solid var(--line);padding:40px 32px 28px">
   <div style="max-width:760px;margin:0 auto">
