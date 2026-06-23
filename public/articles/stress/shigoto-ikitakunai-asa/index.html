@@ -119,15 +119,33 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .share-threads{background:#000;color:#fff}
 .share-line{background:#06C755;color:#fff}
 
-/* RELATED */
-.related { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 32px 28px; margin-top: 0; }
+/* RELATED - カード型タイル */
+.related { background: var(--page); border-top: 2px solid var(--blue-mid); padding: 36px 28px; margin-top: 0; }
 .related-inner { max-width: 740px; margin: 0 auto; }
-.related-title { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: 0.1em; margin-bottom: 16px; }
-.related-list { display: grid; gap: 10px; }
-.related-item { display: flex; align-items: center; gap: 12px; background: var(--page); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; text-decoration: none; color: var(--text); }
-.related-item:hover { border-color: var(--blue); }
-.related-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 3px; }
-.related-text { font-size: 13px; font-weight: 600; line-height: 1.5; }
+.related-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+.related-title::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.related-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.related-item { display: flex; flex-direction: column; justify-content: space-between; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, border-color 0.2s; min-height: 80px; }
+.related-item:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
+.related-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 6px; letter-spacing: 0.05em; }
+.related-text { font-size: 13px; font-weight: 700; line-height: 1.55; color: var(--text); }
+.related-arrow { font-size: 11px; color: var(--blue); margin-top: 10px; font-weight: 700; }
+/* あわせて読みたい（MD本文内） */
+.article-body h2:has(+ ul > li > a) + ul,
+.also-read-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; list-style: none; padding: 0; margin: 0 0 32px; }
+.also-read-list li a { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; text-decoration: none; color: var(--text); font-size: 13px; font-weight: 700; line-height: 1.55; transition: box-shadow 0.2s, border-color 0.2s; min-height: 72px; }
+.also-read-list li a:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
+@media(max-width:640px) { .related-list { grid-template-columns: 1fr; } .also-read-list { grid-template-columns: 1fr; } }
+/* あわせて読みたい（build.py変換後カード型） */
+.also-read-section { margin: 8px 0 32px; }
+.also-read-title { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.12em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.also-read-bar { display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; flex-shrink: 0; }
+.also-read-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.also-read-card { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; text-decoration: none; color: var(--text); transition: box-shadow 0.2s, border-color 0.2s; min-height: 64px; gap: 8px; }
+.also-read-card:hover { border-color: var(--blue); box-shadow: 0 4px 16px rgba(37,99,235,0.10); }
+.also-read-text { font-size: 13px; font-weight: 700; line-height: 1.55; flex: 1; }
+.also-read-arrow { font-size: 12px; color: var(--blue); font-weight: 800; flex-shrink: 0; }
+@media(max-width:640px) { .also-read-grid { grid-template-columns: 1fr; } }
 /* 診断結果カルーセル */
 .diag-carousel { margin-top: 28px; }
 .diag-carousel-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--blue-mid); }
@@ -626,35 +644,34 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   </aside>
 </div>
 
+
 <div class="related">
   <div class="related-inner">
-    <div class="related-title">関連記事</div>
+    <div class="related-title">あわせて読みたい</div>
     <div class="related-list">
       
       <a href="/articles/stress/morahara-joushi/" class="related-item">
-        <div>
-          <div class="related-cat">症状・ストレス</div>
-          <div class="related-text">モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説</div>
-        </div>
+        <div class="related-cat">症状・ストレス</div>
+        <div class="related-text">モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説</div>
+        <div class="related-arrow">→ 読む</div>
       </a>
       
       <a href="/articles/stress/shigoto-miss-ochikomi/" class="related-item">
-        <div>
-          <div class="related-cat">症状・ストレス</div>
-          <div class="related-text">仕事のミスで落ち込むあなたへ。立ち直るための正しい対処法と切り替え術</div>
-        </div>
+        <div class="related-cat">症状・ストレス</div>
+        <div class="related-text">仕事のミスで落ち込むあなたへ。立ち直るための正しい対処法と切り替え術</div>
+        <div class="related-arrow">→ 読む</div>
       </a>
       
       <a href="/articles/stress/shigoto-utsu/" class="related-item">
-        <div>
-          <div class="related-cat">症状・ストレス</div>
-          <div class="related-text">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
-        </div>
+        <div class="related-cat">症状・ストレス</div>
+        <div class="related-text">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
+        <div class="related-arrow">→ 読む</div>
       </a>
       
     </div>
   </div>
 </div>
+
 
 <footer style="background:#fff;border-top:1px solid var(--line);padding:40px 32px 28px">
   <div style="max-width:760px;margin:0 auto">
