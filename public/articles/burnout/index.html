@@ -51,6 +51,9 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-label { font-size: 12px; font-weight: 700; color: var(--text-2); text-align: center; }
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
+.cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
+.cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
 .art-card:hover { border-color: var(--blue); }
 .art-card-bar { height: 4px; }
@@ -86,7 +89,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <nav class="header-nav">
     <a href="/articles/">記事一覧</a>
     <a href="/articles/stress/">症状・ストレス</a>
-    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/burnout/">燃え尽き・休職</a>
     <a href="/articles/work/">労働問題</a>
     <a href="/articles/quit/">転職・退職</a>
   </nav>
@@ -121,7 +124,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="cat-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg>
         </div>
-        <span class="cat-label">バーンアウト</span>
+        <span class="cat-label">燃え尽き・休職</span>
       </a>
       <a href="/articles/work/" class="cat-item">
         <div class="cat-icon">
@@ -137,12 +140,19 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       </a>
     </div>
   </nav>
+  
+  <div class="cat-desc-box">
+    <p class="cat-desc-text">仕事による燃え尽き症候群（バーンアウト）は、長期間にわたるストレスによって心身のエネルギーが枯渇してしまう状態です。このカテゴリーでは、バーンアウトの症状やセルフチェック、休職の判断・手続き、適応障害との違い、回復方法について解説しています。「甘えかな」と思いながら限界を迎えている方へ、休むための判断基準と具体的なステップをお届けします。</p>
+    <p class="cat-desc-lead">今の自分の状態を確認することから始めましょう。</p>
+  </div>
+  
+
   <div class="articles-grid">
     
     <a href="/articles/burnout/kyushoku-shindan/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職に診断書は必須？もらい方から費用・会社への提出方法まで解説</div>
         <div class="art-card-desc">休職を考えているけれど、診断書はどうやってもらうの？費用はいくら？もらい方・受診すべき病院・会社への伝え方をわかりやすく解説します。</div>
         <div class="art-card-meta">2026-06-23</div>
@@ -152,7 +162,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <a href="/articles/burnout/kyushoku-amae/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職したいのは甘え？罪悪感を消して自分を守るための判断基準</div>
         <div class="art-card-desc">「休職したいけど甘えじゃないか」と悩んでいませんか？休職を考えるのは、あなたが限界まで頑張った証拠です。休職が甘えではない理由や必要なサイン、具体的な手続きまで…</div>
         <div class="art-card-meta">2026-06-22</div>
@@ -162,7 +172,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <a href="/articles/burnout/burnout-symptoms/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法</div>
         <div class="art-card-desc">バーンアウトの3つの特徴・症状リスト・進行段階・段階別の回復ステップを丁寧に解説します。</div>
         <div class="art-card-meta">2026-06-17</div>
@@ -172,7 +182,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <a href="/articles/burnout/kyushoku-1month/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する</div>
         <div class="art-card-desc">休職1ヶ月の変化・傷病手当金の計算方法・過ごし方・復職か退職かの判断基準を具体的に整理します。</div>
         <div class="art-card-meta">2026-06-17</div>
@@ -182,7 +192,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <a href="/articles/burnout/moeyuki-selfcheck/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する</div>
         <div class="art-card-desc">燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。</div>
         <div class="art-card-meta">2026-06-17</div>
@@ -192,7 +202,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <a href="/articles/burnout/hsp-shigoto-muiteru/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">HSPに向いてる仕事10選。繊細な特性を活かせる職場の選び方</div>
         <div class="art-card-desc">「HSPだけど仕事が辛い…」と感じるあなたへ。HSPの特性を活かせる仕事や、働きやすい環境を見つけるための具体的な方法を解説します。自分らしく働く一歩を踏み出し…</div>
         <div class="art-card-meta">2026-05-10</div>
@@ -219,7 +229,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
             <a href="/stress-check/" style="font-size:13px;color:var(--muted)">AIストレス診断</a>
             <a href="/articles/" style="font-size:13px;color:var(--muted)">記事一覧</a>
             <a href="/articles/stress/" style="font-size:13px;color:var(--muted)">症状・ストレス</a>
-            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted)">バーンアウト</a>
+            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted)">燃え尽き・休職</a>
             <a href="/articles/quit/" style="font-size:13px;color:var(--muted)">転職・退職</a>
           </div>
         </div>

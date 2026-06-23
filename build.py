@@ -31,9 +31,28 @@ OUTPUT_DIR = Path("public")
 
 CATEGORY_LABELS = {
     "stress":  "症状・ストレス",
-    "burnout": "バーンアウト",
+    "burnout": "燃え尽き・休職",
     "work":    "労働問題",
     "quit":    "転職・退職",
+}
+
+CATEGORY_DESCS = {
+    "stress": {
+        "desc": "仕事のストレスは、眠れない、涙が出る、動悸、吐き気、朝起きられないなど、さまざまな心身の不調として現れることがあります。このカテゴリーでは、仕事によるストレス症状や限界サイン、原因、セルフチェック、対処法について分かりやすく解説しています。「仕事がつらい」「最近体調がおかしい」と感じている方が、自分の状態を整理し、次の一歩を考えるための情報をまとめています。",
+        "lead": "気になる症状から記事を探してください。",
+    },
+    "burnout": {
+        "desc": "仕事による燃え尽き症候群（バーンアウト）は、長期間にわたるストレスによって心身のエネルギーが枯渇してしまう状態です。このカテゴリーでは、バーンアウトの症状やセルフチェック、休職の判断・手続き、適応障害との違い、回復方法について解説しています。「甘えかな」と思いながら限界を迎えている方へ、休むための判断基準と具体的なステップをお届けします。",
+        "lead": "今の自分の状態を確認することから始めましょう。",
+    },
+    "work": {
+        "desc": "仕事でのサービス残業・長時間労働・有給休暇の未取得・パワハラなど、労働基準法に関わる問題は多くの職場で起きています。このカテゴリーでは、残業代の取り戻し方や、職場の問題に直面したときの対処法、労働基準監督署への相談方法など、働く人が自分の権利を守るための情報を解説しています。",
+        "lead": "「これっておかしいのかな？」と感じたらまず確認してみてください。",
+    },
+    "quit": {
+        "desc": "「仕事を辞めたい」「転職したいけれど不安」「退職を切り出せない」と悩んでいる方向けに、退職・転職に関する情報をまとめています。退職代行サービスの活用法やブラック企業の見分け方、転職活動の進め方など、次の一歩を安心して踏み出すための情報を分かりやすく解説しています。仕事を辞めるタイミングや退職後の手続きについても紹介しています。",
+        "lead": "状況に近い悩みの記事からご覧ください。",
+    },
 }
 
 # カテゴリ別カード表示設定
@@ -157,7 +176,7 @@ def parse_markdown(filepath: Path) -> dict:
         )
         cat_labels = {
             'stress': '症状・ストレス',
-            'burnout': 'バーンアウト',
+            'burnout': '燃え尽き・休職',
             'work': '労働問題',
             'quit': '転職・退職',
         }
@@ -330,7 +349,8 @@ def build_category_pages(env: Environment, articles: list):
         cat_articles = [a for a in articles if a["category"] == cat_slug]
         if not cat_articles:
             continue
-        html = tpl.render(articles=cat_articles, categories=cats)
+        cat_desc = CATEGORY_DESCS.get(cat_slug, {})
+        html = tpl.render(articles=cat_articles, categories=cats, cat_desc=cat_desc, current_cat=cat_slug)
         out = OUTPUT_DIR / "articles" / cat_slug / "index.html"
         write_file(out, html)
         print(f"  カテゴリ: {out}")

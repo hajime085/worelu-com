@@ -51,6 +51,9 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-label { font-size: 12px; font-weight: 700; color: var(--text-2); text-align: center; }
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
 .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.cat-desc-box { max-width: 960px; margin: 0 auto 32px; padding: 0 28px; }
+.cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
+.cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
 .art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
 .art-card:hover { border-color: var(--blue); }
 .art-card-bar { height: 4px; }
@@ -86,7 +89,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <nav class="header-nav">
     <a href="/articles/">記事一覧</a>
     <a href="/articles/stress/">症状・ストレス</a>
-    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/burnout/">燃え尽き・休職</a>
     <a href="/articles/work/">労働問題</a>
     <a href="/articles/quit/">転職・退職</a>
   </nav>
@@ -121,7 +124,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="cat-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg>
         </div>
-        <span class="cat-label">バーンアウト</span>
+        <span class="cat-label">燃え尽き・休職</span>
       </a>
       <a href="/articles/work/" class="cat-item">
         <div class="cat-icon">
@@ -137,6 +140,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       </a>
     </div>
   </nav>
+  
+
   <div class="articles-grid">
     
     <a href="/articles/stress/shigoto-dekinai-tsurai/" class="art-card">
@@ -152,7 +157,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <a href="/articles/burnout/hsp-shigoto-muiteru/" class="art-card">
       <div class="art-card-bar burnout"></div>
       <div class="art-card-body">
-        <div class="art-card-cat">バーンアウト</div>
+        <div class="art-card-cat">燃え尽き・休職</div>
         <div class="art-card-title">HSPに向いてる仕事10選。繊細な特性を活かせる職場の選び方</div>
         <div class="art-card-desc">「HSPだけど仕事が辛い…」と感じるあなたへ。HSPの特性を活かせる仕事や、働きやすい環境を見つけるための具体的な方法を解説します。自分らしく働く一歩を踏み出し…</div>
         <div class="art-card-meta">2026-05-10</div>
@@ -215,7 +220,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
             <a href="/stress-check/" style="font-size:13px;color:var(--muted)">AIストレス診断</a>
             <a href="/articles/" style="font-size:13px;color:var(--muted)">記事一覧</a>
             <a href="/articles/stress/" style="font-size:13px;color:var(--muted)">症状・ストレス</a>
-            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted)">バーンアウト</a>
+            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted)">燃え尽き・休職</a>
             <a href="/articles/quit/" style="font-size:13px;color:var(--muted)">転職・退職</a>
           </div>
         </div>
