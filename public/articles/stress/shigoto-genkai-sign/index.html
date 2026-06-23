@@ -370,7 +370,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         
       </div>
       <div class="hero-meta-row">
-        <span>約37分で読めます</span>
+        <span>約36分で読めます</span>
         <div class="hero-sep"></div>
         <span>Worelu編集部</span>
       </div>
@@ -536,17 +536,14 @@ function calcGenkai(){
     msg='<strong>心身に疲れがたまってきているサインです。</strong><br>'+
     '体・感情・行動に変化が出始めています。今すぐ休息を増やし、一人で抱え込まないようにしましょう。'+
     (cats ? '<br>特に気になるカテゴリ：'+cats : '')+
-    '<br><br><a href="/stress-check/" style="color:#2563EB;font-weight:700">AIコーチに相談する（無料）</a>';
     bg='#FFFBEB'; border='#FCD34D'; level='WARNING';
   } else if(total<=19){
     msg='<strong>心身がかなり疲弊しています。限界サインが出ています。</strong><br>'+
     '全'+total+'項目が当てはまりました。仕事のペースを落とすか、信頼できる人や専門家への相談を強くおすすめします。一人で解決しようとしないでください。'+
-    '<br><br><a href="/stress-check/" style="color:#DC2626;font-weight:700">今すぐAI診断で状態を確認する（無料）</a>';
     bg='#FEF2F2'; border='#FCA5A5'; level='DANGER';
   } else {
     msg='<strong>深刻な限界サインです。今すぐ休んでください。</strong><br>'+
     '全'+total+'項目が当てはまりました。これだけ多くのサインが出ているなら、あなたの心身は今、本当に限界です。医療機関への受診や、信頼できる人への相談を最優先にしてください。仕事よりも、あなた自身が大切です。'+
-    '<br><br><a href="/stress-check/" style="color:#DC2626;font-weight:700">AIコーチに相談する（無料）</a>';
     bg='#FEF2F2'; border='#EF4444'; level='CRITICAL';
   }
   r.style.display='block';
@@ -699,8 +696,7 @@ document.querySelectorAll('.gc-cb').forEach(function(cb){
 <p>「もしかして、私、もう限界？」<br><br></p>
 <p>そう感じたら、まずは自分の心の状態を客観的に知ることが大切です。WoreluのAI診断は、仕事ストレス・燃え尽き傾向・職場環境・転職意向の4軸から、あなたの今の状態を可視化し、具体的なアドバイスを提供します。誰にも知られずに、無料で、約1分で診断できます。<br><br></p>
 <p><strong>サインに気づいたら、まず今の状態をAI診断で確認してください。</strong></p>
-<p>→ <a href="https://worelu.com/stress-check">無料でストレスチェックを受ける（worelu.com）</a>
-<br><br></p>
+<p><br><br></p>
 <h2 id="_8">まとめ：サインに気づいたら早めに動くことが大切</h2>
 <p>仕事の限界サインは、あなたの心身が発する大切なSOSです。身体、感情、行動の様々な側面から現れるサインを見逃さず、自分を責めることなく、その声に耳を傾けましょう。複数のサインに当てはまる場合や、症状が2週間以上続く場合は、早急な休息や専門家への相談を検討すべきです。<br><br></p>
 <p>限界を超える前に、十分な休息をとる、ストレス解消法を見つける、信頼できる人に相談する、専門家のサポートを受けるなど、自分を守るための行動を起こしましょう。小さな一歩が、あなたの未来を大きく変えることにつながります。あなたの心身の健康が何よりも大切です。<br><br>サインに気づいたら、迷わず早めに動くことを選択してください。<br><br></p>
@@ -723,7 +719,6 @@ document.querySelectorAll('.gc-cb').forEach(function(cb){
 <p><strong>サインに気づいたら、まず今の状態をAI診断で確認してください。</strong></p>
 <hr />
 <div class="also-read-section"><div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div><div class="also-read-grid"><a href="/articles/burnout/burnout-symptoms/" class="also-read-card"><span class="also-read-cat">バーンアウト</span><span class="also-read-text">バーンアウトの症状チェックリスト</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/burnout/moeyuki-selfcheck/" class="also-read-card"><span class="also-read-cat">バーンアウト</span><span class="also-read-text">燃え尽き症候群のセルフチェック</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/burnout/kyushoku-amae/" class="also-read-card"><span class="also-read-cat">バーンアウト</span><span class="also-read-text">休職したいのは甘え？</span><span class="also-read-arrow">→ 読む</span></a><a href="/articles/stress/shigoto-utsu/" class="also-read-card"><span class="also-read-cat">症状・ストレス</span><span class="also-read-text">仕事が原因のうつ？</span><span class="also-read-arrow">→ 読む</span></a></div></div>
-<p>→ <a href="https://worelu.com">無料でストレスチェックを受ける</a></p>
     </article>
 
     <div class="article-tags">

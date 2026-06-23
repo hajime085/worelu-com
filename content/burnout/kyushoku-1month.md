@@ -76,7 +76,6 @@ canonical: https://worelu.com/articles/burnout/kyushoku-1month/
 その状態だと「休むべきか、まだ続けられるか」の判断が自分ではしにくくなります。まず状態を数字で見ておくと、休む判断がしやすくなります。
 
 Woreluのストレスチェック診断（無料・約1分）で、燃え尽き傾向や心身への負荷を数値で確認してみてください。
-→ [無料でストレスチェックを受ける（worelu.com）](/stress-check/)
 
 ## まとめ
 

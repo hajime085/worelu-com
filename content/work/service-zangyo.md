@@ -110,8 +110,6 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 - 作業中のパソコン画面を保存する
 - メールやチャットの送信履歴を残す
 
-
-
 ### 研修・勉強会
 
 会社が参加を義務付けている研修や勉強会は、原則として労働時間です。一方で、完全に自由参加であり、不参加による不利益もない研修は労働時間に当たらないこともあります。参加が事実上強制だったのかどうかが判断のポイントです。<br><br>
@@ -208,7 +206,6 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 相談内容によっては会社への調査・是正勧告が行われることがありますが、会社と従業員の代理人にはなれません。不安な場合は、相談時に匿名で相談できる範囲や今後の流れについて確認しておくと安心です。
 <br>
 
-
 ### STEP 4：弁護士へ相談する
 
 次のようなケースでは、早い段階で弁護士に相談することをおすすめします。
@@ -219,7 +216,6 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 - 会社から嫌がらせを受けている
 
 弁護士に依頼すると、残業代の計算・証拠の整理・内容証明郵便の作成・会社との交渉・労働審判・訴訟への対応まで一貫して任せることができます。<br><br>
-
 
 近年は相談料無料・着手金無料・成功報酬制を採用している事務所も増えています。費用だけで判断せず、どのようなサポートを受けられるかも確認しておきましょう。<br><br>
 
@@ -251,8 +247,6 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 
 今の職場だけがすべてではありません。
 
-
-
 ---
 
 ## あわせて読みたい
@@ -261,8 +255,6 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 - [「自主的な残業」でも残業代は出る](/articles/work/service-zangyo-voluntary/)
 - [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
 - [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
-
-→ [無料でストレスチェックを受ける](https://worelu.com)
 
 ## よくある質問
 

@@ -121,8 +121,6 @@ draft: false
 - [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
 - [バーンアウトの症状チェックリスト](/articles/burnout/burnout-symptoms/)
 
-→ [無料でストレスチェックを受ける](/stress-check/)
-
 ---
 
 ## よくある質問（FAQ）

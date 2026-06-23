@@ -95,9 +95,6 @@ draft: false
 
 また、自分のキャパシティを超えた仕事量や集中できない環境であれば、誰でもミスをします。まず状況を整理して、上司に相談することも選択肢に入れてください。
 
-今の状態がどのくらい深刻か確かめたい場合は、Woreluのストレスチェック（無料・約1分）を使ってみてください。
-
-
 ---
 
 ## あわせて読みたい
@@ -106,8 +103,6 @@ draft: false
 - [仕事のやる気が出ないのはなぜ？](/articles/stress/shigoto-yaruki-denai/)
 - [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
 - [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
-
-→ [無料でストレスチェックを受ける](/stress-check/)
 
 ---
 

@@ -33,8 +33,6 @@ draft: false
   </div>
 </div>
 
-
-
 Aさんのように、中間管理職の立場では、上下からのプレッシャーで人間関係のストレスを抱えやすいものです。自分の意見と組織の意見、部下の意見との間で葛藤し、板挟みになることで心身が疲弊してしまうケースは少なくありません。真面目な人ほど、この状況を一人で抱え込みがちです。
 
 ### ケース2：陰口や悪口に悩む若手社員Bさんの場合
@@ -275,7 +273,6 @@ A8：人間関係のストレスは、仕事のモチベーションを著しく
 
 そう感じたら、まずは自分の心の状態を客観的に知ることから始めてみましょう。Woreluのストレスチェック診断（無料・約1分）では、職場の人間関係によるストレス度合いや、あなたの心身への負荷を数値で確認できます。匿名で手軽にできるので、ぜひ一度試してみてください。あなたの心が少しでも軽くなるきっかけになるかもしれません。
 
-
 ---
 
 ## あわせて読みたい
@@ -285,13 +282,10 @@ A8：人間関係のストレスは、仕事のモチベーションを著しく
 - [職場の人間関係に疲れたあなたへ](/articles/stress/ningen-kankei-tsukareta/)
 - [仕事で評価されないと腐る前に](/articles/quit/hyouka-sarenai/)
 
-→ [無料でストレスチェックを受ける](https://worelu.com)
-
 <div style="background:#EFF6FF;border:2px solid #2563EB;border-radius:10px;padding:20px 24px;margin:32px 0;text-align:center">
 <div style="font-size:13px;font-weight:800;color:#2563EB;margin-bottom:6px">まずは今の状態を確認してみましょう</div>
 <div style="font-size:15px;font-weight:700;color:#0F172A;margin-bottom:12px">あなたの職場ストレスを無料でチェック</div>
 <div style="font-size:13px;color:#64748B;margin-bottom:16px">10問・約1分で、仕事ストレス・燃え尽き傾向・転職意向を数値化します</div>
-<a href="/stress-check/" style="display:inline-block;background:#2563EB;color:#fff;font-weight:800;font-size:14px;padding:12px 28px;border-radius:8px;text-decoration:none">無料でストレスチェックを受ける →</a>
 </div>
 
 ## まとめ：人間関係の疲れは、あなたのせいじゃない

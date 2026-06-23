@@ -158,8 +158,6 @@ HSP（Highly Sensitive Person）のように、生まれつき感受性が強く
 - [上司が怖くて萎縮してしまうのはなぜ？](/articles/stress/joushi-kowai-ishuku/)
 - [モラハラ上司に限界を感じたら](/articles/stress/morahara-joushi/)
 - [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
-
-    → [無料でストレスチェックを受ける](https://worelu.com/stress-check/)
 *   **メリット**：自分のストレスレベルや、どのような要因がストレスになっているのかを数値やグラフで可視化できます。これにより、漠然とした不安が明確になり、具体的な対策を立てやすくなります。
 *   **注意点**：ストレスチェックはあくまで自己診断の一つです。結果に一喜一憂せず、必要であれば専門家への相談も検討しましょう。
 

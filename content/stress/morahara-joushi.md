@@ -114,8 +114,6 @@ draft: false
 - [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
 - [退職代行モームリに何があったのか](/articles/quit/taisyoku-daikou-moumuri/)
 
-→ [無料でストレスチェックを受ける](/stress-check/)
-
 ---
 
 ## よくある質問（FAQ）
