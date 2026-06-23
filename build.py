@@ -135,8 +135,21 @@ def parse_markdown(filepath: Path) -> dict:
     md = markdown.Markdown(extensions=["extra", "toc"])
     body_html = md.convert(body_md)
 
-    # 「あわせて読みたい」セクションをカード型タイルに変換
+    # ① 本文中の重複リンク・誘導文を除去
     import re as _re
+
+    # ストレスチェックへのテキストリンク行を除去
+    body_html = _re.sub(
+        r'<p[^>]*>\s*[→→\-]+\s*<a[^>]*href="/stress-check/"[^>]*>[^<]*</a>.*?</p>\s*',
+        '', body_html, flags=_re.DOTALL
+    )
+    # 「今の状態が〜」「最近ストレスや〜」「眠れない日が〜」等の誘導段落を除去
+    body_html = _re.sub(
+        r'<p[^>]*>(?:今の状態が|最近ストレスや疲れが|眠れない日が続いて)[^<]{0,200}</p>\s*',
+        '', body_html, flags=_re.DOTALL
+    )
+
+    # ② 「あわせて読みたい」セクションをカード型タイルに変換
     def convert_also_read(html):
         pattern = _re.compile(
             r'<h2[^>]*>あわせて読みたい</h2>\s*<ul>(.*?)</ul>',
@@ -145,16 +158,20 @@ def parse_markdown(filepath: Path) -> dict:
         def make_cards(m):
             items_html = m.group(1)
             links = _re.findall(r'<a href="([^"]+)">([^<]+)</a>', items_html)
-            cards = ""
+            cards = ''
             for url, title in links:
-                cards += f'''<a href="{url}" class="also-read-card">
-  <span class="also-read-text">{title}</span>
-  <span class="also-read-arrow">→</span>
-</a>'''
-            return f'''<div class="also-read-section">
-<div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div>
-<div class="also-read-grid">{cards}</div>
-</div>'''
+                cards += (
+                    f'<a href="{url}" class="also-read-card">'
+                    f'<span class="also-read-text">{title}</span>'
+                    f'<span class="also-read-arrow">→</span>'
+                    f'</a>'
+                )
+            return (
+                '<div class="also-read-section">'
+                '<div class="also-read-title"><span class="also-read-bar"></span>あわせて読みたい</div>'
+                f'<div class="also-read-grid">{cards}</div>'
+                '</div>'
+            )
         return pattern.sub(make_cards, html)
     body_html = convert_also_read(body_html)
 
