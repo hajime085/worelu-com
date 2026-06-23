@@ -41,9 +41,9 @@ draft: false
 
 パワハラが原因で心身が追い詰められ、仕事を失ってしまうケースです。「思い違いでは？」と言われてしまうと、自分がおかしいのかと感じてしまいがちですが、不眠症や体調不良は心が発している明確なSOSサインです。
 
-<div style="display:flex; flex-direction:row-reverse; align-items:flex-start; gap:16px; margin:20px 0 24px;">
-  <img src="/images/characters/character_34.webp" alt="ストレスを感じる女性" style="width:80px; height:80px; object-fit:contain; flex-shrink:0;">
-  <div style="position:relative; background:#FFF0F6; border:1.5px solid #FFADD2; border-radius:12px; padding:14px 18px; font-size:14px; color:#334155; line-height:1.75;">「転職した会社が、入社条件と現状が違っていて、改善されませんでした。直属の上司から私を傷つけるようなことばかり言われるので、うつになりかけています。転職するにも、今はメンタルが追いつかず、壊れてしまいそうです。」（20代・女性）</div>
+<div class="character-box character-reverse">
+  <img src="/images/characters/character_34.webp" alt="ストレスを感じる女性" class="character-img">
+  <div class="speech-bubble speech-bubble-pink speech-bubble-right">「転職した会社が、入社条件と現状が違っていて、改善されませんでした。直属の上司から私を傷つけるようなことばかり言われるので、うつになりかけています。転職するにも、今はメンタルが追いつかず、壊れてしまいそうです。」（20代・女性）</div>
 </div>
 
 転職を考えるにも心身が動かない状態になってしまっているケースです。「うつになりかけている」という自覚がある段階で、早めに専門家に相談することが大切です。
@@ -147,5 +147,8 @@ draft: false
 .speech-bubble { position: relative; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 14px 18px; font-size: 14px; color: #334155; line-height: 1.75; }
 .speech-bubble::before { content: ''; position: absolute; left: -12px; top: 20px; border-width: 6px 12px 6px 0; border-style: solid; border-color: transparent #BFDBFE transparent transparent; }
 .speech-bubble::after { content: ''; position: absolute; left: -9px; top: 21px; border-width: 5px 10px 5px 0; border-style: solid; border-color: transparent #EFF6FF transparent transparent; }
-.character-box-reverse { flex-direction: row-reverse; }
+.character-reverse { flex-direction: row-reverse; }
+.speech-bubble-pink { background: #FFF0F6; border-color: #FFADD2; }
+.speech-bubble-right::before { left: auto; right: -12px; border-width: 6px 0 6px 12px; border-color: transparent transparent transparent #FFADD2; }
+.speech-bubble-right::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #FFF0F6; }
 </style>
