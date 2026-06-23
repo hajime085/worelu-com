@@ -276,16 +276,47 @@ def build_articles(env: Environment, articles: list):
 
 
 def build_article_list(env: Environment, articles: list):
-    """記事一覧ページを生成"""
+    """記事一覧ページをページネーション付きで生成"""
+    PER_PAGE = 10
     tpl = env.get_template("article-list.html")
     cats = [
         {"slug": slug, "label": label}
         for slug, label in CATEGORY_LABELS.items()
     ]
-    html = tpl.render(articles=articles, categories=cats)
-    out = OUTPUT_DIR / "articles" / "index.html"
-    write_file(out, html)
-    print(f"  記事一覧: {out}")
+    total = len(articles)
+    total_pages = max(1, -(-total // PER_PAGE))  # 切り上げ
+
+    for page_num in range(1, total_pages + 1):
+        start = (page_num - 1) * PER_PAGE
+        end = start + PER_PAGE
+        page_articles = articles[start:end]
+
+        # 表示するページ番号リスト（前後2ページ）
+        pages = sorted(set(
+            [1, total_pages] +
+            [p for p in range(page_num - 2, page_num + 3) if 1 <= p <= total_pages]
+        ))
+
+        pagination = {
+            "current": page_num,
+            "total": total_pages,
+            "pages": pages,
+            "base_url": "/articles/",
+            "has_prev": page_num > 1,
+            "has_next": page_num < total_pages,
+            "prev_url": "/articles/" if page_num == 2 else f"/articles/page/{page_num - 1}/",
+            "next_url": f"/articles/page/{page_num + 1}/",
+        }
+
+        html = tpl.render(articles=page_articles, categories=cats, pagination=pagination)
+
+        if page_num == 1:
+            out = OUTPUT_DIR / "articles" / "index.html"
+        else:
+            out = OUTPUT_DIR / "articles" / "page" / str(page_num) / "index.html"
+
+        write_file(out, html)
+        print(f"  記事一覧 p{page_num}: {out}")
 
 
 def build_category_pages(env: Environment, articles: list):
