@@ -29,79 +29,377 @@ tags:
 
 ---
 
-## 【カテゴリ別】ブラック企業あるある20選
+## 【ゲーム形式】ブラック企業あるある20選
 
-あなたの会社に当てはまるものはいくつありますか？
+あなたの職場に当てはまるものはいくつ？「わかる😇」か「さすがにない🤔」でチェックしながら読み進めてください。最後に**ブラック耐性レベル**が判定されます。
 
-### 労働時間あるある
+<div class="aa-game">
 
-**① 定時で帰ろうとすると「やる気がない」と言われる**
-残業が評価基準になっている証拠です。成果ではなく時間で判断する文化は、長時間労働を正当化します。
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>労働時間あるある</div>
 
-**② 休憩時間がまともに取れない**
-ランチはデスクで、トイレに行くのも一苦労。これは労働基準法違反の可能性があります。
+<div class="aa-item" data-id="1">
+<div class="aa-num">①</div>
+<div class="aa-content">
+<div class="aa-text">定時で帰ろうとすると「やる気がない」と言われる</div>
+<div class="aa-note">残業時間で評価する文化は、成果よりも「見せる努力」を重視します。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**③ 休日出勤が当たり前で代休が取れない**
-「みんなやってるから」という言葉で片付けられます。振替休日の付与は法律上の義務です。
+<div class="aa-item" data-id="2">
+<div class="aa-num">②</div>
+<div class="aa-content">
+<div class="aa-text">休憩時間がまともに取れない</div>
+<div class="aa-note">ランチはデスクで、トイレも一苦労。労働基準法違反の可能性があります。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**④ 終電を逃すのが日常で、タクシー代は自腹**
-会社が社員の生活を顧みていないことの表れです。
+<div class="aa-item" data-id="3">
+<div class="aa-num">③</div>
+<div class="aa-content">
+<div class="aa-text">休日出勤が当たり前で代休が取れない</div>
+<div class="aa-note">「みんなやってるから」で片付けられます。振替休日の付与は法律上の義務です。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-### 給与あるある
+<div class="aa-item" data-id="4">
+<div class="aa-num">④</div>
+<div class="aa-content">
+<div class="aa-text">終電を逃すのが日常で、タクシー代は自腹</div>
+<div class="aa-note">会社が社員の生活を顧みていない証拠です。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑤ みなし残業でいくら残業しても給料が変わらない**
-みなし残業制度自体は合法ですが、みなし時間を超えた分は別途支払い義務があります。それが無視されているなら違法です。
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><circle cx="12" cy="14" r="2"/></svg>給与・待遇あるある</div>
 
-**⑥ 基本給が異常に低く、手当でかさ増しされている**
-ボーナスや退職金の計算基準が下がります。
+<div class="aa-item" data-id="5">
+<div class="aa-num">⑤</div>
+<div class="aa-content">
+<div class="aa-text">みなし残業でいくら残業しても給料が変わらない</div>
+<div class="aa-note">みなし時間を超えた分は別途支払い義務があります。無視されているなら違法です。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑦ ボーナスは寸志か、そもそも出ない**
-毎年「業績が悪いから」と同じ説明が繰り返されます。
+<div class="aa-item" data-id="6">
+<div class="aa-num">⑥</div>
+<div class="aa-content">
+<div class="aa-text">基本給が異常に低く、手当でかさ増しされている</div>
+<div class="aa-note">ボーナスや退職金の計算基準が下がります。見かけ上の年収に騙されやすいです。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑧ 給与明細が不透明で何が何だかわからない**
-労働者は明細の内訳を知る権利があります。
+<div class="aa-item" data-id="7">
+<div class="aa-num">⑦</div>
+<div class="aa-content">
+<div class="aa-text">ボーナスは寸志か、そもそも出ない</div>
+<div class="aa-note">毎年「業績が悪いから」と同じ説明が繰り返されます。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-### 人間関係あるある
+<div class="aa-item" data-id="8">
+<div class="aa-num">⑧</div>
+<div class="aa-content">
+<div class="aa-text">給与明細が不透明で何が何だかわからない</div>
+<div class="aa-note">労働者は明細の内訳を知る権利があります。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑨ 上司の機嫌で職場の空気が一変する**
-常に顔色を伺う環境は、精神的に消耗します。心療内科に通う人が出てくるのはこういう職場です。
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>人間関係あるある</div>
 
-**⑩ パワハラ・モラハラが「指導」として放置されている**
-怒鳴る、人格否定、無視——これらは指導ではなくハラスメントです。
+<div class="aa-item" data-id="9">
+<div class="aa-num">⑨</div>
+<div class="aa-content">
+<div class="aa-text">上司の機嫌で職場の空気が一変する</div>
+<div class="aa-note">常に顔色を伺う環境は精神的に消耗します。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑪ 社員同士の足の引っ張り合いが激しい**
-過度な内部競争はチームの生産性を下げ、職場をギスギスさせます。
+<div class="aa-item" data-id="10">
+<div class="aa-num">⑩</div>
+<div class="aa-content">
+<div class="aa-text">パワハラ・モラハラが「指導」として放置されている</div>
+<div class="aa-note">怒鳴る、人格否定、無視——これらは指導ではなくハラスメントです。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑫ 退職者が後を絶たないのに誰も問題視しない**
-人の入れ替わりが激しい職場には、必ず構造的な問題があります。
+<div class="aa-item" data-id="11">
+<div class="aa-num">⑪</div>
+<div class="aa-content">
+<div class="aa-text">社員同士の足の引っ張り合いが激しい</div>
+<div class="aa-note">過度な内部競争はチームの生産性を下げ、職場をギスギスさせます。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-### 採用・教育あるある
+<div class="aa-item" data-id="12">
+<div class="aa-num">⑫</div>
+<div class="aa-content">
+<div class="aa-text">退職者が後を絶たないのに誰も問題視しない</div>
+<div class="aa-note">人の入れ替わりが激しい職場には、必ず構造的な問題があります。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑬ 求人情報と実際の業務内容が全く違う**
-「話が違う」は採用詐欺に相当する場合もあります。
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>採用・教育あるある</div>
 
-**⑭ 研修はOJT任せで教育制度がない**
-新人が育たない職場は、慢性的な人手不足に陥ります。
+<div class="aa-item" data-id="13">
+<div class="aa-num">⑬</div>
+<div class="aa-content">
+<div class="aa-text">求人情報と実際の業務内容が全く違う</div>
+<div class="aa-note">「話が違う」は採用詐欺に相当する場合もあります。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑮「うちは家族みたいな会社」とプライベートに踏み込んでくる**
-家族的な雰囲気を盾に、サービス残業や休日出勤を正当化するケースが多いです。
+<div class="aa-item" data-id="14">
+<div class="aa-num">⑭</div>
+<div class="aa-content">
+<div class="aa-text">研修はOJT任せで教育制度がない</div>
+<div class="aa-note">新人が育たない職場は、慢性的な人手不足に陥ります。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑯ 入社してすぐ「辞めたい」と言い出す人がいる**
-職場の実態に耐えられない人が続出しているサインです。
+<div class="aa-item" data-id="15">
+<div class="aa-num">⑮</div>
+<div class="aa-content">
+<div class="aa-text">「うちは家族みたいな会社」とプライベートに踏み込んでくる</div>
+<div class="aa-note">家族的な雰囲気を盾に、サービス残業や休日出勤を正当化するケースが多いです。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-### 組織文化あるある
+<div class="aa-item" data-id="16">
+<div class="aa-num">⑯</div>
+<div class="aa-content">
+<div class="aa-text">入社してすぐ「辞めたい」と言い出す人がいる</div>
+<div class="aa-note">職場の実態に耐えられない人が続出しているサインです。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑰ 飲み会や社内イベントへの参加が強制される**
-プライベートな時間を会社に拘束されることへの強制は、問題です。
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>組織文化あるある</div>
 
-**⑱ 精神論・根性論がまかり通っている**
-「気合が足りない」で片付けられる職場では、具体的な改善が起きません。
+<div class="aa-item" data-id="17">
+<div class="aa-num">⑰</div>
+<div class="aa-content">
+<div class="aa-text">飲み会や社内イベントへの参加が強制される</div>
+<div class="aa-note">プライベートな時間を会社に拘束することへの強制は問題です。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑲ 過剰なサービスを社員に強いる「お客様は神様」文化**
-社員の犠牲の上に成り立つサービスは長続きしません。
+<div class="aa-item" data-id="18">
+<div class="aa-num">⑱</div>
+<div class="aa-content">
+<div class="aa-text">精神論・根性論がまかり通っている</div>
+<div class="aa-note">「気合が足りない」で片付けられる職場では、具体的な改善が起きません。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
 
-**⑳ 会社の未来について誰も語らない**
-社員が会社の将来に希望を持てない職場は、じわじわと人が減っていきます。
+<div class="aa-item" data-id="19">
+<div class="aa-num">⑲</div>
+<div class="aa-content">
+<div class="aa-text">過剰なサービスを社員に強いる「お客様は神様」文化</div>
+<div class="aa-note">社員の犠牲の上に成り立つサービスは長続きしません。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
+
+<div class="aa-item" data-id="20">
+<div class="aa-num">⑳</div>
+<div class="aa-content">
+<div class="aa-text">会社の未来について誰も語らない</div>
+<div class="aa-note">社員が会社の将来に希望を持てない職場は、じわじわと人が減っていきます。</div>
+<div class="aa-btns">
+<button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+</div>
+</div>
+</div>
+
+<div class="aa-counter">「わかる」を選んだ数：<span id="aa-count">0</span> / 20</div>
+
+<button class="aa-result-btn" onclick="calcAaResult()">ブラック耐性レベルを診断する →</button>
+
+<div id="aa-result" style="display:none"></div>
+
+</div>
+
+<style>
+.aa-game { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin: 24px 0; }
+.aa-group-title { font-size: 13px; font-weight: 800; color: #1E40AF; background: #EFF6FF; border-radius: 6px; padding: 8px 14px; margin: 20px 0 12px; }
+.aa-item { display: flex; gap: 12px; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; transition: border-color 0.2s; }
+.aa-item.wakaru { border-color: #FB923C; background: #FFF7ED; }
+.aa-item.nai { border-color: #CBD5E1; background: #F8FAFC; opacity: 0.7; }
+.aa-num { font-size: 15px; font-weight: 800; color: #94A3B8; flex-shrink: 0; width: 24px; }
+.aa-content { flex: 1; }
+.aa-text { font-size: 14px; font-weight: 700; color: #1E293B; line-height: 1.55; margin-bottom: 4px; }
+.aa-note { font-size: 11px; color: #94A3B8; line-height: 1.5; margin-bottom: 10px; }
+.aa-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.aa-btn { border: 1px solid #E2E8F0; border-radius: 6px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.15s; background: #fff; color: #475569; }
+.aa-btn.selected { color: #fff; border-color: transparent; }
+.aa-btn.aa-wakaru.selected { background: #F97316; }
+.aa-btn.aa-nai.selected { background: #94A3B8; }
+.aa-counter { text-align: center; font-size: 14px; font-weight: 700; color: #334155; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin: 20px 0 12px; }
+.aa-counter span { color: #F97316; font-size: 22px; }
+.aa-result-btn { display: block; width: 100%; background: #F97316; color: #fff; border: none; border-radius: 8px; padding: 14px; font-size: 15px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background 0.2s; margin-bottom: 0; }
+.aa-result-btn:hover { background: #EA580C; }
+.aa-result-box { border-radius: 10px; padding: 22px 24px; border: 2px solid; margin-top: 16px; }
+.aa-result-level { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
+.aa-result-title { font-size: 15px; font-weight: 800; margin-bottom: 10px; }
+.aa-result-body { font-size: 14px; line-height: 1.75; }
+.aa-share-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; background: #000; color: #fff; border: none; border-radius: 8px; padding: 10px 20px; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; font-family: inherit; }
+.aa-share-btn:hover { background: #1a1a1a; }
+</style>
+
+<script>
+var aaCounts = { wakaru: 0 };
+var aaAnswered = {};
+
+function aaClick(btn, val) {
+  var item = btn.closest('.aa-item');
+  var id = item.dataset.id;
+  var prevVal = aaAnswered[id];
+
+  // 同じボタン連打防止
+  if (prevVal === val) return;
+
+  // カウント更新
+  if (prevVal === 1) aaCounts.wakaru--;
+  if (val === 1) aaCounts.wakaru++;
+  aaAnswered[id] = val;
+
+  // ボタンのスタイル更新
+  item.querySelectorAll('.aa-btn').forEach(function(b) { b.classList.remove('selected'); });
+  btn.classList.add('selected');
+
+  // アイテムのスタイル更新
+  item.classList.toggle('wakaru', val === 1);
+  item.classList.toggle('nai', val === 0);
+
+  // カウンター更新
+  document.getElementById('aa-count').textContent = aaCounts.wakaru;
+}
+
+function calcAaResult() {
+  var score = aaCounts.wakaru;
+  var level, emoji, title, body, color, bg;
+
+  if (score <= 3) {
+    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2" style="vertical-align:-4px"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg>'; level = 'レベル1：正常な感覚の持ち主';
+    title = 'ブラック企業とは無縁の職場にいるようです';
+    body = score + '個しか当てはまりませんでした。今の職場は比較的健全な可能性があります。この感覚を忘れずに、引き続き自分の状態を観察してください。';
+    color = '#15803D'; bg = '#F0FDF4';
+  } else if (score <= 7) {
+    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" style="vertical-align:-4px"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>'; level = 'レベル2：じわじわ侵食されています';
+    title = 'ちょっと待って。感覚が麻痺し始めているかもしれません';
+    body = score + '個当てはまりました。「これくらい普通かな」と思い始めていたら要注意。外の世界の基準と比較してみましょう。';
+    color = '#B45309'; bg = '#FFFBEB';
+  } else if (score <= 12) {
+    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2" style="vertical-align:-4px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'; level = 'レベル3：かなりブラックな環境にいます';
+    title = 'その「当たり前」、本当に当たり前ですか？';
+    body = score + '個も当てはまりました。感覚がかなり麻痺している可能性があります。転職を含めた選択肢を真剣に検討する時期かもしれません。';
+    color = '#C2410C'; bg = '#FFF7ED';
+  } else {
+    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2" style="vertical-align:-4px"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>'; level = 'レベル4：今すぐ逃げてください';
+    title = 'それはもはやブラックではなく「地獄」です';
+    body = score + '個当てはまりました。ここまで多いと心身への影響が出ている可能性があります。あなたの感覚は正しい。逃げることは恥ではありません。';
+    color = '#991B1B'; bg = '#FEF2F2';
+  }
+
+  var shareText = encodeURIComponent(
+    'ブラック企業あるある20選で「わかる」が' + score + '個…
+' +
+    '私のブラック耐性レベル：' + emoji + level + '
+' +
+    '#ブラック企業 #Worelu
+https://worelu.com/articles/quit/black-kigyo-aruaru/'
+  );
+
+  var html =
+    '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
+    '<div class="aa-result-level">' + emoji + '&nbsp;' + level + '</div>' +
+    '<div class="aa-result-title">' + title + '</div>' +
+    '<div class="aa-result-body" style="color:#334155">' + body + '</div>' +
+    '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn">' +
+    '𝕏 この結果をポストする' +
+    '</a>' +
+    '</div>';
+
+  var r = document.getElementById('aa-result');
+  r.innerHTML = html;
+  r.style.display = 'block';
+  r.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
 
 ---
 
