@@ -211,9 +211,13 @@ def parse_markdown(filepath: Path) -> dict:
     category = meta.get("category", filepath.parent.name)
     slug = meta.get("slug", filepath.stem)
 
-    # 読了時間の計算（日本語：400字/分）
-    char_count = len(body_md)
-    read_time = max(1, round(char_count / 700))
+    # 読了時間の計算（HTMLタグ・script・styleを除外した実質テキストで計算）
+    import re as _re2
+    clean_md = _re2.sub(r'<style[^>]*>.*?</style>', '', body_md, flags=_re2.DOTALL)
+    clean_md = _re2.sub(r'<script[^>]*>.*?</script>', '', clean_md, flags=_re2.DOTALL)
+    clean_md = _re2.sub(r'<[^>]+>', '', clean_md)
+    char_count = len(clean_md)
+    read_time = min(10, max(1, round(char_count / 500)))
 
     from urllib.parse import quote
     ogp_image = f"{OGP_WORKER_URL}/?title={quote(meta.get('title', ''))}&category={category}&slug={slug}"
