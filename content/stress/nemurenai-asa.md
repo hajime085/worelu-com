@@ -132,8 +132,8 @@ canonical: https://worelu.com/articles/stress/nemurenai-asa/
 
 ## あわせて読みたい
 
-- [朝、仕事に行きたくないのはなぜ？「今日だけ」と「ずっとつらい」の境界線]((/articles/stress/asa-shigoto-ikitakunai/))
-- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
-- [バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法]((/articles/burnout/burnout-symptoms/))
-- [休職したいのは甘え？罪悪感を消して自分を守るための判断基準]((/articles/burnout/kyushoku-amae/))
+- [朝、仕事に行きたくないのはなぜ？「今日だけ」と「ずっとつらい」の境界線](/articles/stress/asa-shigoto-ikitakunai/)
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)
+- [バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法](/articles/burnout/burnout-symptoms/)
+- [休職したいのは甘え？罪悪感を消して自分を守るための判断基準](/articles/burnout/kyushoku-amae/)
 

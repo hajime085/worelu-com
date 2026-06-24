@@ -116,10 +116,10 @@ draft: false
 
 ## あわせて読みたい
 
-- [休職に診断書は必須？もらい方から費用・会社への提出方法まで解説]((/articles/burnout/kyushoku-shindan/))
-- [休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する]((/articles/burnout/kyushoku-1month/))
-- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
-- [仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説]((/articles/stress/shigoto-utsu/))
+- [休職に診断書は必須？もらい方から費用・会社への提出方法まで解説](/articles/burnout/kyushoku-shindan/)
+- [休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する](/articles/burnout/kyushoku-1month/)
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)
+- [仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説](/articles/stress/shigoto-utsu/)
 
 ## まとめ
 

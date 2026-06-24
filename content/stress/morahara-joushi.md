@@ -102,16 +102,16 @@ draft: false
 
 退職を上司に言い出せない場合は、人事部に直接退職願を提出したり、郵送したりする方法もあります。退職代行サービスを利用するのも選択肢の一つです。
 
-→ [「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩]((/articles/quit/shigoto-yametai-amae/))
+→ [「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩](/articles/quit/shigoto-yametai-amae/)
 
 ---
 
 ## あわせて読みたい
 
-- [上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて]((/articles/stress/joushi-kowai-ishuku/))
-- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
-- [仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え]((/articles/quit/yameru-yuuki/))
-- [退職代行モームリに何があったのか。今選ぶべきサービスを整理する]((/articles/quit/taisyoku-daikou-moumuri/))
+- [上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて](/articles/stress/joushi-kowai-ishuku/)
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)
+- [仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え](/articles/quit/yameru-yuuki/)
+- [退職代行モームリに何があったのか。今選ぶべきサービスを整理する](/articles/quit/taisyoku-daikou-moumuri/)
 
 ---
 

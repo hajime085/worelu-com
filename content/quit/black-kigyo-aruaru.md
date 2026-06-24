@@ -409,7 +409,7 @@ function calcAaResult() {
 
 13個以上：心身への影響が出ている可能性があります。まず自分の体と心を守ることを最優先にしてください。専門家への相談も選択肢です。
 
-8個以上当てはまった方は、[「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩]((/articles/quit/shigoto-yametai-amae/))も参考にしてみてください。
+8個以上当てはまった方は、[「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩](/articles/quit/shigoto-yametai-amae/)も参考にしてみてください。
 
 ---
 
@@ -440,7 +440,7 @@ function calcAaResult() {
 | 休憩時間を与えない | 違法 | 労働基準法34条 |
 | 採用時と異なる労働条件を通知する | 違法 | 労働基準法15条 |
 
-これらに該当する場合は、労働基準監督署への相談や、弁護士・社労士への相談が選択肢になります。サービス残業については[サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】]((/articles/work/service-zangyo/))で詳しく解説しています。
+これらに該当する場合は、労働基準監督署への相談や、弁護士・社労士への相談が選択肢になります。サービス残業については[サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】](/articles/work/service-zangyo/)で詳しく解説しています。
 
 ---
 
@@ -468,7 +468,7 @@ function calcAaResult() {
 
 これらは適応障害やうつ病の初期症状として現れることがあります。「もう少し頑張れば」と思い続けることで、回復に時間がかかる状態に進む前に、選択肢を考えてみてください。
 
-[仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))で詳しく解説しています。
+[仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)で詳しく解説しています。
 
 ---
 
@@ -482,17 +482,17 @@ function calcAaResult() {
 
 ## あわせて読みたい
 
-- [ブラック企業診断｜15の質問で今の職場をスコアリングして判断する]((/articles/quit/black-kigyo-shindan/))
-- [「この会社やばい」と感じたとき。その直感を言語化する方法]((/articles/quit/kaisha-yabai/))
-- [サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】]((/articles/work/service-zangyo/))
-- [退職代行モームリに何があったのか。今選ぶべきサービスを整理する]((/articles/quit/taisyoku-daikou-moumuri/))
+- [ブラック企業診断｜15の質問で今の職場をスコアリングして判断する](/articles/quit/black-kigyo-shindan/)
+- [「この会社やばい」と感じたとき。その直感を言語化する方法](/articles/quit/kaisha-yabai/)
+- [サービス残業は違法。残業代を取り戻す全手順と対処法【完全版】](/articles/work/service-zangyo/)
+- [退職代行モームリに何があったのか。今選ぶべきサービスを整理する](/articles/quit/taisyoku-daikou-moumuri/)
 
 転職を具体的に考え始めた方は、以下の記事も参考にしてください。
 
-- [「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩]((/articles/quit/shigoto-yametai-amae/))
-- [20代で仕事辞めたいのは甘えじゃない。リスクゼロで動き出す具体的なステップ]((/articles/quit/20dai-shigoto-yametai/))
-- [30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法]((/articles/quit/30dai-shigoto-yametai/))
-- [仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え]((/articles/quit/yameru-yuuki/))
+- [「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩](/articles/quit/shigoto-yametai-amae/)
+- [20代で仕事辞めたいのは甘えじゃない。リスクゼロで動き出す具体的なステップ](/articles/quit/20dai-shigoto-yametai/)
+- [30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法](/articles/quit/30dai-shigoto-yametai/)
+- [仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え](/articles/quit/yameru-yuuki/)
 
 ---
 

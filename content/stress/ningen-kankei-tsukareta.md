@@ -154,10 +154,10 @@ HSP（Highly Sensitive Person）のように、生まれつき感受性が強く
 
 ## あわせて読みたい
 
-- [職場の人間関係で疲れるのはなぜ？性格の問題じゃない、環境とのミスマッチ]((/articles/stress/shokuba-ningen-kankei-tsukareta/))
-- [上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて]((/articles/stress/joushi-kowai-ishuku/))
-- [モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説]((/articles/stress/morahara-joushi/))
-- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
+- [職場の人間関係で疲れるのはなぜ？性格の問題じゃない、環境とのミスマッチ](/articles/stress/shokuba-ningen-kankei-tsukareta/)
+- [上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて](/articles/stress/joushi-kowai-ishuku/)
+- [モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説](/articles/stress/morahara-joushi/)
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)
 *   **メリット**：自分のストレスレベルや、どのような要因がストレスになっているのかを数値やグラフで可視化できます。これにより、漠然とした不安が明確になり、具体的な対策を立てやすくなります。
 *   **注意点**：ストレスチェックはあくまで自己診断の一つです。結果に一喜一憂せず、必要であれば専門家への相談も検討しましょう。
 
