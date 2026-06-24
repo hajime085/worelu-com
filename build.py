@@ -445,6 +445,65 @@ def build_rss(articles: list):
     print(f"  feed.xml: {out}")
 
 
+def build_shindan_pages():
+    """ブラック企業診断レベル別OGPページを生成"""
+    levels = [
+        {
+            "level": 1,
+            "title": "LEVEL1 正常な感覚の持ち主｜ブラック企業あるある診断",
+            "desc": "ブラック企業とは無縁の職場にいるようです。ブラック企業度：低",
+            "image": "/images/shindan/black_lv001.png",
+        },
+        {
+            "level": 2,
+            "title": "LEVEL2 感覚が麻痺し始めています｜ブラック企業あるある診断",
+            "desc": "「これくらい普通かな」と思い始めていたら要注意。ブラック企業度：注意",
+            "image": "/images/shindan/black_lv002.png",
+        },
+        {
+            "level": 3,
+            "title": "LEVEL3 その当たり前、本当に普通ですか？｜ブラック企業あるある診断",
+            "desc": "感覚がかなり麻痺している可能性があります。ブラック企業度：高",
+            "image": "/images/shindan/black_lv003.png",
+        },
+        {
+            "level": 4,
+            "title": "LEVEL4 あなたの感覚はかなり麻痺しています｜ブラック企業あるある診断",
+            "desc": "ここまで多いと心身への影響が出ている可能性があります。ブラック企業度：危険",
+            "image": "/images/shindan/black_lv004.png",
+        },
+    ]
+
+    for lv in levels:
+        html = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{lv['title']}</title>
+<meta name="description" content="{lv['desc']}">
+<meta name="robots" content="noindex,follow">
+<meta property="og:title" content="{lv['title']}">
+<meta property="og:description" content="{lv['desc']}">
+<meta property="og:image" content="https://worelu.com{lv['image']}">
+<meta property="og:url" content="https://worelu.com/shindan/black/level{lv['level']}/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{lv['title']}">
+<meta name="twitter:description" content="{lv['desc']}">
+<meta name="twitter:image" content="https://worelu.com{lv['image']}">
+<link rel="canonical" href="https://worelu.com/articles/quit/black-kigyo-aruaru/">
+<meta http-equiv="refresh" content="0;url=/articles/quit/black-kigyo-aruaru/">
+</head>
+<body>
+<p>リダイレクト中... <a href="/articles/quit/black-kigyo-aruaru/">こちら</a>をクリックしてください。</p>
+</body>
+</html>"""
+        out = OUTPUT_DIR / "shindan" / "black" / f"level{lv['level']}" / "index.html"
+        write_file(out, html)
+        print(f"  診断ページ level{lv['level']}: {out}")
+
+
 def build_robots():
     """robots.txtを生成"""
     content = f"""User-agent: *
@@ -497,6 +556,9 @@ def main():
 
     print("\nRSSを生成中...")
     build_rss(articles)
+
+    print("\n診断OGPページを生成中...")
+    build_shindan_pages()
 
     print("\nrobots.txtを生成中...")
     build_robots()

@@ -411,7 +411,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>長時間労働・過重労働が常態化している、賃金不払い残業（サービス残業）が横行している、ハラスメントが放置されている、そして離職率が異常に高い。これらが複合的に重なっている職場が、一般的に「ブラック企業」と呼ばれます。</p>
 <p>「きつい仕事」と「ブラック企業」は違います。あるあるを読みながら、自分の職場と照らし合わせてみてください。</p>
 <hr />
-<h2 id="20">あなたの職場は大丈夫？ブラック企業あるある20選</h2>
+<h2 id="20">【ゲーム形式】ブラック企業あるある20選</h2>
 <p>あなたの職場に当てはまるものはいくつ？「わかる😇」か「さすがにない🤔」でチェックしながら読み進めてください。最後に<strong>ブラック耐性レベル</strong>が判定されます。</p>
 <div class="aa-game">
 
@@ -898,7 +898,9 @@ function calcAaResult() {
     color = '#991B1B'; bg = '#FEF2F2';
   }
 
-  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + level + ' #ブラック企業 #Worelu https://worelu.com/articles/quit/black-kigyo-aruaru/');
+  var lvNum = levelNum.replace('LEVEL ', '').trim();
+  var shareUrl = 'https://worelu.com/shindan/black/level' + lvNum + '/';
+  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + levelLabel + ' #ブラック企業 #Worelu ' + shareUrl);
 
   var html =
     '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +

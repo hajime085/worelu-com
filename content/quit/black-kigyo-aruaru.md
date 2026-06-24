@@ -29,7 +29,7 @@ tags:
 
 ---
 
-## あなたの職場は大丈夫？ブラック企業あるある20選
+## 【ゲーム形式】ブラック企業あるある20選
 
 あなたの職場に当てはまるものはいくつ？「わかる😇」か「さすがにない🤔」でチェックしながら読み進めてください。最後に**ブラック耐性レベル**が判定されます。
 
@@ -518,7 +518,9 @@ function calcAaResult() {
     color = '#991B1B'; bg = '#FEF2F2';
   }
 
-  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + level + ' #ブラック企業 #Worelu https://worelu.com/articles/quit/black-kigyo-aruaru/');
+  var lvNum = levelNum.replace('LEVEL ', '').trim();
+  var shareUrl = 'https://worelu.com/shindan/black/level' + lvNum + '/';
+  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + levelLabel + ' #ブラック企業 #Worelu ' + shareUrl);
 
   var html =
     '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
