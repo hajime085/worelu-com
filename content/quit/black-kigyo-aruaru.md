@@ -318,6 +318,7 @@ tags:
 .aa-result-body { font-size: 14px; line-height: 1.75; }
 .aa-share-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; background: #000; color: #fff; border: none; border-radius: 8px; padding: 10px 20px; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; font-family: inherit; }
 .aa-share-btn:hover { background: #1a1a1a; }
+.aa-result-badge { display: inline-block; font-size: 11px; font-weight: 900; letter-spacing: 0.05em; background: rgba(0,0,0,0.1); border-radius: 4px; padding: 2px 6px; margin-right: 6px; }
 </style>
 
 <script>
@@ -354,22 +355,22 @@ function calcAaResult() {
   var level, emoji, title, body, color, bg;
 
   if (score <= 3) {
-    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15803D" stroke-width="2" style="vertical-align:-4px"><path d="M12 22V12M12 12C12 12 7 9 7 4a5 5 0 0 1 10 0c0 5-5 8-5 8z"/></svg>'; level = 'レベル1：正常な感覚の持ち主';
+    emoji = '[ OK ]'; level = 'レベル1：正常な感覚の持ち主';
     title = 'ブラック企業とは無縁の職場にいるようです';
     body = score + '個しか当てはまりませんでした。今の職場は比較的健全な可能性があります。この感覚を忘れずに、引き続き自分の状態を観察してください。';
     color = '#15803D'; bg = '#F0FDF4';
   } else if (score <= 7) {
-    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" style="vertical-align:-4px"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>'; level = 'レベル2：じわじわ侵食されています';
+    emoji = '[ ! ]'; level = 'レベル2：じわじわ侵食されています';
     title = 'ちょっと待って。感覚が麻痺し始めているかもしれません';
     body = score + '個当てはまりました。「これくらい普通かな」と思い始めていたら要注意。外の世界の基準と比較してみましょう。';
     color = '#B45309'; bg = '#FFFBEB';
   } else if (score <= 12) {
-    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2" style="vertical-align:-4px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>'; level = 'レベル3：かなりブラックな環境にいます';
+    emoji = '[ !! ]'; level = 'レベル3：かなりブラックな環境にいます';
     title = 'その「当たり前」、本当に当たり前ですか？';
     body = score + '個も当てはまりました。感覚がかなり麻痺している可能性があります。転職を含めた選択肢を真剣に検討する時期かもしれません。';
     color = '#C2410C'; bg = '#FFF7ED';
   } else {
-    emoji = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2" style="vertical-align:-4px"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>'; level = 'レベル4：今すぐ逃げてください';
+    emoji = '[ SOS ]'; level = 'レベル4：今すぐ逃げてください';
     title = 'それはもはやブラックではなく「地獄」です';
     body = score + '個当てはまりました。ここまで多いと心身への影響が出ている可能性があります。あなたの感覚は正しい。逃げることは恥ではありません。';
     color = '#991B1B'; bg = '#FEF2F2';
@@ -386,7 +387,7 @@ https://worelu.com/articles/quit/black-kigyo-aruaru/'
 
   var html =
     '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
-    '<div class="aa-result-level">' + emoji + '&nbsp;' + level + '</div>' +
+    '<div class="aa-result-level"><span class="aa-result-badge">' + emoji + '</span> ' + level + '</div>' +
     '<div class="aa-result-title">' + title + '</div>' +
     '<div class="aa-result-body" style="color:#334155">' + body + '</div>' +
     '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn">' +
