@@ -726,51 +726,59 @@ function downloadShindan(level) {
 
 function calcAaResult() {
   var score = aaCounts.wakaru;
-  var level, badge, title, sub, body, color, bg;
+  var lvNum, levelNum, levelLabel, subCopy, title, body, color, bg, badge;
 
   if (score <= 3) {
-    badge = 'LEVEL 1'; title = '正常な感覚の持ち主'; sub = 'ブラック企業度：低';
+    lvNum = 1; levelNum = 'LEVEL 1'; levelLabel = '正常な感覚の持ち主'; subCopy = 'ブラック企業度：低';
+    title = 'ブラック企業とは無縁の職場にいるようです';
     body = score + '個しか当てはまりませんでした。今の職場は比較的健全な可能性があります。この感覚を忘れずに、引き続き自分の状態を観察してください。';
-    color = '#15803D'; bg = '#F0FDF4';
+    color = '#15803D'; bg = '#F0FDF4'; badge = '[ OK ]';
   } else if (score <= 7) {
-    badge = 'LEVEL 2'; title = '感覚が麻痺し始めています'; sub = 'ブラック企業度：注意';
+    lvNum = 2; levelNum = 'LEVEL 2'; levelLabel = '感覚が麻痺し始めています'; subCopy = 'ブラック企業度：注意';
+    title = 'ちょっと待って。感覚が麻痺し始めているかもしれません';
     body = score + '個当てはまりました。「これくらい普通かな」と思い始めていたら要注意。外の世界の基準と比較してみましょう。';
-    color = '#1D4ED8'; bg = '#EFF6FF';
+    color = '#1D4ED8'; bg = '#EFF6FF'; badge = '[ ! ]';
   } else if (score <= 12) {
-    badge = 'LEVEL 3'; title = 'その当たり前、本当に普通ですか？'; sub = 'ブラック企業度：高';
+    lvNum = 3; levelNum = 'LEVEL 3'; levelLabel = 'その当たり前、本当に普通ですか？'; subCopy = 'ブラック企業度：高';
+    title = 'その「当たり前」、本当に当たり前ですか？';
     body = score + '個も当てはまりました。感覚がかなり麻痺している可能性があります。転職を含めた選択肢を真剣に検討する時期かもしれません。';
-    color = '#C2410C'; bg = '#FFF7ED';
+    color = '#C2410C'; bg = '#FFF7ED'; badge = '[ !! ]';
   } else {
-    badge = 'LEVEL 4'; title = 'あなたの感覚はかなり麻痺しています'; sub = 'ブラック企業度：危険';
+    lvNum = 4; levelNum = 'LEVEL 4'; levelLabel = 'あなたの感覚はかなり麻痺しています'; subCopy = 'ブラック企業度：危険';
+    title = 'あなたの感覚はかなり麻痺しています';
     body = score + '個当てはまりました。ここまで多いと心身への影響が出ている可能性があります。あなたの感覚は正しい。逃げることは恥ではありません。';
-    color = '#991B1B'; bg = '#FEF2F2';
+    color = '#991B1B'; bg = '#FEF2F2'; badge = '[ SOS ]';
   }
 
-  // わかると回答した設問のテキストを収集（最大3件）
-  var wakaruItems = [];
-  document.querySelectorAll('.aa-item.wakaru').forEach(function(el) {
-    if (wakaruItems.length < 3) wakaruItems.push(el.dataset.text);
+  var shareUrl = 'https://worelu.com/shindan/black/level' + lvNum + '/';
+  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + levelLabel + ' #ブラック企業 #Worelu ' + shareUrl);
+
+  var checkedItems = [];
+  document.querySelectorAll('.aa-item.wakaru .aa-text').forEach(function(el) {
+    if (checkedItems.length < 3) checkedItems.push(el.textContent.trim().slice(0, 20) + '…');
   });
-  var itemsHtml = wakaruItems.length > 0 ? '<div class="aa-result-items">' + wakaruItems.map(function(t) { return '✓ ' + t; }).join('<br>') + (score > 3 ? '<br>…他' + (score - wakaruItems.length) + '項目' : '') + '</div>' : '';
 
-  // シェアテキスト
-  var shareItems = wakaruItems.map(function(t) { return '%E2%9C%93 ' + encodeURIComponent(t); }).join('%0A');
-  var shareText = encodeURIComponent('ブラック企業あるある診断') + '%0A' + encodeURIComponent(badge + ' ' + title) + '%0A' + shareItems + '%0A' + encodeURIComponent(score + ' / 20項目該当') + '%0A' + encodeURIComponent('#ブラック企業 #Worelu') + '%0Ahttps%3A%2F%2Fworelu.com%2Farticles%2Fquit%2Fblack-kigyo-aruaru%2F';
-
-  var html = '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
-    '<div class="aa-result-level"><span class="aa-result-badge">' + badge + '</span></div>' +
-    '<div class="aa-result-title">' + title + '</div>' +
-    '<div class="aa-result-sub">' + sub + '</div>' +
-    '<div class="aa-result-body" style="color:#334155">' + body + itemsHtml + '</div>' +
-    '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn">X（Twitter）でシェアする</a>' +
+  var links =
     '<div class="aa-next-links">' +
-    '<div class="aa-next-title">あわせて確認したい</div>' +
-    '<div class="aa-next-grid">' +
-    '<a href="/articles/quit/black-kigyo-shindan/" class="aa-next-link">ブラック企業診断（15問）</a>' +
-    '<a href="/stress-check/" class="aa-next-link">ストレスチェック診断</a>' +
-    '<a href="/articles/quit/taisyoku-daikou-moumuri/" class="aa-next-link">退職代行サービスを知る</a>' +
-    '<a href="/articles/quit/yameru-yuuki/" class="aa-next-link">辞める勇気が出ない人へ</a>' +
-    '</div></div></div>';
+    '<div class="aa-next-title">次に読む</div>' +
+    '<a href="/articles/quit/black-kigyo-shindan/" class="aa-next-link">ブラック企業診断（15問スコアリング）</a>' +
+    '<a href="/articles/quit/yameru-yuuki/" class="aa-next-link">仕事を辞める勇気が出ない人へ</a>' +
+    '<a href="/articles/quit/taisyoku-daikou-moumuri/" class="aa-next-link">退職代行を使うべき状況とは</a>' +
+    '<a href="/stress-check/" class="aa-next-link">AIストレスチェック（無料・約1分）</a>' +
+    '</div>';
+
+  var html =
+    '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
+    '<div class="aa-result-badge-row"><span class="aa-result-badge">' + badge + '</span><span class="aa-result-sub">' + subCopy + '</span></div>' +
+    '<div class="aa-result-level">' + levelNum + '</div>' +
+    '<div class="aa-result-title">' + levelLabel + '</div>' +
+    '<div class="aa-result-body" style="color:#334155">' + body + '</div>' +
+    '<div class="aa-share-row">' +
+    '<button onclick="downloadShindan(' + lvNum + ')" class="aa-dl-btn">結果画像をダウンロード</button>' +
+    '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn">X（旧Twitter）にシェアする</a>' +
+    '</div>' +
+    '</div>' +
+    links;
 
   var r = document.getElementById('aa-result');
   r.innerHTML = html;
@@ -870,52 +878,6 @@ function downloadShindan(level) {
     a.click();
   };
   img.src = '/images/shindan/black_lv00' + level + '.png';
-}
-
-function calcAaResult() {
-  var score = aaCounts.wakaru;
-  var level, emoji, title, body, color, bg;
-
-  if (score <= 3) {
-    emoji = '[ OK ]'; level = 'レベル1：正常な感覚の持ち主';
-    title = 'ブラック企業とは無縁の職場にいるようです';
-    body = score + '個しか当てはまりませんでした。今の職場は比較的健全な可能性があります。この感覚を忘れずに、引き続き自分の状態を観察してください。';
-    color = '#15803D'; bg = '#F0FDF4';
-  } else if (score <= 7) {
-    emoji = '[ ! ]'; level = 'レベル2：じわじわ侵食されています';
-    title = 'ちょっと待って。感覚が麻痺し始めているかもしれません';
-    body = score + '個当てはまりました。「これくらい普通かな」と思い始めていたら要注意。外の世界の基準と比較してみましょう。';
-    color = '#B45309'; bg = '#FFFBEB';
-  } else if (score <= 12) {
-    emoji = '[ !! ]'; level = 'レベル3：かなりブラックな環境にいます';
-    title = 'その「当たり前」、本当に当たり前ですか？';
-    body = score + '個も当てはまりました。感覚がかなり麻痺している可能性があります。転職を含めた選択肢を真剣に検討する時期かもしれません。';
-    color = '#C2410C'; bg = '#FFF7ED';
-  } else {
-    emoji = '[ SOS ]'; level = 'レベル4：今すぐ逃げてください';
-    title = 'それはもはやブラックではなく「地獄」です';
-    body = score + '個当てはまりました。ここまで多いと心身への影響が出ている可能性があります。あなたの感覚は正しい。逃げることは恥ではありません。';
-    color = '#991B1B'; bg = '#FEF2F2';
-  }
-
-  var lvNum = levelNum.replace('LEVEL ', '').trim();
-  var shareUrl = 'https://worelu.com/shindan/black/level' + lvNum + '/';
-  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + levelLabel + ' #ブラック企業 #Worelu ' + shareUrl);
-
-  var html =
-    '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
-    '<div class="aa-result-level"><span class="aa-result-badge">' + emoji + '</span> ' + level + '</div>' +
-    '<div class="aa-result-title">' + title + '</div>' +
-    '<div class="aa-result-body" style="color:#334155">' + body + '</div>' +
-    '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn">' +
-    '𝕏 この結果をポストする' +
-    '</a>' +
-    '</div>';
-
-  var r = document.getElementById('aa-result');
-  r.innerHTML = html;
-  r.style.display = 'block';
-  r.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 </script>
 
