@@ -154,16 +154,16 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .diag-carousel-track-wrap { position: relative; overflow: hidden; }
 .diag-carousel-track { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; scrollbar-width: none; }
 .diag-carousel-track::-webkit-scrollbar { display: none; }
-.diag-carousel-card { flex: 0 0 220px; scroll-snap-align: start; background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); transition: border-color 0.2s; }
-.diag-carousel-card:hover { border-color: var(--blue); }
-.diag-carousel-bar { height: 4px; }
+.diag-carousel-card { flex: 0 0 240px; scroll-snap-align: start; background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,.06); transition: box-shadow 0.2s, transform 0.2s; }
+.diag-carousel-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.14); transform: translateY(-3px); }
+.diag-carousel-bar { height: 4px; flex-shrink: 0; }
 .diag-carousel-bar.stress { background: #DC2626; }
 .diag-carousel-bar.burnout { background: #D97706; }
 .diag-carousel-bar.work { background: #2563EB; }
 .diag-carousel-bar.quit { background: #7C3AED; }
-.diag-carousel-body { padding: 14px; }
-.diag-carousel-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
-.diag-carousel-text { font-size: 13px; font-weight: 700; line-height: 1.5; color: var(--text); }
+.diag-carousel-body { padding: 14px 16px; display: flex; flex-direction: column; flex: 1; }
+.diag-carousel-cat { font-size: 10px; font-weight: 700; color: var(--blue); margin-bottom: 6px; letter-spacing: 0.06em; }
+.diag-carousel-text { font-size: 13px; font-weight: 800; line-height: 1.55; color: var(--text); padding-bottom: 10px; border-bottom: 2px solid var(--line); }
 .diag-carousel-nav { display: flex; gap: 8px; margin-top: 12px; justify-content: flex-end; }
 .diag-carousel-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--white); cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 16px; transition: all 0.15s; }
 .diag-carousel-btn:hover { border-color: var(--blue); color: var(--blue); }
@@ -363,7 +363,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <nav class="header-nav">
     <a href="/articles/">記事一覧</a>
     <a href="/articles/stress/">症状・ストレス</a>
-    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/burnout/">燃え尽き・休職</a>
     <a href="/articles/work/">労働問題</a>
     <a href="/articles/quit/">転職・退職</a>
   </nav>
@@ -643,7 +643,7 @@ HSPは刺激を深く処理するため、そうでない人より疲れやす�
         <span class="sb-pop-title">眠れないまま朝になった…仕事のストレスで眠れない人へ</span>
       </a>
       <a href="/articles/burnout/moeyuki-selfcheck/" class="sb-pop-card">
-        <span class="sb-pop-cat">バーンアウト</span>
+        <span class="sb-pop-cat">燃え尽き・休職</span>
         <span class="sb-pop-title">燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認</span>
       </a>
       <a href="/articles/quit/yameru-yuuki/" class="sb-pop-card">
@@ -673,7 +673,7 @@ HSPは刺激を深く処理するため、そうでない人より疲れやす�
             <a href="/stress-check/" style="font-size:13px;color:var(--muted);text-decoration:none">AIストレス診断</a>
             <a href="/articles/" style="font-size:13px;color:var(--muted);text-decoration:none">記事一覧</a>
             <a href="/articles/stress/" style="font-size:13px;color:var(--muted);text-decoration:none">症状・ストレス</a>
-            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted);text-decoration:none">バーンアウト</a>
+            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted);text-decoration:none">燃え尽き・休職</a>
             <a href="/articles/quit/" style="font-size:13px;color:var(--muted);text-decoration:none">転職・退職</a>
           </div>
         </div>
@@ -990,18 +990,28 @@ window.showDiagCarousel = function(categories, containerId) {
       navHtml +
     '</div>';
 
-  // スマホ：2枚ずつ自動スライド
-  if (isMobile) {
-    var track = document.getElementById('diag-track');
-    if (!track) return;
-    var autoIdx = 0;
-    var total = matched.length;
-    setInterval(function() {
-      autoIdx = (autoIdx + 2) % total;
-      var cardWidth = track.clientWidth / 2 + 12;
-      track.scrollTo({ left: autoIdx * cardWidth, behavior: 'smooth' });
-    }, 3000);
-  }
+  // 自動スクロール（PC・スマホ共通）
+  var track = document.getElementById('diag-track');
+  if (!track) return;
+  var autoIdx = 0;
+  var total = matched.length;
+  var cardWidth = isMobile ? (track.clientWidth / 2 + 12) : 252;
+  var step = isMobile ? 2 : 1;
+
+  var autoTimer = setInterval(function() {
+    autoIdx = (autoIdx + step) % total;
+    track.scrollTo({ left: autoIdx * cardWidth, behavior: 'smooth' });
+    // 末尾まで来たらリセット
+    if (autoIdx >= total - step) {
+      setTimeout(function() {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+        autoIdx = 0;
+      }, 800);
+    }
+  }, 3000);
+
+  // ホバー時に自動スクロール停止
+  track.addEventListener('mouseenter', function() { clearInterval(autoTimer); });
 };
 
 window.diagCarouselScroll = function(dir) {
