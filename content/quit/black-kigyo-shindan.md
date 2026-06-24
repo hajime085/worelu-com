@@ -54,60 +54,168 @@ canonical: https://worelu.com/articles/quit/black-kigyo-shindan/
 
 ## ブラック企業診断｜15の質問で今の職場をスコアリング
 
-以下の質問に「はい」の場合1点、「いいえ」の場合0点で回答し、合計点を計算してください。
+当てはまる項目にチェックを入れてください。最後に「診断する」ボタンを押すと結果が表示されます。
 
-**労働環境に関する質問**
+<div class="bk-shindan">
 
-1. 残業時間が月45時間を超えることが常態化している
-   - 月45時間以上の残業は、過労死ラインに近づく危険な水準です
+<div class="bk-group">
+<div class="bk-group-title">🏢 労働環境に関する質問</div>
 
-2. 休日出勤が頻繁にあり、代休や有給休暇が取りにくい雰囲気がある
-   - 従業員の休息を軽視する企業体質を示しています
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="rodo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">残業時間が月45時間を超えることが常態化している</span><span class="bk-hint">月45時間以上の残業は、過労死ラインに近づく危険な水準です</span></div></label>
 
-3. 休憩時間が十分に確保されておらず、昼食も満足に取れないことが多い
-   - 労働基準法違反の可能性があり、心身の疲労が蓄積します
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="rodo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">休日出勤が頻繁にあり、代休や有給休暇が取りにくい雰囲気がある</span><span class="bk-hint">従業員の休息を軽視する企業体質を示しています</span></div></label>
 
-4. 業務量が常に過剰で、個人の努力では到底終わらないと感じる
-   - 従業員に無理を強いる体制は、燃え尽き症候群の原因となります
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="rodo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">休憩時間が十分に確保されておらず、昼食も満足に取れないことが多い</span><span class="bk-hint">労働基準法違反の可能性があり、心身の疲労が蓄積します</span></div></label>
 
-**給与・評価に関する質問**
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="rodo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">業務量が常に過剰で、個人の努力では到底終わらないと感じる</span><span class="bk-hint">従業員に無理を強いる体制は、燃え尽き症候群の原因となります</span></div></label>
+</div>
 
-5. 「みなし残業代」が含まれているが、実際の残業時間に見合っていない
-   - サービス残業の温床となりやすく、違法なケースも存在します
+<div class="bk-group">
+<div class="bk-group-title">💰 給与・評価に関する質問</div>
 
-6. どれだけ成果を出しても、給与や昇進にほとんど反映されない
-   - 従業員のモチベーションを低下させ、努力を無駄にさせます
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="kyuyo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">「みなし残業代」が含まれているが、実際の残業時間に見合っていない</span><span class="bk-hint">サービス残業の温床となりやすく、違法なケースも存在します</span></div></label>
 
-7. 評価基準が不明確で、上司の感情や気分で評価が決まることが多い
-   - 不公平感を生み、従業員の不信感を募らせます
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="kyuyo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">どれだけ成果を出しても、給与や昇進にほとんど反映されない</span><span class="bk-hint">従業員のモチベーションを低下させ、努力を無駄にさせます</span></div></label>
 
-8. 入社時の説明と実際の給与や待遇が大きく異なる
-   - 虚偽の説明は、企業の信頼性を著しく損ないます
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="kyuyo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">評価基準が不明確で、上司の感情や気分で評価が決まることが多い</span><span class="bk-hint">不公平感を生み、従業員の不信感を募らせます</span></div></label>
 
-**人間関係に関する質問**
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="kyuyo"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">入社時の説明と実際の給与や待遇が大きく異なる</span><span class="bk-hint">虚偽の説明は、企業の信頼性を著しく損ないます</span></div></label>
+</div>
 
-9. 上司や同僚からのパワハラ、モラハラが日常的に行われている
-   - 精神的な苦痛を与え、職場環境を悪化させる深刻な問題です
+<div class="bk-group">
+<div class="bk-group-title">👥 人間関係に関する質問</div>
 
-10. 職場で孤立しており、相談できる相手がいないと感じる
-    - ストレスを一人で抱え込み、心身の不調につながりやすくなります
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="ningen"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">上司や同僚からのパワハラ、モラハラが日常的に行われている</span><span class="bk-hint">精神的な苦痛を与え、職場環境を悪化させる深刻な問題です</span></div></label>
 
-11. 社内での陰口や悪口が多く、ギスギスした雰囲気がある
-    - 心理的安全性が低く、生産性も低下します
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="ningen"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">職場で孤立しており、相談できる相手がいないと感じる</span><span class="bk-hint">ストレスを一人で抱え込み、心身の不調につながりやすくなります</span></div></label>
 
-12. 退職者が異常に多く、人の入れ替わりが激しい
-    - 従業員が定着しないのは、根本的な問題がある証拠です
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="ningen"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">社内での陰口や悪口が多く、ギスギスした雰囲気がある</span><span class="bk-hint">心理的安全性が低く、生産性も低下します</span></div></label>
 
-**組織文化に関する質問**
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="ningen"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">退職者が異常に多く、人の入れ替わりが激しい</span><span class="bk-hint">従業員が定着しないのは、根本的な問題がある証拠です</span></div></label>
+</div>
 
-13. 精神論や根性論が重視され、具体的な改善策が話し合われない
-    - 非科学的な思考は問題解決を妨げ、従業員を疲弊させます
+<div class="bk-group">
+<div class="bk-group-title">🏛 組織文化に関する質問</div>
 
-14. プライベートな時間や休日にまで、会社からの連絡や業務が及ぶ
-    - ワークライフバランスを侵害し、従業員の休息を奪います
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="bunka"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">精神論や根性論が重視され、具体的な改善策が話し合われない</span><span class="bk-hint">非科学的な思考は問題解決を妨げ、従業員を疲弊させます</span></div></label>
 
-15. 会社の将来性やビジョンが不明確で、従業員が希望を持てない
-    - 従業員のエンゲージメントを低下させ、離職につながります
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="bunka"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">プライベートな時間や休日にまで、会社からの連絡や業務が及ぶ</span><span class="bk-hint">ワークライフバランスを侵害し、従業員の休息を奪います</span></div></label>
+
+<label class="bk-item"><input type="checkbox" class="bk-cb" data-group="bunka"><span class="bk-check"></span><div class="bk-content"><span class="bk-q">会社の将来性やビジョンが不明確で、従業員が希望を持てない</span><span class="bk-hint">従業員のエンゲージメントを低下させ、離職につながります</span></div></label>
+</div>
+
+<div class="bk-counter">現在 <span id="bk-count">0</span> / 15 項目が当てはまっています</div>
+
+<div class="bk-btns">
+  <button onclick="calcBkShindan()" class="bk-btn-primary">診断する →</button>
+  <button onclick="resetBkShindan()" class="bk-btn-reset">リセット</button>
+</div>
+
+<div id="bk-result" style="display:none"></div>
+
+</div>
+
+<style>
+.bk-shindan { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin: 24px 0; }
+.bk-group { margin-bottom: 24px; }
+.bk-group-title { font-size: 13px; font-weight: 800; color: #1E40AF; background: #EFF6FF; border-radius: 6px; padding: 8px 14px; margin-bottom: 12px; }
+.bk-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; margin-bottom: 8px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.bk-item:hover { border-color: #93C5FD; background: #F0F9FF; }
+.bk-item input[type="checkbox"] { display: none; }
+.bk-check { width: 20px; height: 20px; border: 2px solid #CBD5E1; border-radius: 5px; flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
+.bk-item input:checked ~ .bk-check { background: #2563EB; border-color: #2563EB; }
+.bk-item input:checked ~ .bk-check::after { content: "✓"; color: #fff; font-size: 12px; font-weight: 800; }
+.bk-item input:checked ~ .bk-content .bk-q { color: #1D4ED8; font-weight: 700; }
+.bk-item.checked { background: #EFF6FF; border-color: #93C5FD; }
+.bk-content { display: flex; flex-direction: column; gap: 4px; }
+.bk-q { font-size: 14px; font-weight: 600; color: #1E293B; line-height: 1.55; }
+.bk-hint { font-size: 11px; color: #94A3B8; line-height: 1.5; }
+.bk-counter { text-align: center; font-size: 14px; font-weight: 700; color: #334155; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin: 16px 0; }
+.bk-counter span { color: #2563EB; font-size: 20px; }
+.bk-btns { display: flex; gap: 12px; justify-content: center; margin-bottom: 16px; }
+.bk-btn-primary { background: #2563EB; color: #fff; border: none; border-radius: 8px; padding: 13px 32px; font-size: 15px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background 0.2s; }
+.bk-btn-primary:hover { background: #1D4ED8; }
+.bk-btn-reset { background: #fff; color: #64748B; border: 1px solid #E2E8F0; border-radius: 8px; padding: 13px 20px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
+.bk-result-box { border-radius: 10px; padding: 20px 24px; border: 2px solid; }
+.bk-result-level { font-size: 11px; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 8px; }
+.bk-result-title { font-size: 18px; font-weight: 800; margin-bottom: 10px; }
+.bk-result-body { font-size: 14px; line-height: 1.75; }
+.bk-result-action { margin-top: 12px; font-size: 13px; font-weight: 700; padding: 10px 14px; border-radius: 8px; background: rgba(0,0,0,0.06); }
+</style>
+
+<script>
+document.querySelectorAll('.bk-cb').forEach(function(cb) {
+  cb.addEventListener('change', function() {
+    var count = document.querySelectorAll('.bk-cb:checked').length;
+    document.getElementById('bk-count').textContent = count;
+    this.closest('.bk-item').classList.toggle('checked', this.checked);
+  });
+});
+
+function calcBkShindan() {
+  var total = document.querySelectorAll('.bk-cb:checked').length;
+  var rodo   = document.querySelectorAll('[data-group="rodo"]:checked').length;
+  var kyuyo  = document.querySelectorAll('[data-group="kyuyo"]:checked').length;
+  var ningen = document.querySelectorAll('[data-group="ningen"]:checked').length;
+  var bunka  = document.querySelectorAll('[data-group="bunka"]:checked').length;
+
+  var bg, border, level, title, body, action;
+
+  if (total <= 3) {
+    bg = '#F0FDF4'; border = '#86EFAC'; level = 'SAFE（0〜3点）';
+    title = '今のところ比較的健全な職場です';
+    body = '現時点では大きな問題は見られません。ただし今後の変化に注意を払い続けましょう。気になる点があれば早めに上司や人事に相談することをおすすめします。';
+    action = '👉 現状維持しながら、定期的に職場環境を見直す習慣を持ちましょう。';
+  } else if (total <= 7) {
+    bg = '#FFFBEB'; border = '#FCD34D'; level = 'WARNING（4〜7点）';
+    title = '要注意。問題の芽が育っています';
+    body = 'いくつかの問題が積み重なっています。今すぐ体に症状は出ていなくても、このまま続けると心身に影響が出る可能性があります。';
+    action = '👉 上司・人事への相談、部署異動の検討、並行して転職の情報収集を始めましょう。';
+  } else if (total <= 11) {
+    bg = '#FFF7ED'; border = '#FB923C'; level = 'DANGER（8〜11点）';
+    title = 'ブラック企業の可能性が高いです';
+    body = '複数の深刻な問題が重なっています。この状態が続けば、心身への影響は避けられない可能性があります。「自分が悪い」「甘えている」と思い込まされていませんか？';
+    action = '👉 転職活動を本格的に開始しましょう。パワハラや残業代未払いがある場合は、労働基準監督署への相談も選択肢です。';
+  } else {
+    bg = '#FEF2F2'; border = '#F87171'; level = 'CRITICAL（12〜15点）';
+    title = '今すぐ環境を変えることを強くおすすめします';
+    body = 'ほぼすべての項目に該当しています。この職場に留まり続けることで失うものは非常に大きいです。体や心に異変を感じているなら、それ以上我慢する必要はありません。';
+    action = '👉 心身の状態を最優先に。体調に影響が出ているなら医師への相談と休職も視野に。退職代行サービスという選択肢もあります。';
+  }
+
+  // カテゴリ別の傾向コメント
+  var cats = [];
+  if (rodo >= 3)   cats.push('労働環境');
+  if (kyuyo >= 3)  cats.push('給与・評価');
+  if (ningen >= 3) cats.push('人間関係');
+  if (bunka >= 2)  cats.push('組織文化');
+  var catComment = cats.length > 0
+    ? '<p style="margin-top:10px;font-size:13px;color:#475569;">特に気になるカテゴリ：<strong>' + cats.join('・') + '</strong></p>'
+    : '';
+
+  var html =
+    '<div class="bk-result-box" style="background:' + bg + ';border-color:' + border + ';margin-top:16px;">' +
+    '<div class="bk-result-level" style="color:' + border + ';">' + level + '　' + total + '/15項目が当てはまりました</div>' +
+    '<div class="bk-result-title">' + title + '</div>' +
+    '<div class="bk-result-body">' + body + catComment + '</div>' +
+    '<div class="bk-result-action">' + action + '</div>' +
+    '</div>';
+
+  var r = document.getElementById('bk-result');
+  r.innerHTML = html;
+  r.style.display = 'block';
+  r.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function resetBkShindan() {
+  document.querySelectorAll('.bk-cb').forEach(function(cb) { cb.checked = false; });
+  document.querySelectorAll('.bk-item').forEach(function(el) { el.classList.remove('checked'); });
+  document.getElementById('bk-count').textContent = '0';
+  var r = document.getElementById('bk-result');
+  r.style.display = 'none';
+  r.innerHTML = '';
+}
+</script>
 
 ---
 
