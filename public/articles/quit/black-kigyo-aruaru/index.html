@@ -693,6 +693,49 @@ function aaClick(btn, val) {
   // カウンター更新
   document.getElementById('aa-count').textContent = aaCounts.wakaru;
 }
+function calcAaResult() {
+  var score = aaCounts.wakaru;
+  var lvNum, levelNum, levelLabel, subCopy, title, body, color, bg, badge;
+
+  if (score <= 3) {
+    lvNum = 1; levelNum = 'LEVEL 1'; levelLabel = '正常な感覚の持ち主'; subCopy = 'ブラック企業度：低';
+    title = 'ブラック企業とは無縁の職場にいるようです';
+    body = score + '個しか当てはまりませんでした。今の職場は比較的健全な可能性があります。この感覚を忘れずに、引き続き自分の状態を観察してください。';
+    color = '#15803D'; bg = '#F0FDF4'; badge = '[ OK ]';
+  } else if (score <= 7) {
+    lvNum = 2; levelNum = 'LEVEL 2'; levelLabel = '感覚が麻痺し始めています'; subCopy = 'ブラック企業度：注意';
+    title = 'ちょっと待って。感覚が麻痺し始めているかもしれません';
+    body = score + '個当てはまりました。「これくらい普通かな」と思い始めていたら要注意。外の世界の基準と比較してみましょう。';
+    color = '#1D4ED8'; bg = '#EFF6FF'; badge = '[ ! ]';
+  } else if (score <= 12) {
+    lvNum = 3; levelNum = 'LEVEL 3'; levelLabel = 'その当たり前、本当に普通ですか？'; subCopy = 'ブラック企業度：高';
+    title = 'その「当たり前」、本当に当たり前ですか？';
+    body = score + '個も当てはまりました。感覚がかなり麻痺している可能性があります。転職を含めた選択肢を真剣に検討する時期かもしれません。';
+    color = '#C2410C'; bg = '#FFF7ED'; badge = '[ !! ]';
+  } else {
+    lvNum = 4; levelNum = 'LEVEL 4'; levelLabel = 'あなたの感覚はかなり麻痺しています'; subCopy = 'ブラック企業度：危険';
+    title = 'あなたの感覚はかなり麻痺しています';
+    body = score + '個当てはまりました。ここまで多いと心身への影響が出ている可能性があります。あなたの感覚は正しい。逃げることは恥ではありません。';
+    color = '#991B1B'; bg = '#FEF2F2'; badge = '[ SOS ]';
+  }
+
+  var shareUrl = 'https://worelu.com/shindan/black/level' + lvNum + '/';
+  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + levelLabel + ' #ブラック企業 #Worelu ' + shareUrl);
+
+  var html =
+    '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
+    '<div class="aa-result-badge-row"><span class="aa-result-badge">' + badge + '</span><span class="aa-result-sub">' + subCopy + '</span></div>' +
+    '<div class="aa-result-level">' + levelNum + '</div>' +
+    '<div class="aa-result-title">' + levelLabel + '</div>' +
+    '<div class="aa-result-body" style="color:#334155">' + body + '</div>' +
+    '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn" style="display:block;text-align:center;margin-top:16px;">X（旧Twitter）にシェアする</a>' +
+    '</div>';
+
+  var r = document.getElementById('aa-result');
+  r.innerHTML = html;
+  r.style.display = 'block';
+  r.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
 
 </script>
 
