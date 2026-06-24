@@ -663,6 +663,10 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .aa-next-link { display: block; font-size: 13px; font-weight: 600; color: #2563EB; text-decoration: none; padding: 8px 0; border-bottom: 1px solid #E2E8F0; }
 .aa-next-link:last-child { border-bottom: none; padding-bottom: 0; }
 .aa-next-link:hover { text-decoration: underline; }
+.aa-share-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.aa-dl-btn { flex: 1; min-width: 140px; background: #fff; color: #2563EB; border: 2px solid #2563EB; border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.2s; }
+.aa-dl-btn:hover { background: #EFF6FF; }
+.aa-share-btn { flex: 1; min-width: 140px; text-align: center; }
 .aa-result-title { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
 .aa-result-sub { font-size: 13px; font-weight: 700; margin-bottom: 12px; opacity: 0.8; }
 .aa-result-body { font-size: 14px; line-height: 1.75; }
@@ -694,6 +698,30 @@ function aaClick(btn, val) {
   item.classList.toggle('wakaru', val === 1);
   item.classList.toggle('nai', val === 0);
   document.getElementById('aa-count').textContent = aaCounts.wakaru;
+}
+
+function downloadShindan(level) {
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function() {
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    var a = document.createElement('a');
+    a.download = 'worelu_black_level' + level + '.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  };
+  img.onerror = function() {
+    // crossOrigin失敗時は直接ダウンロード
+    var a = document.createElement('a');
+    a.download = 'worelu_black_level' + level + '.png';
+    a.href = '/images/shindan/black_lv00' + level + '.png';
+    a.click();
+  };
+  img.src = '/images/shindan/black_lv00' + level + '.png';
 }
 
 function calcAaResult() {
@@ -785,6 +813,10 @@ function calcAaResult() {
 .aa-next-link { display: block; font-size: 13px; font-weight: 600; color: #2563EB; text-decoration: none; padding: 8px 0; border-bottom: 1px solid #E2E8F0; }
 .aa-next-link:last-child { border-bottom: none; padding-bottom: 0; }
 .aa-next-link:hover { text-decoration: underline; }
+.aa-share-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.aa-dl-btn { flex: 1; min-width: 140px; background: #fff; color: #2563EB; border: 2px solid #2563EB; border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.2s; }
+.aa-dl-btn:hover { background: #EFF6FF; }
+.aa-share-btn { flex: 1; min-width: 140px; text-align: center; }
 </style>
 
 <script>
@@ -814,6 +846,30 @@ function aaClick(btn, val) {
 
   // カウンター更新
   document.getElementById('aa-count').textContent = aaCounts.wakaru;
+}
+
+function downloadShindan(level) {
+  var img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function() {
+    var canvas = document.createElement('canvas');
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    var a = document.createElement('a');
+    a.download = 'worelu_black_level' + level + '.png';
+    a.href = canvas.toDataURL('image/png');
+    a.click();
+  };
+  img.onerror = function() {
+    // crossOrigin失敗時は直接ダウンロード
+    var a = document.createElement('a');
+    a.download = 'worelu_black_level' + level + '.png';
+    a.href = '/images/shindan/black_lv00' + level + '.png';
+    a.click();
+  };
+  img.src = '/images/shindan/black_lv00' + level + '.png';
 }
 
 function calcAaResult() {
