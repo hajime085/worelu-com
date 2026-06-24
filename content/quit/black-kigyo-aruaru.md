@@ -376,14 +376,7 @@ function calcAaResult() {
     color = '#991B1B'; bg = '#FEF2F2';
   }
 
-  var shareText = encodeURIComponent(
-    'ブラック企業あるある20選で「わかる」が' + score + '個…
-' +
-    '私のブラック耐性レベル：' + emoji + level + '
-' +
-    '#ブラック企業 #Worelu
-https://worelu.com/articles/quit/black-kigyo-aruaru/'
-  );
+  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + level + ' #ブラック企業 #Worelu https://worelu.com/articles/quit/black-kigyo-aruaru/');
 
   var html =
     '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
