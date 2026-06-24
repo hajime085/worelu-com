@@ -35,35 +35,32 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 まずは、自分がなぜ踏み出せないのかを理解することが、最初の一歩です。
 
-<svg width="100%" viewBox="0 0 680 280" role="img" style="display:block;max-width:100%;margin:24px 0"><title>踏み出せない5つの理由</title>
-<rect x="0" y="0" width="680" height="280" rx="12" fill="#F8FAFC"/>
-<text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">踏み出せない5つの理由</text>
-<rect x="260" y="44" width="160" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="340" y="64" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">辞める勇気が</text>
-<text x="340" y="82" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">出ない</text>
-<defs><marker id="yuukiArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<line x1="260" y1="70" x2="194" y2="104" stroke="#94A3B8" stroke-width="1" marker-end="url(#yuukiArrow)"/>
-<line x1="310" y1="96" x2="264" y2="144" stroke="#94A3B8" stroke-width="1" marker-end="url(#yuukiArrow)"/>
-<line x1="340" y1="96" x2="340" y2="144" stroke="#94A3B8" stroke-width="1" marker-end="url(#yuukiArrow)"/>
-<line x1="370" y1="96" x2="416" y2="144" stroke="#94A3B8" stroke-width="1" marker-end="url(#yuukiArrow)"/>
-<line x1="420" y1="70" x2="486" y2="104" stroke="#94A3B8" stroke-width="1" marker-end="url(#yuukiArrow)"/>
-<rect x="24" y="96" width="160" height="56" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
-<text x="104" y="118" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF" font-family="sans-serif">1. 損をしたくない</text>
-<text x="104" y="138" text-anchor="middle" font-size="11" fill="#3B82F6" font-family="sans-serif">「今まで頑張ったのに」</text>
-<rect x="204" y="136" width="160" height="56" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="284" y="158" text-anchor="middle" font-size="12" font-weight="600" fill="#166534" font-family="sans-serif">2. 現状に慣れすぎ</text>
-<text x="284" y="178" text-anchor="middle" font-size="11" fill="#16A34A" font-family="sans-serif">「変化が怖い」</text>
-<rect x="260" y="136" width="160" height="56" rx="8" fill="#FEF9C3" stroke="#FDE047" stroke-width="0.5"/>
-<text x="340" y="158" text-anchor="middle" font-size="12" font-weight="600" fill="#854D0E" font-family="sans-serif">3. 先読みの不安</text>
-<text x="340" y="178" text-anchor="middle" font-size="11" fill="#A16207" font-family="sans-serif">「失敗したら…」</text>
-<rect x="316" y="136" width="160" height="56" rx="8" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="0.5"/>
-<text x="396" y="158" text-anchor="middle" font-size="12" font-weight="600" fill="#6D28D9" font-family="sans-serif">4. 経済的な不安</text>
-<text x="396" y="178" text-anchor="middle" font-size="11" fill="#7C3AED" font-family="sans-serif">「収入が途絶えたら」</text>
-<rect x="496" y="96" width="160" height="56" rx="8" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="576" y="118" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239" font-family="sans-serif">5. 周囲の目が気になる</text>
-<text x="576" y="138" text-anchor="middle" font-size="11" fill="#E11D48" font-family="sans-serif">「迷惑をかけたくない」</text>
-<rect x="100" y="220" width="480" height="40" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.5"/>
-<text x="340" y="244" text-anchor="middle" font-size="12" fill="#475569" font-family="sans-serif">これらは全て「弱さ」ではなく、真面目に考えているからこその感情</text>
+<svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%;margin:24px 0"><title>踏み出せない5つの理由</title>
+<rect x="0" y="0" width="680" height="220" rx="12" fill="#F8FAFC"/>
+<text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">踏み出せない5つの理由</text>
+<rect x="12" y="48" width="120" height="100" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
+<text x="72" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF" font-family="sans-serif">1.</text>
+<text x="72" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF" font-family="sans-serif">損をしたくない</text>
+<text x="72" y="120" text-anchor="middle" font-size="10" fill="#3B82F6" font-family="sans-serif">「今まで頑張ったのに」</text>
+<rect x="144" y="48" width="120" height="100" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="204" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#166534" font-family="sans-serif">2.</text>
+<text x="204" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#166534" font-family="sans-serif">現状に慣れすぎ</text>
+<text x="204" y="120" text-anchor="middle" font-size="10" fill="#16A34A" font-family="sans-serif">「変化が怖い」</text>
+<rect x="276" y="48" width="128" height="100" rx="8" fill="#FEF9C3" stroke="#FDE047" stroke-width="0.5"/>
+<text x="340" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#854D0E" font-family="sans-serif">3.</text>
+<text x="340" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#854D0E" font-family="sans-serif">先読みの不安</text>
+<text x="340" y="120" text-anchor="middle" font-size="10" fill="#A16207" font-family="sans-serif">「失敗したら…」</text>
+<rect x="416" y="48" width="120" height="100" rx="8" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="0.5"/>
+<text x="476" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#6D28D9" font-family="sans-serif">4.</text>
+<text x="476" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#6D28D9" font-family="sans-serif">経済的な不安</text>
+<text x="476" y="120" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">「収入が途絶えたら」</text>
+<rect x="548" y="48" width="120" height="100" rx="8" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
+<text x="608" y="76" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239" font-family="sans-serif">5.</text>
+<text x="608" y="94" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239" font-family="sans-serif">周囲の目が</text>
+<text x="608" y="112" text-anchor="middle" font-size="12" font-weight="600" fill="#9F1239" font-family="sans-serif">気になる</text>
+<text x="608" y="132" text-anchor="middle" font-size="10" fill="#E11D48" font-family="sans-serif">「迷惑をかけたくない」</text>
+<rect x="80" y="168" width="520" height="36" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.5"/>
+<text x="340" y="190" text-anchor="middle" font-size="12" fill="#475569" font-family="sans-serif">これらは全て「弱さ」ではなく、真面目に考えているからこその感情</text>
 </svg>
 
 ## 「わかってる、でも動けない」──踏み出せない5つの理由と現実的な答え
@@ -170,10 +167,10 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 悩み続けている方に特に重要なのが「今が辞めていい状態なのか」を客観的に判断することです。
 
-<svg width="100%" viewBox="0 0 680 310" role="img" style="display:block;max-width:100%;margin:24px 0"><title>辞めていい状態の判断基準</title>
-<rect x="0" y="0" width="680" height="310" rx="12" fill="#F8FAFC"/>
+<svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%;margin:24px 0"><title>辞めていい状態の判断基準</title>
+<rect x="0" y="0" width="680" height="330" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「辞めていい状態」チェックリスト</text>
-<rect x="16" y="48" width="304" height="244" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
+<rect x="16" y="48" width="304" height="264" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="168" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">今すぐ辞めるべきサイン</text>
 <rect x="30" y="88" width="276" height="36" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="168" y="110" text-anchor="middle" font-size="12" fill="#9F1239" font-family="sans-serif">心身に不調が出ている（不眠・食欲不振など）</text>
@@ -183,17 +180,18 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 <text x="168" y="198" text-anchor="middle" font-size="12" fill="#9F1239" font-family="sans-serif">ハラスメントや違法な労働環境がある</text>
 <rect x="30" y="220" width="276" height="36" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="168" y="242" text-anchor="middle" font-size="12" fill="#9F1239" font-family="sans-serif">数ヶ月単位で改善の見込みがない</text>
-<rect x="360" y="48" width="304" height="244" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
+<rect x="360" y="48" width="304" height="264" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
 <text x="512" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#166534" font-family="sans-serif">もう少し考えてみるサイン</text>
 <rect x="374" y="88" width="276" height="36" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="110" text-anchor="middle" font-size="12" fill="#166534" font-family="sans-serif">一時的なストレスや疲労感が原因</text>
+<text x="512" y="110" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">一時的なストレスや疲労感が原因</text>
 <rect x="374" y="132" width="276" height="36" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="154" text-anchor="middle" font-size="12" fill="#166534" font-family="sans-serif">まだ試していない解決策がある</text>
-<rect x="374" y="176" width="276" height="36" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="198" text-anchor="middle" font-size="12" fill="#166534" font-family="sans-serif">次のキャリアプランが全く描けていない</text>
-<rect x="374" y="220" width="276" height="36" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="242" text-anchor="middle" font-size="12" fill="#166534" font-family="sans-serif">経済的な準備がまだできていない</text>
-<text x="340" y="288" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="sans-serif">左側に複数当てはまるなら、動き出すタイミングかもしれない</text>
+<text x="512" y="154" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">まだ試していない解決策がある</text>
+<rect x="374" y="176" width="276" height="48" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="196" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">次のキャリアプランが</text>
+<text x="512" y="214" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">全く描けていない</text>
+<rect x="374" y="232" width="276" height="36" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="254" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">経済的な準備がまだできていない</text>
+<text x="340" y="316" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="sans-serif">左側に複数当てはまるなら、動き出すタイミングかもしれない</text>
 </svg>
 
 特に、心身に不調が出ている場合やハラスメントがある場合は、準備が整っていなくても早期の退職・休職を優先してください。あなたの心身の健康は何よりも優先されるべきです。
