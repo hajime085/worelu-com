@@ -55,7 +55,8 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 
 たとえばこんな変化が少しずつ起きていきます。
 
-<svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%;margin:24px 0"><title>基準がズレていく過程</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%"><title>基準がズレていく過程</title>
 <defs><marker id="yabaiArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="220" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">やばい会社に居続けると起きること</text>
@@ -87,6 +88,8 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 <text x="604" y="128" text-anchor="middle" font-size="11" fill="#DC2626" font-family="sans-serif">なっていた…</text>
 <text x="604" y="160" text-anchor="middle" font-size="10" fill="#FCA5A5" font-family="sans-serif">要注意ゾーン</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 今の職場に違和感を感じているなら、それはまだ自分の感覚が生きている証拠です。「どこもこんなもの」と思い始めたら、一度立ち止まって外部の視点で確認することが大切です。
 
@@ -94,7 +97,8 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 
 漠然とした「やばい」を具体的にするために、3つの視点からチェックしてみましょう。
 
-<svg width="100%" viewBox="0 0 680 400" role="img" style="display:block;max-width:100%;margin:24px 0"><title>やばいを言語化する3つの視点チェックリスト</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 400" role="img" style="display:block;max-width:100%"><title>やばいを言語化する3つの視点チェックリスト</title>
 <rect x="0" y="0" width="680" height="400" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「やばい」を言語化する3つの視点</text>
 <rect x="16" y="48" width="204" height="332" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
@@ -145,6 +149,8 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 <rect x="100" y="356" width="480" height="32" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="340" y="376" text-anchor="middle" font-size="12" font-weight="600" fill="#B91C1C" font-family="sans-serif">各視点で3つ以上当てはまる項目があれば、転職を本気で検討するタイミング</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 これらの項目に当てはまるものが多いほど、あなたの直感は正しい可能性が高いと言えます。「全部当てはまる」という場合は、今すぐ転職活動を始めることをおすすめします。
 
@@ -179,7 +185,8 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 
 ## 気づいたら次にすること：3つの行動ステップ
 
-<svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%;margin:24px 0"><title>気づいた後の行動ステップ</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%"><title>気づいた後の行動ステップ</title>
 <defs><marker id="yabaiStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="190" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「やばい」と気づいたら次にすること</text>
@@ -204,6 +211,8 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 <text x="562" y="132" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">エージェント相談を</text>
 <text x="562" y="148" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">まず一つだけ始める</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 #### STEP 1. 記録・言語化する
 
