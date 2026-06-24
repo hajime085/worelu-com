@@ -653,160 +653,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .aa-result-btn { display: block; width: 100%; background: #F97316; color: #fff; border: none; border-radius: 8px; padding: 14px; font-size: 15px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background 0.2s; margin-bottom: 0; }
 .aa-result-btn:hover { background: #EA580C; }
 .aa-result-box { border-radius: 10px; padding: 22px 24px; border: 2px solid; margin-top: 16px; }
-.aa-result-level { font-size: 11px; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 6px; }
-.aa-result-badge { display: inline-block; font-size: 11px; font-weight: 900; letter-spacing: 0.05em; background: rgba(0,0,0,0.1); border-radius: 4px; padding: 2px 6px; margin-right: 6px; }
-.aa-result-badge-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.aa-result-sub { font-size: 11px; font-weight: 700; opacity: 0.8; }
-.aa-result-level { font-size: 26px; font-weight: 900; letter-spacing: 0.05em; margin-bottom: 4px; }
-.aa-next-links { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 16px 18px; margin-top: 16px; }
-.aa-next-title { font-size: 11px; font-weight: 800; color: #64748B; letter-spacing: 0.1em; margin-bottom: 10px; }
-.aa-next-link { display: block; font-size: 13px; font-weight: 600; color: #2563EB; text-decoration: none; padding: 8px 0; border-bottom: 1px solid #E2E8F0; }
-.aa-next-link:last-child { border-bottom: none; padding-bottom: 0; }
-.aa-next-link:hover { text-decoration: underline; }
-.aa-share-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-.aa-dl-btn { flex: 1; min-width: 140px; background: #fff; color: #2563EB; border: 2px solid #2563EB; border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.2s; }
-.aa-dl-btn:hover { background: #EFF6FF; }
-.aa-share-btn { flex: 1; min-width: 140px; text-align: center; }
-.aa-result-title { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
-.aa-result-sub { font-size: 13px; font-weight: 700; margin-bottom: 12px; opacity: 0.8; }
-.aa-result-body { font-size: 14px; line-height: 1.75; }
-.aa-result-items { margin: 12px 0; padding: 12px 16px; background: rgba(0,0,0,0.05); border-radius: 8px; font-size: 13px; line-height: 1.8; }
-.aa-share-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; background: #000; color: #fff; border: none; border-radius: 8px; padding: 10px 20px; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; font-family: inherit; }
-.aa-share-btn:hover { background: #1a1a1a; }
-.aa-next-links { margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.1); }
-.aa-next-title { font-size: 12px; font-weight: 800; color: #64748B; margin-bottom: 10px; letter-spacing: 0.05em; }
-.aa-next-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-.aa-next-link { display: block; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 10px 12px; text-decoration: none; color: #1E293B; font-size: 12px; font-weight: 700; line-height: 1.4; transition: background 0.15s; }
-.aa-next-link:hover { background: rgba(255,255,255,0.95); }
-@media(max-width:600px) { .aa-next-grid { grid-template-columns: 1fr; } }
-</style>
-
-<script>
-var aaCounts = { wakaru: 0 };
-var aaAnswered = {};
-
-function aaClick(btn, val) {
-  var item = btn.closest('.aa-item');
-  var id = item.dataset.id;
-  var prevVal = aaAnswered[id];
-  if (prevVal === val) return;
-  if (prevVal === 1) aaCounts.wakaru--;
-  if (val === 1) aaCounts.wakaru++;
-  aaAnswered[id] = val;
-  item.querySelectorAll('.aa-btn').forEach(function(b) { b.classList.remove('selected'); });
-  btn.classList.add('selected');
-  item.classList.toggle('wakaru', val === 1);
-  item.classList.toggle('nai', val === 0);
-  document.getElementById('aa-count').textContent = aaCounts.wakaru;
-}
-
-function downloadShindan(level) {
-  var img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.onload = function() {
-    var canvas = document.createElement('canvas');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    var ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    var a = document.createElement('a');
-    a.download = 'worelu_black_level' + level + '.png';
-    a.href = canvas.toDataURL('image/png');
-    a.click();
-  };
-  img.onerror = function() {
-    // crossOrigin失敗時は直接ダウンロード
-    var a = document.createElement('a');
-    a.download = 'worelu_black_level' + level + '.png';
-    a.href = '/images/shindan/black_lv00' + level + '.png';
-    a.click();
-  };
-  img.src = '/images/shindan/black_lv00' + level + '.png';
-}
-
-function calcAaResult() {
-  var score = aaCounts.wakaru;
-  var lvNum, levelNum, levelLabel, subCopy, title, body, color, bg, badge;
-
-  if (score <= 3) {
-    lvNum = 1; levelNum = 'LEVEL 1'; levelLabel = '正常な感覚の持ち主'; subCopy = 'ブラック企業度：低';
-    title = 'ブラック企業とは無縁の職場にいるようです';
-    body = score + '個しか当てはまりませんでした。今の職場は比較的健全な可能性があります。この感覚を忘れずに、引き続き自分の状態を観察してください。';
-    color = '#15803D'; bg = '#F0FDF4'; badge = '[ OK ]';
-  } else if (score <= 7) {
-    lvNum = 2; levelNum = 'LEVEL 2'; levelLabel = '感覚が麻痺し始めています'; subCopy = 'ブラック企業度：注意';
-    title = 'ちょっと待って。感覚が麻痺し始めているかもしれません';
-    body = score + '個当てはまりました。「これくらい普通かな」と思い始めていたら要注意。外の世界の基準と比較してみましょう。';
-    color = '#1D4ED8'; bg = '#EFF6FF'; badge = '[ ! ]';
-  } else if (score <= 12) {
-    lvNum = 3; levelNum = 'LEVEL 3'; levelLabel = 'その当たり前、本当に普通ですか？'; subCopy = 'ブラック企業度：高';
-    title = 'その「当たり前」、本当に当たり前ですか？';
-    body = score + '個も当てはまりました。感覚がかなり麻痺している可能性があります。転職を含めた選択肢を真剣に検討する時期かもしれません。';
-    color = '#C2410C'; bg = '#FFF7ED'; badge = '[ !! ]';
-  } else {
-    lvNum = 4; levelNum = 'LEVEL 4'; levelLabel = 'あなたの感覚はかなり麻痺しています'; subCopy = 'ブラック企業度：危険';
-    title = 'あなたの感覚はかなり麻痺しています';
-    body = score + '個当てはまりました。ここまで多いと心身への影響が出ている可能性があります。あなたの感覚は正しい。逃げることは恥ではありません。';
-    color = '#991B1B'; bg = '#FEF2F2'; badge = '[ SOS ]';
-  }
-
-  var shareUrl = 'https://worelu.com/shindan/black/level' + lvNum + '/';
-  var shareText = encodeURIComponent('ブラック企業あるある20選 ' + score + '個わかりました / ブラック耐性レベル：' + levelLabel + ' #ブラック企業 #Worelu ' + shareUrl);
-
-  var checkedItems = [];
-  document.querySelectorAll('.aa-item.wakaru .aa-text').forEach(function(el) {
-    if (checkedItems.length < 3) checkedItems.push(el.textContent.trim().slice(0, 20) + '…');
-  });
-
-  var links =
-    '<div class="aa-next-links">' +
-    '<div class="aa-next-title">次に読む</div>' +
-    '<a href="/articles/quit/black-kigyo-shindan/" class="aa-next-link">ブラック企業診断（15問スコアリング）</a>' +
-    '<a href="/articles/quit/yameru-yuuki/" class="aa-next-link">仕事を辞める勇気が出ない人へ</a>' +
-    '<a href="/articles/quit/taisyoku-daikou-moumuri/" class="aa-next-link">退職代行を使うべき状況とは</a>' +
-    '<a href="/stress-check/" class="aa-next-link">AIストレスチェック（無料・約1分）</a>' +
-    '</div>';
-
-  var html =
-    '<div class="aa-result-box" style="background:' + bg + ';border-color:' + color + ';color:' + color + '">' +
-    '<div class="aa-result-badge-row"><span class="aa-result-badge">' + badge + '</span><span class="aa-result-sub">' + subCopy + '</span></div>' +
-    '<div class="aa-result-level">' + levelNum + '</div>' +
-    '<div class="aa-result-title">' + levelLabel + '</div>' +
-    '<div class="aa-result-body" style="color:#334155">' + body + '</div>' +
-    '<div class="aa-share-row">' +
-    '<button onclick="downloadShindan(' + lvNum + ')" class="aa-dl-btn">結果画像をダウンロード</button>' +
-    '<a href="https://twitter.com/intent/tweet?text=' + shareText + '" target="_blank" rel="noopener" class="aa-share-btn">X（旧Twitter）にシェアする</a>' +
-    '</div>' +
-    '</div>' +
-    links;
-
-  var r = document.getElementById('aa-result');
-  r.innerHTML = html;
-  r.style.display = 'block';
-  r.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-</script>
-
-<style>
-.aa-game { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; margin: 24px 0; }
-.aa-group-title { font-size: 13px; font-weight: 800; color: #1E40AF; background: #EFF6FF; border-radius: 6px; padding: 8px 14px; margin: 20px 0 12px; }
-.aa-item { display: flex; gap: 12px; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; transition: border-color 0.2s; }
-.aa-item.wakaru { border-color: #FB923C; background: #FFF7ED; }
-.aa-item.nai { border-color: #CBD5E1; background: #F8FAFC; opacity: 0.7; }
-.aa-num { font-size: 15px; font-weight: 800; color: #94A3B8; flex-shrink: 0; width: 24px; }
-.aa-content { flex: 1; }
-.aa-text { font-size: 14px; font-weight: 700; color: #1E293B; line-height: 1.55; margin-bottom: 4px; }
-.aa-note { font-size: 11px; color: #94A3B8; line-height: 1.5; margin-bottom: 10px; }
-.aa-btns { display: flex; gap: 8px; flex-wrap: wrap; }
-.aa-btn { border: 1px solid #E2E8F0; border-radius: 6px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.15s; background: #fff; color: #475569; }
-.aa-btn.selected { color: #fff; border-color: transparent; }
-.aa-btn.aa-wakaru.selected { background: #F97316; }
-.aa-btn.aa-nai.selected { background: #94A3B8; }
-.aa-counter { text-align: center; font-size: 14px; font-weight: 700; color: #334155; background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; padding: 12px; margin: 20px 0 12px; }
-.aa-counter span { color: #F97316; font-size: 22px; }
-.aa-result-btn { display: block; width: 100%; background: #F97316; color: #fff; border: none; border-radius: 8px; padding: 14px; font-size: 15px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background 0.2s; margin-bottom: 0; }
-.aa-result-btn:hover { background: #EA580C; }
-.aa-result-box { border-radius: 10px; padding: 22px 24px; border: 2px solid; margin-top: 16px; }
 .aa-result-level { font-size: 22px; font-weight: 900; margin-bottom: 8px; }
 .aa-result-title { font-size: 15px; font-weight: 800; margin-bottom: 10px; }
 .aa-result-body { font-size: 14px; line-height: 1.75; }
@@ -816,14 +662,6 @@ function calcAaResult() {
 .aa-result-badge-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .aa-result-sub { font-size: 11px; font-weight: 700; opacity: 0.8; }
 .aa-result-level { font-size: 26px; font-weight: 900; letter-spacing: 0.05em; margin-bottom: 4px; }
-.aa-next-links { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 16px 18px; margin-top: 16px; }
-.aa-next-title { font-size: 11px; font-weight: 800; color: #64748B; letter-spacing: 0.1em; margin-bottom: 10px; }
-.aa-next-link { display: block; font-size: 13px; font-weight: 600; color: #2563EB; text-decoration: none; padding: 8px 0; border-bottom: 1px solid #E2E8F0; }
-.aa-next-link:last-child { border-bottom: none; padding-bottom: 0; }
-.aa-next-link:hover { text-decoration: underline; }
-.aa-share-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-.aa-dl-btn { flex: 1; min-width: 140px; background: #fff; color: #2563EB; border: 2px solid #2563EB; border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: all 0.2s; }
-.aa-dl-btn:hover { background: #EFF6FF; }
 .aa-share-btn { flex: 1; min-width: 140px; text-align: center; }
 </style>
 
@@ -856,29 +694,6 @@ function aaClick(btn, val) {
   document.getElementById('aa-count').textContent = aaCounts.wakaru;
 }
 
-function downloadShindan(level) {
-  var img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.onload = function() {
-    var canvas = document.createElement('canvas');
-    canvas.width = img.width;
-    canvas.height = img.height;
-    var ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    var a = document.createElement('a');
-    a.download = 'worelu_black_level' + level + '.png';
-    a.href = canvas.toDataURL('image/png');
-    a.click();
-  };
-  img.onerror = function() {
-    // crossOrigin失敗時は直接ダウンロード
-    var a = document.createElement('a');
-    a.download = 'worelu_black_level' + level + '.png';
-    a.href = '/images/shindan/black_lv00' + level + '.png';
-    a.click();
-  };
-  img.src = '/images/shindan/black_lv00' + level + '.png';
-}
 </script>
 
 <hr />
