@@ -184,10 +184,10 @@ draft: false
 
 ## あわせて読みたい
 
-- [仕事のミスで落ち込むあなたへ](/articles/stress/shigoto-miss-ochikomi/)
-- [仕事のやる気が出ないのはなぜ？](/articles/stress/shigoto-yaruki-denai/)
-- [上司が怖くて萎縮してしまうのはなぜ？](/articles/stress/joushi-kowai-ishuku/)
-- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [仕事のミスで落ち込むあなたへ。立ち直るための正しい対処法と切り替え術]((/articles/stress/shigoto-miss-ochikomi/))
+- [仕事のやる気が出ないのはなぜ？「怠け」じゃない3つの原因と対処法]((/articles/stress/shigoto-yaruki-denai/))
+- [上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて]((/articles/stress/joushi-kowai-ishuku/))
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
 *   **メリット**：自分のストレスレベルや、どのような要因がストレスになっているのかを数値やグラフで可視化できます。これにより、漠然とした不安が明確になり、具体的な対策を立てやすくなります。
 *   **注意点**：ストレスチェックはあくまで自己診断の一つです。結果に一喜一憂せず、必要であれば専門家への相談も検討しましょう。
 

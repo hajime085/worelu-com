@@ -243,7 +243,7 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 
 **転職を検討したほうがよいケース**
 
-サービス残業が当たり前で、残業代を支払う意思がなく、法律違反を繰り返しているような会社であれば、環境を変えることも選択肢の一つです。[仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)も参考にしてください。
+サービス残業が当たり前で、残業代を支払う意思がなく、法律違反を繰り返しているような会社であれば、環境を変えることも選択肢の一つです。[仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え]((/articles/quit/yameru-yuuki/))も参考にしてください。
 
 今の職場だけがすべてではありません。
 
@@ -251,10 +251,10 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 
 ## あわせて読みたい
 
-- [サービス残業が当たり前の職場は異常](/articles/work/service-zangyo-atarimae/)
-- [「自主的な残業」でも残業代は出る](/articles/work/service-zangyo-voluntary/)
-- [ブラック企業診断](/articles/quit/black-kigyo-shindan/)
-- [仕事を辞める勇気が出ない人へ](/articles/quit/yameru-yuuki/)
+- [サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由]((/articles/work/service-zangyo-atarimae/))
+- [「自主的な残業」でも残業代は出る。違法になるケースと対処法]((/articles/work/service-zangyo-voluntary/))
+- [ブラック企業診断｜15の質問で今の職場をスコアリングして判断する]((/articles/quit/black-kigyo-shindan/))
+- [仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え]((/articles/quit/yameru-yuuki/))
 
 ## よくある質問
 

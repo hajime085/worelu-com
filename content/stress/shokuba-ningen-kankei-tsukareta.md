@@ -277,10 +277,10 @@ A8：人間関係のストレスは、仕事のモチベーションを著しく
 
 ## あわせて読みたい
 
-- [上司が怖くて萎縮してしまうのはなぜ？](/articles/stress/joushi-kowai-ishuku/)
-- [モラハラ上司に限界を感じたら](/articles/stress/morahara-joushi/)
-- [職場の人間関係に疲れたあなたへ](/articles/stress/ningen-kankei-tsukareta/)
-- [仕事で評価されないと腐る前に](/articles/quit/hyouka-sarenai/)
+- [上司が怖くて萎縮してしまうのはなぜ？「自分だけじゃない」心の声に耳を傾けて]((/articles/stress/joushi-kowai-ishuku/))
+- [モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説]((/articles/stress/morahara-joushi/))
+- [職場の人間関係に疲れたあなたへ。心を軽くする対処法]((/articles/stress/ningen-kankei-tsukareta/))
+- [仕事で評価されないと腐ってしまう前に。原因の見つけ方と立て直し方]((/articles/quit/hyouka-sarenai/))
 
 <div style="background:#EFF6FF;border:2px solid #2563EB;border-radius:10px;padding:20px 24px;margin:32px 0;text-align:center">
 <div style="font-size:13px;font-weight:800;color:#2563EB;margin-bottom:6px">まずは今の状態を確認してみましょう</div>

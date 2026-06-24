@@ -109,17 +109,17 @@ draft: false
 
 早めに休職という選択をすることで重症化を防ぎ、結果的に早く社会復帰できる可能性が高まります。休んでいる間は傷病手当金などの経済的サポートも受けられます。
 
-→ [休職したいのは甘えじゃない](/articles/burnout/kyushoku-amae/)
-→ [休職に診断書は必須？](/articles/burnout/kyushoku-shindan/)
+→ [休職したいのは甘え？罪悪感を消して自分を守るための判断基準]((/articles/burnout/kyushoku-amae/))
+→ [休職に診断書は必須？もらい方から費用・会社への提出方法まで解説]((/articles/burnout/kyushoku-shindan/))
 
 ---
 
 ## あわせて読みたい
 
-- [休職に診断書は必須？](/articles/burnout/kyushoku-shindan/)
-- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
-- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
-- [バーンアウトの症状チェックリスト](/articles/burnout/burnout-symptoms/)
+- [休職に診断書は必須？もらい方から費用・会社への提出方法まで解説]((/articles/burnout/kyushoku-shindan/))
+- [休職したいのは甘え？罪悪感を消して自分を守るための判断基準]((/articles/burnout/kyushoku-amae/))
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
+- [バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法]((/articles/burnout/burnout-symptoms/))
 
 ---
 

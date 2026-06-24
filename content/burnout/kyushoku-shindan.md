@@ -138,14 +138,14 @@ draft: false
 
 ## あわせて読みたい
 
-- [休職したいのは甘え？](/articles/burnout/kyushoku-amae/)
-- [休職1ヶ月でどう変わる？](/articles/burnout/kyushoku-1month/)
-- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
-- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
+- [休職したいのは甘え？罪悪感を消して自分を守るための判断基準]((/articles/burnout/kyushoku-amae/))
+- [休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する]((/articles/burnout/kyushoku-1month/))
+- [仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説]((/articles/stress/shigoto-utsu/))
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
 
 また、休職したいという気持ちが甘えではない理由については、こちらの記事も参考にしてください。
 
-→ [休職したいのは甘えじゃない](/articles/burnout/kyushoku-amae/)
+→ [休職したいのは甘え？罪悪感を消して自分を守るための判断基準]((/articles/burnout/kyushoku-amae/))
 
 ---
 

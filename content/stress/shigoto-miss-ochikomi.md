@@ -99,10 +99,10 @@ draft: false
 
 ## あわせて読みたい
 
-- [「仕事できない」と辛いあなたへ](/articles/stress/shigoto-dekinai-tsurai/)
-- [仕事のやる気が出ないのはなぜ？](/articles/stress/shigoto-yaruki-denai/)
-- [仕事の限界サインとは？](/articles/stress/shigoto-genkai-sign/)
-- [仕事が原因のうつ？](/articles/stress/shigoto-utsu/)
+- [「仕事できない」と辛いあなたへ。甘えじゃない、次の一歩を見つける方法]((/articles/stress/shigoto-dekinai-tsurai/))
+- [仕事のやる気が出ないのはなぜ？「怠け」じゃない3つの原因と対処法]((/articles/stress/shigoto-yaruki-denai/))
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと]((/articles/stress/shigoto-genkai-sign/))
+- [仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説]((/articles/stress/shigoto-utsu/))
 
 ---
 
