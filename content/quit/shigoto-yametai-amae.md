@@ -230,24 +230,24 @@ draft: false
 ## FAQ：「仕事辞めたい」に関するよくある質問
 
 <div style="border:1px solid #E2E8F0;border-radius:10px;overflow:hidden;margin:24px 0">
-<div style="background:#EFF6FF;padding:16px 20px;border-bottom:1px solid #E2E8F0">
-<span style="font-weight:600;color:#1E40AF;font-size:14px">Q1. 転職先が決まる前に会社を辞めても大丈夫ですか？</span>
-</div>
-<div style="padding:16px 20px;font-size:14px;line-height:1.8;color:#334155;border-bottom:1px solid #E2E8F0">
+<details style="border-bottom:1px solid #E2E8F0">
+<summary style="background:#EFF6FF;padding:16px 20px;font-weight:600;color:#1E40AF;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Q1. 転職先が決まる前に会社を辞めても大丈夫ですか？<span style="font-size:18px;color:#93C5FD">+</span></summary>
+<div style="padding:16px 20px;font-size:14px;line-height:1.8;color:#334155">
 経済的なリスクを伴います。ただし、心身の健康が著しく損なわれている場合は、自分を守るために退職を優先することも重要です。最低でも3〜6ヶ月分の生活費を確保し、失業保険の受給も検討しましょう。
 </div>
-<div style="background:#EFF6FF;padding:16px 20px;border-bottom:1px solid #E2E8F0">
-<span style="font-weight:600;color:#1E40AF;font-size:14px">Q2. 退職理由を正直に伝えるべきですか？</span>
-</div>
-<div style="padding:16px 20px;font-size:14px;line-height:1.8;color:#334155;border-bottom:1px solid #E2E8F0">
+</details>
+<details style="border-bottom:1px solid #E2E8F0">
+<summary style="background:#EFF6FF;padding:16px 20px;font-weight:600;color:#1E40AF;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Q2. 退職理由を正直に伝えるべきですか？<span style="font-size:18px;color:#93C5FD">+</span></summary>
+<div style="padding:16px 20px;font-size:14px;line-height:1.8;color:#334155">
 円満退職のためには、正直に伝えすぎない方が良い場合もあります。「新しい分野に挑戦したい」「キャリアアップのため」など、前向きな理由を伝えるようにしましょう。本音と建前を使い分けることも必要なスキルです。
 </div>
-<div style="background:#EFF6FF;padding:16px 20px;border-bottom:1px solid #E2E8F0">
-<span style="font-weight:600;color:#1E40AF;font-size:14px">Q3. 「辞めたい」気持ちが一時的なものかどうかの見極め方は？</span>
-</div>
+</details>
+<details>
+<summary style="background:#EFF6FF;padding:16px 20px;font-weight:600;color:#1E40AF;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Q3. 「辞めたい」気持ちが一時的なものかどうかの見極め方は？<span style="font-size:18px;color:#93C5FD">+</span></summary>
 <div style="padding:16px 20px;font-size:14px;line-height:1.8;color:#334155">
 以下の3点を確認してみましょう。①その気持ちが数ヶ月以上続いているか、②具体的な改善策が見当たらない問題があるか、③不眠・食欲不振・気分の落ち込みなど心身の不調が出ているか。複数当てはまる場合は一時的なものではなく、環境を変えるサインかもしれません。信頼できる人や専門家への相談をおすすめします。
 </div>
+</details>
 </div>
 
 ---
