@@ -445,7 +445,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .result-desc { font-size: 14px; line-height: 1.8; text-align: left; }
 .result-advice { background: #F8FAFC; border-radius: 10px; padding: 16px 20px; margin-top: 16px; font-size: 14px; line-height: 1.8; color: #334155; text-align: left; }
 #shindan-retry { display: block; width: 100%; padding: 14px; margin-top: 16px; background: #F1F5F9; color: #475569; border: none; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; }
-.share-btn { display: inline-block; padding: 12px 20px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; color: #fff; background: #000; margin-top: 12px; }
+.share-btn { display: block; text-align: center; padding: 14px 20px; border-radius: 8px; font-size: 15px; font-weight: 700; text-decoration: none; color: #fff; background: #2563EB; margin-top: 12px; letter-spacing: 0.03em; }
 </style>
 
 <div class="shindan-wrap">
@@ -589,7 +589,8 @@ function showResult(){
     + '<div class="result-desc" style="color:' + r.text + '">' + r.desc + '</div>'
     + '<div class="result-advice"><strong>次のステップ</strong><br>' + r.advice + '</div>'
     + '</div>'
-    + '<img src="' + r.img + '" alt="感覚麻痺度診断 ' + r.lv + ' 結果カード" style="width:100%;border-radius:10px;margin-top:16px;display:block;">'
+    + '<img src="' + r.img + '" alt="感覚麻痺度診断 ' + r.lv + ' 結果カード" style="width:100%;border-radius:10px;margin-top:16px;display:block;" onerror="this.style.display=\'none\';document.getElementById(\'img-fallback\').style.display=\'block\'">'
+    + '<div id="img-fallback" style="display:none;text-align:center;padding:12px;font-size:12px;color:#94A3B8;margin-top:8px;">※ 診断カード画像を準備中です</div>'
     + '<a class="share-btn" href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:12px;">X(Twitter)でシェアする</a>'
     + relatedHtml;
   res.style.display = 'block';
