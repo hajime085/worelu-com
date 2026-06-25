@@ -572,13 +572,6 @@ function showResult(){
   var lvNum = r.lv.replace('LV ','');
   var shareText = encodeURIComponent('感覚麻痺度診断結果：' + r.lv + ' ' + r.catch + ' #Worelu #感覚麻痺度診断');
   var shareUrl = encodeURIComponent('https://worelu.com/shindan/kanmahi/level' + lvNum + '/');
-  var relatedHtml = '<div style="margin-top:20px;padding:16px 20px;background:#F8FAFC;border-radius:10px;">'
-    + '<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:12px;letter-spacing:0.05em;">あなたへのおすすめ記事</div>';
-  r.related.forEach(function(rel){
-    relatedHtml += '<a href="' + rel.url + '" style="display:block;padding:10px 12px;margin-bottom:8px;background:#fff;border:1px solid #E2E8F0;border-radius:8px;font-size:13px;color:#2563EB;text-decoration:none;line-height:1.5;">'
-      + rel.text + ' &rarr;</a>';
-  });
-  relatedHtml += '</div>';
   var lv4bg = r.lv === 'LV 4' ? 'background:#1C1917;' : 'background:' + r.color + ';';
   res.innerHTML = '<div class="result-card" style="' + lv4bg + 'border:2px solid ' + r.border + '">'
     + '<div class="result-lv" style="color:' + r.text + '">' + r.lv + '</div>'
@@ -591,8 +584,7 @@ function showResult(){
     + '</div>'
     + '<img src="' + r.img + '" alt="感覚麻痺度診断 ' + r.lv + ' 結果カード" style="width:100%;border-radius:10px;margin-top:16px;display:block;" onerror="this.style.display=\'none\';document.getElementById(\'img-fallback\').style.display=\'block\'">'
     + '<div id="img-fallback" style="display:none;text-align:center;padding:12px;font-size:12px;color:#94A3B8;margin-top:8px;">※ 診断カード画像を準備中です</div>'
-    + '<a class="share-btn" href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:12px;">X(Twitter)でシェアする</a>'
-    + relatedHtml;
+    + '<a class="share-btn" href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener">X(Twitter)でシェアする</a>';
   res.style.display = 'block';
   document.getElementById('shindan-submit').style.display = 'none';
   document.getElementById('shindan-retry').style.display = 'block';
