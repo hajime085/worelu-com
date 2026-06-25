@@ -35,7 +35,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 まずは、自分がなぜ踏み出せないのかを理解することが、最初の一歩です。
 
-<svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%;margin:24px 0"><title>踏み出せない5つの理由</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%"><title>踏み出せない5つの理由</title>
 <rect x="0" y="0" width="680" height="220" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">踏み出せない5つの理由</text>
 <rect x="12" y="48" width="120" height="100" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
@@ -62,6 +63,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 <rect x="80" y="168" width="520" height="36" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.5"/>
 <text x="340" y="190" text-anchor="middle" font-size="12" fill="#475569" font-family="sans-serif">これらは全て「弱さ」ではなく、真面目に考えているからこその感情</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 ## 「わかってる、でも動けない」──踏み出せない5つの理由と現実的な答え
 
@@ -167,7 +170,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 悩み続けている方に特に重要なのが「今が辞めていい状態なのか」を客観的に判断することです。
 
-<svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%;margin:24px 0"><title>辞めていい状態の判断基準</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%"><title>辞めていい状態の判断基準</title>
 <rect x="0" y="0" width="680" height="330" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「辞めていい状態」チェックリスト</text>
 <rect x="16" y="48" width="304" height="264" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
@@ -193,6 +197,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 <text x="512" y="254" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">経済的な準備がまだできていない</text>
 <text x="340" y="316" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="sans-serif">左側に複数当てはまるなら、動き出すタイミングかもしれない</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 特に、心身に不調が出ている場合やハラスメントがある場合は、準備が整っていなくても早期の退職・休職を優先してください。あなたの心身の健康は何よりも優先されるべきです。
 
@@ -200,7 +206,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 動き出す決意ができたら、次は具体的な行動です。
 
-<svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%;margin:24px 0"><title>円満退職の3ステップ</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%"><title>円満退職の3ステップ</title>
 <defs><marker id="yuukiStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="190" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">円満退職を進める3ステップ</text>
@@ -225,6 +232,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 <text x="562" y="134" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">感謝を伝えながら</text>
 <text x="562" y="150" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">気持ちよく旅立つ</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 在職中に転職活動を進め、次の仕事が決まった段階で退職の意思を伝えるのが最もリスクの少ない進め方です。就業規則で定められた期間（一般的に1〜2ヶ月前）を守り、直属の上司に口頭で直接伝えること。「新しい挑戦をしたい」など前向きな退職理由を伝え、丁寧な引き継ぎで最後まで誠意を見せましょう。
 

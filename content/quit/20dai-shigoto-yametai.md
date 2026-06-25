@@ -99,7 +99,8 @@ draft: false
 
 感情的な勢いだけで行動してしまうと、後で後悔することにもなりかねません。以下の4つをじっくり確認しましょう。
 
-<svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%;margin:24px 0"><title>後悔しない見極め4ポイント</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>後悔しない見極め4ポイント</title>
 <rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">後悔しない見極めチェック</text>
 <rect x="24" y="56" width="140" height="160" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
@@ -130,12 +131,15 @@ draft: false
 <text x="340" y="254" text-anchor="middle" font-size="13" font-weight="600" fill="#1E40AF" font-family="sans-serif">4つ全部チェックできたら、転職を具体的に動かすタイミング</text>
 <text x="340" y="272" text-anchor="middle" font-size="12" fill="#3B82F6" font-family="sans-serif">まだ試せることがあるなら、それを先に。解決策が尽きたら次へ進もう。</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 辞めたい理由を紙に書き出して優先順位をつけ、「もし〇〇が改善されたら辞めたい気持ちはなくなるか？」と問いかけてみましょう。社内でまだ試せる解決策（相談・異動・スキルアップ）があるなら期限を設けて実行し、それでも改善しない場合は次のステップへ。転職後のキャリアプランと3〜6ヶ月分の生活費の準備が整ったら、具体的に動き出すタイミングです。
 
 ## 今すぐ取るべき4つの行動
 
-<svg width="100%" viewBox="0 0 680 180" role="img" style="display:block;max-width:100%;margin:24px 0"><title>4つの行動ステップ</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 180" role="img" style="display:block;max-width:100%"><title>4つの行動ステップ</title>
 <defs><marker id="act20Arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="180" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">リスクゼロで動き出す4ステップ</text>
@@ -163,6 +167,8 @@ draft: false
 <text x="589" y="116" text-anchor="middle" font-size="12" font-weight="600" fill="#6D28D9" font-family="sans-serif">始める</text>
 <text x="589" y="138" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">エージェント活用</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 #### STEP 1. まずは心身を休ませる
 
@@ -182,7 +188,8 @@ draft: false
 
 ## 20代で転職するメリット・デメリット
 
-<svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%;margin:24px 0"><title>20代転職のメリット・デメリット</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>20代転職のメリット・デメリット</title>
 <rect x="0" y="0" width="680" height="340" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">20代転職のメリット vs デメリット</text>
 <rect x="16" y="52" width="314" height="272" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
@@ -210,6 +217,8 @@ draft: false
 <rect x="364" y="270" width="286" height="36" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="507" y="293" text-anchor="middle" font-size="12" fill="#9F1239" font-family="sans-serif">転職活動自体の精神的な負担がある</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 これらのメリット・デメリットを総合的に考慮し、自分の状況や将来の目標と照らし合わせて、最適な選択をすることが重要です。
 

@@ -30,7 +30,8 @@ draft: false
 
 30代の悩みは20代とは異なります。責任・家庭・キャリア不安が複雑に絡み合うのが30代特有のつらさです。
 
-<svg width="100%" viewBox="0 0 680 260" role="img" style="display:block;max-width:100%;margin:24px 0"><title>30代が仕事を辞めたいと感じる構造</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 260" role="img" style="display:block;max-width:100%"><title>30代が仕事を辞めたいと感じる構造</title>
 <rect x="0" y="0" width="680" height="260" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">30代特有のプレッシャー構造</text>
 <rect x="260" y="48" width="160" height="52" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="0.5"/>
@@ -58,6 +59,8 @@ draft: false
 <text x="580" y="212" text-anchor="middle" font-size="11" font-weight="600" fill="#9F1239" font-family="sans-serif">心身の限界</text>
 <text x="580" y="228" text-anchor="middle" font-size="10" fill="#E11D48" font-family="sans-serif">20代の頃より回復が遅い</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 #### 1. 責任やプレッシャーの増加
 
@@ -126,7 +129,8 @@ draft: false
 
 30代の転職判断は、20代よりも慎重かつ戦略的に行う必要があります。
 
-<svg width="100%" viewBox="0 0 680 280" role="img" style="display:block;max-width:100%;margin:24px 0"><title>20代と30代の転職の違い</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 280" role="img" style="display:block;max-width:100%"><title>20代と30代の転職の違い</title>
 <rect x="0" y="0" width="680" height="280" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">20代 vs 30代の転職における違い</text>
 <rect x="16" y="48" width="304" height="212" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="0.5"/>
@@ -150,12 +154,15 @@ draft: false
 <rect x="374" y="208" width="276" height="32" rx="6" fill="#FEF3C7" stroke="#FCD34D" stroke-width="0.5"/>
 <text x="512" y="228" text-anchor="middle" font-size="12" fill="#92400E" font-family="sans-serif">生活費は6ヶ月〜1年分が目安</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 後悔しない見極めのための4つのポイントは20代と共通していますが、30代には特有の判断軸があります。辞めたい理由を具体化し、社内でまだ試せる解決策（相談・異動・働き方交渉）があるなら期限を設けて実行。転職後のキャリアプランは「専門性を深めるか、マネジメントを続けるか」という30代特有の選択も含めて考えましょう。経済的な準備は住宅ローンや教育費を踏まえ、6ヶ月〜1年分の生活費確保を目安にしてください。
 
 ## キャリアと生活を守りながら動く4つのステップ
 
-<svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%;margin:24px 0"><title>30代が動き出す4ステップ</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>30代が動き出す4ステップ</title>
 <defs><marker id="step30Arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">キャリアと生活を守りながら動く4ステップ</text>
@@ -187,6 +194,8 @@ draft: false
 <text x="589" y="138" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">30代特化の</text>
 <text x="589" y="154" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">エージェント活用</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 #### STEP 1. まずは心身を休ませる
 
@@ -206,7 +215,8 @@ draft: false
 
 ## 30代で転職するメリット・デメリット
 
-<svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%;margin:24px 0"><title>30代転職のメリット・デメリット</title>
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>30代転職のメリット・デメリット</title>
 <rect x="0" y="0" width="680" height="340" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">30代転職のメリット vs デメリット</text>
 <rect x="16" y="52" width="314" height="272" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
@@ -234,6 +244,8 @@ draft: false
 <rect x="364" y="270" width="286" height="36" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="507" y="293" text-anchor="middle" font-size="12" fill="#9F1239" font-family="sans-serif">未経験分野への転職はハードルが上がる</text>
 </svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
 
 これらのメリット・デメリットを自分の状況（家族構成・ローンの有無・専門性の強さ）と照らし合わせて、最適な選択をすることが重要です。
 
