@@ -504,6 +504,65 @@ def build_shindan_pages():
         print(f"  診断ページ level{lv['level']}: {out}")
 
 
+def build_kanmahi_pages():
+    """感覚麻痺度診断レベル別OGPページを生成"""
+    levels = [
+        {
+            "level": 1,
+            "title": "LV1 正常な感覚を保っています｜感覚麻痺度診断",
+            "desc": "自分の感覚を、信じていい。ブラック企業的な価値観に染まっていません。",
+            "image": "/images/shindan/lv1_card.png",
+        },
+        {
+            "level": 2,
+            "title": "LV2 少し感覚が麻痺し始めています｜感覚麻痺度診断",
+            "desc": "「これくらい普通かな」と思い始めていませんか？早めの気づきが未来を守ります。",
+            "image": "/images/shindan/lv2_card.png",
+        },
+        {
+            "level": 3,
+            "title": "LV3 かなりブラック企業文化に染まっています｜感覚麻痺度診断",
+            "desc": "その常識、本当に世間の常識ですか？今すぐ外部の視点を取り入れてください。",
+            "image": "/images/shindan/lv3_card.png",
+        },
+        {
+            "level": 4,
+            "title": "LV4 危険です。感覚が完全に麻痺している可能性があります｜感覚麻痺度診断",
+            "desc": "あなたは悪くありません。今すぐ動いてください。一人で抱え込まないでください。",
+            "image": "/images/shindan/lv4_card.png",
+        },
+    ]
+
+    for lv in levels:
+        html = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{lv['title']}</title>
+<meta name="description" content="{lv['desc']}">
+<meta name="robots" content="noindex,follow">
+<meta property="og:title" content="{lv['title']}">
+<meta property="og:description" content="{lv['desc']}">
+<meta property="og:image" content="https://worelu.com{lv['image']}">
+<meta property="og:url" content="https://worelu.com/shindan/kanmahi/level{lv['level']}/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{lv['title']}">
+<meta name="twitter:description" content="{lv['desc']}">
+<meta name="twitter:image" content="https://worelu.com{lv['image']}">
+<link rel="canonical" href="https://worelu.com/articles/quit/black-kigyo-shindan/">
+<meta http-equiv="refresh" content="0;url=/articles/quit/black-kigyo-shindan/">
+</head>
+<body>
+<p>リダイレクト中... <a href="/articles/quit/black-kigyo-shindan/">こちら</a>をクリックしてください。</p>
+</body>
+</html>"""
+        out = OUTPUT_DIR / "shindan" / "kanmahi" / f"level{lv['level']}" / "index.html"
+        write_file(out, html)
+        print(f"  感覚麻痺度診断ページ level{lv['level']}: {out}")
+
+
 def build_robots():
     """robots.txtを生成"""
     content = f"""User-agent: *
@@ -559,6 +618,7 @@ def main():
 
     print("\n診断OGPページを生成中...")
     build_shindan_pages()
+    build_kanmahi_pages()
 
     print("\nrobots.txtを生成中...")
     build_robots()

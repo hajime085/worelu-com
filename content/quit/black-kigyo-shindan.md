@@ -105,18 +105,42 @@ var OPTS = [
   {t:'強く思う',v:3}
 ];
 var RESULTS = [
-  {min:0,max:19,lv:'LV 1',title:'正常な感覚を保っています',color:'#DCFCE7',border:'#86EFAC',text:'#166534',
+  {min:0,max:19,lv:'LV 1',title:'正常な感覚を保っています',catch:'自分の感覚を、信じていい。',
+   color:'#DCFCE7',border:'#86EFAC',text:'#166534',img:'/images/shindan/lv1_card.png',
    desc:'あなたの職場感覚は健全です。ブラック企業的な価値観に染まっておらず、自分を守る判断軸がしっかりしています。今の職場環境に不満があるなら、その感覚は正しい可能性が高いです。',
-   advice:'自分の感覚を信じてください。違和感を覚えたら、それは大切なサインです。'},
-  {min:20,max:39,lv:'LV 2',title:'少し感覚が麻痺し始めています',color:'#FEF9C3',border:'#FDE047',text:'#854D0E',
+   advice:'自分の感覚を信じてください。違和感を覚えたら、それは大切なサインです。ただし、環境によっては知らず知らずのうちに感覚が麻痺していくことも。定期的にこの診断でチェックすることをおすすめします。',
+   related:[
+     {url:'/articles/quit/black-kigyo-aruaru/',text:'ブラック企業あるある20選｜あなたの会社は大丈夫？診断付きでチェック'},
+     {url:'/articles/quit/kaisha-yabai/',text:'「この会社やばい」と感じたとき。その直感を言語化する方法'},
+     {url:'/articles/stress/shigoto-genkai-sign/',text:'仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと'}
+   ]},
+  {min:20,max:39,lv:'LV 2',title:'少し感覚が麻痺し始めています',catch:'「これくらい普通かな」と思い始めていませんか？',
+   color:'#FEF9C3',border:'#FDE047',text:'#854D0E',img:'/images/shindan/lv2_card.png',
    desc:'いくつかの場面で、ブラック企業的な価値観を「普通」だと感じ始めているかもしれません。まだ感覚は残っていますが、このまま放置すると徐々に麻痺が進む可能性があります。',
-   advice:'「これって本当に普通なんだろうか？」と一度立ち止まって考える習慣を持ちましょう。転職経験者の話を聞いたり、口コミサイトで他社の環境を調べたりすることで、正常な基準を取り戻せます。'},
-  {min:40,max:49,lv:'LV 3',title:'かなりブラック企業文化に染まっています',color:'#FFE4E6',border:'#FCA5A5',text:'#9F1239',
-   desc:'多くの場面で、本来おかしな価値観を「当たり前」として受け入れています。自分が消耗していても「頑張りが足りない」と思ってしまっていませんか？その感覚こそが、麻痺のサインです。',
-   advice:'今すぐ外部の視点を取り入れてください。転職エージェントへの無料相談、信頼できる友人への相談、職場口コミサイトの閲覧など。「自分がおかしい」のではなく「環境がおかしい」可能性が高いです。'},
-  {min:50,max:60,lv:'LV 4',title:'危険です。感覚が完全に麻痺している可能性があります',color:'#FEF2F2',border:'#EF4444',text:'#B91C1C',
-   desc:'ブラック企業的な価値観が、あなたの「常識」になってしまっています。心身に不調が出ていても「自分が弱い」と感じていませんか？それは弱さではなく、限界のサインです。今すぐ環境を変えることを真剣に考えてください。',
-   advice:'あなたの感覚は、長年の環境によって書き換えられています。これは意志の弱さではありません。まず信頼できる人に話してみてください。そして、転職・休職・退職の選択肢を具体的に調べ始めましょう。一人で抱え込まないでください。'}
+   advice:'「これって本当に普通なんだろうか？」と一度立ち止まって考えましょう。転職経験者の話を聞いたり、口コミサイトで他社の環境を調べたりすることで、正常な基準を取り戻せます。早めの気づきが、未来を守ります。',
+   related:[
+     {url:'/articles/quit/kaisha-yabai/',text:'「この会社やばい」と感じたとき。その直感を言語化する方法'},
+     {url:'/articles/quit/shigoto-yametai-amae/',text:'「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩'},
+     {url:'/articles/stress/shigoto-genkai-sign/',text:'仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと'}
+   ]},
+  {min:40,max:49,lv:'LV 3',title:'かなりブラック企業文化に染まっています',catch:'その常識、本当に世間の常識ですか？',
+   color:'#FFE4E6',border:'#FCA5A5',text:'#9F1239',img:'/images/shindan/lv3_card.png',
+   desc:'多くの場面で、本来おかしな価値観を「当たり前」として受け入れています。自分が消耗していても「頑張りが足りない」と思ってしまっていませんか？その感覚こそが、麻痺のサインです。あなたは悪くありません。',
+   advice:'今すぐ外部の視点を取り入れてください。転職エージェントへの無料相談、信頼できる友人への相談、職場口コミサイトの閲覧など。「自分がおかしい」のではなく「環境がおかしい」可能性が高いです。',
+   related:[
+     {url:'/articles/quit/shigoto-yametai-amae/',text:'「仕事辞めたい」は甘えじゃない。後悔しないための見極め方と次の一歩'},
+     {url:'/articles/quit/yameru-yuuki/',text:'仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と現実的な答え'},
+     {url:'/articles/burnout/kyushoku-amae/',text:'休職したいのは甘え？罪悪感を消して自分を守るための判断基準'}
+   ]},
+  {min:50,max:60,lv:'LV 4',title:'危険です。感覚が完全に麻痺している可能性があります',catch:'あなたは悪くありません。今すぐ動いてください。',
+   color:'#1C1917',border:'#EF4444',text:'#FEF2F2',img:'/images/shindan/lv4_card.png',
+   desc:'ブラック企業的な価値観が、あなたの「常識」になってしまっています。それはあなたが弱いからでも、甘えているからでもありません。長期間にわたりおかしい環境に晒され続けた結果です。今すぐ自分を守る行動が必要です。',
+   advice:'まず信頼できる人に話してみてください。転職・休職・退職代行の利用も含めて、選択肢を具体的に調べ始めましょう。あなたの人生は、あなたのものです。一人で抱え込まないでください。',
+   related:[
+     {url:'/articles/quit/taisyoku-daikou-moumuri/',text:'退職代行モームリに何があったのか。今選ぶべきサービスを整理する'},
+     {url:'/articles/quit/20dai-shigoto-yametai/',text:'20代で仕事辞めたいのは甘えじゃない。リスクゼロで動き出す具体的なステップ'},
+     {url:'/articles/quit/30dai-shigoto-yametai/',text:'30代で仕事辞めたいのは甘えじゃない。キャリアと生活を守りながら動く方法'}
+   ]}
 ];
 var answers = new Array(QS.length).fill(null);
 
@@ -163,16 +187,29 @@ function showResult(){
     if(total >= RESULTS[i].min && total <= RESULTS[i].max){ r = RESULTS[i]; break; }
   }
   var res = document.getElementById('shindan-result');
-  var shareText = encodeURIComponent('【ブラック企業洗脳度診断】' + r.lv + '：' + r.title + ' #Worelu #ブラック企業診断');
-  var shareUrl = encodeURIComponent('https://worelu.com/articles/quit/black-kigyo-shindan/');
-  res.innerHTML = '<div class="result-card" style="background:' + r.color + ';border:2px solid ' + r.border + '">'
+  var lvNum = r.lv.replace('LV ','');
+  var shareText = encodeURIComponent('感覚麻痺度診断結果：' + r.lv + ' ' + r.catch + ' #Worelu #感覚麻痺度診断');
+  var shareUrl = encodeURIComponent('https://worelu.com/shindan/kanmahi/level' + lvNum + '/');
+  var relatedHtml = '<div style="margin-top:20px;padding:16px 20px;background:#F8FAFC;border-radius:10px;">'
+    + '<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:12px;letter-spacing:0.05em;">あなたへのおすすめ記事</div>';
+  r.related.forEach(function(rel){
+    relatedHtml += '<a href="' + rel.url + '" style="display:block;padding:10px 12px;margin-bottom:8px;background:#fff;border:1px solid #E2E8F0;border-radius:8px;font-size:13px;color:#2563EB;text-decoration:none;line-height:1.5;">'
+      + rel.text + ' &rarr;</a>';
+  });
+  relatedHtml += '</div>';
+  var lv4bg = r.lv === 'LV 4' ? 'background:#1C1917;' : 'background:' + r.color + ';';
+  res.innerHTML = '<div class="result-card" style="' + lv4bg + 'border:2px solid ' + r.border + '">'
     + '<div class="result-lv" style="color:' + r.text + '">' + r.lv + '</div>'
     + '<div class="result-title" style="color:' + r.text + '">' + r.title + '</div>'
     + '<div class="result-score" style="color:' + r.text + '">合計スコア：' + total + ' / 60点</div>'
+    + '<div style="font-size:16px;font-weight:700;color:' + r.text + ';margin-bottom:12px;line-height:1.5;border-bottom:1px solid ' + r.border + ';padding-bottom:12px;">'
+    + r.catch + '</div>'
     + '<div class="result-desc" style="color:' + r.text + '">' + r.desc + '</div>'
     + '<div class="result-advice"><strong>次のステップ</strong><br>' + r.advice + '</div>'
     + '</div>'
-    + '<a class="share-btn" href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener">X(Twitter)でシェアする</a>';
+    + '<img src="' + r.img + '" alt="感覚麻痺度診断 ' + r.lv + ' 結果カード" style="width:100%;border-radius:10px;margin-top:16px;display:block;">'
+    + '<a class="share-btn" href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" style="display:block;text-align:center;margin-top:12px;">X(Twitter)でシェアする</a>'
+    + relatedHtml;
   res.style.display = 'block';
   document.getElementById('shindan-submit').style.display = 'none';
   document.getElementById('shindan-retry').style.display = 'block';
