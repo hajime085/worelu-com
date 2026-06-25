@@ -191,6 +191,23 @@ function showResult(){
   var shareText = encodeURIComponent('感覚麻痺度診断結果：' + r.lv + ' ' + r.catch + ' #Worelu #感覚麻痺度診断');
   var shareUrl = encodeURIComponent('https://worelu.com/shindan/kanmahi/level' + lvNum + '/');
   var lv4bg = r.lv === 'LV 4' ? 'background:#1C1917;' : 'background:' + r.color + ';';
+  var affHtml = '';
+  if (r.lv === 'LV 3' || r.lv === 'LV 4') {
+    affHtml = '<div style="margin-top:20px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:20px 20px 16px;">'
+      + '<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:4px;letter-spacing:0.05em;">PR</div>'
+      + '<div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;line-height:1.6;">あなたの感覚は正しいかもしれません。まず外の世界を見てみませんか？</div>'
+      + '<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">転職するかどうか決める前に、無料相談で今の市場価値と他社の労働環境を知るだけでも、判断材料になります。</div>'
+      + '<div style="text-align:center;margin-bottom:12px;">'
+      + '<a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5ZEMP" rel="nofollow" style="display:inline-block;">'
+      + '<img border="0" width="300" height="250" alt="転職エージェントナビ" src="https://www22.a8.net/svt/bgt?aid=260622882653&wid=003&eno=01&mid=s00000024824001005000&mc=1"></a>'
+      + '<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5ZEMP" alt="">'
+      + '</div>'
+      + '<div style="text-align:center;font-size:13px;color:#475569;">'
+      + '<a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" rel="nofollow" style="color:#2563EB;font-weight:700;">転職サポートのプロに出会える【転職エージェントナビ】</a>'
+      + '<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" alt="">'
+      + '</div>'
+      + '</div>';
+  }
   res.innerHTML = '<div class="result-card" style="' + lv4bg + 'border:2px solid ' + r.border + '">'
     + '<div class="result-lv" style="color:' + r.text + '">' + r.lv + '</div>'
     + '<div class="result-title" style="color:' + r.text + '">' + r.title + '</div>'
@@ -202,7 +219,8 @@ function showResult(){
     + '</div>'
     + '<img src="' + r.img + '" alt="感覚麻痺度診断 ' + r.lv + ' 結果カード" style="width:100%;border-radius:10px;margin-top:16px;display:block;" onerror="this.style.display=\'none\';document.getElementById(\'img-fallback\').style.display=\'block\'">'
     + '<div id="img-fallback" style="display:none;text-align:center;padding:12px;font-size:12px;color:#94A3B8;margin-top:8px;">※ 診断カード画像を準備中です</div>'
-    + '<a href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;color:#ffffff !important;background:#2563EB;margin-top:12px;letter-spacing:0.03em;">X(Twitter)でシェアする</a>';
+    + '<a href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;color:#ffffff !important;background:#2563EB;margin-top:12px;letter-spacing:0.03em;">X(Twitter)でシェアする</a>'
+    + affHtml;
   res.style.display = 'block';
   document.getElementById('shindan-submit').style.display = 'none';
   document.getElementById('shindan-retry').style.display = 'block';
