@@ -506,6 +506,7 @@ def build_shindan_pages():
 
 def build_kanmahi_pages():
     """感覚麻痺度診断レベル別OGPページを生成"""
+    from urllib.parse import quote
     levels = [
         {
             "level": 1,
@@ -534,6 +535,7 @@ def build_kanmahi_pages():
     ]
 
     for lv in levels:
+        ogp_image = f"https://worelu-ogp-next.vercel.app/api/og/?title={quote(lv['title'])}&category=quit&slug=black-kigyo-shindan"
         html = f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -544,13 +546,15 @@ def build_kanmahi_pages():
 <meta name="robots" content="noindex,follow">
 <meta property="og:title" content="{lv['title']}">
 <meta property="og:description" content="{lv['desc']}">
-<meta property="og:image" content="https://worelu.com{lv['image']}">
+<meta property="og:image" content="{ogp_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://worelu.com/shindan/kanmahi/level{lv['level']}/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{lv['title']}">
 <meta name="twitter:description" content="{lv['desc']}">
-<meta name="twitter:image" content="https://worelu.com{lv['image']}">
+<meta name="twitter:image" content="{ogp_image}">
 <link rel="canonical" href="https://worelu.com/articles/quit/black-kigyo-shindan/">
 </head>
 <body>
