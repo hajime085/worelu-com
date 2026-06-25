@@ -202,7 +202,7 @@ function showResult(){
     + '</div>'
     + '<img src="' + r.img + '" alt="感覚麻痺度診断 ' + r.lv + ' 結果カード" style="width:100%;border-radius:10px;margin-top:16px;display:block;" onerror="this.style.display=\'none\';document.getElementById(\'img-fallback\').style.display=\'block\'">'
     + '<div id="img-fallback" style="display:none;text-align:center;padding:12px;font-size:12px;color:#94A3B8;margin-top:8px;">※ 診断カード画像を準備中です</div>'
-    + '<a class="share-btn" href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener">X(Twitter)でシェアする</a>';
+    + '<a href="https://twitter.com/intent/tweet?text=' + shareText + '&url=' + shareUrl + '" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px 20px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;color:#ffffff !important;background:#2563EB;margin-top:12px;letter-spacing:0.03em;">X(Twitter)でシェアする</a>';
   res.style.display = 'block';
   document.getElementById('shindan-submit').style.display = 'none';
   document.getElementById('shindan-retry').style.display = 'block';
