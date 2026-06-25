@@ -35,7 +35,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>腐っていく感情の変遷</title>
-<rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="130" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「腐る」感覚が生まれるまでの流れ</text>
 <defs><marker id="hyoukaArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="16" y="48" width="140" height="116" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
@@ -74,7 +74,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>評価されない原因3つの視点</title>
-<rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="260" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">評価されない原因：3つの視点チェック</text>
 <rect x="16" y="48" width="200" height="232" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
 <text x="116" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#1E40AF" font-family="sans-serif">会社の問題</text>
@@ -171,7 +171,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>立て直し3ステップ</title>
 <defs><marker id="hyoukaStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="136" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">腐る前に試せる立て直し3ステップ</text>
 <rect x="24" y="48" width="185" height="128" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
 <text x="116" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF" font-family="sans-serif">STEP 1</text>
@@ -218,30 +218,30 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 ## 転職すべきか・続けるべきかの判断基準
 
 <div class="svg-lightbox-wrap">
-<svg width="100%" viewBox="0 0 680 314" role="img" style="display:block;max-width:100%"><title>転職すべきか続けるべきかの判断基準</title>
-<rect x="0" y="0" width="680" height="314" rx="12" fill="#F8FAFC"/>
+<svg width="100%" viewBox="0 0 680 316" role="img" style="display:block;max-width:100%"><title>転職すべきか続けるべきかの判断基準</title>
+<rect x="0" y="0" width="680" height="252" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">転職すべき vs 続けて改善を試みる</text>
-<rect x="16" y="48" width="304" height="224" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="168" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">転職を真剣に検討すべきサイン</text>
-<rect x="30" y="88" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="168" y="108" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">評価制度が不透明で改善の見込みがない</text>
-<rect x="30" y="128" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="168" y="148" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">上司との対話を試みたが変化がなかった</text>
-<rect x="30" y="168" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="168" y="188" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">心身に不調が出ている</text>
-<rect x="30" y="208" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
-<text x="168" y="228" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">3〜6ヶ月試して改善がなかった</text>
-<rect x="360" y="48" width="304" height="224" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#166534" font-family="sans-serif">もう少し続けて改善を試みるサイン</text>
-<rect x="374" y="88" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="108" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">アピール・伝え方をまだ変えていない</text>
-<rect x="374" y="128" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="148" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">上司と評価基準について話したことがない</text>
-<rect x="374" y="168" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="188" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">部署異動など社内の選択肢が残っている</text>
-<rect x="374" y="208" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
-<text x="512" y="228" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">まだ試し始めて間もない（3ヶ月未満）</text>
-<text x="340" y="274" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="sans-serif">左側に複数当てはまるなら、転職活動を始めるタイミング</text>
+<rect x="16" y="48" width="304" height="200" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
+<text x="168" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">転職を真剣に検討すべきサイン</text>
+<rect x="30" y="84" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
+<text x="168" y="104" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">評価制度が不透明で改善の見込みがない</text>
+<rect x="30" y="124" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
+<text x="168" y="144" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">上司との対話を試みたが変化がなかった</text>
+<rect x="30" y="164" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
+<text x="168" y="184" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">心身に不調が出ている</text>
+<rect x="30" y="204" width="276" height="32" rx="6" fill="#FFE4E6" stroke="#FCA5A5" stroke-width="0.5"/>
+<text x="168" y="224" text-anchor="middle" font-size="11" fill="#9F1239" font-family="sans-serif">3〜6ヶ月試して改善がなかった</text>
+<rect x="360" y="48" width="304" height="200" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="72" text-anchor="middle" font-size="13" font-weight="600" fill="#166534" font-family="sans-serif">もう少し続けて改善を試みるサイン</text>
+<rect x="374" y="84" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="104" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">アピール・伝え方をまだ変えていない</text>
+<rect x="374" y="124" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="144" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">上司と評価基準について話したことがない</text>
+<rect x="374" y="164" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="184" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">部署異動など社内の選択肢が残っている</text>
+<rect x="374" y="204" width="276" height="32" rx="6" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="512" y="224" text-anchor="middle" font-size="11" fill="#166534" font-family="sans-serif">まだ試し始めて間もない（3ヶ月未満）</text>
+<text x="340" y="272" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="sans-serif">左側に複数当てはまるなら、転職活動を始めるタイミング</text>
 </svg>
 <p class="svg-lightbox-hint">タップして拡大</p>
 </div>

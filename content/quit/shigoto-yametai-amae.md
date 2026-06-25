@@ -107,7 +107,7 @@ draft: false
 
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>後悔しない見極め4ポイント</title>
-<rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="252" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">後悔しない見極めチェック</text>
 <rect x="24" y="56" width="140" height="160" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
 <text x="94" y="106" text-anchor="middle" font-size="30" font-family="sans-serif" fill="#1E40AF">1</text>
@@ -186,7 +186,7 @@ draft: false
 
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%"><title>円満退職の3ステップ</title>
-<rect x="0" y="0" width="680" height="220" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="148" rx="12" fill="#F8FAFC"/>
 <text x="340" y="32" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">円満退職の3ステップ</text>
 <defs><marker id="retireArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="24" y="52" width="185" height="130" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>

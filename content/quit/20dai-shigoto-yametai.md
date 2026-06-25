@@ -101,7 +101,7 @@ draft: false
 
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>後悔しない見極め4ポイント</title>
-<rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="252" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">後悔しない見極めチェック</text>
 <rect x="24" y="56" width="140" height="160" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
 <text x="94" y="106" text-anchor="middle" font-size="30" font-weight="700" fill="#1E40AF" font-family="sans-serif">1</text>
@@ -141,7 +141,7 @@ draft: false
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 180" role="img" style="display:block;max-width:100%"><title>4つの行動ステップ</title>
 <defs><marker id="act20Arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
-<rect x="0" y="0" width="680" height="180" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="118" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">リスクゼロで動き出す4ステップ</text>
 <rect x="16" y="44" width="146" height="112" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
 <text x="89" y="78" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF" font-family="sans-serif">STEP 1</text>
@@ -190,7 +190,7 @@ draft: false
 
 <div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>20代転職のメリット・デメリット</title>
-<rect x="0" y="0" width="680" height="340" rx="12" fill="#F8FAFC"/>
+<rect x="0" y="0" width="680" height="273" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">20代転職のメリット vs デメリット</text>
 <rect x="16" y="52" width="314" height="272" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="0.5"/>
 <text x="173" y="80" text-anchor="middle" font-size="14" font-weight="600" fill="#166534" font-family="sans-serif">メリット</text>
