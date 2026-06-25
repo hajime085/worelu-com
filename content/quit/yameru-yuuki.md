@@ -171,8 +171,8 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 悩み続けている方に特に重要なのが「今が辞めていい状態なのか」を客観的に判断することです。
 
 <div class="svg-lightbox-wrap">
-<svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%"><title>辞めていい状態の判断基準</title>
-<rect x="0" y="0" width="680" height="330" rx="12" fill="#F8FAFC"/>
+<svg width="100%" viewBox="0 0 680 354" role="img" style="display:block;max-width:100%"><title>辞めていい状態の判断基準</title>
+<rect x="0" y="0" width="680" height="354" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「辞めていい状態」チェックリスト</text>
 <rect x="16" y="48" width="304" height="264" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="168" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">今すぐ辞めるべきサイン</text>

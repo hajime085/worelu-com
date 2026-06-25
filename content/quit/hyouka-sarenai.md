@@ -218,8 +218,8 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 ## 転職すべきか・続けるべきかの判断基準
 
 <div class="svg-lightbox-wrap">
-<svg width="100%" viewBox="0 0 680 290" role="img" style="display:block;max-width:100%"><title>転職すべきか続けるべきかの判断基準</title>
-<rect x="0" y="0" width="680" height="290" rx="12" fill="#F8FAFC"/>
+<svg width="100%" viewBox="0 0 680 314" role="img" style="display:block;max-width:100%"><title>転職すべきか続けるべきかの判断基準</title>
+<rect x="0" y="0" width="680" height="314" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">転職すべき vs 続けて改善を試みる</text>
 <rect x="16" y="48" width="304" height="224" rx="10" fill="#FFF1F2" stroke="#FCA5A5" stroke-width="0.5"/>
 <text x="168" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#9F1239" font-family="sans-serif">転職を真剣に検討すべきサイン</text>
