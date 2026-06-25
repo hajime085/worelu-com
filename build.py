@@ -552,10 +552,9 @@ def build_kanmahi_pages():
 <meta name="twitter:description" content="{lv['desc']}">
 <meta name="twitter:image" content="https://worelu.com{lv['image']}">
 <link rel="canonical" href="https://worelu.com/articles/quit/black-kigyo-shindan/">
-<meta http-equiv="refresh" content="0;url=/articles/quit/black-kigyo-shindan/">
 </head>
 <body>
-<p>リダイレクト中... <a href="/articles/quit/black-kigyo-shindan/">こちら</a>をクリックしてください。</p>
+<p><a href="/articles/quit/black-kigyo-shindan/">診断ページに戻る</a></p>
 </body>
 </html>"""
         out = OUTPUT_DIR / "shindan" / "kanmahi" / f"level{lv['level']}" / "index.html"
