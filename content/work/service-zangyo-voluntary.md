@@ -133,12 +133,12 @@ canonical: https://worelu.com/articles/work/service-zangyo-voluntary/
 <text x="430" y="224" text-anchor="middle" font-size="12" font-weight="700" fill="#16A34A" font-family="sans-serif">YES</text>
 <line x1="460" y1="192" x2="390" y2="192" stroke="#94A3B8" stroke-width="1.5"/>
 <line x1="390" y1="192" x2="390" y2="230" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#flowArrow)"/>
-<text x="620" y="240" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626" font-family="sans-serif">NO</text>
-<line x1="660" y1="192" x2="700" y2="192" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="620" y="224" text-anchor="middle" font-size="12" font-weight="700" fill="#DC2626" font-family="sans-serif">NO</text>
+<line x1="578" y1="214" x2="578" y2="248" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#flowArrow)"/>
 <rect x="300" y="230" width="180" height="44" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/>
 <text x="390" y="250" text-anchor="middle" font-size="12" font-weight="700" fill="#166534" font-family="sans-serif">残業代が発生</text>
 <text x="390" y="266" text-anchor="middle" font-size="10" fill="#16A34A" font-family="sans-serif">（黙示の指示）</text>
-<rect x="488" y="250" width="180" height="44" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.5"/>
+<rect x="488" y="248" width="180" height="44" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="0.5"/>
 <text x="578" y="270" text-anchor="middle" font-size="12" font-weight="600" fill="#475569" font-family="sans-serif">真に自主的な残業</text>
 <text x="578" y="286" text-anchor="middle" font-size="10" fill="#64748B" font-family="sans-serif">残業代は発生しない</text>
 </svg>
