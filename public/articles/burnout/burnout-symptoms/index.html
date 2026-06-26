@@ -601,6 +601,8 @@ function boJudge() {
     + '<div class="bo-judge" style="color:' + color + '">' + judge + '</div>'
     + '<div class="bo-desc" style="color:#334155">' + desc + '</div>';
   result.scrollIntoView({behavior:'smooth', block:'nearest'});
+  var banner = document.getElementById('bo-kimochi-banner');
+  if (banner) banner.style.display = 'block';
 }
 </script>
 
@@ -609,7 +611,7 @@ function boJudge() {
 それは心が限界を超えているサインです。一人で抱え込まず、今すぐ信頼できる人か専門家（心療内科・精神科）に相談してください。
 </div>
 
-<div style="margin:24px 0;text-align:center;">
+<div id="bo-kimochi-banner" style="display:none;margin:24px 0;text-align:center;">
 <div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:10px;letter-spacing:0.05em;">PR</div>
 <a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+62U35" rel="nofollow"><img border="0" width="400" height="209" alt="Kimochi" src="https://www21.a8.net/svt/bgt?aid=260622882694&wid=003&eno=01&mid=s00000026504001021000&mc=1" style="max-width:100%;height:auto;border-radius:8px;"></a>
 <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+62U35" alt="">
