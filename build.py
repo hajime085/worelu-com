@@ -368,8 +368,9 @@ CATEGORY_FEATURED = {
 
 
 def build_category_pages(env: Environment, articles: list):
-    """カテゴリ別一覧ページを生成"""
+    """カテゴリ別一覧ページを生成（10記事ごとのページネーション付き）"""
     tpl = env.get_template("article-list.html")
+    PER_PAGE = 10
     cats = [
         {"slug": slug, "label": label}
         for slug, label in CATEGORY_LABELS.items()
@@ -381,10 +382,45 @@ def build_category_pages(env: Environment, articles: list):
         cat_desc = CATEGORY_DESCS.get(cat_slug, {})
         featured_slugs = CATEGORY_FEATURED.get(cat_slug, [])
         featured_articles = [a for slug in featured_slugs for a in articles if a["slug"] == slug]
-        html = tpl.render(articles=cat_articles, categories=cats, cat_desc=cat_desc, current_cat=cat_slug, featured_articles=featured_articles)
-        out = OUTPUT_DIR / "articles" / cat_slug / "index.html"
-        write_file(out, html)
-        print(f"  カテゴリ: {out}")
+
+        total = len(cat_articles)
+        total_pages = max(1, -(-total // PER_PAGE))
+
+        for page_num in range(1, total_pages + 1):
+            start = (page_num - 1) * PER_PAGE
+            end = start + PER_PAGE
+            page_articles = cat_articles[start:end]
+
+            pages = sorted(set(
+                [1, total_pages] +
+                [p for p in range(page_num - 2, page_num + 3) if 1 <= p <= total_pages]
+            ))
+            base_url = f"/articles/{cat_slug}/"
+            pagination = {
+                "current": page_num,
+                "total": total_pages,
+                "pages": pages,
+                "has_prev": page_num > 1,
+                "has_next": page_num < total_pages,
+                "prev_url": base_url if page_num == 2 else f"{base_url}page/{page_num - 1}/",
+                "next_url": f"{base_url}page/{page_num + 1}/",
+            }
+
+            html = tpl.render(
+                articles=page_articles,
+                categories=cats,
+                cat_desc=cat_desc,
+                current_cat=cat_slug,
+                featured_articles=featured_articles,
+                pagination=pagination
+            )
+
+            if page_num == 1:
+                out = OUTPUT_DIR / "articles" / cat_slug / "index.html"
+            else:
+                out = OUTPUT_DIR / "articles" / cat_slug / "page" / str(page_num) / "index.html"
+            write_file(out, html)
+            print(f"  カテゴリ: {out}")
 
 
 def build_sitemap(articles: list):

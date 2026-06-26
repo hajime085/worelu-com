@@ -50,27 +50,46 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .cat-item.active .cat-icon svg { stroke: #fff; }
 .cat-label { font-size: 12px; font-weight: 700; color: var(--text-2); text-align: center; }
 @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
-.articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-.art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: block; }
-.art-card:hover { border-color: var(--blue); }
+.articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cat-desc-box { margin-bottom: 32px; }
+.cat-featured { margin-bottom: 36px; }
+.cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
+.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cat-featured-card { background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; transition: box-shadow 0.2s, transform 0.15s; }
+.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
+.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
+.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; }
+.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 6px; }
+.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; margin-bottom: 8px; }
+.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; flex: 1; }
+.cat-featured-btn { display: inline-block; margin-top: 16px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 8px 18px; border-radius: 20px; width: fit-content; align-self: flex-start; }
+@media(max-width: 768px) { .cat-featured-grid { grid-template-columns: 1fr; } .articles-grid { grid-template-columns: 1fr; } }
+.cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
+.cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
+.art-card { background: var(--white); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,.06); transition: box-shadow 0.2s, transform 0.2s; }
+.art-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.14); transform: translateY(-3px); border-color: var(--line); }
 .art-card-bar { height: 4px; }
 .art-card-bar.stress { background: var(--stress); }
 .art-card-bar.burnout { background: var(--burnout); }
 .art-card-bar.work { background: var(--work); }
 .art-card-bar.quit { background: var(--quit); }
 .art-card-bar.default { background: var(--blue); }
-.art-card-body { padding: 18px; }
-.art-card-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 8px; }
-.art-card-title { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.55; margin-bottom: 8px; }
-.art-card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
-.art-card-meta { font-size: 11px; color: var(--muted); }
+.art-card-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
+.art-card-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 6px; }
+.art-card-title { font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.55; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid var(--line); }
+.art-card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; flex: 1; }
+.art-card-meta { font-size: 11px; color: var(--muted); margin-top: auto; padding-top: 10px; }
 .site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
-.pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 48px; flex-wrap: wrap; }
-.pagination a, .pagination span { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text-2); background: var(--white); transition: all 0.15s; }
-.pagination a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
-.pagination .current { background: var(--blue); color: #fff; border-color: var(--blue); }
-.pagination .prev, .pagination .next { width: auto; padding: 0 16px; gap: 4px; }
-.pagination .disabled { opacity: 0.35; pointer-events: none; }
+.pagination { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 48px; }
+.pagination-pages { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.pagination-nav { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.pagination-pages a, .pagination-pages span { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--white); transition: all 0.15s; }
+.pagination-pages a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.pagination-pages .current { background: var(--blue); color: #fff; border-color: var(--blue); }
+.pagination-nav a, .pagination-nav span { display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 20px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--white); transition: all 0.15s; }
+.pagination-nav a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
+.pagination-nav .disabled { opacity: 0.35; pointer-events: none; }
 @media (max-width: 600px) { .header-nav { display: none; } }
 </style>
 </head>
@@ -83,7 +102,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <nav class="header-nav">
     <a href="/articles/">記事一覧</a>
     <a href="/articles/stress/">症状・ストレス</a>
-    <a href="/articles/burnout/">バーンアウト</a>
+    <a href="/articles/burnout/">燃え尽き・休職</a>
     <a href="/articles/work/">労働問題</a>
     <a href="/articles/quit/">転職・退職</a>
   </nav>
@@ -118,7 +137,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="cat-icon">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg>
         </div>
-        <span class="cat-label">バーンアウト</span>
+        <span class="cat-label">燃え尽き・休職</span>
       </a>
       <a href="/articles/work/" class="cat-item">
         <div class="cat-icon">
@@ -134,6 +153,52 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
       </a>
     </div>
   </nav>
+  
+  <div class="cat-desc-box">
+    <p class="cat-desc-text">仕事のストレスは、眠れない、涙が出る、動悸、吐き気、朝起きられないなど、さまざまな心身の不調として現れることがあります。このカテゴリーでは、仕事によるストレス症状や限界サイン、原因、セルフチェック、対処法について分かりやすく解説しています。「仕事がつらい」「最近体調がおかしい」と感じている方が、自分の状態を整理し、次の一歩を考えるための情報をまとめています。</p>
+    <p class="cat-desc-lead">気になる症状から記事を探してください。</p>
+  </div>
+  
+
+  
+  <div class="cat-featured">
+    <div class="cat-featured-label">おすすめ記事</div>
+    <div class="cat-featured-grid">
+      
+      <a href="/articles/stress/nemurenai-asa/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">症状・ストレス</div>
+          <div class="cat-featured-title">眠れないまま朝になった…仕事のストレスで眠れない人へ伝えたいこと</div>
+          <div class="cat-featured-desc">仕事のストレスで眠れない状態の仕組みと対処法を解説。朝になってしまったときの対応・今日の乗り切り方・今夜眠るためのポイン…</div>
+          <span class="cat-featured-btn">続きを読む →</span>
+        </div>
+      </a>
+      
+      <a href="/articles/stress/shigoto-genkai-sign/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">症状・ストレス</div>
+          <div class="cat-featured-title">仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと</div>
+          <div class="cat-featured-desc">「もしかして、私、もう限界なのかもしれない…」</div>
+          <span class="cat-featured-btn">続きを読む →</span>
+        </div>
+      </a>
+      
+      <a href="/articles/stress/shigoto-utsu/" class="cat-featured-card">
+        <div class="cat-featured-card-body">
+          <span class="cat-featured-badge">よく読まれています</span>
+          <div class="cat-featured-cat">症状・ストレス</div>
+          <div class="cat-featured-title">仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説</div>
+          <div class="cat-featured-desc">「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく…</div>
+          <span class="cat-featured-btn">続きを読む →</span>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  
+
   <div class="articles-grid">
     
     <a href="/articles/stress/namida-ga-deru/" class="art-card">
@@ -142,7 +207,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">仕事で涙が出るのは甘えじゃない。その涙が体に伝えていること</div>
         <div class="art-card-desc">仕事で涙が出ることへの罪悪感に寄り添い、涙が出る状態の正体と今すぐできることを整理します。</div>
-        <div class="art-card-meta">2026-06-03</div>
+        <div class="art-card-meta">2026-06-03　約5分で読めます</div>
       </div>
     </a>
     
@@ -152,7 +217,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">職場の人間関係に疲れたあなたへ。心を軽くする対処法</div>
         <div class="art-card-desc">職場の人間関係に疲れていませんか？「もう無理…」と感じる前に、心を軽くする具体的な対処法を解説。人間関係の悩みを乗り越え、自分らしく働くためのヒントを見つけまし…</div>
-        <div class="art-card-meta">2026-05-31</div>
+        <div class="art-card-meta">2026-05-31　約10分で読めます</div>
       </div>
     </a>
     
@@ -162,7 +227,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">「仕事行きたくない」朝の憂鬱。心と体を軽くする対処法</div>
         <div class="art-card-desc">「仕事行きたくない…」毎朝の憂鬱に悩んでいませんか？その気持ちは甘えじゃない！原因を理解し、心と体を軽くする具体的な対処法で、あなたらしい働き方を見つけましょう…</div>
-        <div class="art-card-meta">2026-05-17</div>
+        <div class="art-card-meta">2026-05-17　約10分で読めます</div>
       </div>
     </a>
     
@@ -172,7 +237,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <div class="art-card-cat">症状・ストレス</div>
         <div class="art-card-title">「仕事できない」と辛いあなたへ。甘えじゃない、次の一歩を見つける方法</div>
         <div class="art-card-desc">「仕事ができない」と一人で抱え込み、辛い思いをしていませんか？それは甘えではありません。仕事ができないと感じる理由や特徴、今日からできる対処法、そして自己否定を…</div>
-        <div class="art-card-meta">2026-05-14</div>
+        <div class="art-card-meta">2026-05-14　約10分で読めます</div>
       </div>
     </a>
     
@@ -180,25 +245,27 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
   
   <nav class="pagination" aria-label="ページネーション">
-    
-    <a href="/articles/stress/" class="prev">← 前へ</a>
-    
-
-    
-    
-    
-    <a href="/articles/stress/">1</a>
-    
-    
-    
-    
-    <span class="current">2</span>
-    
-    
-
-    
-    <span class="next disabled">次へ →</span>
-    
+    <div class="pagination-pages">
+      
+      
+      
+      <a href="">1</a>
+      
+      
+      
+      
+      <span class="current">2</span>
+      
+      
+    </div>
+    <div class="pagination-nav">
+      
+      <a href="/articles/stress/">← 前へ</a>
+      
+      
+      <span class="disabled">次へ →</span>
+      
+    </div>
   </nav>
   
 </main>
@@ -218,7 +285,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
             <a href="/stress-check/" style="font-size:13px;color:var(--muted)">AIストレス診断</a>
             <a href="/articles/" style="font-size:13px;color:var(--muted)">記事一覧</a>
             <a href="/articles/stress/" style="font-size:13px;color:var(--muted)">症状・ストレス</a>
-            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted)">バーンアウト</a>
+            <a href="/articles/burnout/" style="font-size:13px;color:var(--muted)">燃え尽き・休職</a>
             <a href="/articles/quit/" style="font-size:13px;color:var(--muted)">転職・退職</a>
           </div>
         </div>
