@@ -24,11 +24,11 @@ draft: false
 
 診断書がないと、制度としての「休職」が認められず、欠勤扱いになってしまうこともあります。
 
-### 会社が診断書を求める理由
+#### 会社が診断書を求める理由
 
 会社が診断書を必要とするのには、いくつかの理由があります。本当に休養が必要な状態かを確認するため、休職期間（いつまで休むべきか）の目安を知るため、復職時の判断基準にするため、そして社会保険（傷病手当金）の手続きに必要だからです。
 
-### 診断書なしで休める例外ケース
+#### 診断書なしで休める例外ケース
 
 小規模な会社や、上司との信頼関係が厚い場合、口頭での相談だけで「少し休んでいいよ」と言ってもらえることがあります。ただし、診断書なしで休むと単なる「欠勤」扱いになり、傷病手当金が受け取れなかったり、解雇の理由にされるリスクがあります。自分を守るためには、診断書をもらっておくのが無難です。
 
@@ -38,24 +38,41 @@ draft: false
 
 職場での辛さを抱えながらも、なかなか踏み出せない人は少なくありません。
 
-<div class="character-box">
-  <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
-  <div class="speech-bubble">「毎日上司に会うのが苦痛で、その人といるだけでビクビクして涙が出そうになります。苦言を呈されます、車の移動中も。デスクにも朝行くと『苦言です』と書かれた紙があり、追い詰めるような文章がたくさん書かれています。昨年から精神科にも通い、なんとか仕事に行っていますが、もう限界かもしれません。」（30代・会社員）</div>
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_020.webp" alt="相談者" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #BFDBFE">
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #BFDBFE"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #EFF6FF"></div>
+    <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「毎日上司に会うのが苦痛で、その人といるだけでビクビクして涙が出そうになります。苦言を呈されます、車の移動中も。デスクにも朝行くと『苦言です』と書かれた紙があり、追い詰めるような文章がたくさん書かれています。昨年から精神科にも通い、なんとか仕事に行っていますが、もう限界かもしれません。」（30代・会社員）</div>
+  </div>
 </div>
 
 このように、すでに精神科に通院しながら仕事を続けているという人は多いです。医師にかかっているなら、そのまま休職の相談をしてみましょう。「もう少し頑張れるかも」と思っていても、医師の診断が「休養が必要」であれば、それは正当な理由になります。
 
-<div class="character-box character-box-reverse">
-  <div style="position:relative; background:#FFF0F6; border:1.5px solid #FFADD2; border-radius:12px; padding:14px 18px; font-size:14px; color:#334155; line-height:1.75;">「転職した会社が、入社条件と現状が違っていて、それを会社に伝えたのですが、改善されませんでした。直属の上司から私を傷つけるようなことばかり言われるので、うつになりかけています。転職するにも、今はメンタルが追いつかず、壊れてしまいそうです。」（20代・会社員）
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px;flex-direction:row-reverse">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_34.webp" alt="相談者" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #FECACA">
   </div>
-  <img src="/images/characters/character_34.webp" alt="ストレスを感じる女性" style="width:80px; height:80px; object-fit:contain; flex-shrink:0;">
+  <div style="flex:1;position:relative;padding-right:8px">
+    <div style="position:absolute;right:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-left:8px solid #FECACA"></div>
+    <div style="position:absolute;right:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #FFF8F8"></div>
+    <div style="background:#FFF8F8;border:1px solid #FECACA;border-radius:10px 0 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「転職した会社が、入社条件と現状が違っていて、それを会社に伝えたのですが、改善されませんでした。直属の上司から私を傷つけるようなことばかり言われるので、うつになりかけています。転職するにも、今はメンタルが追いつかず、壊れてしまいそうです。」（20代・会社員）</div>
+  </div>
 </div>
 
 転職を考えるにも体と心が動かない状態になってしまっているケースです。こういうときこそ、まず休職という選択肢を真剣に検討してほしいと思います。転職活動は、心身が回復してからでも遅くありません。
 
-<div class="character-box">
-  <img src="/images/characters/character_014.webp" alt="落ち込む男性" class="character-img">
-  <div class="speech-bubble">「転職して2ヶ月ですが、退職したいです。社長の機嫌が悪い時に八つ当たりされている感じです。今いる職員に聞いた話によると、1年間に10人入社し、8人が辞めているそうです。ここにいたらいつか自身も心身に影響を受けそうで怖いです。」（20代・会社員）</div>
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_014.webp" alt="相談者" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #BFDBFE">
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #BFDBFE"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #EFF6FF"></div>
+    <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「転職して2ヶ月ですが、退職したいです。社長の機嫌が悪い時に八つ当たりされている感じです。今いる職員に聞いた話によると、1年間に10人入社し、8人が辞めているそうです。ここにいたらいつか自身も心身に影響を受けそうで怖いです。」（20代・会社員）</div>
+  </div>
 </div>
 
 こういった職場環境で消耗している場合、早めに医師に相談することが大切です。「まだ診断書をもらうほどではないかも」と思いがちですが、受診してみると医師が「休養が必要」と判断するケースは珍しくありません。
@@ -66,15 +83,15 @@ draft: false
 
 診断書はどの病院でももらえるわけではありません。症状に合わせた医療機関を選ぶことが大切です。
 
-### 心療内科：体に症状が出ている場合
+#### 心療内科：体に症状が出ている場合
 
 眠れない、食欲がない、動悸がするといった「体の症状」が主な場合は心療内科が適しています。内科的なアプローチと心理的なアプローチの両面から診てもらえます。
 
-### 精神科：気分の落ち込みや不安が強い場合
+#### 精神科：気分の落ち込みや不安が強い場合
 
 涙が止まらない、やる気が全く出ない、強い不安が続くといった「心の症状」が主な場合は精神科を受診しましょう。心の病気の専門家として、より的確な診断が期待できます。
 
-### 内科：まず相談したい場合
+#### 内科：まず相談したい場合
 
 いきなりメンタルクリニックに行くのが怖い場合、かかりつけの内科に相談するのも一つの手です。ただし専門外のため「メンタルクリニックの受診を勧める」という内容の診断書になることもあります。
 
@@ -82,15 +99,47 @@ draft: false
 
 ## 診断書をもらうための受診の流れ
 
-### 1. 早めに予約を入れる
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 120" role="img" style="display:block;max-width:100%"><title>診断書取得の流れ</title>
+<defs><marker id="shindanArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect x="0" y="0" width="680" height="120" rx="12" fill="#F8FAFC"/>
+<rect x="12" y="20" width="118" height="80" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
+<text x="71" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#1E40AF" font-family="sans-serif">① 予約</text>
+<text x="71" y="68" text-anchor="middle" font-size="10" fill="#3B82F6" font-family="sans-serif">早めに電話・</text>
+<text x="71" y="82" text-anchor="middle" font-size="10" fill="#3B82F6" font-family="sans-serif">ネット予約</text>
+<line x1="130" y1="60" x2="150" y2="60" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#shindanArrow)"/>
+<rect x="150" y="20" width="118" height="80" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="209" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#166534" font-family="sans-serif">② 受診</text>
+<text x="209" y="68" text-anchor="middle" font-size="10" fill="#16A34A" font-family="sans-serif">症状をメモして</text>
+<text x="209" y="82" text-anchor="middle" font-size="10" fill="#16A34A" font-family="sans-serif">正直に話す</text>
+<line x1="268" y1="60" x2="288" y2="60" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#shindanArrow)"/>
+<rect x="288" y="20" width="118" height="80" rx="8" fill="#FEF9C3" stroke="#FDE047" stroke-width="0.5"/>
+<text x="347" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#854D0E" font-family="sans-serif">③ 診断書発行</text>
+<text x="347" y="68" text-anchor="middle" font-size="10" fill="#A16207" font-family="sans-serif">即日〜1週間</text>
+<text x="347" y="82" text-anchor="middle" font-size="10" fill="#A16207" font-family="sans-serif">3,000〜10,000円</text>
+<line x1="406" y1="60" x2="426" y2="60" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#shindanArrow)"/>
+<rect x="426" y="20" width="118" height="80" rx="8" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="0.5"/>
+<text x="485" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#6D28D9" font-family="sans-serif">④ 会社に提出</text>
+<text x="485" y="68" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">上司または</text>
+<text x="485" y="82" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="sans-serif">人事部へ</text>
+<line x1="544" y1="60" x2="564" y2="60" stroke="#94A3B8" stroke-width="1.5" marker-end="url(#shindanArrow)"/>
+<rect x="564" y="20" width="104" height="80" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/>
+<text x="616" y="50" text-anchor="middle" font-size="12" font-weight="600" fill="#166534" font-family="sans-serif">⑤ 休職開始</text>
+<text x="616" y="68" text-anchor="middle" font-size="10" fill="#16A34A" font-family="sans-serif">傷病手当金の</text>
+<text x="616" y="82" text-anchor="middle" font-size="10" fill="#16A34A" font-family="sans-serif">申請も忘れずに</text>
+</svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
+
+#### 1. 早めに予約を入れる
 
 メンタルクリニックは混み合っていることが多く、初診の予約が数週間先になることも珍しくありません。「もう無理だ」と思う前に、早めに予約を入れましょう。
 
-### 2. 症状をメモしておく
+#### 2. 症状をメモしておく
 
 診察室に入ると緊張してうまく話せないことがあります。いつから症状があるか、どんな時に辛いか、仕事にどのような支障が出ているかを箇条書きにして持参すると、医師に正確な状態が伝わります。
 
-### 3. 「休職したい」と素直に伝える
+#### 3. 「休職したい」と素直に伝える
 
 医師はあなたの生活状況をすべて把握しているわけではありません。「仕事が辛くて休みたいと考えている」と正直に伝えることで、診断書の必要性を判断してもらえます。遠慮せず、現状をそのまま話しましょう。
 
@@ -98,15 +147,31 @@ draft: false
 
 ## 診断書にかかる費用と期間の目安
 
-### 費用の相場：3,000円〜10,000円程度
+<div class="svg-lightbox-wrap">
+<svg width="100%" viewBox="0 0 680 160" role="img" style="display:block;max-width:100%"><title>診断書の費用と期間の目安</title>
+<rect x="0" y="0" width="680" height="160" rx="12" fill="#F8FAFC"/>
+<text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">診断書の費用・期間の目安</text>
+<rect x="24" y="44" width="296" height="96" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.5"/>
+<text x="172" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#1E40AF" font-family="sans-serif">費用の相場</text>
+<text x="172" y="96" text-anchor="middle" font-size="22" font-weight="900" fill="#1E40AF" font-family="sans-serif">3,000〜10,000円</text>
+<text x="172" y="118" text-anchor="middle" font-size="11" fill="#3B82F6" font-family="sans-serif">保険適用外（自費）/ 一般的には5,000円前後</text>
+<rect x="360" y="44" width="296" height="96" rx="10" fill="#DCFCE7" stroke="#86EFAC" stroke-width="0.5"/>
+<text x="508" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#166534" font-family="sans-serif">発行までの期間</text>
+<text x="508" y="96" text-anchor="middle" font-size="22" font-weight="900" fill="#166534" font-family="sans-serif">即日〜1週間</text>
+<text x="508" y="118" text-anchor="middle" font-size="11" fill="#16A34A" font-family="sans-serif">多くは当日発行 / 複雑なフォーマットは数日かかる場合も</text>
+</svg>
+<p class="svg-lightbox-hint">タップして拡大</p>
+</div>
+
+#### 費用の相場：3,000円〜10,000円程度
 
 診断書は保険適用外（自費）のため、病院によって金額が異なります。一般的な休職用の診断書であれば、5,000円前後であることが多いです。
 
-### 発行までの期間：即日〜1週間程度
+#### 発行までの期間：即日〜1週間程度
 
 多くの病院では診察当日に発行してくれます。ただし、会社指定の複雑なフォーマットがある場合や、詳しい検査が必要な場合は数日かかることもあります。
 
-### 注意点：早めの提出が基本
+#### 注意点：早めの提出が基本
 
 診断書に書かれた休養期間は、発行日時点の判断です。提出が遅れると内容が変わってしまう可能性があるため、もらったら早めに会社へ提出しましょう。
 
@@ -114,17 +179,17 @@ draft: false
 
 ## 会社への提出方法と伝え方
 
-### 提出先は上司または人事部
+#### 提出先は上司または人事部
 
 まずは直属の上司に報告するのが基本です。ただし、上司がストレスの原因である場合は、人事部や産業医に直接相談しても問題ありません。
 
-### 伝え方の例文
+#### 伝え方の例文
 
 「体調を崩して受診したところ、医師から〇ヶ月の休養が必要との診断を受けました。診断書を提出しますので、休職の手続きをお願いできますでしょうか」
 
 事実を淡々と伝えるだけで十分です。感情的な説明や謝罪を重ねる必要はありません。
 
-### 診断書があれば引き止めを防ぎやすい
+#### 診断書があれば引き止めを防ぎやすい
 
 医師の診断は強力な根拠になります。会社側も「医師が休めと言っているなら」と判断せざるを得ないため、感情的な引き止めに遭いにくくなります。
 
@@ -190,11 +255,4 @@ draft: false
 
 「もう少し頑張れるかも」と思っているうちに、回復に時間がかかる状態になってしまうケースは少なくありません。早めの一歩が、早めの回復につながります。
 
-<style>
-.character-box { display: flex; align-items: flex-start; gap: 16px; margin: 20px 0 24px; }
-.character-img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; }
-.speech-bubble { position: relative; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 14px 18px; font-size: 14px; color: #334155; line-height: 1.75; }
-.speech-bubble::before { content: ''; position: absolute; left: -12px; top: 20px; border-width: 6px 12px 6px 0; border-style: solid; border-color: transparent #BFDBFE transparent transparent; }
-.speech-bubble::after { content: ''; position: absolute; left: -9px; top: 21px; border-width: 5px 10px 5px 0; border-style: solid; border-color: transparent #EFF6FF transparent transparent; }
-.character-box-reverse { flex-direction: row-reverse; }
-</style>
+
