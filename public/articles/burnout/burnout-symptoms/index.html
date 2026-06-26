@@ -599,7 +599,12 @@ function boJudge() {
   result.style.border = '2px solid ' + border;
   result.innerHTML = '<div class="bo-total" style="color:' + color + '">チェック数：' + total + ' / 18項目（初期' + early + '・中期' + mid + '・重症' + severe + '）</div>'
     + '<div class="bo-judge" style="color:' + color + '">' + judge + '</div>'
-    + '<div class="bo-desc" style="color:#334155">' + desc + '</div>';
+    + '<div class="bo-desc" style="color:#334155">' + desc + '</div>'
+    + '<div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.08);text-align:center;">'
+    + '<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:10px;letter-spacing:0.05em;">PR</div>'
+    + '<a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+62U35" rel="nofollow"><img border="0" width="400" height="209" alt="Kimochi" src="https://www21.a8.net/svt/bgt?aid=260622882694&wid=003&eno=01&mid=s00000026504001021000&mc=1" style="max-width:100%;height:auto;border-radius:8px;"></a>'
+    + '<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+62U35" alt="">'
+    + '</div>';
   result.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 </script>
