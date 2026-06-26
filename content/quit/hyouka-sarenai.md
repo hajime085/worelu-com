@@ -215,6 +215,15 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 社内での改善を試みた結果、「それでも変わらない」と感じたら、転職を選択肢として真剣に検討しましょう。**「もう少し待てば変わるかも」と待ち続けることが最も危険**です。3〜6ヶ月という期限を決めて、改善がなければ行動する、という意思決定のルールを先に作っておきましょう。
 
+<div style="margin-top:20px;margin-bottom:8px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:20px 20px 16px;">
+<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:4px;letter-spacing:0.05em;">PR</div>
+<div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;line-height:1.6;">転職するかどうか決める前に、まず無料相談で外の会社を知るだけでも判断材料になります</div>
+<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">IT・コンサル業界への転職に強い転職エージェント。無料相談で今の市場価値と他社の労働環境を客観的に知ることができます。</div>
+<div style="margin-bottom:10px;font-size:13px;"><a href="https://h.accesstrade.net/sp/cc?rk=0100pwzm00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">テックゴー<img src="https://h.accesstrade.net/sp/rr?rk=0100pwzm00oujg" width="1" height="1" border="0" alt=""></a></div>
+<div style="text-align:center;"><a href="https://h.accesstrade.net/sp/cc?rk=0100px7u00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100px7u00oujg" alt="テックゴー" border="0" width="250" height="250"></a></div>
+</div>
+
+
 ## 転職すべきか・続けるべきかの判断基準
 
 <div class="svg-lightbox-wrap">
