@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 26 Jun 2026 02:31:17 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2026 06:10:39 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[休職に診断書は必須？もらい方から費用・会社への提出方法まで解説]]></title>
@@ -40,6 +40,13 @@
       <link>https://worelu.com/articles/burnout/kyushoku-amae/</link>
       <guid>https://worelu.com/articles/burnout/kyushoku-amae/</guid>
       <description><![CDATA[「休職したいけど甘えじゃないか」と悩んでいませんか？休職を考えるのは、あなたが限界まで頑張った証拠です。休職が甘えではない理由や必要なサイン、具体的な手続きまで解説します。]]></description>
+      <pubDate>2026-06-22</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[退職代行モームリに何があったのか。今選ぶべきサービスを整理する]]></title>
+      <link>https://worelu.com/articles/quit/taisyoku-daikou-moumuri/</link>
+      <guid>https://worelu.com/articles/quit/taisyoku-daikou-moumuri/</guid>
+      <description><![CDATA[2026年2月の逮捕・経営陣刷新を経たモームリの実態と、退職代行を安全に選ぶための基準を整理します。]]></description>
       <pubDate>2026-06-22</pubDate>
     </item>
     <item>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/stress/doki-ga-suru/</link>
       <guid>https://worelu.com/articles/stress/doki-ga-suru/</guid>
       <description><![CDATA[仕事のことを考えると動悸がする状態の正体と、放置するリスク・今すぐできる対処法を解説します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由]]></title>
-      <link>https://worelu.com/articles/work/service-zangyo-atarimae/</link>
-      <guid>https://worelu.com/articles/work/service-zangyo-atarimae/</guid>
-      <description><![CDATA[「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズムを解説します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
