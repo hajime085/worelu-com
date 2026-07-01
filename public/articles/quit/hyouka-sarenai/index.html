@@ -1218,27 +1218,31 @@ window.diagCarouselScroll = function(dir) {
   background: #EFF6FF;
   border: 1px solid #BFDBFE;
   display: none;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
   opacity: 0;
+  overflow: hidden;
   transition: opacity 240ms ease, transform 240ms ease;
+  /* PC: 右下の小さいカード */
   right: 16px;
   bottom: 16px;
   transform: translateY(20px);
   border-radius: 14px;
   box-shadow: 0 8px 28px rgba(15,23,42,0.16);
-  padding: 12px 40px 12px 16px;
-  max-width: 380px;
+  padding: 12px 36px 12px 16px;
+  width: 300px;
+  max-width: calc(100vw - 32px);
 }
 #floating-ad.show { display: flex; opacity: 1; transform: translateY(0); }
-#floating-ad-text { font-size: 13px; font-weight: 800; color: #1E3A5F; white-space: nowrap; flex-shrink: 0; }
+#floating-ad-text { font-size: 13px; font-weight: 800; color: #1E3A5F; line-height: 1.4; }
 #floating-ad-link {
   display: flex; align-items: center; gap: 8px;
-  text-decoration: none; flex: 1; min-width: 0;
+  text-decoration: none; width: 100%; min-width: 0;
 }
-#floating-ad img { display: block; border-radius: 6px; flex-shrink: 0; }
-#floating-ad-cta { font-size: 13px; font-weight: 700; color: #1D4ED8; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-#floating-ad-arrow { font-size: 15px; color: #2563EB; flex-shrink: 0; }
+#floating-ad img { display: block; border-radius: 6px; flex-shrink: 0; max-width: 100%; }
+#floating-ad-cta { font-size: 13px; font-weight: 700; color: #1D4ED8; line-height: 1.4; }
+#floating-ad-arrow { font-size: 15px; color: #2563EB; flex-shrink: 0; margin-left: auto; }
 #floating-ad-close {
   position: absolute; top: 8px; right: 8px;
   background: rgba(255,255,255,0.8); border: none; border-radius: 50%;
@@ -1252,9 +1256,6 @@ window.diagCarouselScroll = function(dir) {
     left: 0; right: 0; bottom: 0;
     width: 100%;
     max-width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
     border-radius: 16px 16px 0 0;
     border-left: none; border-right: none; border-bottom: none;
     box-shadow: 0 -6px 24px rgba(15,23,42,0.16);
@@ -1262,8 +1263,6 @@ window.diagCarouselScroll = function(dir) {
     transform: translateY(100%);
   }
   #floating-ad.show { transform: translateY(0); }
-  #floating-ad-text { white-space: normal; }
-  #floating-ad-cta { white-space: normal; }
 }
 </style>
 <div id="floating-ad">
@@ -1313,18 +1312,23 @@ window.diagCarouselScroll = function(dir) {
   }
 
   var shown = false;
+  function showAd() {
+    if (shown) return;
+    ad.classList.add('show');
+    shown = true;
+    window.removeEventListener('scroll', checkScroll);
+    setTimeout(adjustFsButton, 260);
+  }
   function checkScroll() {
     if (shown) return;
-    var scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
-    if (scrollPercent >= 0.3) {
-      ad.classList.add('show');
-      shown = true;
-      window.removeEventListener('scroll', checkScroll);
-      setTimeout(adjustFsButton, 260);
-    }
+    var docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    var scrollPercent = (window.scrollY + window.innerHeight) / docHeight;
+    if (scrollPercent >= 0.3) showAd();
   }
   window.addEventListener('scroll', checkScroll, { passive: true });
   checkScroll();
+  // フォールバック：10秒経過したら未表示でも一度だけ表示する
+  setTimeout(showAd, 10000);
 
   window.addEventListener('resize', function() {
     if (shown) adjustFsButton();
