@@ -1201,56 +1201,65 @@ window.diagCarouselScroll = function(dir) {
 #floating-ad {
   position: fixed;
   z-index: 500;
-  background: #fff;
-  border: 1px solid #E2E8F0;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
   display: none;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   opacity: 0;
   transition: opacity 240ms ease, transform 240ms ease;
-  /* PC: 右下カード */
-  left: auto;
   right: 16px;
   bottom: 16px;
   transform: translateY(20px);
-  border-radius: 10px;
-  box-shadow: 0 6px 24px rgba(15,23,42,0.15);
-  padding: 10px 36px 10px 14px;
-  max-width: 360px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(15,23,42,0.16);
+  padding: 12px 40px 12px 16px;
+  max-width: 380px;
 }
 #floating-ad.show { display: flex; opacity: 1; transform: translateY(0); }
-#floating-ad-text { font-size: 12px; font-weight: 700; color: #334155; white-space: nowrap; }
-#floating-ad img { display: block; border-radius: 4px; width: auto; height: auto; }
-#floating-ad-close {
-  position: absolute; top: 4px; right: 6px;
-  background: none; border: none; cursor: pointer;
-  font-size: 15px; color: #94A3B8; line-height: 1; padding: 4px;
+#floating-ad-text { font-size: 13px; font-weight: 800; color: #1E3A5F; white-space: nowrap; flex-shrink: 0; }
+#floating-ad-link {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; flex: 1; min-width: 0;
 }
-#floating-ad-close:hover { color: #475569; }
+#floating-ad img { display: block; border-radius: 6px; flex-shrink: 0; }
+#floating-ad-cta { font-size: 13px; font-weight: 700; color: #1D4ED8; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#floating-ad-arrow { font-size: 15px; color: #2563EB; flex-shrink: 0; }
+#floating-ad-close {
+  position: absolute; top: 8px; right: 8px;
+  background: rgba(255,255,255,0.8); border: none; border-radius: 50%;
+  width: 22px; height: 22px; cursor: pointer;
+  font-size: 14px; color: #64748B; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+#floating-ad-close:hover { color: #334155; background: #fff; }
 @media (max-width: 860px) {
   #floating-ad {
     left: 0; right: 0; bottom: 0;
     width: 100%;
     max-width: 100%;
-    border-radius: 12px 12px 0 0;
-    border-left: none; border-right: none; border-bottom: none;
-    box-shadow: 0 -4px 20px rgba(15,23,42,0.15);
-    padding: 12px 40px 12px 16px;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
+    align-items: stretch;
+    gap: 8px;
+    border-radius: 16px 16px 0 0;
+    border-left: none; border-right: none; border-bottom: none;
+    box-shadow: 0 -6px 24px rgba(15,23,42,0.16);
+    padding: 14px 40px 16px 16px;
     transform: translateY(100%);
   }
   #floating-ad.show { transform: translateY(0); }
+  #floating-ad-text { white-space: normal; }
+  #floating-ad-cta { white-space: normal; }
 }
 </style>
 <div id="floating-ad">
   <button id="floating-ad-close" aria-label="閉じる">×</button>
   <span id="floating-ad-text">まだ一人で悩みますか？</span>
-  <a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+  <a id="floating-ad-link" href="https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">
     
-      <span style="display:inline-flex;align-items:center;gap:6px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:#1D4ED8;white-space:nowrap;">転職サポートのプロに出会える【転職エージェントナビ】 <span style="font-size:14px;">→</span></span>
+      <span id="floating-ad-cta">転職サポートのプロに出会える【転職エージェントナビ】</span>
     
+    <span id="floating-ad-arrow">→</span>
   </a>
   
   <img src="https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">

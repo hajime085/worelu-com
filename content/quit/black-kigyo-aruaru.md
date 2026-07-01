@@ -29,16 +29,13 @@ tags:
 
 ---
 
-## 【ゲーム形式】ブラック企業あるある20選
+## ブラック企業あるある20選｜当てはまるものをチェック
 
 あなたの職場に当てはまるものはいくつ？「わかる😇」か「さすがにない🤔」でチェックしながら読み進めてください。最後に**ブラック耐性レベル**が判定されます。
 
 <div class="aa-game">
 
-<div class="aa-group-title"><div class="svg-lightbox-wrap">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-<p class="svg-lightbox-hint">タップして拡大</p>
-</div>労働時間あるある</div>
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>労働時間あるある</div>
 
 <div class="aa-item" data-id="1" data-text="定時で帰ろうとすると空気が悪くなる">
 <div class="aa-num">①</div>
@@ -80,10 +77,7 @@ tags:
 <button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
 </div></div></div>
 
-<div class="aa-group-title"><div class="svg-lightbox-wrap">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><circle cx="12" cy="14" r="2"/></svg>
-<p class="svg-lightbox-hint">タップして拡大</p>
-</div>給与・待遇あるある</div>
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><circle cx="12" cy="14" r="2"/></svg>給与・待遇あるある</div>
 
 <div class="aa-item" data-id="5" data-text="有給申請すると理由を聞かれる">
 <div class="aa-num">⑤</div>
@@ -125,10 +119,7 @@ tags:
 <button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
 </div></div></div>
 
-<div class="aa-group-title"><div class="svg-lightbox-wrap">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-<p class="svg-lightbox-hint">タップして拡大</p>
-</div>人間関係あるある</div>
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>人間関係あるある</div>
 
 <div class="aa-item" data-id="9" data-text="上司の機嫌で職場の空気が一変する">
 <div class="aa-num">⑨</div>
@@ -170,10 +161,7 @@ tags:
 <button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
 </div></div></div>
 
-<div class="aa-group-title"><div class="svg-lightbox-wrap">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-<p class="svg-lightbox-hint">タップして拡大</p>
-</div>採用・教育あるある</div>
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>採用・教育あるある</div>
 
 <div class="aa-item" data-id="13" data-text="求人情報と実際の業務内容が全く違う">
 <div class="aa-num">⑬</div>
@@ -205,10 +193,7 @@ tags:
 <button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
 </div></div></div>
 
-<div class="aa-group-title"><div class="svg-lightbox-wrap">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-<p class="svg-lightbox-hint">タップして拡大</p>
-</div>組織文化あるある</div>
+<div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>組織文化あるある</div>
 
 <div class="aa-item" data-id="16" data-text="飲み会や社内イベントへの参加が強制される">
 <div class="aa-num">⑯</div>
