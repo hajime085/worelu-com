@@ -283,27 +283,64 @@ def write_file(path: Path, content: str):
 
 # フローティング広告設定（記事slug → 広告設定）
 FLOATING_ADS = {
+    # ── POSIWILL CAREER（迷い・自己理解段階）320×50バナー ──
     "hyouka-sarenai": {
-        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
         "img_w": 320, "img_h": 50,
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
-        "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "alt": "POSIWILL CAREER",
     },
     "shigoto-yaruki-denai": {
-        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
         "img_w": 320, "img_h": 50,
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
-        "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "alt": "POSIWILL CAREER",
     },
     "30dai-shigoto-yametai": {
-        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
         "img_w": 320, "img_h": 50,
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
-        "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "alt": "POSIWILL CAREER",
     },
+    "asa-shigoto-ikitakunai": {
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "shigoto-ikitakunai-asa": {
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "shigoto-genkai-sign": {
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "shigoto-yametai-amae": {
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "hsp-shigoto-muiteru": {
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    # ── ZERO TALENT（18〜29歳・若手層）320×50バナー ──
     "20dai-shigoto-yametai": {
         "img_src": "https://h.accesstrade.net/sp/rr?rk=0100oo5500oujg",
         "img_w": 320, "img_h": 50,
@@ -318,6 +355,7 @@ FLOATING_ADS = {
         "gif_src": "",
         "alt": "ZERO TALENT",
     },
+    # ── テックゴー（MyVision）320×50バナー ──
     "kaisha-yabai": {
         "img_src": "https://h.accesstrade.net/sp/rr?rk=0100px7t00oujg",
         "img_w": 320, "img_h": 50,
@@ -325,6 +363,7 @@ FLOATING_ADS = {
         "gif_src": "",
         "alt": "テックゴー",
     },
+    # ── 転職エージェントナビ（テキストカード）──
     "black-kigyo-aruaru": {
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
         "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
@@ -337,7 +376,119 @@ FLOATING_ADS = {
         "alt": "転職エージェントナビ",
         "is_text": True,
     },
+    "morahara-joushi": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "alt": "転職エージェントナビ",
+        "is_text": True,
+    },
+    "service-zangyo": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "alt": "転職エージェントナビ",
+        "is_text": True,
+    },
+    "service-zangyo-atarimae": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "alt": "転職エージェントナビ",
+        "is_text": True,
+    },
+    "service-zangyo-voluntary": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "alt": "転職エージェントナビ",
+        "is_text": True,
+    },
+    # ── 退職代行Jobs（テキストカード）──
+    "taisyoku-daikou-moumuri": {
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100q2uz00oujg",
+        "gif_src": "",
+        "alt": "退職代行Jobs",
+        "is_text": True,
+    },
+    # ── Kimochi（ストレス・バーンアウト・心理相談系）テキストカード ──
+    "nemurenai-asa": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "namida-ga-deru": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "doki-ga-suru": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "ningen-kankei-tsukareta": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "joushi-kowai-ishuku": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "shigoto-miss-ochikomi": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "shigoto-utsu": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "shokuba-ningen-kankei-tsukareta": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "moeyuki-selfcheck": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "burnout-symptoms": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "kyushoku-1month": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "kyushoku-amae": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    "kyushoku-shindan": {
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "gif_src": "https://www11.a8.net/0.gif?a8mat=4B61WI+BH6W5E+5OI8+5YZ76",
+        "alt": "Kimochi",
+        "is_text": True,
+    },
+    # black-kigyo-shindan はLV3・4に既存案件2つのため除外
 }
+
 
 def build_articles(env: Environment, articles: list):
     """記事HTMLを生成"""

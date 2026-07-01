@@ -1047,10 +1047,24 @@ window.diagCarouselScroll = function(dir) {
             <path d="M8 14.5l4 4 8-8" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <span id="floating-ad-card-title">転職エージェントナビ</span>
+        {% if floating_ad.alt == "Kimochi" %}
+          <span id="floating-ad-card-title">Kimochi（オンラインカウンセリング）</span>
+        {% elif floating_ad.alt == "退職代行Jobs" %}
+          <span id="floating-ad-card-title">退職代行Jobs</span>
+        {% else %}
+          <span id="floating-ad-card-title">転職エージェントナビ</span>
+        {% endif %}
       </div>
-      <p id="floating-ad-card-desc">300人以上のエージェントの中からあなたに合うプロをマッチング。無料で相談できます。</p>
-      <a id="floating-ad-card-btn" href="{{ floating_ad.href }}" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で相談してみる →</a>
+      {% if floating_ad.alt == "Kimochi" %}
+        <p id="floating-ad-card-desc">公認心理師に匿名でオンライン相談。一人で抱え込まず、話してみませんか？</p>
+        <a id="floating-ad-card-btn" href="{{ floating_ad.href }}" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で話してみる →</a>
+      {% elif floating_ad.alt == "退職代行Jobs" %}
+        <p id="floating-ad-card-desc">弁護士監修の退職代行。即日対応・24時間受付。会社に連絡不要で辞められます。</p>
+        <a id="floating-ad-card-btn" href="{{ floating_ad.href }}" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料相談してみる →</a>
+      {% else %}
+        <p id="floating-ad-card-desc">300人以上のエージェントの中からあなたに合うプロをマッチング。無料で相談できます。</p>
+        <a id="floating-ad-card-btn" href="{{ floating_ad.href }}" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で相談してみる →</a>
+      {% endif %}
       {% if floating_ad.gif_src %}
       <img src="{{ floating_ad.gif_src }}" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">
       {% endif %}

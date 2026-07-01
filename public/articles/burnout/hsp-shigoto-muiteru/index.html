@@ -1207,5 +1207,148 @@ window.diagCarouselScroll = function(dir) {
 })();
 </script>
 
+<style>
+#floating-ad {
+  position: fixed;
+  z-index: 500;
+  display: none;
+  opacity: 0;
+  transition: opacity 240ms ease, transform 240ms ease;
+  /* PC: 右下カード */
+  right: 16px;
+  bottom: 16px;
+  transform: translateY(20px);
+  width: 300px;
+  max-width: calc(100vw - 32px);
+}
+#floating-ad.show { display: block; opacity: 1; transform: translateY(0); }
+/* バナー型 */
+#floating-ad-banner-wrap {
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15,23,42,0.12);
+  padding: 10px 36px 10px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#floating-ad-banner-wrap img.ad-banner { display: block; border-radius: 6px; max-width: 100%; }
+/* テキスト（おすすめカード）型 */
+#floating-ad-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.10);
+  padding: 16px;
+  position: relative;
+}
+#floating-ad-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+#floating-ad-card-icon { flex-shrink: 0; }
+#floating-ad-card-title { font-size: 14px; font-weight: 800; color: #1E293B; line-height: 1.4; }
+#floating-ad-card-desc { font-size: 12px; color: #64748B; line-height: 1.6; margin-bottom: 12px; }
+#floating-ad-card-btn {
+  display: block; width: 100%; padding: 10px;
+  background: #16A34A; color: #fff; border: none; border-radius: 10px;
+  font-size: 13px; font-weight: 700; text-align: center;
+  text-decoration: none; cursor: pointer; letter-spacing: 0.02em;
+}
+#floating-ad-card-btn:hover { background: #15803D; }
+#floating-ad-close {
+  position: absolute; top: 8px; right: 8px;
+  background: none; border: none; cursor: pointer;
+  font-size: 16px; color: #94A3B8; line-height: 1; padding: 2px 4px;
+  z-index: 1;
+}
+#floating-ad-close:hover { color: #475569; }
+@media (max-width: 860px) {
+  #floating-ad {
+    left: 50%;
+    right: auto;
+    bottom: 12px;
+    width: 92vw;
+    max-width: 92vw;
+    transform: translateX(-50%) translateY(20px);
+  }
+  #floating-ad.show { transform: translateX(-50%) translateY(0); }
+  #floating-ad-banner-wrap img.ad-banner { max-width: 100%; }
+}
+</style>
+<div id="floating-ad">
+  <button id="floating-ad-close" aria-label="閉じる">×</button>
+  
+    <div id="floating-ad-banner-wrap">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">
+        <img class="ad-banner" src="https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1" alt="POSIWILL CAREER" width="320" height="50">
+      </a>
+      
+      <img src="https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">
+      
+    </div>
+  
+</div>
+<script>
+(function() {
+  var STORAGE_KEY = 'worelu-float-closed-hsp-shigoto-muiteru';
+  try {
+    if (localStorage.getItem(STORAGE_KEY)) return;
+  } catch(e) {}
+
+  var ad = document.getElementById('floating-ad');
+  var closeBtn = document.getElementById('floating-ad-close');
+  if (!ad) return;
+  var fsFloat = document.querySelector('.font-size-float');
+
+  var textVariants = [
+    'まだ一人で悩みますか？',
+    'その悩み、話してみませんか？',
+    '無料で相談してみませんか？',
+    '一歩だけ、動いてみませんか？'
+  ];
+  var textEl = document.getElementById('floating-ad-text');
+  if (textEl) {
+    textEl.textContent = textVariants[Math.floor(Math.random() * textVariants.length)];
+  }
+
+  function adjustFsButton() {
+    if (!fsFloat) return;
+    if (ad.classList.contains('show') && window.innerWidth <= 860) {
+      var h = ad.offsetHeight;
+      fsFloat.style.bottom = (h + 20) + 'px';
+    } else {
+      fsFloat.style.bottom = '';
+    }
+  }
+
+  var shown = false;
+  function showAd() {
+    if (shown) return;
+    ad.classList.add('show');
+    shown = true;
+    window.removeEventListener('scroll', checkScroll);
+    setTimeout(adjustFsButton, 260);
+  }
+  function checkScroll() {
+    if (shown) return;
+    var docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    var scrollPercent = (window.scrollY + window.innerHeight) / docHeight;
+    if (scrollPercent >= 0.3) showAd();
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+  // フォールバック：10秒経過したら未表示でも一度だけ表示する
+  setTimeout(showAd, 10000);
+
+  window.addEventListener('resize', function() {
+    if (shown) adjustFsButton();
+  });
+
+  closeBtn.addEventListener('click', function() {
+    ad.classList.remove('show');
+    adjustFsButton();
+    try { localStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+
 </body>
 </html>
