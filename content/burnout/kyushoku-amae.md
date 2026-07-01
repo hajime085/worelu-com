@@ -8,6 +8,18 @@ draft: false
 ---
 「もう仕事に行けない」「休みたいけれど、これって甘えかな……」
 
+<div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;text-align:center">
+    <img src="/images/characters/character_020.webp" alt="Dさん" style="width:72px;height:72px;object-fit:cover;border-radius:50%;border:2px solid #BFDBFE">
+    <div style="font-size:11px;color:#64748B;margin-top:4px;font-weight:600">Dさん・35歳<br>会社員</div>
+  </div>
+  <div style="flex:1;position:relative;padding-left:8px">
+    <div style="position:absolute;left:-1px;top:20px;width:0;height:0;border-top:8px solid transparent;border-bottom:8px solid transparent;border-right:8px solid #BFDBFE"></div>
+    <div style="position:absolute;left:1px;top:21px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-right:7px solid #EFF6FF"></div>
+    <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:0 10px 10px 10px;padding:14px 16px;font-size:14px;color:#334155;line-height:1.75">「同僚に迷惑をかけると思うと、どうしても休職に踏み出せませんでした。でも実際に倒れて長期離脱した先輩を見て、早く休んでいれば違ったのかもしれないと感じています。」</div>
+  </div>
+</div>
+
 そう自分を責めていませんか。真面目で責任感が強い人ほど、休職という選択肢を「逃げ」や「甘え」だと捉えてしまいがちです。でも、少し立ち止まって考えてみてください。毎朝布団から出るのが辛い、電車の中で涙が止まらない、好きだったことに全く興味が持てない——そこまで追い詰められているのに、それでもまだ「甘え」と言えるでしょうか。
 
 休職を迷う人の多くは、「自分だけが弱い」と思っています。しかし実際には、限界を超えても動き続けようとすること自体が、あなたの真面目さの証拠です。この記事では、その「甘えじゃないか」という気持ちの正体を解き明かしながら、休職を判断するための具体的な基準をお伝えします。
@@ -20,19 +32,19 @@ draft: false
 
 ## 休職したいと感じるのは甘えではない3つの理由
 
-### 心の不調は「脳の疲労」であって根性論で解決できない
+#### 心の不調は「脳の疲労」であって根性論で解決できない
 
 やる気が出ない、体が動かない——こうした状態は、あなたの意志の弱さではなく、**脳の機能低下**が原因です。強いストレスが続くと、脳内の神経伝達物質のバランスが乱れ、感情の調整や意欲の制御がうまく機能しなくなります。
 
 骨折した足に「根性で歩け」と言っても治らないように、脳の機能が低下した状態を気合いで乗り越えることはできません。むしろ、無理をするほどダメージが蓄積します。あなたの心も体と同じように、適切な休息と回復の時間が必要なのです。
 
-### 休職は「長く働き続けるため」のメンテナンスである
+#### 休職は「長く働き続けるため」のメンテナンスである
 
 休職を選ぶことは、キャリアを諦めることでも逃げることでもありません。**長く働き続けるために必要なメンテナンス期間**です。
 
 車も定期的なオイル交換をしなければエンジンが壊れるように、人間の心も定期的なケアが必要です。早めに休んで適切に回復すれば数ヶ月で戻れる人が、無理をして壊れてしまうと回復に数年かかることもあります。「今休む」という選択は、長期的に見てむしろ賢明な判断です。
 
-### 休職は法律・制度で守られた正当な権利である
+#### 休職は法律・制度で守られた正当な権利である
 
 多くの会社の就業規則には休職制度が定められており、健康保険には「傷病手当金」があります（給与の約3分の2が最長1年6ヶ月間支給）。これらは「こういう状況になったら使っていい」と社会が認めた仕組みです。制度を使うことに、罪悪感を持つ必要は全くありません。
 
@@ -40,36 +52,52 @@ draft: false
 
 「まだ頑張れる気がする」と思っていても、心や体はすでに限界に達していることがあります。以下をチェックしてみてください。
 
-**体のサイン**
-- 朝、布団から出られない・出勤前に吐き気がする
-- 寝ても疲れが取れない・常にだるい
-- 通勤中に突然涙が止まらなくなる
+<div style="display:grid;grid-template-columns:1fr;gap:12px;margin:20px 0">
 
-**心のサイン**
-- 趣味や好きなことに全く興味が持てない
-- 美味しいものを食べても何も感じない
-- 「消えてしまいたい」と思うことがある
+<div style="background:#FFF7ED;border:1px solid #FDBA74;border-radius:10px;padding:16px 18px">
+<div style="font-size:13px;font-weight:800;color:#C2410C;margin-bottom:8px">体のサイン</div>
+<div style="font-size:14px;color:#334155;line-height:1.9">
+朝、布団から出られない・出勤前に吐き気がする<br>
+寝ても疲れが取れない・常にだるい<br>
+通勤中に突然涙が止まらなくなる
+</div>
+</div>
 
-**仕事のサイン**
-- 以前はしなかった簡単なミスを繰り返す
-- メールの返信に何時間もかかる
-- 会議の内容が頭に入ってこない
+<div style="background:#EFF6FF;border:1px solid #93C5FD;border-radius:10px;padding:16px 18px">
+<div style="font-size:13px;font-weight:800;color:#1D4ED8;margin-bottom:8px">心のサイン</div>
+<div style="font-size:14px;color:#334155;line-height:1.9">
+趣味や好きなことに全く興味が持てない<br>
+美味しいものを食べても何も感じない<br>
+「消えてしまいたい」と思うことがある
+</div>
+</div>
+
+<div style="background:#F5F3FF;border:1px solid #C4B5FD;border-radius:10px;padding:16px 18px">
+<div style="font-size:13px;font-weight:800;color:#6D28D9;margin-bottom:8px">仕事のサイン</div>
+<div style="font-size:14px;color:#334155;line-height:1.9">
+以前はしなかった簡単なミスを繰り返す<br>
+メールの返信に何時間もかかる<br>
+会議の内容が頭に入ってこない
+</div>
+</div>
+
+</div>
 
 特に注意してほしいのが「朝の症状」です。十分に眠れば体は回復するはずなのに、むしろ朝が一番つらい——この状態は、心が「もう限界だ」と強く訴えているサインです。「睡眠は取れているから大丈夫」と思っているうちが、実は最も危ない段階かもしれません。
 
 ## 休職を躊躇う3つの不安への答え
 
-### 「同僚に迷惑がかかる」という罪悪感
+#### 「同僚に迷惑がかかる」という罪悪感
 
 もしあなたの同僚が同じ状況になったとき、「迷惑だから休むな」と言いますか？　きっと「早く休んで回復してほしい」と思うはずです。自分にだけ、なぜそれほど厳しくするのでしょう。
 
 一人が欠けただけで業務が回らなくなるのは、**組織の構造の問題**であって、あなたの責任ではありません。あなたが倒れた後の方が、より大きな混乱が生じます。
 
-### 「キャリアに傷がつく」という不安
+#### 「キャリアに傷がつく」という不安
 
 数ヶ月の休職が、数十年のキャリアをすべて台無しにすることはありません。それより、無理をし続けて重症化し、長期間働けなくなる方がキャリアへの影響はずっと大きくなります。休職後に環境を変えて活躍している人は多くいます。
 
-### 「お金が心配」という現実的な懸念
+#### 「お金が心配」という現実的な懸念
 
 | 項目 | 内容 |
 |---|---|
