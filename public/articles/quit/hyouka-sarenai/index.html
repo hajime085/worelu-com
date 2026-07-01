@@ -1210,5 +1210,81 @@ window.diagCarouselScroll = function(dir) {
   });
 })();
 </script>
+
+<style>
+#floating-ad {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 500;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(15,23,42,0.15);
+  padding: 10px 36px 10px 14px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 240ms ease, transform 240ms ease;
+  max-width: calc(100vw - 24px);
+}
+#floating-ad.show { display: flex; opacity: 1; transform: translateX(-50%) translateY(0); }
+#floating-ad-text { font-size: 12px; font-weight: 700; color: #334155; white-space: nowrap; }
+#floating-ad img { display: block; border-radius: 4px; max-width: 100%; height: auto; }
+#floating-ad-close {
+  position: absolute; top: 4px; right: 6px;
+  background: none; border: none; cursor: pointer;
+  font-size: 15px; color: #94A3B8; line-height: 1; padding: 4px;
+}
+#floating-ad-close:hover { color: #475569; }
+@media (max-width: 480px) {
+  #floating-ad { flex-direction: column; align-items: flex-start; gap: 6px; padding: 10px 32px 10px 12px; }
+}
+</style>
+<div id="floating-ad">
+  <button id="floating-ad-close" aria-label="閉じる">×</button>
+  <span id="floating-ad-text">まだ一人で悩みますか？</span>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">
+    
+      <img src="https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1" alt="POSIWILL CAREER" width="320" height="50">
+    
+  </a>
+  
+  <img src="https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">
+  
+</div>
+<script>
+(function() {
+  var STORAGE_KEY = 'worelu-float-closed-hyouka-sarenai';
+  try {
+    if (localStorage.getItem(STORAGE_KEY)) return;
+  } catch(e) {}
+
+  var ad = document.getElementById('floating-ad');
+  var closeBtn = document.getElementById('floating-ad-close');
+  if (!ad) return;
+
+  var shown = false;
+  function checkScroll() {
+    if (shown) return;
+    var scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (scrollPercent >= 0.3) {
+      ad.classList.add('show');
+      shown = true;
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+
+  closeBtn.addEventListener('click', function() {
+    ad.classList.remove('show');
+    try { localStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+
 </body>
 </html>

@@ -281,6 +281,76 @@ def write_file(path: Path, content: str):
 
 # ===== 生成処理 =====
 
+# フローティング広告設定（記事slug → 広告タイプ）
+FLOATING_ADS = {
+    "hyouka-sarenai": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "shigoto-yaruki-denai": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "30dai-shigoto-yametai": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
+    "20dai-shigoto-yametai": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100oo5400oujg",
+        "img_w": 234, "img_h": 60,
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100oo5400oujg",
+        "gif_src": "",
+        "alt": "ZERO TALENT",
+    },
+    "shigoto-dekinai-tsurai": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100oo5400oujg",
+        "img_w": 234, "img_h": 60,
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100oo5400oujg",
+        "gif_src": "",
+        "alt": "ZERO TALENT",
+    },
+    "kaisha-yabai": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100pwzm00oujg",
+        "img_w": 234, "img_h": 60,
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100pwzm00oujg",
+        "gif_src": "",
+        "alt": "テックゴー",
+        "is_text": True,
+    },
+    "black-kigyo-aruaru": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "",
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "alt": "転職サポートのプロに出会える【転職エージェントナビ】",
+        "is_text": True,
+    },
+    "yameru-yuuki": {
+        "text": "まだ一人で悩みますか？",
+        "img_src": "",
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",
+        "alt": "転職サポートのプロに出会える【転職エージェントナビ】",
+        "is_text": True,
+    },
+}
+
+
 def build_articles(env: Environment, articles: list):
     """記事HTMLを生成"""
     import json
@@ -292,7 +362,8 @@ def build_articles(env: Environment, articles: list):
     ], ensure_ascii=False)
     for art in articles:
         related = get_related(art, articles)
-        html = tpl.render(**art, related_articles=related, all_articles_json=all_articles_json)
+        floating_ad = FLOATING_ADS.get(art["slug"])
+        html = tpl.render(**art, related_articles=related, all_articles_json=all_articles_json, floating_ad=floating_ad)
         out = OUTPUT_DIR / "articles" / art["category"] / art["slug"] / "index.html"
         write_file(out, html)
         print(f"  記事: {out}")

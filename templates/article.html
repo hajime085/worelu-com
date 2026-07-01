@@ -969,5 +969,83 @@ window.diagCarouselScroll = function(dir) {
   });
 })();
 </script>
+{% if floating_ad %}
+<style>
+#floating-ad {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 500;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(15,23,42,0.15);
+  padding: 10px 36px 10px 14px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 240ms ease, transform 240ms ease;
+  max-width: calc(100vw - 24px);
+}
+#floating-ad.show { display: flex; opacity: 1; transform: translateX(-50%) translateY(0); }
+#floating-ad-text { font-size: 12px; font-weight: 700; color: #334155; white-space: nowrap; }
+#floating-ad img { display: block; border-radius: 4px; max-width: 100%; height: auto; }
+#floating-ad-close {
+  position: absolute; top: 4px; right: 6px;
+  background: none; border: none; cursor: pointer;
+  font-size: 15px; color: #94A3B8; line-height: 1; padding: 4px;
+}
+#floating-ad-close:hover { color: #475569; }
+@media (max-width: 480px) {
+  #floating-ad { flex-direction: column; align-items: flex-start; gap: 6px; padding: 10px 32px 10px 12px; }
+}
+</style>
+<div id="floating-ad">
+  <button id="floating-ad-close" aria-label="閉じる">×</button>
+  <span id="floating-ad-text">{{ floating_ad.text }}</span>
+  <a href="{{ floating_ad.href }}" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">
+    {% if floating_ad.is_text %}
+      <span style="font-size:13px;font-weight:700;color:#2563EB;text-decoration:underline;">{{ floating_ad.alt }}</span>
+    {% else %}
+      <img src="{{ floating_ad.img_src }}" alt="{{ floating_ad.alt }}" width="{{ floating_ad.img_w }}" height="{{ floating_ad.img_h }}">
+    {% endif %}
+  </a>
+  {% if floating_ad.gif_src %}
+  <img src="{{ floating_ad.gif_src }}" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">
+  {% endif %}
+</div>
+<script>
+(function() {
+  var STORAGE_KEY = 'worelu-float-closed-{{ slug }}';
+  try {
+    if (localStorage.getItem(STORAGE_KEY)) return;
+  } catch(e) {}
+
+  var ad = document.getElementById('floating-ad');
+  var closeBtn = document.getElementById('floating-ad-close');
+  if (!ad) return;
+
+  var shown = false;
+  function checkScroll() {
+    if (shown) return;
+    var scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+    if (scrollPercent >= 0.3) {
+      ad.classList.add('show');
+      shown = true;
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+
+  closeBtn.addEventListener('click', function() {
+    ad.classList.remove('show');
+    try { localStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
+  });
+})();
+</script>
+{% endif %}
 </body>
 </html>
