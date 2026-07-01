@@ -1207,7 +1207,7 @@ window.diagCarouselScroll = function(dir) {
 }
 #floating-ad.show { display: flex; opacity: 1; transform: translateY(0); }
 #floating-ad-text { font-size: 12px; font-weight: 700; color: #334155; white-space: nowrap; }
-#floating-ad img { display: block; border-radius: 4px; max-width: 100%; max-height: 60px; height: auto; }
+#floating-ad img { display: block; border-radius: 4px; width: auto; height: auto; }
 #floating-ad-close {
   position: absolute; top: 4px; right: 6px;
   background: none; border: none; cursor: pointer;
@@ -1229,16 +1229,14 @@ window.diagCarouselScroll = function(dir) {
     transform: translateY(100%);
   }
   #floating-ad.show { transform: translateY(0); }
-  /* 文字サイズボタンをフローティング広告の上にずらす */
-  .font-size-float { bottom: 88px; }
 }
 </style>
 <div id="floating-ad">
   <button id="floating-ad-close" aria-label="閉じる">×</button>
   <span id="floating-ad-text">まだ一人で悩みますか？</span>
-  <a href="https://h.accesstrade.net/sp/cc?rk=0100oo5400oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">
+  <a href="https://h.accesstrade.net/sp/cc?rk=0100oo5400oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
     
-      <img src="https://h.accesstrade.net/sp/rr?rk=0100oo5400oujg" alt="ZERO TALENT" width="234" height="60">
+      <img src="https://h.accesstrade.net/sp/rr?rk=0100oo5400oujg" alt="ZERO TALENT" width="234" height="60" style="width:234px;height:60px;max-width:234px;">
     
   </a>
   
@@ -1253,6 +1251,28 @@ window.diagCarouselScroll = function(dir) {
   var ad = document.getElementById('floating-ad');
   var closeBtn = document.getElementById('floating-ad-close');
   if (!ad) return;
+  var fsFloat = document.querySelector('.font-size-float');
+
+  var textVariants = [
+    'まだ一人で悩みますか？',
+    'その悩み、話してみませんか？',
+    '無料で相談してみませんか？',
+    '一歩だけ、動いてみませんか？'
+  ];
+  var textEl = document.getElementById('floating-ad-text');
+  if (textEl) {
+    textEl.textContent = textVariants[Math.floor(Math.random() * textVariants.length)];
+  }
+
+  function adjustFsButton() {
+    if (!fsFloat) return;
+    if (ad.classList.contains('show') && window.innerWidth <= 860) {
+      var h = ad.offsetHeight;
+      fsFloat.style.bottom = (h + 16) + 'px';
+    } else {
+      fsFloat.style.bottom = '';
+    }
+  }
 
   var shown = false;
   function checkScroll() {
@@ -1262,13 +1282,19 @@ window.diagCarouselScroll = function(dir) {
       ad.classList.add('show');
       shown = true;
       window.removeEventListener('scroll', checkScroll);
+      setTimeout(adjustFsButton, 260);
     }
   }
   window.addEventListener('scroll', checkScroll, { passive: true });
   checkScroll();
 
+  window.addEventListener('resize', function() {
+    if (shown) adjustFsButton();
+  });
+
   closeBtn.addEventListener('click', function() {
     ad.classList.remove('show');
+    adjustFsButton();
     try { localStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
   });
 })();

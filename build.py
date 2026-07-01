@@ -330,7 +330,6 @@ FLOATING_ADS = {
         "href": "https://h.accesstrade.net/sp/cc?rk=0100pwzm00oujg",
         "gif_src": "",
         "alt": "テックゴー",
-        "is_text": True,
     },
     "black-kigyo-aruaru": {
         "text": "まだ一人で悩みますか？",
