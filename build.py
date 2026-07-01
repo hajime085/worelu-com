@@ -285,7 +285,7 @@ def write_file(path: Path, content: str):
 FLOATING_ADS = {
     "hyouka-sarenai": {
         "text": "まだ一人で悩みますか？",
-        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1",
+        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
         "img_w": 320, "img_h": 50,
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
@@ -293,7 +293,7 @@ FLOATING_ADS = {
     },
     "shigoto-yaruki-denai": {
         "text": "まだ一人で悩みますか？",
-        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1",
+        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
         "img_w": 320, "img_h": 50,
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
@@ -301,7 +301,7 @@ FLOATING_ADS = {
     },
     "30dai-shigoto-yametai": {
         "text": "まだ一人で悩みますか？",
-        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s0000025557001029000&mc=1",
+        "img_src": "https://www29.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
         "img_w": 320, "img_h": 50,
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "gif_src": "https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
