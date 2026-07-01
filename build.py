@@ -319,12 +319,11 @@ FLOATING_ADS = {
         "alt": "ZERO TALENT",
     },
     "kaisha-yabai": {
-        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100px7u00oujg",
-        "img_w": 250, "img_h": 250,
-        "href": "https://h.accesstrade.net/sp/cc?rk=0100px7u00oujg",
+        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100px7t00oujg",
+        "img_w": 320, "img_h": 50,
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100px7t00oujg",
         "gif_src": "",
         "alt": "テックゴー",
-        "img_style": "width:250px;height:250px;max-width:100%;",
     },
     "black-kigyo-aruaru": {
         "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE",

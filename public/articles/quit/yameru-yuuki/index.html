@@ -1201,62 +1201,87 @@ window.diagCarouselScroll = function(dir) {
 #floating-ad {
   position: fixed;
   z-index: 500;
-  background: #fff;
-  border: 1px solid #E2E8F0;
   display: none;
-  align-items: center;
-  gap: 10px;
   opacity: 0;
   transition: opacity 240ms ease, transform 240ms ease;
+  /* PC: 右下カード */
   right: 16px;
   bottom: 16px;
   transform: translateY(20px);
-  border-radius: 12px;
-  box-shadow: 0 8px 28px rgba(15,23,42,0.14);
-  padding: 10px 36px 10px 12px;
+  width: 300px;
   max-width: calc(100vw - 32px);
 }
-#floating-ad.show { display: flex; opacity: 1; transform: translateY(0); }
-#floating-ad img.ad-banner { display: block; border-radius: 6px; }
-#floating-ad-text-link {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 8px; text-decoration: none;
-  background: #EFF6FF; border: 1px solid #BFDBFE;
-  border-radius: 8px; padding: 10px 12px; width: 100%;
+#floating-ad.show { display: block; opacity: 1; transform: translateY(0); }
+/* バナー型 */
+#floating-ad-banner-wrap {
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15,23,42,0.12);
+  padding: 10px 36px 10px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-#floating-ad-text-link span.label { font-size: 13px; font-weight: 700; color: #1D4ED8; line-height: 1.4; }
-#floating-ad-text-link span.arrow { font-size: 16px; color: #2563EB; flex-shrink: 0; }
+#floating-ad-banner-wrap img.ad-banner { display: block; border-radius: 6px; max-width: 100%; }
+/* テキスト（おすすめカード）型 */
+#floating-ad-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.10);
+  padding: 16px;
+  position: relative;
+}
+#floating-ad-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+#floating-ad-card-icon { flex-shrink: 0; }
+#floating-ad-card-title { font-size: 14px; font-weight: 800; color: #1E293B; line-height: 1.4; }
+#floating-ad-card-desc { font-size: 12px; color: #64748B; line-height: 1.6; margin-bottom: 12px; }
+#floating-ad-card-btn {
+  display: block; width: 100%; padding: 10px;
+  background: #16A34A; color: #fff; border: none; border-radius: 10px;
+  font-size: 13px; font-weight: 700; text-align: center;
+  text-decoration: none; cursor: pointer; letter-spacing: 0.02em;
+}
+#floating-ad-card-btn:hover { background: #15803D; }
 #floating-ad-close {
-  position: absolute; top: 6px; right: 6px;
+  position: absolute; top: 8px; right: 8px;
   background: none; border: none; cursor: pointer;
   font-size: 16px; color: #94A3B8; line-height: 1; padding: 2px 4px;
+  z-index: 1;
 }
 #floating-ad-close:hover { color: #475569; }
 @media (max-width: 860px) {
   #floating-ad {
-    left: 0; right: 0; bottom: 0;
-    max-width: 100%;
-    border-radius: 16px 16px 0 0;
-    border-left: none; border-right: none; border-bottom: none;
-    box-shadow: 0 -6px 24px rgba(15,23,42,0.14);
-    padding: 12px 40px 14px 14px;
-    justify-content: center;
-    transform: translateY(100%);
+    left: 50%;
+    right: auto;
+    bottom: 12px;
+    width: 92vw;
+    max-width: 92vw;
+    transform: translateX(-50%) translateY(20px);
   }
-  #floating-ad.show { transform: translateY(0); }
-  #floating-ad img.ad-banner { max-width: 100%; }
+  #floating-ad.show { transform: translateX(-50%) translateY(0); }
+  #floating-ad-banner-wrap img.ad-banner { max-width: 100%; }
 }
 </style>
 <div id="floating-ad">
   <button id="floating-ad-close" aria-label="閉じる">×</button>
   
-    <a id="floating-ad-text-link" href="https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">
-      <span class="label">転職エージェントナビ</span>
-      <span class="arrow">→</span>
-    </a>
-  
-  
-  <img src="https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">
+    <div id="floating-ad-card">
+      <div id="floating-ad-card-head">
+        <span id="floating-ad-card-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="8" fill="#DCFCE7"/>
+            <path d="M8 14.5l4 4 8-8" stroke="#16A34A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span id="floating-ad-card-title">転職エージェントナビ</span>
+      </div>
+      <p id="floating-ad-card-desc">300人以上のエージェントの中からあなたに合うプロをマッチング。無料で相談できます。</p>
+      <a id="floating-ad-card-btn" href="https://px.a8.net/svt/ejp?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" target="_blank">無料で相談してみる →</a>
+      
+      <img src="https://www16.a8.net/0.gif?a8mat=4B61WI+ASS4CI+5BJK+5YRHE" width="1" height="1" border="0" alt="" style="position:absolute;opacity:0;">
+      
+    </div>
   
 </div>
 <script>
@@ -1286,7 +1311,7 @@ window.diagCarouselScroll = function(dir) {
     if (!fsFloat) return;
     if (ad.classList.contains('show') && window.innerWidth <= 860) {
       var h = ad.offsetHeight;
-      fsFloat.style.bottom = (h + 16) + 'px';
+      fsFloat.style.bottom = (h + 20) + 'px';
     } else {
       fsFloat.style.bottom = '';
     }
