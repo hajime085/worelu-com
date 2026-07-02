@@ -30,7 +30,7 @@ canonical: "https://worelu.com/articles/quit/career-hoko-wakaranai/"
 
 <div style="display:flex;align-items:flex-start;margin:24px 0;gap:12px;">
   <div style="width:80px;height:80px;flex:0 0 80px;">
-    <img src="/images/characters/character_024.webp" alt="" style="width:80px;height:80px;border-radius:50%;display:block;">
+    <img src="/images/characters/character_24.webp" alt="" style="width:80px;height:80px;border-radius:50%;display:block;">
   </div>
   <div style="background-color:#f0f0f0;padding:14px 16px;border-radius:0 16px 16px 16px;position:relative;flex:1;">
     <p style="margin:0;font-size:14px;line-height:1.7;">「そう言ってもらえると、少し安心します。でも、やっぱりこのモヤモヤをどうにかしたいんです。」</p>
@@ -169,7 +169,7 @@ canonical: "https://worelu.com/articles/quit/career-hoko-wakaranai/"
     <p style="margin:0;font-size:14px;line-height:1.7;">「副業で試してみるのは良いですね。いきなり転職は勇気がいりますが、それなら気軽に始められそう。」</p>
   </div>
   <div style="width:80px;height:80px;flex:0 0 80px;">
-    <img src="/images/characters/character_059.webp" alt="" style="width:80px;height:80px;border-radius:50%;display:block;">
+    <img src="/images/characters/character_59.webp" alt="" style="width:80px;height:80px;border-radius:50%;display:block;">
   </div>
 </div>
 
