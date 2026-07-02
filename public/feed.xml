@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 01 Jul 2026 20:39:49 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 03:26:12 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[キャリアの方向性がわからない。迷いを整理して「次の一歩」を見つける方法]]></title>
+      <link>https://worelu.com/articles/quit/career-hoko-wakaranai/</link>
+      <guid>https://worelu.com/articles/quit/career-hoko-wakaranai/</guid>
+      <description><![CDATA[キャリアの方向性がわからなくて当然です。迷いの正体を整理し、自分らしい「次の一歩」を見つけるための具体的な考え方と行動を解説します。]]></description>
+      <pubDate>2026-06-27</pubDate>
+    </item>
     <item>
       <title><![CDATA[仕事が向いていないと感じるのは甘え？原因の見つけ方と次の一歩]]></title>
       <link>https://worelu.com/articles/burnout/shigoto-muiteiru/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/quit/kaisha-yabai/</link>
       <guid>https://worelu.com/articles/quit/kaisha-yabai/</guid>
       <description><![CDATA[「なんかおかしい」という職場への違和感を言語化する方法と、やばい会社の特徴・次に取るべき行動を整理します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え]]></title>
-      <link>https://worelu.com/articles/quit/yameru-yuuki/</link>
-      <guid>https://worelu.com/articles/quit/yameru-yuuki/</guid>
-      <description><![CDATA[辞めたいのに動けない5つの理由を整理し、辞めていい状態の判断基準と具体的な次の一歩を提案します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>

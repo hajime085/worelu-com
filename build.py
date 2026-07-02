@@ -486,6 +486,14 @@ FLOATING_ADS = {
         "alt": "Kimochi",
         "is_text": True,
     },
+    # ── POSIWILL CAREER（迷い・自己理解段階）320×50バナー（続き）──
+    "career-hoko-wakaranai": {
+        "img_src": "https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1",
+        "img_w": 320, "img_h": 50,
+        "href": "https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
+        "alt": "POSIWILL CAREER",
+    },
     # black-kigyo-shindan はLV3・4に既存案件2つのため除外
 }
 
