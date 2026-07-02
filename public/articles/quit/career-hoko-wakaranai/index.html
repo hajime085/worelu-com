@@ -409,7 +409,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <p>現代社会は変化が激しく、数年先の未来すら予測が難しい時代です。終身雇用が当たり前だった時代とは異なり、一つの会社でキャリアを全うするという考え方も薄れてきています。選択肢が増えたからこそ、何を選べばいいのか迷ってしまうのは自然な心理です。</p>
 <p>また、キャリアは一度決めたら終わり、というものではありません。人生のステージや価値観の変化に合わせて、柔軟に見直していくもの。今「わからない」と感じていることは、より良い方向へ進むための大切な機会と捉えることができます。</p>
 <div style="display:flex;align-items:flex-start;margin-bottom:20px;">
-  <img src="/images/characters/character_024.webp" alt="キャラクター" style="width:80px;height:80px;border-radius:50%;margin-right:15px;">
+  <img src="/images/characters/character_024.webp" alt="キャラクター" style="width:80px;height:80px;min-width:80px;border-radius:50%;margin-right:15px;flex-shrink:0;">
   <div style="background-color:#f0f0f0;padding:15px;border-radius:15px;position:relative;">
     <p style="margin:0;font-size:14px;">「そう言ってもらえると、少し安心します。でも、やっぱりこのモヤモヤをどうにかしたいんです。」</p>
     <div style="position:absolute;left:-10px;top:20px;width:0;height:0;border-style:solid;border-width:10px 10px 10px 0;border-color:transparent #f0f0f0 transparent transparent;"></div>
@@ -481,7 +481,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <li>あなたの経験やスキルは、どんな課題解決に役立ちそうですか？</li>
 </ul>
 <div class="svg-lightbox-wrap">
-  <svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow-career2" x="-50%" y="-50%" width="200%" height="200%">
         <feOffset result="offOut" in="SourceAlpha" dx="0" dy="4" />
@@ -489,20 +489,26 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
         <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
       </filter>
     </defs>
-    <circle cx="220" cy="150" r="80" fill="#DBEAFE" filter="url(#shadow-career2)" />
-    <text x="220" y="145" font-size="15" fill="#1E40AF" text-anchor="middle" font-weight="bold">夢中になれる</text>
-    <text x="220" y="165" font-size="15" fill="#1E40AF" text-anchor="middle">ことは？</text>
-    <circle cx="460" cy="150" r="80" fill="#DCFCE7" filter="url(#shadow-career2)" />
-    <text x="460" y="145" font-size="15" fill="#166534" text-anchor="middle" font-weight="bold">得意な</text>
-    <text x="460" y="165" font-size="15" fill="#166534" text-anchor="middle">ことは？</text>
-    <circle cx="220" cy="290" r="80" fill="#FFE4E6" filter="url(#shadow-career2)" />
-    <text x="220" y="285" font-size="15" fill="#991B1B" text-anchor="middle" font-weight="bold">大切にしたい</text>
-    <text x="220" y="305" font-size="15" fill="#991B1B" text-anchor="middle">価値観は？</text>
-    <circle cx="460" cy="290" r="80" fill="#EDE9FE" filter="url(#shadow-career2)" />
-    <text x="460" y="285" font-size="15" fill="#5B21B6" text-anchor="middle" font-weight="bold">求められている</text>
-    <text x="460" y="305" font-size="15" fill="#5B21B6" text-anchor="middle">役割は？</text>
-    <text x="340" y="225" font-size="19" fill="#92400E" text-anchor="middle" font-weight="bold">自分らしい一歩</text>
-    <text x="340" y="375" font-size="12" fill="#6B7280" text-anchor="middle">4つの問いから、あなたのキャリアの軸が見えてきます</text>
+    <!-- 上段：左 -->
+    <circle cx="190" cy="140" r="90" fill="#DBEAFE" filter="url(#shadow-career2)" />
+    <text x="190" y="132" font-size="15" fill="#1E40AF" text-anchor="middle" font-weight="bold">夢中になれる</text>
+    <text x="190" y="154" font-size="15" fill="#1E40AF" text-anchor="middle">ことは？</text>
+    <!-- 上段：右 -->
+    <circle cx="490" cy="140" r="90" fill="#DCFCE7" filter="url(#shadow-career2)" />
+    <text x="490" y="132" font-size="15" fill="#166534" text-anchor="middle" font-weight="bold">得意な</text>
+    <text x="490" y="154" font-size="15" fill="#166534" text-anchor="middle">ことは？</text>
+    <!-- 下段：左 -->
+    <circle cx="190" cy="360" r="90" fill="#FFE4E6" filter="url(#shadow-career2)" />
+    <text x="190" y="352" font-size="15" fill="#991B1B" text-anchor="middle" font-weight="bold">大切にしたい</text>
+    <text x="190" y="374" font-size="15" fill="#991B1B" text-anchor="middle">価値観は？</text>
+    <!-- 下段：右 -->
+    <circle cx="490" cy="360" r="90" fill="#EDE9FE" filter="url(#shadow-career2)" />
+    <text x="490" y="352" font-size="15" fill="#5B21B6" text-anchor="middle" font-weight="bold">求められている</text>
+    <text x="490" y="374" font-size="15" fill="#5B21B6" text-anchor="middle">役割は？</text>
+    <!-- 中央ラベル -->
+    <text x="340" y="256" font-size="18" fill="#92400E" text-anchor="middle" font-weight="bold">自分らしい一歩</text>
+    <!-- フッター -->
+    <text x="340" y="498" font-size="12" fill="#6B7280" text-anchor="middle">4つの問いから、あなたのキャリアの軸が見えてきます</text>
   </svg>
   <p class="svg-lightbox-hint">タップして拡大</p>
 </div>
@@ -520,7 +526,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
     <p style="margin:0;font-size:14px;">「副業で試してみるのは良いですね。いきなり転職は勇気がいりますが、それなら気軽に始められそう。」</p>
     <div style="position:absolute;right:-10px;top:20px;width:0;height:0;border-style:solid;border-width:10px 0 10px 10px;border-color:transparent transparent transparent #f0f0f0;"></div>
   </div>
-  <img src="/images/characters/character_059.webp" alt="キャラクター" style="width:80px;height:80px;border-radius:50%;">
+  <img src="/images/characters/character_059.webp" alt="キャラクター" style="width:80px;height:80px;min-width:80px;border-radius:50%;flex-shrink:0;">
 </div>
 
 <h4 id="_9">転職活動を通じて市場価値を把握する</h4>
@@ -532,9 +538,10 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <h4 id="_12">転職エージェント</h4>
 <p>あなたの希望やスキルに合った求人を紹介してくれるだけでなく、履歴書・職務経歴書の添削、面接対策、企業との条件交渉など、転職活動全般をサポートしてくれます。非公開求人へのアクセスや業界の最新情報を得られる点も大きなメリットです。</p>
 <p>方向性が「何となく気づき始めた」段階なら、まず自己分析から伴走してくれるキャリアトレーニングサービスを検討してみるのもおすすめです。</p>
-<div style="margin:32px 0;padding:24px;background:#EFF6FF;border-radius:12px;border-left:4px solid #3B82F6;">
-  <p style="margin:0 0 8px;font-size:13px;color:#1E40AF;font-weight:600;">キャリアの方向性に迷っているあなたへ</p>
-  <p style="margin:0 0 16px;font-size:14px;color:#1e293b;">「転職すべきか」よりも前の段階、<strong>「自分が何をしたいのか」</strong>から一緒に考えてくれるサービスがあります。まずは無料相談だけでも、迷いが整理されるきっかけになるかもしれません。</p>
+<div style="margin:32px 0;padding:24px 24px 20px;background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.10);border:1px solid #e5e7eb;">
+  <p style="margin:0 0 6px;font-size:12px;color:#6B7280;font-weight:600;letter-spacing:0.05em;">PR</p>
+  <p style="margin:0 0 4px;font-size:15px;color:#111827;font-weight:700;">キャリアの方向性に迷っているあなたへ</p>
+  <p style="margin:0 0 16px;font-size:13px;color:#374151;line-height:1.7;">「転職すべきか」よりも前の段階、<strong>「自分が何をしたいのか」</strong>から一緒に考えてくれるサービスがあります。まずは無料相談だけでも、迷いが整理されるきっかけになるかもしれません。</p>
   <a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64JTD" rel="nofollow" style="display:block;text-align:center;">
     <img border="0" width="320" height="50" alt="POSIWILL CAREER" src="https://www25.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001029000&mc=1">
   </a>
