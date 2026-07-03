@@ -15,6 +15,17 @@ canonical: https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/
 
 朝、目が覚めても体が起き上がらない。仕事のことを考えると胸が重くなる。休日なのに、好きだったことすら手につかず、横になったままスマホを眺めて一日が終わる。そして夜になると「今日も何もできなかった」と自分を責める――いま、そんな状態にいるのかもしれません。
 
+<style>
+.character-box { display: flex; align-items: flex-start; gap: 16px; margin: 20px 0 24px; }
+.character-img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; }
+.speech-bubble { position: relative; background: #EFF6FF; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 14px 18px; font-size: 14px; color: #334155; line-height: 1.75; }
+.speech-bubble::before { content: ''; position: absolute; left: -12px; top: 20px; border-width: 6px 12px 6px 0; border-style: solid; border-color: transparent #BFDBFE transparent transparent; }
+.speech-bubble::after { content: ''; position: absolute; left: -9px; top: 21px; border-width: 5px 10px 5px 0; border-style: solid; border-color: transparent #EFF6FF transparent transparent; }
+.character-box-reverse { flex-direction: row-reverse; }
+.character-box-reverse .speech-bubble::before { left: auto; right: -12px; border-width: 6px 0 6px 12px; border-color: transparent transparent transparent #BFDBFE; }
+.character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
+</style>
+
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
   <div class="speech-bubble">「平日は仕事に行くだけで精一杯。休日は一日中横になっているのに疲れが取れない…。自分はただサボりたいだけなのかな」</div>
