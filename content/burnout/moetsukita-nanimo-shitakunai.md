@@ -116,14 +116,6 @@ canonical: https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/
 
 ただ、少し回復してきたら、「いまの職場だけが世界のすべてではない」と知っておくことは、視野の狭まりを防ぐ助けになります。すぐに動く必要はなく、選択肢を知っておくだけでも心の余裕につながります。
 
-<div style="margin-top:20px;margin-bottom:8px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:20px 20px 16px;">
-<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:4px;letter-spacing:0.05em;">PR</div>
-<div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;line-height:1.6;">エネルギーが戻ってきたら、「働き方の選択肢」を知ることから</div>
-<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">転職エージェント「テックゴー」では、キャリアの棚卸しから求人の紹介まで無料で相談できます。すぐに転職する予定がなくても、「いまの環境以外にも道がある」と確認しておくだけで、追い詰められた気持ちが和らぐことがあります。</div>
-<div style="margin-bottom:10px;font-size:13px;"><a href="https://h.accesstrade.net/sp/cc?rk=0100pwzm00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">テックゴー<img src="https://h.accesstrade.net/sp/rr?rk=0100pwzm00oujg" width="1" height="1" border="0" alt=""></a></div>
-<div style="text-align:center;"><a href="https://h.accesstrade.net/sp/cc?rk=0100px7u00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100px7u00oujg" alt="テックゴー" border="0" width="250" height="250"></a></div>
-</div>
-
 何もしたくない中で、この記事をここまで読んだこと自体が、自分の状態をどうにかしたいという気持ちの表れです。それは回復に向けた確かな一歩です。今日は、これ以上何もしなくて構いません。まずは休むことから始めてください。
 
 ## よくある質問
@@ -144,3 +136,11 @@ canonical: https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/
 <summary style="background:#EFF6FF;padding:16px 20px;font-weight:600;color:#1E40AF;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Q4. 燃え尽き症候群とうつ病はどう違うのですか？<span style="font-size:18px;color:#93C5FD">+</span></summary>
 <div style="padding:16px 20px;font-size:14px;line-height:1.8;color:#334155">バーンアウトは ICD-11 で「職場の慢性的なストレスに関連する現象」とされており、うつ病とは区別されていますが、無気力や疲労感など症状が重なる部分も多くあります。両者の見極めは自己判断では難しいため、つらい状態が続くときは医師に相談することをおすすめします。</div>
 </details>
+
+<div style="margin-top:20px;margin-bottom:8px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:20px 20px 16px;">
+<div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:4px;letter-spacing:0.05em;">PR</div>
+<div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;line-height:1.6;">エネルギーが戻ってきたら、「働き方の選択肢」を知ることから</div>
+<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">転職エージェント「テックゴー」では、キャリアの棚卸しから求人の紹介まで無料で相談できます。すぐに転職する予定がなくても、「いまの環境以外にも道がある」と確認しておくだけで、追い詰められた気持ちが和らぐことがあります。</div>
+<div style="margin-bottom:10px;font-size:13px;"><a href="https://h.accesstrade.net/sp/cc?rk=0100pwzm00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">テックゴー<img src="https://h.accesstrade.net/sp/rr?rk=0100pwzm00oujg" width="1" height="1" border="0" alt=""></a></div>
+<div style="text-align:center;"><a href="https://h.accesstrade.net/sp/cc?rk=0100px7u00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100px7u00oujg" alt="テックゴー" border="0" width="250" height="250"></a></div>
+</div>
