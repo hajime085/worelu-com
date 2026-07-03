@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 02 Jul 2026 04:36:56 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 06:32:41 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[仕事に燃え尽きて何もしたくない。動けないのは甘えではなくサイン]]></title>
+      <link>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</link>
+      <guid>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</guid>
+      <description><![CDATA[「仕事で燃え尽きて何もしたくない」――それは怠けではなく、心のエネルギーが尽きたサインかもしれません。今日できる休み方、受診の目安、休職という選択肢まで、動けない今のあなたに必要な情報を整理しました。]]></description>
+      <pubDate>2026-07-03</pubDate>
+    </item>
     <item>
       <title><![CDATA[キャリアの方向性がわからない。迷いを整理して「次の一歩」を見つける方法]]></title>
       <link>https://worelu.com/articles/quit/career-hoko-wakaranai/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/quit/hyouka-sarenai/</link>
       <guid>https://worelu.com/articles/quit/hyouka-sarenai/</guid>
       <description><![CDATA[頑張っているのに評価されない原因3つと、腐る前に試せる具体的な対処法を整理します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[「この会社やばい」と感じたとき。その直感を言語化する方法]]></title>
-      <link>https://worelu.com/articles/quit/kaisha-yabai/</link>
-      <guid>https://worelu.com/articles/quit/kaisha-yabai/</guid>
-      <description><![CDATA[「なんかおかしい」という職場への違和感を言語化する方法と、やばい会社の特徴・次に取るべき行動を整理します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
