@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 Jul 2026 09:15:34 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 21:05:18 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
@@ -19,6 +19,13 @@
       <link>https://worelu.com/articles/quit/shigoto-yametai/</link>
       <guid>https://worelu.com/articles/quit/shigoto-yametai/</guid>
       <description><![CDATA[仕事を辞めたいと感じるのは甘えではありません。よくある理由の整理、心と体の限界サイン、辞めるか続けるかの判断軸、退職までの具体的なステップまで、あらゆる状況に対応する総合ガイドです。]]></description>
+      <pubDate>2026-06-29</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[仕事のストレスが限界…体に出るサインと休む・辞めるの判断まで]]></title>
+      <link>https://worelu.com/articles/stress/shigoto-stress-genkai/</link>
+      <guid>https://worelu.com/articles/stress/shigoto-stress-genkai/</guid>
+      <description><![CDATA[仕事のストレスが限界に達すると、眠れない・涙が出る・動悸・吐き気など体にサインが現れます。限界サインのセルフチェックと今すぐできる応急処置、病院に行く目安、休職・退職を考える判断の道筋までまとめて解説します。]]></description>
       <pubDate>2026-06-29</pubDate>
     </item>
     <item>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/quit/black-kigyo-aruaru/</link>
       <guid>https://worelu.com/articles/quit/black-kigyo-aruaru/</guid>
       <description><![CDATA[ブラック企業あるある20選に加え、入社前の見分け方・違法ケース・20項目セルフ診断まで。自分の会社がブラックか確かめたい人へ。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[あなたはもうブラック企業に洗脳されている？感覚麻痺度診断]]></title>
-      <link>https://worelu.com/articles/quit/black-kigyo-shindan/</link>
-      <guid>https://worelu.com/articles/quit/black-kigyo-shindan/</guid>
-      <description><![CDATA[「自分が甘えているだけ？」その疑問に答える感覚麻痺度診断。20問の4択で、あなたの職場感覚がどれだけ麻痺しているかをLV1〜4で判定します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
