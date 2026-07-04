@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 03 Jul 2026 08:03:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 09:15:34 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
@@ -13,6 +13,13 @@
       <guid>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</guid>
       <description><![CDATA[仕事に燃え尽きて何もしたくない、動けない――それは甘えではなく心のエネルギーが尽きたサインかもしれません。今日できる休み方から受診の目安、休職という選択肢まで、回復への道筋を整理します。]]></description>
       <pubDate>2026-07-03</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[仕事辞めたいと思ったら。理由の整理から辞め方まで全体像を解説]]></title>
+      <link>https://worelu.com/articles/quit/shigoto-yametai/</link>
+      <guid>https://worelu.com/articles/quit/shigoto-yametai/</guid>
+      <description><![CDATA[仕事を辞めたいと感じるのは甘えではありません。よくある理由の整理、心と体の限界サイン、辞めるか続けるかの判断軸、退職までの具体的なステップまで、あらゆる状況に対応する総合ガイドです。]]></description>
+      <pubDate>2026-06-29</pubDate>
     </item>
     <item>
       <title><![CDATA[キャリアの方向性がわからない。迷いを整理して「次の一歩」を見つける方法]]></title>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/quit/black-kigyo-shindan/</link>
       <guid>https://worelu.com/articles/quit/black-kigyo-shindan/</guid>
       <description><![CDATA[「自分が甘えているだけ？」その疑問に答える感覚麻痺度診断。20問の4択で、あなたの職場感覚がどれだけ麻痺しているかをLV1〜4で判定します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事で評価されないと腐ってしまう前に。原因の見つけ方と立て直し方]]></title>
-      <link>https://worelu.com/articles/quit/hyouka-sarenai/</link>
-      <guid>https://worelu.com/articles/quit/hyouka-sarenai/</guid>
-      <description><![CDATA[頑張っているのに評価されない原因3つと、腐る前に試せる具体的な対処法を整理します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
