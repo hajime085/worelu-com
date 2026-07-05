@@ -497,6 +497,16 @@ FLOATING_ADS = {
     # black-kigyo-shindan はLV3・4に既存案件2つのため除外
 }
 
+# 新規記事のフローティング広告は worelu-operator が content/floating-ads-auto.yaml に
+# 自動追記する（上記 FLOATING_ADS は手動キュレーション分としてこのファイルからは変更しない）。
+# 同じ slug が両方にある場合は上記の手動キュレーション分を優先する。
+_AUTO_FLOATING_ADS_PATH = CONTENT_DIR / "floating-ads-auto.yaml"
+if _AUTO_FLOATING_ADS_PATH.exists():
+    with open(_AUTO_FLOATING_ADS_PATH, encoding="utf-8") as _f:
+        _auto_floating_ads = yaml.safe_load(_f) or {}
+    for _slug, _ad in _auto_floating_ads.items():
+        FLOATING_ADS.setdefault(_slug, _ad)
+
 
 def build_articles(env: Environment, articles: list):
     """記事HTMLを生成"""
