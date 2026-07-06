@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 05 Jul 2026 11:53:21 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 07:43:43 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
@@ -13,6 +13,13 @@
       <guid>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</guid>
       <description><![CDATA[仕事に燃え尽きて何もしたくない、動けない――それは甘えではなく心のエネルギーが尽きたサインかもしれません。今日できる休み方から受診の目安、休職という選択肢まで、回復への道筋を整理します。]]></description>
       <pubDate>2026-07-03</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[看護師を辞めたいのは甘えじゃない。限界サインと後悔しない選択肢]]></title>
+      <link>https://worelu.com/articles/quit/kangoshi-yametai/</link>
+      <guid>https://worelu.com/articles/quit/kangoshi-yametai/</guid>
+      <description><![CDATA[夜勤や人間関係、命を預かる重圧で「看護師を辞めたい」と感じるのは甘えではありません。心身の限界サインの見極め方から、派遣・パート含む6つの働き方の選択肢、傷病手当金の活用法、後悔しない辞め方までを整理します。]]></description>
+      <pubDate>2026-07-01</pubDate>
     </item>
     <item>
       <title><![CDATA[ストレスで嘔吐するのはなぜ？体からのSOSサインと受診の目安]]></title>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/burnout/kyushoku-1month/</link>
       <guid>https://worelu.com/articles/burnout/kyushoku-1month/</guid>
       <description><![CDATA[休職1ヶ月の変化・傷病手当金の計算方法・過ごし方・復職か退職かの判断基準を具体的に整理します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する]]></title>
-      <link>https://worelu.com/articles/burnout/moeyuki-selfcheck/</link>
-      <guid>https://worelu.com/articles/burnout/moeyuki-selfcheck/</guid>
-      <description><![CDATA[燃え尽き症候群かどうかを10問のセルフチェックで確認。結果別の対処法と診断ツールへの導線を整理します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
