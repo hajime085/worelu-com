@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 06 Jul 2026 07:43:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 12:40:12 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
@@ -13,6 +13,13 @@
       <guid>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</guid>
       <description><![CDATA[仕事に燃え尽きて何もしたくない、動けない――それは甘えではなく心のエネルギーが尽きたサインかもしれません。今日できる休み方から受診の目安、休職という選択肢まで、回復への道筋を整理します。]]></description>
       <pubDate>2026-07-03</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[ADHDで仕事できなくて辛い。「できない」の正体と今日からの働き方]]></title>
+      <link>https://worelu.com/articles/stress/adhd-shigoto-dekinai-tsurai/</link>
+      <guid>https://worelu.com/articles/stress/adhd-shigoto-dekinai-tsurai/</guid>
+      <description><![CDATA[ADHDで仕事がうまくいかず、辛さや自己嫌悪が積み重なっているあなたへ。「できない」の仕組みを理解することで、特性に合った働き方の工夫・相談先・環境を変える選択肢まで丁寧に解説します。]]></description>
+      <pubDate>2026-07-02</pubDate>
     </item>
     <item>
       <title><![CDATA[看護師を辞めたいのは甘えじゃない。限界サインと後悔しない選択肢]]></title>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/burnout/burnout-symptoms/</link>
       <guid>https://worelu.com/articles/burnout/burnout-symptoms/</guid>
       <description><![CDATA[バーンアウト（燃え尽き症候群）の症状を初期・中期・重症期別にチェックリストで確認。自分の状態を客観的に把握して、段階的な回復法を解説します。]]></description>
-      <pubDate>2026-06-17</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[休職1ヶ月でどう変わる？お金・過ごし方・復職の判断を整理する]]></title>
-      <link>https://worelu.com/articles/burnout/kyushoku-1month/</link>
-      <guid>https://worelu.com/articles/burnout/kyushoku-1month/</guid>
-      <description><![CDATA[休職1ヶ月の変化・傷病手当金の計算方法・過ごし方・復職か退職かの判断基準を具体的に整理します。]]></description>
       <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
