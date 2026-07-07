@@ -5,13 +5,20 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 07 Jul 2026 12:40:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 22:46:03 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
       <link>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</link>
       <guid>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</guid>
       <description><![CDATA[仕事に燃え尽きて何もしたくない、動けない――それは甘えではなく心のエネルギーが尽きたサインかもしれません。今日できる休み方から受診の目安、休職という選択肢まで、回復への道筋を整理します。]]></description>
+      <pubDate>2026-07-03</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[適応障害とADHDが重なるとき。見分け方と今できること]]></title>
+      <link>https://worelu.com/articles/burnout/tekio-shogai-adhd/</link>
+      <guid>https://worelu.com/articles/burnout/tekio-shogai-adhd/</guid>
+      <description><![CDATA[適応障害とADHDは症状が重なりやすく、「どちらかわからない」という悩みは珍しくありません。両者の違いと見分け方、診断の進め方から職場での具体的な工夫まで、一緒に整理していきましょう。]]></description>
       <pubDate>2026-07-03</pubDate>
     </item>
     <item>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/stress/shokuba-ningen-kankei-tsukareta/</guid>
       <description><![CDATA[職場の人間関係で疲れる原因はあなたの性格ではなく、環境とのミスマッチです。上司・同僚・部下別の対処法と、心を守る方法を解説します。]]></description>
       <pubDate>2026-06-19</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法]]></title>
-      <link>https://worelu.com/articles/burnout/burnout-symptoms/</link>
-      <guid>https://worelu.com/articles/burnout/burnout-symptoms/</guid>
-      <description><![CDATA[バーンアウト（燃え尽き症候群）の症状を初期・中期・重症期別にチェックリストで確認。自分の状態を客観的に把握して、段階的な回復法を解説します。]]></description>
-      <pubDate>2026-06-17</pubDate>
     </item>
   </channel>
 </rss>
