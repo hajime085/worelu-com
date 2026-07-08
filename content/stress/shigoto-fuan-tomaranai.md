@@ -22,26 +22,26 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
-## 仕事の不安が止まらない...それは「気の持ちよう」じゃないかもしれない
+「また不安になってる」と気づいても、止められない。そんな状態がずっと続いているなら、まず伝えたいことがあります。
+
+それは、あなたが「メンタルが弱い」わけじゃないということです。仕事の不安が止まらない状態は、心と脳が処理しきれない負荷を抱えているサインかもしれません。
 
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
   <div class="speech-bubble">「仕事のことが頭から離れない。休日もずっと考えてしまって、なんで自分はこんなに不安なんだろうって、自分が嫌になってきます」</div>
 </div>
 
-「また不安になってる」と気づいても、止められない。そんな状態がずっと続いているなら、まず伝えたいことがあります。
-
-それは、あなたが「メンタルが弱い」わけじゃないということです。仕事の不安が止まらない状態は、心と脳が処理しきれない負荷を抱えているサインかもしれません。
-
 仕事に向かう電車の中でも、昼休みのふとした瞬間にも。「あの件、うまくいくだろうか」「もし失敗したら」という思考が勝手に浮かんでくる。気づいたら同じことをぐるぐると考え続けている。
 
 「考えすぎだよ」と言われても、止め方がわからない。そうですよね。不安がループするには、ちゃんと理由があるんです。
+
+[TOC]
 
 ## なぜ仕事の不安はループしてしまうのか
 
 不安は「敵」ではありません。もともとは、危険から身を守るために脳が持っている機能です。ただ、その機能が「過剰に」働いてしまうと、止まらない不安のループが生まれます。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:28px">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>不安のループ図解</title>
   <rect width="680" height="300" fill="#F8FAFC" rx="12"/>
   <text x="340" y="38" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">仕事の不安がループする仕組み</text>
@@ -119,7 +119,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 
 「わかってる、でも止められない」と思う方もいるかもしれません。そうですよね。頭でわかっていても不安は止まらない。だからここでは「考え方を変えよう」ではなく、行動として試せることを紹介します。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:28px">
 <svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%"><title>不安に対処する5つのアプローチ</title>
   <rect width="680" height="330" fill="#F8FAFC" rx="12"/>
   <text x="340" y="36" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">不安のループを断ち切る5つのアプローチ</text>
@@ -186,11 +186,15 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 
 不安が止まらない状態が2週間以上続いているなら、少し立ち止まって確認してほしいことがあります。下の表を参考に、今の自分の状態を確認してみてください。
 
+<div style="overflow-x: auto;">
+
 | チェック項目 | 注意が必要なサイン | まだ余裕があるサイン |
 |---|---|---|
 | 睡眠 | 毎晩眠れない・夜中に何度も目が覚める | たまに眠れない夜がある程度 |
 | 食欲 | ほとんど食べられない・明らかな過食がある | やや変化はあるが食べられている |
 | 仕事への影響 | ミスが増えた・集中できない状態が続く | 少し効率は落ちているが何とか続けられる |
+
+</div>
 | 気持ち | 楽しいことが何もない・将来が真っ暗に見える | 疲れているがたまに楽しめる時間がある |
 
 「注意が必要なサイン」が複数当てはまる場合、一人で解決しようとせず医療機関やカウンセラーへの相談を検討してみてください。それは弱さではなく、自分を守るための判断です。

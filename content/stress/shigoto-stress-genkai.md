@@ -11,14 +11,6 @@ eyecatch: ""
 canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 ---
 
-## 「仕事のストレスが限界」と検索したあなたへ。まず伝えたいこと
-
-深夜にベッドの中で、あるいは出勤前の重い体を抱えたまま、「仕事 ストレス 限界」と検索している――もしそんな状態なら、まず知っておいてほしいことがあります。**「限界かもしれない」と自分で検索している時点で、心と体はすでに相当のダメージを受けている可能性が高い**ということです。人は余裕があるうちは、自分の限界を調べたりしません。
-
-この記事は、あなたの状態が「甘えかどうか」を裁くためのものではありません。今の心身の状態を整理して、「応急処置 → 受診の検討 → 休む・辞めるの判断」という次の一歩を決めるための道筋をまとめたものです。読み終わる頃に、「次に何をすればいいか」が少しでも見えていれば十分です。
-
-ひとつだけ、先にお願いがあります。もし今、「消えてしまいたい」「死にたい」という気持ちが頭をよぎることがあるなら、この記事を読み進める前に、専門の相談窓口や医療機関につながってください。**こころの健康相談統一ダイヤル（0570-064-556）**や、厚生労働省の「[まもろうよ こころ](https://www.mhlw.go.jp/mamorouyokokoro/)」で案内されている電話・SNS相談には、夜間でもつながる窓口があります。あなたの命より優先される仕事は存在しません。
-
 <style>
 .character-box { display: flex; align-items: flex-start; gap: 16px; margin: 20px 0 24px; }
 .character-img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; }
@@ -30,12 +22,20 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
+深夜にベッドの中で、あるいは出勤前の重い体を抱えたまま、「仕事 ストレス 限界」と検索している――もしそんな状態なら、まず知っておいてほしいことがあります。**「限界かもしれない」と自分で検索している時点で、心と体はすでに相当のダメージを受けている可能性が高い**ということです。人は余裕があるうちは、自分の限界を調べたりしません。
+
+この記事は、あなたの状態が「甘えかどうか」を裁くためのものではありません。今の心身の状態を整理して、「応急処置 → 受診の検討 → 休む・辞めるの判断」という次の一歩を決めるための道筋をまとめたものです。読み終わる頃に、「次に何をすればいいか」が少しでも見えていれば十分です。
+
+ひとつだけ、先にお願いがあります。もし今、「消えてしまいたい」「死にたい」という気持ちが頭をよぎることがあるなら、この記事を読み進める前に、専門の相談窓口や医療機関につながってください。**こころの健康相談統一ダイヤル（0570-064-556）**や、厚生労働省の「[まもろうよ こころ](https://www.mhlw.go.jp/mamorouyokokoro/)」で案内されている電話・SNS相談には、夜間でもつながる窓口があります。あなたの命より優先される仕事は存在しません。
+
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
   <div class="speech-bubble">「もう何ヶ月もまともに眠れていない。朝は吐き気がするし、通勤電車の中で涙が出てきたこともある。でも、これくらいでつらいなんて甘えなんじゃないかって思ってしまって、誰にも言えない…」</div>
 </div>
 
 こうした状態は、決して「気の持ちよう」の問題ではないかもしれません。まずは、心と体にどんなサインが出ているのかを一緒に確認していきましょう。
+
+[TOC]
 
 ## 仕事のストレスが限界のとき、心と体に出るサイン
 
@@ -98,6 +98,8 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 
 「病院に行くほどではない」と感じている人ほど、目安を知っておくことに意味があります。一般に、次のような状態が続く場合は、医療機関への相談を検討する目安になるといわれています。
 
+<div style="overflow-x: auto;">
+
 | 状態 | 受診を検討する目安 |
 | --- | --- |
 | 不眠（寝つけない・途中で目が覚める） | 2週間以上続いている |
@@ -105,6 +107,8 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 | 気分の落ち込み・何も楽しめない | ほぼ毎日、2週間以上続いている |
 | 動悸・吐き気・頭痛などの身体症状 | 検査で異常がないのに繰り返す、仕事に支障が出ている |
 | 「消えたい」という考え | 期間を問わず、一度でもあれば早めに相談 |
+
+</div>
 
 これは自己診断のためのリストではなく、「この状態なら専門家に相談することが自然な選択肢になる」というラインを示したものです。当てはまるかどうか迷う段階で相談しても、まったく問題ありません。この「2週間」という期間は、公的機関の情報でも相談や受診を考える目安として示されているものです。症状や相談先についてより詳しく知りたい方は、国立精神・神経医療研究センターが運営する[こころの情報サイト](https://kokoro.ncnp.go.jp/)も参考にしてください。
 
@@ -118,7 +122,7 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 
 応急処置と受診の検討まで進んだら、最後は「この働き方を続けるかどうか」の判断です。ここで知っておいてほしいのは、休職も退職も、限界を超えてから仕方なく選ぶものではなく、**限界を超える前に検討してよい正当な選択肢**だということです。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:28px">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%" font-family="sans-serif"><title>限界を感じたときの3ステップ：応急処置、受診の検討、休む・辞めるの判断</title><rect x="0" y="0" width="680" height="340" fill="#F8FAFC" rx="12"/><text x="340" y="40" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E293B">限界を感じたときの道筋</text><rect x="40" y="70" width="600" height="70" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5" rx="10"/><text x="70" y="100" font-size="14" font-weight="bold" fill="#1E40AF">STEP 1　応急処置</text><text x="70" y="124" font-size="13" fill="#334155">距離を取る・睡眠と食事を確保する・一人で抱えない</text><path d="M340 140 L340 160" stroke="#94A3B8" stroke-width="2"/><path d="M334 154 L340 162 L346 154" fill="none" stroke="#94A3B8" stroke-width="2"/><rect x="40" y="165" width="600" height="70" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5" rx="10"/><text x="70" y="195" font-size="14" font-weight="bold" fill="#1E40AF">STEP 2　受診の検討</text><text x="70" y="219" font-size="13" fill="#334155">不眠・食欲不振・落ち込みが2週間以上続くなら専門家へ相談</text><path d="M340 235 L340 255" stroke="#94A3B8" stroke-width="2"/><path d="M334 249 L340 257 L346 249" fill="none" stroke="#94A3B8" stroke-width="2"/><rect x="40" y="260" width="600" height="70" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5" rx="10"/><text x="70" y="290" font-size="14" font-weight="bold" fill="#166534">STEP 3　休む・辞めるの判断</text><text x="70" y="314" font-size="13" fill="#334155">回復してから、休職・異動・退職などを落ち着いて選ぶ</text></svg>
 </div>
 
