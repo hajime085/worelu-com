@@ -5,7 +5,7 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 07 Jul 2026 22:46:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 04:37:15 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
@@ -19,6 +19,13 @@
       <link>https://worelu.com/articles/burnout/tekio-shogai-adhd/</link>
       <guid>https://worelu.com/articles/burnout/tekio-shogai-adhd/</guid>
       <description><![CDATA[適応障害とADHDは症状が重なりやすく、「どちらかわからない」という悩みは珍しくありません。両者の違いと見分け方、診断の進め方から職場での具体的な工夫まで、一緒に整理していきましょう。]]></description>
+      <pubDate>2026-07-03</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[仕事の不安が止まらない。その焦りを手放すために知ってほしいこと]]></title>
+      <link>https://worelu.com/articles/stress/shigoto-fuan-tomaranai/</link>
+      <guid>https://worelu.com/articles/stress/shigoto-fuan-tomaranai/</guid>
+      <description><![CDATA[仕事のことが頭から離れず、休日も焦りが続く…そんな不安のループを感じているなら、心と体が限界に近づいているサインかもしれません。不安がループする理由と、今日から試せる5つの対処法を解説します。]]></description>
       <pubDate>2026-07-03</pubDate>
     </item>
     <item>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/stress/shigoto-yaruki-denai/</link>
       <guid>https://worelu.com/articles/stress/shigoto-yaruki-denai/</guid>
       <description><![CDATA[「仕事のやる気が出ない…」「何だか体が重くて、仕事に集中できない」]]></description>
-      <pubDate>2026-06-19</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[職場の人間関係で疲れるのはなぜ？性格の問題じゃない、環境とのミスマッチ]]></title>
-      <link>https://worelu.com/articles/stress/shokuba-ningen-kankei-tsukareta/</link>
-      <guid>https://worelu.com/articles/stress/shokuba-ningen-kankei-tsukareta/</guid>
-      <description><![CDATA[職場の人間関係で疲れる原因はあなたの性格ではなく、環境とのミスマッチです。上司・同僚・部下別の対処法と、心を守る方法を解説します。]]></description>
       <pubDate>2026-06-19</pubDate>
     </item>
   </channel>
