@@ -66,6 +66,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
   <path d="M248 222 Q185 195 165 178" stroke="#94A3B8" stroke-width="1.5" fill="none" marker-end="url(#arr1)"/>
 </svg>
 </div>
+<div style="clear:both;margin-bottom:32px;"></div>
 
 ### 脳の「火災報知器」が過剰に反応している
 
@@ -142,6 +143,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
   <line x1="507" y1="210" x2="420" y2="238" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4,3"/>
 </svg>
 </div>
+<div style="clear:both;margin-bottom:32px;"></div>
 
 ### ① 「不安を書き出す」時間をあえて決める
 

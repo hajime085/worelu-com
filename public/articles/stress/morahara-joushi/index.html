@@ -1106,12 +1106,12 @@ window.diagCarouselScroll = function(dir) {
   #floating-ad {
     left: 50%;
     right: auto;
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     width: 92vw;
     max-width: 92vw;
     transform: translateX(-50%) translateY(20px);
   }
-  #floating-ad.show { transform: translateX(-50%) translateY(0); }
+  #floating-ad.show { display: block; opacity: 1; transform: translateX(-50%) translateY(0); }
   #floating-ad-banner-wrap img.ad-banner { max-width: 100%; }
 }
 </style>

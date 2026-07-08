@@ -448,6 +448,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <path d="M248 222 Q185 195 165 178" stroke="#94A3B8" stroke-width="1.5" fill="none" marker-end="url(#arr1)"/>
 </svg>
 </div>
+<div style="clear:both;margin-bottom:32px;"></div>
 
 <h3 id="_2">脳の「火災報知器」が過剰に反応している</h3>
 <p>人間の脳には、扁桃体（へんとうたい）という部位があります。感情処理の中枢で、いわば「危険を察知する火災報知器」のようなものです。</p>
@@ -507,6 +508,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   <line x1="507" y1="210" x2="420" y2="238" stroke="#94A3B8" stroke-width="1" stroke-dasharray="4,3"/>
 </svg>
 </div>
+<div style="clear:both;margin-bottom:32px;"></div>
 
 <h3 id="1">① 「不安を書き出す」時間をあえて決める</h3>
 <p>不安を完全になくそうとするより、「この時間だけ考える」と決める方が楽になることがあります。</p>
@@ -1223,12 +1225,12 @@ window.diagCarouselScroll = function(dir) {
   #floating-ad {
     left: 50%;
     right: auto;
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
     width: 92vw;
     max-width: 92vw;
     transform: translateX(-50%) translateY(20px);
   }
-  #floating-ad.show { transform: translateX(-50%) translateY(0); }
+  #floating-ad.show { display: block; opacity: 1; transform: translateX(-50%) translateY(0); }
   #floating-ad-banner-wrap img.ad-banner { max-width: 100%; }
 }
 </style>
