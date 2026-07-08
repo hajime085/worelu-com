@@ -1301,10 +1301,6 @@ window.diagCarouselScroll = function(dir) {
 </div>
 <script>
 (function() {
-  var STORAGE_KEY = 'worelu-float-closed-shigoto-dekinai-tsurai';
-  try {
-    if (localStorage.getItem(STORAGE_KEY)) return;
-  } catch(e) {}
 
   var ad = document.getElementById('floating-ad');
   var closeBtn = document.getElementById('floating-ad-close');
@@ -1358,7 +1354,7 @@ window.diagCarouselScroll = function(dir) {
   closeBtn.addEventListener('click', function() {
     ad.classList.remove('show');
     adjustFsButton();
-    try { localStorage.setItem(STORAGE_KEY, '1'); } catch(e) {}
+
   });
 })();
 </script>

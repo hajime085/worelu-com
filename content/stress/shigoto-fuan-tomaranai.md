@@ -39,7 +39,9 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 
 不安は「敵」ではありません。もともとは、危険から身を守るために脳が持っている機能です。ただ、その機能が「過剰に」働いてしまうと、止まらない不安のループが生まれます。
 
+
 <div class="svg-lightbox-wrap">
+
 <svg width="680" height="300" viewBox="0 0 680 300" role="img" style="display:block;width:100%;height:auto;"><title>不安のループ図解</title>
   <rect width="680" height="300" fill="#F8FAFC" rx="12"/>
   <text x="340" y="38" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">仕事の不安がループする仕組み</text>
@@ -67,6 +69,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 </svg>
 </div>
 <div style="clear:both;margin-bottom:32px;"></div>
+
 
 ### 脳の「火災報知器」が過剰に反応している
 
@@ -118,7 +121,9 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 
 「わかってる、でも止められない」と思う方もいるかもしれません。そうですよね。頭でわかっていても不安は止まらない。だからここでは「考え方を変えよう」ではなく、行動として試せることを紹介します。
 
+
 <div class="svg-lightbox-wrap">
+
 <svg width="680" height="330" viewBox="0 0 680 330" role="img" style="display:block;width:100%;height:auto;"><title>不安に対処する5つのアプローチ</title>
   <rect width="680" height="330" fill="#F8FAFC" rx="12"/>
   <text x="340" y="36" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">不安のループを断ち切る5つのアプローチ</text>
@@ -144,6 +149,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 </svg>
 </div>
 <div style="clear:both;margin-bottom:32px;"></div>
+
 
 ### ① 「不安を書き出す」時間をあえて決める
 
