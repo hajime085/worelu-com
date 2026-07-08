@@ -22,16 +22,14 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
-## 仕事の不安が止まらない...それは「気の持ちよう」じゃないかもしれない
+「また不安になってる」と気づいても、止められない。そんな状態がずっと続いているなら、まず伝えたいことがあります。
+
+それは、あなたが「メンタルが弱い」わけじゃないということです。仕事の不安が止まらない状態は、心と脳が処理しきれない負荷を抱えているサインかもしれません。
 
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
   <div class="speech-bubble">「仕事のことが頭から離れない。休日もずっと考えてしまって、なんで自分はこんなに不安なんだろうって、自分が嫌になってきます」</div>
 </div>
-
-「また不安になってる」と気づいても、止められない。そんな状態がずっと続いているなら、まず伝えたいことがあります。
-
-それは、あなたが「メンタルが弱い」わけじゃないということです。仕事の不安が止まらない状態は、心と脳が処理しきれない負荷を抱えているサインかもしれません。
 
 仕事に向かう電車の中でも、昼休みのふとした瞬間にも。「あの件、うまくいくだろうか」「もし失敗したら」という思考が勝手に浮かんでくる。気づいたら同じことをぐるぐると考え続けている。
 
@@ -42,7 +40,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 不安は「敵」ではありません。もともとは、危険から身を守るために脳が持っている機能です。ただ、その機能が「過剰に」働いてしまうと、止まらない不安のループが生まれます。
 
 <div class="svg-lightbox-wrap">
-<svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>不安のループ図解</title>
+<svg width="100%" height="auto" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>不安のループ図解</title>
   <rect width="680" height="300" fill="#F8FAFC" rx="12"/>
   <text x="340" y="38" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">仕事の不安がループする仕組み</text>
   <ellipse cx="120" cy="150" rx="95" ry="48" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
@@ -120,7 +118,7 @@ canonical: https://worelu.com/articles/stress/shigoto-fuan-tomaranai/
 「わかってる、でも止められない」と思う方もいるかもしれません。そうですよね。頭でわかっていても不安は止まらない。だからここでは「考え方を変えよう」ではなく、行動として試せることを紹介します。
 
 <div class="svg-lightbox-wrap">
-<svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%"><title>不安に対処する5つのアプローチ</title>
+<svg width="100%" height="auto" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%"><title>不安に対処する5つのアプローチ</title>
   <rect width="680" height="330" fill="#F8FAFC" rx="12"/>
   <text x="340" y="36" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">不安のループを断ち切る5つのアプローチ</text>
   <rect x="20" y="58" width="305" height="62" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
