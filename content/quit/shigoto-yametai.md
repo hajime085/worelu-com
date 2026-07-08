@@ -11,6 +11,10 @@ eyecatch: ""
 canonical: https://worelu.com/articles/quit/shigoto-yametai/
 ---
 
+## 「仕事辞めたい」と検索したあなたへ——その気持ちは甘えではない
+
+「仕事辞めたい」と検索窓に打ち込むまでに、あなたはすでに何度も自分の気持ちと向き合ってきたのではないでしょうか。朝の通勤電車で気分が沈む。日曜の夜になると憂うつになる。ふとした瞬間に「もう無理かもしれない」と感じる。そんな状態が続いているなら、まず知っておいてほしいことがあります。仕事を辞めたいと感じること自体は、ごく自然な心の反応であり、あなたが弱いからでも、甘えているからでもありません。
+
 <style>
 .character-box { display: flex; align-items: flex-start; gap: 16px; margin: 20px 0 24px; }
 .character-img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; }
@@ -22,8 +26,6 @@ canonical: https://worelu.com/articles/quit/shigoto-yametai/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
-「仕事辞めたい」と検索窓に打ち込むまでに、あなたはすでに何度も自分の気持ちと向き合ってきたのではないでしょうか。朝の通勤電車で気分が沈む。日曜の夜になると憂うつになる。ふとした瞬間に「もう無理かもしれない」と感じる。そんな状態が続いているなら、まず知っておいてほしいことがあります。仕事を辞めたいと感じること自体は、ごく自然な心の反応であり、あなたが弱いからでも、甘えているからでもありません。
-
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
   <div class="speech-bubble">「毎朝、会社に行きたくない気持ちでいっぱいなんです。でも周りはみんな頑張っているし、これって自分が甘いだけなのかなって……」</div>
@@ -33,17 +35,13 @@ canonical: https://worelu.com/articles/quit/shigoto-yametai/
 
 この記事では、「気持ちの整理 → 心と体の限界サインの確認 → 辞めるか続けるかの判断 → 具体的な行動」という順番で、辞めたい気持ちへの向き合い方の全体像を解説します。なお、「そもそも自分の気持ちは甘えなのか」という疑問が頭から離れない方は、[「仕事辞めたい」は甘えじゃないと言える理由を深掘りした記事](/articles/quit/shigoto-yametai-amae/)をあわせて読んでみてください。
 
-[TOC]
-
-<div class="svg-lightbox-wrap" style="margin-bottom:28px">
+<div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>「仕事辞めたい」と感じたときの4つのステップ</title><rect x="0" y="0" width="680" height="340" fill="#F8FAFC" rx="12"/><text x="340" y="42" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1E293B">「仕事辞めたい」と感じたときの流れ</text><rect x="40" y="70" width="600" height="52" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/><text x="60" y="96" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E40AF">STEP 1  気持ちの整理</text><text x="60" y="114" font-family="sans-serif" font-size="12" fill="#334155">なぜ辞めたいのか、理由を言葉にする</text><rect x="40" y="136" width="600" height="52" rx="10" fill="#FEF2F2" stroke="#FECACA" stroke-width="1.5"/><text x="60" y="162" font-family="sans-serif" font-size="14" font-weight="bold" fill="#B91C1C">STEP 2  心と体の確認</text><text x="60" y="180" font-family="sans-serif" font-size="12" fill="#334155">限界サインが出ていたら、判断より先にケアを優先</text><rect x="40" y="202" width="600" height="52" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/><text x="60" y="228" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E40AF">STEP 3  判断</text><text x="60" y="246" font-family="sans-serif" font-size="12" fill="#334155">環境の問題か、一時的な波かを見極める</text><rect x="40" y="268" width="600" height="52" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/><text x="60" y="294" font-family="sans-serif" font-size="14" font-weight="bold" fill="#166534">STEP 4  行動</text><text x="60" y="312" font-family="sans-serif" font-size="12" fill="#334155">退職・休職・異動など、自分に合う選択肢を実行する</text></svg>
 </div>
 
 ## 仕事を辞めたくなる代表的な理由と、それぞれの背景
 
 「辞めたい」という気持ちは同じでも、背景にある理由は人それぞれです。理由によって取るべき対処は大きく変わるため、まずは自分のケースがどれに近いかを整理してみましょう。
-
-<div style="overflow-x: auto;">
 
 | 理由の類型 | よくある状況 | 対処の方向性 |
 | --- | --- | --- |
@@ -52,8 +50,6 @@ canonical: https://worelu.com/articles/quit/shigoto-yametai/
 | 労働環境の問題 | 長時間労働、休日出勤、サービス残業が常態化 | 労働環境の記録、社内外への相談、転職の検討 |
 | 仕事内容のミスマッチ | 業務にやりがいを感じない、向いていない気がする | 適性の棚卸し、社内での役割変更、キャリアの再設計 |
 | 心身の不調 | 疲れが取れない、眠れない、気力が湧かない | 何よりも先に休養と専門機関への相談 |
-
-</div>
 
 たとえば人間関係が原因なら、部署異動で解決する可能性があります。評価への不満なら、自分の市場価値を客観的に知ることが次の一歩になるかもしれません。一方で、長時間労働やハラスメントのように会社の構造そのものに原因がある場合は、自分の努力だけで状況を変えることは難しいものです。
 

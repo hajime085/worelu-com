@@ -11,6 +11,10 @@ eyecatch: ""
 canonical: https://worelu.com/articles/stress/stress-outo/
 ---
 
+## ストレスで嘔吐は起こる？心と体のつながり
+
+通勤電車の中で急に吐き気がこみ上げてくる。会社に近づくにつれて胃がむかむかして、駅のトイレで吐いてしまった。そんな経験が続くと、「自分の体はどうなってしまったんだろう」と不安になりますよね。まず知っておいてほしいのは、強いストレスがきっかけで吐き気や嘔吐が起こることは、決して珍しくないと考えられている、ということです。
+
 <style>
 .character-box { display: flex; align-items: flex-start; gap: 16px; margin: 20px 0 24px; }
 .character-img { width: 80px; height: 80px; object-fit: contain; flex-shrink: 0; }
@@ -22,20 +26,14 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
-通勤電車の中で急に吐き気がこみ上げてくる。会社に近づくにつれて胃がむかむかして、駅のトイレで吐いてしまった。そんな経験が続くと、「自分の体はどうなってしまったんだろう」と不安になりますよね。まず知っておいてほしいのは、強いストレスがきっかけで吐き気や嘔吐が起こることは、決して珍しくないと考えられている、ということです。
-
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える男性" class="character-img">
   <div class="speech-bubble">「月曜の朝になると必ず吐き気がして、今日はとうとう駅のトイレで吐いてしまった。熱もないし、週末は平気なのに…。これって気のせいなんだろうか」</div>
 </div>
 
-[TOC]
-
-## ストレスで嘔吐は起こる？心と体のつながり
-
 人の体には、自分の意思とは関係なく内臓の働きを調整している「自律神経」という仕組みがあります。脳と胃腸はこの自律神経を通じて密接につながっているとされ、強い緊張や不安、プレッシャーが続くと、胃腸の動きや胃酸の分泌に影響が及び、吐き気やむかつき、実際の嘔吐として表れることがあると考えられています。「大事なプレゼンの前に胃が痛くなる」「緊張するとお腹を壊す」のと同じように、嘔吐もまた、心の負荷が体の症状として表れたものかもしれないのです。
 
-<div class="svg-lightbox-wrap" style="margin-bottom:28px">
+<div class="svg-lightbox-wrap">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>ストレスと吐き気がつながる仕組みのイメージ図</title><rect x="0" y="0" width="680" height="340" fill="#F8FAFC" rx="12"/><text x="340" y="42" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1E293B" text-anchor="middle">ストレスと吐き気がつながる仕組み（イメージ）</text><rect x="28" y="90" width="180" height="110" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/><text x="118" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E40AF" text-anchor="middle">強いストレス</text><text x="118" y="154" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">仕事のプレッシャー</text><text x="118" y="174" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">人間関係・不安</text><path d="M216 145 L246 145" stroke="#94A3B8" stroke-width="2.5" fill="none"/><path d="M246 145 l-8 -5 v10 z" fill="#94A3B8"/><rect x="254" y="90" width="180" height="110" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/><text x="344" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">自律神経の乱れ</text><text x="344" y="154" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">緊張状態が続き</text><text x="344" y="174" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">内臓の調整が不安定に</text><path d="M442 145 L472 145" stroke="#94A3B8" stroke-width="2.5" fill="none"/><path d="M472 145 l-8 -5 v10 z" fill="#94A3B8"/><rect x="480" y="90" width="180" height="110" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/><text x="570" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#166534" text-anchor="middle">胃腸への影響</text><text x="570" y="154" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">胃の動きの変化など</text><text x="570" y="174" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">吐き気・嘔吐として出現</text><rect x="28" y="240" width="632" height="64" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/><text x="344" y="266" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">吐き気や嘔吐は「気のせい」ではなく、体が発している反応です</text><text x="344" y="290" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">ただし原因はさまざま。自己判断で決めつけず、続くときは医療機関へ</text></svg>
 </div>
 
@@ -47,8 +45,6 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 
 セルフケアの話に入る前に、まず「迷わず受診してほしい状態」からお伝えします。次のような症状がある場合は、様子を見ずに、できるだけ早く医療機関に相談してください。夜間や休日であれば、救急相談窓口（[救急安心センター事業「#7119」](https://www.fdma.go.jp/mission/enrichment/appropriate/appropriate007.html)など。地域により実施状況が異なります）を利用する方法もあります。
 
-<div style="overflow-x: auto;">
-
 | 症状 | 補足 |
 | --- | --- |
 | 吐いたものに血が混じる、黒っぽいものを吐いた | 消化管からの出血の可能性が否定できません |
@@ -56,8 +52,6 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 | 嘔吐が止まらない、水分がまったく取れない | 脱水が進むと危険な状態になりえます |
 | 短期間で体重が明らかに減っている | 継続的な検査・治療が必要な場合があります |
 | 意識がぼんやりする、めまいや立ちくらみが強い | 一人で我慢せず、周囲の助けも借りてください |
-
-</div>
 
 上記ほどの緊急性はなくても、吐き気や嘔吐が数日以上続いている、繰り返しているという場合は、まず内科や消化器内科で相談するのが一般的な流れです。体の検査で大きな異常が見つからず、ストレスや気分の落ち込みが強いと感じる場合には、心療内科や精神科といった心の専門家に相談する道筋もあります。「どちらに行けばいいか分からない」ときは、かかりつけ医やお近くの内科でその旨を伝えれば、適切な相談先につないでもらえることが多いでしょう。
 
