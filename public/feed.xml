@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Fri, 10 Jul 2026 02:44:32 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 08:12:48 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[HSPあるある仕事編。繊細さんが職場で感じる困りごとと対処法]]></title>
+      <link>https://worelu.com/articles/burnout/hsp-aruaru-shigoto/</link>
+      <guid>https://worelu.com/articles/burnout/hsp-aruaru-shigoto/</guid>
+      <description><![CDATA[HSPが仕事でよく感じる「あるある」を具体的に解説。感覚過敏・気疲れ・ミスを引きずる感覚など、繊細さんが職場で消耗しやすい理由と、少し楽になるヒントを紹介します。]]></description>
+      <pubDate>2026-07-05</pubDate>
+    </item>
     <item>
       <title><![CDATA[仕事に燃え尽きて何もしたくない…動けないのは甘えじゃないサイン]]></title>
       <link>https://worelu.com/articles/burnout/moetsukita-nanimo-shitakunai/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/stress/asa-shigoto-ikitakunai/</link>
       <guid>https://worelu.com/articles/stress/asa-shigoto-ikitakunai/</guid>
       <description><![CDATA[毎朝、目覚ましが鳴るたびに「仕事に行きたくない…」と感じていませんか？ベッドから起き上がるのが億劫で、体が鉛のように重く、会社に向かう足取りもなぜか重い。そんな気持ちは、誰しも一度は経験することかもしれません。しかし、それが「今日だけ」の一]]></description>
-      <pubDate>2026-06-19</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事のやる気が出ないのはなぜ？「怠け」じゃない3つの原因と対処法]]></title>
-      <link>https://worelu.com/articles/stress/shigoto-yaruki-denai/</link>
-      <guid>https://worelu.com/articles/stress/shigoto-yaruki-denai/</guid>
-      <description><![CDATA[「仕事のやる気が出ない…」「何だか体が重くて、仕事に集中できない」]]></description>
       <pubDate>2026-06-19</pubDate>
     </item>
   </channel>
