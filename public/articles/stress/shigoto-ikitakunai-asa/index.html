@@ -1289,7 +1289,15 @@ window.diagCarouselScroll = function(dir) {
     transform: translateX(-50%) translateY(20px);
   }
   #floating-ad.show { display: block; opacity: 1; transform: translateX(-50%) translateY(0); }
-  #floating-ad-banner-wrap img.ad-banner { max-width: 100%; }
+  #floating-ad-banner-wrap {
+    max-height: 100px;
+    overflow: hidden;
+  }
+  #floating-ad-banner-wrap img.ad-banner {
+    max-width: 100%;
+    max-height: 90px;
+    object-fit: contain;
+  }
 }
 </style>
 <div id="floating-ad">
