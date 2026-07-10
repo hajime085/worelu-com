@@ -1248,6 +1248,51 @@ window.diagCarouselScroll = function(dir) {
 .worelu-checklist li:last-child { border-bottom: none; }
 .worelu-checklist li::before { content: '□'; position: absolute; left: 6px; top: 8px; color: #D97706; font-size: 15px; font-weight: bold; }
 .worelu-checklist.checked li::before { content: '✔'; color: #16A34A; }
+/* Timeline */
+.worelu-timeline { margin: 28px 0; padding-left: 20px; border-left: 3px solid var(--blue-mid); }
+.worelu-timeline-item { position: relative; padding: 0 0 24px 20px; }
+.worelu-timeline-item:last-child { padding-bottom: 0; }
+.worelu-timeline-marker { position: absolute; left: -28px; top: 4px; width: 13px; height: 13px; background: var(--blue); border-radius: 50%; border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--blue); }
+.worelu-timeline-content { }
+.worelu-timeline-label { font-size: 12px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+.worelu-timeline-text { font-size: 14px; line-height: 1.75; color: var(--text-2); }
+/* Step */
+.worelu-step { margin: 28px 0; display: flex; flex-direction: column; gap: 10px; }
+.worelu-step-item { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.worelu-step-num { flex-shrink: 0; width: 30px; height: 30px; background: var(--blue); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+.worelu-step-body { flex: 1; }
+.worelu-step-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.worelu-step-desc { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+/* ProsCons */
+.worelu-pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0; }
+@media (max-width: 480px) { .worelu-pros-cons { grid-template-columns: 1fr; } }
+.worelu-pros { background: #F0FDF4; border: 1.5px solid #86EFAC; border-radius: 10px; padding: 14px 16px; }
+.worelu-cons { background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 10px; padding: 14px 16px; }
+.worelu-pros-title { font-size: 13px; font-weight: 700; color: #14532D; margin-bottom: 8px; display: flex; align-items: center; gap: 4px; }
+.worelu-pros-title::before { content: '○'; }
+.worelu-cons-title { font-size: 13px; font-weight: 700; color: #9F1239; margin-bottom: 8px; display: flex; align-items: center; gap: 4px; }
+.worelu-cons-title::before { content: '×'; }
+.worelu-pros ul, .worelu-cons ul { list-style: none; padding: 0; margin: 0; }
+.worelu-pros li, .worelu-cons li { font-size: 13px; line-height: 1.75; padding: 3px 0 3px 14px; position: relative; color: var(--text-2); }
+.worelu-pros li::before { content: '・'; position: absolute; left: 0; color: #16A34A; }
+.worelu-cons li::before { content: '・'; position: absolute; left: 0; color: #E11D48; }
+/* DecisionTree */
+.worelu-decision { margin: 28px 0; background: var(--blue-soft); border: 1.5px solid var(--blue-mid); border-radius: 10px; padding: 20px; }
+.worelu-decision-q { font-size: 15px; font-weight: 700; color: #1E3A5F; margin-bottom: 16px; text-align: center; }
+.worelu-decision-branches { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .worelu-decision-branches { grid-template-columns: 1fr; } }
+.worelu-decision-branch { border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.worelu-decision-branch.yes { background: #F0FDF4; border: 1px solid #86EFAC; }
+.worelu-decision-branch.no { background: #FFF1F2; border: 1px solid #FECDD3; }
+.worelu-decision-label { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; }
+.worelu-decision-branch.yes .worelu-decision-label { color: #16A34A; }
+.worelu-decision-branch.no .worelu-decision-label { color: #E11D48; }
+.worelu-decision-result { font-size: 13px; font-weight: 600; color: var(--text-2); line-height: 1.6; }
+/* CTA */
+.worelu-cta { background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%); border-radius: 14px; padding: 24px 20px; margin: 32px 0; text-align: center; }
+.worelu-cta-text { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.6; margin-bottom: 16px; }
+.worelu-cta-btn { display: inline-block; background: #fff; color: #1E3A5F; font-size: 14px; font-weight: 800; padding: 12px 28px; border-radius: 50px; text-decoration: none; letter-spacing: 0.02em; transition: opacity 200ms; }
+.worelu-cta-btn:hover { opacity: 0.88; }
 </style>
 
 <style>
