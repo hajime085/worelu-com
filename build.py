@@ -14,6 +14,7 @@ Worelu ビルドスクリプト
 """
 
 import os
+import re
 import sys
 import shutil
 import yaml
@@ -21,6 +22,18 @@ import markdown
 from datetime import datetime, timezone
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
+
+# Markdown内の[text](/url/)リンクを<a>タグに変換（pre/code/scriptブロック内はスキップ）
+_MD_LINK_RE = re.compile(r'\[([^\[\]\n]+)\]\((/[^)\s]+)\)')
+_SKIP_BLOCK_RE = re.compile(r'(<(?:pre|code|script)[^>]*>.*?</(?:pre|code|script)>)', re.DOTALL | re.IGNORECASE)
+
+
+def _md_links_to_html(html: str) -> str:
+    parts = _SKIP_BLOCK_RE.split(html)
+    return ''.join(
+        part if i % 2 else _MD_LINK_RE.sub(r'<a href="\2">\1</a>', part)
+        for i, part in enumerate(parts)
+    )
 
 # ===== 設定 =====
 BASE_URL = "https://worelu.com"
@@ -153,6 +166,7 @@ def parse_markdown(filepath: Path) -> dict:
     body_md = parts[2].strip()
     md = markdown.Markdown(extensions=["extra", "toc"])
     body_html = md.convert(body_md)
+    body_html = _md_links_to_html(body_html)
 
     # ① 本文中の重複リンク・誘導文を除去
     import re as _re
