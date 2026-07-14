@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 14 Jul 2026 03:25:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 10:29:02 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[ストレスで胃炎になるのはなぜ？胃が痛い原因と今日からの対処法]]></title>
+      <link>https://worelu.com/articles/stress/stress-ien/</link>
+      <guid>https://worelu.com/articles/stress/stress-ien/</guid>
+      <description><![CDATA[仕事のストレスで胃が痛い、胸やけがする、食欲がわかない。そのつらさはストレス性胃炎のサインかもしれません。なぜストレスで胃が荒れるのか、対処法と受診の目安をわかりやすく解説します。]]></description>
+      <pubDate>2026-07-09</pubDate>
+    </item>
     <item>
       <title><![CDATA[HSPあるある仕事編。繊細さんが職場で感じる困りごとと対処法]]></title>
       <link>https://worelu.com/articles/burnout/hsp-aruaru-shigoto/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/stress/shigoto-genkai-sign/</guid>
       <description><![CDATA[「もしかして、私、もう限界なのかもしれない…」]]></description>
       <pubDate>2026-06-20</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[朝、仕事に行きたくないのはなぜ？「今日だけ」と「ずっとつらい」の境界線]]></title>
-      <link>https://worelu.com/articles/stress/asa-shigoto-ikitakunai/</link>
-      <guid>https://worelu.com/articles/stress/asa-shigoto-ikitakunai/</guid>
-      <description><![CDATA[毎朝、目覚ましが鳴るたびに「仕事に行きたくない…」と感じていませんか？ベッドから起き上がるのが億劫で、体が鉛のように重く、会社に向かう足取りもなぜか重い。そんな気持ちは、誰しも一度は経験することかもしれません。しかし、それが「今日だけ」の一]]></description>
-      <pubDate>2026-06-19</pubDate>
     </item>
   </channel>
 </rss>
