@@ -40,7 +40,7 @@ body{background:var(--white);color:var(--text);font-family:'Hiragino Sans','Yu G
 a{text-decoration:none;color:inherit}
 
 /* HEADER */
-.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;box-sizing:border-box;flex-wrap:wrap;gap:8px}
 .hdr-logo{font-size:24px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
 .hdr-logo em{color:var(--blue);font-style:normal}
 .hdr-logo-sub{font-size:10px;color:#94A3B8;margin-top:1px}
@@ -235,7 +235,7 @@ a{text-decoration:none;color:inherit}
   .footer-nav-group{gap:24px}
   .hero-h1{font-size:28px}
 }
-</style>
+@media(max-width:860px){body{font-size:18px}}.hdr-logo{font-size:26px!important}@media(max-width:600px){body{font-size:20px}}</style>
 </head>
 <body>
 
