@@ -36,11 +36,11 @@
   --white:#FFFFFF;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--white);color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
+body{background:var(--white);color:var(--text);padding-top:72px;font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
 a{text-decoration:none;color:inherit}
 
 /* HEADER */
-.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;box-sizing:border-box;flex-wrap:wrap;gap:8px}
+.hdr{position:fixed;top:0;width:100%;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;box-sizing:border-box;flex-wrap:wrap;gap:8px}
 .hdr-logo{font-size:28px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
 .hdr-logo em{color:var(--blue);font-style:normal}
 .hdr-logo-sub{font-size:14px;color:#94A3B8;margin-top:1px}
@@ -61,9 +61,9 @@ a{text-decoration:none;color:inherit}
 /* HERO */
 .hero{padding:88px 48px 80px;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;max-width:1120px;margin:0 auto}
 .hero-eyebrow{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:0.12em;margin-bottom:20px}
-.hero-h1{font-size:clamp(28px,3.6vw,44px);font-weight:900;color:var(--text);line-height:1.22;letter-spacing:-0.03em;margin-bottom:20px}
+.hero-h1{font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--text);line-height:1.22;letter-spacing:-0.03em;margin-bottom:20px}
 .hero-h1 em{color:var(--blue);font-style:normal}
-.hero-sub{font-size:16px;color:var(--text2);line-height:1.9;margin-bottom:32px}
+.hero-sub{font-size:18px;color:var(--text2);line-height:1.9;margin-bottom:32px}
 .hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px 30px;border-radius:8px}
 .btn-primary:hover{background:#1D4ED8;color:#fff}
@@ -267,7 +267,7 @@ a{text-decoration:none;color:inherit}
 <section style="border-bottom:1px solid var(--line)">
   <div class="hero">
     <div>
-      <div class="hero-eyebrow">WORELU — SELF-CARE MEDIA</div>
+      <div class="hero-eyebrow"></div>
       <h1 class="hero-h1">仕事がつらい。<br><em>AIストレス診断</em>で、<br>今の状態を知ろう。</h1>
       <p class="hero-sub">その悩み、一人で抱え込まないでください。<br>AIストレス診断とセルフケア記事で、<br>今の状態を一緒に整理します。</p>
       <div class="hero-actions">
