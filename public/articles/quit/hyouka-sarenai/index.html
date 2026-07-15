@@ -306,6 +306,24 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   * { box-sizing: border-box; }
 }
 
+
+@media (max-width: 860px) {
+  /* ヘッダー */
+  .site-logo { font-size: 26px !important; }
+  .site-tagline, [style*="font-size:10px"], [style*="font-size: 10px"] { font-size: 14px !important; }
+  /* フッター */
+  .footer-logo { font-size: 22px !important; }
+  .footer-tagline, [style*="font-size:13px"] { font-size: 16px !important; }
+  /* 人気記事 */
+  .sb-item-ttl, .related-text, .also-read-text { font-size: 17px !important; }
+  .sb-card-ttl, .related-title, .also-read-title { font-size: 14px !important; }
+  /* パンくず */
+  .breadcrumb, .breadcrumb a { font-size: 14px !important; }
+  /* 記事メタ情報 */
+  .hero-meta, .hero-meta-row, .hero-meta * { font-size: 14px !important; }
+  /* アフィリエイト注記 */
+  p[style*="font-size:11px"], [style*="font-size: 11px"] { font-size: 14px !important; }
+}
 </style>
 <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
 </head>
