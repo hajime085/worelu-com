@@ -84,13 +84,17 @@
   .site-header {
     background: var(--panel);
     border-bottom: 1px solid var(--line);
-    padding: 0 32px;
-    height: 64px;
+    padding: 10px 16px;
+    height: auto;
+    min-height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-  .site-logo { font-size: 22px; font-weight: 900; color: var(--text); letter-spacing: -0.04em; text-decoration: none; }
+  .site-logo { font-size: 26px; font-weight: 900; color: var(--text); letter-spacing: -0.04em; text-decoration: none; }
   .site-logo em { color: var(--accent); font-style: normal; }
   .site-tagline { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .logo-read { font-size: 13px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
@@ -571,6 +575,14 @@
     .btn, .wide-btn { width: 100%; }
     .chat-form { grid-template-columns: 1fr; }
     .bubble { max-width: 100%; }
+  }
+
+  @media (max-width: 860px) {
+    body { font-size: 18px; }
+    .site-logo { font-size: 26px !important; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 20px; }
   }
 </style>
 </head>
