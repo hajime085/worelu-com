@@ -43,7 +43,7 @@
   --white: #FFFFFF;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; overflow-x: clip; }
+body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; overflow-x: clip; font-size: 16px; }
 
 /* HEADER */
 .site-header { background: var(--white); border-bottom: 1px solid var(--line); height: 56px; display: flex; align-items: center; padding: 0 28px; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
@@ -72,8 +72,8 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 /* ARTICLE */
 .article-body h2 { font-size: 19px; font-weight: 800; color: var(--text); line-height: 1.4; margin: 36px 0 14px; padding-left: 14px; border-left: 3px solid var(--blue); }
 .article-body h3 { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.4; margin: 24px 0 10px; }
-.article-body p { font-size: 15px; line-height: 1.95; color: var(--text-2); margin-bottom: 16px; }
-.article-body ul, .article-body ol { font-size: 15px; line-height: 1.8; color: var(--text-2); margin-bottom: 16px; padding-left: 22px; }
+.article-body p { font-size: 16px; line-height: 1.95; color: var(--text-2); margin-bottom: 16px; }
+.article-body ul, .article-body ol { font-size: 16px; line-height: 1.8; color: var(--text-2); margin-bottom: 16px; padding-left: 22px; }
 .article-body li { margin-bottom: 6px; }
 .article-body hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
 .article-body a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
@@ -296,65 +296,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   .article-nav { padding: 16px; }
 }
 
-/* 文字サイズ調整：右下フローティング（スマホのみ） */
-.font-size-float {
-  display: none;
-  position: fixed; bottom: 24px; right: 16px; z-index: 200;
-  flex-direction: column; align-items: flex-end; gap: 8px;
-}
-@media (max-width: 860px) { .font-size-float { display: flex; } }
-.fs-toggle {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--blue); color: #fff; border: none; cursor: pointer;
-  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 800; line-height: 1.2; text-align: center;
-  transition: background 160ms, transform 160ms; flex-shrink: 0;
-}
-.fs-toggle:hover { background: var(--blue-dark); }
-.fs-panel {
-  display: none; flex-direction: column; align-items: center; gap: 0;
-  background: var(--white); border: 1px solid var(--line);
-  border-radius: 12px; box-shadow: 0 4px 20px rgba(15,23,42,0.13);
-  overflow: hidden; animation: fsIn 180ms ease;
-}
-.fs-panel.open { display: flex; }
-@keyframes fsIn {
-  from { opacity: 0; transform: scale(0.9) translateY(6px); }
-  to   { opacity: 1; transform: scale(1) translateY(0); }
-}
-.fs-panel-label {
-  font-size: 9px; font-weight: 800; color: var(--muted);
-  letter-spacing: 0.06em; padding: 7px 14px 5px; text-align: center;
-  border-bottom: 1px solid var(--line); width: 100%;
-}
-.fs-btn {
-  display: flex; align-items: center; justify-content: center;
-  width: 48px; height: 40px; border: none; border-bottom: 1px solid var(--line);
-  background: var(--white); color: var(--text2); cursor: pointer;
-  font-weight: 800; transition: background 140ms, color 140ms;
-}
-.fs-btn:last-child { border-bottom: none; }
-.fs-btn:hover { background: var(--blue-soft); color: var(--blue); }
-.fs-btn.fs-active { background: var(--blue); color: #fff; }
-.fs-btn.fs-s { font-size: 11px; }
-.fs-btn.fs-m { font-size: 14px; }
-.fs-btn.fs-l { font-size: 17px; }
-.font-small .article-body p,
-.font-small .article-body li,
-.font-small .article-body blockquote p { font-size: 13px !important; }
-.font-small .article-body h2 { font-size: 17px !important; }
-.font-small .article-body h3 { font-size: 15px !important; }
-.font-medium .article-body p,
-.font-medium .article-body li { font-size: 15px !important; }
-.font-medium .article-body h2 { font-size: 19px !important; }
-.font-medium .article-body h3 { font-size: 16px !important; }
-.font-large .article-body p,
-.font-large .article-body li,
-.font-large .article-body blockquote p { font-size: 18px !important; line-height: 2.05 !important; }
-.font-large .article-body h2 { font-size: 22px !important; }
-.font-large .article-body h3 { font-size: 19px !important; }
-@media (max-width: 860px) { .font-size-ctrl-dummy { display: none; } }
 </style>
 <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
 </head>
@@ -810,65 +751,6 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 
 })();
 </script>
-<!-- 文字サイズ調整フローティングボタン（スマホのみ） -->
-<div class="font-size-float" id="fontSizeFloat">
-  <div class="fs-panel" id="fsPanel">
-    <div class="fs-panel-label">文字サイズ</div>
-    <button class="fs-btn fs-s" id="fs-s" onclick="setFontSize('small')" title="小">小</button>
-    <button class="fs-btn fs-m fs-active" id="fs-m" onclick="setFontSize('medium')" title="中">中</button>
-    <button class="fs-btn fs-l" id="fs-l" onclick="setFontSize('large')" title="大">大</button>
-  </div>
-  <button class="fs-toggle" id="fsToggle" onclick="toggleFsPanel()" title="文字サイズ">文字</button>
-</div>
-
-<script>
-function toggleFsPanel() {
-  var panel = document.getElementById('fsPanel');
-  var toggle = document.getElementById('fsToggle');
-  if (!panel || !toggle) return;
-  var isOpen = panel.classList.contains('open');
-  panel.classList.toggle('open', !isOpen);
-  toggle.textContent = isOpen ? '文字' : '×';
-}
-
-function setFontSize(size) {
-  document.body.classList.remove('font-small', 'font-medium', 'font-large');
-  document.body.classList.add('font-' + size);
-  ['s','m','l'].forEach(function(k) {
-    var b = document.getElementById('fs-' + k);
-    if (b) b.classList.remove('fs-active');
-  });
-  var map = { small: 's', medium: 'm', large: 'l' };
-  var btn = document.getElementById('fs-' + map[size]);
-  if (btn) btn.classList.add('fs-active');
-  var panel = document.getElementById('fsPanel');
-  var toggle = document.getElementById('fsToggle');
-  if (panel) panel.classList.remove('open');
-  if (toggle) toggle.textContent = '文字';
-  try { localStorage.setItem('worelu-fontsize', size); } catch(e) {}
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  // 文字サイズ初期化
-  var saved = 'medium';
-  try { saved = localStorage.getItem('worelu-fontsize') || 'medium'; } catch(e) {}
-  document.body.classList.add('font-' + saved);
-  var map = { small: 's', medium: 'm', large: 'l' };
-  var btn = document.getElementById('fs-' + map[saved]);
-  if (btn) btn.classList.add('fs-active');
-
-  // パネル外タップで閉じる
-  document.addEventListener('click', function(e) {
-    var float = document.getElementById('fontSizeFloat');
-    if (float && !float.contains(e.target)) {
-      var panel = document.getElementById('fsPanel');
-      var toggle = document.getElementById('fsToggle');
-      if (panel) panel.classList.remove('open');
-      if (toggle) toggle.textContent = '文字';
-    }
-  });
-});
-</script>
 
 <script>
 /* 全記事データ（build.pyが自動生成） */
@@ -1320,7 +1202,6 @@ window.diagCarouselScroll = function(dir) {
   var ad = document.getElementById('floating-ad');
   var closeBtn = document.getElementById('floating-ad-close');
   if (!ad) return;
-  var fsFloat = document.querySelector('.font-size-float');
 
   var textVariants = [
     'まだ一人で悩みますか？',
@@ -1333,23 +1214,12 @@ window.diagCarouselScroll = function(dir) {
     textEl.textContent = textVariants[Math.floor(Math.random() * textVariants.length)];
   }
 
-  function adjustFsButton() {
-    if (!fsFloat) return;
-    if (ad.classList.contains('show') && window.innerWidth <= 860) {
-      var h = ad.offsetHeight;
-      fsFloat.style.bottom = (h + 20) + 'px';
-    } else {
-      fsFloat.style.bottom = '';
-    }
-  }
-
   var shown = false;
   function showAd() {
     if (shown) return;
     ad.classList.add('show');
     shown = true;
     window.removeEventListener('scroll', checkScroll);
-    setTimeout(adjustFsButton, 260);
   }
   function checkScroll() {
     if (shown) return;
@@ -1362,14 +1232,8 @@ window.diagCarouselScroll = function(dir) {
   // フォールバック：10秒経過したら未表示でも一度だけ表示する
   setTimeout(showAd, 10000);
 
-  window.addEventListener('resize', function() {
-    if (shown) adjustFsButton();
-  });
-
   closeBtn.addEventListener('click', function() {
     ad.classList.remove('show');
-    adjustFsButton();
-
   });
 })();
 </script>
