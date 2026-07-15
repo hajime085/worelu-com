@@ -61,7 +61,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .breadcrumb a:hover { color: var(--blue); }
 .breadcrumb-sep { color: var(--line); }
 .hero-cat { display: inline-flex; align-items: center; background: var(--blue-soft); color: var(--blue); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 4px; margin-bottom: 14px; letter-spacing: 0.06em; border: 1px solid var(--blue-mid); }
-.hero-h1 { font-size: clamp(22px, 3.5vw, 30px); font-weight: 800; color: var(--text); line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 16px; }
+.hero-h1 { font-size: 26px; font-weight: 800; color: var(--text); line-height: 1.35; letter-spacing: -0.01em; margin-bottom: 16px; }
 .hero-meta { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
 .hero-meta-row { display: flex; align-items: center; gap: 12px; }
 .hero-sep { width: 1px; height: 10px; background: var(--line); }
@@ -70,8 +70,9 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 .layout { max-width: 1040px; margin: 0 auto; padding: 36px 28px 64px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 36px; align-items: start; }
 
 /* ARTICLE */
-.article-body h2 { font-size: 19px; font-weight: 800; color: var(--text); line-height: 1.4; margin: 36px 0 14px; padding-left: 14px; border-left: 3px solid var(--blue); }
-.article-body h3 { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.4; margin: 24px 0 10px; }
+.article-body h2 { font-size: 21px; font-weight: 800; color: var(--text); line-height: 1.4; margin: 36px 0 14px; padding-left: 14px; border-left: 3px solid var(--blue); }
+.article-body h3 { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.4; margin: 24px 0 10px; }
+.article-body h4 { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.4; margin: 20px 0 8px; }
 .article-body p { font-size: 16px; line-height: 1.95; color: var(--text-2); margin-bottom: 16px; }
 .article-body ul, .article-body ol { font-size: 16px; line-height: 1.8; color: var(--text-2); margin-bottom: 16px; padding-left: 22px; }
 .article-body li { margin-bottom: 6px; }
@@ -287,7 +288,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 }
 @media (max-width: 600px) {
   .cta-block { flex-direction: column; align-items: flex-start; }
-  .hero-h1 { font-size: 20px; }
+  .hero-h1 { font-size: 22px; }
   .header-nav { display: none; }
   .bottom-cta-inner { padding: 24px 20px; }
   .layout { padding: 24px 16px 48px; }
