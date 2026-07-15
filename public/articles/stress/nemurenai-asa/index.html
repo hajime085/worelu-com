@@ -43,7 +43,8 @@
   --white: #FFFFFF;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; }
+html { overflow-x: hidden; }
+body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; overflow-x: hidden; }
 
 /* HEADER */
 .site-header { background: var(--white); border-bottom: 1px solid var(--line); height: 56px; display: flex; align-items: center; padding: 0 28px; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
@@ -289,6 +290,11 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   .cta-block { flex-direction: column; align-items: flex-start; }
   .hero-h1 { font-size: 20px; }
   .header-nav { display: none; }
+  .bottom-cta-inner { padding: 24px 20px; }
+  .layout { padding: 24px 16px 48px; }
+  .hero { padding: 28px 16px 24px; }
+  .related { padding: 28px 16px; }
+  .article-nav { padding: 16px; }
 }
 
 /* 文字サイズ調整：右下フローティング（スマホのみ） */
@@ -1124,6 +1130,13 @@ window.diagCarouselScroll = function(dir) {
 .worelu-cta-text { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.6; margin-bottom: 16px; }
 .worelu-cta-btn { display: inline-block; background: #fff; color: #1E3A5F; font-size: 14px; font-weight: 800; padding: 12px 28px; border-radius: 50px; text-decoration: none; letter-spacing: 0.02em; transition: opacity 200ms; }
 .worelu-cta-btn:hover { opacity: 0.88; }
+/* スマホ overflow 対策: 全コンポーネントを viewport 内に収める */
+.worelu-flow, .worelu-cycle, .worelu-compare-wrap,
+.worelu-point, .worelu-warning, .worelu-summary, .worelu-checklist,
+.worelu-timeline, .worelu-step, .worelu-pros-cons, .worelu-decision, .worelu-cta {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 </style>
 
 <style>
