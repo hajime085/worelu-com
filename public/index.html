@@ -280,6 +280,42 @@ a{text-decoration:none;color:inherit}
 .flow-desc { font-size: 13px; color: #64748B; line-height: 1.6; }
 .flow-arrow { flex-shrink: 0; }
 .flow-arrow svg { width: 20px; height: 20px; stroke: #93C5FD; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transform: rotate(0deg); }
+
+.flow-card {
+  background: white !important;
+  border: none !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  min-width: 180px !important;
+  flex-shrink: 0 !important;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(24,95,165,0.08);
+}
+.flow-card-inner {
+  padding: 20px 16px;
+}
+.flow-step-badge {
+  display: inline-block;
+  background: #185FA5;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.flow-emoji-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.flow-step-num { display: none; }
 </style>
 </head>
 <body>
@@ -477,32 +513,45 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="flow-grid">
       <div class="flow-card">
-        <div class="flow-step-num">STEP 01</div>
-        <div class="flow-icon" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE);font-size:28px;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">🧠</div>
-        <div class="flow-title">診断する</div>
-        <div class="flow-desc">10問・約1分。今のストレス状態を4軸でスコア化。</div>
+        <div style="height:4px;background:#185FA5;"></div>
+        <div class="flow-card-inner">
+          <div class="flow-step-badge">STEP 01</div>
+          <div class="flow-emoji-wrap" style="background:#185FA522;">🧠</div>
+          <div class="flow-title">診断する</div>
+          <div class="flow-desc">10問・約1分。今のストレス状態を4軸でスコア化。</div>
+        </div>
       </div>
       <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
-        <div class="flow-step-num">STEP 02</div>
-        <div class="flow-icon" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7);font-size:28px;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">📊</div>
-        <div class="flow-title">結果を見る</div>
-        <div class="flow-desc">4軸スコアとAIコメントで、自分の状態を客観的に把握。</div>
+        <div style="height:4px;background:#0D9488;"></div>
+        <div class="flow-card-inner">
+          <div class="flow-step-badge">STEP 02</div>
+          <div class="flow-emoji-wrap" style="background:#0D948822;">📊</div>
+          <div class="flow-title">結果を見る</div>
+          <div class="flow-desc">4軸スコアとAIコメントで、自分の状態を客観的に把握。</div>
+        </div>
       </div>
       <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
-        <div class="flow-step-num">STEP 03</div>
-        <div class="flow-icon" style="background:linear-gradient(135deg,#FFF7ED,#FFEDD5);font-size:28px;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">💬</div>
-        <div class="flow-title">AIに相談する</div>
-        <div class="flow-desc">残業・転職・人間関係など、何でもAIコーチに相談できる。</div>
+        <div style="height:4px;background:#7C3AED;"></div>
+        <div class="flow-card-inner">
+          <div class="flow-step-badge">STEP 03</div>
+          <div class="flow-emoji-wrap" style="background:#7C3AED22;">💬</div>
+          <div class="flow-title">AIに相談する</div>
+          <div class="flow-desc">残業・転職・人間関係など、何でもAIコーチに相談できる。</div>
+        </div>
       </div>
       <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
-        <div class="flow-step-num">STEP 04</div>
-        <div class="flow-icon" style="background:linear-gradient(135deg,#FDF4FF,#FAE8FF);font-size:28px;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">📖</div>
-        <div class="flow-title">記事で学ぶ</div>
-        <div class="flow-desc">状態に合った関連記事で、原因と対処法を深く理解する。</div>
+        <div style="height:4px;background:#DC2626;"></div>
+        <div class="flow-card-inner">
+          <div class="flow-step-badge">STEP 04</div>
+          <div class="flow-emoji-wrap" style="background:#DC262622;">📖</div>
+          <div class="flow-title">記事で学ぶ</div>
+          <div class="flow-desc">状態に合った関連記事で、原因と対処法を深く理解する。</div>
+        </div>
       </div>
+    </div>
     </div>
   </div>
 </section>
