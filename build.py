@@ -94,7 +94,7 @@ def make_art_card(art: dict, rank: int = 0) -> str:
     rank_html = f'<div style="position:absolute;top:12px;right:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;color:#1E3A5F;opacity:0.06;line-height:1;letter-spacing:-0.04em;pointer-events:none;">{rank_str}</div>' if rank else ''
     accent_bar = f'<div style="height:3px;background:{c["badge_color"]};opacity:0.7;"></div>' if rank else ''
     cat_tag = f'<span style="display:inline-block;background:{c["badge_bg"]};color:{c["badge_color"]};font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">{cat_label}</span>'
-    return f'''      <a href="{art['url']}" class="art-card" style="border:1px solid #DDE5F0;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 2px 12px rgba(15,40,80,0.06);transition:box-shadow 0.2s,transform 0.2s;">
+    return f'''      <a href="{art['url']}" class="art-card" style="border:2px solid {c['badge_color']};border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.1);transition:box-shadow 0.2s,transform 0.2s;">
         {accent_bar}
         <div style="position:relative;padding:20px 18px 14px;">
           {rank_html}
