@@ -837,7 +837,7 @@ a{text-decoration:none;color:inherit}
         <span class="chat-preview-title">AI COACH CHAT</span>
         <span class="chat-badge">診断後に利用可能</span>
       </div>
-      <div class="chat-log">
+      <div class="chat-log" id="chatLog">
         <div class="bubble-wrap">
           <div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>
           <div class="bubble-ai">仕事ストレスと転職意向が高い結果でした。何か具体的に気になっていることや、相談したいことはありますか？</div>
@@ -1093,6 +1093,87 @@ document.addEventListener('click',function(e){
     btn.classList.remove('open');
   }
 });
+</script>
+
+<style>
+.bubble-wrap, .chat-user-row { opacity: 0; transform: translateY(10px); transition: opacity 0.4s ease, transform 0.4s ease; }
+.bubble-wrap.visible, .chat-user-row.visible { opacity: 1; transform: translateY(0); }
+.typing-dots { display: flex; gap: 4px; padding: 10px 13px; background: #fff; border: 1px solid var(--line); border-radius: 4px 10px 10px 10px; max-width: 60px; }
+.typing-dots span { width: 6px; height: 6px; border-radius: 50%; background: #94A3B8; animation: dotBounce 1.2s infinite; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes dotBounce { 0%,80%,100%{transform:translateY(0);opacity:0.4} 40%{transform:translateY(-6px);opacity:1} }
+.bubble-ai.typing { border-right: 2px solid #185FA5; }
+</style>
+<script>
+(function(){
+  var chatLog = document.getElementById('chatLog');
+  if(!chatLog) return;
+  var messages = chatLog.querySelectorAll('.bubble-wrap, .chat-user-row');
+  var animated = false;
+
+  function runAnimation(){
+    if(animated) return;
+    animated = true;
+    var log = chatLog;
+    log.innerHTML = '';
+
+    var seq = [
+      { type:'ai', text:'仕事ストレスと転職意向が高い結果でした。何か具体的に気になっていることや、相談したいことはありますか？', delay:400 },
+      { type:'user', text:'毎日残業が続いていて、もう限界かもしれません', delay:1200 },
+      { type:'ai', text:'限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。まず有給を1日取る計画を立ててみませんか？', delay:2400 },
+    ];
+
+    function addMsg(item, cb){
+      if(item.type === 'user'){
+        var row = document.createElement('div');
+        row.className = 'chat-user-row';
+        row.style.opacity = '0';
+        row.style.transform = 'translateY(10px)';
+        row.innerHTML = '<div class="bubble-user">' + item.text + '</div>';
+        log.appendChild(row);
+        log.scrollTop = log.scrollHeight;
+        setTimeout(function(){ row.style.transition='opacity 0.4s,transform 0.4s'; row.style.opacity='1'; row.style.transform='translateY(0)'; if(cb)cb(); }, 50);
+      } else {
+        var wrap = document.createElement('div');
+        wrap.className = 'bubble-wrap';
+        wrap.style.opacity = '0';
+        wrap.style.transform = 'translateY(10px)';
+        var icon = '<div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>';
+        var dots = '<div class="bubble-wrap" id="dotsWrap"><div class="bubble-icon">' + icon.replace('<div class="bubble-icon">','').replace('</div>','') + '</div><div class="typing-dots"><span></span><span></span><span></span></div></div>';
+        var dotsEl = document.createElement('div');
+        dotsEl.innerHTML = dots;
+        var dotsNode = dotsEl.firstChild;
+        log.appendChild(dotsNode);
+        log.scrollTop = log.scrollHeight;
+        setTimeout(function(){
+          log.removeChild(dotsNode);
+          wrap.innerHTML = icon + '<div class="bubble-ai"></div>';
+          log.appendChild(wrap);
+          setTimeout(function(){ wrap.style.transition='opacity 0.3s,transform 0.3s'; wrap.style.opacity='1'; wrap.style.transform='translateY(0)'; },50);
+          var bubble = wrap.querySelector('.bubble-ai');
+          var i=0; var txt=item.text;
+          var t=setInterval(function(){
+            bubble.textContent += txt[i]; i++;
+            log.scrollTop = log.scrollHeight;
+            if(i>=txt.length){ clearInterval(t); if(cb)cb(); }
+          },28);
+        }, 1400);
+      }
+    }
+
+    function runSeq(idx){
+      if(idx>=seq.length) return;
+      setTimeout(function(){ addMsg(seq[idx], function(){ runSeq(idx+1); }); }, idx===0?0:seq[idx].delay);
+    }
+    runSeq(0);
+  }
+
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) runAnimation(); });
+  }, { threshold: 0.3 });
+  obs.observe(chatLog);
+})();
 </script>
 </body>
 </html>
