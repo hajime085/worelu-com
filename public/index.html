@@ -59,7 +59,7 @@ a{text-decoration:none;color:inherit}
 .mobile-nav.open{display:flex}
 
 /* HERO */
-.hero{padding:88px 48px 80px;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;max-width:1120px;margin:0 auto}
+.hero{position:relative;overflow:hidden;padding:88px 48px 80px;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;max-width:1120px;margin:0 auto}
 .hero-eyebrow{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:0.12em;margin-bottom:20px}
 .hero-h1{font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--text);line-height:1.22;letter-spacing:-0.03em;margin-bottom:20px}
 .hero-h1 em{color:var(--blue);font-style:normal}
@@ -294,6 +294,15 @@ a{text-decoration:none;color:inherit}
 <!-- HERO -->
 <section style="border-bottom:1px solid var(--line)">
   <div class="hero">
+<div class="hero-geo" aria-hidden="true" style="position:absolute;right:-20px;bottom:-20px;width:360px;height:360px;pointer-events:none;">
+<svg viewBox="0 0 360 360" width="360" height="360">
+  <circle cx="260" cy="260" r="200" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.07"/>
+  <circle cx="260" cy="260" r="140" fill="none" stroke="#185FA5" stroke-width="1.5" opacity="0.06"/>
+  <circle cx="260" cy="260" r="80" fill="none" stroke="#185FA5" stroke-width="2" opacity="0.05"/>
+  <circle cx="260" cy="260" r="30" fill="#185FA5" opacity="0.05"/>
+  <circle cx="60" cy="50" r="70" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.04"/>
+</svg>
+</div>
     <div>
       <div class="hero-eyebrow"></div>
       <h1 class="hero-h1">仕事がつらい。<br><em>AIストレス診断</em>で、<br>今の状態を知ろう。</h1>
