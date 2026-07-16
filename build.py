@@ -102,7 +102,7 @@ def make_art_card(art: dict, rank: int = 0) -> str:
           <div style="margin-bottom:12px;">{cat_tag}</div>
         </div>
         <div class="art-body">
-          <div class="art-title" style="font-size:17px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">{art['title']}</div>
+          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">{art['title']}</div>
           <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">{desc}</div>
           <div class="art-footer"><span class="art-date">{date_disp}</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
@@ -113,7 +113,7 @@ _OPERATOR_DB = Path(os.environ.get("OPERATOR_DB", "../worelu-operator/state/oper
 _POPULAR_FALLBACK = ["nemurenai-asa", "moeyuki-selfcheck", "yameru-yuuki"]
 
 
-def _top_slugs_from_gsc(articles: list, n: int = 3) -> list[str] | None:
+def _top_slugs_from_gsc(articles: list, n: int = 3):
     """GSC 過去30日のクリック上位スラッグを返す。DB 未存在・エラー時は None。"""
     if not _OPERATOR_DB.exists():
         return None
