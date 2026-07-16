@@ -109,10 +109,44 @@ def make_art_card(art: dict, rank: int = 0) -> str:
       </a>'''
 
 
+_OPERATOR_DB = Path(os.environ.get("OPERATOR_DB", "../worelu-operator/state/operator.db"))
+_POPULAR_FALLBACK = ["nemurenai-asa", "moeyuki-selfcheck", "yameru-yuuki"]
+
+
+def _top_slugs_from_gsc(articles: list, n: int = 3) -> list[str] | None:
+    """GSC 過去30日のクリック上位スラッグを返す。DB 未存在・エラー時は None。"""
+    if not _OPERATOR_DB.exists():
+        return None
+    slug_set = {a["slug"] for a in articles}
+    since = (date.today() - timedelta(days=30)).isoformat()
+    try:
+        conn = sqlite3.connect(_OPERATOR_DB)
+        rows = conn.execute(
+            "SELECT page, SUM(clicks) AS total_clicks"
+            " FROM gsc_pages WHERE date >= ?"
+            " GROUP BY page ORDER BY total_clicks DESC",
+            (since,),
+        ).fetchall()
+        conn.close()
+    except Exception:
+        return None
+    slugs: list[str] = []
+    for page_url, _ in rows:
+        m = re.search(r"/articles/[^/]+/([^/]+)/?$", page_url)
+        if m:
+            slug = m.group(1)
+            if slug in slug_set and slug not in slugs:
+                slugs.append(slug)
+        if len(slugs) >= n:
+            break
+    return slugs if len(slugs) >= n else None
+
+
 def build_top(articles: list):
     """TOPページ（index.html）を記事データから自動生成"""
-    # 人気記事：固定3本（最初期から読まれている代表記事）
-    popular_slugs = ["nemurenai-asa", "moeyuki-selfcheck", "yameru-yuuki"]
+    # 人気記事：GSC 過去30日クリック上位3本。データ不足時は固定フォールバック
+    gsc_slugs = _top_slugs_from_gsc(articles)
+    popular_slugs = gsc_slugs if gsc_slugs else _POPULAR_FALLBACK
     popular = [a for slug in popular_slugs for a in articles if a['slug'] == slug]
 
     # 新着記事：日付順で最新3本（人気記事と被らないもの）
@@ -146,8 +180,9 @@ def build_top(articles: list):
     )
 
     top_src.write_text(html, encoding="utf-8")
+    source = "GSC(30日)" if gsc_slugs else "fallback"
     print(f"  TOPページ: {top_src}")
-    print(f"    人気記事: {[a['slug'] for a in popular]}")
+    print(f"    人気記事({source}): {[a['slug'] for a in popular]}")
     print(f"    新着記事: {[a['slug'] for a in recent]}")
 
 def parse_markdown(filepath: Path) -> dict:
