@@ -865,24 +865,179 @@ a{text-decoration:none;color:inherit}
   <div class="about-inner">
     <div class="sec-eyebrow" style="text-align:center">ABOUT WORELU</div>
     <h2 class="sec-title" style="text-align:center">Woreluとは</h2>
-    <p class="about-desc">仕事がしんどいとき、その正体がわからないまま一人で抱え込んでいませんか。Woreluは、そのしんどさを言語化・可視化し、次の一歩を見つけるお手伝いをします。</p>
-    <div class="about-points">
-      <div class="about-point">
-        <div class="about-point-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l3 2"/></svg></div>
-        <div class="about-point-title">AIストレス診断</div>
-        <div class="about-point-desc">10問・約1分で今の状態を4軸スコアで可視化</div>
+    <p class="about-desc" style="text-align:center;max-width:560px;margin:0 auto 32px;">仕事がしんどいとき、その正体がわからないまま一人で抱え込んでいませんか。Woreluは、そのしんどさを言語化・可視化し、次の一歩を見つけるお手伝いをします。</p>
+    <style>
+    .abt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .abt-card{border:1.5px solid #BFDBFE;border-radius:16px;background:#fff;cursor:pointer;transition:box-shadow 0.2s,transform 0.15s;overflow:hidden;}
+    .abt-card:hover{box-shadow:0 4px 20px rgba(24,95,165,0.12);transform:translateY(-2px);}
+    .abt-card.open{grid-column:1/-1;transform:none;border-color:#185FA5;box-shadow:0 4px 24px rgba(24,95,165,0.12);}
+    .abt-header{padding:24px 22px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
+    .abt-icon{width:48px;height:48px;border-radius:13px;background:#EFF6FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .abt-icon svg{width:24px;height:24px;stroke:#185FA5;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+    .abt-title{font-size:16px;font-weight:800;color:#0F2850;margin:0;}
+    .abt-sub{font-size:13px;color:#64748B;margin:0;line-height:1.6;}
+    .abt-toggle{margin-top:4px;font-size:12px;color:#185FA5;font-weight:700;display:flex;align-items:center;gap:4px;border:none;background:none;cursor:pointer;padding:0;}
+    .abt-toggle svg{width:14px;height:14px;stroke:#185FA5;fill:none;stroke-width:2;transition:transform 0.25s;}
+    .abt-card.open .abt-toggle svg{transform:rotate(180deg);}
+    .abt-detail{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+    .abt-card.open .abt-detail{max-height:600px;}
+    .abt-detail-inner{padding:0 22px 28px;border-top:1px solid #EFF6FF;}
+    .abt-detail-inner h3{font-size:11px;font-weight:800;color:#185FA5;letter-spacing:0.1em;margin:18px 0 12px;}
+    .abt-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
+    .abt-step{background:#F8FAFF;border-radius:12px;padding:16px;}
+    .abt-step-num{font-size:10px;font-weight:800;color:#185FA5;letter-spacing:0.1em;margin-bottom:8px;}
+    .abt-step-title{font-size:14px;font-weight:700;color:#0F2850;margin-bottom:6px;line-height:1.4;}
+    .abt-step-desc{font-size:12px;color:#64748B;line-height:1.6;}
+    .abt-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px;}
+    .abt-point-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#334155;line-height:1.5;}
+    .abt-point-check{color:#185FA5;font-weight:800;flex-shrink:0;margin-top:1px;}
+    .abt-cta{display:inline-flex;align-items:center;gap:8px;background:#185FA5;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;}
+    @media(max-width:768px){.abt-grid{grid-template-columns:1fr;}.abt-steps{grid-template-columns:1fr;}.abt-points{grid-template-columns:1fr;}}
+    </style>
+    <div class="abt-grid" id="abt-grid">
+
+      <div class="abt-card" onclick="abtToggle(0)">
+        <div class="abt-header">
+          <div class="abt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div>
+          <div>
+            <p class="abt-title">AIストレス診断</p>
+            <p class="abt-sub">10問・約1分で今の状態を4軸で可視化</p>
+          </div>
+          <button class="abt-toggle">詳しく見る <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="abt-detail">
+          <div class="abt-detail-inner">
+            <h3>診断の流れ</h3>
+            <div class="abt-steps">
+              <div class="abt-step">
+                <div class="abt-step-num">STEP 01</div>
+                <div class="abt-step-title">10問に答える</div>
+                <div class="abt-step-desc">仕事・職場・体の状態について、直感で回答するだけ。難しい質問はありません。</div>
+              </div>
+              <div class="abt-step">
+                <div class="abt-step-num">STEP 02</div>
+                <div class="abt-step-title">4軸のスコアを確認</div>
+                <div class="abt-step-desc">仕事ストレス・燃え尽き度・職場環境・転職意向の4つの軸で状態を数値化。</div>
+              </div>
+              <div class="abt-step">
+                <div class="abt-step-num">STEP 03</div>
+                <div class="abt-step-title">AIコメントを受け取る</div>
+                <div class="abt-step-desc">スコアに応じた個別のアドバイスと、今すぐできる対処法を提案します。</div>
+              </div>
+            </div>
+            <h3>こんな方におすすめ</h3>
+            <div class="abt-points">
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>自分が今しんどいのか客観的に知りたい</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>転職すべきか判断できずにいる</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>仕事の疲れが体に出てきている</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>誰かに話す前にまず整理したい</span></div>
+            </div>
+            <a href="/stress-check/" class="abt-cta">
+              <svg viewBox="0 0 16 16" width="16" height="16" style="stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
+              無料で診断する（1分）
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="about-point">
-        <div class="about-point-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="16" rx="2"/><path d="M7 8h6M7 12h4"/></svg></div>
-        <div class="about-point-title">セルフケア記事</div>
-        <div class="about-point-desc">症状・労働問題・転職まで15本以上の記事</div>
+
+      <div class="abt-card" onclick="abtToggle(1)">
+        <div class="abt-header">
+          <div class="abt-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
+          <div>
+            <p class="abt-title">セルフケア記事</p>
+            <p class="abt-sub">症状・労働・転職まで45本以上を無料公開</p>
+          </div>
+          <button class="abt-toggle">詳しく見る <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="abt-detail">
+          <div class="abt-detail-inner">
+            <h3>カテゴリー別に探せる</h3>
+            <div class="abt-steps">
+              <div class="abt-step">
+                <div class="abt-step-num">症状・ストレス</div>
+                <div class="abt-step-title">体と心のサインを知る</div>
+                <div class="abt-step-desc">動悸・眠れない・涙が止まらない…体に出るストレスサインとその対処法。</div>
+              </div>
+              <div class="abt-step">
+                <div class="abt-step-num">燃え尽き・休職</div>
+                <div class="abt-step-title">限界からの回復を知る</div>
+                <div class="abt-step-desc">バーンアウトのセルフチェック、休職の流れ、復職の判断まで丁寧に解説。</div>
+              </div>
+              <div class="abt-step">
+                <div class="abt-step-num">転職・退職</div>
+                <div class="abt-step-title">次の一歩を考える</div>
+                <div class="abt-step-desc">辞めるか続けるかの判断基準、退職代行の選び方、キャリア設計まで。</div>
+              </div>
+            </div>
+            <h3>記事の特徴</h3>
+            <div class="abt-points">
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>AIと専門情報をもとに作成・随時更新</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>チェックリスト・図解で直感的に理解できる</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>全記事無料・登録不要で読める</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>診断結果に応じた記事を自動でおすすめ</span></div>
+            </div>
+            <a href="/articles/" class="abt-cta">
+              <svg viewBox="0 0 16 16" width="16" height="16" style="stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M3 4h10M3 8h7M3 12h5"/></svg>
+              記事一覧を見る
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="about-point">
-        <div class="about-point-icon"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 16l3-3h10a1 1 0 001-1V6a1 1 0 00-1-1H5a1 1 0 00-1 1v10z"/></svg></div>
-        <div class="about-point-title">AIコーチ相談</div>
-        <div class="about-point-desc">診断後、AIコーチに何でも相談できる</div>
+
+      <div class="abt-card" onclick="abtToggle(2)">
+        <div class="abt-header">
+          <div class="abt-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <div>
+            <p class="abt-title">AIコーチ相談</p>
+            <p class="abt-sub">診断後、悩みをそのまま話せる</p>
+          </div>
+          <button class="abt-toggle">詳しく見る <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        </div>
+        <div class="abt-detail">
+          <div class="abt-detail-inner">
+            <h3>こんな相談ができる</h3>
+            <div class="abt-steps">
+              <div class="abt-step">
+                <div class="abt-step-num">職場の悩み</div>
+                <div class="abt-step-title">上司・残業・人間関係</div>
+                <div class="abt-step-desc">具体的な状況を話すと、今すぐできる対処法をアドバイスします。</div>
+              </div>
+              <div class="abt-step">
+                <div class="abt-step-num">転職・キャリア</div>
+                <div class="abt-step-title">辞めるべきか迷っている</div>
+                <div class="abt-step-desc">診断スコアと連動した個別アドバイスで、判断の整理をサポートします。</div>
+              </div>
+              <div class="abt-step">
+                <div class="abt-step-num">メンタルケア</div>
+                <div class="abt-step-title">不安・疲れ・やる気</div>
+                <div class="abt-step-desc">今の気持ちをそのまま話すだけで、状態の整理と次の一歩が見えてきます。</div>
+              </div>
+            </div>
+            <h3>AIコーチの特徴</h3>
+            <div class="abt-points">
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>24時間いつでも相談できる</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>診断結果を踏まえた個別対応</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>関連記事を自動でおすすめ</span></div>
+              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>登録不要・完全無料で利用できる</span></div>
+            </div>
+            <a href="/stress-check/" class="abt-cta">
+              <svg viewBox="0 0 16 16" width="16" height="16" style="stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M2 13l3-3h8a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v8z"/></svg>
+              診断してAIに相談する
+            </a>
+          </div>
+        </div>
       </div>
+
     </div>
+    <script>
+    function abtToggle(idx){
+      var cards=document.querySelectorAll('.abt-card');
+      var card=cards[idx];
+      var isOpen=card.classList.contains('open');
+      cards.forEach(function(c){c.classList.remove('open');});
+      if(!isOpen)card.classList.add('open');
+    }
+    </script>
   </div>
 </section>
 
