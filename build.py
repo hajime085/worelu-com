@@ -90,12 +90,13 @@ def make_art_card(art: dict, rank: int = 0) -> str:
     icon = CAT_ICONS.get(cat, CAT_ICONS['stress']).format(circle=c['circle'], fill=c['fill'])
     date_disp = art['date'].replace('-', '.')
     desc = art['description'][:60] + ('…' if len(art['description']) > 60 else '')
-    rank_html = f'<div style="position:absolute;bottom:-10px;right:4px;font-size:100px;font-weight:900;color:{c["badge_color"]};opacity:0.12;line-height:1;pointer-events:none;z-index:0;">{rank:02d}</div>' if rank else ''
-    return f'''      <a href="{art['url']}" class="art-card">
-        <div class="art-thumb" style="background:{c['bg']};position:relative;overflow:hidden;">
+    rank_str = f'{rank:02d}' if rank else ''
+    rank_html = f'''<div style="position:absolute;top:16px;right:16px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:48px;font-weight:900;color:#1E3A5F;opacity:0.07;line-height:1;letter-spacing:-0.04em;pointer-events:none;">{rank_str}</div>''' if rank else ''
+    cat_dot = f'<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:{c["badge_color"]};margin-right:6px;vertical-align:middle;"></span>'
+    return f'''      <a href="{art['url']}" class="art-card" style="border:1px solid #E8EDF5;border-radius:12px;overflow:hidden;display:block;background:#fff;transition:box-shadow 0.2s,transform 0.2s;">
+        <div style="position:relative;padding:24px 20px 16px;border-bottom:1px solid #F1F5F9;">
           {rank_html}
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">{icon}</svg>
-          <div class="art-thumb-cat" style="background:{c['badge_bg']};color:{c['badge_color']}">{cat_label}</div>
+          <div style="margin-bottom:10px;">{cat_dot}<span style="font-size:11px;font-weight:700;color:{c['badge_color']};letter-spacing:0.08em;">{cat_label}</span></div>
         </div>
         <div class="art-body">
           <div class="art-title">{art['title']}</div>
