@@ -270,21 +270,16 @@ a{text-decoration:none;color:inherit}
 
 .flow-sec { padding: 40px 0 !important; }
 .flow-sec .sec-inner { padding: 0 16px; }
-.flow-grid { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; overflow-x: auto; padding: 16px 0; }
-.flow-card { background: #F8FAFF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 16px 12px; text-align: center; min-width: 140px; flex: 1; }
-.flow-step-num { font-size: 10px; margin-bottom: 8px; }
-.flow-icon { width: 36px; height: 36px; margin: 0 auto 8px; background: #EFF6FF; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-.flow-icon svg { width: 18px; height: 18px; stroke: #185FA5; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.flow-title { font-size: 13px; font-weight: 700; color: #1E3A5F; margin-bottom: 6px; }
-.flow-desc { font-size: 11px; color: #64748B; line-height: 1.5; }
-.flow-arrow { flex-shrink: 0; color: #BFDBFE; }
-.flow-arrow svg { width: 16px; height: 16px; stroke: #93C5FD; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-@media (max-width: 600px) {
-  .flow-grid { gap: 6px; }
-  .flow-card { min-width: 110px; padding: 12px 8px; }
-  .flow-title { font-size: 12px; }
-  .flow-desc { font-size: 10px; }
-}
+.flow-grid { display: flex; align-items: center; gap: 12px; flex-wrap: nowrap; overflow-x: auto; padding: 20px 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.flow-grid::-webkit-scrollbar { display: none; }
+.flow-card { background: #F8FAFF; border: 1px solid #BFDBFE; border-radius: 16px; padding: 24px 20px; text-align: center; min-width: 200px; flex-shrink: 0; }
+.flow-step-num { font-size: 11px; margin-bottom: 12px; }
+.flow-icon { width: 52px; height: 52px; margin: 0 auto 14px; background: #EFF6FF; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.flow-icon svg { width: 26px; height: 26px; stroke: #185FA5; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.flow-title { font-size: 16px; font-weight: 700; color: #1E3A5F; margin-bottom: 8px; }
+.flow-desc { font-size: 13px; color: #64748B; line-height: 1.6; }
+.flow-arrow { flex-shrink: 0; }
+.flow-arrow svg { width: 20px; height: 20px; stroke: #93C5FD; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transform: rotate(0deg); }
 </style>
 </head>
 <body>
@@ -489,9 +484,7 @@ a{text-decoration:none;color:inherit}
         <div class="flow-title">診断する</div>
         <div class="flow-desc">10問・約1分。今のストレス状態を4軸でスコア化。</div>
       </div>
-      <div class="flow-arrow">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-      </div>
+      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
         <div class="flow-step-num">STEP 02</div>
         <div class="flow-icon">
@@ -500,9 +493,7 @@ a{text-decoration:none;color:inherit}
         <div class="flow-title">結果を見る</div>
         <div class="flow-desc">4軸スコアとAIコメントで、自分の状態を客観的に把握。</div>
       </div>
-      <div class="flow-arrow">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-      </div>
+      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
         <div class="flow-step-num">STEP 03</div>
         <div class="flow-icon">
@@ -511,9 +502,7 @@ a{text-decoration:none;color:inherit}
         <div class="flow-title">AIに相談する</div>
         <div class="flow-desc">残業・転職・人間関係など、何でもAIコーチに相談できる。</div>
       </div>
-      <div class="flow-arrow">
-        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg>
-      </div>
+      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
         <div class="flow-step-num">STEP 04</div>
         <div class="flow-icon">
