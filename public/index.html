@@ -267,6 +267,24 @@ a{text-decoration:none;color:inherit}
 @media (max-width: 768px) {
   .hero-geo-bg { opacity: 0.5; }
 }
+
+.flow-sec { padding: 40px 0 !important; }
+.flow-sec .sec-inner { padding: 0 16px; }
+.flow-grid { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; overflow-x: auto; padding: 16px 0; }
+.flow-card { background: #F8FAFF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 16px 12px; text-align: center; min-width: 140px; flex: 1; }
+.flow-step-num { font-size: 10px; margin-bottom: 8px; }
+.flow-icon { width: 36px; height: 36px; margin: 0 auto 8px; background: #EFF6FF; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.flow-icon svg { width: 18px; height: 18px; stroke: #185FA5; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.flow-title { font-size: 13px; font-weight: 700; color: #1E3A5F; margin-bottom: 6px; }
+.flow-desc { font-size: 11px; color: #64748B; line-height: 1.5; }
+.flow-arrow { flex-shrink: 0; color: #BFDBFE; }
+.flow-arrow svg { width: 16px; height: 16px; stroke: #93C5FD; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 600px) {
+  .flow-grid { gap: 6px; }
+  .flow-card { min-width: 110px; padding: 12px 8px; }
+  .flow-title { font-size: 12px; }
+  .flow-desc { font-size: 10px; }
+}
 </style>
 </head>
 <body>
