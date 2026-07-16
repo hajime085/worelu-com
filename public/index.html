@@ -376,6 +376,74 @@ a{text-decoration:none;color:inherit}
   height: 18px !important;
   stroke: #BFDBFE !important;
 }
+
+.flow-card {
+  background: linear-gradient(145deg, #ffffff 0%, #EEF5FF 100%) !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 32px 24px 28px !important;
+  min-width: 190px !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 24px rgba(15,40,80,0.08), 0 1px 4px rgba(15,40,80,0.04) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+.flow-bg-num {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  font-size: 72px;
+  font-weight: 900;
+  color: #185FA5;
+  opacity: 0.05;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  user-select: none;
+}
+.flow-icon {
+  width: 52px !important;
+  height: 52px !important;
+  margin: 0 auto 14px !important;
+  background: rgba(24,95,165,0.08) !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.flow-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke: #185FA5 !important;
+  fill: none !important;
+  stroke-width: 1.5 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+.flow-step-num {
+  display: inline-block !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  color: #185FA5 !important;
+  letter-spacing: 0.12em !important;
+  margin-bottom: 16px !important;
+  background: rgba(24,95,165,0.08) !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 4px 14px !important;
+}
+.flow-title {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #0F2850 !important;
+  margin-bottom: 8px !important;
+}
+.flow-desc {
+  font-size: 12px !important;
+  color: #64748B !important;
+  line-height: 1.8 !important;
+}
 </style>
 </head>
 <body>
@@ -573,32 +641,37 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="flow-grid">
       <div class="flow-card">
+        <div class="flow-bg-num">01</div>
         <div class="flow-step-num">STEP 01</div>
         <div class="flow-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div>
         <div class="flow-title">診断する</div>
         <div class="flow-desc">10問・約1分。今のストレス状態を4軸でスコア化。</div>
       </div>
-      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
+      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;width:18px;height:18px;flex-shrink:0;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
+        <div class="flow-bg-num">02</div>
         <div class="flow-step-num">STEP 02</div>
         <div class="flow-icon"><svg viewBox="0 0 24 24"><path d="M3 20h18M7 20V12M12 20V8M17 20V4"/></svg></div>
         <div class="flow-title">結果を見る</div>
         <div class="flow-desc">4軸スコアとAIコメントで、自分の状態を客観的に把握。</div>
       </div>
-      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
+      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;width:18px;height:18px;flex-shrink:0;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
+        <div class="flow-bg-num">03</div>
         <div class="flow-step-num">STEP 03</div>
         <div class="flow-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
         <div class="flow-title">AIに相談する</div>
         <div class="flow-desc">残業・転職・人間関係など、何でもAIコーチに相談できる。</div>
       </div>
-      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
+      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;width:18px;height:18px;flex-shrink:0;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
       <div class="flow-card">
+        <div class="flow-bg-num">04</div>
         <div class="flow-step-num">STEP 04</div>
         <div class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
         <div class="flow-title">記事で学ぶ</div>
         <div class="flow-desc">状態に合った関連記事で、原因と対処法を深く理解する。</div>
       </div>
+    </div>
     </div>
     </div>
     </div>
