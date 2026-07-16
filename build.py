@@ -91,12 +91,14 @@ def make_art_card(art: dict, rank: int = 0) -> str:
     date_disp = art['date'].replace('-', '.')
     desc = art['description'][:60] + ('…' if len(art['description']) > 60 else '')
     rank_str = f'{rank:02d}' if rank else ''
-    rank_html = f'''<div style="position:absolute;top:16px;right:16px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:48px;font-weight:900;color:#1E3A5F;opacity:0.07;line-height:1;letter-spacing:-0.04em;pointer-events:none;">{rank_str}</div>''' if rank else ''
-    cat_dot = f'<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:{c["badge_color"]};margin-right:6px;vertical-align:middle;"></span>'
-    return f'''      <a href="{art['url']}" class="art-card" style="border:1px solid #E8EDF5;border-radius:12px;overflow:hidden;display:block;background:#fff;transition:box-shadow 0.2s,transform 0.2s;">
-        <div style="position:relative;padding:24px 20px 16px;border-bottom:1px solid #F1F5F9;">
+    rank_html = f'<div style="position:absolute;top:12px;right:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;color:#1E3A5F;opacity:0.06;line-height:1;letter-spacing:-0.04em;pointer-events:none;">{rank_str}</div>' if rank else ''
+    accent_bar = f'<div style="height:3px;background:{c["badge_color"]};opacity:0.7;"></div>' if rank else ''
+    cat_tag = f'<span style="display:inline-block;background:{c["badge_bg"]};color:{c["badge_color"]};font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">{cat_label}</span>'
+    return f'''      <a href="{art['url']}" class="art-card" style="border:1px solid #DDE5F0;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 2px 12px rgba(15,40,80,0.06);transition:box-shadow 0.2s,transform 0.2s;">
+        {accent_bar}
+        <div style="position:relative;padding:20px 18px 14px;">
           {rank_html}
-          <div style="margin-bottom:10px;">{cat_dot}<span style="font-size:11px;font-weight:700;color:{c['badge_color']};letter-spacing:0.08em;">{cat_label}</span></div>
+          <div style="margin-bottom:12px;">{cat_tag}</div>
         </div>
         <div class="art-body">
           <div class="art-title">{art['title']}</div>
