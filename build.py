@@ -599,8 +599,7 @@ def build_article_list(env: Environment, articles: list):
 
         # 表示するページ番号リスト（前後2ページ）
         pages = sorted(set(
-            [1, total_pages] +
-            [p for p in range(page_num - 2, page_num + 3) if 1 <= p <= total_pages]
+            [p for p in range(1, total_pages + 1)]
         ))
 
         pagination = {
