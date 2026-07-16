@@ -243,6 +243,25 @@ a{text-decoration:none;color:inherit}
   .hero-sub { font-size: 20px !important; line-height: 1.9 !important; }
   .trust-item { font-size: 17px !important; }
 }
+
+@media (max-width: 768px) {
+  .hero-section, .hero, [class*="hero"] {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-section::after, .hero::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    width: 280px;
+    height: 380px;
+    background: url('/images/person_001.webp') no-repeat center bottom;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+}
 </style>
 </head>
 <body>
