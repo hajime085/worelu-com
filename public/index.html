@@ -244,23 +244,24 @@ a{text-decoration:none;color:inherit}
   .trust-item { font-size: 17px !important; }
 }
 
-@media (max-width: 768px) {
-  .hero-section, .hero, [class*="hero"] {
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-section::after, .hero::after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    bottom: 0;
-    width: 360px;
-    height: 480px;
-    background: url('/images/person_001.webp') no-repeat right bottom;
-    background-size: contain;
-    opacity: 0.25;
-    pointer-events: none;
-  }
+
+
+.hero-geo {
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  overflow: hidden;
+}
+.hero-geo circle {
+  fill: none;
+  stroke: #185FA5;
+}
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 </style>
 </head>
