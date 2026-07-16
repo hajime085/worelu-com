@@ -225,7 +225,7 @@ a{text-decoration:none;color:inherit}
   .hdr{padding:10px 16px}
   .hdr-nav{display:none}
   .hamburger{display:flex}
-  .hdr{position:relative}
+  .hdr{position:fixed;width:100%}
   .sec{padding:56px 24px}
 }
 @media(max-width:600px){
@@ -235,7 +235,15 @@ a{text-decoration:none;color:inherit}
   .footer-nav-group{gap:24px}
   .hero-h1{font-size:28px}
 }
-@media(max-width:860px){body{font-size:18px}}.hdr-logo{font-size:26px!important}@media(max-width:600px){body{font-size:20px}}</style>
+@media(max-width:860px){body{font-size:18px}}.hdr-logo{font-size:26px!important}@media(max-width:600px){body{font-size:20px}}
+@media (max-width: 768px) {
+  .hdr { position: fixed !important; width: 100% !important; top: 0; z-index: 100; }
+  body { padding-top: 80px; }
+  .hero-h1 { font-size: clamp(36px, 8vw, 48px) !important; line-height: 1.25 !important; }
+  .hero-sub { font-size: 20px !important; line-height: 1.9 !important; }
+  .trust-item { font-size: 17px !important; }
+}
+</style>
 </head>
 <body>
 
