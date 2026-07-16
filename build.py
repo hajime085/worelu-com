@@ -82,7 +82,7 @@ CAT_ICONS = {
     "quit":    '<circle cx="26" cy="26" r="18" fill="{circle}"/><rect x="16" y="14" width="20" height="24" rx="3" fill="{fill}"/><path d="M20 22h12M20 28h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>',
 }
 
-def make_art_card(art: dict) -> str:
+def make_art_card(art: dict, rank: int = 0) -> str:
     """記事カードHTMLを生成"""
     cat = art['category']
     c = CAT_CARD_STYLES.get(cat, CAT_CARD_STYLES['stress'])
@@ -90,8 +90,10 @@ def make_art_card(art: dict) -> str:
     icon = CAT_ICONS.get(cat, CAT_ICONS['stress']).format(circle=c['circle'], fill=c['fill'])
     date_disp = art['date'].replace('-', '.')
     desc = art['description'][:60] + ('…' if len(art['description']) > 60 else '')
+    rank_html = f'<div style="position:absolute;bottom:-10px;right:4px;font-size:100px;font-weight:900;color:{c["badge_color"]};opacity:0.12;line-height:1;pointer-events:none;z-index:0;">{rank:02d}</div>' if rank else ''
     return f'''      <a href="{art['url']}" class="art-card">
-        <div class="art-thumb" style="background:{c['bg']}">
+        <div class="art-thumb" style="background:{c['bg']};position:relative;overflow:hidden;">
+          {rank_html}
           <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">{icon}</svg>
           <div class="art-thumb-cat" style="background:{c['badge_bg']};color:{c['badge_color']}">{cat_label}</div>
         </div>
@@ -113,7 +115,7 @@ def build_top(articles: list):
     popular_set = {a['slug'] for a in popular}
     recent = [a for a in articles if a['slug'] not in popular_set][:3]
 
-    popular_html = '\n'.join(make_art_card(a) for a in popular)
+    popular_html = '\n'.join(make_art_card(a, rank=i+1) for i, a in enumerate(popular))
     recent_html = '\n'.join(make_art_card(a) for a in recent)
 
     # TOPページHTMLを読み込んで該当セクションを置き換え
