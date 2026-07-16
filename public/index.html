@@ -293,14 +293,37 @@ a{text-decoration:none;color:inherit}
 
 <!-- HERO -->
 <section style="border-bottom:1px solid var(--line)">
-  <div class="hero">
-<div class="hero-geo" aria-hidden="true" style="position:absolute;right:-20px;bottom:-20px;width:360px;height:360px;pointer-events:none;">
-<svg viewBox="0 0 360 360" width="360" height="360">
-  <circle cx="260" cy="260" r="200" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.07"/>
-  <circle cx="260" cy="260" r="140" fill="none" stroke="#185FA5" stroke-width="1.5" opacity="0.06"/>
-  <circle cx="260" cy="260" r="80" fill="none" stroke="#185FA5" stroke-width="2" opacity="0.05"/>
-  <circle cx="260" cy="260" r="30" fill="#185FA5" opacity="0.05"/>
-  <circle cx="60" cy="50" r="70" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.04"/>
+  <div class="hero" style="position:relative;overflow:hidden;">
+<div aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:0;">
+<svg width="100%" height="100%" style="position:absolute;top:0;left:0;">
+  <defs>
+    <style>
+      @keyframes float1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-30px)} }
+      @keyframes float2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-25px,20px)} }
+      @keyframes float3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(15px,25px)} }
+      @keyframes drift1 { 0%,100%{transform:translateX(0)} 50%{transform:translateX(40px)} }
+      .g1{animation:float1 8s ease-in-out infinite;transform-origin:280px 180px}
+      .g2{animation:float2 11s ease-in-out infinite;transform-origin:80px 280px}
+      .g3{animation:float3 9s ease-in-out infinite;transform-origin:320px 80px}
+      .g4{animation:drift1 13s ease-in-out infinite;transform-origin:200px 200px}
+    </style>
+  </defs>
+  <g class="g1">
+    <circle cx="280" cy="180" r="120" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.08"/>
+    <circle cx="280" cy="180" r="70" fill="none" stroke="#185FA5" stroke-width="1.5" opacity="0.06"/>
+    <circle cx="280" cy="180" r="25" fill="#185FA5" opacity="0.04"/>
+  </g>
+  <g class="g2">
+    <circle cx="80" cy="280" r="90" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.06"/>
+    <circle cx="80" cy="280" r="45" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.05"/>
+  </g>
+  <g class="g3">
+    <circle cx="320" cy="60" r="50" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.07"/>
+    <circle cx="320" cy="60" r="20" fill="#185FA5" opacity="0.04"/>
+  </g>
+  <g class="g4">
+    <circle cx="160" cy="320" r="35" fill="none" stroke="#185FA5" stroke-width="1" opacity="0.05"/>
+  </g>
 </svg>
 </div>
     <div>
