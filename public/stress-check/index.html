@@ -377,8 +377,11 @@
     45%  { transform:scale(1.18); opacity:1; }
     100% { transform:scale(1); opacity:0.78; }
   }
-  .bar-track { height: 8px; overflow: hidden; border-radius: 999px; background: var(--line); }
-  .bar-fill { height: 100%; width: 0; border-radius: inherit; transition: width 420ms ease; }
+  .bar-track { height: 12px; overflow: hidden; border-radius: 999px; background: #F1F5F9; }
+  .bar-fill { height: 100%; width: 0; border-radius: inherit; transition: width 600ms cubic-bezier(0.34,1.56,0.64,1); }
+  .bar-fill.bar-danger { background: linear-gradient(90deg,#FCA5A5,#EF4444); }
+  .bar-fill.bar-warning { background: linear-gradient(90deg,#FCD34D,#F59E0B); }
+  .bar-fill.bar-safe { background: linear-gradient(90deg,#6EE7B7,#10B981); }
   .bar-stress      { background: #E24B4A; }
   .bar-burnout     { background: #D4860A; }
   .bar-environment { background: #2E86C1; }
@@ -459,15 +462,14 @@
 
   .task-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
   .task-card {
-    display: grid; grid-template-columns: 26px minmax(0,1fr); gap: 12px;
-    align-items: start; min-height: 110px; padding: 16px;
-    border: 1px solid var(--line); border-radius: 12px;
-    background: #fff; cursor: pointer;
-    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
-    text-align: left;
+    display: flex; align-items: flex-start; gap: 14px;
+    background: #fff; border: 1.5px solid #E2E8F0;
+    border-radius: 14px; padding: 18px 16px;
+    text-align: left; cursor: pointer; width: 100%;
+    transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
-  .task-card:hover { border-color: rgba(29,158,117,0.5); transform: translateY(-1px); }
-  .task-card.done { border-color: var(--accent); background: var(--accent-soft); }
+  .task-card:hover { border-color: #60A5FA; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(37,99,235,0.12); }
+  .task-card.done { border-color: #10B981; background: #F0FDF4; box-shadow: none; }  .task-card.done { border-color: var(--accent); background: var(--accent-soft); }
   .task-check {
     display: grid; place-items: center;
     width: 26px; height: 26px;
@@ -475,7 +477,7 @@
     color: #fff; font-size: 16px; font-weight: 900;
     transition: border-color 180ms, background 180ms;
   }
-  .task-card.done .task-check { border-color: var(--accent); background: var(--accent); }
+  .task-card.done .task-check { border-color: #10B981; background: #10B981; color:#fff; }
   .task-title { font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 5px; }
   .task-desc { color: var(--muted); font-size: 13px; font-weight: 400; line-height: 1.7; }
 
@@ -591,16 +593,16 @@
     display: flex; flex-wrap: wrap; gap: 7px;
   }
   .topic-chip {
-    display: inline-flex; align-items: center; gap: 5px;
-    padding: 6px 13px; border-radius: 999px;
-    border: 1px solid var(--line); background: #fff;
-    font-size: 12px; font-weight: 700; color: var(--text);
-    cursor: pointer; transition: border-color 160ms, background 160ms, color 160ms;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: 999px;
+    border: 1.5px solid #E2E8F0; background: #fff;
+    font-size: 13px; font-weight: 600; color: #475569;
+    cursor: pointer; transition: all 0.18s ease;
+    white-space: nowrap; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
   .topic-chip svg { flex-shrink: 0; }
-  .topic-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
-  .topic-chip.active { border-color: var(--accent); background: var(--accent); color: #fff; }
-
+  .topic-chip:hover { border-color: #3B82F6; color: #2563EB; background: #EFF6FF; transform: translateY(-1px); box-shadow: 0 3px 10px rgba(37,99,235,0.12); }
+  .topic-chip.active { border-color: #2563EB; background: #2563EB; color: #fff; box-shadow: 0 3px 10px rgba(37,99,235,0.25); }
   /* ===== AI分析カード ===== */
   .ai-analysis-card {
     margin: 4px 0 8px;
@@ -1160,7 +1162,7 @@ function renderResultPage() {
         <article class="result-card">
           <p class="card-label">${a.label}</p>
           <div class="card-score"><strong style="color:${a.color}">${norm[a.key]}</strong><span>/100</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${norm[a.key]}%;background:${a.color}"></div></div>
+          <div class="bar-track"><div class="bar-fill ${norm[a.key]>70?'bar-danger':norm[a.key]>40?'bar-warning':'bar-safe'}" style="width:${norm[a.key]}%"></div></div>
         </article>
       `).join('')}
     </div>
