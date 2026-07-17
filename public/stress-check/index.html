@@ -1274,6 +1274,22 @@ function renderResultPage() {
   el.textContent = '';
   let i = 0;
   const t = setInterval(()=>{ if(i<analysis.length){el.textContent+=analysis[i++];}else clearInterval(t); },16);
+
+  // 総合スコアカウントアップ
+  var rNumEl = document.getElementById('rTotalNum');
+  if(rNumEl){
+    var rTarget = total;
+    var rStart = null;
+    function rStep(ts){
+      if(!rStart) rStart = ts;
+      var p = Math.min((ts-rStart)/1000, 1);
+      var ease = 1 - Math.pow(1-p, 3);
+      rNumEl.textContent = Math.round(ease * rTarget);
+      if(p < 1) requestAnimationFrame(rStep);
+      else rNumEl.textContent = rTarget;
+    }
+    requestAnimationFrame(rStep);
+  }
 }
 
 /* ===== チャット ===== */
