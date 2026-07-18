@@ -1,2 +1,2 @@
-# 旧バージョン残骸の URL に 410 Gone を返す（Cloudflare Pages _redirects）
-/worelu_v6_articles/*  /  410
+# 旧バージョン残骸の URL を恒久削除扱いで 301 リダイレクト（CF Pages は 410 非対応）
+/worelu_v6_articles/*  /  301
