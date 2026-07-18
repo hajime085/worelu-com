@@ -1,2 +1,2 @@
-# 旧バージョン残骸の URL を恒久削除扱いで 301 リダイレクト（CF Pages は 410 非対応）
-/worelu_v6_articles/*  /  301
+# 旧バージョン残骸の URL に 404 を返す（CF Pages は 410 非対応のため次善策）
+/worelu_v6_articles/*  /  404
