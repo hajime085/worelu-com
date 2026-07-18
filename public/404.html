@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ページが見つかりません | Worelu</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root {
+  --blue: #2563EB;
+  --blue-dark: #1D4ED8;
+  --blue-soft: #EFF6FF;
+  --blue-mid: #DBEAFE;
+  --text: #0F172A;
+  --muted: #64748B;
+  --line: #E2E8F0;
+  --page: #F8FAFC;
+  --white: #FFFFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.8; min-height: 100vh; display: flex; flex-direction: column; }
+
+.site-header { background: var(--white); border-bottom: 1px solid var(--line); height: 72px; display: flex; align-items: center; padding: 0 24px; justify-content: space-between; }
+.site-logo { font-size: 20px; font-weight: 900; color: var(--text); text-decoration: none; letter-spacing: -0.04em; }
+.site-logo em { color: var(--blue); font-style: normal; }
+.header-btn { background: var(--blue); color: var(--white); font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
+
+main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 60px 24px; }
+.error-box { text-align: center; max-width: 480px; width: 100%; }
+.error-code { font-size: 96px; font-weight: 900; color: var(--blue-mid); line-height: 1; letter-spacing: -0.04em; margin-bottom: 8px; }
+.error-title { font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+.error-desc { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 36px; }
+.btn-home { display: inline-block; background: var(--blue); color: var(--white); font-size: 15px; font-weight: 700; padding: 14px 32px; border-radius: 8px; text-decoration: none; }
+.btn-home:hover { background: var(--blue-dark); }
+.error-links { margin-top: 28px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.error-links a { font-size: 13px; color: var(--blue); text-decoration: none; font-weight: 600; }
+.error-links a:hover { text-decoration: underline; }
+
+footer { background: var(--white); border-top: 1px solid var(--line); padding: 20px 24px; text-align: center; font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="site-logo">Wor<em>e</em>lu</a>
+  <a href="/" class="header-btn">トップへ戻る</a>
+</header>
+
+<main>
+  <div class="error-box">
+    <div class="error-code">404</div>
+    <h1 class="error-title">お探しのページが見つかりません</h1>
+    <p class="error-desc">
+      URLが変更または削除されたか、<br>
+      入力ミスの可能性があります。
+    </p>
+    <a href="/" class="btn-home">トップページへ</a>
+    <div class="error-links">
+      <a href="/articles/">記事一覧</a>
+      <a href="/stress-check/">AIストレス診断</a>
+      <a href="/about/">運営者情報</a>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 Worelu — 働く人のためのセルフケアメディア</footer>
+
+</body>
+</html>
