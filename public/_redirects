@@ -1,0 +1,2 @@
+# 旧バージョン残骸の URL に 410 Gone を返す（Cloudflare Pages _redirects）
+/worelu_v6_articles/*  /  410
