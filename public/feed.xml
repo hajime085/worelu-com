@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 19 Jul 2026 11:47:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 10:00:03 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[休憩時間が取れない職場は違法？労基法34条の権利と対処法]]></title>
+      <link>https://worelu.com/articles/work/kyukei-jikan-torenai/</link>
+      <guid>https://worelu.com/articles/work/kyukei-jikan-torenai/</guid>
+      <description><![CDATA[昼休みも働かされる、休憩なしが当たり前——それは労働基準法違反です。労基法34条が定める休憩権の内容、職場への正しい伝え方から労働基準監督署への相談手順まで具体的に解説します。]]></description>
+      <pubDate>2026-07-15</pubDate>
+    </item>
     <item>
       <title><![CDATA[仕事で吐き気がするのはなぜ？ストレスが体に出るしくみと対処法]]></title>
       <link>https://worelu.com/articles/stress/shigoto-hakike/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/stress/shigoto-utsu/</guid>
       <description><![CDATA[「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく解説します。]]></description>
       <pubDate>2026-06-23</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[休職したいのは甘え？罪悪感を消して自分を守るための判断基準]]></title>
-      <link>https://worelu.com/articles/burnout/kyushoku-amae/</link>
-      <guid>https://worelu.com/articles/burnout/kyushoku-amae/</guid>
-      <description><![CDATA[「休職したいけど甘えじゃないか」と悩んでいませんか？休職を考えるのは、あなたが限界まで頑張った証拠です。休職が甘えではない理由や必要なサイン、具体的な手続きまで解説します。]]></description>
-      <pubDate>2026-06-22</pubDate>
     </item>
   </channel>
 </rss>
