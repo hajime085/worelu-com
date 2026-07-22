@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 21 Jul 2026 10:00:03 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 13:43:04 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[給与明細がおかしいときの確認ポイントと対処法]]></title>
+      <link>https://worelu.com/articles/work/kyuyomeisai-okashii/</link>
+      <guid>https://worelu.com/articles/work/kyuyomeisai-okashii/</guid>
+      <description><![CDATA[「給与明細がおかしい」と感じたことはありませんか。よくある計算ミスや残業代未払いのパターンと確認方法、会社への伝え方から労働基準監督署への相談手順まで、順を追って解説します。]]></description>
+      <pubDate>2026-07-17</pubDate>
+    </item>
     <item>
       <title><![CDATA[休憩時間が取れない職場は違法？労基法34条の権利と対処法]]></title>
       <link>https://worelu.com/articles/work/kyukei-jikan-torenai/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/stress/shigoto-miss-ochikomi/</link>
       <guid>https://worelu.com/articles/stress/shigoto-miss-ochikomi/</guid>
       <description><![CDATA[仕事でミスをして落ち込んでいませんか？ミスを引きずってしまう心理、ミス後の正しい対処法、気持ちを切り替える具体的な方法を解説します。]]></description>
-      <pubDate>2026-06-23</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事が原因のうつ？サインや症状・病院に行くべき目安と対処法を解説]]></title>
-      <link>https://worelu.com/articles/stress/shigoto-utsu/</link>
-      <guid>https://worelu.com/articles/stress/shigoto-utsu/</guid>
-      <description><![CDATA[「仕事が辛い、これってうつ？」と悩んでいませんか？仕事が原因で起こるうつのサインや症状、病院に行くべき目安をわかりやすく解説します。]]></description>
       <pubDate>2026-06-23</pubDate>
     </item>
   </channel>
