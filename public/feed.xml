@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Wed, 22 Jul 2026 13:43:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 02:55:34 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[有給休暇が取れない会社は違法？労基法第39条の権利と具体的な対処法]]></title>
+      <link>https://worelu.com/articles/work/yukyu-kyuka-torenai/</link>
+      <guid>https://worelu.com/articles/work/yukyu-kyuka-torenai/</guid>
+      <description><![CDATA[有給休暇が取れないと感じているなら、その状況は労働基準法第39条に違反している可能性があります。申請を断られた・嫌な顔をされる・制度がないと言われたときの権利と正しい対処法をわかりやすく解説します。]]></description>
+      <pubDate>2026-07-18</pubDate>
+    </item>
     <item>
       <title><![CDATA[給与明細がおかしいときの確認ポイントと対処法]]></title>
       <link>https://worelu.com/articles/work/kyuyomeisai-okashii/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/stress/morahara-joushi/</link>
       <guid>https://worelu.com/articles/stress/morahara-joushi/</guid>
       <description><![CDATA[「これってモラハラ？」上司の言葉や態度に傷ついているあなたへ。モラハラの定義・特徴・対処法・逃げていい理由を解説します。]]></description>
-      <pubDate>2026-06-23</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事のミスで落ち込むあなたへ。立ち直るための正しい対処法と切り替え術]]></title>
-      <link>https://worelu.com/articles/stress/shigoto-miss-ochikomi/</link>
-      <guid>https://worelu.com/articles/stress/shigoto-miss-ochikomi/</guid>
-      <description><![CDATA[仕事でミスをして落ち込んでいませんか？ミスを引きずってしまう心理、ミス後の正しい対処法、気持ちを切り替える具体的な方法を解説します。]]></description>
       <pubDate>2026-06-23</pubDate>
     </item>
   </channel>
