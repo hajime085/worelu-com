@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 23 Jul 2026 02:55:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 21:38:16 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[労働基準監督署に相談する方法。匿名・手順・解決できる問題を整理]]></title>
+      <link>https://worelu.com/articles/work/roudou-kantokusho-soudan/</link>
+      <guid>https://worelu.com/articles/work/roudou-kantokusho-soudan/</guid>
+      <description><![CDATA[残業代の未払いや有給休暇の拒否など、労働基準監督署に相談できる問題と具体的な相談方法を解説します。匿名での相談可否・準備する証拠・申告後の是正勧告の流れまで、実際に動けるよう整理しました。]]></description>
+      <pubDate>2026-07-19</pubDate>
+    </item>
     <item>
       <title><![CDATA[有給休暇が取れない会社は違法？労基法第39条の権利と具体的な対処法]]></title>
       <link>https://worelu.com/articles/work/yukyu-kyuka-torenai/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/burnout/kyushoku-shindan/</link>
       <guid>https://worelu.com/articles/burnout/kyushoku-shindan/</guid>
       <description><![CDATA[休職を考えているけれど、診断書はどうやってもらうの？費用はいくら？もらい方・受診すべき病院・会社への伝え方をわかりやすく解説します。]]></description>
-      <pubDate>2026-06-23</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[モラハラ上司に限界を感じたら。特徴と対処法・逃げていい理由を解説]]></title>
-      <link>https://worelu.com/articles/stress/morahara-joushi/</link>
-      <guid>https://worelu.com/articles/stress/morahara-joushi/</guid>
-      <description><![CDATA[「これってモラハラ？」上司の言葉や態度に傷ついているあなたへ。モラハラの定義・特徴・対処法・逃げていい理由を解説します。]]></description>
       <pubDate>2026-06-23</pubDate>
     </item>
   </channel>
