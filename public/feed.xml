@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 23 Jul 2026 21:38:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 21:46:07 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[ハラスメントの相談窓口。迷わず動ける相談先と手順を解説]]></title>
+      <link>https://worelu.com/articles/work/harassment-soudan-madoguchi/</link>
+      <guid>https://worelu.com/articles/work/harassment-soudan-madoguchi/</guid>
+      <description><![CDATA[パワハラ・セクハラで困ったとき、まずどこに相談すればいいのか。都道府県労働局・法テラス・ユニオンなど使える外部相談窓口の一覧と、相談前に準備しておくこと、相談後のステップをわかりやすく解説します。]]></description>
+      <pubDate>2026-07-20</pubDate>
+    </item>
     <item>
       <title><![CDATA[労働基準監督署に相談する方法。匿名・手順・解決できる問題を整理]]></title>
       <link>https://worelu.com/articles/work/roudou-kantokusho-soudan/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/burnout/shigoto-muiteiru/</guid>
       <description><![CDATA[「仕事が向いていない」と感じるのは甘えではありません。向いていないサインの見分け方・本当の原因の探し方・次にとるべき行動を具体的に解説します。]]></description>
       <pubDate>2026-06-25</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[休職に診断書は必須？もらい方から費用・会社への提出方法まで解説]]></title>
-      <link>https://worelu.com/articles/burnout/kyushoku-shindan/</link>
-      <guid>https://worelu.com/articles/burnout/kyushoku-shindan/</guid>
-      <description><![CDATA[休職を考えているけれど、診断書はどうやってもらうの？費用はいくら？もらい方・受診すべき病院・会社への伝え方をわかりやすく解説します。]]></description>
-      <pubDate>2026-06-23</pubDate>
     </item>
   </channel>
 </rss>
