@@ -395,20 +395,20 @@ FLOATING_ADS = {
         "gif_src": "https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD",
         "alt": "POSIWILL CAREER",
     },
-    # ── ZERO TALENT（18〜29歳・若手層）320×50バナー ──
+    # ── 20代の転職相談所（18〜29歳・若手層）320×50バナー ──
     "20dai-shigoto-yametai": {
-        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100oo5500oujg",
+        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100n5c000oujg",
         "img_w": 320, "img_h": 50,
-        "href": "https://h.accesstrade.net/sp/cc?rk=0100oo5500oujg",
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100n5c000oujg",
         "gif_src": "",
-        "alt": "ZERO TALENT",
+        "alt": "20代の転職相談所",
     },
     "shigoto-dekinai-tsurai": {
-        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100oo5500oujg",
+        "img_src": "https://h.accesstrade.net/sp/rr?rk=0100n5c000oujg",
         "img_w": 320, "img_h": 50,
-        "href": "https://h.accesstrade.net/sp/cc?rk=0100oo5500oujg",
+        "href": "https://h.accesstrade.net/sp/cc?rk=0100n5c000oujg",
         "gif_src": "",
-        "alt": "ZERO TALENT",
+        "alt": "20代の転職相談所",
     },
     # ── テックゴー（MyVision）320×50バナー ──
     "kaisha-yabai": {
