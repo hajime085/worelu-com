@@ -41,7 +41,7 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 
 ストレスが限界に近づくと、多くの場合、体が先に悲鳴を上げます。「気持ちはまだ頑張れるつもりなのに、体が言うことを聞かない」という状態は、代表的な限界のサインのひとつと考えられています。
 
-### 体に出やすいサイン
+#### 体に出やすいサイン
 
 - 布団に入っても眠れない、夜中や早朝に目が覚めてしまう
 - 朝、体が重くて起きられない。仕事に行きたくないというより「動けない」
@@ -51,7 +51,7 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 - 理由もなく涙が勝手に出てくる
 - 休日に寝ても疲れが取れない
 
-### 心に出やすいサイン
+#### 心に出やすいサイン
 
 - 好きだったことが楽しめない、何にも興味がわかない
 - 単純なミスや物忘れが明らかに増えた
@@ -80,15 +80,15 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 
 限界に近い状態でまず必要なのは、根本解決ではなく応急処置です。骨折した足で走り方を工夫しても意味がないのと同じで、まずは負荷を止めて、回復の土台を作ることが先になります。
 
-### 1. 物理的にストレス源から距離を取る
+#### 1. 物理的にストレス源から距離を取る
 
 可能であれば、有休を使って仕事から離れる日を作ってください。有休の取得は労働者の正当な権利であり、理由を細かく説明する義務はありません。どうしても体が動かない日に欠勤の連絡をすることも、自分を守るための正当な手段です。「休んだら迷惑がかかる」と感じるかもしれませんが、限界を超えて倒れてしまうほうが、結果的に長い離脱につながりやすいことは知っておいてよいと思います。
 
-### 2. 睡眠と食事の確保を最優先にする
+#### 2. 睡眠と食事の確保を最優先にする
 
 これは「明日も頑張るため」の対処ではなく、**回復のための対処**です。残業や持ち帰り仕事を減らしてでも、睡眠時間を確保する。食欲がなければ、ゼリーやスープなど口にできるものだけでも構いません。夜にどうしても仕事のことを考えてしまう場合は、寝る前のメールチェックをやめてみるなど、小さな区切りから始めるのが現実的です。
 
-### 3. 一人で抱えない。話せる相手を1人確保する
+#### 3. 一人で抱えない。話せる相手を1人確保する
 
 家族、友人、社内の信頼できる人、産業医、社外の相談窓口――誰でも構いません。「解決策をもらう」ためではなく、「今の状態を言葉にして、一人で抱えている状態をやめる」ことが目的です。身近に話せる人がいない場合は、前述のこころの健康相談統一ダイヤルなど、公的な窓口を使うこともできます。
 
@@ -118,7 +118,7 @@ canonical: https://worelu.com/articles/stress/shigoto-stress-genkai/
 
 応急処置と受診の検討まで進んだら、最後は「この働き方を続けるかどうか」の判断です。ここで知っておいてほしいのは、休職も退職も、限界を超えてから仕方なく選ぶものではなく、**限界を超える前に検討してよい正当な選択肢**だということです。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%" font-family="sans-serif"><title>限界を感じたときの3ステップ：応急処置、受診の検討、休む・辞めるの判断</title><rect x="0" y="0" width="680" height="340" fill="#F8FAFC" rx="12"/><text x="340" y="40" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E293B">限界を感じたときの道筋</text><rect x="40" y="70" width="600" height="70" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5" rx="10"/><text x="70" y="100" font-size="14" font-weight="bold" fill="#1E40AF">STEP 1　応急処置</text><text x="70" y="124" font-size="13" fill="#334155">距離を取る・睡眠と食事を確保する・一人で抱えない</text><path d="M340 140 L340 160" stroke="#94A3B8" stroke-width="2"/><path d="M334 154 L340 162 L346 154" fill="none" stroke="#94A3B8" stroke-width="2"/><rect x="40" y="165" width="600" height="70" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5" rx="10"/><text x="70" y="195" font-size="14" font-weight="bold" fill="#1E40AF">STEP 2　受診の検討</text><text x="70" y="219" font-size="13" fill="#334155">不眠・食欲不振・落ち込みが2週間以上続くなら専門家へ相談</text><path d="M340 235 L340 255" stroke="#94A3B8" stroke-width="2"/><path d="M334 249 L340 257 L346 249" fill="none" stroke="#94A3B8" stroke-width="2"/><rect x="40" y="260" width="600" height="70" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5" rx="10"/><text x="70" y="290" font-size="14" font-weight="bold" fill="#166534">STEP 3　休む・辞めるの判断</text><text x="70" y="314" font-size="13" fill="#334155">回復してから、休職・異動・退職などを落ち着いて選ぶ</text></svg>
 </div>
 

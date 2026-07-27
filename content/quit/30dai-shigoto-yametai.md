@@ -30,7 +30,7 @@ draft: false
 
 30代の悩みは20代とは異なります。責任・家庭・キャリア不安が複雑に絡み合うのが30代特有のつらさです。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 260" role="img" style="display:block;max-width:100%"><title>30代が仕事を辞めたいと感じる構造</title>
 <rect x="0" y="0" width="680" height="208" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">30代特有のプレッシャー構造</text>
@@ -129,7 +129,7 @@ draft: false
 
 30代の転職判断は、20代よりも慎重かつ戦略的に行う必要があります。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 280" role="img" style="display:block;max-width:100%"><title>20代と30代の転職の違い</title>
 <rect x="0" y="0" width="680" height="208" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">20代 vs 30代の転職における違い</text>
@@ -161,7 +161,7 @@ draft: false
 
 ## キャリアと生活を守りながら動く4つのステップ
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>30代が動き出す4ステップ</title>
 <defs><marker id="step30Arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="134" rx="12" fill="#F8FAFC"/>
@@ -224,7 +224,7 @@ draft: false
 
 ## 30代で転職するメリット・デメリット
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>30代転職のメリット・デメリット</title>
 <rect x="0" y="0" width="680" height="273" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">30代転職のメリット vs デメリット</text>

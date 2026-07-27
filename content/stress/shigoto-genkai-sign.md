@@ -23,7 +23,7 @@ draft: false
 
 「仕事の限界」を感じる瞬間は、人それぞれです。しかし、多くの人が共通して抱える悩みや、共感できる具体的なケースを知ることで、「自分だけではない」という安心感につながるはずです。ここでは、実際にWoreluに寄せられた声や、知恵袋などでよく見られる相談を元に、3つのケーススタディをご紹介します。<br><br>
 
-### ケース1：体のサイン（30代・営業職）
+#### ケース1：体のサイン（30代・営業職）
 
 <div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
   <div style="flex-shrink:0;text-align:center">
@@ -39,7 +39,7 @@ draft: false
 
 Aさんのように、身体的な不調は、心のSOSが形となって現れる最も分かりやすいサインの一つです。特に、睡眠や食欲の変化は、見過ごされがちですが、重要な警告信号です。<br><br>
 
-### ケース2：感情のサイン（20代・エンジニア）
+#### ケース2：感情のサイン（20代・エンジニア）
 
 <div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px;flex-direction:row-reverse">
   <div style="flex-shrink:0;text-align:center">
@@ -55,7 +55,7 @@ Aさんのように、身体的な不調は、心のSOSが形となって現れ�
 
 ストレスが蓄積すると、感情の起伏が激しくなったり、イライラしやすくなったりすることがあります。これは、心がキャパオーバーになっているサインかもしれません。<br><br>
 
-### ケース3：無気力サイン（40代・管理職）
+#### ケース3：無気力サイン（40代・管理職）
 
 <div style="border-radius:10px;padding:16px 20px;margin:16px 0;display:flex;align-items:flex-start;gap:16px">
   <div style="flex-shrink:0;text-align:center">
@@ -417,7 +417,7 @@ A5：現在の職場で心身の不調が改善しない場合、環境を変え
 
 A6：WoreluのAI診断は、仕事ストレス・燃え尽き傾向・職場環境・転職意向の4つの軸から、あなたの今の心の健康状態を可視化します。約1分で無料で診断でき、誰にも知られずに客観的なアドバイスを得ることができます。自分の状態を把握することで、次の一歩を踏み出すきっかけになるでしょう。
 
-### 自分の限界サインに気づいたら
+#### 自分の限界サインに気づいたら
 
 「もしかして、私、もう限界？」<br><br>
 

@@ -17,7 +17,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 そんな日々を繰り返すうちに、「看護師を辞めたい」という言葉がふとした瞬間に浮かぶようになった——。この記事は、そんなあなたのために書いています。最初に、いまの自分がどこにいるのかを下の図で確かめるところから始めてみてください。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 400" role="img" style="display:block;max-width:100%" font-family="sans-serif"><title>「辞めたい」と感じたときの、この記事の歩き方</title>
 <defs><marker id="ah1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64748B"/></marker></defs>
 <rect x="0" y="0" width="680" height="400" fill="#F8FAFC" rx="12"/>
@@ -157,11 +157,11 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 サインがそこまで強くないなら、少しだけ立ち止まって整理する余裕があります。ここでの整理が雑なまま転職すると、「職場は変わったのに、つらさは同じ」ということが起こりやすくなります。
 
-### 整理1：それは「今の職場」の問題か、「看護師という仕事」の問題か
+#### 整理1：それは「今の職場」の問題か、「看護師という仕事」の問題か
 
 次の2つの質問に、直感で答えてみてください。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 360" role="img" style="display:block;max-width:100%" font-family="sans-serif"><title>「職場の問題」か「仕事の問題」かを切り分ける2つの質問</title>
 <defs><marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64748B"/></marker></defs>
 <rect x="0" y="0" width="680" height="360" fill="#F8FAFC" rx="12"/>
@@ -196,7 +196,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 答えは今日と来週で変わるかもしれません。それでもこの切り分けを一度やっておくと、次の章の選択肢がぐっと選びやすくなります。
 
-### 整理2：退職しなくても変えられる余地はないか
+#### 整理2：退職しなくても変えられる余地はないか
 
 「辞める」の手前に、実は選べる手段がいくつかあります。
 
@@ -206,7 +206,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 言い出しにくい相談ですが、退職の意思を固める前に一度使えるカードか確認しておくと、あとで「試せることは試した」と思えます。人によっては、これだけで消耗がかなり軽くなることもあるようです。
 
-### 整理3：動く前に見ておくお金の現実
+#### 整理3：動く前に見ておくお金の現実
 
 退職の前後では、予想より大きな出費が重なることがあります。主な項目の金額感と注意点を確認しておきましょう。
 
@@ -235,7 +235,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 | 資格を活かして現場を離れる | 企業看護師（産業保健）、治験関連、保育園看護師など | 医療知識は活かしたいが臨床から距離を置きたい人 | 求人数が少なめで、選考に時間がかかることも |
 | 看護職を離れる | 一般企業の事務・営業など、看護以外の仕事へ | 看護そのものが合わないと感じている人 | 収入や経験の積み直しが必要。ただし資格は失効しない |
 
-### 「資格を活かして現場を離れる」——具体的な職種と探し方
+#### 「資格を活かして現場を離れる」——具体的な職種と探し方
 
 5番目の選択肢に興味があっても、求人が少なく探しにくいのが実情です。代表的な職種と探し方を整理しておきます。
 
@@ -263,7 +263,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 方向が決まったら、あとは手順の問題です。全体の流れを図にすると、こうなります。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 260" role="img" style="display:block;max-width:100%" font-family="sans-serif"><title>退職までの5ステップ</title>
 <defs><marker id="ah3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64748B"/></marker></defs>
 <rect x="0" y="0" width="680" height="260" fill="#F8FAFC" rx="12"/>

@@ -33,7 +33,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 評価されない状況が続くと、人は「腐る」という感覚に陥ります。これは単なるやる気の低下ではなく、**悔しさが諦めに変わっていく過程**です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>腐っていく感情の変遷</title>
 <rect x="0" y="0" width="680" height="130" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「腐る」感覚が生まれるまでの流れ</text>
@@ -72,7 +72,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 評価されない原因は、必ずしもあなただけにあるわけではありません。**会社・自分・環境**の3つの視点から原因を探ることが重要です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>評価されない原因3つの視点</title>
 <rect x="0" y="0" width="680" height="260" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">評価されない原因：3つの視点チェック</text>
@@ -168,7 +168,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 ## 腐る前に試せる立て直し3ステップ
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>立て直し3ステップ</title>
 <defs><marker id="hyoukaStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="136" rx="12" fill="#F8FAFC"/>
@@ -226,7 +226,7 @@ canonical: https://worelu.com/articles/quit/hyouka-sarenai/
 
 ## 転職すべきか・続けるべきかの判断基準
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 316" role="img" style="display:block;max-width:100%"><title>転職すべきか続けるべきかの判断基準</title>
 <rect x="0" y="0" width="680" height="252" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">転職すべき vs 続けて改善を試みる</text>

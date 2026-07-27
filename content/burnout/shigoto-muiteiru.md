@@ -28,7 +28,7 @@ canonical: "https://worelu.com/articles/burnout/shigoto-muiteiru/"
 
 この2つの違いを明確にすることで、取るべき行動が変わってきます。まずは、あなたが感じている「向いていない」がどちらのタイプに近いのか、考えてみましょう。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
   <svg viewBox="0 0 680 350" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -98,7 +98,7 @@ canonical: "https://worelu.com/articles/burnout/shigoto-muiteiru/"
 
 「向いていない」という感覚は、様々な要因が複雑に絡み合って生まれることがあります。本当に職種そのものが向いていないのか、それとも別の原因があるのか、以下の4つの視点からチェックしてみましょう。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
   <svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -270,7 +270,7 @@ canonical: "https://worelu.com/articles/burnout/shigoto-muiteiru/"
 <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD" alt="">
 </div>
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
   <svg viewBox="0 0 680 350" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">

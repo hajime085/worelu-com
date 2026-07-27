@@ -122,7 +122,7 @@ function moeJudge() {
 
 セルフチェックで燃え尽き傾向が見られた場合、早めに対処することが重要です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 170" role="img" style="display:block;max-width:100%"><title>燃え尽き傾向への3つの対処法</title>
 <rect x="0" y="0" width="680" height="170" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">燃え尽き傾向への3つの対処法</text>

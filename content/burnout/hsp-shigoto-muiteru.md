@@ -37,7 +37,7 @@ HSPの人は、そうでない人に比べて、外部からの刺激を深く�
 
 HSPの特性は、アメリカの心理学者エレイン・N・アーロン博士によって提唱された「DOES（ダズ）」という4つの要素で説明されます。これを知ることで、あなたの繊細さがどこから来ているのか、より深く理解できるでしょう。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>HSPの4つの特徴DOES</title>
 <rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">HSPの4つの特徴「DOES」</text>

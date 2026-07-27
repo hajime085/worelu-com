@@ -53,7 +53,7 @@ canonical: "https://worelu.com/articles/quit/career-hoko-wakaranai/"
 
 「今の会社を辞めても、次が見つかるか不安」「失敗したらどうしよう」といった変化への恐れや、現状を維持しようとする心理が、次の一歩を踏み出すことを妨げている場合があります。たとえ今の状況に不満があっても、未知の未来よりも慣れた現状の方が安心だと感じてしまうのは、人間の自然な心理です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
   <svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow-career1" x="-50%" y="-50%" width="200%" height="200%">
@@ -115,7 +115,7 @@ canonical: "https://worelu.com/articles/quit/career-hoko-wakaranai/"
 - 今の職場で、あなたに期待されている役割は何ですか？
 - あなたの経験やスキルは、どんな課題解決に役立ちそうですか？
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
   <svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow-career2" x="-50%" y="-50%" width="200%" height="200%">
@@ -201,7 +201,7 @@ canonical: "https://worelu.com/articles/quit/career-hoko-wakaranai/"
   <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64JTD" alt="">
 </div>
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
   <svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
     <defs>
       <filter id="shadow-career3" x="-50%" y="-50%" width="200%" height="200%">

@@ -28,7 +28,7 @@ draft: false
 
 ## 職場の人間関係に疲れるのはなぜ？5つの主な原因
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>職場の人間関係が疲れる5つの原因</title>
 <rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">人間関係が疲れる5つの主な原因</text>
@@ -83,7 +83,7 @@ HSPのように感受性が強い気質を持つ人は、職場の雰囲気や�
 
 ## 心を軽くする4つの対処法
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>心を軽くする4つの対処法</title>
 <defs><marker id="ningenArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
@@ -136,7 +136,7 @@ HSPのように感受性が強い気質を持つ人は、職場の雰囲気や�
 
 ## それでも改善しない場合の3つの選択肢
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 170" role="img" style="display:block;max-width:100%"><title>改善しない場合の3つの選択肢</title>
 <rect x="0" y="0" width="680" height="170" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">状況が改善しない場合の選択肢</text>

@@ -70,7 +70,7 @@ draft: false
 
 職場の人間関係で疲れるのは、あなたの性格が悪いからでも、コミュニケーション能力が低いからでもありません。あなたの持つ特性と、職場の人間関係のスタイルや文化との「ミスマッチ」が原因です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 280" role="img" style="display:block;max-width:100%"><title>人間関係で疲れやすい人の特徴と環境</title>
 <rect x="0" y="0" width="680" height="280" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">疲れが生まれる構造</text>
@@ -128,7 +128,7 @@ draft: false
 
 ## 心の健康を守るための「心のバリア」の張り方
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>心のバリアを張る5つの方法</title>
 <rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">心を守るための5つの方法</text>
@@ -167,7 +167,7 @@ draft: false
 
 どんなに努力しても状況が改善しない場合、「環境を変える」という選択肢を真剣に検討する時期かもしれません。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 180" role="img" style="display:block;max-width:100%"><title>環境を変える3つの選択肢</title>
 <rect x="0" y="0" width="680" height="180" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">環境を変える3つの選択肢</text>

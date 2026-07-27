@@ -55,7 +55,7 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 
 たとえばこんな変化が少しずつ起きていきます。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%"><title>基準がズレていく過程</title>
 <defs><marker id="yabaiArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="140" rx="12" fill="#F8FAFC"/>
@@ -97,7 +97,7 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 
 漠然とした「やばい」を具体的にするために、3つの視点からチェックしてみましょう。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 400" role="img" style="display:block;max-width:100%"><title>やばいを言語化する3つの視点チェックリスト</title>
 <rect x="0" y="0" width="680" height="356" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「やばい」を言語化する3つの視点</text>
@@ -185,7 +185,7 @@ canonical: https://worelu.com/articles/quit/kaisha-yabai/
 
 ## 気づいたら次にすること：3つの行動ステップ
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%"><title>気づいた後の行動ステップ</title>
 <defs><marker id="yabaiStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="128" rx="12" fill="#F8FAFC"/>

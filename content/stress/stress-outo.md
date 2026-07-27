@@ -33,7 +33,7 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 
 人の体には、自分の意思とは関係なく内臓の働きを調整している「自律神経」という仕組みがあります。脳と胃腸はこの自律神経を通じて密接につながっているとされ、強い緊張や不安、プレッシャーが続くと、胃腸の動きや胃酸の分泌に影響が及び、吐き気やむかつき、実際の嘔吐として表れることがあると考えられています。「大事なプレゼンの前に胃が痛くなる」「緊張するとお腹を壊す」のと同じように、嘔吐もまた、心の負荷が体の症状として表れたものかもしれないのです。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>ストレスと吐き気がつながる仕組みのイメージ図</title><rect x="0" y="0" width="680" height="340" fill="#F8FAFC" rx="12"/><text x="340" y="42" font-family="sans-serif" font-size="17" font-weight="bold" fill="#1E293B" text-anchor="middle">ストレスと吐き気がつながる仕組み（イメージ）</text><rect x="28" y="90" width="180" height="110" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/><text x="118" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1E40AF" text-anchor="middle">強いストレス</text><text x="118" y="154" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">仕事のプレッシャー</text><text x="118" y="174" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">人間関係・不安</text><path d="M216 145 L246 145" stroke="#94A3B8" stroke-width="2.5" fill="none"/><path d="M246 145 l-8 -5 v10 z" fill="#94A3B8"/><rect x="254" y="90" width="180" height="110" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/><text x="344" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">自律神経の乱れ</text><text x="344" y="154" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">緊張状態が続き</text><text x="344" y="174" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">内臓の調整が不安定に</text><path d="M442 145 L472 145" stroke="#94A3B8" stroke-width="2.5" fill="none"/><path d="M472 145 l-8 -5 v10 z" fill="#94A3B8"/><rect x="480" y="90" width="180" height="110" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/><text x="570" y="128" font-family="sans-serif" font-size="14" font-weight="bold" fill="#166534" text-anchor="middle">胃腸への影響</text><text x="570" y="154" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">胃の動きの変化など</text><text x="570" y="174" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">吐き気・嘔吐として出現</text><rect x="28" y="240" width="632" height="64" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/><text x="344" y="266" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1E40AF" text-anchor="middle">吐き気や嘔吐は「気のせい」ではなく、体が発している反応です</text><text x="344" y="290" font-family="sans-serif" font-size="12" fill="#334155" text-anchor="middle">ただし原因はさまざま。自己判断で決めつけず、続くときは医療機関へ</text></svg>
 </div>
 
@@ -61,7 +61,7 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 
 受診までの間や、職場・通勤中で急に吐き気に襲われたとき、その場をしのぐためにできることもあります。あくまで応急的なセルフケアですが、無理のない範囲で試してみてください。
 
-### 吐き気で動けないときの応急セルフケア
+#### 吐き気で動けないときの応急セルフケア
 
 - 可能なら、静かに休める場所へ移動する（会議室、休憩室、駅のベンチなど）
 - ベルトやネクタイ、きつい服装を緩めて、体を締め付けない
@@ -71,7 +71,7 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 
 電車内で吐き気が強くなったときは、途中下車してかまいません。「遅刻してしまう」という焦りが症状を強めてしまうこともあるため、「途中で降りてもいい」「休んでもいい」と自分に許可を出しておくだけでも、通勤時の不安が少し軽くなる人もいるようです。
 
-### 我慢して働き続けることは「対処」ではありません
+#### 我慢して働き続けることは「対処」ではありません
 
 ここで一つ、はっきりお伝えしたいことがあります。吐き気を我慢しながら仕事を続けることは、対処ではありません。「みんな頑張っているから」「休んだら迷惑がかかるから」と症状に蓋をし続けると、体はさらに強いサインを出さざるをえなくなるかもしれません。つらいときに休むことは、さぼりではなく、自分の体を守るための正当な行動です。
 
@@ -81,7 +81,7 @@ canonical: https://worelu.com/articles/stress/stress-outo/
 
 一度きりの嘔吐であれば、体調の波ということもあるでしょう。しかし、通勤前になると毎回のように吐き気がする、週に何度も吐いてしまう、という状態が続いているなら、少し立ち止まって自分の心と体を振り返ってみてほしいのです。
 
-### 吐き気のほかに、こんなストレスサインは出ていませんか
+#### 吐き気のほかに、こんなストレスサインは出ていませんか
 
 吐き気や嘔吐と同じ時期に、次のようなサインが重なっていないか、チェックしてみてください。
 

@@ -118,7 +118,7 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-osusume/
 </table>
 </div>
 
-### 退職代行Jobs｜弁護士監修×労働組合のダブルサポート
+#### 退職代行Jobs｜弁護士監修×労働組合のダブルサポート
 
 弁護士監修と労働組合の両方の特徴を備えたサービスです。
 
@@ -138,7 +138,7 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-osusume/
 <div style="text-align:center;"><a href="https://h.accesstrade.net/sp/cc?rk=0100q25s00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100q25s00oujg" alt="退職代行Jobs" border="0" width="300" height="250"></a></div>
 </div>
 
-### 退職代行SARABA｜労働組合ならではの安定感と追加料金なしの安心価格
+#### 退職代行SARABA｜労働組合ならではの安定感と追加料金なしの安心価格
 
 「SARABAユニオン」という合同労働組合が運営するサービスです。
 
@@ -148,7 +148,7 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-osusume/
 
 コストパフォーマンスを考えながら労働組合系サービスを選びたい方には、有力な選択肢のひとつかもしれません。
 
-### 退職代行モームリ｜透明性の高い運営が信頼感につながる
+#### 退職代行モームリ｜透明性の高い運営が信頼感につながる
 
 正社員・アルバイト・パートなど、雇用形態を問わず利用できる労働組合系のサービスです。
 
@@ -158,7 +158,7 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-osusume/
 
 費用を抑えながら交渉対応も求める方にとって、選びやすい選択肢かもしれません。
 
-### 退職代行ガーディアン｜東京都労働委員会認証の安心感
+#### 退職代行ガーディアン｜東京都労働委員会認証の安心感
 
 東京都労働委員会に認証された「東京労働経済組合」が運営するサービスです。
 
@@ -168,13 +168,13 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-osusume/
 
 「信頼できる組合かどうか」を重視して選びたい方には、候補のひとつになるかもしれません。
 
-### 弁護士法人みやびの退職代行｜法的トラブルが絡むなら弁護士一択
+#### 弁護士法人みやびの退職代行｜法的トラブルが絡むなら弁護士一択
 
 弁護士が直接対応するため、損害賠償請求・内容証明への対応など、複雑なケースでも動いてもらえる可能性があります。
 
 費用は55,000円（税込）からと高額ですが、ハラスメントが絡む状況や、会社から法的措置をにおわされている場合は、弁護士への依頼を検討することをおすすめします。
 
-### 退職代行EXIT｜費用重視でシンプルに辞めたいならここ
+#### 退職代行EXIT｜費用重視でシンプルに辞めたいならここ
 
 業界でも低価格帯に位置する民間業者です。
 
@@ -182,7 +182,7 @@ canonical: https://worelu.com/articles/quit/taisyoku-daikou-osusume/
 
 料金は20,000円（税込）で、スピードの速さを評価するユーザーの声も多いサービスです。
 
-### 辞めるんです｜顧問弁護士監修で民間の不安を軽減
+#### 辞めるんです｜顧問弁護士監修で民間の不安を軽減
 
 民間業者ではあるものの、顧問弁護士が監修しているため、基本的な法的チェックは行われています。
 

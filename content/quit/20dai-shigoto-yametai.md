@@ -99,7 +99,7 @@ draft: false
 
 感情的な勢いだけで行動してしまうと、後で後悔することにもなりかねません。以下の4つをじっくり確認しましょう。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>後悔しない見極め4ポイント</title>
 <rect x="0" y="0" width="680" height="252" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">後悔しない見極めチェック</text>
@@ -138,7 +138,7 @@ draft: false
 
 ## 今すぐ取るべき4つの行動
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 180" role="img" style="display:block;max-width:100%"><title>4つの行動ステップ</title>
 <defs><marker id="act20Arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="118" rx="12" fill="#F8FAFC"/>
@@ -197,7 +197,7 @@ draft: false
 
 ## 20代で転職するメリット・デメリット
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 340" role="img" style="display:block;max-width:100%"><title>20代転職のメリット・デメリット</title>
 <rect x="0" y="0" width="680" height="273" rx="12" fill="#F8FAFC"/>
 <text x="340" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">20代転職のメリット vs デメリット</text>

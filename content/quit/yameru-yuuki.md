@@ -35,7 +35,7 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 まずは、自分がなぜ踏み出せないのかを理解することが、最初の一歩です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 220" role="img" style="display:block;max-width:100%"><title>踏み出せない5つの理由</title>
 <rect x="0" y="0" width="680" height="220" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">踏み出せない5つの理由</text>
@@ -170,7 +170,7 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 悩み続けている方に特に重要なのが「今が辞めていい状態なのか」を客観的に判断することです。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 330" role="img" style="display:block;max-width:100%"><title>辞めていい状態の判断基準</title>
 <rect x="0" y="0" width="680" height="330" rx="12" fill="#F8FAFC"/>
 <text x="340" y="30" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「辞めていい状態」チェックリスト</text>
@@ -206,7 +206,7 @@ canonical: https://worelu.com/articles/quit/yameru-yuuki/
 
 動き出す決意ができたら、次は具体的な行動です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%"><title>円満退職の3ステップ</title>
 <defs><marker id="yuukiStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="190" rx="12" fill="#F8FAFC"/>

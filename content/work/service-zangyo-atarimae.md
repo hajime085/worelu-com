@@ -40,7 +40,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-atarimae/
 
 なぜ人は、明らかにおかしい環境に慣れてしまうのでしょうか。そこには明確な心理的プロセスがあります。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 260" role="img" style="display:block;max-width:100%"><title>感覚が麻痺するまでの4ステップ</title>
 <rect x="0" y="0" width="680" height="260" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">感覚が麻痺するまでの4ステップ</text>
@@ -103,7 +103,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-atarimae/
 
 まず大前提を確認しましょう。サービス残業は**労働基準法37条に違反する違法行為**です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>サービス残業が違法である根拠</title>
 <rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">サービス残業が違法である根拠</text>
@@ -129,7 +129,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-atarimae/
 
 ## そのまま続けてはいけない4つの理由
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 240" role="img" style="display:block;max-width:100%"><title>続けてはいけない4つの理由</title>
 <rect x="0" y="0" width="680" height="240" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">サービス残業を続けてはいけない4つの理由</text>
@@ -171,7 +171,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-atarimae/
 
 ## 今すぐできる3つの行動
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 170" role="img" style="display:block;max-width:100%"><title>今すぐできる3つの行動</title>
 <rect x="0" y="0" width="680" height="170" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">今すぐできる3つの行動</text>

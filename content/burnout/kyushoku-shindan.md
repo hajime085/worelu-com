@@ -99,7 +99,7 @@ draft: false
 
 ## 診断書をもらうための受診の流れ
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 120" role="img" style="display:block;max-width:100%"><title>診断書取得の流れ</title>
 <defs><marker id="shindanArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="120" rx="12" fill="#F8FAFC"/>
@@ -147,7 +147,7 @@ draft: false
 
 ## 診断書にかかる費用と期間の目安
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 160" role="img" style="display:block;max-width:100%"><title>診断書の費用と期間の目安</title>
 <rect x="0" y="0" width="680" height="160" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">診断書の費用・期間の目安</text>

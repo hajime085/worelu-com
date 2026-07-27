@@ -44,7 +44,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-voluntary/
 
 ## 「自主的な残業」が違法になる3つのケース
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 240" role="img" style="display:block;max-width:100%"><title>自主的な残業が違法になる3つのケース</title>
 <rect x="0" y="0" width="680" height="240" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">「自主的な残業」が違法になる3つのケース</text>
@@ -108,7 +108,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-voluntary/
 
 自分の残業が残業代をもらえるかどうか、以下のフローで確認してみてください。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 300" role="img" style="display:block;max-width:100%"><title>自主的残業か否かの判断フロー</title>
 <rect x="0" y="0" width="680" height="300" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">残業代をもらえる？判断フロー</text>
@@ -151,7 +151,7 @@ canonical: https://worelu.com/articles/work/service-zangyo-voluntary/
 
 証拠がなければ請求が難しくなります。今日からすぐに始められる証拠収集を解説します。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>証拠収集の優先順位</title>
 <rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">証拠収集の優先順位</text>

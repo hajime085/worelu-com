@@ -40,7 +40,7 @@ canonical: https://worelu.com/articles/burnout/burnout-symptoms/
 
 バーンアウトはWHO（世界保健機関）が「職業的現象」として定義している状態です。主に以下の3つの特徴が組み合わさることで診断されます。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 200" role="img" style="display:block;max-width:100%"><title>バーンアウトの3つの核心症状</title>
 <rect x="0" y="0" width="680" height="200" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">バーンアウトの3つの核心症状</text>
@@ -72,7 +72,7 @@ canonical: https://worelu.com/articles/burnout/burnout-symptoms/
 
 バーンアウトは突然起こるものではなく、段階的に進行します。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 140" role="img" style="display:block;max-width:100%"><title>バーンアウトが進行する4つのステージ</title>
 <defs><marker id="burnArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="140" rx="12" fill="#F8FAFC"/>
@@ -245,7 +245,7 @@ function boJudge() {
 
 バーンアウトから回復するには、焦らず段階的に取り組むことが重要です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%"><title>バーンアウト回復の4ステップ</title>
 <defs><marker id="recovArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="190" rx="12" fill="#F8FAFC"/>

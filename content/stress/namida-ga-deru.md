@@ -34,7 +34,7 @@ canonical: https://worelu.com/articles/stress/namida-ga-deru/
 
 特に、責任感が強く真面目に仕事に取り組む人ほど、自分の限界を超えて頑張り続けてしまい、結果として涙が出やすくなる傾向があります。これはあなたが弱いのではなく、それだけ真剣に向き合ってきた証拠です。
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 180" role="img" style="display:block;max-width:100%"><title>涙が出るまでの感情の流れ</title>
 <rect x="0" y="0" width="680" height="180" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">涙が出るまでの流れ</text>
@@ -84,7 +84,7 @@ canonical: https://worelu.com/articles/stress/namida-ga-deru/
 
 以下のうち、当てはまるものはいくつありますか？
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 290" role="img" style="display:block;max-width:100%"><title>限界サインのチェックリスト</title>
 <rect x="0" y="0" width="680" height="290" rx="12" fill="#F8FAFC"/>
 <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F" font-family="sans-serif">心身の限界サインチェック</text>
@@ -121,7 +121,7 @@ canonical: https://worelu.com/articles/stress/namida-ga-deru/
 
 ## 涙が出たときに自分を労わるための4つの対処法
 
-<div class="svg-lightbox-wrap">
+<div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 190" role="img" style="display:block;max-width:100%"><title>涙が出たときの4つの対処法</title>
 <defs><marker id="namidaStepArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
 <rect x="0" y="0" width="680" height="190" rx="12" fill="#F8FAFC"/>

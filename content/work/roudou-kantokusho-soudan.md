@@ -119,11 +119,11 @@ canonical: https://worelu.com/articles/work/roudou-kantokusho-soudan/
 <div class="worelu-flow-step">調査・是正勧告を待つ</div>
 </div>
 
-### ステップ1：管轄の労基署を調べる
+#### ステップ1：管轄の労基署を調べる
 
 勤務先を管轄する労働基準監督署を調べます。住所ではなく**勤務地の管轄署**で探してください。「労基署 ○○市」で検索するか、厚生労働省のウェブサイトにある署一覧で確認できます。
 
-### ステップ2：連絡方法を選ぶ
+#### ステップ2：連絡方法を選ぶ
 
 <ul class="worelu-checklist">
 <li>**電話相談（ほっとライン）**：厚生労働省の「労働条件相談ほっとライン（0120-811-610）」は平日夜間・土日も対応。匿名で話を聞いてもらえます</li>
@@ -133,7 +133,7 @@ canonical: https://worelu.com/articles/work/roudou-kantokusho-soudan/
 
 「まず話を聞いてもらいたい」なら電話が一番ハードルが低いです。「正式に調査してほしい」なら窓口か申告フォームが向いています。
 
-### ステップ3：「相談」と「申告」の違いを理解する
+#### ステップ3：「相談」と「申告」の違いを理解する
 
 <div class="worelu-compare-wrap" style="overflow-x: auto;">
 <table class="worelu-compare">
@@ -154,7 +154,7 @@ canonical: https://worelu.com/articles/work/roudou-kantokusho-soudan/
 「申告」をしても、労基署が必ず会社に踏み込んで調査するとは限りません。申告内容や証拠の状況によっては、調査が見送られる場合があります。申告後すぐに結果が出るわけではないことは、あらかじめ理解しておいてください。
 </div>
 
-### ステップ4：申告後の是正勧告の流れ
+#### ステップ4：申告後の是正勧告の流れ
 
 <div class="worelu-timeline">
 <div class="worelu-timeline-item">
