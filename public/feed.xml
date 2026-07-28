@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 28 Jul 2026 02:41:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2026 21:56:39 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[転職3ヶ月の壁とは？つらい理由と乗り越え方を解説]]></title>
+      <link>https://worelu.com/articles/quit/tensyoku-3months/</link>
+      <guid>https://worelu.com/articles/quit/tensyoku-3months/</guid>
+      <description><![CDATA[転職して3ヶ月が経った頃に感じる「こんなはずじゃなかった」。3ヶ月の壁の正体・つらい5つの理由・具体的な乗り越え方・辞め時の判断基準まで丁寧に解説します。]]></description>
+      <pubDate>2026-07-24</pubDate>
+    </item>
     <item>
       <title><![CDATA[公務員を辞めた末路、後悔した人と成功した人のリアルな体験談]]></title>
       <link>https://worelu.com/articles/quit/koumuin-yameta-matsuro/</link>
@@ -138,13 +145,6 @@
       <link>https://worelu.com/articles/quit/shigoto-yametai/</link>
       <guid>https://worelu.com/articles/quit/shigoto-yametai/</guid>
       <description><![CDATA[仕事を辞めたいと感じるのは甘えではありません。よくある理由の整理、心と体の限界サイン、辞めるか続けるかの判断軸、退職までの具体的なステップまで、あらゆる状況に対応する総合ガイドです。]]></description>
-      <pubDate>2026-06-29</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事のストレスが限界…体に出るサインと休む・辞めるの判断まで]]></title>
-      <link>https://worelu.com/articles/stress/shigoto-stress-genkai/</link>
-      <guid>https://worelu.com/articles/stress/shigoto-stress-genkai/</guid>
-      <description><![CDATA[仕事のストレスが限界に達すると、眠れない・涙が出る・動悸・吐き気など体にサインが現れます。限界サインのセルフチェックと今すぐできる応急処置、病院に行く目安、休職・退職を考える判断の道筋までまとめて解説します。]]></description>
       <pubDate>2026-06-29</pubDate>
     </item>
   </channel>
