@@ -338,12 +338,10 @@ HSPという特性は、決して「弱さ」ではありません。むしろ�
 
 ## あわせて読みたい
 
-<ul class="worelu-checklist">
-<li>[仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)</li>
-<li>[バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法](/articles/burnout/burnout-symptoms/)</li>
-<li>[「仕事できない」と辛いあなたへ。甘えじゃない、次の一歩を見つける方法](/articles/stress/shigoto-dekinai-tsurai/)</li>
-<li>[燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する](/articles/burnout/moeyuki-selfcheck/)</li>
-</ul>
+- [仕事の限界サインとは？「もう無理」と心が叫ぶ前に知ってほしいこと](/articles/stress/shigoto-genkai-sign/)
+- [バーンアウトの症状チェックリスト。燃え尽きのサインと段階的な回復法](/articles/burnout/burnout-symptoms/)
+- [「仕事できない」と辛いあなたへ。甘えじゃない、次の一歩を見つける方法](/articles/stress/shigoto-dekinai-tsurai/)
+- [燃え尽き症候群のセルフチェック｜10の質問で今の状態を確認する](/articles/burnout/moeyuki-selfcheck/)
 
 ## FAQ：HSPに向いてる仕事・転職に関するよくある質問
 
