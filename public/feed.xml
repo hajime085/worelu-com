@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Tue, 28 Jul 2026 21:56:39 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 07:26:44 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[みなし残業はおかしいと感じたら——違法になるケースと取り戻し方]]></title>
+      <link>https://worelu.com/articles/work/minashi-zangyo-okashii/</link>
+      <guid>https://worelu.com/articles/work/minashi-zangyo-okashii/</guid>
+      <description><![CDATA[「みなし残業っておかしくない？」と感じたら正しい直感かもしれません。固定残業代が違法になるケース・損している残業代の計算方法・残業代を取り戻す手順を労働基準法をもとに解説します。]]></description>
+      <pubDate>2026-07-29</pubDate>
+    </item>
     <item>
       <title><![CDATA[転職3ヶ月の壁とは？つらい理由と乗り越え方を解説]]></title>
       <link>https://worelu.com/articles/quit/tensyoku-3months/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/stress/stress-outo/</guid>
       <description><![CDATA[仕事のストレスで嘔吐や吐き気が続くのはなぜ？心と体の関係をやさしく解説し、今すぐできる対処法、医療機関を受診すべき目安、繰り返す場合に考えたい働き方の見直しまで、自分を守るための情報を整理します。]]></description>
       <pubDate>2026-06-30</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[仕事辞めたいと思ったら。理由の整理から辞め方まで全体像を解説]]></title>
-      <link>https://worelu.com/articles/quit/shigoto-yametai/</link>
-      <guid>https://worelu.com/articles/quit/shigoto-yametai/</guid>
-      <description><![CDATA[仕事を辞めたいと感じるのは甘えではありません。よくある理由の整理、心と体の限界サイン、辞めるか続けるかの判断軸、退職までの具体的なステップまで、あらゆる状況に対応する総合ガイドです。]]></description>
-      <pubDate>2026-06-29</pubDate>
     </item>
   </channel>
 </rss>
