@@ -44,7 +44,7 @@ tags:
 <div class="aa-note">残業時間で評価する文化は、成果よりも「見せる努力」を重視します。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="2" data-text="退勤後のLINEや電話対応が当たり前">
@@ -54,7 +54,7 @@ tags:
 <div class="aa-note">プライベートの時間を会社に侵食されています。法的には労働時間に該当する可能性があります。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="3" data-text="休日出勤が当たり前で代休が取れない">
@@ -64,7 +64,7 @@ tags:
 <div class="aa-note">「みんなやってるから」で片付けられます。振替休日の付与は法律上の義務です。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="4" data-text="体調不良でも出勤を求められる">
@@ -74,7 +74,7 @@ tags:
 <div class="aa-note">従業員の健康より業務を優先する体質です。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><circle cx="12" cy="14" r="2"/></svg>給与・待遇あるある</div>
@@ -86,7 +86,7 @@ tags:
 <div class="aa-note">有給取得に理由は不要です。申請を妨げることは違法になる可能性があります。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="6" data-text="みなし残業でいくら残業しても給料が変わらない">
@@ -96,7 +96,7 @@ tags:
 <div class="aa-note">みなし時間を超えた分は別途支払い義務があります。無視されているなら違法です。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="7" data-text="基本給が異常に低く手当でかさ増しされている">
@@ -106,7 +106,7 @@ tags:
 <div class="aa-note">休むことへの罪悪感を植え付ける文化です。心身の回復より業務を優先させています。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="8" data-text="入社前に聞いた条件と実際が全然違う">
@@ -116,7 +116,7 @@ tags:
 <div class="aa-note">採用詐欺に相当する場合もあります。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>人間関係あるある</div>
@@ -128,7 +128,7 @@ tags:
 <div class="aa-note">常に顔色を伺う環境は精神的に消耗します。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="10" data-text="上司がいつも誰かの悪口を言っている">
@@ -138,17 +138,17 @@ tags:
 <div class="aa-note">心理的安全性がなく、自分もいつか標的になると感じます。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="11" data-text="パワハラ・モラハラが指導として放置されている">
 <div class="aa-num">⑪</div>
 <div class="aa-content">
 <div class="aa-text">パワハラ・モラハラが「指導」として放置されている</div>
-<div class="aa-note">怒鳴る、人格否定、無視——これらは指導ではなくハラスメントです。</div>
+<div class="aa-note">怒鳴る、人格否定、無視、これらは指導ではなくハラスメントです。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="12" data-text="新人が3ヶ月以内に辞める・退職者が後を絶たない">
@@ -158,7 +158,7 @@ tags:
 <div class="aa-note">人の入れ替わりが激しい職場には、必ず構造的な問題があります。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>採用・教育あるある</div>
@@ -170,7 +170,7 @@ tags:
 <div class="aa-note">「話が違う」は採用詐欺に相当する場合もあります。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="14" data-text="研修はOJT任せで教育制度がない">
@@ -180,7 +180,7 @@ tags:
 <div class="aa-note">職場の実態に耐えられない人が続出しているサインです。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="15" data-text="うちは家族みたいな会社とプライベートに踏み込んでくる">
@@ -190,7 +190,7 @@ tags:
 <div class="aa-note">家族的な雰囲気を盾に、サービス残業を正当化するケースが多いです。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-group-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>組織文化あるある</div>
@@ -202,7 +202,7 @@ tags:
 <div class="aa-note">心理的安全性が低く、自分もいつターゲットになるかわからない緊張感が続きます。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="17" data-text="精神論・根性論がまかり通っている">
@@ -212,7 +212,7 @@ tags:
 <div class="aa-note">「気合が足りない」で片付けられる職場では、具体的な改善が起きません。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="18" data-text="過剰なサービスを社員に強いるお客様は神様文化">
@@ -222,7 +222,7 @@ tags:
 <div class="aa-note">社員の犠牲の上に成り立つサービスは長続きしません。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="19" data-text="常に求人募集をしている・人の入れ替わりが激しい">
@@ -232,7 +232,7 @@ tags:
 <div class="aa-note">従業員が定着しない職場には必ず構造的な問題があります。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-item" data-id="20" data-text="会社の未来について誰も語らない">
@@ -242,7 +242,7 @@ tags:
 <div class="aa-note">社員が会社の将来に希望を持てない職場は、じわじわと人が減っていきます。</div>
 <div class="aa-btns">
 <button class="aa-btn aa-wakaru" onclick="aaClick(this,1)">わかる ✓</button>
-<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない —</button>
+<button class="aa-btn aa-nai" onclick="aaClick(this,0)">さすがにない 、</button>
 </div></div></div>
 
 <div class="aa-counter">「わかる」を選んだ数：<span id="aa-count">0</span> / 20</div>

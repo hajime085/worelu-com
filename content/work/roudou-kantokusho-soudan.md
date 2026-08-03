@@ -43,14 +43,14 @@ canonical: https://worelu.com/articles/work/roudou-kantokusho-soudan/
 <table class="worelu-compare">
 <thead><tr><th>問題の種類</th><th>労基署で相談できる？</th><th>別の相談窓口</th></tr></thead>
 <tbody>
-<tr><td>残業代・賃金の未払い</td><td>できる</td><td>—</td></tr>
-<tr><td>有給休暇の取得拒否</td><td>できる</td><td>—</td></tr>
-<tr><td>最低賃金を下回る給与</td><td>できる</td><td>—</td></tr>
-<tr><td>労働時間・休憩・休日の違反</td><td>できる</td><td>—</td></tr>
-<tr><td>解雇予告手当の未払い</td><td>できる</td><td>—</td></tr>
+<tr><td>残業代・賃金の未払い</td><td>できる</td><td>、</td></tr>
+<tr><td>有給休暇の取得拒否</td><td>できる</td><td>、</td></tr>
+<tr><td>最低賃金を下回る給与</td><td>できる</td><td>、</td></tr>
+<tr><td>労働時間・休憩・休日の違反</td><td>できる</td><td>、</td></tr>
+<tr><td>解雇予告手当の未払い</td><td>できる</td><td>、</td></tr>
 <tr><td>パワハラ・いじめ</td><td>原則できない</td><td>労働局 総合労働相談コーナー</td></tr>
 <tr><td>不当解雇の取り消し・撤回</td><td>できない</td><td>労働局 あっせん・労働審判</td></tr>
-<tr><td>給与の交渉・昇給要求</td><td>できない</td><td>—</td></tr>
+<tr><td>給与の交渉・昇給要求</td><td>できない</td><td>、</td></tr>
 </tbody>
 </table>
 </div>

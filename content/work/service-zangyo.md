@@ -149,22 +149,22 @@ canonical: "https://worelu.com/articles/work/service-zangyo/"
 
 <div style="display:flex;align-items:center;gap:14px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:14px 18px">
 <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#2563EB;color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">1</div>
-<div style="font-size:14px;font-weight:700;color:#1E40AF">証拠を集める — 働いた時間を証明する資料を確保する</div>
+<div style="font-size:14px;font-weight:700;color:#1E40AF">証拠を集める 、 働いた時間を証明する資料を確保する</div>
 </div>
 
 <div style="display:flex;align-items:center;gap:14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;padding:14px 18px">
 <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#16A34A;color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">2</div>
-<div style="font-size:14px;font-weight:700;color:#166534">会社へ請求する — 書面で冷静に事実を伝える</div>
+<div style="font-size:14px;font-weight:700;color:#166534">会社へ請求する 、 書面で冷静に事実を伝える</div>
 </div>
 
 <div style="display:flex;align-items:center;gap:14px;background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;padding:14px 18px">
 <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#D97706;color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">3</div>
-<div style="font-size:14px;font-weight:700;color:#854D0E">労働基準監督署へ相談する — 無料・匿名で状況を整理する</div>
+<div style="font-size:14px;font-weight:700;color:#854D0E">労働基準監督署へ相談する 、 無料・匿名で状況を整理する</div>
 </div>
 
 <div style="display:flex;align-items:center;gap:14px;background:#FDF2F8;border:1px solid #F9A8D4;border-radius:8px;padding:14px 18px">
 <div style="flex-shrink:0;width:32px;height:32px;border-radius:50%;background:#DB2777;color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center">4</div>
-<div style="font-size:14px;font-weight:700;color:#9D174D">弁護士へ相談する — 交渉・請求を一貫して任せる</div>
+<div style="font-size:14px;font-weight:700;color:#9D174D">弁護士へ相談する 、 交渉・請求を一貫して任せる</div>
 </div>
 
 </div>

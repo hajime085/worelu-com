@@ -1,6 +1,6 @@
 ---
 title: 休憩時間が取れない職場は違法？労基法34条の権利と対処法
-description: 昼休みも働かされる、休憩なしが当たり前——それは労働基準法違反です。労基法34条が定める休憩権の内容、職場への正しい伝え方から労働基準監督署への相談手順まで具体的に解説します。
+description: 昼休みも働かされる、休憩なしが当たり前、それは労働基準法違反です。労基法34条が定める休憩権の内容、職場への正しい伝え方から労働基準監督署への相談手順まで具体的に解説します。
 slug: kyukei-jikan-torenai
 category: work
 tags: [休憩時間, 労基法34条, 労働基準法, 労働環境, ブラック企業]
@@ -22,7 +22,7 @@ canonical: https://worelu.com/articles/work/kyukei-jikan-torenai/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
-昼休みになっても席を離れられない、休憩なしで働くのがいつの間にか当たり前になっている——そういった状況が続いていませんか。
+昼休みになっても席を離れられない、休憩なしで働くのがいつの間にか当たり前になっている、そういった状況が続いていませんか。
 
 結論からいうと、休憩時間を与えないことは労働基準法違反です。「みんなそうだから」「忙しい業界だから」という言葉は、法律の前では通用しません。
 
@@ -216,7 +216,7 @@ canonical: https://worelu.com/articles/work/kyukei-jikan-torenai/
 
 ## 職場が改善しない場合、どこに相談すればいいのか
 
-上司に伝えても、人事に申し出ても何も変わらない——そういうとき、外部機関に頼ることは「大げさ」ではありません。あなたが持っている権利を行使するための、正当な手段です。
+上司に伝えても、人事に申し出ても何も変わらない、そういうとき、外部機関に頼ることは「大げさ」ではありません。あなたが持っている権利を行使するための、正当な手段です。
 
 <div class="worelu-flow">
 <div class="worelu-flow-step">職場内で改善を申し出る（上司・人事）</div>

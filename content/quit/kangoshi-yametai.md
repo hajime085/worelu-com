@@ -11,11 +11,11 @@ eyecatch: ""
 canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 ---
 
-## 「看護師を辞めたい」——まずは自分の現在地を確かめることから
+## 「看護師を辞めたい」、まずは自分の現在地を確かめることから
 
 夜勤明けの朝、ロッカーで着替えながら「次の出勤までに少しでも眠らなきゃ」と考える。でも布団に入っても、モニターのアラーム音やナースコールの記憶が頭のどこかで鳴り続けていて、眠りはずっと浅いまま。
 
-そんな日々を繰り返すうちに、「看護師を辞めたい」という言葉がふとした瞬間に浮かぶようになった——。この記事は、そんなあなたのために書いています。最初に、いまの自分がどこにいるのかを下の図で確かめるところから始めてみてください。
+そんな日々を繰り返すうちに、「看護師を辞めたい」という言葉がふとした瞬間に浮かぶようになった、。この記事は、そんなあなたのために書いています。最初に、いまの自分がどこにいるのかを下の図で確かめるところから始めてみてください。
 
 <div class="svg-lightbox-wrap" style="margin-bottom:24px">
 <svg width="100%" viewBox="0 0 680 400" role="img" style="display:block;max-width:100%" font-family="sans-serif"><title>「辞めたい」と感じたときの、この記事の歩き方</title>
@@ -71,7 +71,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 右端の「一時的か、構造的か」という視点は、あとで選択肢を考えるときの土台になります。構造的な要因は「自分の頑張り」では変えにくいものなので、我慢の量で解決しようとしなくていい部分です。
 
-なかでも「命を預かる責任の重さ」は、他の職種にはほぼない独特の負荷があります。受け持ち患者が急変した夜、帰宅後も「あの判断で良かったのか」と繰り返し頭の中で検証する。コードブルーの後、モニターの数値やバッグバルブマスクを握った感覚がふとした瞬間に蘇る——こうした経験が積み重なることで、消耗は静かに加速していきます。
+なかでも「命を預かる責任の重さ」は、他の職種にはほぼない独特の負荷があります。受け持ち患者が急変した夜、帰宅後も「あの判断で良かったのか」と繰り返し頭の中で検証する。コードブルーの後、モニターの数値やバッグバルブマスクを握った感覚がふとした瞬間に蘇る、こうした経験が積み重なることで、消耗は静かに加速していきます。
 
 人間関係の消耗（特に上司への恐怖感や萎縮）が主な原因になっている場合は、[上司が怖くて委縮してしまうときの対処法](/articles/stress/joushi-kowai-ishuku/)や[職場の人間関係に疲れたとき](/articles/stress/shokuba-ningen-kankei-tsukareta/)も参考にしてみてください。
 
@@ -84,7 +84,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 つまり「辞めたい」と感じること自体は、看護の現場ではごくありふれた反応です。あなた一人が弱いから浮かんでくる感情、というわけではなさそうです。
 
-## 「患者さんに申し訳ない」——辞めたいのを甘えと感じて動けないのはなぜ？
+## 「患者さんに申し訳ない」、辞めたいのを甘えと感じて動けないのはなぜ？
 
 <style>
 .character-box { display: flex; align-items: flex-start; gap: 16px; margin: 20px 0 24px; }
@@ -109,7 +109,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
   <div class="speech-bubble">「甘えかどうか」で悩めている時点で、あなたは仕事を軽く考えていない人です。その罪悪感は、患者さんや同僚に真剣に向き合ってきた証拠のようなものです。</div>
 </div>
 
-さらに看護師には、独特の引き止め圧力があります。「石の上にも三年」「一人前になるまで我慢」「奨学金のお礼奉公が終わってから」——こうした言葉は、あなたの心身の状態とは別の理屈で作られたものです。
+さらに看護師には、独特の引き止め圧力があります。「石の上にも三年」「一人前になるまで我慢」「奨学金のお礼奉公が終わってから」、こうした言葉は、あなたの心身の状態とは別の理屈で作られたものです。
 
 <div class="character-box">
   <img src="/images/characters/character_020.webp" alt="頭を抱える看護師" class="character-img">
@@ -235,7 +235,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 | 資格を活かして現場を離れる | 企業看護師（産業保健）、治験関連、保育園看護師など | 医療知識は活かしたいが臨床から距離を置きたい人 | 求人数が少なめで、選考に時間がかかることも |
 | 看護職を離れる | 一般企業の事務・営業など、看護以外の仕事へ | 看護そのものが合わないと感じている人 | 収入や経験の積み直しが必要。ただし資格は失効しない |
 
-#### 「資格を活かして現場を離れる」——具体的な職種と探し方
+#### 「資格を活かして現場を離れる」、具体的な職種と探し方
 
 5番目の選択肢に興味があっても、求人が少なく探しにくいのが実情です。代表的な職種と探し方を整理しておきます。
 
@@ -320,14 +320,14 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 <div style="margin-top:20px;margin-bottom:8px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:20px 20px 16px;">
 <div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:4px;letter-spacing:0.05em;">PR</div>
 <div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;line-height:1.6;">退職を切り出す気力が残っていないときの選択肢</div>
-<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">強い引き止めで話が進まない、心身の消耗で交渉そのものがつらい——そんな場合に、本人に代わって退職の意思を伝えてくれる退職代行サービスもあります。利用を考えるときは、料金と対応範囲を確認したうえで検討してください。</div>
+<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">強い引き止めで話が進まない、心身の消耗で交渉そのものがつらい、そんな場合に、本人に代わって退職の意思を伝えてくれる退職代行サービスもあります。利用を考えるときは、料金と対応範囲を確認したうえで検討してください。</div>
 <div style="margin-bottom:10px;font-size:13px;"><a href="https://h.accesstrade.net/sp/cc?rk=0100q2uz00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">退職代行Jobsに無料相談する →<img src="https://h.accesstrade.net/sp/rr?rk=0100q2uz00oujg" width="1" height="1" border="0" alt=""></a></div>
 <div style="text-align:center;"><a href="https://h.accesstrade.net/sp/cc?rk=0100q25s00oujg" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100q25s00oujg" alt="退職代行Jobs" border="0" width="300" height="250"></a></div>
 </div>
 
 ## 「仕事に行きたくない」が毎朝続くなら、辞めるより先に「休む」
 
-最後に、いちばん大事な話です。冒頭の図で左のルート——心身のサインが強い状態——に当てはまった人は、退職の判断を今しなくてかまいません。
+最後に、いちばん大事な話です。冒頭の図で左のルート、心身のサインが強い状態、に当てはまった人は、退職の判断を今しなくてかまいません。
 
 <div class="character-box">
   <img src="/images/characters/character_014.webp" alt="疲れ切った表情の看護師" class="character-img">
@@ -361,7 +361,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 <div class="character-box character-box-reverse">
   <img src="/images/characters/character_011.webp" alt="穏やかに話す相談員" class="character-img">
-  <div class="speech-bubble">辞めるかどうかは、一人で決めなくていいことです。まずは「誰かに話す」を今週の目標にする——それだけで十分な一歩です。</div>
+  <div class="speech-bubble">辞めるかどうかは、一人で決めなくていいことです。まずは「誰かに話す」を今週の目標にする、それだけで十分な一歩です。</div>
 </div>
 
 ## よくある質問
@@ -414,7 +414,7 @@ canonical: https://worelu.com/articles/quit/kangoshi-yametai/
 
 ここまで読めたということは、あなたはもう「なんとなくつらい」から「自分の状況を確かめる」へ一歩進んでいます。
 
-辞めても、続けても、休んでも——資格も経験も消えません。今日はどれか一つ、小さい行動を選んでみてください。
+辞めても、続けても、休んでも、資格も経験も消えません。今日はどれか一つ、小さい行動を選んでみてください。
 
 - 就業規則を開いて、退職の申し出期限を確かめる
 - 本文のサインリストで当てはまるものをメモに書き出す

@@ -22,7 +22,7 @@ canonical: https://worelu.com/articles/stress/stress-ien/
 .character-box-reverse .speech-bubble::after { left: auto; right: -9px; border-width: 5px 0 5px 10px; border-color: transparent transparent transparent #EFF6FF; }
 </style>
 
-胃のあたりがずっと重い、食事のたびにむかつく感じがする、仕事のプレッシャーを感じるたびに胃が痛む——そんな状態が続いていませんか。
+胃のあたりがずっと重い、食事のたびにむかつく感じがする、仕事のプレッシャーを感じるたびに胃が痛む、そんな状態が続いていませんか。
 それは「気のせい」でも「意志の弱さ」でもなく、ストレスが体に現れているサインかもしれません。
 ストレスと胃炎の間には、はっきりとした体の仕組みがあります。まずその仕組みを知ることで、自分を責めずに向き合えるようになります。
 
@@ -181,7 +181,7 @@ canonical: https://worelu.com/articles/stress/stress-ien/
 
 ## 胃炎が続くなら受診を。病院をためらわなくていい理由
 
-「病院に行くほどじゃないかな」「仕事が落ち着いたら行こう」——そうやって先送りにしてしまうことはよくあります。
+「病院に行くほどじゃないかな」「仕事が落ち着いたら行こう」、そうやって先送りにしてしまうことはよくあります。
 でも、症状を放置することで、ストレス性胃炎が慢性化したり、別の病気を見逃してしまうリスクもあります。
 
 「ストレスが原因だとわかっているから受診しなくていい」というのは、じつは誤解です。
@@ -233,7 +233,7 @@ canonical: https://worelu.com/articles/stress/stress-ien/
 
 ## ストレス性胃炎を我慢し続けることのリスク
 
-「みんな同じくらい大変なはず」「これくらい我慢しなければ」——そう思って胃の痛みを放置してしまう人は少なくありません。
+「みんな同じくらい大変なはず」「これくらい我慢しなければ」、そう思って胃の痛みを放置してしまう人は少なくありません。
 でも慢性的な炎症を放置すると、状態が進んで胃潰瘍になったり、日常生活に支障が出たりする可能性があります。
 
 つらいですよね。でも「我慢すること」が、結果としてより多くのダメージになることもあるのです。
@@ -270,13 +270,13 @@ canonical: https://worelu.com/articles/stress/stress-ien/
 <div style="margin-top:20px;margin-bottom:8px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:20px 20px 16px;">
 <div style="font-size:12px;font-weight:700;color:#64748B;margin-bottom:4px;letter-spacing:0.05em;">PR</div>
 <div style="font-size:14px;font-weight:700;color:#1E293B;margin-bottom:6px;line-height:1.6;">ストレスの根本にある「働き方の迷い」に向き合いませんか？</div>
-<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">「このまま続けていいのか」「自分に合った仕事がわからない」——そんな迷いがストレスの根本にある場合、キャリアの専門家と一緒に整理することが、体と心の回復の第一歩になることがあります。</div>
+<div style="font-size:13px;color:#475569;margin-bottom:14px;line-height:1.7;">「このまま続けていいのか」「自分に合った仕事がわからない」、そんな迷いがストレスの根本にある場合、キャリアの専門家と一緒に整理することが、体と心の回復の第一歩になることがあります。</div>
 <div style="margin-bottom:10px;font-size:13px;"><a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+5YJRM" rel="nofollow">キャリアに特化したパーソナルトレーニング【POSIWILL CAREER（ポジウィルキャリア）】</a><img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+5YJRM" alt=""></div>
 <div style="text-align:center;"><a href="https://px.a8.net/svt/ejp?a8mat=4B61WI+A7XY6A+5H76+64C3L" rel="nofollow"><img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=260622882618&wid=003&eno=01&mid=s00000025557001028000&mc=1"></a><img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B61WI+A7XY6A+5H76+64C3L" alt=""></div>
 </div>
 
 胃が痛いときこそ、自分を後回しにしないでください。
-まずは食事・睡眠・受診——できることから一つずつ、自分のペースで取り組んでみてください。
+まずは食事・睡眠・受診、できることから一つずつ、自分のペースで取り組んでみてください。
 
 ## よくある質問
 
