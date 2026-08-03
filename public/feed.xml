@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Mon, 03 Aug 2026 07:59:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 21:59:35 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[みなし残業がおかしいと感じたら。制度の問題点と今できる対処法]]></title>
+      <link>https://worelu.com/articles/work/minashi-zangyo-iho-pattern/</link>
+      <guid>https://worelu.com/articles/work/minashi-zangyo-iho-pattern/</guid>
+      <description><![CDATA[「みなし残業がおかしい」そう感じているなら、その直感は正しい場合があります。固定残業代制度が違法になる具体的なパターンと、今すぐ使える確認術・対処法を実例つきで解説します。]]></description>
+      <pubDate>2026-07-30</pubDate>
+    </item>
     <item>
       <title><![CDATA[みなし残業はおかしいと感じたら、違法になるケースと取り戻し方]]></title>
       <link>https://worelu.com/articles/work/minashi-zangyo-okashii/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/quit/kangoshi-yametai/</guid>
       <description><![CDATA[夜勤や人間関係、命を預かる重圧で「看護師を辞めたい」と感じるのは甘えではありません。心身の限界サインの見極め方から、派遣・パート含む6つの働き方の選択肢、傷病手当金の活用法、後悔しない辞め方までを整理します。]]></description>
       <pubDate>2026-07-01</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[ストレスで嘔吐するのはなぜ？体からのSOSサインと受診の目安]]></title>
-      <link>https://worelu.com/articles/stress/stress-outo/</link>
-      <guid>https://worelu.com/articles/stress/stress-outo/</guid>
-      <description><![CDATA[仕事のストレスで嘔吐や吐き気が続くのはなぜ？心と体の関係をやさしく解説し、今すぐできる対処法、医療機関を受診すべき目安、繰り返す場合に考えたい働き方の見直しまで、自分を守るための情報を整理します。]]></description>
-      <pubDate>2026-06-30</pubDate>
     </item>
   </channel>
 </rss>
