@@ -27,7 +27,7 @@ canonical: https://worelu.com/articles/work/minashi-zangyo-iho-pattern/
 この記事では、みなし残業が「本当におかしい状態」になる具体的な条件と、今日から使える確認術・行動ステップを整理します。
 
 <div class="character-box">
-  <img src="/images/characters/character_029.webp" alt="悩む人" class="character-img">
+  <img src="/images/characters/character_29.webp" alt="悩む人" class="character-img">
   <div class="speech-bubble">「みなし残業が40時間含まれてるって言われたけど、毎月60〜70時間は普通に働いてる。超えた分の残業代が出ないって、これおかしくないですか？」</div>
 </div>
 
