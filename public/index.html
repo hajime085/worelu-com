@@ -37,12 +37,10 @@
   --navy:#185FA5;
   --navy-dark:#1E3A5F;
   --navy-deep:#0F2850;
+  --serif:"Hiragino Mincho Pro","Yu Mincho","Noto Serif JP",Georgia,serif;
   --z-header:100;
   --z-nav:200;
   --z-skip:300;
-  --z-float:500;
-  --z-overlay:900;
-  --z-overlay-close:901;
 }
 html{scroll-behavior:smooth}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -70,43 +68,37 @@ a{text-decoration:none;color:inherit}
 .mobile-nav.open{display:flex}
 
 /* HERO */
-.hero{position:relative;overflow:hidden;padding:88px 48px 80px;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;max-width:1120px;margin:0 auto}
-.hero-eyebrow{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:0.12em;margin-bottom:20px}
-.hero-h1{font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--text);line-height:1.22;letter-spacing:-0.03em;margin-bottom:20px}
-.hero-h1 em{color:var(--blue);font-style:normal}
-.hero-sub{font-size:18px;color:var(--text2);line-height:1.9;margin-bottom:32px}
-.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.hero{padding:120px 48px 128px;max-width:1120px;margin:0 auto;text-align:center}
+.hero-text{max-width:600px;margin:0 auto}
+.hero-h1{font-family:var(--serif);font-size:clamp(26px,4vw,44px);font-weight:700;color:var(--text);line-height:1.35;letter-spacing:-0.02em;margin-bottom:24px;text-wrap:balance}
+.hero-sub{font-size:17px;color:var(--text2);line-height:1.9;margin-bottom:36px}
+.hero-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+.trust-item{font-size:12px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:5px}
+.trust-item svg{width:13px;height:13px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* BUTTONS */
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px 30px;border-radius:8px;transition:background 200ms}
 .btn-primary:hover{background:#1D4ED8;color:#fff}
 .btn-primary:active{transform:translateY(1px)}
 .btn-primary svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round}
-.btn-text{font-size:14px;color:var(--muted);font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.btn-text{font-size:15px;color:var(--muted);font-weight:600;display:inline-flex;align-items:center;gap:4px}
 .btn-text:hover{color:var(--blue)}
-.hero-trust{display:flex;gap:16px;flex-wrap:wrap}
-.trust-item{font-size:12px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:5px}
-.trust-item svg{width:13px;height:13px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* CATEGORY BAND */
+.cat-band-wrap{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cat-band{max-width:1120px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cat-band::-webkit-scrollbar{display:none}
+.cat-band a{display:block;padding:14px 24px;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;border-right:1px solid var(--line);transition:color 0.15s,background 0.15s}
+.cat-band a:first-child{border-left:1px solid var(--line)}
+.cat-band a:hover{color:var(--text);background:var(--page)}
+/* DIAGNOSIS BAND */
+.diag-band{background:var(--navy-deep);padding:22px 48px}
+.diag-band-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.diag-band-text{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7}
+.diag-band-text strong{color:#fff;font-weight:700}
+.diag-band-cta{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.45);padding:10px 22px;border-radius:6px;white-space:nowrap;transition:border-color 0.2s}
+.diag-band-cta:hover{border-color:#fff;color:#fff}
+.diag-band-cta svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round}
 
-/* Hero 右側：診断画面モック */
-.hero-mock{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(37,99,235,0.07)}
-.mock-bar{background:var(--page);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;align-items:center;justify-content:space-between}
-.mock-bar-title{font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.04em}
-.mock-live{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:800;color:#DC2626}
-.live-dot{width:6px;height:6px;border-radius:50%;background:#DC2626;animation:blink 1.5s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.mock-body{padding:20px}
-.mock-score-row{display:flex;align-items:center;gap:16px;margin-bottom:16px}
-.mock-score-big{font-size:52px;font-weight:900;color:var(--blue);line-height:1;letter-spacing:-0.04em;font-variant-numeric:tabular-nums}
-.mock-score-sub{font-size:12px;color:var(--muted);font-weight:700}
-.mock-gauge{flex:1}
-.mock-gauge svg{width:100%;height:48px}
-.mock-bars{display:grid;gap:9px;margin-bottom:16px}
-.mock-bar-row{display:grid;grid-template-columns:68px 1fr 28px;align-items:center;gap:8px;font-size:11px;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
-.mock-track{height:7px;background:var(--line);border-radius:999px;overflow:hidden}
-.mock-fill{height:100%;border-radius:999px}
-.mock-comment{background:var(--blue-lt);border-radius:8px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
-.mock-ai-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.mock-ai-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
-.mock-comment-text{font-size:12px;color:var(--text2);line-height:1.65;font-weight:500}
 
 /* DIVIDER */
 .divider{border:none;border-top:1px solid var(--line);margin:0}
@@ -118,40 +110,15 @@ a{text-decoration:none;color:inherit}
 .sec-title{font-size:clamp(20px,2.4vw,30px);font-weight:800;color:var(--text);line-height:1.3;letter-spacing:-0.02em;margin-bottom:10px}
 .sec-lead{font-size:15px;color:var(--muted);line-height:1.8}
 
-/* WORRY（チェックリスト型） */
-.worry-sec{background:var(--page)}
-.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:32px}
-.check-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 18px}
-.check-box{width:20px;height:20px;border-radius:4px;border:2px solid var(--blue-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.check-box svg{width:11px;height:11px;stroke:var(--blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.check-label{font-size:14px;font-weight:700;color:var(--text);line-height:1.4}
-.worry-cta{text-align:center;padding:28px 0 0}
-.worry-cta-text{font-size:15px;color:var(--text2);margin-bottom:16px;font-weight:600}
-.worry-cta-sub{font-size:13px;color:var(--muted);margin-top:10px}
-
-/* 診断の流れ */
-.flow-sec{background:#fff;padding:40px 0}
-.flow-sec .sec-inner{padding:0 16px}
-.flow-grid{display:flex;align-items:center;gap:12px;flex-wrap:nowrap;overflow-x:auto;padding:20px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.flow-grid::-webkit-scrollbar{display:none}
-.flow-card{background:linear-gradient(145deg,#ffffff 0%,#EEF5FF 100%);border:none;border-radius:20px;padding:32px 24px 28px;min-width:190px;flex-shrink:0;box-shadow:0 4px 24px rgba(37,99,235,0.08),0 1px 4px rgba(37,99,235,0.04);position:relative;overflow:hidden;text-align:center}
-.flow-bg-num{position:absolute;top:-8px;right:8px;font-size:72px;font-weight:900;color:var(--navy);opacity:0.05;line-height:1;letter-spacing:-0.04em;pointer-events:none;user-select:none}
-.flow-step-num{display:inline-block;font-size:10px;font-weight:800;color:var(--navy);letter-spacing:0.12em;margin-bottom:16px;background:rgba(24,95,165,0.08);border:none;border-radius:999px;padding:4px 14px}
-.flow-icon{width:52px;height:52px;margin:0 auto 14px;background:rgba(24,95,165,0.08);border-radius:14px;display:flex;align-items:center;justify-content:center}
-.flow-icon svg{width:24px;height:24px;stroke:var(--navy);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.flow-title{font-size:16px;font-weight:800;color:var(--navy-deep);margin-bottom:8px}
-.flow-desc{font-size:12px;color:#64748B;line-height:1.8}
-.flow-arrow{flex-shrink:0}
-.flow-arrow svg{width:18px;height:18px;stroke:#BFDBFE;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-
 /* ARTICLES */
-.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.art-card{display:flex;flex-direction:column;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:border-color 0.2s,transform 0.2s}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.art-grid-featured{display:grid;grid-template-columns:3fr 2fr;grid-template-rows:auto auto;gap:20px;align-items:stretch}
+.art-grid-featured .art-card:first-child{grid-row:1/3}
+.art-card{display:flex;flex-direction:column;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:inherit}
 .art-card:hover{border-color:var(--blue);transform:translateY(-2px)}
-.art-thumb{height:140px;display:flex;align-items:center;justify-content:center;position:relative}
-.art-thumb-cat{position:absolute;top:12px;left:12px;font-size:10px;font-weight:800;padding:4px 10px;border-radius:4px;letter-spacing:0.05em}
-.art-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
-.art-title{font-size:14px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:8px}
+.art-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.art-cat{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.06em;margin-bottom:12px}
+.art-title{font-weight:800;color:var(--text);line-height:1.55;margin-bottom:8px}
 .art-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:12px}
 .art-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
 .art-date{font-size:11px;color:var(--muted)}
@@ -160,56 +127,17 @@ a{text-decoration:none;color:inherit}
 .sec-more{text-align:center;margin-top:36px}
 .btn-outline{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);color:var(--text2);font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;transition:border-color 200ms,color 200ms}
 .btn-outline:hover{border-color:var(--blue);color:var(--blue)}
-.btn-outline:active{transform:translateY(1px)}
 .btn-outline svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-/* CATEGORIES */
-.cat-sec{background:var(--page)}
-.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.cat-item{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--text)}
-.cat-icon{width:58px;height:58px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:border-color 0.2s,background 0.2s}
-.cat-icon svg{width:24px;height:24px;stroke:var(--muted);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke 0.2s}
-.cat-item:hover .cat-icon{border-color:var(--blue);background:var(--blue-lt)}
-.cat-item:hover .cat-icon svg{stroke:var(--blue)}
-.cat-label{font-size:13px;font-weight:700;color:var(--text2)}
-
-/* AI相談紹介 */
-.chat-sec{background:#fff}
-.chat-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.chat-preview{background:var(--page);border-radius:14px;border:1px solid var(--line);overflow:hidden}
-.chat-preview-head{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
-.chat-preview-title{font-size:12px;font-weight:800;color:var(--text)}
-.chat-badge{background:var(--blue-lt);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;border:1px solid var(--blue-md)}
-.chat-log{padding:16px;display:grid;gap:10px}
-.bubble-wrap{display:flex;align-items:flex-start;gap:8px}
-.bubble-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.bubble-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
-.bubble-ai{background:#fff;border:1px solid var(--line);border-radius:4px 10px 10px 10px;padding:10px 13px;font-size:12px;color:var(--text2);line-height:1.65;font-weight:500;max-width:260px}
-.bubble-user{background:var(--blue);border-radius:10px 4px 10px 10px;padding:10px 13px;font-size:12px;color:#fff;line-height:1.65;font-weight:500;max-width:220px;justify-self:end}
-.chat-user-row{display:flex;justify-content:flex-end}
-.chat-input-area{padding:12px 16px;border-top:1px solid var(--line);background:#fff;display:flex;gap:8px}
-.chat-input-dummy{flex:1;background:var(--page);border:1px solid var(--line);border-radius:6px;padding:9px 12px;font-size:12px;color:var(--muted)}
-.chat-send{background:var(--blue);color:#fff;border:none;border-radius:6px;padding:9px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
-.chat-features{display:grid;gap:14px;margin:24px 0}
-.chat-feat{display:flex;align-items:flex-start;gap:12px}
-.chat-feat-icon{width:34px;height:34px;border-radius:8px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.chat-feat-icon svg{width:16px;height:16px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
-.chat-feat-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
-.chat-feat-desc{font-size:12px;color:var(--muted);line-height:1.6}
-
-/* ABOUT */
-.about-sec{background:var(--page)}
-.about-inner{max-width:720px;margin:0 auto;text-align:center}
-.about-desc{font-size:15px;color:var(--text2);line-height:1.9;margin:14px 0 40px}
-.about-points{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.about-point{background:#fff;border-radius:10px;border:1px solid var(--line);padding:20px 16px;text-align:center}
-.about-point-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
-.about-point-icon svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:1.5;stroke-linecap:round}
-.about-point-title{font-size:14px;font-weight:800;color:var(--text);margin-bottom:4px}
-.about-point-desc{font-size:12px;color:var(--muted);line-height:1.65}
+/* SECTIONS */
+.divider{border:none;border-top:1px solid var(--line);margin:0}
+.sec{padding:80px 48px}
+.sec-inner{max-width:1120px;margin:0 auto}
+.sec-title{font-size:clamp(18px,2vw,24px);font-weight:800;color:var(--text);line-height:1.3;letter-spacing:-0.02em;margin-bottom:32px}
+.sec-more{margin-top:36px;text-align:center}
 
 /* FOOTER */
-.footer{background:#fff;border-top:1px solid var(--line);padding:40px 48px 32px}
+.footer{background:#F8FAFF;border-top:1px solid var(--line);padding:48px 48px 32px}
 .footer-inner{max-width:1120px;margin:0 auto}
 .footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:32px}
 .footer-logo{font-size:18px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
@@ -230,81 +158,28 @@ a{text-decoration:none;color:inherit}
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  .hero{grid-template-columns:1fr;padding:64px 24px;gap:40px}
-  .hero-mock{display:none}
-  .chat-inner{grid-template-columns:1fr;gap:40px}
+  .hero{padding:80px 24px 96px}
   .art-grid{grid-template-columns:repeat(2,1fr)}
-  .cat-grid{grid-template-columns:repeat(3,1fr)}
-  .about-points{grid-template-columns:1fr}
-  .hdr{padding:10px 16px}
+  .art-grid-featured{grid-template-columns:1fr;grid-template-rows:auto}
+  .art-grid-featured .art-card:first-child{grid-row:auto}
   .hdr-nav{display:none}
   .hamburger{display:flex}
-  .hdr{position:fixed;width:100%}
   .sec{padding:56px 24px}
+  .diag-band{padding:20px 24px}
+  .footer{padding:40px 24px 24px}
 }
 @media(max-width:600px){
   .art-grid{grid-template-columns:1fr}
-  .cat-grid{grid-template-columns:repeat(3,1fr);gap:12px}
-  .checklist{grid-template-columns:1fr}
+  .hero-h1{font-size:26px}
+  .hero-sub{font-size:15px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .btn-primary{justify-content:center}
+  .cat-band a{padding:12px 16px;font-size:12px}
+  .diag-band-inner{flex-direction:column;align-items:flex-start;gap:12px}
   .footer-nav-group{gap:24px}
-  .hero-h1{font-size:28px}
-}
-@media(max-width:860px){body{font-size:18px}}.hdr-logo{font-size:26px!important}@media(max-width:600px){body{font-size:20px}}
-@media (max-width: 768px) {
-  .hdr { position: fixed !important; width: 100% !important; top: 0; z-index: var(--z-header); }
-  body { padding-top: 80px; }
-  .hero-h1 { font-size: clamp(36px, 8vw, 48px) !important; line-height: 1.25 !important; }
-  .hero-sub { font-size: 20px !important; line-height: 1.9 !important; }
-  .trust-item { font-size: 17px !important; }
 }
 
 
-
-.hero-geo {
-  position: absolute;
-  right: -40px;
-  bottom: -40px;
-  width: 300px;
-  height: 300px;
-  pointer-events: none;
-  overflow: hidden;
-}
-.hero-geo circle {
-  fill: none;
-  stroke: var(--navy);
-}
-.hero-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .hero-geo-bg { opacity: 0.5; }
-}
-
-.footer { background: #F8FAFF; border-top: 1px solid var(--line); padding: 48px 48px 32px; }
-.footer-logo { font-size: 22px !important; }
-.footer-logo-sub { font-size: 14px !important; color: var(--muted); margin-top: 4px; }
-.footer-logo-desc { font-size: 14px !important; line-height: 1.8; }
-.footer-nav-title { font-size: 14px !important; font-weight: 700; margin-bottom: 12px; }
-.footer-nav-links a { font-size: 14px !important; }
-.footer-bottom { border-top: 1px solid var(--line); padding-top: 20px; text-align: center !important; justify-content: center !important; }
-.footer-copy { font-size: 13px !important; }
-
-.art-thumb { position: relative; overflow: hidden; }
-.art-thumb-bg-num {
-  position: absolute;
-  bottom: -10px;
-  right: 8px;
-  font-size: 80px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.04em;
-  opacity: 0.12;
-  pointer-events: none;
-  user-select: none;
-}
-.art-thumb { background: linear-gradient(160deg, var(--thumb-bg, #F8FAFF) 0%, white 100%) !important; }
 
 /* skip-to-content */
 .skip-link{position:absolute;left:-9999px;top:4px;width:1px;height:1px;overflow:hidden;z-index:var(--z-skip)}
@@ -342,202 +217,63 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 
 <!-- HERO -->
 <section id="main" style="border-bottom:1px solid var(--line)">
-  <div class="hero" style="position:relative;overflow:hidden;">
-<div aria-hidden="true" class="hero-geo-bg" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:0;">
-<svg width="100%" height="100%" style="position:absolute;top:0;left:0;">
-  <defs>
-    <style>
-      @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-20px) scale(1.05)}66%{transform:translate(-15px,25px) scale(0.95)}}
-      @keyframes drift2{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(-30px,15px) scale(0.9)}66%{transform:translate(20px,-30px) scale(1.08)}}
-      @keyframes drift3{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,20px)}}
-      @keyframes drift4{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-20px,-25px) scale(1.1)}}
-      .gc1{animation:drift1 12s ease-in-out infinite;transform-origin:75% 60%}
-      .gc2{animation:drift2 15s ease-in-out infinite;transform-origin:20% 70%}
-      .gc3{animation:drift3 10s ease-in-out infinite;transform-origin:85% 20%}
-      .gc4{animation:drift4 18s ease-in-out infinite;transform-origin:40% 85%}
-    </style>
-  </defs>
-  <g class="gc1">
-    <circle cx="75%" cy="55%" r="130" fill="#E6F1FB" opacity="0.25"/>
-    <circle cx="75%" cy="55%" r="75" fill="#B5D4F4" opacity="0.12"/>
-    <circle cx="75%" cy="55%" r="30" fill="#85B7EB" opacity="0.08"/>
-  </g>
-  <g class="gc2">
-    <circle cx="15%" cy="75%" r="90" fill="#E6F1FB" opacity="0.2"/>
-    <circle cx="15%" cy="75%" r="45" fill="#B5D4F4" opacity="0.1"/>
-  </g>
-  <g class="gc3">
-    <circle cx="88%" cy="18%" r="60" fill="#E6F1FB" opacity="0.22"/>
-    <circle cx="88%" cy="18%" r="28" fill="#B5D4F4" opacity="0.1"/>
-  </g>
-  <g class="gc4">
-    <circle cx="35%" cy="90%" r="50" fill="#E6F1FB" opacity="0.18"/>
-  </g>
-</svg>
-</div>
-    <div>
-      <h1 class="hero-h1">仕事がつらい。<br><em>AIストレス診断</em>で、<br>今の状態を知ろう。</h1>
-      <p class="hero-sub">その悩み、一人で抱え込まないでください。<br>AIストレス診断とセルフケア記事で、<br>今の状態を一緒に整理します。</p>
-      <div class="hero-actions" style="position:relative;z-index:1;">
+  <div class="hero">
+    <div class="hero-text">
+      <h1 class="hero-h1">仕事のつらさを、<br>一人で抱え込まないでください。</h1>
+      <p class="hero-sub">その感覚、あなただけではありません。<br>AIストレス診断と記事で、今の状態を一緒に整理します。</p>
+      <div class="hero-actions">
         <a href="/stress-check/" class="btn-primary">
           <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
-          無料で診断する（1分）
+          ストレスを診断する（1分）
         </a>
-        <a href="/articles/" style="display:inline-flex;align-items:center;gap:6px;padding:14px 22px;border:2px solid var(--navy);border-radius:8px;color:var(--navy);font-weight:700;font-size:16px;text-decoration:none;background:transparent;">記事を読む →</a>
+        <a href="/articles/" class="btn-text">記事を読む →</a>
       </div>
-      <div class="hero-trust" style="position:relative;z-index:1;">
+      <div class="hero-trust">
         <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>登録不要</span>
         <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>完全無料</span>
-        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>AIがリアルタイム分析</span>
-        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>バーンアウト・転職リスクも判定</span>
-      </div>
-    </div>
-
-    <!-- 診断画面モック -->
-    <div class="hero-mock" style="position:relative;z-index:1;">
-      <div class="mock-bar">
-        <span class="mock-bar-title">診断結果</span>
-        <span style="font-size:10px;font-weight:700;color:var(--muted)">全10問回答済み</span>
-      </div>
-      <div class="mock-body">
-        <div style="background:var(--blue-lt);border-radius:8px;padding:14px 16px;margin-bottom:14px">
-          <div style="font-size:10px;font-weight:800;color:var(--blue);letter-spacing:0.06em;margin-bottom:6px">DIAGNOSIS RESULT</div>
-          <div style="font-size:17px;font-weight:800;color:var(--text);margin-bottom:4px">仕事ストレスが高い状態です</div>
-          <div style="font-size:12px;color:var(--muted);line-height:1.6">仕事ストレスと転職意向に高い値が出ています。今すぐ対処することで改善できます。</div>
-        </div>
-        <div class="mock-score-row">
-          <div>
-            <div class="mock-score-big">78</div>
-            <div class="mock-score-sub">/100 総合スコア</div>
-          </div>
-          <div class="mock-gauge">
-            <svg viewBox="0 0 120 64" fill="none" aria-hidden="true">
-              <path d="M10,58 A54,54 0 0,1 110,58" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round" fill="none"/>
-              <path d="M10,58 A54,54 0 0,1 110,58" stroke="#DC2626" stroke-width="8" stroke-linecap="round" fill="none" stroke-dasharray="169.6" stroke-dashoffset="37"/>
-            </svg>
-          </div>
-        </div>
-        <div class="mock-bars">
-          <div class="mock-bar-row">
-            <span>仕事ストレス</span>
-            <div class="mock-track"><div class="mock-fill" style="width:84%;background:#DC2626"></div></div>
-            <span>84</span>
-          </div>
-          <div class="mock-bar-row">
-            <span>燃え尽き</span>
-            <div class="mock-track"><div class="mock-fill" style="width:61%;background:#D97706"></div></div>
-            <span>61</span>
-          </div>
-          <div class="mock-bar-row">
-            <span>職場環境</span>
-            <div class="mock-track"><div class="mock-fill" style="width:44%;background:#2563EB"></div></div>
-            <span>44</span>
-          </div>
-          <div class="mock-bar-row">
-            <span>転職意向</span>
-            <div class="mock-track"><div class="mock-fill" style="width:79%;background:#7C3AED"></div></div>
-            <span>79</span>
-          </div>
-        </div>
-        <div class="mock-comment">
-          <div class="mock-ai-icon">
-            <svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg>
-          </div>
-          <div class="mock-comment-text">仕事ストレスと転職意向が同時に高く出ています。今の職場とのミスマッチも影響している可能性があります。</div>
-        </div>
+        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>約1分で完了</span>
       </div>
     </div>
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- 診断の流れ -->
-<section class="sec flow-sec">
-  <div class="sec-inner">
-    <div style="text-align:center">
-      <div class="sec-eyebrow">HOW IT WORKS</div>
-      <h2 class="sec-title">診断から改善まで、4つのステップ</h2>
-      <p class="sec-lead" style="margin-top:8px">何が起きるかが分かると、一歩を踏み出しやすくなります。</p>
-    </div>
-    <div class="flow-grid">
-      <div class="flow-card">
-        <div class="flow-bg-num">01</div>
-        <div class="flow-step-num">STEP 01</div>
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div>
-        <div class="flow-title">診断する</div>
-        <div class="flow-desc">10問・約1分。今のストレス状態を4軸でスコア化。</div>
-      </div>
-      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;width:18px;height:18px;flex-shrink:0;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
-      <div class="flow-card">
-        <div class="flow-bg-num">02</div>
-        <div class="flow-step-num">STEP 02</div>
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><path d="M3 20h18M7 20V12M12 20V8M17 20V4"/></svg></div>
-        <div class="flow-title">結果を見る</div>
-        <div class="flow-desc">4軸スコアとAIコメントで、自分の状態を客観的に把握。</div>
-      </div>
-      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;width:18px;height:18px;flex-shrink:0;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
-      <div class="flow-card">
-        <div class="flow-bg-num">03</div>
-        <div class="flow-step-num">STEP 03</div>
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-        <div class="flow-title">AIに相談する</div>
-        <div class="flow-desc">残業・転職・人間関係など、何でもAIコーチに相談できる。</div>
-      </div>
-      <div class="flow-arrow"><svg viewBox="0 0 20 20" aria-hidden="true" style="fill:none;stroke:#BFDBFE;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;width:18px;height:18px;flex-shrink:0;"><path d="M4 10h12M11 5l5 5-5 5"/></svg></div>
-      <div class="flow-card">
-        <div class="flow-bg-num">04</div>
-        <div class="flow-step-num">STEP 04</div>
-        <div class="flow-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
-        <div class="flow-title">記事で学ぶ</div>
-        <div class="flow-desc">状態に合った関連記事で、原因と対処法を深く理解する。</div>
-      </div>
-    </div>
+<!-- カテゴリ帯 -->
+<nav class="cat-band-wrap" aria-label="カテゴリー">
+  <div class="cat-band">
+    <a href="/articles/stress/">症状・ストレス</a>
+    <a href="/articles/burnout/">バーンアウト・休職</a>
+    <a href="/articles/work/">労働問題</a>
+    <a href="/articles/quit/">転職・退職</a>
+    <a href="/articles/">すべての記事</a>
   </div>
-</section>
-
-<hr class="divider">
+</nav>
 
 <!-- 人気記事 -->
-<section class="sec" style="background:var(--page)">
+<section class="sec">
   <div class="sec-inner">
-    <div class="sec-eyebrow">POPULAR ARTICLES</div>
     <h2 class="sec-title">人気の記事</h2>
-    <p class="sec-lead" style="margin-bottom:36px">多くの方に読まれている記事です。</p>
-    <div class="art-grid">
-      <a href="/articles/stress/shigoto-yaruki-denai/" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        <div style="height:3px;background:#B91C1C;opacity:0.7;"></div>
-        <div style="position:relative;padding:20px 18px 14px;">
-          <div style="position:absolute;top:12px;right:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;color:#1E3A5F;opacity:0.06;line-height:1;letter-spacing:-0.04em;pointer-events:none;">01</div>
-          <div style="margin-bottom:12px;"><span style="display:inline-block;background:#FEE2E2;color:#B91C1C;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">症状・ストレス</span></div>
-        </div>
+    <div class="art-grid-featured">
+      <a href="/articles/stress/shigoto-yaruki-denai/" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">仕事のやる気が出ないのはなぜ？「怠け」じゃない3つの原因と対処法</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">「仕事のやる気が出ない…」「何だか体が重くて、仕事に集中できない」</div>
+          <span class="art-cat" style="background:#FEE2E2;color:#B91C1C;">症状・ストレス</span>
+          <div class="art-title" style="font-size:22px;">仕事のやる気が出ないのはなぜ？「怠け」じゃない3つの原因と対処法</div>
+          <div class="art-desc">「仕事のやる気が出ない…」「何だか体が重くて、仕事に集中できない」</div>
           <div class="art-footer"><span class="art-date">2026.06.19</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>
-      <a href="/articles/work/kyuyomeisai-okashii/" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        <div style="height:3px;background:#1D4ED8;opacity:0.7;"></div>
-        <div style="position:relative;padding:20px 18px 14px;">
-          <div style="position:absolute;top:12px;right:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;color:#1E3A5F;opacity:0.06;line-height:1;letter-spacing:-0.04em;pointer-events:none;">02</div>
-          <div style="margin-bottom:12px;"><span style="display:inline-block;background:#DBEAFE;color:#1D4ED8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">労働問題</span></div>
-        </div>
+      <a href="/articles/work/kyuyomeisai-okashii/" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">給与明細がおかしいときの確認ポイントと対処法</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">「給与明細がおかしい」と感じたことはありませんか。よくある計算ミスや残業代未払いのパターンと確認方法、会社への伝え方から…</div>
+          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
+          <div class="art-title" style="font-size:16px;">給与明細がおかしいときの確認ポイントと対処法</div>
+          <div class="art-desc">「給与明細がおかしい」と感じたことはありませんか。よくある計算ミスや残業代未払いのパターンと確認方法、会社への伝え方から…</div>
           <div class="art-footer"><span class="art-date">2026.07.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>
-      <a href="/articles/work/kyukei-jikan-torenai/" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        <div style="height:3px;background:#1D4ED8;opacity:0.7;"></div>
-        <div style="position:relative;padding:20px 18px 14px;">
-          <div style="position:absolute;top:12px;right:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;color:#1E3A5F;opacity:0.06;line-height:1;letter-spacing:-0.04em;pointer-events:none;">03</div>
-          <div style="margin-bottom:12px;"><span style="display:inline-block;background:#DBEAFE;color:#1D4ED8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">労働問題</span></div>
-        </div>
+      <a href="/articles/work/kyukei-jikan-torenai/" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">休憩時間が取れない職場は違法？労基法34条の権利と対処法</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">昼休みも働かされる、休憩なしが当たり前、それは労働基準法違反です。労基法34条が定める休憩権の内容、職場への正しい伝え方…</div>
+          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
+          <div class="art-title" style="font-size:16px;">休憩時間が取れない職場は違法？労基法34条の権利と対処法</div>
+          <div class="art-desc">昼休みも働かされる、休憩なしが当たり前、それは労働基準法違反です。労基法34条が定める休憩権の内容、職場への正しい伝え方…</div>
           <div class="art-footer"><span class="art-date">2026.07.15</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>
@@ -548,81 +284,43 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- カテゴリー -->
-<section class="sec cat-sec">
-  <div class="sec-inner">
-    <div style="text-align:center;margin-bottom:36px">
-      <div class="sec-eyebrow">CATEGORY</div>
-      <h2 class="sec-title">カテゴリーから探す</h2>
-    </div>
-    <div class="cat-grid">
-      <a href="/articles/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-        <span class="cat-label">すべて</span>
-      </a>
-      <a href="/articles/stress/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div>
-        <span class="cat-label">症状・ストレス</span>
-      </a>
-      <a href="/articles/burnout/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg></div>
-        <span class="cat-label">バーンアウト</span>
-      </a>
-      <a href="/articles/work/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 014 0v2"/><path d="M2 12h20"/></svg></div>
-        <span class="cat-label">労働問題</span>
-      </a>
-      <a href="/articles/quit/" class="cat-item">
-        <div class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11h6M19 8l3 3-3 3"/><path d="M12 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg></div>
-        <span class="cat-label">転職・退職</span>
-      </a>
-    </div>
+<!-- 診断バンド -->
+<div class="diag-band">
+  <div class="diag-band-inner">
+    <div class="diag-band-text"><strong>今の自分の状態を確認する</strong>&ensp;·&ensp;AIストレス診断（10問・1分・完全無料）</div>
+    <a href="/stress-check/" class="diag-band-cta">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
+      診断を始める
+    </a>
   </div>
-</section>
-
-<hr class="divider">
+</div>
 
 <!-- 新着記事 -->
 <section class="sec">
   <div class="sec-inner">
-    <div class="sec-eyebrow">NEW ARTICLES</div>
     <h2 class="sec-title">新着記事</h2>
     <div class="art-grid">
-      <a href="/articles/work/minashi-zangyo-iho-pattern/" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        
-        <div style="position:relative;padding:20px 18px 14px;">
-          
-          <div style="margin-bottom:12px;"><span style="display:inline-block;background:#DBEAFE;color:#1D4ED8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">労働問題</span></div>
-        </div>
+      <a href="/articles/work/minashi-zangyo-iho-pattern/" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">みなし残業がおかしいと感じたら。制度の問題点と今できる対処法</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">「みなし残業がおかしい」そう感じているなら、その直感は正しい場合があります。固定残業代制度が違法になる具体的なパターンと…</div>
+          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
+          <div class="art-title" style="font-size:16px;">みなし残業がおかしいと感じたら。制度の問題点と今できる対処法</div>
+          <div class="art-desc">「みなし残業がおかしい」そう感じているなら、その直感は正しい場合があります。固定残業代制度が違法になる具体的なパターンと…</div>
           <div class="art-footer"><span class="art-date">2026.07.30</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>
-      <a href="/articles/work/minashi-zangyo-okashii/" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        
-        <div style="position:relative;padding:20px 18px 14px;">
-          
-          <div style="margin-bottom:12px;"><span style="display:inline-block;background:#DBEAFE;color:#1D4ED8;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">労働問題</span></div>
-        </div>
+      <a href="/articles/work/minashi-zangyo-okashii/" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">みなし残業はおかしいと感じたら、違法になるケースと取り戻し方</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">「みなし残業っておかしくない？」と感じたら正しい直感かもしれません。固定残業代が違法になるケース・損している残業代の計算…</div>
+          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
+          <div class="art-title" style="font-size:16px;">みなし残業はおかしいと感じたら、違法になるケースと取り戻し方</div>
+          <div class="art-desc">「みなし残業っておかしくない？」と感じたら正しい直感かもしれません。固定残業代が違法になるケース・損している残業代の計算…</div>
           <div class="art-footer"><span class="art-date">2026.07.29</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>
-      <a href="/articles/quit/tensyoku-3months/" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        
-        <div style="position:relative;padding:20px 18px 14px;">
-          
-          <div style="margin-bottom:12px;"><span style="display:inline-block;background:#EDE9FE;color:#5B21B6;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">転職・退職</span></div>
-        </div>
+      <a href="/articles/quit/tensyoku-3months/" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">転職3ヶ月の壁とは？つらい理由と乗り越え方を解説</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">転職して3ヶ月が経った頃に感じる「こんなはずじゃなかった」。3ヶ月の壁の正体・つらい5つの理由・具体的な乗り越え方・辞め…</div>
+          <span class="art-cat" style="background:#EDE9FE;color:#5B21B6;">転職・退職</span>
+          <div class="art-title" style="font-size:16px;">転職3ヶ月の壁とは？つらい理由と乗り越え方を解説</div>
+          <div class="art-desc">転職して3ヶ月が経った頃に感じる「こんなはずじゃなかった」。3ヶ月の壁の正体・つらい5つの理由・具体的な乗り越え方・辞め…</div>
           <div class="art-footer"><span class="art-date">2026.07.24</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>
@@ -633,10 +331,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
   </div>
 </section>
 
-<hr class="divider">
-
 <!-- AI相談紹介 -->
-<section class="sec chat-sec">
+<section class="sec chat-sec" style="display:none">
   <div class="chat-inner">
     <div>
       <div class="sec-eyebrow">AI COACH CHAT</div>
@@ -696,10 +392,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
   </div>
 </section>
 
-<hr class="divider">
-
 <!-- Woreluとは -->
-<section class="sec about-sec">
+<section class="sec about-sec" style="display:none">
   <div class="about-inner">
     <div class="sec-eyebrow" style="text-align:center">ABOUT WORELU</div>
     <h2 class="sec-title" style="text-align:center">Woreluとは</h2>
@@ -933,85 +627,5 @@ document.addEventListener('click',function(e){
 });
 </script>
 
-<style>
-.bubble-wrap, .chat-user-row { opacity: 0; transform: translateY(10px); transition: opacity 0.4s ease, transform 0.4s ease; }
-.bubble-wrap.visible, .chat-user-row.visible { opacity: 1; transform: translateY(0); }
-.typing-dots { display: flex; gap: 4px; padding: 10px 13px; background: #fff; border: 1px solid var(--line); border-radius: 4px 10px 10px 10px; max-width: 60px; }
-.typing-dots span { width: 6px; height: 6px; border-radius: 50%; background: #94A3B8; animation: dotBounce 1.2s infinite; }
-.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
-.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
-@keyframes dotBounce { 0%,80%,100%{transform:translateY(0);opacity:0.4} 40%{transform:translateY(-6px);opacity:1} }
-.bubble-ai.typing { border-right: 2px solid var(--navy); }
-</style>
-<script>
-(function(){
-  var chatLog = document.getElementById('chatLog');
-  if(!chatLog) return;
-  var messages = chatLog.querySelectorAll('.bubble-wrap, .chat-user-row');
-  var animated = false;
-
-  function runAnimation(){
-    if(animated) return;
-    animated = true;
-    var log = chatLog;
-    log.innerHTML = '';
-
-    var seq = [
-      { type:'ai', text:'仕事ストレスと転職意向が高い結果でした。何か具体的に気になっていることや、相談したいことはありますか？', delay:400 },
-      { type:'user', text:'毎日残業が続いていて、もう限界かもしれません', delay:1200 },
-      { type:'ai', text:'限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。まず有給を1日取る計画を立ててみませんか？', delay:2400 },
-    ];
-
-    function addMsg(item, cb){
-      if(item.type === 'user'){
-        var row = document.createElement('div');
-        row.className = 'chat-user-row';
-        row.style.opacity = '0';
-        row.style.transform = 'translateY(10px)';
-        row.innerHTML = '<div class="bubble-user">' + item.text + '</div>';
-        log.appendChild(row);
-        log.scrollTop = log.scrollHeight;
-        setTimeout(function(){ row.style.transition='opacity 0.4s,transform 0.4s'; row.style.opacity='1'; row.style.transform='translateY(0)'; if(cb)cb(); }, 50);
-      } else {
-        var wrap = document.createElement('div');
-        wrap.className = 'bubble-wrap';
-        wrap.style.opacity = '0';
-        wrap.style.transform = 'translateY(10px)';
-        var icon = '<div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>';
-        var dots = '<div class="bubble-wrap" id="dotsWrap"><div class="bubble-icon">' + icon.replace('<div class="bubble-icon">','').replace('</div>','') + '</div><div class="typing-dots"><span></span><span></span><span></span></div></div>';
-        var dotsEl = document.createElement('div');
-        dotsEl.innerHTML = dots;
-        var dotsNode = dotsEl.firstChild;
-        log.appendChild(dotsNode);
-        log.scrollTop = log.scrollHeight;
-        setTimeout(function(){
-          log.removeChild(dotsNode);
-          wrap.innerHTML = icon + '<div class="bubble-ai"></div>';
-          log.appendChild(wrap);
-          setTimeout(function(){ wrap.style.transition='opacity 0.3s,transform 0.3s'; wrap.style.opacity='1'; wrap.style.transform='translateY(0)'; },50);
-          var bubble = wrap.querySelector('.bubble-ai');
-          var i=0; var txt=item.text;
-          var t=setInterval(function(){
-            bubble.textContent += txt[i]; i++;
-            log.scrollTop = log.scrollHeight;
-            if(i>=txt.length){ clearInterval(t); if(cb)cb(); }
-          },28);
-        }, 1400);
-      }
-    }
-
-    function runSeq(idx){
-      if(idx>=seq.length) return;
-      setTimeout(function(){ addMsg(seq[idx], function(){ runSeq(idx+1); }); }, idx===0?0:seq[idx].delay);
-    }
-    runSeq(0);
-  }
-
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting) runAnimation(); });
-  }, { threshold: 0.3 });
-  obs.observe(chatLog);
-})();
-</script>
 </body>
 </html>

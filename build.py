@@ -83,27 +83,21 @@ CAT_ICONS = {
     "quit":    '<circle cx="26" cy="26" r="18" fill="{circle}"/><rect x="16" y="14" width="20" height="24" rx="3" fill="{fill}"/><path d="M20 22h12M20 28h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>',
 }
 
-def make_art_card(art: dict, rank: int = 0) -> str:
-    """記事カードHTMLを生成"""
+def make_art_card(art: dict, rank: int = 0, featured: bool = False) -> str:
+    """記事カードHTMLを生成。featured=True のとき大カード（title大・description長め）"""
     cat = art['category']
     c = CAT_CARD_STYLES.get(cat, CAT_CARD_STYLES['stress'])
     cat_label = CATEGORY_LABELS.get(cat, cat)
-    icon = CAT_ICONS.get(cat, CAT_ICONS['stress']).format(circle=c['circle'], fill=c['fill'])
     date_disp = art['date'].replace('-', '.')
-    desc = art['description'][:60] + ('…' if len(art['description']) > 60 else '')
-    rank_str = f'{rank:02d}' if rank else ''
-    rank_html = f'<div style="position:absolute;top:12px;right:14px;font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:52px;font-weight:900;color:#1E3A5F;opacity:0.06;line-height:1;letter-spacing:-0.04em;pointer-events:none;">{rank_str}</div>' if rank else ''
-    accent_bar = f'<div style="height:3px;background:{c["badge_color"]};opacity:0.7;"></div>' if rank else ''
-    cat_tag = f'<span style="display:inline-block;background:{c["badge_bg"]};color:{c["badge_color"]};font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:0.06em;">{cat_label}</span>'
-    return f'''      <a href="{art['url']}" class="art-card" style="border:2px solid #BFDBFE;border-radius:14px;overflow:hidden;display:block;background:#fff;box-shadow:0 4px 16px rgba(15,40,80,0.08);transition:box-shadow 0.2s,transform 0.2s;">
-        {accent_bar}
-        <div style="position:relative;padding:20px 18px 14px;">
-          {rank_html}
-          <div style="margin-bottom:12px;">{cat_tag}</div>
-        </div>
+    desc_len = 120 if featured else 60
+    desc = art['description'][:desc_len] + ('…' if len(art['description']) > desc_len else '')
+    title_size = 22 if featured else 16
+    cat_tag = f'<span class="art-cat" style="background:{c["badge_bg"]};color:{c["badge_color"]};">{cat_label}</span>'
+    return f'''      <a href="{art['url']}" class="art-card">
         <div class="art-body">
-          <div class="art-title" style="font-size:19px;font-weight:800;color:#0F2850;line-height:1.5;margin-bottom:8px;">{art['title']}</div>
-          <div class="art-desc" style="font-size:14px;color:#64748B;line-height:1.7;">{desc}</div>
+          {cat_tag}
+          <div class="art-title" style="font-size:{title_size}px;">{art['title']}</div>
+          <div class="art-desc">{desc}</div>
           <div class="art-footer"><span class="art-date">{date_disp}</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
         </div>
       </a>'''
@@ -153,7 +147,12 @@ def build_top(articles: list):
     popular_set = {a['slug'] for a in popular}
     recent = [a for a in articles if a['slug'] not in popular_set][:3]
 
-    popular_html = '\n'.join(make_art_card(a, rank=i+1) for i, a in enumerate(popular))
+    # 人気記事: 1枚目を featured（大カード）、2・3枚目は通常カード（A-1 layout）
+    popular_html = make_art_card(popular[0], rank=1, featured=True)
+    if len(popular) > 1:
+        popular_html += '\n' + '\n'.join(
+            make_art_card(popular[i], rank=i+1) for i in range(1, len(popular))
+        )
     recent_html = '\n'.join(make_art_card(a) for a in recent)
 
     # TOPページHTMLを読み込んで該当セクションを置き換え
@@ -164,10 +163,10 @@ def build_top(articles: list):
 
     html = top_src.read_text(encoding="utf-8")
 
-    # 人気記事セクションを置き換え
+    # 人気記事セクションを置き換え（art-grid-featured クラスを対象）
     import re
     html = re.sub(
-        r'(<!-- 人気記事 -->.*?<div class="art-grid">)\s*.*?(\s*</div>\s*<div class="sec-more">)',
+        r'(<!-- 人気記事 -->.*?<div class="art-grid-featured">)\s*.*?(\s*</div>\s*<div class="sec-more">)',
         lambda m: m.group(1) + '\n' + popular_html + '\n    ' + m.group(2).lstrip(),
         html, flags=re.DOTALL
     )
