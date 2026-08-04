@@ -307,6 +307,12 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 }
 
 
+/* skip-to-content */
+.skip-link{position:absolute;left:-9999px;top:4px;width:1px;height:1px;overflow:hidden;z-index:9999}
+.skip-link:focus{left:8px;width:auto;height:auto;padding:8px 16px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;border-radius:4px;text-decoration:none}
+/* focus-visible */
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
+
 @media (max-width: 860px) {
   /* ヘッダー */
   .site-logo { font-size: 26px !important; }
@@ -328,6 +334,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
 <script>if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }</script>
 </head>
 <body>
+<a href="#main" class="skip-link">コンテンツへスキップ</a>
 
 <header class="site-header">
   <a href="/" style="text-decoration:none">
@@ -372,7 +379,7 @@ body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans'
   </div>
 </div>
 
-<div class="layout">
+<div id="main" class="layout">
   <div>
     <article class="article-body">
       <p style="font-size:11px; color:var(--muted); margin-bottom:24px; padding:8px 14px; border:1px solid var(--line); border-radius:6px; background:var(--page); display:inline-block;">当サイトでは、一部の記事にアフィリエイト広告を掲載しています。</p>
