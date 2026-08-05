@@ -8,397 +8,497 @@
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://worelu.com/articles/">
 <style>
+/* ── TOKENS ── */
 :root {
-  --blue: #2563EB;
-  --blue-dark: #1D4ED8;
-  --blue-soft: #EFF6FF;
-  --blue-mid: #DBEAFE;
-  --text: #0F172A;
-  --text-2: #334155;
-  --muted: #64748B;
-  --line: #E2E8F0;
-  --page: #F8FAFC;
-  --white: #FFFFFF;
-  --stress: #DC2626;
-  --burnout: #D97706;
-  --work: #2563EB;
-  --quit: #7C3AED;
+  --blue:#2563EB;
+  --blue-lt:#EFF6FF;
+  --blue-md:#DBEAFE;
+  --text:#0F172A;
+  --text2:#334155;
+  --muted:#64748B;
+  --line:#E2E8F0;
+  --page:#F8FAFC;
+  --white:#FFFFFF;
+  --navy:#185FA5;
+  --navy-dark:#1E3A5F;
+  --navy-deep:#0F2850;
+  --serif:"Hiragino Mincho Pro","Yu Mincho","Noto Serif JP",Georgia,serif;
+  --z-header:100;
+  --z-nav:200;
+  /* category */
+  --c-stress:#DC2626;
+  --c-burnout:#D97706;
+  --c-work:#2563EB;
+  --c-quit:#7C3AED;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--page); color: var(--text); font-family: 'Hiragino Sans', 'Yu Gothic UI', -apple-system, sans-serif; line-height: 1.7; }
-.site-header { background: var(--white); border-bottom: 1px solid var(--line); height: auto; min-height: 72px; display: flex; align-items: center; padding: 10px 16px; justify-content: space-between; position: sticky; top: 0; z-index: 100; max-width: 100%; box-sizing: border-box; flex-wrap: wrap; gap: 8px; }
-.site-logo { font-size: 20px; font-weight: 900; color: var(--text); text-decoration: none; letter-spacing: -0.04em; }
-.site-logo em { color: var(--blue); font-style: normal; }
-.header-nav { display: flex; gap: 20px; margin-left: auto; margin-right: 20px; }
-.header-nav a { font-size: 12px; color: var(--muted); text-decoration: none; font-weight: 600; }
-.header-btn { background: var(--blue); color: var(--white); font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; }
-.page-hero { background: var(--white); border-bottom: 1px solid var(--line); padding: 40px 28px; }
-.page-hero-inner { max-width: 960px; margin: 0 auto; }
-.page-hero h1 { font-size: 26px; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -0.02em; }
-.page-hero p { font-size: 14px; color: var(--muted); }
-.main { max-width: 960px; margin: 0 auto; padding: 32px 28px 64px; }
-.cat-nav { margin-bottom: 36px; }
-.cat-nav-eyebrow { font-size: 11px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; text-align: center; margin-bottom: 8px; }
-.cat-nav-title { font-size: 22px; font-weight: 900; color: var(--text); text-align: center; margin-bottom: 28px; letter-spacing: -0.02em; }
-.cat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 600px; margin: 0 auto; }
-.cat-item { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
-.cat-icon { width: 72px; height: 72px; border-radius: 50%; background: var(--white); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, background 0.2s; }
-.cat-icon svg { width: 28px; height: 28px; stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.2s; }
-.cat-item:hover .cat-icon { border-color: var(--blue); background: var(--blue-soft); }
-.cat-item:hover .cat-icon svg { stroke: var(--blue); }
-.cat-item.active .cat-icon { border-color: var(--blue); background: var(--blue); }
-.cat-item.active .cat-icon svg { stroke: #fff; }
-.cat-label { font-size: 12px; font-weight: 700; color: var(--text-2); text-align: center; }
-@media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(3, 1fr); max-width: 100%; } .cat-icon { width: 60px; height: 60px; } }
-.articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.cat-desc-box { margin-bottom: 32px; }
-.cat-featured { margin-bottom: 36px; }
-.cat-featured-label { font-size: 12px; font-weight: 800; color: var(--blue); letter-spacing: 0.1em; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-.cat-featured-label::before { content: ''; display: inline-block; width: 4px; height: 16px; background: var(--blue); border-radius: 2px; }
-.cat-featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.cat-featured-card { background: var(--white); border: 2px solid #BFDBFE; border-top: 3px solid var(--blue); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; box-shadow: 0 4px 16px rgba(15,40,80,0.08); transition: box-shadow 0.2s, transform 0.15s; }
-.cat-featured-card:hover { box-shadow: 0 4px 20px rgba(37,99,235,0.10); transform: translateY(-2px); }
-.cat-featured-badge { display: inline-block; font-size: 10px; font-weight: 700; color: var(--blue); background: #EFF6FF; border-radius: 20px; padding: 3px 10px; margin-bottom: 8px; width: fit-content; }
-.cat-featured-card-body { padding: 16px 18px; display: flex; flex-direction: column; flex: 1; }
-.cat-featured-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 6px; }
-.cat-featured-title { font-size: 15px; font-weight: 800; color: var(--text); line-height: 1.5; margin-bottom: 8px; }
-.cat-featured-desc { font-size: 12px; color: var(--muted); line-height: 1.65; flex: 1; }
-.cat-featured-btn { display: inline-block; margin-top: 16px; background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 8px 18px; border-radius: 20px; width: fit-content; align-self: flex-start; }
-@media(max-width: 768px) { .cat-featured-grid { grid-template-columns: 1fr; } .articles-grid { grid-template-columns: 1fr; } }
-.cat-desc-text { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 12px; }
-.cat-desc-lead { font-size: 14px; font-weight: 700; color: var(--blue); }
-.art-card { background: var(--white); border: 2px solid #BFDBFE; border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--text); display: flex; flex-direction: column; box-shadow: 0 4px 16px rgba(15,40,80,0.08); transition: box-shadow 0.2s, transform 0.2s; }
-.art-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.14); transform: translateY(-3px); border-color: var(--line); }
-.art-card-bar { height: 4px; }
-.art-card-bar.stress { background: var(--stress); }
-.art-card-bar.burnout { background: var(--burnout); }
-.art-card-bar.work { background: var(--work); }
-.art-card-bar.quit { background: var(--quit); }
-.art-card-bar.default { background: var(--blue); }
-.art-card-body { padding: 18px; display: flex; flex-direction: column; flex: 1; }
-.art-card-cat { font-size: 10px; font-weight: 700; color: var(--blue); letter-spacing: 0.06em; margin-bottom: 6px; }
-.art-card-title { font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.55; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid var(--line); }
-.art-card-desc { font-size: 12px; color: var(--muted); line-height: 1.6; flex: 1; }
-.art-card-meta { font-size: 11px; color: var(--muted); margin-top: auto; padding-top: 10px; }
-.site-footer { background: var(--white); border-top: 1px solid var(--line); padding: 24px; text-align: center; font-size: 12px; color: var(--muted); }
-.pagination { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 48px; }
-.pagination-pages { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
-.pagination-nav { display: flex; align-items: center; justify-content: center; gap: 12px; }
-.pagination-pages a, .pagination-pages span { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--white); transition: all 0.15s; }
-.pagination-pages a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
-.pagination-pages .current { background: var(--blue); color: #fff; border-color: var(--blue); }
-.pagination-nav a, .pagination-nav span { display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 20px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid var(--line); color: var(--text); background: var(--white); transition: all 0.15s; }
-.pagination-nav a:hover { border-color: var(--blue); color: var(--blue); background: var(--blue-soft); }
-.pagination-nav .disabled { opacity: 0.35; pointer-events: none; }
-@media (max-width: 600px) { .header-nav { display: none; } }
+html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--text);padding-top:72px;font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7;overflow-x:clip}
+a{text-decoration:none;color:inherit}
 
-@media (max-width: 860px) {
-  body { font-size: 18px; }
-  .site-logo { font-size: 26px !important; }
+/* ── HEADER (TOPと同一) ── */
+.hdr{position:fixed;top:0;width:100%;z-index:var(--z-header);background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;box-sizing:border-box;flex-wrap:wrap;gap:8px}
+.hdr-logo{font-size:28px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
+.hdr-logo em{color:var(--blue);font-style:normal}
+.hdr-logo-sub{font-size:14px;color:#94A3B8;margin-top:1px}
+.hdr-nav{display:flex;align-items:center;gap:28px}
+.hdr-nav a{font-size:13px;color:var(--muted);font-weight:600}
+.hdr-nav a:hover{color:var(--blue)}
+.hdr-nav a[aria-current="page"]{color:var(--blue)}
+.hdr-btn{background:var(--blue);color:#ffffff !important;font-size:13px;font-weight:700;padding:10px 20px;border-radius:6px;-webkit-text-fill-color:#ffffff;transition:background 200ms}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;flex-direction:column;box-shadow:0 8px 24px rgba(37,99,235,0.08);z-index:var(--z-nav)}
+.mobile-nav a{font-size:15px;color:var(--text);font-weight:600;padding:12px 0;border-bottom:1px solid var(--line);display:block}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav.open{display:flex}
+
+/* ── PAGE HERO ── */
+.page-hero{background:var(--white);border-bottom:1px solid var(--line);padding:80px 48px 72px}
+.page-hero-inner{max-width:1120px;margin:0 auto}
+.page-hero-eyebrow{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.14em;margin-bottom:20px}
+.page-hero h1{font-family:var(--serif);font-size:clamp(26px,3vw,40px);font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-0.03em;margin-bottom:16px;text-wrap:balance}
+.page-hero-lead{font-size:15px;color:var(--muted);line-height:1.9;max-width:520px}
+
+/* ── CATEGORY TABS ── */
+.cat-tabs-wrap{border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:72px;z-index:50}
+.cat-tabs{max-width:1120px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:0 48px}
+.cat-tabs::-webkit-scrollbar{display:none}
+.cat-tab{display:block;padding:16px 22px;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;margin-bottom:-1px}
+.cat-tab:hover{color:var(--text)}
+.cat-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+
+/* ── CATEGORY DESC ── */
+.cat-desc-wrap{background:var(--page);border-bottom:1px solid var(--line)}
+.cat-desc{max-width:1120px;margin:0 auto;padding:32px 48px}
+.cat-desc-text{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:6px}
+.cat-desc-lead{font-size:14px;font-weight:700;color:var(--navy)}
+
+/* ── MAIN WRAP ── */
+.articles-wrap{max-width:1120px;margin:0 auto;padding:64px 48px 96px}
+
+/* ── SECTION LABEL (横線付き) ── */
+.sec-label{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:0.14em;display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--line)}
+
+/* ── FEATURED (均一3列グリッド) ── */
+.featured-section{margin-bottom:72px}
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+.feat-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--white);transition:border-color 0.2s,transform 0.2s;color:var(--text)}
+.feat-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.feat-body{padding:26px;display:flex;flex-direction:column;flex:1}
+
+.feat-cat{font-size:11px;font-weight:700;letter-spacing:0.06em;margin-bottom:14px;display:inline-block;padding:3px 10px;border-radius:20px}
+.feat-cat.stress{background:#FFF7ED;color:#C2410C}
+.feat-cat.burnout{background:#FFFBEB;color:#B45309}
+.feat-cat.work{background:#EFF6FF;color:#1D4ED8}
+.feat-cat.quit{background:#F5F3FF;color:#6D28D9}
+.feat-cat.default{background:#EFF6FF;color:#1D4ED8}
+
+.feat-title{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--text);line-height:1.5;margin-bottom:10px;letter-spacing:-0.01em;flex:1}
+.feat-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.feat-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:16px}
+.feat-date{font-size:11px;color:var(--muted)}
+.feat-read{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--blue);padding:7px 14px;border:1.5px solid var(--blue-md);border-radius:6px;background:var(--blue-lt);transition:background 0.15s,border-color 0.15s,color 0.15s}
+.feat-card:hover .feat-read{background:var(--blue);color:#fff;border-color:var(--blue)}
+.feat-read svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── ARTICLE GRID (2列 / セリフタイトル) ── */
+.articles-section{margin-top:0}
+.art-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+.art-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:8px;background:var(--white);padding:26px;transition:border-color 0.2s,transform 0.2s;color:var(--text)}
+.art-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+
+.art-card-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.art-card-cat{font-size:11px;font-weight:700;letter-spacing:0.06em;padding:3px 10px;border-radius:20px;white-space:nowrap}
+.art-card-cat.stress{background:#FFF7ED;color:#C2410C}
+.art-card-cat.burnout{background:#FFFBEB;color:#B45309}
+.art-card-cat.work{background:#EFF6FF;color:#1D4ED8}
+.art-card-cat.quit{background:#F5F3FF;color:#6D28D9}
+.art-card-cat.default{background:#EFF6FF;color:#1D4ED8}
+.art-card-dot{width:3px;height:3px;border-radius:50%;background:var(--line);flex-shrink:0}
+.art-card-date{font-size:11px;color:var(--muted)}
+
+.art-card-title{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--text);line-height:1.55;margin-bottom:10px;letter-spacing:-0.01em}
+.art-card-desc{font-size:13px;color:var(--muted);line-height:1.7;flex:1;margin-bottom:0}
+.art-card-bottom{display:flex;justify-content:flex-end;padding-top:16px;margin-top:auto}
+.art-card-read{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--blue);padding:7px 14px;border:1.5px solid var(--blue-md);border-radius:6px;background:var(--blue-lt);transition:background 0.15s,border-color 0.15s,color 0.15s}
+.art-card:hover .art-card-read{background:var(--blue);color:#fff;border-color:var(--blue)}
+.art-card-read svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── PAGINATION ── */
+.pagination{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:64px}
+.pagination-pages{display:flex;align-items:center;gap:6px}
+.pag-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:6px;font-size:14px;font-weight:700;border:1px solid var(--line);color:var(--muted);transition:all 0.15s}
+.pag-num:hover{border-color:var(--blue);color:var(--blue)}
+.pag-num.current{background:var(--text);color:#fff;border-color:var(--text)}
+.pagination-nav{display:flex;gap:12px}
+.pag-nav{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--text2);padding:10px 20px;border:1px solid var(--line);border-radius:6px;transition:all 0.15s}
+.pag-nav:hover{border-color:var(--blue);color:var(--blue)}
+.pag-nav.disabled{opacity:0.3;pointer-events:none}
+
+/* ── FOOTER ── */
+.footer{background:#F8FAFF;border-top:1px solid var(--line);padding:48px 48px 32px}
+.footer-inner{max-width:1120px;margin:0 auto}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:32px}
+.footer-logo{font-size:18px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
+.footer-logo em{color:var(--blue);font-style:normal}
+.footer-logo-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.footer-logo-desc{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.7;max-width:260px}
+.footer-nav-group{display:flex;gap:48px;flex-wrap:wrap}
+.footer-nav-title{font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.06em;margin-bottom:12px}
+.footer-nav-links{display:grid;gap:8px}
+.footer-nav-links a{font-size:13px;color:var(--muted);font-weight:500}
+.footer-nav-links a:hover{color:var(--blue)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap}
+.footer-legal a{font-size:12px;color:var(--muted)}
+.footer-legal a:hover{color:var(--blue)}
+.footer-copy{font-size:12px;color:var(--muted)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .page-hero{padding:60px 24px 56px}
+  .cat-tabs{padding:0 24px}
+  .articles-wrap{padding:48px 24px 72px}
+  .cat-desc{padding:28px 24px}
+  .featured-grid{grid-template-columns:1fr}
+  .art-grid{grid-template-columns:1fr}
+  .hdr-nav{display:none}
+  .hamburger{display:flex}
+  .footer{padding:40px 24px 24px}
+  .footer-nav-group{gap:24px}
 }
-@media (max-width: 600px) {
-  body { font-size: 20px; }
-  .breadcrumb, .breadcrumb a { font-size: 14px !important; }
+@media(max-width:600px){
+  .page-hero h1{font-size:24px}
+  .cat-tab{padding:14px 14px;font-size:12px}
+  .art-card{padding:20px}
 }
+
+/* ── ACCESSIBILITY ── */
+.skip-link{position:absolute;left:-9999px;top:4px;width:1px;height:1px;overflow:hidden;z-index:300}
+.skip-link:focus{left:8px;width:auto;height:auto;padding:8px 16px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;border-radius:4px;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
 </style>
 </head>
 <body>
-<header class="site-header">
-  <a href="/" style="text-decoration:none">
-    <div class="site-logo">Wor<em>e</em>lu <span style="font-size:13px;font-weight:400;color:var(--muted)">- ワーレル -　</span></div>
-    <div style="font-size:14px;color:#94A3B8;margin-top:1px;font-weight:400">働く人のためのセルフケアメディア</div>
-  </a>
-  <nav class="header-nav">
-    <a href="/articles/">記事一覧</a>
-    <a href="/articles/stress/">症状・ストレス</a>
-    <a href="/articles/burnout/">燃え尽き・休職</a>
-    <a href="/articles/work/">労働問題</a>
-    <a href="/articles/quit/">転職・退職</a>
-  </nav>
-  <a href="/stress-check/" class="header-btn">AI無料診断する</a>
-</header>
+<a href="#main" class="skip-link">コンテンツへスキップ</a>
 
-<div class="page-hero">
+<!-- HEADER -->
+<header class="hdr">
+  <a href="/">
+    <div class="hdr-logo">Wor<em>e</em>lu <span style="font-size:13px;font-weight:400;color:var(--muted)">— ワーレル</span></div>
+    <div class="hdr-logo-sub">働く人のためのセルフケアメディア</div>
+  </a>
+  <nav class="hdr-nav">
+    <a href="/articles/" aria-current="page">記事一覧</a>
+    <a href="/articles/stress/">症状</a>
+    <a href="/articles/burnout/">燃え尽き・休職</a>
+    <a href="/articles/quit/">転職・退職</a>
+    <a href="/stress-check/" class="hdr-btn" style="color:#ffffff !important;-webkit-text-fill-color:#ffffff">無料で診断する</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="メニュー" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="/articles/">記事一覧</a>
+  <a href="/articles/stress/">症状</a>
+  <a href="/articles/burnout/">燃え尽き・休職</a>
+  <a href="/articles/quit/">転職・退職</a>
+  <a href="/stress-check/">無料で診断する</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
   <div class="page-hero-inner">
-    <h1>記事一覧</h1>
-    <p>症状・労働問題・転職まで、あなたの状況に近い記事を探してみてください。記事は随時更新されますのでブックマークやホーム画面に登録しておくとすぐにアクセス可能です。</p>
+    <div class="page-hero-eyebrow">ARTICLES</div>
+    <h1>記事を読む</h1>
+    <p class="page-hero-lead">症状・労働問題・転職まで、あなたの状況に近い記事を探してみてください。</p>
+  </div>
+</section>
+
+<!-- CATEGORY TABS -->
+<nav class="cat-tabs-wrap" aria-label="カテゴリー">
+  <div class="cat-tabs">
+    <a href="/articles/" class="cat-tab">すべて</a>
+    <a href="/articles/stress/" class="cat-tab">症状・ストレス</a>
+    <a href="/articles/burnout/" class="cat-tab">燃え尽き・休職</a>
+    <a href="/articles/work/" class="cat-tab">労働問題</a>
+    <a href="/articles/quit/" class="cat-tab">転職・退職</a>
+  </div>
+</nav>
+
+
+<div class="cat-desc-wrap">
+  <div class="cat-desc">
+    <p class="cat-desc-text">転職・退職に関する情報をまとめています。次の一歩を安心して踏み出すための情報を分かりやすく解説しています。</p>
+    <p class="cat-desc-lead">状況に近い悩みの記事からご覧ください。</p>
   </div>
 </div>
 
-<main class="main">
-  <nav class="cat-nav" aria-label="カテゴリー">
-    <div class="cat-nav-eyebrow">CATEGORY</div>
-    <div class="cat-nav-title">カテゴリーから探す</div>
-    <div class="cat-grid">
-      <a href="/articles/" class="cat-item active">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-        </div>
-        <span class="cat-label">すべて</span>
-      </a>
-      <a href="/articles/stress/" class="cat-item">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
-        </div>
-        <span class="cat-label">症状・ストレス</span>
-      </a>
-      <a href="/articles/burnout/" class="cat-item">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 7-9 9-9 16a9 9 0 0018 0c0-7-9-9-9-16z"/><path d="M12 13c0 3-3 5-3 8a3 3 0 006 0c0-3-3-5-3-8z"/></svg>
-        </div>
-        <span class="cat-label">燃え尽き・休職</span>
-      </a>
-      <a href="/articles/work/" class="cat-item">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 014 0v2"/><path d="M2 12h20"/></svg>
-        </div>
-        <span class="cat-label">労働問題</span>
-      </a>
-      <a href="/articles/quit/" class="cat-item">
-        <div class="cat-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11h6M19 8l3 3-3 3"/><path d="M12 21H5a2 2 0 01-2-2V5a2 2 0 012-2h7"/></svg>
-        </div>
-        <span class="cat-label">転職・退職</span>
-      </a>
-    </div>
-  </nav>
-  
-  <div class="cat-desc-box">
-    <p class="cat-desc-text">「仕事を辞めたい」「転職したいけれど不安」「退職を切り出せない」と悩んでいる方向けに、退職・転職に関する情報をまとめています。退職代行サービスの活用法やブラック企業の見分け方、転職活動の進め方など、次の一歩を安心して踏み出すための情報を分かりやすく解説しています。仕事を辞めるタイミングや退職後の手続きについても紹介しています。</p>
-    <p class="cat-desc-lead">状況に近い悩みの記事からご覧ください。</p>
-  </div>
-  
+
+<main id="main" class="articles-wrap">
 
   
-  <div class="cat-featured">
-    <div class="cat-featured-label">おすすめ記事</div>
-    <div class="cat-featured-grid">
+  <section class="featured-section" aria-label="おすすめ記事">
+    <div class="sec-label">おすすめ</div>
+    <div class="featured-grid">
       
-      <a href="/articles/quit/yameru-yuuki/" class="cat-featured-card">
-        <div class="cat-featured-card-body">
-          <span class="cat-featured-badge">よく読まれています</span>
-          <div class="cat-featured-cat">転職・退職</div>
-          <div class="cat-featured-title">仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え</div>
-          <div class="cat-featured-desc">辞めたいのに動けない5つの理由を整理し、辞めていい状態の判断基準と具体的な次の一歩を提案します。</div>
-          <span class="cat-featured-btn">続きを読む →</span>
+      <a href="/articles/quit/yameru-yuuki/" class="feat-card">
+        <div class="feat-body">
+          <span class="feat-cat quit">転職・退職</span>
+          <div class="feat-title">仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え</div>
+          <div class="feat-desc">辞めたいのに動けない5つの理由を整理し、辞めていい状態の判断基準と具体的な次の一歩を提案します。</div>
+          <div class="feat-footer">
+            <span class="feat-date">2026.06.17</span>
+            <span class="feat-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
+          </div>
         </div>
       </a>
       
-      <a href="/articles/quit/black-kigyo-shindan/" class="cat-featured-card">
-        <div class="cat-featured-card-body">
-          <span class="cat-featured-badge">よく読まれています</span>
-          <div class="cat-featured-cat">転職・退職</div>
-          <div class="cat-featured-title">あなたはもうブラック企業に洗脳されている？感覚麻痺度診断</div>
-          <div class="cat-featured-desc">「自分が甘えているだけ？」その疑問に答える感覚麻痺度診断。20問の4択で、あなたの職場感覚がどれだけ麻痺しているかをLV…</div>
-          <span class="cat-featured-btn">続きを読む →</span>
+      <a href="/articles/quit/black-kigyo-shindan/" class="feat-card">
+        <div class="feat-body">
+          <span class="feat-cat quit">転職・退職</span>
+          <div class="feat-title">あなたはもうブラック企業に洗脳されている？感覚麻痺度診断</div>
+          <div class="feat-desc">「自分が甘えているだけ？」その疑問に答える感覚麻痺度診断。20問の4択で、あなたの職場感覚がどれだけ麻痺しているかをLV1〜4で判定します。</div>
+          <div class="feat-footer">
+            <span class="feat-date">2026.06.17</span>
+            <span class="feat-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
+          </div>
         </div>
       </a>
       
-      <a href="/articles/quit/taisyoku-daikou-moumuri/" class="cat-featured-card">
-        <div class="cat-featured-card-body">
-          <span class="cat-featured-badge">よく読まれています</span>
-          <div class="cat-featured-cat">転職・退職</div>
-          <div class="cat-featured-title">退職代行モームリに何があったのか。今選ぶべきサービスを整理する</div>
-          <div class="cat-featured-desc">2026年2月の逮捕・経営陣刷新を経たモームリの実態と、退職代行を安全に選ぶための基準を整理します。</div>
-          <span class="cat-featured-btn">続きを読む →</span>
+      <a href="/articles/quit/taisyoku-daikou-moumuri/" class="feat-card">
+        <div class="feat-body">
+          <span class="feat-cat quit">転職・退職</span>
+          <div class="feat-title">退職代行モームリに何があったのか。今選ぶべきサービスを整理する</div>
+          <div class="feat-desc">2026年2月の逮捕・経営陣刷新を経たモームリの実態と、退職代行を安全に選ぶための基準を整理します。</div>
+          <div class="feat-footer">
+            <span class="feat-date">2026.06.22</span>
+            <span class="feat-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
+          </div>
         </div>
       </a>
       
     </div>
-  </div>
+  </section>
   
 
-  <div class="articles-grid">
-    
-    <a href="/articles/quit/tensyoku-3months/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+  <section class="articles-section" aria-label="記事一覧">
+    <div class="sec-label">すべての記事</div>
+    <div class="art-grid">
+      
+      <a href="/articles/quit/tensyoku-3months/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.07.24</span>
+        </div>
         <div class="art-card-title">転職3ヶ月の壁とは？つらい理由と乗り越え方を解説</div>
         <div class="art-card-desc">転職して3ヶ月が経った頃に感じる「こんなはずじゃなかった」。3ヶ月の壁の正体・つらい5つの理由・具体的な乗り越え方・辞め時の判断基準まで丁寧に解説します。</div>
-        <div class="art-card-meta">2026-07-24　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/koumuin-yameta-matsuro/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/koumuin-yameta-matsuro/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.07.22</span>
+        </div>
         <div class="art-card-title">公務員を辞めた末路、後悔した人と成功した人のリアルな体験談</div>
         <div class="art-card-desc">「公務員を辞めたら末路が怖い」と感じている方へ。後悔した人・うまくいった人の体験談をもとに、退職前に知っておくべきリスクや手続き、転職の準備まで詳しく解説します…</div>
-        <div class="art-card-meta">2026-07-22　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/koumuin-yametai/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/koumuin-yametai/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.07.11</span>
+        </div>
         <div class="art-card-title">公務員辞めたい気持ちは甘えじゃない。辞める前に知っておくべきこと</div>
         <div class="art-card-desc">公務員を辞めたいと感じているあなたへ。安定を手放す怖さの正体、転職市場での実際の評価、退職前の確認事項と手順まで、後悔しない決断のために整理しました。</div>
-        <div class="art-card-meta">2026-07-11　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/taisyoku-daikou-osusume/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/taisyoku-daikou-osusume/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.07.10</span>
+        </div>
         <div class="art-card-title">退職代行おすすめ7選｜失敗しない選び方と料金を比較【2026年】</div>
         <div class="art-card-desc">退職代行を選ぶ前に、弁護士・労働組合・民間業者という3種類の違いを理解しておきましょう。2026年最新のおすすめ7選を料金・特徴・状況別に比較し、後悔しない選び…</div>
-        <div class="art-card-meta">2026-07-10　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/kangoshi-yametai/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/kangoshi-yametai/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.07.01</span>
+        </div>
         <div class="art-card-title">看護師を辞めたいのは甘えじゃない。限界サインと後悔しない選択肢</div>
         <div class="art-card-desc">夜勤や人間関係、命を預かる重圧で「看護師を辞めたい」と感じるのは甘えではありません。心身の限界サインの見極め方から、派遣・パート含む6つの働き方の選択肢、傷病手…</div>
-        <div class="art-card-meta">2026-07-01　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/shigoto-yametai/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/shigoto-yametai/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.06.29</span>
+        </div>
         <div class="art-card-title">仕事辞めたいと思ったら。理由の整理から辞め方まで全体像を解説</div>
         <div class="art-card-desc">仕事を辞めたいと感じるのは甘えではありません。よくある理由の整理、心と体の限界サイン、辞めるか続けるかの判断軸、退職までの具体的なステップまで、あらゆる状況に対…</div>
-        <div class="art-card-meta">2026-06-29　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/career-hoko-wakaranai/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/career-hoko-wakaranai/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.06.27</span>
+        </div>
         <div class="art-card-title">キャリアの方向性がわからない。迷いを整理して「次の一歩」を見つける方法</div>
         <div class="art-card-desc">キャリアの方向性がわからなくて当然です。迷いの正体を整理し、自分らしい「次の一歩」を見つけるための具体的な考え方と行動を解説します。</div>
-        <div class="art-card-meta">2026-06-27　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/taisyoku-daikou-moumuri/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/taisyoku-daikou-moumuri/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.06.22</span>
+        </div>
         <div class="art-card-title">退職代行モームリに何があったのか。今選ぶべきサービスを整理する</div>
         <div class="art-card-desc">2026年2月の逮捕・経営陣刷新を経たモームリの実態と、退職代行を安全に選ぶための基準を整理します。</div>
-        <div class="art-card-meta">2026-06-22　約7分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/black-kigyo-aruaru/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
-        <div class="art-card-title">ブラック企業あるある20選｜あなたの会社は大丈夫？診断付きでチェック</div>
-        <div class="art-card-desc">ブラック企業あるある20選に加え、入社前の見分け方・違法ケース・20項目セルフ診断まで。自分の会社がブラックか確かめたい人へ。</div>
-        <div class="art-card-meta">2026-06-17　約10分で読めます</div>
-      </div>
-    </a>
-    
-    <a href="/articles/quit/black-kigyo-shindan/" class="art-card">
-      <div class="art-card-bar quit"></div>
-      <div class="art-card-body">
-        <div class="art-card-cat">転職・退職</div>
-        <div class="art-card-title">あなたはもうブラック企業に洗脳されている？感覚麻痺度診断</div>
-        <div class="art-card-desc">「自分が甘えているだけ？」その疑問に答える感覚麻痺度診断。20問の4択で、あなたの職場感覚がどれだけ麻痺しているかをLV1〜4で判定します。</div>
-        <div class="art-card-meta">2026-06-17　約4分で読めます</div>
-      </div>
-    </a>
-    
-  </div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/yameru-yuuki/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.06.17</span>
+        </div>
+        <div class="art-card-title">仕事を辞める勇気が出ない人へ。踏み出せない5つの理由と、それぞれへの現実的な答え</div>
+        <div class="art-card-desc">辞めたいのに動けない5つの理由を整理し、辞めていい状態の判断基準と具体的な次の一歩を提案します。</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+      <a href="/articles/quit/kaisha-yabai/" class="art-card">
+        <div class="art-card-header">
+          <span class="art-card-cat quit">転職・退職</span>
+          <span class="art-card-dot" aria-hidden="true"></span>
+          <span class="art-card-date">2026.06.17</span>
+        </div>
+        <div class="art-card-title">「この会社やばい」と感じたとき。その直感を言語化する方法</div>
+        <div class="art-card-desc">「なんかおかしい」という職場への違和感を言語化する方法と、やばい会社の特徴・次に取るべき行動を整理します。</div>
+        <div class="art-card-bottom"><span class="art-card-read">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      </a>
+      
+    </div>
+  </section>
 
   
   <nav class="pagination" aria-label="ページネーション">
     <div class="pagination-pages">
       
+        
+        <span class="pag-num current">1</span>
+        
       
-      <span class="current">1</span>
-      
-      
-      
-      
-      <a href="page/2/">2</a>
-      
-      
+        
+        <a href="/articles/quit/page/2/" class="pag-num">2</a>
+        
       
     </div>
     <div class="pagination-nav">
       
-      <span class="disabled">← 前へ</span>
+      <span class="pag-nav disabled">← 前へ</span>
       
       
-      <a href="/articles/quit/page/2/">次へ →</a>
+      <a href="/articles/quit/page/2/" class="pag-nav">次へ →</a>
       
     </div>
   </nav>
   
+
 </main>
 
-<footer style="background:#F8FAFF;border-top:1px solid var(--line);padding:40px 24px 28px">
-  <div style="max-width:760px;margin:0 auto">
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:28px">
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
       <div>
-        <div style="font-size:22px;font-weight:900;color:var(--text);letter-spacing:-0.04em">Wor<span style="color:var(--blue)">e</span>lu</div>
-        <div style="font-size:14px;color:var(--muted);margin-top:4px">働く人のためのセルフケアメディア</div>
-        <div style="font-size:14px;color:var(--muted);margin-top:10px;line-height:1.7;max-width:260px">仕事のストレスや悩みを、AIと記事でサポートします。</div>
+        <div class="footer-logo">Wor<em>e</em>lu</div>
+        <div class="footer-logo-sub">働く人のためのセルフケアメディア</div>
+        <div class="footer-logo-desc">仕事のストレスや悩みを、AIと記事でサポートします。診断・記事・相談がすべて無料で使えます。</div>
       </div>
-      <div style="display:flex;gap:40px;flex-wrap:wrap">
+      <div class="footer-nav-group">
         <div>
-          <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">サービス</div>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <a href="/stress-check/" style="font-size:14px;color:var(--muted);text-decoration:none">AIストレス診断</a>
-            <a href="/articles/" style="font-size:14px;color:var(--muted);text-decoration:none">記事一覧</a>
-            <a href="/articles/stress/" style="font-size:14px;color:var(--muted);text-decoration:none">症状・ストレス</a>
-            <a href="/articles/burnout/" style="font-size:14px;color:var(--muted);text-decoration:none">燃え尽き・休職</a>
-            <a href="/articles/quit/" style="font-size:14px;color:var(--muted);text-decoration:none">転職・退職</a>
+          <div class="footer-nav-title">サービス</div>
+          <div class="footer-nav-links">
+            <a href="/stress-check/">AIストレス診断</a>
+            <a href="/articles/">記事一覧</a>
+            <a href="/articles/stress/">症状・ストレス</a>
+            <a href="/articles/burnout/">燃え尽き・休職</a>
+            <a href="/articles/quit/">転職・退職</a>
+            <a href="/contact/">お問い合わせ</a>
           </div>
         </div>
         <div>
-          <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">サイト情報</div>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <a href="/about/" style="font-size:14px;color:var(--muted);text-decoration:none">運営者情報</a>
-            <a href="/privacy/" style="font-size:14px;color:var(--muted);text-decoration:none">プライバシーポリシー</a>
-            <a href="/terms/" style="font-size:14px;color:var(--muted);text-decoration:none">利用規約</a>
-            <a href="/contact/" style="font-size:14px;color:var(--muted);text-decoration:none">お問い合わせ</a>
+          <div class="footer-nav-title">サイト情報</div>
+          <div class="footer-nav-links">
+            <a href="/about/">運営者情報</a>
+            <a href="/contact/">お問い合わせ</a>
+            <a href="/privacy/">プライバシーポリシー</a>
+            <a href="/terms/">利用規約</a>
           </div>
         </div>
       </div>
     </div>
-    <div style="border-top:1px solid var(--line);padding-top:20px;text-align:center">
-      <div style="font-size:13px;color:var(--muted)">© 2026 Worelu</div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Worelu</div>
+      <div class="footer-legal">
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/terms/">利用規約</a>
+      </div>
     </div>
   </div>
 </footer>
+
 <script>
-document.querySelectorAll('.cat-item').forEach(function(item) {
-  item.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('.cat-item').forEach(function(el) {
-      el.classList.remove('active');
-    });
-    this.classList.add('active');
-    var href = this.getAttribute('href');
-    setTimeout(function() { window.location.href = href; }, 150);
-  });
+function toggleNav(){
+  const nav=document.getElementById('mobileNav');
+  const btn=document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+document.addEventListener('click',function(e){
+  const nav=document.getElementById('mobileNav');
+  const btn=document.getElementById('hamburger');
+  if(nav&&btn&&!nav.contains(e.target)&&!btn.contains(e.target)){
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+  }
 });
-</script>
-<script>
-(function() {
-  var path = window.location.pathname;
-  document.querySelectorAll('.cat-item').forEach(function(item) {
-    var href = item.getAttribute('href');
-    // 完全一致（/articles/）または前方一致（/articles/stress/ など）
-    if (href === '/articles/' && path === '/articles/') {
-      item.classList.add('active');
-    } else if (href !== '/articles/' && path.indexOf(href) === 0) {
-      item.classList.add('active');
-      // 「すべて」のactiveを外す
-      document.querySelector('.cat-item[href="/articles/"]').classList.remove('active');
+(function(){
+  var path=window.location.pathname;
+  document.querySelectorAll('.cat-tab').forEach(function(tab){
+    var href=tab.getAttribute('href');
+    if(href==='/articles/'&&path==='/articles/'){
+      tab.classList.add('active');
+    }else if(href!=='/articles/'&&path.indexOf(href)===0){
+      tab.classList.add('active');
+      document.querySelector('.cat-tab[href="/articles/"]').classList.remove('active');
     }
   });
 })();
