@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Sun, 09 Aug 2026 11:21:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 08:38:03 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[雇い止め対処法｜無効にできるケースと今すぐ動く手順]]></title>
+      <link>https://worelu.com/articles/work/yatoidomari-taishoho/</link>
+      <guid>https://worelu.com/articles/work/yatoidomari-taishoho/</guid>
+      <description><![CDATA[「契約を更新しません」と告げられたとき、どう動けばいいか迷っていませんか。雇い止め法理（労働契約法第19条）で無効にできるケースと、今すぐ使える具体的な対処手順を解説します。]]></description>
+      <pubDate>2026-08-05</pubDate>
+    </item>
     <item>
       <title><![CDATA[パワハラの証拠の集め方｜録音は合法？今すぐ始める記録と保存術]]></title>
       <link>https://worelu.com/articles/work/pawahara-shoko-atsume/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/stress/shigoto-fuan-tomaranai/</guid>
       <description><![CDATA[仕事のことが頭から離れず、休日も焦りが続く…そんな不安のループを感じているなら、心と体が限界に近づいているサインかもしれません。不安がループする理由と、今日から試せる5つの対処法を解説します。]]></description>
       <pubDate>2026-07-03</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[ADHDで仕事できなくて辛い。「できない」の正体と今日からの働き方]]></title>
-      <link>https://worelu.com/articles/stress/adhd-shigoto-dekinai-tsurai/</link>
-      <guid>https://worelu.com/articles/stress/adhd-shigoto-dekinai-tsurai/</guid>
-      <description><![CDATA[ADHDで仕事がうまくいかず、辛さや自己嫌悪が積み重なっているあなたへ。「できない」の仕組みを理解することで、特性に合った働き方の工夫・相談先・環境を変える選択肢まで丁寧に解説します。]]></description>
-      <pubDate>2026-07-02</pubDate>
     </item>
   </channel>
 </rss>
