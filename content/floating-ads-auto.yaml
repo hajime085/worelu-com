@@ -131,6 +131,13 @@ tensyoku-3months:
   img_h: 50
   img_src: https://h.accesstrade.net/sp/rr?rk=0100nsf400oujg
   img_w: 320
+tensyoku-skill-nai:
+  alt: 転職会議
+  gif_src: ''
+  href: https://h.accesstrade.net/sp/cc?rk=0100nsf400oujg
+  img_h: 50
+  img_src: https://h.accesstrade.net/sp/rr?rk=0100nsf400oujg
+  img_w: 320
 yatoidomari-taishoho:
   alt: 20代の転職相談所
   gif_src: ''
