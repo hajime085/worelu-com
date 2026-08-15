@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Thu, 13 Aug 2026 21:44:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2026 21:51:25 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[上司のストレスで追い詰められたとき。限界前に知ってほしいこと]]></title>
+      <link>https://worelu.com/articles/stress/joushi-stress/</link>
+      <guid>https://worelu.com/articles/stress/joushi-stress/</guid>
+      <description><![CDATA[上司が原因のストレスで毎日がつらくなっていませんか。心や体に現れるサインから、距離の置き方・相談窓口・「逃げていい」判断基準まで、今日から実践できる具体的な対処法をわかりやすく解説します。]]></description>
+      <pubDate>2026-08-11</pubDate>
+    </item>
     <item>
       <title><![CDATA[新卒で辞めたいのは甘えじゃない。後悔しない判断と次の一歩]]></title>
       <link>https://worelu.com/articles/quit/shinsotsu-yametai/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/stress/stress-ien/</guid>
       <description><![CDATA[仕事のストレスで胃が痛い、胸やけがする、食欲がわかない。そのつらさはストレス性胃炎のサインかもしれません。なぜストレスで胃が荒れるのか、対処法と受診の目安をわかりやすく解説します。]]></description>
       <pubDate>2026-07-09</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[HSPあるある仕事編。繊細さんが職場で感じる困りごとと対処法]]></title>
-      <link>https://worelu.com/articles/burnout/hsp-aruaru-shigoto/</link>
-      <guid>https://worelu.com/articles/burnout/hsp-aruaru-shigoto/</guid>
-      <description><![CDATA[HSPが仕事でよく感じる「あるある」を具体的に解説。感覚過敏・気疲れ・ミスを引きずる感覚など、繊細さんが職場で消耗しやすい理由と、少し楽になるヒントを紹介します。]]></description>
-      <pubDate>2026-07-05</pubDate>
     </item>
   </channel>
 </rss>
