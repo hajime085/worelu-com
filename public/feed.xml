@@ -5,8 +5,15 @@
     <link>https://worelu.com</link>
     <description>仕事のストレス・燃え尽き・転職に関する記事</description>
     <language>ja</language>
-    <lastBuildDate>Sat, 15 Aug 2026 21:51:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 22:05:00 +0000</lastBuildDate>
     <atom:link href="https://worelu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title><![CDATA[転職後悔はなぜ起きる？原因・乗り越え方・再転職の判断まで]]></title>
+      <link>https://worelu.com/articles/quit/tensyoku-kokai/</link>
+      <guid>https://worelu.com/articles/quit/tensyoku-kokai/</guid>
+      <description><![CDATA[転職して後悔しているあなたへ。なぜ後悔するのか原因とメカニズムを解説し、今の状況を乗り越えるための具体的な方法を、厚生労働省のデータや専門家の視点をもとにお伝えします。]]></description>
+      <pubDate>2026-08-12</pubDate>
+    </item>
     <item>
       <title><![CDATA[上司のストレスで追い詰められたとき。限界前に知ってほしいこと]]></title>
       <link>https://worelu.com/articles/stress/joushi-stress/</link>
@@ -139,13 +146,6 @@
       <guid>https://worelu.com/articles/quit/taisyoku-daikou-osusume/</guid>
       <description><![CDATA[退職代行を選ぶ前に、弁護士・労働組合・民間業者という3種類の違いを理解しておきましょう。2026年最新のおすすめ7選を料金・特徴・状況別に比較し、後悔しない選び方のポイントも詳しく解説します。]]></description>
       <pubDate>2026-07-10</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[ストレスで胃炎になるのはなぜ？胃が痛い原因と今日からの対処法]]></title>
-      <link>https://worelu.com/articles/stress/stress-ien/</link>
-      <guid>https://worelu.com/articles/stress/stress-ien/</guid>
-      <description><![CDATA[仕事のストレスで胃が痛い、胸やけがする、食欲がわかない。そのつらさはストレス性胃炎のサインかもしれません。なぜストレスで胃が荒れるのか、対処法と受診の目安をわかりやすく解説します。]]></description>
-      <pubDate>2026-07-09</pubDate>
     </item>
   </channel>
 </rss>
