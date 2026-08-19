@@ -1,2 +1,8 @@
 # 旧バージョン残骸の URL に 404 を返す（CF Pages は 410 非対応のため次善策）
 /worelu_v6_articles/*  /  404
+
+# stress-genkai-sign → 正しいURL（shigoto-genkai-sign）に301リダイレクト
+/articles/stress/stress-genkai-sign/  /articles/stress/shigoto-genkai-sign/  301
+
+# 燃え尽き診断の旧結果URL → ストレスチェックページへリダイレクト
+/shindan/kanmahi/level  /stress-check/  301
