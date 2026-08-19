@@ -6,3 +6,9 @@
 
 # 燃え尽き診断の旧結果URL → ストレスチェックページへリダイレクト
 /shindan/kanmahi/level  /stress-check/  301
+
+# stress-genkai-sign → 正しいURL（shigoto-genkai-sign）に301リダイレクト
+/articles/stress/stress-genkai-sign/  /articles/stress/shigoto-genkai-sign/  301
+
+# 燃え尽き診断の旧結果URL → ストレスチェックページへリダイレクト
+/shindan/kanmahi/level  /stress-check/  301
