@@ -6,7 +6,7 @@
 <title>ブラックフライデー2026の歩き方｜先行セールと本セール、損しない順番｜カイカタ</title>
 <meta name="description" content="Amazonブラックフライデー2026の歩き方特集。2026年の開催期間・対象商品は11月19日（木）に公式発表予定です。先行セールと本セールの使い分けに加えて、今年カイカタが狙う具体的な商品（アタックZERO、Fire TV Stick 4K Max、サントリー天然水ほか）を、価格ではなく「選んだ理由」で紹介します。">
 <link rel="canonical" href="https://worelu.com/feature/black-friday/">
-<link rel="stylesheet" href="../../assets/style.css?v=20261111j">
+<link rel="stylesheet" href="../../assets/style.css?v=20261111n">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
@@ -16,7 +16,7 @@
     <div class="hd">
       <div class="hd-row">
         <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
-        <div class="hd-note">Amazon公式サイトではありません</div>
+        <button type="button" class="hd-sokuho" id="sokuhoBtn">速報を見る</button>
       </div>
     </div>
     <nav class="hd-nav">
@@ -178,5 +178,12 @@
     </div>
   </div>
 </div>
+  <div class="sk-back" id="sokuhoBack"></div>
+  <aside class="sk-drawer" id="sokuhoDrawer" aria-label="X速報">
+    <div class="sk-head"><span>X速報<small>@A_KAIKATA の最新ポスト（Xのタイムライン）</small></span><button type="button" class="sk-close" id="sokuhoClose" aria-label="閉じる">×</button></div>
+    <div class="sk-body" id="sokuhoBody"><p class="sk-loading">読み込み中…</p></div>
+    <div class="sk-foot"><a href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a></div>
+  </aside>
+  <script src="../../assets/sokuho.js" defer></script>
 </body>
 </html>

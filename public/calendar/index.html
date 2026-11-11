@@ -6,7 +6,7 @@
 <title>Amazonセールカレンダー｜例年の開催時期と特徴｜カイカタ</title>
 <meta name="description" content="Amazonの主要セールの年間カレンダー。初売り（1月）、新生活セール（3〜4月）、プライムデー（7月）、プライム感謝祭（10月）、ブラックフライデー（11月）、年末セール（12月）と月例のスマイルSALEについて、例年の時期・特徴・何を買うのに向くかを整理します。日程は例年の目安で、確定は公式発表で確認します。">
 <link rel="canonical" href="https://worelu.com/calendar/">
-<link rel="stylesheet" href="../assets/style.css?v=20261111j">
+<link rel="stylesheet" href="../assets/style.css?v=20261111n">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
@@ -16,7 +16,7 @@
     <div class="hd">
       <div class="hd-row">
         <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
-        <div class="hd-note">Amazon公式サイトではありません</div>
+        <button type="button" class="hd-sokuho" id="sokuhoBtn">速報を見る</button>
       </div>
     </div>
     <nav class="hd-nav">
@@ -93,5 +93,12 @@
     </div>
   </div>
 </div>
+  <div class="sk-back" id="sokuhoBack"></div>
+  <aside class="sk-drawer" id="sokuhoDrawer" aria-label="X速報">
+    <div class="sk-head"><span>X速報<small>@A_KAIKATA の最新ポスト（Xのタイムライン）</small></span><button type="button" class="sk-close" id="sokuhoClose" aria-label="閉じる">×</button></div>
+    <div class="sk-body" id="sokuhoBody"><p class="sk-loading">読み込み中…</p></div>
+    <div class="sk-foot"><a href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a></div>
+  </aside>
+  <script src="../assets/sokuho.js" defer></script>
 </body>
 </html>

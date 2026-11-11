@@ -20,7 +20,6 @@ a{color:inherit}
 .logo{font-size:27px;font-weight:800;letter-spacing:.02em;line-height:1.1}
 .logo a{color:#fff;text-decoration:none}
 .logo small{display:block;font-size:11px;font-weight:600;color:#c8d2dd;letter-spacing:.08em;margin-top:3px}
-.hd-note{font-size:11.5px;color:#c8d2dd;border:1px solid #3c4a59;padding:4px 9px}
 .hd-nav{background:var(--navy2);display:flex;flex-wrap:wrap}
 .hd-nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:8px 14px;border-right:1px solid #33425299}
 .hd-nav a.hot{background:var(--accent)}
@@ -225,17 +224,22 @@ details.qa .a{padding:0 14px 12px;font-size:13.5px;color:#333a44}
 .prof .pf-x{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 14px}
 
 /* X速報（TOP・ポスト埋め込み枠、2026-11-11試作） */
-.xsoku{border:1.5px solid var(--line);background:#fff;margin-top:16px}
-.xsoku .xs-hd{background:var(--navy);color:#fff;padding:8px 14px;font-weight:800;font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
-.xsoku .xs-hd .d{color:#ffb35c;font-weight:700}
-.xsoku .xs-bd{padding:14px}
-.xsoku .xs-lead{font-size:13.5px;color:#333a44;line-height:1.7}
-.xsoku .xs-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:12px;padding:2px 2px 10px;scrollbar-width:thin}
-.xsoku .xs-cell{flex:0 0 min(94%,550px);scroll-snap-align:start;min-width:0;height:460px;overflow:hidden;position:relative}
-.xsoku .xs-cell::after{content:"";position:absolute;left:0;right:0;bottom:0;height:54px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff);pointer-events:none}
-.xsoku .xs-cell .twitter-tweet{margin:0 auto !important}
-.xsoku .xs-fallback{border:1px solid var(--line);padding:12px 14px;font-size:13.5px;line-height:1.7}
-.xsoku .xs-fallback a{color:var(--navy);font-weight:700}
-.xsoku .xs-foot{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.xsoku .xs-btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 14px}
-.xsoku .xs-note{font-size:12.5px;color:var(--sub)}
+
+/* X速報ドロワー */
+.hd-sokuho{background:#d92b1f;color:#fff;border:0;font:inherit;font-size:13.5px;font-weight:700;padding:8px 14px;cursor:pointer;position:relative;overflow:hidden;animation:sk-pulse 1.6s ease-in-out infinite}
+.hd-sokuho::after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:36%;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.75),rgba(255,255,255,0));transform:translateX(-160%) skewX(-18deg);animation:sk-shine 2.8s ease-in-out infinite;pointer-events:none}
+@keyframes sk-shine{0%{transform:translateX(-160%) skewX(-18deg)}30%{transform:translateX(360%) skewX(-18deg)}100%{transform:translateX(360%) skewX(-18deg)}}
+@keyframes sk-pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,43,31,.45)}50%{box-shadow:0 0 0 6px rgba(217,43,31,0)}}
+@media (prefers-reduced-motion:reduce){.hd-sokuho,.hd-sokuho::after{animation:none}}
+.sk-back{position:fixed;inset:0;background:rgba(10,15,22,.55);opacity:0;pointer-events:none;transition:opacity .25s;z-index:60}
+.sk-back.open{opacity:1;pointer-events:auto}
+.sk-drawer{position:fixed;top:0;right:0;height:100dvh;width:min(92vw,430px);background:#fff;z-index:61;transform:translateX(105%);transition:transform .28s ease;display:flex;flex-direction:column;box-shadow:-6px 0 24px rgba(0,0,0,.25)}
+.sk-drawer.open{transform:translateX(0)}
+.sk-head{display:flex;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;padding:12px 14px;font-weight:800;font-size:16px}
+.sk-head small{display:block;font-size:11px;font-weight:600;color:#c8d2dd;margin-top:2px}
+.sk-close{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;padding:2px 8px}
+.sk-body{flex:1;overflow:hidden}
+.sk-loading{padding:16px 14px;color:var(--sub);font-size:13.5px}
+.sk-foot{border-top:1.5px solid var(--line);padding:10px 14px;text-align:center}
+.sk-foot a{color:var(--accent);font-weight:700;font-size:13.5px;text-decoration:none}
+body.sk-lock{overflow:hidden}

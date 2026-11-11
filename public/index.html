@@ -6,7 +6,7 @@
 <title>カイカタ｜Amazonセールのカイカタ</title>
 <meta name="description" content="カイカタは、開催が公式に確認できたAmazonセールだけを取り上げ、「いつ・何を・どう買うと損しないか」を特集で案内する独立メディアです。価格は載せず、セールの仕組みと損しない順番を説明します。">
 <link rel="canonical" href="https://worelu.com/">
-<link rel="stylesheet" href="assets/style.css?v=20261111j">
+<link rel="stylesheet" href="assets/style.css?v=20261111n">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
@@ -16,7 +16,7 @@
     <div class="hd">
       <div class="hd-row">
         <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
-        <div class="hd-note">Amazon公式サイトではありません</div>
+        <button type="button" class="hd-sokuho" id="sokuhoBtn">速報を見る</button>
       </div>
     </div>
     <nav class="hd-nav">
@@ -30,34 +30,6 @@
         <div class="promise">
           <span>価格は載せません（理由は下に）</span><span>誇大な「◯%オフ」は書きません</span><span>セールの実在は公式ページで確認</span>
         </div>
-      </div>
-
-      <div class="xsoku">
-        <div class="xs-hd"><span>X速報</span><span class="d">@A_KAIKATA で配信中</span></div>
-        <div class="xs-bd">
-          <p class="xs-lead">日々の値動きは、価格の流れを確認してから「本当に安いもの」だけをXで速報しています。直近の速報ポストはここにも流れます。</p>
-          <div class="xs-track" id="xsTrack">
-            <div class="xs-cell">
-              <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【お得速報】歯のホワイトニングで定番のアパガード プレミオが値下がり中。価格の流れを見ると、直近3か月の最安値を更新している水準。毎日使うものだから、こういう急落のタイミングでストックしておくのが正解。 #PR #Amazonセール https://t.co/lj6LQy2tL0</p>&mdash; カイカタ｜Amazonセール速報 (@A_KAIKATA) <a href="https://x.com/A_KAIKATA/status/2120447096738443397">2026年11月11日</a></blockquote>
-            </div>
-            <div class="xs-cell">
-              <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【お得速報】年末の大掃除前にちょうどいいやつ。カビキラーのアルコールスプレー詰め替え（超特大1260ml）が直近の最安値を更新中。キッチンの除菌は毎日使うから、大容量の詰め替えが安いときに買っておくのが一番効く。 #PR https://t.co/Vj0HF7xGgs</p>&mdash; カイカタ｜Amazonセール速報 (@A_KAIKATA) <a href="https://x.com/A_KAIKATA/status/2120464050735771972">2026年11月11日</a></blockquote>
-            </div>
-          </div>
-          <div class="xs-foot">
-            <a class="xs-btn" href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a>
-            <span class="xs-note">※ ポストはXの仕組みで表示しています（直近の速報から最大3件）。うまく表示されない場合は、ボタンからXで直接ご覧ください。</span>
-          </div>
-        </div>
-        <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-        <script>
-        (function(){var t=document.getElementById("xsTrack");if(!t){return}var timer=null;
-        function step(){var max=t.scrollWidth-t.clientWidth;if(max<=0){return}if(t.scrollLeft>=max-10){t.scrollTo({left:0,behavior:"smooth"})}else{t.scrollBy({left:Math.min(t.clientWidth*0.92,max-t.scrollLeft),behavior:"smooth"})}}
-        function start(){if(!timer&&t.scrollWidth>t.clientWidth+10){timer=setInterval(step,6000)}}
-        function stop(){if(timer){clearInterval(timer);timer=null}}
-        t.addEventListener("pointerenter",stop);t.addEventListener("pointerdown",stop);t.addEventListener("touchstart",stop,{passive:true});t.addEventListener("wheel",stop,{passive:true});
-        start();window.addEventListener("load",start)})();
-        </script>
       </div>
 
       <div class="next-sale">
@@ -165,5 +137,12 @@
     </div>
   </div>
 </div>
+  <div class="sk-back" id="sokuhoBack"></div>
+  <aside class="sk-drawer" id="sokuhoDrawer" aria-label="X速報">
+    <div class="sk-head"><span>X速報<small>@A_KAIKATA の最新ポスト（Xのタイムライン）</small></span><button type="button" class="sk-close" id="sokuhoClose" aria-label="閉じる">×</button></div>
+    <div class="sk-body" id="sokuhoBody"><p class="sk-loading">読み込み中…</p></div>
+    <div class="sk-foot"><a href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a></div>
+  </aside>
+  <script src="assets/sokuho.js" defer></script>
 </body>
 </html>

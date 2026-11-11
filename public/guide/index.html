@@ -6,7 +6,7 @@
 <title>買い方の基本｜ポイントアップを使い切る｜カイカタ</title>
 <meta name="description" content="Amazonセール共通の基礎知識を整理する常設ガイド。ポイントアップキャンペーンの仕組み（エントリー必須・上限・対象外の例）、クーポンの見方と併用、先行セールとプライム会員、支払い方法で変わる還元、損しない買い物の順番を図解で説明します。">
 <link rel="canonical" href="https://worelu.com/guide/">
-<link rel="stylesheet" href="../assets/style.css?v=20261111j">
+<link rel="stylesheet" href="../assets/style.css?v=20261111n">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
@@ -16,7 +16,7 @@
     <div class="hd">
       <div class="hd-row">
         <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
-        <div class="hd-note">Amazon公式サイトではありません</div>
+        <button type="button" class="hd-sokuho" id="sokuhoBtn">速報を見る</button>
       </div>
     </div>
     <nav class="hd-nav">
@@ -123,5 +123,12 @@
     </div>
   </div>
 </div>
+  <div class="sk-back" id="sokuhoBack"></div>
+  <aside class="sk-drawer" id="sokuhoDrawer" aria-label="X速報">
+    <div class="sk-head"><span>X速報<small>@A_KAIKATA の最新ポスト（Xのタイムライン）</small></span><button type="button" class="sk-close" id="sokuhoClose" aria-label="閉じる">×</button></div>
+    <div class="sk-body" id="sokuhoBody"><p class="sk-loading">読み込み中…</p></div>
+    <div class="sk-foot"><a href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a></div>
+  </aside>
+  <script src="../assets/sokuho.js" defer></script>
 </body>
 </html>

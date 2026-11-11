@@ -6,7 +6,7 @@
 <title>冬支度のカイカタ｜乾燥・底冷え・外出の寒さの潰し方｜カイカタ</title>
 <meta name="description" content="冬の不快は「乾燥」「底冷え」「外出の寒さ」の3か所に分かれます。場所ごとに潰し方と、今年カイカタが狙う具体的な商品（象印のスチーム式加湿器、山善の電気毛布、アイリスオーヤマのセラミックヒーター、桐灰カイロ）を、価格ではなく選んだ理由で紹介します。">
 <link rel="canonical" href="https://worelu.com/feature/winter/">
-<link rel="stylesheet" href="../../assets/style.css?v=20261111j">
+<link rel="stylesheet" href="../../assets/style.css?v=20261111n">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
@@ -16,7 +16,7 @@
     <div class="hd">
       <div class="hd-row">
         <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
-        <div class="hd-note">Amazon公式サイトではありません</div>
+        <button type="button" class="hd-sokuho" id="sokuhoBtn">速報を見る</button>
       </div>
     </div>
     <nav class="hd-nav">
@@ -148,5 +148,12 @@
     </div>
   </div>
 </div>
+  <div class="sk-back" id="sokuhoBack"></div>
+  <aside class="sk-drawer" id="sokuhoDrawer" aria-label="X速報">
+    <div class="sk-head"><span>X速報<small>@A_KAIKATA の最新ポスト（Xのタイムライン）</small></span><button type="button" class="sk-close" id="sokuhoClose" aria-label="閉じる">×</button></div>
+    <div class="sk-body" id="sokuhoBody"><p class="sk-loading">読み込み中…</p></div>
+    <div class="sk-foot"><a href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a></div>
+  </aside>
+  <script src="../../assets/sokuho.js" defer></script>
 </body>
 </html>
