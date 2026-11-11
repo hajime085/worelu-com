@@ -213,3 +213,13 @@ details.qa .a{padding:0 14px 12px;font-size:13.5px;color:#333a44}
 .chip{border:1.5px solid var(--line);background:#fff;padding:5px 12px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:inherit}
 .chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
 .fcount{font-size:12px;color:var(--sub);margin:6px 0 10px}
+
+/* 運営者プロフィール（全ページ・フッター上、2026-11-11追加） */
+.prof{border:1.5px solid var(--line);background:#fff;margin-top:30px}
+.prof .pf-hd{background:var(--navy);color:#fff;padding:8px 14px;font-weight:800;font-size:15px}
+.prof .pf-bd{padding:14px;display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.prof .pf-bd img{width:72px;height:72px;border:1px solid var(--line)}
+.prof .pf-tx{flex:1;min-width:220px}
+.prof .pf-name{font-size:16px;font-weight:800;line-height:1.4}
+.prof .pf-tx p{font-size:13px;color:#333a44;line-height:1.7;margin:4px 0 10px}
+.prof .pf-x{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 14px}
