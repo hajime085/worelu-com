@@ -145,3 +145,5 @@ h3.blk{font-size:18px;font-weight:800;margin:26px 0 10px;border-bottom:2px solid
 .pick .fine{font-size:11px;color:var(--sub);margin-top:6px;text-align:center}
 .catlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .catlinks a{border:1.5px solid var(--line);background:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 12px}
+.eyecatch{margin-top:14px;border:1.5px solid var(--line)}
+.eyecatch img{display:block;width:100%;height:auto}
