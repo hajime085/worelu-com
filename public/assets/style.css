@@ -147,3 +147,5 @@ h3.blk{font-size:18px;font-weight:800;margin:26px 0 10px;border-bottom:2px solid
 .catlinks a{border:1.5px solid var(--line);background:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 12px}
 .eyecatch{margin-top:14px;border:1.5px solid var(--line)}
 .eyecatch img{display:block;width:100%;height:auto}
+.feat-card .thumb{margin:-14px -14px 12px;border-bottom:1.5px solid var(--line)}
+.feat-card .thumb img{display:block;width:100%;height:auto}
