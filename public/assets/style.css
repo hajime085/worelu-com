@@ -231,7 +231,7 @@ details.qa .a{padding:0 14px 12px;font-size:13.5px;color:#333a44}
 .xsoku .xs-bd{padding:14px}
 .xsoku .xs-lead{font-size:13.5px;color:#333a44;line-height:1.7}
 .xsoku .xs-track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:12px;padding:2px 2px 10px;scrollbar-width:thin}
-.xsoku .xs-cell{flex:0 0 min(88%,470px);scroll-snap-align:start;min-width:0;height:460px;overflow:hidden;position:relative}
+.xsoku .xs-cell{flex:0 0 min(94%,550px);scroll-snap-align:start;min-width:0;height:460px;overflow:hidden;position:relative}
 .xsoku .xs-cell::after{content:"";position:absolute;left:0;right:0;bottom:0;height:54px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff);pointer-events:none}
 .xsoku .xs-cell .twitter-tweet{margin:0 auto !important}
 .xsoku .xs-fallback{border:1px solid var(--line);padding:12px 14px;font-size:13.5px;line-height:1.7}
