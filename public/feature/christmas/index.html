@@ -10,26 +10,21 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<div class="wrap">
+  <div class="site">
+    <div class="hd">
+      <div class="hd-row">
+        <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
+        <div class="hd-note">Amazon公式サイトではありません</div>
+      </div>
+    </div>
+    <nav class="hd-nav">
+      <a href="/feature/black-friday/" class="hot">特集</a><a href="/calendar/">セールカレンダー</a><a href="/guide/">買い方の基本</a><a href="/about/">このサイトについて</a>
+    </nav>
+    <div class="body">
+      <div class="crumb"><a href="/">トップ</a> ＞ 特集 ＞ クリスマス</div>
 
-<header class="site">
-  <div class="wrap">
-    <a class="logo" href="/">カイカタ<span>Amazonセールのカイカタ</span></a>
-  </div>
-  <nav class="catnav"><div class="wrap">
-    <a href="/feature/black-friday/">ブラックフライデー</a>
-    <a href="/feature/christmas/" class="cur">クリスマス</a>
-    <a href="/feature/winter/">冬支度</a>
-    <a href="/feature/year-end/">年末年始・初売り</a>
-    <a href="/calendar/">セールカレンダー</a>
-    <a href="/guide/">買い方の基本</a>
-  </div></nav>
-</header>
-
-<main>
-  <div class="wrap single">
-    <div class="crumb"><a href="/">トップ</a> ＞ 特集 ＞ クリスマス</div>
-
-    <article>
+    
       <div class="art-hd">
         <span class="tag t-sale">特集</span>
         <h1>クリスマスのカイカタ</h1>
@@ -44,11 +39,19 @@
 
       <div class="toc">
         <div class="t">目次</div>
-        <ol><li><a href="#cake">1. ケーキは冷凍で先に押さえる</a></li><li><a href="#picks">2. 選んだもの（ケーキ1品＋ギフト2品）</a></li><li><a href="#deadline">3. 締め切りの目安</a></li><li><a href="#faq">4. よくある質問</a></li></ol>
+        <ol><li><a href="#cake">1. ケーキは冷凍で先に押さえる</a></li><li><a href="#picks">2. 選んだもの（ケーキ12品＋ギフト2品）</a></li><li><a href="#deadline">3. 締め切りの目安</a></li><li><a href="#faq">4. よくある質問</a></li></ol>
       </div>
 
       <h3 class="blk" id="cake">1. ケーキは冷凍で先に押さえる</h3>
       <p>生ケーキの予約は、人気店ほど12月に入ると配送枠から埋まっていきます。一方で冷凍ケーキの名品は、冷凍のまま数週間保存できる。つまり「味のいい店のケーキを、混む前に買って、冷凍庫で待たせる」がいちばん確実な作戦です。食べる前日に冷蔵庫へ移せば、イブの夜にちょうど食べ頃になります。</p>
+      <div class="tscroll"><table>
+        <tr><th>号数</th><th>直径の目安</th><th>人数の目安</th></tr>
+        <tr><td>3号</td><td>約9cm</td><td>1〜2人</td></tr>
+        <tr><td>4号</td><td>約12cm</td><td>2〜4人</td></tr>
+        <tr><td>5号</td><td>約15cm</td><td>4〜6人</td></tr>
+        <tr><td>6号</td><td>約18cm</td><td>6〜8人</td></tr>
+      </table></div>
+      <p>解凍にかかる時間は商品ごとに幅があり、短いもので2〜3時間、長いものでは冷蔵庫で10〜12時間以上が目安です。どのケーキでも「食べる前日に冷蔵庫へ移す」が安全な段取りで、常温解凍はクリームが緩みやすいので避けてください。冷凍のままなら数週間〜数か月もつ商品が多いので、届く日より「冷凍庫の空き」を先に確保しておくのが先決です。</p>
       <div class="flow">
         <div class="fstep"><b>11月中</b><span>冷凍ケーキを注文</span></div><div class="farr">→</div>
         <div class="fstep"><b>到着後</b><span>そのまま冷凍庫へ</span></div><div class="farr">→</div>
@@ -59,22 +62,112 @@
       <p>人数が読めない年は、ホールを1つ大きくするより、評判のいい4号（直径12cm）を選んで、足りない分は市販のお菓子で足す方が、余らせずに済みます。</p>
 
       <h3 class="blk" id="picks">2. 選んだもの</h3>
-
-      <div class="pick-sec">ケーキ ― 冷凍の名品を1つ</div>
+      <div class="fbar" data-dim="size"><span class="fl">人数で絞る</span><button class="chip on" data-val="all">すべて</button><button class="chip" data-val="s">1〜2人</button><button class="chip" data-val="m">3〜4人</button><button class="chip" data-val="l">5〜6人</button></div>
+      <div class="fbar" data-dim="type"><span class="fl">種類で絞る</span><button class="chip on" data-val="all">すべて</button><button class="chip" data-val="cream">クリーム・ミルクレープ</button><button class="chip" data-val="choco">チョコ</button><button class="chip" data-val="cheese">チーズ</button><button class="chip" data-val="tart">タルト</button><button class="chip" data-val="special">モンブラン・米粉など</button></div>
+      <p class="fcount"></p>
+      <div class="pick-sec">ケーキ（12品、絞り込みできます）</div>
       <div class="pick-grid">
-        <div class="pick">
+        <div class="pick" data-size="s m" data-type="cheese">
           <div class="nm">ルタオ ドゥーブルフロマージュ 4号（直径12cm）</div>
-          <div class="maker">小樽洋菓子舗ルタオ（LeTAO）</div>
-          <p class="why">ベイクドとレア、2層のチーズケーキ。累計販売数は2,700万個と公表されていて、冷凍ケーキの売れ筋でも上位の常連です（★4.6・レビュー約2,000件）。冷凍のまま45日以上保存できるので、11月のうちに買って待たせられます。</p>
-          <div class="who"><b>こんな人に</b>：ケーキの味で失敗したくない人、2〜3人で楽しみたい人</div>
+          <div class="maker">小樽洋菓子舗ルタオ｜チーズケーキ</div>
+          <p class="why">ベイクド層とレア層の2層仕立てで、冷凍ケーキの売れ筋の常連（★4.6・レビュー約2,000件）。冷凍のまま45日以上保存できるので、11月中に買って冷凍庫で待たせる作戦にいちばん向いた一品です。</p>
+          <div class="who"><b>こんな人に</b>：チーズケーキの味で外したくない人</div>
           <a class="btn" href="https://www.amazon.co.jp/dp/B00AZHM3Y4?tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
-          <div class="fine">価格・在庫はリンク先で確認してください</div>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m l" data-type="cheese">
+          <div class="nm">ルタオ ドゥーブルフロマージュ 4号・2個セット</div>
+          <div class="maker">小樽洋菓子舗ルタオ｜チーズケーキ</div>
+          <p class="why">定番の4号を2個まとめたセット（★4.5・レビュー2,300件超の人気セット）。自宅用と実家用に分ける、2世帯で同じ味を囲む、といった使い分けができます。</p>
+          <div class="who"><b>こんな人に</b>：二世帯で分ける人／贈り分けしたい人</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B00B0V0VPC?tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="s" data-type="choco">
+          <div class="nm">ゴディバ チョコレートケーキ</div>
+          <div class="maker">GODIVA｜チョコレートケーキ</div>
+          <p class="why">冷凍ケーキの売れ筋3位に入る、ゴディバのチョコレートケーキ。濃厚なチョコを主役にした小ぶりな一品で、ブランドの箱を開ける楽しさまで含めてクリスマス向きです。</p>
+          <div class="who"><b>こんな人に</b>：チョコ好きの相手・家族に</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B0CH9S6PYZ?tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m l" data-type="choco">
+          <div class="nm">シュシュクレープ クリスマスケーキ2026 プレミアム チョコレートミルクレープ 5号</div>
+          <div class="maker">シュシュクレープ｜ミルクレープ</div>
+          <p class="why">Amazonのクリスマスケーキ売れ筋の上位にいる、クレープ専門店のチョコミルクレープ。ベリーとサンタの飾り付きで、直径15cm・3〜5人用。層を切る断面の楽しさはミルクレープならではです。</p>
+          <div class="who"><b>こんな人に</b>：ミルクレープ好き／見た目も楽しみたい人</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%82%B7%E3%83%A5%E3%82%B7%E3%83%A5%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%97%20%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%AD%202026%20%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%20%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%20%E3%83%9F%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%97%205%E5%8F%B7&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m l" data-type="cream">
+          <div class="nm">シュシュクレープ プレミアム ホワイトチョコレート ミルクレープ 5号</div>
+          <div class="maker">シュシュクレープ｜ミルクレープ</div>
+          <p class="why">ホワイトチョコとベリーのミルクレープ（★4.2）。北海道産生クリームを使い、ロウソク6本とバースデーピックが付くので、そのまま食卓に出せます。直径15cm・3〜5人用。</p>
+          <div class="who"><b>こんな人に</b>：甘さ控えめが好きな人／子どもと囲む家</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%82%B7%E3%83%A5%E3%82%B7%E3%83%A5%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%97%20%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%20%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%20%E3%83%9F%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%97%205%E5%8F%B7&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="s m" data-type="special">
+          <div class="nm">シュシュクレープ モンブランミルクレープ 4号</div>
+          <div class="maker">シュシュクレープ｜モンブラン</div>
+          <p class="why">マロンクリームのモンブランとミルクレープを重ねた4号（直径12cm・2〜4人用）。栗のケーキを少人数で食べたいときの候補で、クリスマスピック付きです。</p>
+          <div class="who"><b>こんな人に</b>：栗・モンブラン好きの少人数世帯に</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%82%B7%E3%83%A5%E3%82%B7%E3%83%A5%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%97%20%E3%83%A2%E3%83%B3%E3%83%96%E3%83%A9%E3%83%B3%20%E3%83%9F%E3%83%AB%E3%82%AF%E3%83%AC%E3%83%BC%E3%83%97%204%E5%8F%B7&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m l" data-type="cheese">
+          <div class="nm">こぐまや洋菓子店 名もなきチーズケーキ 5号（バスク）</div>
+          <div class="maker">こぐまや洋菓子店｜バスクチーズケーキ</div>
+          <p class="why">15cm・4〜6人分のバスクチーズケーキ。冷凍のまま発送から180日と賞味期限が長く、早く届いても慌てません。解凍は冷蔵庫で10〜12時間以上が目安です。</p>
+          <div class="who"><b>こんな人に</b>：4〜6人で分ける家／濃厚なチーズが好きな人</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%81%93%E3%81%90%E3%81%BE%E3%82%84%E6%B4%8B%E8%8F%93%E5%AD%90%E5%BA%97%20%E5%90%8D%E3%82%82%E3%81%AA%E3%81%8D%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD%205%E5%8F%B7&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="s m" data-type="choco">
+          <div class="nm">わらいみらい チョコレートケーキ 5層ムース 3号</div>
+          <div class="maker">わらいみらい｜チョコレートケーキ</div>
+          <p class="why">グラサージュから焼きショコラまで、チョコだけで重ねた5層のムース。3号（直径9cm）は2〜4人分で、4号・5号もあるので人数で号数を選べます。飾りは別添えで届きます。</p>
+          <div class="who"><b>こんな人に</b>：チョコだけを楽しみたい少人数に</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%82%8F%E3%82%89%E3%81%84%E3%81%BF%E3%82%89%E3%81%84%20%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%E3%82%B1%E3%83%BC%E3%82%AD%205%E5%B1%A4%203%E5%8F%B7&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m l" data-type="choco">
+          <div class="nm">エニシダ 生チョコレートレアチーズケーキ 5号（2026限定）</div>
+          <div class="maker">スイーツ＆ギフトの店 エニシダ｜レアチーズ</div>
+          <p class="why">生チョコとレアチーズを合わせた15cmホール。キャンドル・クリスマスプレート・柊ピック・メッセージカードが付属するので、付属品を別に用意しなくて済みます。解凍は冷蔵庫で6〜10時間ほど。</p>
+          <div class="who"><b>こんな人に</b>：付属品までそろえて楽をしたい人</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%82%A8%E3%83%8B%E3%82%B7%E3%83%80%20%E7%94%9F%E3%83%81%E3%83%A7%E3%82%B3%E3%83%AC%E3%83%BC%E3%83%88%20%E3%83%AC%E3%82%A2%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD%205%E5%8F%B7%20%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m l" data-type="special">
+          <div class="nm">TOIRO スノーホワイトケーキ 5号 米粉・ベリー</div>
+          <div class="maker">TOIRO｜米粉ケーキ</div>
+          <p class="why">小麦・卵・乳成分不使用の表記がある米粉ケーキ（5号・4〜6人前）。アレルギーに配慮したい集まりで候補になります。予約は12月8日まで、お届けは12月19〜20日の案内です（商品ページで要確認）。</p>
+          <div class="who"><b>こんな人に</b>：アレルギーに配慮したい家族の集まりに</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=TOIRO%20%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88%E3%82%B1%E3%83%BC%E3%82%AD%205%E5%8F%B7%20%E7%B1%B3%E7%B2%89&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="s m" data-type="cheese">
+          <div class="nm">甲羅組 白桃レアチーズケーキ 4号 290g</div>
+          <div class="maker">越前かに職人 甲羅組｜レアチーズ</div>
+          <p class="why">白桃のレアチーズケーキ、小ぶりな4号・290g。解凍は冷蔵庫で2〜3時間と短めで、当日思い立っても間に合いやすい一品です。アレルゲン表示が商品情報に明記されています。</p>
+          <div class="who"><b>こんな人に</b>：フルーツ系を小ぶりに楽しみたい人</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E7%94%B2%E7%BE%85%E7%B5%84%20%E7%99%BD%E6%A1%83%20%E3%83%AC%E3%82%A2%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD%204%E5%8F%B7&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
+        </div>
+        <div class="pick" data-size="m" data-type="tart">
+          <div class="nm">エスキィス フルーツタルト サンク 4.5号</div>
+          <div class="maker">誕生日ケーキのお店・エスキィス｜タルト</div>
+          <p class="why">4種のフルーツとレアチーズのタルト（直径14cm・3〜4名様）。フルーツの甘酸っぱさで後味が軽く、甘いものが得意でない人が混ざる食卓でも出しやすいタイプです。</p>
+          <div class="who"><b>こんな人に</b>：甘さ控えめ派が混ざる食卓に</div>
+          <a class="btn" href="https://www.amazon.co.jp/s?k=%E3%82%A8%E3%82%B9%E3%82%AD%E3%82%A3%E3%82%B9%20%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E3%82%BF%E3%83%AB%E3%83%88%20%E3%82%B5%E3%83%B3%E3%82%AF&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
+          <div class="fine">価格・在庫・お届け日はリンク先で確認してください</div>
         </div>
       </div>
 
-      <div class="pick-sec">ギフト ― 消えものと実用品で外さない</div>
+      <div class="pick-sec">ギフト（2品）</div>
       <div class="pick-grid">
-        <div class="pick">
+<div class="pick">
           <div class="nm">MAYUNA バスソルト ギフトセット（今治タオル付き）</div>
           <div class="maker">MAYUNA</div>
           <p class="why">ヒマラヤ岩塩のバスソルト2種に、今治タオルが付いたギフトセット。「消えもの（バスソルト）＋実用品（タオル）」の組み合わせは、相手の好みが読めないときの鉄板です。冬の贈り物らしい季節感もあります。</p>
@@ -82,7 +175,7 @@
           <a class="btn" href="https://www.amazon.co.jp/dp/B0BN68S15C?tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">Amazonで見る</a>
           <div class="fine">価格・在庫はリンク先で確認してください</div>
         </div>
-        <div class="pick">
+<div class="pick">
           <div class="nm">今治タオル ギフトセット（フェイスタオル2枚・箱入り）</div>
           <div class="maker">amife petit</div>
           <p class="why">今治タオルのフェイスタオル2枚、化粧箱入り。タオルは好みが割れにくく、かさばらず、もらって困る人がほぼいない無難枠の代表です。年末の挨拶回りの手土産にも使えます。</p>
@@ -91,11 +184,6 @@
           <div class="fine">価格・在庫はリンク先で確認してください</div>
         </div>
       </div>
-      <p class="catlinks">もっと見る：
-        <a href="https://www.amazon.co.jp/s?k=%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%AD+%E4%BA%88%E7%B4%84&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">クリスマスケーキ（予約）</a>
-        <a href="https://www.amazon.co.jp/s?k=%E3%82%B7%E3%83%A3%E3%83%B3%E3%83%A1%E3%83%AA%E3%83%BC&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">シャンメリー</a>
-        <a href="https://www.amazon.co.jp/s?k=%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9+%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88&tag=popo1215-22" target="_blank" rel="nofollow sponsored noopener">クリスマスギフト</a>
-      </p>
 
       <h3 class="blk" id="deadline">3. 締め切りの目安</h3>
       <div class="tscroll"><table>
@@ -114,19 +202,38 @@
       <div class="disc">
         このページのリンクはAmazonアソシエイトのリンクです。リンク経由で購入されると、サイトに紹介料が入ることがあります。カイカタは価格を表示しません（方針は<a href="/about/">このサイトについて</a>）。購入前にリンク先の表示を必ず確認してください。 ページ内のイラストはイメージです（実物の商品写真ではありません）。
       </div>
-    </article>
+    </div>
+    <div class="foot">
+      <b>カイカタ</b>｜Amazonセールの歩き方を案内する独立メディアです。Amazon、Amazon.co.jp、Prime、ブラックフライデーはAmazon.com, Inc. またはその関連会社の商標です。<br>
+      Amazonのアソシエイトとして、カイカタは適格販売により収入を得ています。<br>
+      <a href="/about/">このサイトについて</a>｜<a href="/privacy/">プライバシーポリシー</a>
+    </div>
   </div>
-</main>
-
-<footer class="site">
-  <div class="wrap">
-    <nav>
-      <a href="/">トップ</a>｜<a href="/guide/">買い方の基本</a>｜<a href="/calendar/">セールカレンダー</a>｜<a href="/about/">このサイトについて</a>｜<a href="/privacy/">プライバシーポリシー</a>
-    </nav>
-    <p>カイカタは、Amazon.co.jpのセールと賢い買い方を案内する個人運営のサイトです。Amazon公式サイトではありません。<br>
-    Amazon、AmazonロゴはAmazon.com, Inc.またはその関連会社の商標です。当サイトはAmazonアソシエイト・プログラムの参加者です。</p>
-  </div>
-</footer>
-
+</div>
+<script>
+(function(){
+  var state={size:'all',type:'all'};
+  var cards=[].slice.call(document.querySelectorAll('.pick[data-size]'));
+  var count=document.querySelector('.fcount');
+  function apply(){
+    var shown=0;
+    cards.forEach(function(c){
+      var ok=(state.size==='all'||c.getAttribute('data-size').split(' ').indexOf(state.size)>=0)
+           &&(state.type==='all'||c.getAttribute('data-type')===state.type);
+      c.style.display=ok?'':'none'; if(ok)shown++;
+    });
+    if(count)count.textContent='ケーキ '+cards.length+'品中 '+shown+'品を表示しています';
+  }
+  [].slice.call(document.querySelectorAll('.fbar')).forEach(function(bar){
+    var dim=bar.getAttribute('data-dim');
+    bar.addEventListener('click',function(e){
+      var b=e.target.closest('.chip'); if(!b)return;
+      [].slice.call(bar.querySelectorAll('.chip')).forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on'); state[dim]=b.getAttribute('data-val'); apply();
+    });
+  });
+  apply();
+})();
+</script>
 </body>
 </html>
