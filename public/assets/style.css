@@ -1,0 +1,132 @@
+/* カイカタ 共通スタイル
+   土台：承認済みプレビュー sample-worelu-top-feature-20261111.html のCSS。
+   プレビュー専用要素（タブ・注意バー・ビュー切替）を除き、実サイト用に整理した。 */
+
+:root{
+  --ink:#171a1f; --navy:#131a22; --navy2:#1f2a36;
+  --accent:#d97300; --accent-soft:#fdf1e0;
+  --ground:#edf0f3; --line:#171a1f; --sub:#5a6270;
+  --ok:#1c7c43; --warn:#b3261e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--ground);color:var(--ink);font-size:15px;line-height:1.75;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:14px 12px 40px}
+
+/* ---------- 共通レイアウト ---------- */
+.site{border:1.5px solid var(--line);background:#fff}
+.hd{background:var(--navy);color:#fff;padding:14px 18px 10px}
+.hd-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.logo{font-size:27px;font-weight:800;letter-spacing:.02em;line-height:1.1}
+.logo a{color:#fff;text-decoration:none}
+.logo small{display:block;font-size:11px;font-weight:600;color:#c8d2dd;letter-spacing:.08em;margin-top:3px}
+.hd-note{font-size:11.5px;color:#c8d2dd;border:1px solid #3c4a59;padding:4px 9px}
+.hd-nav{background:var(--navy2);display:flex;flex-wrap:wrap}
+.hd-nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:8px 14px;border-right:1px solid #33425299}
+.hd-nav a.hot{background:var(--accent)}
+.body{padding:18px}
+.foot{background:var(--navy);color:#c8d2dd;font-size:12px;padding:16px 18px;line-height:1.8}
+.foot b{color:#fff}
+.foot a{color:#c8d2dd}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+h2.sec{font-size:20px;font-weight:800;border-left:6px solid var(--accent);padding-left:10px;margin:30px 0 12px;line-height:1.4}
+h2.sec:first-child{margin-top:0}
+.note{font-size:12.5px;color:var(--sub)}
+.tag{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--line);padding:1px 7px;margin-right:6px;background:#fff}
+.tag.acc{background:var(--accent);border-color:var(--accent);color:#fff}
+.tag.navy{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* ---------- 固定ページ（about / privacy など）の本文 ---------- */
+.prose{font-size:14.5px}
+.prose p{margin:0 0 12px}
+.prose ul{margin:0 0 12px 22px}
+.prose li{margin-bottom:4px}
+.prose a{color:var(--navy);text-decoration:underline}
+
+/* ---------- トップ ---------- */
+.hero{border:1.5px solid var(--line);padding:20px 18px;background:linear-gradient(180deg,#fff, #fbf7f0)}
+.hero h1{font-size:27px;line-height:1.45;font-weight:800;margin:6px 0 10px}
+.hero h1 .u{border-bottom:4px solid var(--accent)}
+.hero p{font-size:14.5px}
+.hero .promise{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.hero .promise span{border:1px solid var(--line);background:#fff;font-size:12.5px;font-weight:700;padding:4px 10px}
+.next-sale{border:1.5px solid var(--line);margin-top:16px}
+.next-sale .ns-hd{background:var(--navy);color:#fff;padding:8px 14px;font-weight:800;font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.next-sale .ns-hd .d{color:#ffb35c}
+.next-sale .ns-bd{padding:14px}
+.ns-bd .big{font-size:19px;font-weight:800;line-height:1.5}
+.ns-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px;margin-top:10px}
+.ns-facts div{border:1px solid #c9ced6;padding:8px 12px;font-size:13px}
+.ns-facts b{display:block;font-size:12px;color:var(--sub)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.feat-card{border:1.5px solid var(--line);background:#fff;padding:14px}
+.feat-card .ttl{font-size:17px;font-weight:800;line-height:1.5;margin:6px 0 4px}
+.feat-card p{font-size:13px;color:#333a44}
+.feat-card .go{margin-top:10px;display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 14px}
+.feat-card.prep{opacity:.75;background:#f6f7f9}
+.cal{border:1.5px solid var(--line)}
+.cal table{width:100%;border-collapse:collapse;font-size:13px}
+.cal th,.cal td{border-top:1px solid #d5d9df;padding:8px 10px;text-align:left;vertical-align:top}
+.cal th{width:86px;background:#f2f4f7;font-weight:800;white-space:nowrap}
+.cal tr.now th{background:var(--accent-soft)}
+.cal .ev{font-weight:700}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.rule{border:1.5px solid var(--line);padding:14px;background:#fff}
+.rule .n{font-size:22px;font-weight:800;color:var(--accent)}
+.rule .t{font-weight:800;font-size:15px;margin:2px 0 4px}
+.rule p{font-size:13px;color:#333a44}
+
+/* ---------- 特集ページ ---------- */
+.crumb{font-size:12px;color:var(--sub);margin-bottom:8px}
+.crumb a{color:var(--sub)}
+.art-hd h1{font-size:25px;line-height:1.5;font-weight:800}
+.art-hd .meta{font-size:12.5px;color:var(--sub);margin-top:6px}
+.verdict{border:1.5px solid var(--line);background:var(--accent-soft);padding:14px;margin-top:14px}
+.verdict .t{font-weight:800;font-size:15px;margin-bottom:6px}
+.verdict ol{margin-left:20px;font-size:14px}
+.toc{border:1px solid #c9ced6;padding:12px 16px;margin-top:16px;background:#fbfcfd}
+.toc .t{font-weight:800;font-size:13px;letter-spacing:.08em}
+.toc ol{margin:6px 0 0 20px;font-size:13.5px}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+h3.blk{font-size:18px;font-weight:800;margin:26px 0 10px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.diagram{border:1.5px solid var(--line);padding:14px;background:#fff}
+.diagram .step{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px dashed #c9ced6}
+.diagram .step:first-of-type{border-top:none}
+.diagram .no{background:var(--navy);color:#fff;font-weight:800;width:26px;height:26px;text-align:center;line-height:26px;flex:none;font-size:13px}
+.diagram .st{font-weight:800;font-size:14.5px}
+.diagram p{font-size:13px;color:#333a44}
+.deal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.deal{border:1.5px solid var(--line);padding:13px;background:#fff}
+.deal .cat{font-size:11.5px;font-weight:800;color:var(--accent);letter-spacing:.06em}
+.deal .nm{font-weight:800;font-size:15px;line-height:1.55;margin:3px 0}
+.deal p{font-size:12.5px;color:#333a44}
+.deal .btn{display:block;text-align:center;margin-top:10px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;padding:9px 10px;font-size:14px}
+.deal .fine{font-size:11px;color:var(--sub);margin-top:6px;text-align:center}
+.cmp{width:100%;border-collapse:collapse;font-size:13px;border:1.5px solid var(--line)}
+.cmp th,.cmp td{border-top:1px solid #d5d9df;padding:8px 10px;text-align:left;vertical-align:top}
+.cmp th{background:#f2f4f7;font-weight:800}
+.qa{border:1px solid #c9ced6;margin-top:10px}
+.qa .q{padding:10px 14px;font-weight:800;font-size:14px;background:#fbfcfd}
+.qa .a{padding:4px 14px 12px;font-size:13.5px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.stepbox{border:1.5px solid var(--line);padding:12px;background:#fff}
+.stepbox .n{font-weight:800;color:var(--accent);font-size:13px}
+.stepbox .t{font-weight:800;font-size:14.5px}
+.stepbox p{font-size:12.5px;color:#333a44}
+.disc{border:1px solid #c9ced6;background:#f6f7f9;padding:12px 14px;font-size:12.5px;color:#333a44;margin-top:26px}
+
+/* ---------- 404 ---------- */
+.notfound{text-align:center;padding:34px 10px}
+.notfound .code{font-size:44px;font-weight:800;color:var(--accent);line-height:1.2}
+.notfound h1{font-size:21px;font-weight:800;margin:8px 0 10px}
+.notfound p{font-size:14px;color:#333a44}
+.notfound .links{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.notfound .links a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:8px 16px}
+
+@media (max-width:640px){
+  .hero h1{font-size:22px}
+  .art-hd h1{font-size:21px}
+  .logo{font-size:23px}
+  .body{padding:14px}
+}

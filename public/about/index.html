@@ -3,161 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>運営者情報 | Worelu（ワーレル）</title>
-<meta name="description" content="Worelu（ワーレル）の運営者情報です。">
-<meta name="robots" content="index,follow">
+<title>このサイトについて｜カイカタ</title>
+<meta name="description" content="カイカタの運営方針・掲載基準（このサイトの約束）、アフィリエイト開示、商標表記について。カイカタはAmazonセールの歩き方を案内する独立メディアです。">
 <link rel="canonical" href="https://worelu.com/about/">
-<link rel="icon" href="/favicon.ico">
-<style>
-:root{--blue:#2563EB;--text:#0F172A;--text2:#334155;--muted:#64748B;--line:#E2E8F0;--page:#F8FAFC;--white:#fff}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--white);color:var(--text);font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7}
-a{text-decoration:none;color:inherit}
-.hdr{background:var(--white);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:sticky;top:0;z-index:100}
-.logo{font-size:21px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
-.logo em{color:var(--blue);font-style:normal}
-.logo-sub{font-size:10px;color:#94A3B8;margin-top:1px}
-.hdr-nav{display:flex;align-items:center;gap:24px}
-.hdr-nav a{font-size:13px;color:var(--muted);font-weight:600}
-.hdr-btn{background:var(--blue);color:#fff !important;font-size:13px;font-weight:700;padding:10px 20px;border-radius:6px}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;flex-direction:column;box-shadow:0 8px 24px rgba(15,23,42,0.1);z-index:200}
-.mobile-nav a{font-size:15px;color:var(--text);font-weight:600;padding:12px 0;border-bottom:1px solid var(--line);display:block}
-.mobile-nav a:last-child{border-bottom:none}
-.mobile-nav.open{display:flex}
-@media(max-width:768px){.hdr-nav{display:none}.hamburger{display:flex}.hdr{position:relative}.hdr{padding:0 20px}}
-@media(max-width:600px){.main{padding:0 20px 60px}}
-.hero{background:var(--page);border-bottom:1px solid var(--line);padding:52px 40px}
-.hero-inner{max-width:720px;margin:0 auto}
-.hero-label{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.1em;margin-bottom:10px}
-.hero-h1{font-size:28px;font-weight:800;color:var(--text);letter-spacing:-0.02em}
-.main{max-width:720px;margin:48px auto;padding:0 40px 80px}
-.section{margin-bottom:48px}
-.sec-title{font-size:16px;font-weight:800;color:var(--text);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-.table{width:100%;border-collapse:collapse}
-.table tr{border-bottom:1px solid var(--line)}
-.table th{width:160px;padding:14px 16px;font-size:13px;font-weight:700;color:var(--muted);text-align:left;background:var(--page);vertical-align:top}
-.table td{padding:14px 16px;font-size:14px;color:var(--text2);line-height:1.7}
-.note{font-size:13px;color:var(--muted);line-height:1.8;background:var(--page);border-radius:8px;padding:18px 20px;margin-top:16px}
-.ftr{background:var(--white);border-top:1px solid var(--line);padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.ftr-logo{font-size:16px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
-.ftr-logo em{color:var(--blue);font-style:normal}
-.ftr-nav{display:flex;gap:20px;flex-wrap:wrap}
-.ftr-nav a{font-size:12px;color:var(--muted)}
-.ftr-copy{font-size:12px;color:var(--muted)}
-</style>
+<link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<header class="hdr">
-  <a href="/" style="text-decoration:none">
-    <div class="logo">Wor<em>e</em>lu <span style="font-size:13px;font-weight:400;color:#94A3B8">— ワーレル</span></div>
-    <div class="logo-sub">働く人のためのセルフケアメディア</div>
-  </a>
-  <nav class="hdr-nav">
-    <a href="/articles/">記事一覧</a>
-    <a href="/articles/stress/">症状</a>
-    <a href="/articles/burnout/">バーンアウト</a>
-    <a href="/articles/quit/">転職・退職</a>
-    <a href="/stress-check/" class="hdr-btn">無料で診断する</a>
-  </nav>
-  <button class="hamburger" id="hamburger" aria-label="メニュー" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </button>
-</header>
-<nav class="mobile-nav" id="mobileNav">
-  <a href="/articles/">記事一覧</a>
-  <a href="/articles/stress/">症状</a>
-  <a href="/articles/burnout/">バーンアウト</a>
-  <a href="/articles/quit/">転職・退職</a>
-  <a href="/stress-check/">無料で診断する</a>
-</nav>
+<div class="wrap">
+  <div class="site">
+    <div class="hd">
+      <div class="hd-row">
+        <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
+        <div class="hd-note">Amazon公式サイトではありません</div>
+      </div>
+    </div>
+    <nav class="hd-nav">
+      <a href="/feature/black-friday/">特集</a><a href="/#calendar">セールカレンダー</a><a href="/feature/black-friday/#steps">買い方の基本</a><a href="/about/" class="hot">このサイトについて</a>
+    </nav>
+    <div class="body prose">
+      <div class="crumb"><a href="/">トップ</a> ＞ このサイトについて</div>
+      <div class="art-hd">
+        <h1>このサイトについて</h1>
+      </div>
 
-<div class="hero">
-  <div class="hero-inner">
-    <div class="hero-label">ABOUT</div>
-    <h1 class="hero-h1">運営者情報</h1>
+      <h3 class="blk">カイカタとは</h3>
+      <p>カイカタは、Amazonセールの歩き方を案内する独立メディアです。大きなセールほど、エントリーの有無や先行販売の条件など、仕組みを知らないと損をする場面が多くあります。カイカタは「いつ・何を・どう買うと損しないか」を特集形式で整理し、セールのたびに公式発表を確認して更新します。</p>
+      <p>当サイトはAmazon公式サイトではなく、Amazonと提携・公認の関係にもありません。個人が運営する独立した情報サイトです。</p>
+
+      <h3 class="blk">運営方針</h3>
+      <ul>
+        <li>取り上げるセール・キャンペーンは、Amazonの公式ページや公式発表で開催を確認できたものだけにします。</li>
+        <li>商品そのものより先に、セールの仕組み（エントリー、還元の上限、先行販売の条件、クーポンの併用条件）を説明します。</li>
+        <li>根拠を示せない割引率や、確認できない「最安」などの表現は使いません。</li>
+        <li>日程や条件は、公式発表のたびに見直し、古い情報には昨年の実績であることを明記します。</li>
+      </ul>
+
+      <h3 class="blk">掲載基準（このサイトの約束）</h3>
+      <div class="rules">
+        <div class="rule"><div class="n">01</div><div class="t">価格は載せません</div><p>価格はセール中も変動し、確認した瞬間に古くなります。正確でない価格を載せるくらいなら載せない、がこのサイトの決めごとです。実際の価格はリンク先のAmazonで確認してください。</p></div>
+        <div class="rule"><div class="n">02</div><div class="t">セールの実在を確認します</div><p>取り上げるセール・キャンペーンは、Amazonの公式ページで開催を確認できたものだけ。「◯%オフ」のような割引率は、根拠を示せないものは書きません。</p></div>
+        <div class="rule"><div class="n">03</div><div class="t">仕組みを先に説明します</div><p>エントリーが必要な還元、会員だけの先行販売、クーポンの併用条件。知らないと損をする順番と条件を、商品より先に説明します。</p></div>
+      </div>
+
+      <h3 class="blk">アフィリエイトについて（開示）</h3>
+      <p>当サイトは、Amazonアソシエイト・プログラムに参加しています。<b>Amazonのアソシエイトとして、カイカタは適格販売により収入を得ています。</b></p>
+      <p>サイト内のAmazonへのリンクはアフィリエイトリンクです。リンク先で購入されると、サイト運営者に紹介料が支払われる場合があります。紹介料はAmazon側が負担するもので、購入者の負担額が変わることはありません。</p>
+      <p>なお、紹介料の有無によって、取り上げるセールや説明の内容を変えることはありません。掲載の判断は上の掲載基準にのみ基づきます。</p>
+
+      <h3 class="blk">商標について</h3>
+      <p>Amazon、Amazon.co.jp、Prime、ブラックフライデーは、Amazon.com, Inc. またはその関連会社の商標です。当サイトはこれらの商標の権利者とは関係のない独立メディアであり、公式サイトと誤認されることのないよう、各ページにその旨を明記しています。</p>
+
+      <h3 class="blk">免責事項</h3>
+      <p>当サイトの情報は、公開時点・最終確認時点の公式情報をもとに作成しています。セールの開催内容・条件・価格・在庫は変動します。購入の際は、必ずリンク先のAmazonに表示される最新の情報を確認してください。当サイトの情報を利用して生じた損害について、運営者は責任を負いかねます。</p>
+
+      <h3 class="blk">お問い合わせ</h3>
+      <p>お問い合わせ先は現在準備中です。公開の準備が整い次第、こちらに連絡先を記載します。</p>
+    </div>
+    <div class="foot">
+      <b>カイカタ</b>｜Amazonセールの歩き方を案内する独立メディアです。Amazon、Amazon.co.jp、Prime、ブラックフライデーはAmazon.com, Inc. またはその関連会社の商標です。<br>
+      Amazonのアソシエイトとして、カイカタは適格販売により収入を得ています。<br>
+      <a href="/about/">このサイトについて</a>｜<a href="/privacy/">プライバシーポリシー</a>
+    </div>
   </div>
 </div>
-
-<main class="main">
-  <div class="section">
-    <div class="sec-title">Woreluについて</div>
-    <div class="note">
-      Worelu（ワーレル）は、「Work（働く）」と「Relief（安心・解放）」を組み合わせた造語です。
-
-仕事が原因で心や体に不調を抱える人を少しでも減らしたい。
-そんな思いから生まれた情報メディアです。<br><br>
-ストレスやバーンアウト、転職など、働き方に関する情報を発信しています。
-
-記事は、厚生労働省などの公的機関が公開する資料やガイドラインを参考にしながら、内容を整理し、できるだけ分かりやすくお届けしています。
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">サイト情報</div>
-    <table class="table">
-      <tr><th>サイト名</th><td>Worelu（ワーレル）</td></tr>
-      <tr><th>URL</th><td><a href="https://worelu.com/" style="color:var(--blue)">https://worelu.com/</a></td></tr>
-      <tr><th>サイトの目的</th><td>働く人のストレス・バーンアウト・転職に関する情報提供、およびAIストレス診断サービスの提供</td></tr>
-      <tr><th>運営開始</th><td>2026年5月</td></tr>
-    </table>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">運営者情報</div>
-    <table class="table">
-      <tr><th>運営者</th><td>Worelu編集部（ペンネーム：HAJIME）</td></tr>
-      <tr><th>所在地</th><td>日本</td></tr>
-      <tr><th>お問い合わせ</th><td><a href="/contact/" style="color:var(--blue)">お問い合わせフォームよりご連絡ください</a></td></tr>
-    </table>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">免責事項</div>
-    <div class="note">
-      当サイトに掲載する情報は、一般的な情報提供を目的としており、医療・法律・心理等の専門的なアドバイスを提供するものではありません。個別の状況についてのご判断は、専門家にご相談ください。<br><br>
-      当サイトのAIストレス診断はセルフチェックを目的とした参考情報であり、医療機関による診断や治療に代わるものではありません。メンタルヘルス上の問題が疑われる場合は、専門の医療機関にご相談ください。<br><br>
-      当サイトの情報は予告なく変更されることがあります。掲載内容の正確性・完全性については万全を期しておりますが、その内容を保証するものではありません。
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title">アフィリエイトについて</div>
-    <div class="note">
-      当サイトは、一部のコンテンツにおいてアフィリエイトリンクを使用しています。リンクを経由してサービスに申し込みや購入をされた場合、当サイトに報酬が発生することがあります。掲載するサービスは編集方針に基づき選定しており、報酬の有無によって評価や掲載内容が左右されることはありません。
-    </div>
-  </div>
-</main>
-
-<footer class="ftr">
-  <div class="ftr-logo">Wor<em>e</em>lu</div>
-  <nav class="ftr-nav">
-    <a href="/privacy/">プライバシーポリシー</a>
-    <a href="/terms/">利用規約</a>
-    <a href="/about/">運営者情報</a>
-    <a href="/contact/">お問い合わせ</a>
-  </nav>
-  <div class="ftr-copy">© 2026 Worelu</div>
-</footer>
-<script>
-function toggleNav(){
-  const nav=document.getElementById('mobileNav');
-  const btn=document.getElementById('hamburger');
-  nav.classList.toggle('open');
-  btn.classList.toggle('open');
-}
-document.addEventListener('click',function(e){
-  const nav=document.getElementById('mobileNav');
-  const btn=document.getElementById('hamburger');
-  if(nav&&btn&&!nav.contains(e.target)&&!btn.contains(e.target)){
-    nav.classList.remove('open');
-    btn.classList.remove('open');
-  }
-});
-</script>
 </body>
 </html>

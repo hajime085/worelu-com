@@ -3,632 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Worelu（ワーレル）｜働く人のためのセルフケアメディア</title>
-<meta name="description" content="仕事がつらい・眠れない・転職すべきか迷っている。その悩み、一人で抱え込まないでください。AIストレス診断とセルフケア記事で今の状態を整理します。">
-<meta name="robots" content="index,follow">
+<title>カイカタ｜Amazonセールのカイカタ</title>
+<meta name="description" content="カイカタは、開催が公式に確認できたAmazonセールだけを取り上げ、「いつ・何を・どう買うと損しないか」を特集で案内する独立メディアです。価格は載せず、セールの仕組みと損しない順番を説明します。">
 <link rel="canonical" href="https://worelu.com/">
-<meta property="og:title" content="Worelu（ワーレル）｜働く人のためのセルフケアメディア">
-<meta property="og:description" content="仕事のストレス・燃え尽き・転職まで。AIストレス診断と記事で、働く人のセルフケアをサポートします。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://worelu.com/">
-<meta property="og:image" content="https://worelu.com/ogp.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Worelu｜働く人のためのセルフケアメディア">
-<link rel="icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<script type="application/ld+json">
-[
-  {"@context":"https://schema.org","@type":"WebSite","name":"Worelu","url":"https://worelu.com/","potentialAction":{"@type":"SearchAction","target":"https://worelu.com/articles/?q={search_term_string}","query-input":"required name=search_term_string"}},
-  {"@context":"https://schema.org","@type":"Organization","name":"Worelu","url":"https://worelu.com/","logo":"https://worelu.com/favicon.ico","description":"働く人のためのセルフケアメディア"}
-]
-</script>
-<style>
-:root{
-  --blue:#2563EB;
-  --blue-lt:#EFF6FF;
-  --blue-md:#DBEAFE;
-  --text:#0F172A;
-  --text2:#334155;
-  --muted:#64748B;
-  --line:#E2E8F0;
-  --page:#F8FAFC;
-  --white:#FFFFFF;
-  --navy:#185FA5;
-  --navy-dark:#1E3A5F;
-  --navy-deep:#0F2850;
-  --serif:"Hiragino Mincho Pro","Yu Mincho","Noto Serif JP",Georgia,serif;
-  --z-header:100;
-  --z-nav:200;
-  --z-skip:300;
-}
-html{scroll-behavior:smooth}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--white);color:var(--text);padding-top:72px;font-family:'Hiragino Sans','Yu Gothic UI',-apple-system,sans-serif;line-height:1.7;overflow-x:clip}
-a{text-decoration:none;color:inherit}
-
-/* HEADER */
-.hdr{position:fixed;top:0;width:100%;z-index:var(--z-header);background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);height:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;box-sizing:border-box;flex-wrap:wrap;gap:8px}
-.hdr-logo{font-size:28px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
-.hdr-logo em{color:var(--blue);font-style:normal}
-.hdr-logo-sub{font-size:14px;color:#94A3B8;margin-top:1px}
-.hdr-nav{display:flex;align-items:center;gap:28px}
-.hdr-nav a{font-size:13px;color:var(--muted);font-weight:600}
-.hdr-nav a:hover{color:var(--blue)}
-.hdr-btn{background:var(--blue);color:#ffffff !important;font-size:13px;font-weight:700;padding:10px 20px;border-radius:6px;-webkit-text-fill-color:#ffffff;transition:background 200ms}
-.hdr-btn:active,.chat-send:active{transform:translateY(1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mobile-nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;flex-direction:column;box-shadow:0 8px 24px rgba(37,99,235,0.08);z-index:var(--z-nav)}
-.mobile-nav a{font-size:15px;color:var(--text);font-weight:600;padding:12px 0;border-bottom:1px solid var(--line);display:block}
-.mobile-nav a:last-child{border-bottom:none}
-.mobile-nav.open{display:flex}
-
-/* HERO */
-.hero{padding:120px 48px 128px;max-width:1120px;margin:0 auto;text-align:center}
-.hero-text{max-width:600px;margin:0 auto}
-.hero-h1{font-family:var(--serif);font-size:clamp(26px,3.2vw,36px);font-weight:700;color:var(--text);line-height:1.35;letter-spacing:-0.02em;margin-bottom:24px;text-wrap:balance}
-.hero-sub{font-size:17px;color:var(--text2);line-height:1.9;margin-bottom:36px}
-.hero-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
-.hero-trust{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
-.trust-item{font-size:12px;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:5px}
-.trust-item svg{width:13px;height:13px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-/* BUTTONS */
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px 30px;border-radius:8px;transition:background 200ms}
-.btn-primary:hover{background:#1D4ED8;color:#fff}
-.btn-primary:active{transform:translateY(1px)}
-.btn-primary svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round}
-.btn-text{font-size:15px;color:var(--muted);font-weight:600;display:inline-flex;align-items:center;gap:4px}
-.btn-text:hover{color:var(--blue)}
-/* CATEGORY BAND */
-.cat-band-wrap{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cat-band{max-width:1120px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.cat-band::-webkit-scrollbar{display:none}
-.cat-band a{display:block;padding:14px 24px;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap;border-right:1px solid var(--line);transition:color 0.15s,background 0.15s}
-.cat-band a:first-child{border-left:1px solid var(--line)}
-.cat-band a:hover{color:var(--text);background:var(--page)}
-/* DIAGNOSIS BAND */
-.diag-band{background:var(--navy-deep);padding:22px 48px}
-.diag-band-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.diag-band-text{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.7}
-.diag-band-text strong{color:#fff;font-weight:700}
-.diag-band-cta{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.45);padding:10px 22px;border-radius:6px;white-space:nowrap;transition:border-color 0.2s}
-.diag-band-cta:hover{border-color:#fff;color:#fff}
-.diag-band-cta svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round}
-
-
-/* DIVIDER */
-.divider{border:none;border-top:1px solid var(--line);margin:0}
-
-/* COMMON */
-.sec{padding:80px 48px}
-.sec-inner{max-width:1120px;margin:0 auto}
-.sec-eyebrow{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:0.12em;margin-bottom:12px}
-.sec-title{font-size:clamp(20px,2.4vw,30px);font-weight:800;color:var(--text);line-height:1.3;letter-spacing:-0.02em;margin-bottom:10px}
-.sec-lead{font-size:15px;color:var(--muted);line-height:1.8}
-
-/* ARTICLES */
-.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.art-grid-featured{display:grid;grid-template-columns:3fr 2fr;grid-template-rows:auto auto;gap:20px;align-items:stretch}
-.art-grid-featured .art-card:first-child{grid-row:1/3}
-.art-card{display:flex;flex-direction:column;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:inherit}
-.art-card:hover{border-color:var(--blue);transform:translateY(-2px)}
-.art-body{padding:20px;display:flex;flex-direction:column;flex:1}
-.art-cat{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;letter-spacing:0.06em;margin-bottom:12px}
-.art-title{font-weight:800;color:var(--text);line-height:1.55;margin-bottom:8px}
-.art-desc{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:12px}
-.art-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
-.art-date{font-size:11px;color:var(--muted)}
-.art-link{font-size:12px;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:3px}
-.art-link svg{width:12px;height:12px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.sec-more{text-align:center;margin-top:36px}
-.btn-outline{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line);color:var(--text2);font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;transition:border-color 200ms,color 200ms}
-.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
-.btn-outline svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-/* SECTIONS */
-.divider{border:none;border-top:1px solid var(--line);margin:0}
-.sec{padding:80px 48px}
-.sec-inner{max-width:1120px;margin:0 auto}
-.sec-title{font-size:clamp(18px,2vw,24px);font-weight:800;color:var(--text);line-height:1.3;letter-spacing:-0.02em;margin-bottom:32px}
-.sec-more{margin-top:36px;text-align:center}
-
-/* FOOTER */
-.footer{background:#F8FAFF;border-top:1px solid var(--line);padding:48px 48px 32px}
-.footer-inner{max-width:1120px;margin:0 auto}
-.footer-top{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;margin-bottom:32px}
-.footer-logo{font-size:18px;font-weight:900;color:var(--text);letter-spacing:-0.04em}
-.footer-logo em{color:var(--blue);font-style:normal}
-.footer-logo-sub{font-size:11px;color:var(--muted);margin-top:2px}
-.footer-logo-desc{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.7;max-width:260px}
-.footer-nav-group{display:flex;gap:48px;flex-wrap:wrap}
-.footer-nav-col{}
-.footer-nav-title{font-size:11px;font-weight:800;color:var(--text);letter-spacing:0.06em;margin-bottom:12px}
-.footer-nav-links{display:grid;gap:8px}
-.footer-nav-links a{font-size:13px;color:var(--muted);font-weight:500}
-.footer-nav-links a:hover{color:var(--blue)}
-.footer-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.footer-legal{display:flex;gap:20px;flex-wrap:wrap}
-.footer-legal a{font-size:12px;color:var(--muted)}
-.footer-legal a:hover{color:var(--blue)}
-.footer-copy{font-size:12px;color:var(--muted)}
-
-/* RESPONSIVE */
-@media(max-width:960px){
-  .hero{padding:80px 24px 96px}
-  .art-grid{grid-template-columns:repeat(2,1fr)}
-  .art-grid-featured{grid-template-columns:1fr;grid-template-rows:auto}
-  .art-grid-featured .art-card:first-child{grid-row:auto}
-  .hdr-nav{display:none}
-  .hamburger{display:flex}
-  .sec{padding:56px 24px}
-  .diag-band{padding:20px 24px}
-  .footer{padding:40px 24px 24px}
-}
-@media(max-width:600px){
-  .art-grid{grid-template-columns:1fr}
-  .hero-h1{font-size:26px}
-  .hero-sub{font-size:15px}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .btn-primary{justify-content:center}
-  .cat-band a{padding:12px 16px;font-size:12px}
-  .diag-band-inner{flex-direction:column;align-items:flex-start;gap:12px}
-  .footer-nav-group{gap:24px}
-}
-
-
-
-/* skip-to-content */
-.skip-link{position:absolute;left:-9999px;top:4px;width:1px;height:1px;overflow:hidden;z-index:var(--z-skip)}
-.skip-link:focus{left:8px;width:auto;height:auto;padding:8px 16px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;border-radius:4px;text-decoration:none}
-/* focus-visible */
-a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a href="#main" class="skip-link">コンテンツへスキップ</a>
-
-<header class="hdr">
-  <a href="/">
-    <div class="hdr-logo">Wor<em>e</em>lu <span style="font-size:13px;font-weight:400;color:var(--muted)">— ワーレル</span></div>
-    <div class="hdr-logo-sub">働く人のためのセルフケアメディア</div>
-  </a>
-  <nav class="hdr-nav">
-    <a href="/articles/">記事一覧</a>
-    <a href="/articles/stress/">症状</a>
-    <a href="/articles/work/">労働問題</a>
-    <a href="/articles/burnout/">燃え尽き・休職</a>
-    <a href="/articles/quit/">転職・退職</a>
-    <a href="/stress-check/" class="hdr-btn" style="color:#ffffff !important;-webkit-text-fill-color:#ffffff">無料で診断する</a>
-  </nav>
-  <button class="hamburger" id="hamburger" aria-label="メニュー" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </button>
-</header>
-<nav class="mobile-nav" id="mobileNav">
-  <a href="/articles/">記事一覧</a>
-  <a href="/articles/stress/">症状</a>
-  <a href="/articles/work/">労働問題</a>
-  <a href="/articles/burnout/">燃え尽き・休職</a>
-  <a href="/articles/quit/">転職・退職</a>
-  <a href="/stress-check/">無料で診断する</a>
-</nav>
-
-<!-- HERO -->
-<section id="main" style="border-bottom:1px solid var(--line)">
-  <div class="hero">
-    <div class="hero-text">
-      <h1 class="hero-h1">仕事のつらさを、<br>一人で抱え込まないでください。</h1>
-      <p class="hero-sub">その感覚、あなただけではありません。<br>AIストレス診断と記事で、今の状態を一緒に整理します。</p>
-      <div class="hero-actions">
-        <a href="/stress-check/" class="btn-primary">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
-          ストレスを診断する（1分）
-        </a>
-        <a href="/articles/" class="btn-text">記事を読む →</a>
-      </div>
-      <div class="hero-trust">
-        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>登録不要</span>
-        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>完全無料</span>
-        <span class="trust-item"><svg viewBox="0 0 13 13" aria-hidden="true"><path d="M2 6.5l3 3 6-6"/></svg>約1分で完了</span>
+<div class="wrap">
+  <div class="site">
+    <div class="hd">
+      <div class="hd-row">
+        <div class="logo"><a href="/">カイカタ</a><small>Amazonセールのカイカタ</small></div>
+        <div class="hd-note">Amazon公式サイトではありません</div>
       </div>
     </div>
-  </div>
-</section>
+    <nav class="hd-nav">
+      <a href="/feature/black-friday/" class="hot">特集</a><a href="/#calendar">セールカレンダー</a><a href="/feature/black-friday/#steps">買い方の基本</a><a href="/about/">このサイトについて</a>
+    </nav>
+    <div class="body">
+      <div class="hero">
+        <div class="kicker">AMAZON SALE GUIDE</div>
+        <h1>Amazonセールを、<span class="u">無駄なく歩く</span></h1>
+        <p>大きなセールほど、仕組みを知らないと損をします。カイカタは、開催が公式に確認できたセールだけを取り上げ、「いつ・何を・どう買うと損しないか」を特集で案内するメディアです。</p>
+        <div class="promise">
+          <span>価格は載せません（理由は下に）</span><span>誇大な「◯%オフ」は書きません</span><span>セールの実在は公式ページで確認</span>
+        </div>
+      </div>
 
-<!-- カテゴリ帯 -->
-<nav class="cat-band-wrap" aria-label="カテゴリー">
-  <div class="cat-band">
-    <a href="/articles/stress/">症状・ストレス</a>
-    <a href="/articles/burnout/">バーンアウト・休職</a>
-    <a href="/articles/work/">労働問題</a>
-    <a href="/articles/quit/">転職・退職</a>
-    <a href="/articles/">すべての記事</a>
-  </div>
-</nav>
+      <div class="next-sale">
+        <div class="ns-hd"><span>次の大型セール</span><span class="d">詳細発表：11月19日（木）午前</span></div>
+        <div class="ns-bd">
+          <div class="big">Amazon ブラックフライデー 2026</div>
+          <div class="ns-facts">
+            <div><b>開催時期</b>11月下旬（ブラックフライデー当日は11月27日・金）</div>
+            <div><b>昨年の実績</b>先行セール11/21〜23、本セール11/24〜12/1の8日間</div>
+            <div><b>このサイトの動き</b>19日の公式発表を受けて、特集ページを公開します</div>
+          </div>
+          <p class="note" style="margin-top:10px">※ 今年の開催期間・対象商品は未発表です。上の日程は昨年の実績で、確定情報ではありません。</p>
+        </div>
+      </div>
 
-<!-- 人気記事 -->
-<section class="sec">
-  <div class="sec-inner">
-    <h2 class="sec-title">人気の記事</h2>
-    <div class="art-grid-featured">
-      <a href="/articles/work/service-zangyo-atarimae/" class="art-card">
-        <div class="art-body">
-          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
-          <div class="art-title" style="font-size:22px;">サービス残業が当たり前の職場は異常。そのまま続けてはいけない理由</div>
-          <div class="art-desc">「みんなやってるから」という空気の正体と、サービス残業が当たり前になる心理的メカニズム、今すぐできる対処法を解説します。</div>
-          <div class="art-footer"><span class="art-date">2026.06.17</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+      <h2 class="sec">特集</h2>
+      <div class="feat-grid">
+        <div class="feat-card">
+          <span class="tag acc">準備中</span><span class="tag">11月19日公開予定</span>
+          <div class="ttl">ブラックフライデー2026の歩き方</div>
+          <p>先行セールと本セールの使い分け、ポイントアップのエントリー忘れを防ぐ手順、カテゴリ別の狙い目を1ページに。価格ではなく「仕組みと順番」で損を避ける特集です。</p>
+          <a class="go" href="/feature/black-friday/">特集ページを見る →</a>
         </div>
-      </a>
-      <a href="/articles/work/roudou-kantokusho-soudan/" class="art-card">
-        <div class="art-body">
-          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
-          <div class="art-title" style="font-size:16px;">労働基準監督署に相談する方法。匿名・手順・解決できる問題を整理</div>
-          <div class="art-desc">残業代の未払いや有給休暇の拒否など、労働基準監督署に相談できる問題と具体的な相談方法を解説します。匿名での相談可否・準備…</div>
-          <div class="art-footer"><span class="art-date">2026.07.19</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        <div class="feat-card prep">
+          <span class="tag navy">予告</span>
+          <div class="ttl">年末年始・初売りセールの歩き方</div>
+          <p>12月下旬〜1月のセール向け。福袋・初売りの注意点と、ブラックフライデーで買うべきもの／年明けを待つべきものの切り分けを扱います。</p>
         </div>
-      </a>
-      <a href="/articles/work/minashi-zangyo-iho-pattern/" class="art-card">
-        <div class="art-body">
-          <span class="art-cat" style="background:#DBEAFE;color:#1D4ED8;">労働問題</span>
-          <div class="art-title" style="font-size:16px;">みなし残業がおかしいと感じたら。制度の問題点と今できる対処法</div>
-          <div class="art-desc">「みなし残業がおかしい」そう感じているなら、その直感は正しい場合があります。固定残業代制度が違法になる具体的なパターンと…</div>
-          <div class="art-footer"><span class="art-date">2026.07.30</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
+        <div class="feat-card prep">
+          <span class="tag navy">連載</span>
+          <div class="ttl">買い方の基本：ポイントアップを使い切る</div>
+          <p>セール共通の基礎知識。エントリー、還元の上限、支払い方法による差を、図解で整理する常設ページです。</p>
         </div>
-      </a>
+      </div>
+
+      <h2 class="sec" id="calendar">Amazonセール カレンダー（例年の時期）</h2>
+      <div class="cal">
+        <table>
+          <tr><th>1月</th><td><span class="ev">初売りセール</span>（年始）／ <span class="ev">スマイルSALE</span></td></tr>
+          <tr><th>3月</th><td><span class="ev">新生活セール</span>（〜4月）</td></tr>
+          <tr><th>7月</th><td><span class="ev">プライムデー</span>（プライム会員向けの大型セール）</td></tr>
+          <tr><th>10月</th><td><span class="ev">プライム感謝祭</span></td></tr>
+          <tr class="now"><th>11月</th><td><span class="ev">ブラックフライデー</span>（今年は詳細発表が11月19日）</td></tr>
+          <tr><th>12月</th><td><span class="ev">年末セール</span>／クリスマス需要</td></tr>
+        </table>
+      </div>
+      <p class="note" style="margin-top:8px">※ 例年の開催時期をもとにした目安です。各セールの正式な日程は、公式発表のたびに特集で確認します。そのほかの月も、月例のセールが入り次第ここに足します。</p>
+
+      <h2 class="sec">このサイトの約束</h2>
+      <div class="rules">
+        <div class="rule"><div class="n">01</div><div class="t">価格は載せません</div><p>価格はセール中も変動し、確認した瞬間に古くなります。正確でない価格を載せるくらいなら載せない、がこのサイトの決めごとです。実際の価格はリンク先のAmazonで確認してください。</p></div>
+        <div class="rule"><div class="n">02</div><div class="t">セールの実在を確認します</div><p>取り上げるセール・キャンペーンは、Amazonの公式ページで開催を確認できたものだけ。「◯%オフ」のような割引率は、根拠を示せないものは書きません。</p></div>
+        <div class="rule"><div class="n">03</div><div class="t">仕組みを先に説明します</div><p>エントリーが必要な還元、会員だけの先行販売、クーポンの併用条件。知らないと損をする順番と条件を、商品より先に説明します。</p></div>
+      </div>
     </div>
-    <div class="sec-more">
-      <a href="/articles/" class="btn-outline">記事をもっと見る <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
+    <div class="foot">
+      <b>カイカタ</b>｜Amazonセールの歩き方を案内する独立メディアです。Amazon、Amazon.co.jp、Prime、ブラックフライデーはAmazon.com, Inc. またはその関連会社の商標です。<br>
+      Amazonのアソシエイトとして、カイカタは適格販売により収入を得ています。本サイトのリンクから購入されると、サイト運営者に紹介料が支払われる場合があります（購入者の負担額は変わりません）。<br>
+      <a href="/about/">このサイトについて</a>｜<a href="/privacy/">プライバシーポリシー</a>
     </div>
-  </div>
-</section>
-
-<!-- 診断バンド -->
-<div class="diag-band">
-  <div class="diag-band-inner">
-    <div class="diag-band-text"><strong>今の自分の状態を確認する</strong>&ensp;·&ensp;AIストレス診断（10問・1分・完全無料）</div>
-    <a href="/stress-check/" class="diag-band-cta">
-      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
-      診断を始める
-    </a>
   </div>
 </div>
-
-<!-- 新着記事 -->
-<section class="sec">
-  <div class="sec-inner">
-    <h2 class="sec-title">新着記事</h2>
-    <div class="art-grid">
-      <a href="/articles/quit/tensyoku-kokai/" class="art-card">
-        <div class="art-body">
-          <span class="art-cat" style="background:#EDE9FE;color:#5B21B6;">転職・退職</span>
-          <div class="art-title" style="font-size:16px;">転職後悔はなぜ起きる？原因・乗り越え方・再転職の判断まで</div>
-          <div class="art-desc">転職して後悔しているあなたへ。なぜ後悔するのか原因とメカニズムを解説し、今の状況を乗り越えるための具体的な方法を、厚生労…</div>
-          <div class="art-footer"><span class="art-date">2026.08.12</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
-        </div>
-      </a>
-      <a href="/articles/stress/joushi-stress/" class="art-card">
-        <div class="art-body">
-          <span class="art-cat" style="background:#FEE2E2;color:#B91C1C;">症状・ストレス</span>
-          <div class="art-title" style="font-size:16px;">上司のストレスで追い詰められたとき。限界前に知ってほしいこと</div>
-          <div class="art-desc">上司が原因のストレスで毎日がつらくなっていませんか。心や体に現れるサインから、距離の置き方・相談窓口・「逃げていい」判断…</div>
-          <div class="art-footer"><span class="art-date">2026.08.11</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
-        </div>
-      </a>
-      <a href="/articles/quit/shinsotsu-yametai/" class="art-card">
-        <div class="art-body">
-          <span class="art-cat" style="background:#EDE9FE;color:#5B21B6;">転職・退職</span>
-          <div class="art-title" style="font-size:16px;">新卒で辞めたいのは甘えじゃない。後悔しない判断と次の一歩</div>
-          <div class="art-desc">新卒で「もう辞めたい」と感じているあなたへ。甘えではない理由から、辞める前に確認すること、退職後の転職・就職の選択肢まで…</div>
-          <div class="art-footer"><span class="art-date">2026.08.09</span><span class="art-link">読む <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span></div>
-        </div>
-      </a>
-    </div>
-    <div class="sec-more">
-      <a href="/articles/" class="btn-outline">すべての記事を見る <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 7h8M8 4l3 3-3 3"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- AI相談紹介 -->
-<section class="sec chat-sec" style="display:none">
-  <div class="chat-inner">
-    <div>
-      <div class="sec-eyebrow">AI COACH CHAT</div>
-      <h2 class="sec-title" style="margin-bottom:12px">AIコーチに<br>何でも相談できる</h2>
-      <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:0">診断後は、AIコーチにあなたの悩みを直接相談できます。</p>
-      <div style="margin-bottom:24px;">
-  <div style="font-size:12px;font-weight:700;color:var(--navy);letter-spacing:0.1em;margin-bottom:14px;">こんなお悩みに答えます</div>
-  <div style="display:flex;flex-direction:column;gap:8px;">
-    <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#334155;"><span style="color:var(--navy);font-weight:700;">✓</span>朝になると会社へ行きたくない</div>
-    <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#334155;"><span style="color:var(--navy);font-weight:700;">✓</span>毎日疲れて何もしたくない</div>
-    <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#334155;"><span style="color:var(--navy);font-weight:700;">✓</span>上司・職場の人間関係がつらい</div>
-    <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#334155;"><span style="color:var(--navy);font-weight:700;">✓</span>転職すべきか迷っている</div>
-    <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:#334155;"><span style="color:var(--navy);font-weight:700;">✓</span>頑張っているのに評価されない</div>
-  </div>
-</div><div class="chat-features">
-        <div class="chat-feat">
-          <div class="chat-feat-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 13l3-3h8a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v8z"/></svg></div>
-          <div><div class="chat-feat-title">残業・上司・転職まで相談できる</div><div class="chat-feat-desc">キーワードを入れるだけで、あなたの状態に合わせたアドバイスが届きます。</div></div>
-        </div>
-        <div class="chat-feat">
-          <div class="chat-feat-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2a6 6 0 100 12A6 6 0 008 2zm0 4v4M8 11.5v.5"/></svg></div>
-          <div><div class="chat-feat-title">診断結果と連動したアドバイス</div><div class="chat-feat-desc">あなたのスコアを踏まえた、個別性のある返答が得られます。</div></div>
-        </div>
-        <div class="chat-feat">
-          <div class="chat-feat-icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8h8M4 5h8M4 11h5"/></svg></div>
-          <div><div class="chat-feat-title">関連記事を自動でおすすめ</div><div class="chat-feat-desc">症状に合った記事へ自然に誘導し、より深く理解できます。</div></div>
-        </div>
-      </div>
-      <a href="/stress-check/" class="btn-primary" style="display:inline-flex">
-        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
-        診断してAIに相談する
-      </a>
-    </div>
-    <div class="chat-preview">
-      <div class="chat-preview-head">
-        <span class="chat-preview-title">AI COACH CHAT</span>
-        <span class="chat-badge">診断後に利用可能</span>
-      </div>
-      <div class="chat-log" id="chatLog">
-        <div class="bubble-wrap">
-          <div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>
-          <div class="bubble-ai">仕事ストレスと転職意向が高い結果でした。何か具体的に気になっていることや、相談したいことはありますか？</div>
-        </div>
-        <div class="chat-user-row">
-          <div class="bubble-user">毎日残業が続いていて、もう限界かもしれません</div>
-        </div>
-        <div class="bubble-wrap">
-          <div class="bubble-icon"><svg viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5"/><circle cx="5" cy="6" r="0.8" fill="#2563EB" stroke="none"/><circle cx="9" cy="6" r="0.8" fill="#2563EB" stroke="none"/><path d="M5 9q2 1.5 4 0"/></svg></div>
-          <div class="bubble-ai">限界を感じているときは「もっと頑張ろう」ではなく、まず「止まること」が最優先です。まず有給を1日取る計画を立ててみませんか？</div>
-        </div>
-      </div>
-      <div class="chat-input-area">
-        <div class="chat-input-dummy">例：転職すべきか迷っています…</div>
-        <button type="button" class="chat-send">送る</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Woreluとは -->
-<section class="sec about-sec" style="display:none">
-  <div class="about-inner">
-    <div class="sec-eyebrow" style="text-align:center">ABOUT WORELU</div>
-    <h2 class="sec-title" style="text-align:center">Woreluとは</h2>
-    <p class="about-desc" style="text-align:center;max-width:560px;margin:0 auto 32px;">仕事がしんどいとき、その正体がわからないまま一人で抱え込んでいませんか。Woreluは、そのしんどさを言語化・可視化し、次の一歩を見つけるお手伝いをします。</p>
-    <style>
-    .abt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-    .abt-card{border:1.5px solid #BFDBFE;border-radius:16px;background:#fff;cursor:pointer;transition:box-shadow 0.2s,transform 0.15s;overflow:hidden;}
-    .abt-card:hover{box-shadow:0 4px 20px rgba(24,95,165,0.12);transform:translateY(-2px);}
-    .abt-card.open{grid-column:1/-1;transform:none;border-color:var(--navy);box-shadow:0 4px 24px rgba(24,95,165,0.12);}
-    .abt-header{padding:24px 22px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;}
-    .abt-icon{width:48px;height:48px;border-radius:13px;background:#EFF6FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-    .abt-icon svg{width:24px;height:24px;stroke:var(--navy);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-    .abt-title{font-size:16px;font-weight:800;color:var(--navy-deep);margin:0;}
-    .abt-sub{font-size:13px;color:#64748B;margin:0;line-height:1.6;}
-    .abt-toggle{margin-top:4px;font-size:12px;color:var(--navy);font-weight:700;display:flex;align-items:center;gap:4px;border:none;background:none;cursor:pointer;padding:0;}
-    .abt-toggle svg{width:14px;height:14px;stroke:var(--navy);fill:none;stroke-width:2;transition:transform 0.25s;}
-    .abt-card.open .abt-toggle svg{transform:rotate(180deg);}
-    .abt-detail{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
-    .abt-card.open .abt-detail{max-height:600px;}
-    .abt-detail-inner{padding:0 22px 28px;border-top:1px solid #EFF6FF;}
-    .abt-detail-inner h3{font-size:11px;font-weight:800;color:var(--navy);letter-spacing:0.1em;margin:18px 0 12px;}
-    .abt-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px;}
-    .abt-step{background:#F8FAFF;border-radius:12px;padding:16px;}
-    .abt-step-num{font-size:10px;font-weight:800;color:var(--navy);letter-spacing:0.1em;margin-bottom:8px;}
-    .abt-step-title{font-size:14px;font-weight:700;color:var(--navy-deep);margin-bottom:6px;line-height:1.4;}
-    .abt-step-desc{font-size:12px;color:#64748B;line-height:1.6;}
-    .abt-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px;}
-    .abt-point-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#334155;line-height:1.5;}
-    .abt-point-check{color:var(--navy);font-weight:800;flex-shrink:0;margin-top:1px;}
-    .abt-cta{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;}
-    @media(max-width:768px){.abt-grid{grid-template-columns:1fr;}.abt-steps{grid-template-columns:1fr;}.abt-points{grid-template-columns:1fr;}}
-    </style>
-    <div class="abt-grid" id="abt-grid">
-
-      <div class="abt-card" onclick="abtToggle(0)">
-        <div class="abt-header">
-          <div class="abt-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/></svg></div>
-          <div>
-            <p class="abt-title">AIストレス診断</p>
-            <p class="abt-sub">10問・約1分で今の状態を4軸で可視化</p>
-          </div>
-          <button class="abt-toggle">詳しく見る <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        </div>
-        <div class="abt-detail">
-          <div class="abt-detail-inner">
-            <h3>診断の流れ</h3>
-            <div class="abt-steps">
-              <div class="abt-step">
-                <div class="abt-step-num">STEP 01</div>
-                <div class="abt-step-title">10問に答える</div>
-                <div class="abt-step-desc">仕事・職場・体の状態について、直感で回答するだけ。難しい質問はありません。</div>
-              </div>
-              <div class="abt-step">
-                <div class="abt-step-num">STEP 02</div>
-                <div class="abt-step-title">4軸のスコアを確認</div>
-                <div class="abt-step-desc">仕事ストレス・燃え尽き度・職場環境・転職意向の4つの軸で状態を数値化。</div>
-              </div>
-              <div class="abt-step">
-                <div class="abt-step-num">STEP 03</div>
-                <div class="abt-step-title">AIコメントを受け取る</div>
-                <div class="abt-step-desc">スコアに応じた個別のアドバイスと、今すぐできる対処法を提案します。</div>
-              </div>
-            </div>
-            <h3>こんな方におすすめ</h3>
-            <div class="abt-points">
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>自分が今しんどいのか客観的に知りたい</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>転職すべきか判断できずにいる</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>仕事の疲れが体に出てきている</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>誰かに話す前にまず整理したい</span></div>
-            </div>
-            <a href="/stress-check/" class="abt-cta">
-              <svg viewBox="0 0 16 16" width="16" height="16" style="stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3.5L10 10"/></svg>
-              無料で診断する（1分）
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="abt-card" onclick="abtToggle(1)">
-        <div class="abt-header">
-          <div class="abt-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div>
-          <div>
-            <p class="abt-title">セルフケア記事</p>
-            <p class="abt-sub">症状・労働・転職まで45本以上を無料公開</p>
-          </div>
-          <button class="abt-toggle">詳しく見る <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        </div>
-        <div class="abt-detail">
-          <div class="abt-detail-inner">
-            <h3>カテゴリー別に探せる</h3>
-            <div class="abt-steps">
-              <div class="abt-step">
-                <div class="abt-step-num">症状・ストレス</div>
-                <div class="abt-step-title">体と心のサインを知る</div>
-                <div class="abt-step-desc">動悸・眠れない・涙が止まらない…体に出るストレスサインとその対処法。</div>
-              </div>
-              <div class="abt-step">
-                <div class="abt-step-num">燃え尽き・休職</div>
-                <div class="abt-step-title">限界からの回復を知る</div>
-                <div class="abt-step-desc">バーンアウトのセルフチェック、休職の流れ、復職の判断まで丁寧に解説。</div>
-              </div>
-              <div class="abt-step">
-                <div class="abt-step-num">転職・退職</div>
-                <div class="abt-step-title">次の一歩を考える</div>
-                <div class="abt-step-desc">辞めるか続けるかの判断基準、退職代行の選び方、キャリア設計まで。</div>
-              </div>
-            </div>
-            <h3>記事の特徴</h3>
-            <div class="abt-points">
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>AIと専門情報をもとに作成・随時更新</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>チェックリスト・図解で直感的に理解できる</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>全記事無料・登録不要で読める</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>診断結果に応じた記事を自動でおすすめ</span></div>
-            </div>
-            <a href="/articles/" class="abt-cta">
-              <svg viewBox="0 0 16 16" width="16" height="16" style="stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M3 4h10M3 8h7M3 12h5"/></svg>
-              記事一覧を見る
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="abt-card" onclick="abtToggle(2)">
-        <div class="abt-header">
-          <div class="abt-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-          <div>
-            <p class="abt-title">AIコーチ相談</p>
-            <p class="abt-sub">診断後、悩みをそのまま話せる</p>
-          </div>
-          <button class="abt-toggle">詳しく見る <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        </div>
-        <div class="abt-detail">
-          <div class="abt-detail-inner">
-            <h3>こんな相談ができる</h3>
-            <div class="abt-steps">
-              <div class="abt-step">
-                <div class="abt-step-num">職場の悩み</div>
-                <div class="abt-step-title">上司・残業・人間関係</div>
-                <div class="abt-step-desc">具体的な状況を話すと、今すぐできる対処法をアドバイスします。</div>
-              </div>
-              <div class="abt-step">
-                <div class="abt-step-num">転職・キャリア</div>
-                <div class="abt-step-title">辞めるべきか迷っている</div>
-                <div class="abt-step-desc">診断スコアと連動した個別アドバイスで、判断の整理をサポートします。</div>
-              </div>
-              <div class="abt-step">
-                <div class="abt-step-num">メンタルケア</div>
-                <div class="abt-step-title">不安・疲れ・やる気</div>
-                <div class="abt-step-desc">今の気持ちをそのまま話すだけで、状態の整理と次の一歩が見えてきます。</div>
-              </div>
-            </div>
-            <h3>AIコーチの特徴</h3>
-            <div class="abt-points">
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>24時間いつでも相談できる</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>診断結果を踏まえた個別対応</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>関連記事を自動でおすすめ</span></div>
-              <div class="abt-point-item"><span class="abt-point-check">✓</span><span>登録不要・完全無料で利用できる</span></div>
-            </div>
-            <a href="/stress-check/" class="abt-cta">
-              <svg viewBox="0 0 16 16" width="16" height="16" style="stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;"><path d="M2 13l3-3h8a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v8z"/></svg>
-              診断してAIに相談する
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <script>
-    function abtToggle(idx){
-      var cards=document.querySelectorAll('.abt-card');
-      var card=cards[idx];
-      var isOpen=card.classList.contains('open');
-      cards.forEach(function(c){c.classList.remove('open');});
-      if(!isOpen)card.classList.add('open');
-    }
-    </script>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div>
-        <div class="footer-logo">Wor<em>e</em>lu</div>
-        <div class="footer-logo-sub">働く人のためのセルフケアメディア</div>
-        <div class="footer-logo-desc">仕事のストレスや悩みを、AIと記事でサポートします。診断・記事・相談がすべて無料で使えます。</div>
-      </div>
-      <div class="footer-nav-group">
-        <div class="footer-nav-col">
-          <div class="footer-nav-title">サービス</div>
-          <div class="footer-nav-links">
-            <a href="/stress-check/">AIストレス診断</a>
-            <a href="/articles/">記事一覧</a>
-            <a href="/articles/stress/">症状・ストレス</a>
-            <a href="/articles/burnout/">燃え尽き・休職</a>
-            <a href="/articles/quit/">転職・退職</a>
-            <a href="/contact/">お問い合わせ</a>
-          </div>
-        </div>
-        <div class="footer-nav-col">
-          <div class="footer-nav-title">サイト情報</div>
-          <div class="footer-nav-links">
-            <a href="/about/">運営者情報</a>
-            <a href="/contact/">お問い合わせ</a>
-            <a href="/privacy/">プライバシーポリシー</a>
-            <a href="/terms/">利用規約</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-copy">© 2026 Worelu</div>
-    </div>
-  </div>
-</footer>
-
-<script>
-function toggleNav(){
-  const nav=document.getElementById('mobileNav');
-  const btn=document.getElementById('hamburger');
-  nav.classList.toggle('open');
-  btn.classList.toggle('open');
-}
-document.addEventListener('click',function(e){
-  const nav=document.getElementById('mobileNav');
-  const btn=document.getElementById('hamburger');
-  if(nav&&btn&&!nav.contains(e.target)&&!btn.contains(e.target)){
-    nav.classList.remove('open');
-    btn.classList.remove('open');
-  }
-});
-</script>
-
 </body>
 </html>

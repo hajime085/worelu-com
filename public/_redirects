@@ -1,14 +1,15 @@
-# 旧バージョン残骸の URL に 404 を返す（CF Pages は 410 非対応のため次善策）
-/worelu_v6_articles/*  /  404
+# カイカタ（worelu.com） Cloudflare Pages リダイレクト設定
+# 旧サイト（セルフケアメディア）のURLは廃止したため、404へ倒す。
+# 該当する新ページがないので 301 ではなく 404 を返す。
 
-# stress-genkai-sign → 正しいURL（shigoto-genkai-sign）に301リダイレクト
-/articles/stress/stress-genkai-sign/  /articles/stress/shigoto-genkai-sign/  301
+# 旧記事
+/articles/*    /404.html    404
+/articles      /404.html    404
 
-# 燃え尽き診断の旧結果URL → ストレスチェックページへリダイレクト
-/shindan/kanmahi/level  /stress-check/  301
+# 旧 AIストレス診断・AIコーチ
+/stress-check/*    /404.html    404
+/stress-check      /404.html    404
 
-# stress-genkai-sign → 正しいURL（shigoto-genkai-sign）に301リダイレクト
-/articles/stress/stress-genkai-sign/  /articles/stress/shigoto-genkai-sign/  301
-
-# 燃え尽き診断の旧結果URL → ストレスチェックページへリダイレクト
-/shindan/kanmahi/level  /stress-check/  301
+# 旧 診断結果ページ
+/shindan/*    /404.html    404
+/shindan      /404.html    404
