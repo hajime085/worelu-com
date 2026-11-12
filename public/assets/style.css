@@ -11,6 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif;background:var(--ground);color:var(--ink);font-size:15px;line-height:1.75;-webkit-text-size-adjust:100%}
 a{color:inherit}
+img{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
 .wrap{max-width:1060px;margin:0 auto;padding:14px 12px 40px}
 
 /* ---------- 共通レイアウト ---------- */
@@ -197,9 +198,9 @@ h3.blk{font-size:18px;font-weight:800;margin:26px 0 10px;border-bottom:2px solid
 .fstep b{display:block;font-size:14px;margin-bottom:2px}
 .farr{text-align:center;color:var(--accent);font-weight:800;padding:3px 0;transform:rotate(90deg)}
 details.qa{border:1.5px solid var(--line);background:#fff;margin:8px 0}
-details.qa summary{cursor:pointer;font-weight:700;padding:12px 14px;list-style:none;font-size:14.5px}
+details.qa summary{cursor:pointer;font-weight:700;padding:12px 14px;list-style:none;font-size:14.5px;display:flex;align-items:center;gap:12px}
 details.qa summary::-webkit-details-marker{display:none}
-details.qa summary::after{content:"＋";float:right;color:var(--accent);font-weight:800}
+details.qa summary::after{content:"＋";margin-left:auto;flex:none;color:var(--accent);font-weight:800}
 details.qa[open] summary::after{content:"－"}
 details.qa .a{padding:0 14px 12px;font-size:13.5px;color:#333a44}
 .ju{display:grid;gap:8px;margin:12px 0}
@@ -244,3 +245,102 @@ details.qa .a{padding:0 14px 12px;font-size:13.5px;color:#333a44}
 .sk-foot{border-top:1.5px solid var(--line);padding:10px 14px;text-align:center}
 .sk-foot a{color:var(--accent);font-weight:700;font-size:13.5px;text-decoration:none}
 body.sk-lock{overflow:hidden}
+
+/* 場所別おすすめ道具ポップアップ（大掃除ページ、2026-11-12追加） */
+.deal .btn.tpop-open{font:inherit;border:0;width:100%;cursor:pointer}
+.tpop-back{position:fixed;inset:0;background:rgba(10,15,22,.55);opacity:0;pointer-events:none;transition:opacity .25s;z-index:70}
+.tpop-back.open{opacity:1;pointer-events:auto}
+.tpop{position:fixed;inset:0;z-index:71;display:flex;align-items:center;justify-content:center;padding:14px;visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s}
+.tpop.open{visibility:visible;opacity:1}
+.tpop-box{background:#fff;border:1.5px solid var(--line);width:min(94vw,560px);max-height:86dvh;display:flex;flex-direction:column;box-shadow:0 10px 32px rgba(0,0,0,.3)}
+.tpop-hd{display:flex;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;padding:12px 14px;font-weight:800;font-size:16px}
+.tpop-close{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;padding:2px 8px}
+.tpop-body{overflow-y:auto;padding:14px}
+.tpop-panel{display:none}
+.tpop-panel.on{display:block}
+.tpop-item{border:1.5px solid var(--line);padding:12px;background:#fff;margin-bottom:10px}
+.tpop-item:last-child{margin-bottom:0}
+.tpop-item .nm{font-weight:800;font-size:15px;line-height:1.55}
+.tpop-item p{font-size:12.5px;color:#333a44;margin-top:4px}
+.tpop-item .btn{display:block;text-align:center;margin-top:9px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;padding:9px 10px;font-size:14px}
+.tpop-tag{display:inline-block;font-size:11px;font-weight:700;border:1px solid var(--line);background:var(--accent-soft);padding:1px 7px;margin-bottom:5px}
+.tpop-foot{border-top:1.5px solid var(--line);padding:9px 14px;text-align:center;font-size:12px;color:var(--sub)}
+body.tpop-lock{overflow:hidden}
+
+/* ---------- 使ってみた動画ポップアップ（.vpop） ---------- */
+.pick .btn.vpop-open{font-family:inherit;border:0;width:100%;cursor:pointer;background:var(--navy2)}
+.vpop-back{position:fixed;inset:0;background:rgba(10,15,22,.55);opacity:0;pointer-events:none;transition:opacity .25s;z-index:80}
+.vpop-back.open{opacity:1;pointer-events:auto}
+.vpop{position:fixed;inset:0;z-index:81;display:flex;align-items:center;justify-content:center;padding:14px;visibility:hidden;opacity:0;transition:opacity .25s,visibility .25s}
+.vpop.open{visibility:visible;opacity:1}
+.vpop-box{background:#fff;border:1.5px solid var(--line);width:min(94vw,640px);max-height:86dvh;display:flex;flex-direction:column;box-shadow:0 10px 32px rgba(0,0,0,.3)}
+.vpop-hd{display:flex;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;padding:12px 14px;font-weight:800;font-size:16px}
+.vpop-close{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;padding:2px 8px}
+.vpop-body{overflow-y:auto;padding:14px}
+.vpop-frame{position:relative;width:100%;padding-top:56.25%;background:#000}
+.vpop-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vpop-credit{font-size:12.5px;color:#333a44;margin-top:10px}
+body.vpop-lock{overflow:hidden}
+
+/* ---------- 買い物メモ（.ml-、list.js、2026-11-12追加） ---------- */
+.pick .ml-add{display:block;width:100%;margin-top:8px;font:inherit;font-weight:700;font-size:13.5px;line-height:1.5;padding:8px 10px;background:#fff;color:var(--navy);border:1.5px solid var(--line);cursor:pointer}
+.pick .ml-add.on{background:var(--navy);color:#fff}
+.ml-fab{position:fixed;right:14px;bottom:14px;z-index:64;background:var(--navy);color:#fff;border:1.5px solid var(--line);font:inherit;font-weight:800;font-size:14px;line-height:1.4;padding:11px 18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+.ml-back{position:fixed;inset:0;background:rgba(10,15,22,.55);opacity:0;pointer-events:none;transition:opacity .25s;z-index:65}
+.ml-back.open{opacity:1;pointer-events:auto}
+.ml-panel{position:fixed;top:0;right:0;height:100dvh;width:min(92vw,430px);background:#fff;z-index:66;transform:translateX(105%);transition:transform .28s ease;display:flex;flex-direction:column;box-shadow:-6px 0 24px rgba(0,0,0,.25)}
+.ml-panel.open{transform:translateX(0)}
+.ml-hd{display:flex;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;padding:12px 14px;font-weight:800;font-size:16px}
+.ml-close{background:none;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;padding:2px 8px}
+.ml-body{flex:1;overflow-y:auto;padding:12px}
+.ml-item{border:1.5px solid var(--line);padding:12px;background:#fff;margin-bottom:10px}
+.ml-item:last-child{margin-bottom:0}
+.ml-item .nm{font-weight:800;font-size:14.5px;line-height:1.55}
+.ml-item .maker{font-size:12px;color:var(--sub);margin-top:2px}
+.ml-row{display:flex;gap:8px;margin-top:9px}
+.ml-go{flex:1;text-align:center;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;padding:8px 10px;font-size:13.5px}
+.ml-remove{font:inherit;font-weight:700;font-size:13px;line-height:1.5;padding:8px 12px;background:#fff;color:var(--ink);border:1.5px solid var(--line);cursor:pointer}
+.ml-empty{font-size:13.5px;color:var(--sub);padding:8px 2px}
+.ml-foot{border-top:1.5px solid var(--line);padding:10px 14px;text-align:center}
+.ml-clear{background:none;border:0;color:var(--warn);font:inherit;font-weight:700;font-size:13px;cursor:pointer;text-decoration:underline;padding:2px 6px}
+body.ml-lock{overflow:hidden}
+
+/* ---------- 弱点診断（.dg-、冬支度ページ、2026-11-12追加） ---------- */
+.dg{border:1.5px solid var(--line);background:#fff;padding:14px;margin-top:14px}
+.dg-t{font-weight:800;font-size:16px;line-height:1.5;border-left:6px solid var(--accent);padding-left:10px}
+.dg-lead{font-size:13px;color:#333a44;margin-top:8px}
+.dg-q{border-top:1px dashed #c9ced6;padding:10px 0 2px;margin-top:10px}
+.dg-qt{font-weight:700;font-size:14.5px;line-height:1.6}
+.dg-qn{display:inline-block;background:var(--navy);color:#fff;font-weight:800;font-size:12px;padding:1px 8px;margin-right:8px;vertical-align:2px}
+.dg-ans{display:flex;gap:8px;margin:8px 0 6px}
+.dg-btn{flex:1;font:inherit;font-weight:700;font-size:14.5px;line-height:1.5;padding:9px 10px;background:#fff;color:var(--ink);border:1.5px solid var(--line);cursor:pointer}
+.dg-btn.sel{background:var(--navy);color:#fff;border-color:var(--navy)}
+.dg-result{margin-top:12px;background:var(--accent-soft);border:1.5px solid var(--line);padding:14px}
+.dg-result[hidden]{display:none}
+.dg-rt{font-weight:800;font-size:16.5px;line-height:1.5}
+.dg-ra{font-size:13.5px;color:#333a44;margin-top:4px}
+.dg-go{display:block;width:100%;margin-top:12px;font:inherit;font-weight:800;font-size:14.5px;line-height:1.5;padding:10px;background:var(--accent);color:#fff;border:0;cursor:pointer}
+.dg-again{display:block;margin:10px auto 0;font:inherit;font-size:13px;font-weight:700;color:var(--sub);background:none;border:0;cursor:pointer;text-decoration:underline;padding:2px 6px}
+
+/* ---------- テキストティッカー（.tk-、TOP、2026-11-12追加） ---------- */
+.tk{display:flex;background:var(--navy);color:#fff;height:36px;overflow:hidden;border-top:1px solid #33425299}
+.tk-label{flex:none;display:flex;align-items:center;background:var(--accent);color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.08em;padding:0 12px;position:relative;z-index:1}
+.tk-view{flex:1;overflow:hidden}
+.tk-track{display:flex;width:max-content;height:36px;animation:tk-scroll 30s linear infinite}
+.tk:hover .tk-track,.tk:active .tk-track{animation-play-state:paused}
+.tk-set{display:flex;align-items:center;flex:none}
+.tk-item{color:#fff;text-decoration:none;font-size:13.5px;line-height:36px;white-space:nowrap;padding:0 4px}
+.tk-item:hover{text-decoration:underline}
+.tk-sep{color:var(--accent);font-size:10px;padding:0 12px;flex:none}
+@keyframes tk-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tk-track{animation:none}}
+
+/* ---------- 章タブ（.tb-、スマホ専用・右端固定、2026-11-12追加） ---------- */
+.tb-nav{display:none}
+@media (max-width:640px){
+  .tb-nav{display:flex;flex-direction:column;gap:6px;position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:40;opacity:0;pointer-events:none;transition:opacity .3s}
+  .tb-nav.tb-on{opacity:1;pointer-events:auto}
+  .tb-tab{writing-mode:vertical-rl;background:var(--navy);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.14em;line-height:1;text-decoration:none;padding:11px 5px 11px 6px;border:1.5px solid var(--line);border-right:none;border-radius:9px 0 0 9px;box-shadow:-2px 2px 8px rgba(0,0,0,.18)}
+  .tb-tab.tb-cur{background:var(--accent)}
+}
+@media (prefers-reduced-motion:reduce){.tb-nav{transition:none}}

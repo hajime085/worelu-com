@@ -7,3 +7,5 @@
   if(bk){bk.addEventListener('click',close)}
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){close()}});
 })();
+/* 画像の長押し・右クリック保存メニューを抑止（ドロワー動作とは独立） */
+document.addEventListener('contextmenu',function(e){var t=e.target;if(t&&t.tagName==='IMG'){e.preventDefault()}});

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>冬支度のカイカタ｜乾燥・底冷え・外出の寒さの潰し方｜カイカタ</title>
-<meta name="description" content="冬の不快は「乾燥」「底冷え」「外出の寒さ」の3か所に分かれます。場所ごとに潰し方と、今年カイカタが狙う具体的な商品（象印のスチーム式加湿器、山善の電気毛布、アイリスオーヤマのセラミックヒーター、桐灰カイロ）を、価格ではなく選んだ理由で紹介します。">
+<title>冬支度のカイカタ｜乾燥・底冷え・外出の寒さ対策グッズの選び方｜カイカタ</title>
+<meta name="description" content="冬支度は、冬の不快を「乾燥」「底冷え」「外出の寒さ」の3か所に分けて対策するのが近道です。場所ごとの潰し方と、対策グッズ（象印のスチーム式加湿器、山善の電気毛布、アイリスオーヤマのセラミックヒーター、桐灰カイロ）を、価格ではなく選んだ理由で紹介します。">
 <link rel="canonical" href="https://worelu.com/feature/winter/">
-<link rel="stylesheet" href="../../assets/style.css?v=20261111o">
+<link rel="stylesheet" href="../../assets/style.css?v=20261112f">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
@@ -41,27 +41,88 @@
         </ol>
       </div>
 
+      <div class="dg" id="dgBox">
+        <div class="dg-t">3つの質問で分かる、あなたの冬の弱点</div>
+        <p class="dg-lead">当てはまるかどうかをタップで答えてください。全3問に答えると、弱点のタイプと、先に見るべき対策が分かります。</p>
+        <div class="dg-q">
+          <p class="dg-qt"><span class="dg-qn">Q1</span>朝起きたとき、喉や肌のカサつきが気になる</p>
+          <div class="dg-ans">
+            <button type="button" class="dg-btn" data-dg-field="dry" data-dg-val="1">はい</button>
+            <button type="button" class="dg-btn" data-dg-field="dry" data-dg-val="0">いいえ</button>
+          </div>
+        </div>
+        <div class="dg-q">
+          <p class="dg-qt"><span class="dg-qn">Q2</span>布団に入っても、足先が冷えてなかなか眠れない</p>
+          <div class="dg-ans">
+            <button type="button" class="dg-btn" data-dg-field="cold" data-dg-val="1">はい</button>
+            <button type="button" class="dg-btn" data-dg-field="cold" data-dg-val="0">いいえ</button>
+          </div>
+        </div>
+        <div class="dg-q">
+          <p class="dg-qt"><span class="dg-qn">Q3</span>通勤や買い物など、外に出たときの寒さが一番つらい</p>
+          <div class="dg-ans">
+            <button type="button" class="dg-btn" data-dg-field="out" data-dg-val="1">はい</button>
+            <button type="button" class="dg-btn" data-dg-field="out" data-dg-val="0">いいえ</button>
+          </div>
+        </div>
+        <div class="dg-result" id="dgResult" hidden>
+          <div class="dg-rt" id="dgRt"></div>
+          <p class="dg-ra" id="dgRa"></p>
+          <button type="button" class="dg-go" id="dgGo">対策と掲載品を見る</button>
+          <button type="button" class="dg-again" id="dgAgain">もう一度やる</button>
+        </div>
+      </div>
+
       <div class="toc">
         <div class="t">目次</div>
         <ol>
-          <li><a href="#places">冬の不快は3か所（図解）</a></li>
-          <li><a href="#picks">今年の狙い目（商品ピック）</a></li>
-          <li><a href="#steps">冬支度の手順</a></li>
-          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="#mechanism" data-tab="仕組み">冬支度の仕組み（図解）</a></li>
+          <li><a href="#places" data-tab="場所別">場所・場面別の対策</a></li>
+          <li><a href="#picks" data-tab="掲載品">選んだもの（10品）</a></li>
+          <li><a href="#steps" data-tab="手順">買い方・買い時の手順</a></li>
+          <li><a href="#compare" data-tab="比較表">切り分け表：困りごと→対策</a></li>
+          <li><a href="#checklist" data-tab="締切">冬支度チェックリスト</a></li>
+          <li><a href="#faq" data-tab="質問">よくある質問</a></li>
         </ol>
       </div>
 
-      <h3 class="blk" id="places">1. 冬の不快は3か所（図解）</h3>
+      <h3 class="blk" id="mechanism">1. 冬支度の仕組み（図解）</h3>
+      <div class="spot"><img src="../../assets/img/winter-mechanism.jpg" alt="冬の不快3場面のイラスト。乾燥した寝室の加湿器、冷えた布団から出た足先、雪の玄関に立つコートの人物"></div>
       <div class="diagram">
-        <div class="step"><div class="no">1</div><div><div class="st">乾燥 ― 喉・肌・静電気</div><p>暖房をつけるほど室内は乾きます。対策の本体は加湿器で、置き場所は「寝る部屋」が先です。</p></div></div>
-        <div class="step"><div class="no">2</div><div><div class="st">底冷え ― 足元と寝床</div><p>部屋の空気は温まっても、足元と布団の中は冷えたまま、というのが冬の不快の正体です。局所暖房と電気毛布で「いる場所だけ」を温めます。</p></div></div>
-        <div class="step"><div class="no">3</div><div><div class="st">外出の寒さ ― 通勤と外仕事</div><p>家電では届かない場所。ここはカイロのような消耗品の担当で、単価の小さい箱買いが効きます。</p></div></div>
+        <div class="step"><div class="no">1</div><div><div class="st">暖房を入れるほど、空気は乾く</div><p>暖かい空気は水分を多く含めるため、暖房で室温を上げるほど相対的な湿度は下がります。喉の痛み・肌の乾燥・静電気は、この「乾き」のサインです。</p></div></div>
+        <div class="step"><div class="no">2</div><div><div class="st">暖気は上に、冷気は足元にたまる</div><p>暖かい空気は軽く天井側へ、冷たい空気は重く床側へたまります。エアコンの設定温度と足元の体感がずれるのはこのためで、布団の中も、外側が冷えると内側まで冷えたままになります。</p></div></div>
+        <div class="step"><div class="no">3</div><div><div class="st">外出の寒さは、家電の届かない場所</div><p>屋外では暖房が効かず、体からは熱が逃げ続けます。ここは機械ではなく、身につける消耗品（カイロ）の担当です。</p></div></div>
+        <div class="step"><div class="no">4</div><div><div class="st">対策の優先順位は「寝る場所→いる場所→外」</div><p>一日のうち長時間を過ごす寝床と寝室を先に潰すと、効き目が安定します。次に長くいる場所の足元、最後に外出用の消耗品、という順番がこのページの組み立てです。</p></div></div>
+      </div>
+      <p class="note" style="margin-top:8px">※ 仕組みの説明は一般的な目安です。住まいの断熱や暖房の方式によって体感は変わります。</p>
+
+      <h3 class="blk" id="places">2. 場所・場面別の対策</h3>
+      <p style="font-size:13.5px;margin-bottom:10px">3か所ごとに「なぜ効くか」と「注意点」をまとめました。具体的な商品は下記3の「選んだもの」に置いてあります。</p>
+      <div class="deal-grid">
+        <div class="deal">
+          <div class="cat">乾燥 ― 寝室から</div>
+          <div class="nm">加湿器が対策の本体です</div>
+          <p>暖房で乾いた空気は、寝ているあいだに喉と肌へ効いてきます。加湿器は「寝る部屋」に置くのが先で、日中に長くいる部屋は2台目の候補です。方式は性能の差より、手入れが続くかどうかで選ぶと失敗しません。</p>
+          <p>注意点は、加湿のしすぎと手入れ忘れです。窓が結露するほど加えると、今度はカビの原因になります。湿度計で部屋の状態を見ながら調整し、タンクの水は毎日入れ替えるのが基本です。</p>
+        </div>
+        <div class="deal">
+          <div class="cat">底冷え ― 足元と寝床</div>
+          <div class="nm">「いる場所だけ」を温める</div>
+          <p>部屋全体の温度を上げるより、足元と布団の中を直接温める方が早く効いて、消費電力も小さく済みます。デスクや脱衣所はセラミックヒーターのような局所暖房、寝床は電気毛布、という分け方が基本形です。</p>
+          <p>注意点は低温やけどです。「熱くない」温度でも、同じ場所に長時間当て続けると起きます。電気毛布は寝る前に温めて、就寝時は弱運転かタイマーで切るのが安全です。ヒーターの前に洗濯物や布を置かないことも合わせて守ります。</p>
+        </div>
+        <div class="deal">
+          <div class="cat">外出の寒さ ― 通勤と外仕事</div>
+          <div class="nm">カイロは「箱で備える」消耗品</div>
+          <p>外の寒さには家電が届かないので、身につける暖かさで対応します。背中や腰を温める貼るタイプが通勤の定番で、寒さが本格化する前に箱で持っておくと、切らして割高に買う失敗が減ります。</p>
+          <p>注意点は使い方です。素肌に直接貼らない、寝るときは使わない、がカイロ共通の約束です。手先を温めたい場面では、貼らないタイプをポケットに入れる使い分けもできます。</p>
+        </div>
       </div>
 
-      <h3 class="blk" id="picks">2. 今年の狙い目（商品ピック）</h3>
+      <h3 class="blk" id="picks">3. 選んだもの（10品）</h3>
       <p style="font-size:13.5px;margin-bottom:6px">価格は変動するので載せません。代わりに「なぜこれか」の理由を書きました。ブラックフライデー（11月19日に詳細発表）でセール対象になるかは、発表を受けてこのページで照合します。</p>
 
-      <div class="pick-sec">乾燥対策 ― 加湿器</div>
+      <div class="pick-sec" id="picks-dry">乾燥対策 ― 加湿器</div>
       <div class="spot"><img src="../../assets/img/winter-dry.jpg" alt="乾燥対策のイラスト。加湿器の湯気とコップの水、のど飴"></div>
       <div class="pick-grid">
         <div class="pick">
@@ -72,9 +133,25 @@
           <a class="btn" href="https://www.amazon.co.jp/dp/B0HGF5B9D8?tag=popo1215-22" data-affiliate-slot="winter-pick-zojirushi">Amazonで見る</a>
           <div class="fine">価格・在庫はリンク先で確認してください</div>
         </div>
+        <div class="pick">
+          <div class="nm">シャープ ハイブリッド式加湿器 HV-T55-W プラズマクラスター7000</div>
+          <div class="maker">シャープ｜ハイブリッド式加湿器</div>
+          <p class="why">スチーム式の象印と並ぶ、もう一つの選択肢がハイブリッド式。温風と気化を組み合わせる方式で、これは2025年発売の現行モデルです。タンクは4L、「どっちも給水」でタンクを外して運ぶ給水と本体へ直接注ぐ給水の両方に対応します。★4.3・レビュー127件（11月12日時点の確認）。</p>
+          <div class="who"><b>こんな人に</b>：スチーム式以外から選びたい／給水の手間を減らしたい</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B0FPWXNQ3G?tag=popo1215-22" data-affiliate-slot="winter-pick-sharp">Amazonで見る</a>
+          <div class="fine">価格・在庫はリンク先で確認してください</div>
+        </div>
+        <div class="pick">
+          <div class="nm">アイリスオーヤマ 加湿器 超音波式 AZHM-UU28B-W</div>
+          <div class="maker">アイリスオーヤマ｜超音波式加湿器</div>
+          <p class="why">部屋全体ではなく、自分のまわりだけを潤す小型の卓上タイプ。加湿量は280ml/h、木造和室4畳までが目安で、タンクは4L入ります。象印やシャープが「部屋の本体」なら、こちらは寝室の枕元やデスクの相棒。★3.8・レビュー330件（11月12日時点の確認）。</p>
+          <div class="who"><b>こんな人に</b>：寝室やデスクなど、自分の周りだけ加湿したい</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B0DF1G5BKP?tag=popo1215-22" data-affiliate-slot="winter-pick-iris-ultra">Amazonで見る</a>
+          <div class="fine">価格・在庫はリンク先で確認してください</div>
+        </div>
       </div>
 
-      <div class="pick-sec">底冷え対策 ― 布団と足元</div>
+      <div class="pick-sec" id="picks-cold">底冷え対策 ― 布団・足元・窓</div>
       <div class="spot"><img src="../../assets/img/winter-warm.jpg" alt="底冷え対策のイラスト。電気毛布の布団と湯たんぽ、温かい飲み物"></div>
       <div class="pick-grid">
         <div class="pick">
@@ -86,16 +163,34 @@
           <div class="fine">価格・在庫はリンク先で確認してください</div>
         </div>
         <div class="pick">
+          <div class="nm">アイリスオーヤマ 電気毛布 掛け敷き兼用 EHB-FR1813B-DT フランネル</div>
+          <div class="maker">アイリスオーヤマ｜電気毛布</div>
+          <p class="why">電気毛布のもう一つの選択肢は、フランネル素材のこちら。掛け・敷き兼用で180×130cm、温度は無段階調整なので「ちょうどいい温かさ」に細かく合わせられます。山善が大判・丸洗いの定番なら、こちらは肌触りと調整幅で選ぶ一枚。★4.0・レビュー960件（11月12日時点の確認）。</p>
+          <div class="who"><b>こんな人に</b>：肌触りにこだわりたい／温度を細かく調整したい</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B0DDT6BH3W?tag=popo1215-22" data-affiliate-slot="winter-pick-iris-blanket">Amazonで見る</a>
+          <div class="fine">価格・在庫はリンク先で確認してください</div>
+        </div>
+        <div class="pick">
           <div class="nm">アイリスオーヤマ セラミックファンヒーター 人感センサー付 PCH-125D-W</div>
           <div class="maker">アイリスオーヤマ｜セラミックファンヒーター</div>
           <p class="why">脱衣所・洗面所・デスクの足元に置く「局所暖房」専用。スイッチを入れてすぐ温風が出るのがセラミック式の強みで、最大1200Wの3段階切り替えと人感センサーつき。人の動きを検知して自動でON/OFFするので、短時間の暖房に向きます。幅24cm・奥行11cmのスリムな形で、置き場所も取りません。</p>
           <div class="who"><b>こんな人に</b>：脱衣所が寒い／デスクの足元だけ温めたい</div>
           <a class="btn" href="https://www.amazon.co.jp/dp/B07T1Y9TWH?tag=popo1215-22" data-affiliate-slot="winter-pick-iris">Amazonで見る</a>
+          <button type="button" class="btn vpop-open" data-vpop="heater">▶ 使ってみた動画を見る</button>
+          <div class="fine">価格・在庫はリンク先で確認してください</div>
+        </div>
+        <div class="pick">
+          <div class="nm">ニトムズ 窓ガラス断熱シート フォーム 徳用2P E1532</div>
+          <div class="maker">ニトムズ｜窓用断熱シート</div>
+          <p class="why">底冷えの犯人の一つは、窓から流れ込む冷気です。このシートは窓ガラスに水で貼るだけ。幅90cm×長さ1.8mが2枚入りで、大きな窓にも回ります。暖房器具を増やす前に冷気の入口を塞ぐ、電気代のかからない対策。★3.9・レビュー972件（11月12日時点の確認）。</p>
+          <div class="who"><b>こんな人に</b>：窓の近くにいると足元が冷える／暖房を強くしたくない</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B07XVH4Y6Z?tag=popo1215-22" data-affiliate-slot="winter-pick-nitoms">Amazonで見る</a>
+          <button type="button" class="btn vpop-open" data-vpop="sheet">▶ 貼り方の動画を見る（同シリーズ）</button>
           <div class="fine">価格・在庫はリンク先で確認してください</div>
         </div>
       </div>
 
-      <div class="pick-sec">外出の寒さ ― 消耗品</div>
+      <div class="pick-sec" id="picks-out">外出の寒さ ― 消耗品</div>
       <div class="spot"><img src="../../assets/img/winter-out.jpg" alt="外出の寒さ対策のイラスト。マフラーと手袋、カイロ、雪の街"></div>
       <div class="pick-grid">
         <div class="pick">
@@ -106,6 +201,22 @@
           <a class="btn" href="https://www.amazon.co.jp/dp/B000FQN97A?tag=popo1215-22" data-affiliate-slot="winter-pick-kairo">Amazonで見る</a>
           <div class="fine">価格・在庫はリンク先で確認してください</div>
         </div>
+        <div class="pick">
+          <div class="nm">ホッカイロ 貼らない レギュラー 30個入</div>
+          <div class="maker">興和｜使い捨てカイロ（貼らないタイプ）</div>
+          <p class="why">桐灰が「貼る」なら、こちらは「貼らない」タイプ。ポケットに入れておけば、出先で手先が冷えたときにそのまま握れます。貼るタイプは背中や腰、貼らないタイプは手先——と、温めたい場所で使い分けるのが正解。★4.4・レビュー1,819件（11月12日時点の確認）。</p>
+          <div class="who"><b>こんな人に</b>：手先の冷えが気になる／貼るタイプと使い分けたい</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B00O7H0458?tag=popo1215-22" data-affiliate-slot="winter-pick-hokkairo">Amazonで見る</a>
+          <div class="fine">価格・在庫はリンク先で確認してください</div>
+        </div>
+        <div class="pick">
+          <div class="nm">アイリスオーヤマ 使い捨てカイロ ぽかぽか家族 貼る レギュラー PKN-30HR 30枚</div>
+          <div class="maker">アイリスオーヤマ｜使い捨てカイロ（衣類に貼るタイプ）</div>
+          <p class="why">貼るタイプの「まとめ買いの定番」。レビュー8,073件はこの分野で最も多い部類で、長く売れ続けている実績で選びます（★4.4、11月12日時点の確認）。持続時間で選ぶ桐灰に対して、家族で毎日使う消耗品を箱で常備するなら、こちらが受け皿になります。</p>
+          <div class="who"><b>こんな人に</b>：家族で使う／実績のある定番を常備したい</div>
+          <a class="btn" href="https://www.amazon.co.jp/dp/B004W4VDGA?tag=popo1215-22" data-affiliate-slot="winter-pick-pokapoka">Amazonで見る</a>
+          <div class="fine">価格・在庫はリンク先で確認してください</div>
+        </div>
       </div>
 
       <div class="catlinks">
@@ -113,18 +224,66 @@
         <a href="/feature/year-end/">年末年始・初売り特集を見る →</a>
       </div>
 
-      <h3 class="blk" id="steps">3. 冬支度の手順</h3>
+      <h3 class="blk" id="steps">4. 買い方・買い時の手順</h3>
       <div class="steps">
         <div class="stepbox"><div class="n">STEP 1</div><div class="t">不快の場所を決める</div><p>乾燥か、底冷えか、外出か。当てはまる場所から先に潰します。</p></div>
         <div class="stepbox"><div class="n">STEP 2</div><div class="t">本体を1つ決める</div><p>加湿器か電気毛布か。型番まで決めておくと、セールで迷いません。</p></div>
         <div class="stepbox"><div class="n">STEP 3</div><div class="t">消耗品は箱で持つ</div><p>カイロなどは寒さのピーク前に。ピーク中は在庫も単価も荒れます。</p></div>
-        <div class="stepbox"><div class="n">STEP 4</div><div class="t">セールで照合する</div><p>11月19日のブラックフライデー発表で、このページの4点が対象か確認します。</p></div>
+        <div class="stepbox"><div class="n">STEP 4</div><div class="t">セールで照合する</div><p>11月19日のブラックフライデー発表で、このページの10点が対象か確認します。</p></div>
       </div>
 
-      <h3 class="blk" id="faq">4. よくある質問</h3>
-      <div class="qa"><div class="q">Q. 加湿器の方式はどれがいいですか？</div><div class="a">方式ごとに一長一短ですが、続くかどうかは手入れの手間で決まります。スチーム式は沸騰させるので衛生的で、フィルター交換もありません。その代わり消費電力は大きめです。電気代を抑えたい場合は他の方式も候補になりますが、「手入れが続く方式」が結局いちばん効きます。</div></div>
-      <div class="qa"><div class="q">Q. 電気毛布とエアコン、どっちが安いですか？</div><div class="a">温める範囲が違います。部屋全体ならエアコン、布団の中だけなら電気毛布の方が消費電力は小さく済みます。「部屋はほどほど、布団はしっかり」が光熱費と快適さのバランス点です。</div></div>
-      <div class="qa"><div class="q">Q. カイロは「貼る」と「貼らない」のどっちがいいですか？</div><div class="a">背中や腰を温めたいなら貼るタイプ、手先を温めたい・ポケットで使いたいなら貼らないタイプです。通勤が目的なら、落ちない貼るタイプが扱いやすいです。</div></div>
+      <h3 class="blk" id="compare">5. 切り分け表：困りごと→対策</h3>
+      <div class="tscroll"><table class="cmp">
+        <tr><th style="width:170px">困りごと</th><th style="width:170px">起きていること</th><th>対策の本体</th></tr>
+        <tr><td>朝起きると喉が痛い</td><td>寝室が乾燥している</td><td>加湿器を寝る部屋に置く（上記3の象印 スチーム式加湿器）</td></tr>
+        <tr><td>部屋は暖房中なのに足が冷たい</td><td>冷気は足元にたまる</td><td>足元だけの局所暖房（上記3のアイリスオーヤマ セラミックヒーター）</td></tr>
+        <tr><td>布団に入っても寝つけない</td><td>寝床そのものが冷えている</td><td>電気毛布で寝床を先に温める（上記3の山善 電気毛布）</td></tr>
+        <tr><td>脱衣所・洗面所が寒い</td><td>短時間の場所に暖房が届いていない</td><td>人感センサー付きの局所暖房（上記3のアイリスオーヤマ セラミックヒーター）</td></tr>
+        <tr><td>通勤・外仕事で体が冷える</td><td>外では暖房が効かない</td><td>貼るカイロを箱で備える（上記3の桐灰カイロ はる）</td></tr>
+        <tr><td>静電気がひどい</td><td>乾燥が進んでいるサイン</td><td>まず加湿。化繊の重ね着を減らすのも手です</td></tr>
+        <tr><td>暖房費がかさむ</td><td>部屋全体を温め続けている</td><td>「いる場所だけ」暖房に寄せる（上記2の組み立て）</td></tr>
+      </table></div>
+      <p class="note" style="margin-top:8px">※ 対応は目安です。置き場所や使い方の注意は、上記2の各カードも合わせて確認してください。</p>
+
+      <h3 class="blk" id="checklist">6. 冬支度チェックリスト</h3>
+      <div class="spot"><img src="../../assets/img/winter-checklist.jpg" alt="冬支度の整った部屋のイラスト。加湿器の蒸気とヒーターの温風、布団で温かい飲み物を飲む人、カイロの箱"></div>
+      <div class="diagram">
+        <div class="step"><div class="no">1</div><div><div class="st">本体の型番を決めておく</div><p>加湿器や電気毛布など、買い替え・買い足しが要る本体は、寒くなる前に型番まで決めます。セールの発表後は、その型番が対象かどうかを照合するだけになります。</p></div></div>
+        <div class="step"><div class="no">2</div><div><div class="st">去年のものを試運転する</div><p>加湿器・ヒーター・電気毛布は、本番前に一度動かして確かめます。加湿器の水回りの掃除も、このタイミングで済ませます。家全体の掃除の割り振りは、<a href="../cleaning/">年末大掃除の進め方</a>も参考にしてください。</p></div></div>
+        <div class="step"><div class="no">3</div><div><div class="st">寝床を先に整える</div><p>電気毛布の敷き方とタイマーの動き、毛布の枚数を確認します。寒さの本番は睡眠に直結するので、順番では寝床が先です。</p></div></div>
+        <div class="step"><div class="no">4</div><div><div class="st">消耗品を箱で持つ</div><p>カイロのような消耗品は、寒さが本格化する前に箱で用意します。ピークに入ってからだと、在庫も単価も荒れます。</p></div></div>
+        <div class="step"><div class="no">5</div><div><div class="st">置き場所と安全を確かめる</div><p>ヒーターの周りに燃えるものがないか、カイロの使い方（素肌に貼らない・就寝時は使わない）を家族で共有します。</p></div></div>
+      </div>
+      <p class="note" style="margin-top:8px">※ 順番は「寒さが本格化する前」という区切りで並べた目安です。地域の寒さに合わせて前倒ししてください。</p>
+
+      <h3 class="blk" id="faq">7. よくある質問</h3>
+      <details class="qa"><summary>Q. 加湿器の方式はどれがいいですか？</summary><div class="a">方式ごとに一長一短ですが、続くかどうかは手入れの手間で決まります。スチーム式は沸騰させるので衛生的で、フィルター交換もありません。その代わり消費電力は大きめです。電気代を抑えたい場合は他の方式も候補になりますが、「手入れが続く方式」が結局いちばん効きます。</div></details>
+      <details class="qa"><summary>Q. 電気毛布とエアコン、どっちが安いですか？</summary><div class="a">温める範囲が違います。部屋全体ならエアコン、布団の中だけなら電気毛布の方が消費電力は小さく済みます。「部屋はほどほど、布団はしっかり」が光熱費と快適さのバランス点です。</div></details>
+      <details class="qa"><summary>Q. カイロは「貼る」と「貼らない」のどっちがいいですか？</summary><div class="a">背中や腰を温めたいなら貼るタイプ、手先を温めたい・ポケットで使いたいなら貼らないタイプです。通勤が目的なら、落ちない貼るタイプが扱いやすいです。</div></details>
+      <details class="qa"><summary>Q. 加湿器は寝室とリビング、どちらに置くべきですか？</summary><div class="a">1台なら寝室が先です。睡眠中は長時間同じ空気を吸い続け、喉や肌への影響が出やすい時間帯だからです。日中に長くいる部屋は、2台目の候補にします。置き場所の考え方は、上記2の「乾燥」カードと同じです。</div></details>
+      <details class="qa"><summary>Q. 電気毛布で低温やけどをしないか心配です。</summary><div class="a">低温やけどは「熱くない」温度でも、同じ場所に長時間当たり続けると起きます。就寝中はタイマーで切るか弱運転にし、強運転のまま寝続けない使い方にしてください。肌が赤くなっていたら、当て方を見直すサインです。</div></details>
+
+      <h3 class="blk" id="related">関連する特集</h3>
+      <div class="deal-grid">
+        <div class="deal">
+          <div class="cat">特集</div>
+          <div class="nm">年末大掃除のカイカタ</div>
+          <p>冬の家しごとと重なる年末の掃除を、12月の週末に小分けする進め方と道具選び。</p>
+          <a class="btn" href="../cleaning/">特集ページを見る →</a>
+        </div>
+        <div class="deal">
+          <div class="cat">特集</div>
+          <div class="nm">年末年始・初売りセールの歩き方</div>
+          <p>年内に買うものと、年明けの初売りに回すものの切り分け。福袋と締切の見方も。</p>
+          <a class="btn" href="../year-end/">特集ページを見る →</a>
+        </div>
+        <div class="deal">
+          <div class="cat">特集</div>
+          <div class="nm">ブラックフライデー2026の歩き方</div>
+          <p>冬物・家電の買い時になる大型セール。先行セールと本セールの使い分け。</p>
+          <a class="btn" href="../black-friday/">特集ページを見る →</a>
+        </div>
+      </div>
 
       <div class="disc">
         このページのリンクはアフィリエイトリンクです。リンク先で購入されると、Amazonのアソシエイトとしてカイカタに紹介料が支払われる場合があります（購入者の負担額は変わりません）。価格・在庫は変動します。購入前にリンク先の表示を必ず確認してください。イラストはイメージです（実物の商品写真ではありません）。
@@ -148,6 +307,17 @@
     </div>
   </div>
 </div>
+  <div class="vpop-back" id="vpopBack"></div>
+  <div class="vpop" id="vpopModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="vpopTitle">
+    <div class="vpop-box">
+      <div class="vpop-hd"><span id="vpopTitle">使ってみた動画</span><button type="button" class="vpop-close" id="vpopClose" aria-label="閉じる">×</button></div>
+      <div class="vpop-body">
+        <div class="vpop-frame"><iframe id="vpopFrame" title="使ってみた動画（YouTube）" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        <p class="vpop-credit" data-vcredit="heater">動画：佐用なんちゃら（外部クリエイターの動画です。当サイトで撮影したものではありません）</p>
+        <p class="vpop-credit" data-vcredit="sheet" style="display:none">動画：1yosihiro（外部クリエイター）／同シリーズの水貼りシートを実際に貼っている動画です。掲載品（E1532）とはサイズが違う同シリーズ品です</p>
+      </div>
+    </div>
+  </div>
   <div class="sk-back" id="sokuhoBack"></div>
   <aside class="sk-drawer" id="sokuhoDrawer" aria-label="X速報">
     <div class="sk-head"><span>X速報<small>@A_KAIKATA の最新ポスト</small></span><button type="button" class="sk-close" id="sokuhoClose" aria-label="閉じる">×</button></div>
@@ -160,6 +330,98 @@
     <div class="sk-foot"><a href="https://x.com/A_KAIKATA" target="_blank" rel="noopener">Xで速報を受け取る（@A_KAIKATA）</a></div>
   </aside>
   <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
-  <script src="../../assets/sokuho.js?v=20261111p" defer></script>
+  <script src="../../assets/sokuho.js?v=20261112a" defer></script>
+  <script src="../../assets/list.js?v=20261112d" defer></script>
+  <script src="../../assets/tab.js?v=20261112f" defer></script>
+  <script>
+  (function(){
+    var VIDS={
+      heater:{src:"https://www.youtube-nocookie.com/embed/CAoQSRODhzg?rel=0&autoplay=1",title:"使ってみた動画"},
+      sheet:{src:"https://www.youtube-nocookie.com/embed/c5eN1xGj-5o?rel=0&autoplay=1",title:"貼り方の動画（同シリーズ）"}
+    };
+    var modal=document.getElementById('vpopModal'),back=document.getElementById('vpopBack'),vtitle=document.getElementById('vpopTitle'),closeBtn=document.getElementById('vpopClose'),frame=document.getElementById('vpopFrame');
+    if(!modal||!back||!vtitle||!closeBtn||!frame){return}
+    var credits=modal.querySelectorAll('.vpop-credit');
+    function openPop(key){
+      var v=VIDS[key]; if(!v){return}
+      for(var i=0;i<credits.length;i++){credits[i].style.display=(credits[i].getAttribute('data-vcredit')===key)?'block':'none'}
+      vtitle.textContent=v.title;
+      frame.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+      frame.setAttribute('src',v.src);
+      modal.classList.add('open');back.classList.add('open');
+      document.body.classList.add('vpop-lock');
+      modal.setAttribute('aria-hidden','false');
+    }
+    function closePop(){
+      modal.classList.remove('open');back.classList.remove('open');
+      document.body.classList.remove('vpop-lock');
+      modal.setAttribute('aria-hidden','true');
+      frame.removeAttribute('src');
+    }
+    var btns=document.querySelectorAll('.vpop-open');
+    for(var i=0;i<btns.length;i++){(function(b){b.addEventListener('click',function(){openPop(b.getAttribute('data-vpop'))})})(btns[i])}
+    closeBtn.addEventListener('click',closePop);
+    back.addEventListener('click',closePop);
+    modal.addEventListener('click',function(e){if(e.target===modal){closePop()}});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePop()}});
+  })();
+  </script>
+  <script>
+  (function(){
+    var box=document.getElementById('dgBox');
+    var result=document.getElementById('dgResult'),rTitle=document.getElementById('dgRt'),rText=document.getElementById('dgRa'),goBtn=document.getElementById('dgGo'),againBtn=document.getElementById('dgAgain');
+    if(!box||!result||!rTitle||!rText||!goBtn||!againBtn){return}
+    var TYPES={
+      dry:{name:'乾燥タイプ',text:'空気の乾燥が先に来るタイプ。加湿は方式で合う・合わないが分かれるので、置く場所から選ぶのが近道です。',target:'picks-dry',go:'対策と掲載品を見る'},
+      cold:{name:'底冷えタイプ',text:'冷えの入口は足元と窓。布団まわりと窓を先に潰すと、暖房の設定温度を上げずに済みます。',target:'picks-cold',go:'対策と掲載品を見る'},
+      out:{name:'外出タイプ',text:'外の寒さは重ね着より『使い捨て＋貼る場所』で差が出るタイプ。まとめ買い前提で選ぶと割に合います。',target:'picks-out',go:'対策と掲載品を見る'},
+      balance:{name:'バランスタイプ',text:'大きな弱点は無さそうなので、チェックリストで抜けだけ確認を。',target:'checklist',go:'チェックリストを見る'}
+    };
+    var answers={},yesOrder=[],currentTarget=null;
+    var btns=box.querySelectorAll('.dg-btn');
+    function answeredCount(){
+      var n=0;
+      for(var k in answers){if(Object.prototype.hasOwnProperty.call(answers,k)){n++}}
+      return n;
+    }
+    function judge(){
+      if(answeredCount()<3){result.hidden=true;currentTarget=null;return}
+      var key=yesOrder.length?yesOrder[0]:'balance';
+      var t=TYPES[key];
+      rTitle.textContent='あなたは『'+t.name+'』';
+      rText.textContent=t.text;
+      goBtn.textContent=t.go;
+      currentTarget=t.target;
+      var wasHidden=result.hidden;
+      result.hidden=false;
+      if(wasHidden&&result.scrollIntoView){result.scrollIntoView({behavior:'smooth',block:'nearest'})}
+    }
+    function onAnswer(btn){
+      var field=btn.getAttribute('data-dg-field'),val=btn.getAttribute('data-dg-val');
+      answers[field]=(val==='1');
+      var idx=yesOrder.indexOf(field);
+      if(val==='1'){if(idx<0){yesOrder.push(field)}}
+      else{if(idx>=0){yesOrder.splice(idx,1)}}
+      for(var i=0;i<btns.length;i++){
+        if(btns[i].getAttribute('data-dg-field')===field){
+          if(btns[i]===btn){btns[i].classList.add('sel')}else{btns[i].classList.remove('sel')}
+        }
+      }
+      judge();
+    }
+    for(var i=0;i<btns.length;i++){(function(b){b.addEventListener('click',function(){onAnswer(b)})})(btns[i])}
+    goBtn.addEventListener('click',function(){
+      if(!currentTarget){return}
+      var el=document.getElementById(currentTarget);
+      if(el&&el.scrollIntoView){el.scrollIntoView({behavior:'smooth'})}
+    });
+    againBtn.addEventListener('click',function(){
+      answers={};yesOrder=[];currentTarget=null;
+      for(var i=0;i<btns.length;i++){btns[i].classList.remove('sel')}
+      result.hidden=true;
+      box.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  })();
+  </script>
 </body>
 </html>
