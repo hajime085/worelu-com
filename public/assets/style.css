@@ -156,8 +156,8 @@ h3.blk{font-size:18px;font-weight:800;margin:26px 0 10px;border-bottom:2px solid
 .deal .btn{margin-top:auto}
 .feat-card{position:relative;padding-bottom:62px}
 .feat-card .go{position:absolute;left:14px;bottom:14px;margin-top:0}
-/* 姉妹サイトバナー（2026-11-13）: プロフィールの下、フッターの上に置く相互リンク（画像バナー） */
-.sister{display:block;margin:16px 12px 18px;padding:10px;background:#fff;border:1.5px solid var(--line)}
+/* 姉妹サイトバナー（2026-11-13）: プロフィールの下、フッターの上に置く相互リンク（画像バナー、枠なし・余白で分離） */
+.sister{display:block;margin:16px 12px 18px}
 .sister img{display:block;width:100%;height:auto}
 .catlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .catlinks a{border:1.5px solid var(--line);background:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 12px}
