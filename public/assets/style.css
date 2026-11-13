@@ -145,17 +145,17 @@ h3.blk{font-size:18px;font-weight:800;margin:26px 0 10px;border-bottom:2px solid
 .pick .fine{font-size:11px;color:var(--sub);margin-top:6px;text-align:center}
 /* カード内ボタンの下揃え（2026-11-13）: 横並びのカードでボタンの高さを揃える。ボタン群を下に寄せ、動画ボタンは本文側に残す */
 .pick{display:flex;flex-direction:column}
+.pick .why{flex:1}
 .pick .who{margin-bottom:10px}
 .pick .btn.vpop-open{margin-top:0;margin-bottom:8px}
 .pick>a.btn{order:10;margin-top:auto}
 .pick .ml-add{order:11}
 .pick .fine{order:12}
 .deal{display:flex;flex-direction:column}
-.deal p{margin-bottom:10px}
+.deal p{flex:1;margin-bottom:10px}
 .deal .btn{margin-top:auto}
-.feat-card{display:flex;flex-direction:column}
-.feat-card p{margin-bottom:10px}
-.feat-card .go{margin-top:auto;align-self:flex-start}
+.feat-card{position:relative;padding-bottom:62px}
+.feat-card .go{position:absolute;left:14px;bottom:14px;margin-top:0}
 .catlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .catlinks a{border:1.5px solid var(--line);background:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:7px 12px}
 .eyecatch{margin-top:14px;border:1.5px solid var(--line)}
