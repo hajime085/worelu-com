@@ -410,3 +410,12 @@ body.ml-lock{overflow:hidden}
 .svc .who b{color:var(--accent)}
 .svc .btn{display:block;text-align:center;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;padding:9px 10px;font-size:14px}
 .svc .fine{font-size:11px;color:var(--sub);margin-top:6px;text-align:center}
+
+/* サブスク特集：中の人ボックス・利用者の声（2026-11-13） */
+.naka{border:2px solid var(--navy);padding:14px;margin:14px 0;background:#fff}
+.naka .t{font-weight:900;font-size:14.5px;margin-bottom:4px}
+.naka p{font-size:13.5px;color:#333a44;margin:6px 0}
+.uvoice{background:#f7f8fa;border:1.5px solid var(--line);padding:12px 14px;margin:12px 0}
+.uvoice .t{font-weight:800;font-size:13.5px;margin-bottom:4px}
+.uvoice ul{margin:0;padding-left:18px;font-size:13px;color:#333a44}
+.uvoice li{margin:5px 0}
