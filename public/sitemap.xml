@@ -44,4 +44,9 @@
   <url><loc>https://worelu.com/feature/cleaning/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://worelu.com/feature/gift/</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://worelu.com/feature/bousai/</loc><lastmod>2026-11-12</lastmod></url>
+  <url>
+    <loc>https://worelu.com/feature/subscription/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
