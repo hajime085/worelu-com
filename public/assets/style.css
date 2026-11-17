@@ -425,3 +425,15 @@ body.ml-lock{overflow:hidden}
 .naka-hd{display:flex;align-items:center;gap:10px;margin-bottom:4px}
 .naka-hd img{width:40px;height:40px;border-radius:50%}
 .naka-hd .t{margin-bottom:0}
+
+/* 速報フィード（自動更新・2026-11-17） */
+.sk-card{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 10px;background:#fff;text-align:left}
+.sk-card-head{display:flex;align-items:center;gap:8px}
+.sk-ava{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
+.sk-card-who{flex:1;min-width:0}
+.sk-name{font-weight:800;font-size:13.5px;line-height:1.3}
+.sk-meta{font-size:11.5px;color:var(--sub);margin-top:1px}
+.sk-label{font-size:10.5px;font-weight:700;color:#fff;background:var(--accent);border-radius:999px;padding:2px 8px;flex:none}
+.sk-text{font-size:13.5px;line-height:1.65;margin:8px 0 0;word-break:break-word}
+.sk-card-link{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none}
+.sk-more{display:block;text-align:center;margin:2px 0 10px;padding:11px;border:1.5px solid var(--accent);border-radius:10px;color:var(--accent);font-weight:800;font-size:14px;text-decoration:none;background:#fff}
