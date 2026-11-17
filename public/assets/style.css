@@ -426,14 +426,29 @@ body.ml-lock{overflow:hidden}
 .naka-hd img{width:40px;height:40px;border-radius:50%}
 .naka-hd .t{margin-bottom:0}
 
-/* 速報フィード（自動更新・2026-11-17） */
-.sk-card{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 10px;background:#fff;text-align:left}
-.sk-card-head{display:flex;align-items:center;gap:8px}
+/* 速報フィード（自動更新・2026-11-17、X風カード） */
+.sk-card{display:flex;gap:10px;border:1px solid #e3e8ec;border-radius:16px;padding:12px 14px 8px;margin:0 0 10px;background:#fff;text-align:left}
 .sk-ava{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
-.sk-card-who{flex:1;min-width:0}
-.sk-name{font-weight:800;font-size:13.5px;line-height:1.3}
-.sk-meta{font-size:11.5px;color:var(--sub);margin-top:1px}
-.sk-label{font-size:10.5px;font-weight:700;color:#fff;background:var(--accent);border-radius:999px;padding:2px 8px;flex:none}
-.sk-text{font-size:13.5px;line-height:1.65;margin:8px 0 0;word-break:break-word}
-.sk-card-link{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none}
+.sk-main{flex:1;min-width:0}
+.sk-row{display:flex;align-items:baseline;gap:5px}
+.sk-name{font-weight:800;font-size:14px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sk-meta{font-size:13px;color:#536471;white-space:nowrap;flex:none}
+.sk-dots{margin-left:auto;color:#536471;flex:none;font-size:14px;line-height:1}
+.sk-text{font-size:14.5px;line-height:1.55;margin:2px 0 0;word-break:break-word;color:#0f1419}
+.sk-card-link{display:inline-block;margin-top:4px;font-size:14px;color:#1d9bf0;text-decoration:none;word-break:break-all}
+.sk-actions{display:flex;justify-content:space-between;max-width:300px;margin-top:8px;color:#536471}
+.sk-actions span{display:inline-flex}
+.sk-actions svg{width:17px;height:17px}
 .sk-more{display:block;text-align:center;margin:2px 0 10px;padding:11px;border:1.5px solid var(--accent);border-radius:10px;color:var(--accent);font-weight:800;font-size:14px;text-decoration:none;background:#fff}
+
+/* TOPクイックジャンプ＋モバイル圧縮（2026-11-17） */
+.quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.quick a{flex:1;text-align:center;border:1.5px solid var(--navy);color:var(--navy);font-weight:700;font-size:13px;padding:9px 4px;text-decoration:none;background:#fff;border-radius:999px;white-space:nowrap}
+.mcal-btn{display:none}
+@media (max-width:640px){
+  .hero{padding:14px}
+  .next-sale .mcal{display:none}
+  .next-sale .mcal.open{display:block}
+  .mcal-btn{display:block;width:100%;margin-top:12px;padding:11px;background:#fff;border:1.5px solid var(--navy);color:var(--navy);font-weight:800;font-size:14px;border-radius:10px;cursor:pointer;font:inherit}
+  .feat-card .thumb img{aspect-ratio:16/7.5}
+}
