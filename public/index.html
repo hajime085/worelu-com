@@ -818,6 +818,7 @@
     <a href="#guide" data-area-link="naruko">鳴子温泉</a>
     <a href="#guide" data-area-link="tamatsukuri">玉造温泉</a>
     <a href="#guide" data-area-link="naha">那覇・国際通り</a>
+    <a href="#guide" data-area-link="arima">有馬温泉</a>
   </div>
 
   <!-- FEATURE CAROUSEL -->
@@ -1901,6 +1902,58 @@
         {name:"幸ちゃんラーメン", signature:"博多ラーメン", walk:"国際通り・むつみ橋の近く", late:"24:00まで（土曜は翌2:00・日曜は22:00まで）", addr:"牧志2-3-1 K2ビル", text:"国際通り近くの博多ラーメンの店。麺の硬さと辛さが選べます。深夜まで開いていて、ホテル群からも歩ける距離です。", night:true, x:296, y:130, lat:26.2158, lng:127.6862},
         {name:"5＋4＋9ラーメン 那覇国際通り店", signature:"牛塩ラーメン", walk:"牧志駅から徒歩約2分", late:"翌2:30まで（夜のみ営業 19:30〜・L.O.2:00・水曜定休）", addr:"牧志3-13-12", text:"夜だけ開くラーメン居酒屋。看板は牛塩ラーメンで、キビまる豚の餃子も名物です。国際通りの東端、牧志駅の近くで、〆の一杯にちょうどいい一軒です。", night:true, x:392, y:118, lat:26.2170, lng:127.6908}
       ]
+    },
+    {
+      id:"arima", name:"有馬温泉", pref:"兵庫県", region:"kinki", img:"/assets/616d692db461c377.webp",
+      imgAlt:"有馬温泉の湯本坂と紅葉の山、金色に濁る湯と炭酸せんべい屋のイラスト",
+      desc:"日本三名泉のひとつ。茶褐色に濁る「金泉」と、無色透明の「銀泉」。正反対の2つの湯が、歩いて回れる小さな温泉街に湧きます。秋は瑞宝寺公園の紅葉が見頃です。",
+      tags:["金泉・銀泉","瑞宝寺公園の紅葉","日本三名泉"],
+      innCount:10, ramenCount:2, realMap:true, mapCenterName:"金の湯", staticMap:"/assets/3d82747f7ebbac14.webp",
+      center:{label:"金の湯", x:163, y:132},
+      mapVB:"0 0 440 300", r5:75, r10:150,
+      mapCaption:"実座標で作図（約4m／px）。円は道のり換算の徒歩5分・10分圏の目安",
+      mapNote:"ピンは住所・公式情報をもとに実際の位置へ置いています（中心部はピンが重なるため少しずらして表示）。破線の円は道のり換算の目安で、半径は直線で約300m（徒歩5分圏）と約600m（徒歩10分圏）です。瑞宝寺公園は金の湯から東へ坂道を上った先にあり、徒歩約20分で円の外です。月光園の2軒と亀の井ホテルは温泉街の南寄りです。各ピンの詳細に住所とGoogleマップへのリンクを付けたので、そのまま照合できます。",
+      scenery:'<rect x="0" y="0" width="440" height="300" fill="#FBF3E2"/><path d="M300 0 L440 0 L440 300 L352 300 C340 210 330 120 322 60 C316 20 308 6 300 0 Z" fill="#F3D9B8"/><g fill="#E8875B"><circle cx="368" cy="52" r="17"/><circle cx="402" cy="86" r="20"/><circle cx="356" cy="112" r="14"/><circle cx="398" cy="150" r="16"/><circle cx="366" cy="196" r="15"/></g><g fill="#D95F43"><circle cx="388" cy="30" r="12"/><circle cx="342" cy="80" r="12"/><circle cx="382" cy="118" r="13"/><circle cx="352" cy="160" r="11"/><circle cx="404" cy="216" r="12"/></g><path d="M96 300 C104 240 92 210 104 168 C114 132 100 84 112 0" fill="none" stroke="#AEDCF5" stroke-width="7" stroke-linecap="round"/><g fill="none" stroke="#C3CED4" stroke-linecap="round" stroke-linejoin="round"><path d="M60 0 C110 60 140 96 163 132 C186 168 210 220 236 300" stroke-width="10"/><path d="M163 132 C210 138 280 150 348 168" stroke-width="7"/><path d="M163 132 C150 190 140 240 138 300" stroke-width="7"/></g><g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"><path d="M60 0 C110 60 140 96 163 132 C186 168 210 220 236 300" stroke-width="6"/><path d="M163 132 C210 138 280 150 348 168" stroke-width="3.5"/><path d="M163 132 C150 190 140 240 138 300" stroke-width="3.5"/></g><g fill="#F6DDB9" stroke="#DDB98C" stroke-width="1.2"><rect x="196" y="96" width="18" height="12"/><rect x="150" y="180" width="20" height="13"/><rect x="238" y="150" width="16" height="11"/></g><g><rect x="149" y="114" width="28" height="18" rx="3" fill="#FFFFFF" stroke="#43302A" stroke-width="2.2"/><path d="M153 114 L163 104 L173 114" fill="none" stroke="#FF7A4D" stroke-width="3" stroke-linecap="round"/><circle cx="163" cy="122" r="3.2" fill="#FF5C8A"/></g><g transform="translate(352,276)"><rect x="0" y="-4" width="25" height="4" fill="#43302A"/><rect x="25" y="-4" width="25" height="4" fill="#FFFFFF" stroke="#43302A" stroke-width="1"/><text x="25" y="12" text-anchor="middle" font-size="8.5" font-weight="700" fill="#43302A">200m</text></g><text class="lbl" x="330" y="248" font-size="9">瑞宝寺公園</text><text class="lbl" x="66" y="200" font-size="8.5">有馬川</text><text class="lbl" x="196" y="128" font-size="8.5">湯本坂</text><text class="lbl" x="36" y="26" font-size="8.5">有馬温泉駅</text>',
+      about:"日本三名泉のひとつに数えられる、六甲山の北側の温泉地です。見どころは泉質の対比で、鉄分と塩分を含み空気に触れて茶褐色に濁る「金泉」と、炭酸泉・ラジウム泉で無色透明の「銀泉」が、歩ける距離に湧いています。外湯の金の湯・銀の湯を中心に、湯本坂の土産物店、秀吉ゆかりの太閤の湯殿館、紅葉の瑞宝寺公園まで、温泉街は徒歩で回れる大きさです。神戸・三宮から電車で約30分、大阪からも約1時間と、関西の都市からの日帰り・週末旅にちょうどいい距離にあります。",
+      facts:[
+        {cls:"fact-spring", label:"泉質", val:"金泉（含鉄・ナトリウム・塩化物強塩高温泉）と銀泉（炭酸泉・ラジウム泉）の2種"},
+        {cls:"fact-season", label:"ベストシーズン", val:"11月の瑞宝寺公園の紅葉。外湯めぐりは通年"},
+        {cls:"fact-access", label:"アクセス", val:"神戸・三宮から電車で約30分／大阪・梅田から高速バスで約55分"}
+      ],
+      spots:[
+        {name:"金の湯", meta:"外湯 ・ 8:00〜22:00（最終受付21:30）／大人800円（平日650円）・第2・第4火曜休", addr:"神戸市北区有馬町833", text:"金泉の外湯。鉄分と塩分を多く含む湯は空気に触れて茶褐色に濁り、湯船に浸かると体の芯から温まります。入口には無料の足湯もあります。銀の湯との2館券は1,200円です。", x:163, y:132, lat:34.79679, lng:135.24797},
+        {name:"銀の湯", meta:"外湯 ・ 9:00〜21:00（最終受付20:30）／大人700円（平日550円）・第1・第3火曜休", addr:"神戸市北区有馬町1039-1", text:"銀泉の外湯。炭酸泉とラジウム泉からなる無色透明の湯で、金の湯の茶褐色とは正反対の見た目です。2つの湯を同じ日に比べるのが有馬の楽しみ方です。", x:205, y:196, lat:34.79551, lng:135.24891},
+        {name:"瑞宝寺公園", meta:"入園無料 ・ 紅葉の見頃は11月上旬〜下旬", text:"約2,000本を超えるモミジ・カエデが色づく紅葉の名所。秀吉が愛でて「日暮らしの庭」と称えたと伝わる庭で、石の碁盤や旧瑞宝寺の山門が残ります。紅葉期には「もみじ茶屋」も開きます。温泉街からは坂道を上って徒歩約20分です。", x:405, y:187, lat:34.79535, lng:135.25560},
+        {name:"太閤の湯殿館", meta:"9:00〜17:00（入館16:30まで）／一般200円・第2水曜休", addr:"神戸市北区有馬町1642", text:"秀吉の「湯山御殿」の跡に建つ資料館。発掘された岩風呂や蒸し風呂の遺構と、出土品を展示しています。有馬と秀吉の関わりが分かる、小さくても見応えのある一館です。", x:176, y:186, lat:34.79572, lng:135.24861},
+        {name:"湯本坂", meta:"金の湯から上る温泉街のメインストリート", addr:"神戸市北区有馬町809（三津森本舗）", text:"土産物店が並ぶ、有馬の目抜き通りの坂道。名物は炭酸泉を使って明治末期に生まれた「炭酸せんべい」で、元祖の三津森本舗では手焼きの実演が見られます。ピンは三津森本舗の位置です。", x:186, y:118, lat:34.79675, lng:135.24830},
+        {name:"有馬の工房", meta:"9:00〜18:00／ギャラリー入場無料・第4火曜休", addr:"神戸市北区有馬町1019", text:"神戸市立有馬温泉観光交流センター内の工房。金の湯と銀の湯の中間、寺町の界隈にあり、有馬の伝統工芸の展示と体験ができます。外湯めぐりの合間の休憩にも向きます。", x:158, y:158, lat:34.79615, lng:135.24825}
+      ],
+      course:[
+        {t:"14:00", w:"有馬温泉駅着。<b>湯本坂</b>を上って、三津森本舗で焼きたての<b>炭酸せんべい</b>"},
+        {t:"15:00", w:"<b>太閤の湯殿館</b>で秀吉の岩風呂の遺構を見る（入館16:30まで）"},
+        {t:"16:00", w:"<b>瑞宝寺公園</b>の紅葉。紅葉期だけ開く「もみじ茶屋」でひと休み"},
+        {t:"17:30", w:"<b>金の湯</b>で茶褐色の金泉に浸かる（22:00まで）"},
+        {t:"19:00", w:"宿で夕食"},
+        {t:"20:15", w:"<b>銀の湯</b>で無色透明の銀泉（最終受付20:30）。金と銀、2つの湯を同じ日に"},
+        {t:"翌 9:30", w:"<b>有馬の工房</b>と寺町の界隈を散策"},
+        {t:"翌 11:30", w:"駅前の<b>青龍居</b>で鴨肉の有馬ラーメンを食べて帰路へ"}
+      ],
+      inns:[
+        {name:"兵衛向陽閣", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F8636%2F8636.html&link_type=text", badges:[], price:"¥17,600", note:"料金は最安プランの目安（2026年11月確認）", state:"創業700年の老舗 ・ 金泉の大浴場3つ", addr:"神戸市北区有馬町1904", rating:"4.58", reviews:"2,704", text:"創業700年と伝わる有馬の老舗。金泉の大浴場が一の湯・二の湯・三の湯と3つあり、貸切露天風呂と部屋食のプランもあります。楽天トラベルの総合評価4.58、口コミ2,704件です。", theme:["kashikiri","heya-shoku"], x:200, y:65, lat:34.79855, lng:135.24913},
+        {name:"中の坊 瑞苑", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F25288%2F25288.html&link_type=text", badges:[], price:"¥28,750", note:"料金は最安プランの目安（2026年11月確認）", state:"13歳未満は利用できない大人の宿 ・ 金泉と銀泉", addr:"神戸市北区有馬町808", rating:"4.74", reviews:"806", text:"13歳未満は利用できない、大人のための宿。金泉と銀泉の両方に浸かれます。楽天トラベルの総合評価4.74は有馬でも最高クラスで、夕食4.80・朝食4.82と食事の評価も高い一軒です。", theme:["kashikiri","heya-shoku"], x:165, y:98, lat:34.79767, lng:135.24803},
+        {name:"有馬グランドホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F25128%2F25128.html&link_type=text", badges:[], price:"¥17,050", note:"料金は最安プランの目安（2026年11月確認）", state:"丘の上 ・ 最上階の展望大浴苑「雲海」", addr:"神戸市北区有馬町1304-1", rating:"4.67", reviews:"1,849", text:"温泉街を見下ろす丘の上のホテル。最上階の展望大浴苑「雲海」で金泉と銀泉の両方が楽しめます。貸切風呂と部屋食のプランもあります。", theme:["kashikiri","heya-shoku"], x:35, y:79, lat:34.79817, lng:135.24392},
+        {name:"有馬御苑", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F1206%2F1206.html&link_type=text", badges:[], price:"¥10,890", note:"料金は最安プランの目安（2026年11月確認）", state:"有馬温泉駅から徒歩約2分 ・ 金泉・銀泉と神戸牛", addr:"神戸市北区有馬町1296", rating:"4.39", reviews:"2,992", text:"駅から徒歩約2分の立地で、金泉と銀泉の両方に浸かれる宿。神戸牛の料理と部屋食のプランがあります。口コミ2,992件と利用者の多い一軒です。", theme:["heya-shoku"], x:126, y:88, lat:34.79794, lng:135.24679},
+        {name:"月光園 鴻朧館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F18252%2F18252.html&link_type=text", badges:[], price:"¥17,380", note:"料金は最安プランの目安（2026年11月確認）", state:"自家泉源の金泉かけ流し ・ 落葉山と滝川を望む", addr:"神戸市北区有馬町318", rating:"4.53", reviews:"1,719", text:"有馬でも数少ない自家泉源を持つ宿で、金泉のかけ流しと銀泉に浸かれます。落葉山と滝川を望む立地で、家族風呂と部屋食のプランもあります。", theme:["kashikiri","heya-shoku"], x:103, y:211, lat:34.79470, lng:135.24606},
+        {name:"月光園 游月山荘", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F18251%2F18251.html&link_type=text", badges:[], price:"¥20,900", note:"料金は最安プランの目安（2026年11月確認）", state:"鴻朧館の姉妹館 ・ 露天風呂つき客室あり", addr:"神戸市北区有馬町318", rating:"4.25", reviews:"1,503", text:"鴻朧館の姉妹館。自家泉源の金泉かけ流しで、露天風呂つき客室と部屋食のプランがあります。館内の麺処「一心亭」は夜だけ開く、宿泊の〆の一杯です。", theme:["roten","heya-shoku"], x:118, y:228, lat:34.79444, lng:135.24620},
+        {name:"有馬きらり", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F16246%2F16246.html&link_type=text", badges:[], price:"¥14,150", note:"料金は最安プランの目安（2026年11月確認）", state:"日帰り温泉「太閤の湯」併設 ・ 宿泊者は無料", addr:"神戸市北区有馬町池の尻292-2", rating:"4.25", reviews:"1,786", text:"金泉・銀泉・炭酸泉（人工）の26種の風呂と岩盤浴がある日帰り温泉「太閤の湯」を併設し、宿泊者は無料で入れます。湯めぐりをたっぷり楽しみたい旅に向く一軒です。", theme:[], x:249, y:90, lat:34.79790, lng:135.25068},
+        {name:"亀の井ホテル 有馬", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F49358%2F49358.html&link_type=text", badges:[], price:"¥15,332", note:"料金は最安プランの目安（2026年11月確認）", state:"自家泉源の金泉かけ流し ・ 2025年8月にリニューアル", addr:"神戸市北区有馬町1617-1", rating:"4.15", reviews:"1,215", text:"自家泉源の金泉かけ流しのホテル。2025年8月にリニューアルしています。有馬温泉駅からは送迎があり、温泉街の南寄りにあります。", theme:[], x:186, y:240, lat:34.79395, lng:135.24867},
+        {name:"有馬ロイヤルホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F15232%2F15232.html&link_type=text", badges:[], price:"¥7,150", note:"料金は最安プランの目安（2026年11月確認）", state:"温泉街の中心 ・ 金泉（含鉄強食塩泉）", addr:"神戸市北区有馬町987", rating:"4.19", reviews:"2,151", text:"温泉街の中心に立つホテルで、散策の拠点にしやすい立地です。湯は金泉（含鉄強食塩泉）。有馬では手頃な価格帯の一軒です。", theme:[], x:147, y:175, lat:34.79565, lng:135.24745},
+        {name:"御幸荘 花結び", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F9576%2F9576.html&link_type=text", badges:[], price:"¥21,549", note:"料金は最安プランの目安（2026年11月確認）", state:"金泉・銀泉 ・ 露天風呂つき客室あり", addr:"神戸市北区有馬町351", rating:"4.29", reviews:"2,647", text:"金泉と銀泉の両方に浸かれる旅館。露天風呂つき客室があり、人気のプランは部屋食です。口コミ2,647件と利用者の多い一軒です。", theme:["roten","heya-shoku"], x:312, y:162, lat:34.79601, lng:135.25267}
+      ],
+      ramens:[
+        {name:"有馬ラー麺 青龍居", signature:"有馬（鴨肉）ラーメン", walk:"有馬温泉駅から徒歩約1分", late:"昼11:30〜15:00／夜17:00〜（麺がなくなり次第終了）・木曜定休", addr:"神戸市北区有馬町1298-3", text:"駅から徒歩約1分のラーメン店。看板はレアな鴨肉がのる「有馬ラーメン」です。Google評価4.3（101件）。夜の部は麺がなくなり次第終わるので、〆に使うなら早めの時間が確実です。", night:false, x:122, y:50, lat:34.79894, lng:135.24665},
+        {name:"麺所 一心亭", signature:"味噌ラーメン", walk:"月光園 游月山荘の館内（駅から徒歩約9分）", late:"21:00〜24:00（夜のみ）", addr:"神戸市北区有馬町318（月光園 游月山荘内）", text:"月光園 游月山荘の館内にある、夜だけ開く麺処。21時から24時まで営業し、味噌ラーメンが人気です。月光園に泊まった夜の、湯上がりの〆にちょうどいい一杯です。", night:true, x:128, y:236, lat:34.79444, lng:135.24620}
+      ]
     }
   ];
 
@@ -1938,14 +1991,14 @@
     "愛媛県":{id:"dogo", label:"道後温泉"},
     "新潟県":{id:"yuzawa", label:"越後湯沢"},
     "長野県":{id:"nozawa", label:"野沢温泉"},
-    "兵庫県":{id:"kinosaki", label:"城崎温泉"},
     "岐阜県":{id:"gero", label:"下呂温泉"},
     "大分県":{id:"beppu", label:"別府温泉"}
   };
   /* prefectures with more than one published area: the popup lists each area */
   var PREF_AREAS = {
     "石川県":[{id:"yamashiro", label:"山代温泉"},{id:"wakura", label:"和倉温泉"}],
-    "群馬県":[{id:"kusatsu", label:"草津温泉"},{id:"ikaho", label:"伊香保温泉"}]
+    "群馬県":[{id:"kusatsu", label:"草津温泉"},{id:"ikaho", label:"伊香保温泉"}],
+    "兵庫県":[{id:"kinosaki", label:"城崎温泉"},{id:"arima", label:"有馬温泉"}]
   };
   function prefAreas(p){
     if(PREF_AREAS[p]) return PREF_AREAS[p];
@@ -2224,7 +2277,7 @@
     { label:"関東", ids:["kusatsu","hakone","ikaho"] },
     { label:"中部", ids:["yuzawa","nozawa","gero"] },
     { label:"北陸", ids:["yamashiro","wakura"] },
-    { label:"近畿", ids:["kinosaki"] },
+    { label:"近畿", ids:["kinosaki","arima"] },
     { label:"中国", ids:["tamatsukuri"] },
     { label:"四国", ids:["dogo"] },
     { label:"九州", ids:["beppu"] },
@@ -2273,7 +2326,7 @@
   }
 
   /* --- deep links: each area guide has its own URL hash (#kusatsu,
-     #hakone, #dogo, #yamashiro, #wakura, #yuzawa, #nozawa, #ikaho, #kinosaki, #gero, #beppu, #noboribetsu, #naruko, #tamatsukuri, #naha) so posts can
+     #hakone, #dogo, #yamashiro, #wakura, #yuzawa, #nozawa, #ikaho, #kinosaki, #gero, #beppu, #noboribetsu, #naruko, #tamatsukuri, #naha, #arima) so posts can
      link straight to one area. Opening an area rewrites the hash with
      replaceState (no scroll, no extra history entry); the timeout lets a
      clicked <a href="#guide"> finish its own jump first. Section anchors
