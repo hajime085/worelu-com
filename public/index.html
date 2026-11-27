@@ -566,6 +566,23 @@
   footer{margin-top:44px;border-top:3px dashed var(--line);padding:22px 0 110px;}
   @media(min-width:760px){footer{padding-bottom:30px;}}
   footer p{font-size:12.5px;color:var(--ink-soft);font-weight:500;margin:0 0 6px;}
+  .foot-main{margin-bottom:16px;padding-bottom:18px;border-bottom:2px dashed var(--line);}
+  footer .foot-copy{font-size:15px;font-weight:800;color:var(--ink);margin:0 0 12px;}
+  .foot-links{display:flex;flex-wrap:wrap;gap:8px;}
+  .foot-links a,.foot-links button{
+    display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;
+    background:var(--surface);border:2px solid var(--ink);border-radius:6px;box-shadow:0 2px 0 var(--ink);
+    font-size:13px;font-weight:800;color:var(--ink);text-decoration:none;line-height:1.4;
+  }
+  .foot-links a:active,.foot-links button:active{transform:translateY(2px);box-shadow:none;}
+
+  /* legal popup (privacy policy / disclaimer) */
+  .legal-pop-box{max-width:560px;}
+  .legal-body h4{font-size:14.5px;font-weight:800;margin:16px 0 4px;}
+  .legal-body h4:first-child{margin-top:6px;}
+  .legal-body p{font-size:13.5px;font-weight:500;color:var(--ink-soft);margin:0 0 6px;}
+  .legal-pop-box .btn{width:100%;}
+  .legal-back{margin-top:18px;}
 
   /* ---------- bottom nav (mobile) ---------- */
   .bottomnav{
@@ -1014,6 +1031,19 @@
     </div>
   </div>
 
+  <!-- LEGAL POPUP (privacy policy / disclaimer) -->
+  <div class="pref-pop legal-pop" id="legalPop" hidden role="dialog" aria-modal="true" aria-labelledby="legalPopTitle">
+    <div class="pref-pop-backdrop" data-legal-close></div>
+    <div class="pref-pop-box legal-pop-box">
+      <div class="pref-pop-head">
+        <h3 id="legalPopTitle">プライバシーポリシー</h3>
+        <button type="button" class="pref-pop-close" id="legalPopClose" aria-label="閉じる"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="legal-body" id="legalPopBody"></div>
+      <button type="button" class="btn legal-back" data-legal-close>閉じる</button>
+    </div>
+  </div>
+
   <!-- GUIDE -->
   <section class="block wrap" id="guide">
     <div class="sec-head">
@@ -1043,6 +1073,15 @@
 
   <footer>
     <div class="wrap">
+      <div class="foot-main">
+        <p class="foot-copy">© 2026 今夜の宿と一杯</p>
+        <nav class="foot-links" aria-label="サイト情報">
+          <button type="button" data-legal="privacy">プライバシーポリシー</button>
+          <button type="button" data-legal="disclaimer">免責事項</button>
+          <a href="#about">このサイトについて</a>
+          <a href="https://www.threads.com/@hiyoko_web" target="_blank" rel="noopener">お問い合わせ（ThreadsのDMへ）</a>
+        </nav>
+      </div>
       <p><b>今夜の宿と一杯</b>：宿と、歩いて行けるラーメンだけの温泉ガイド</p>
       <p>宿・店・見どころは実在の施設で、情報は2026年11月に確認したものです。料金は目安表示です。</p>
       <p>宿の予約リンクは楽天トラベルへつながります。</p>
@@ -2574,6 +2613,71 @@
   });
   document.addEventListener("keydown", function(e){
     if(e.key === "Escape") closeInnPop();
+  });
+
+  /* --- legal popup (privacy policy / disclaimer) --- */
+  var legalPop = document.getElementById("legalPop");
+  var legalPopTitle = document.getElementById("legalPopTitle");
+  var legalPopBody = document.getElementById("legalPopBody");
+  var legalPopClose = document.getElementById("legalPopClose");
+  var lastLegalBtn = null;
+  var LEGAL = {
+    privacy: {
+      title: "プライバシーポリシー",
+      html:
+        '<h4>個人情報の取り扱い</h4>'
+        + '<p>当サイトは、氏名・住所・メールアドレスなどの個人情報を入力していただくフォームを設けていません。</p>'
+        + '<h4>宿の予約について</h4>'
+        + '<p>宿の予約は楽天トラベルのサイト上で行われます。予約の際に楽天トラベルへ入力した情報が、当サイトに渡ることはありません。</p>'
+        + '<h4>Cookieについて</h4>'
+        + '<p>当サイトは楽天アフィリエイトに参加しています。リンク先のサイトでは、成果の計測などのためにCookieが使用される場合があります。Cookieの取り扱いは、リンク先サイトの方針によります。</p>'
+        + '<h4>お問い合わせについて</h4>'
+        + '<p>お問い合わせはThreads（@hiyoko_web）のDMで受け付けています。いただいた内容は、返信の目的以外には使いません。</p>'
+        + '<h4>ポリシーの変更</h4>'
+        + '<p>このポリシーを変更した場合は、このページでお知らせします。</p>'
+    },
+    disclaimer: {
+      title: "免責事項",
+      html:
+        '<h4>掲載情報について</h4>'
+        + '<p>掲載している料金・空室状況・営業時間などの情報は、確認した時点のものです。実際の内容と異なる場合があるので、最新の情報は各施設の公式情報と楽天トラベルのページでご確認ください。</p>'
+        + '<h4>予約の条件について</h4>'
+        + '<p>予約の条件やキャンセル規定は、楽天トラベルの表示が正式なものです。</p>'
+        + '<h4>情報の正確さについて</h4>'
+        + '<p>掲載情報は公式サイトや観光協会などの情報で確認していますが、正確さと最新性を保証するものではありません。</p>'
+        + '<h4>責任について</h4>'
+        + '<p>当サイトやリンク先の利用によって生じたトラブルについて、運営者は責任を負いかねます。</p>'
+    }
+  };
+  function openLegalPop(kind, btn){
+    var doc = LEGAL[kind];
+    if(!doc) return;
+    lastLegalBtn = btn || null;
+    legalPopTitle.textContent = doc.title;
+    legalPopBody.innerHTML = doc.html;
+    legalPop.hidden = false;
+    document.body.style.overflow = "hidden";
+    var box = legalPop.querySelector(".legal-pop-box");
+    if(box) box.scrollTop = 0;
+    legalPopClose.focus();
+  }
+  function closeLegalPop(){
+    if(legalPop.hidden) return;
+    legalPop.hidden = true;
+    document.body.style.overflow = "";
+    if(lastLegalBtn && lastLegalBtn.focus) lastLegalBtn.focus();
+  }
+  document.querySelectorAll("[data-legal]").forEach(function(el){
+    el.addEventListener("click", function(){
+      openLegalPop(el.getAttribute("data-legal"), el);
+    });
+  });
+  legalPopClose.addEventListener("click", closeLegalPop);
+  legalPop.querySelectorAll("[data-legal-close]").forEach(function(el){
+    el.addEventListener("click", closeLegalPop);
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeLegalPop();
   });
 
   /* --- spot popup (area map pins) --- */
