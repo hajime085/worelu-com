@@ -628,6 +628,27 @@
     .car-dots{gap:5px;}
     .car-dot{width:9px;height:9px;}
     .car-arrow{width:36px;height:36px;}
+    /* compact feature carousel on phones: about half the previous height.
+       Image row halves (168px -> 80px), type shrinks, the description is
+       capped at 3 lines and the title at 2, and the nav row slims down. */
+    .car-slide{min-height:0;padding:12px 14px 46px;grid-template-rows:auto 80px;gap:8px;}
+    .car-text{gap:4px;}
+    .car-slide .car-tag{font-size:10.5px;padding:3px 8px;}
+    .car-slide h3{
+      font-size:16px;line-height:1.3;
+      display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .car-slide p{
+      font-size:12.5px;line-height:1.5;
+      display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .car-tags{gap:5px;}
+    .car-tags .tag{font-size:11px;padding:3px 8px;}
+    .car-nav{padding:4px 10px;gap:6px;}
+    .car-dots{gap:4px;}
+    .car-dot{width:8px;height:8px;border-width:1.5px;}
+    .car-arrow{width:26px;height:26px;border-width:1.5px;box-shadow:0 1px 0 var(--ink);}
+    .car-arrow svg{width:13px;height:13px;}
   }
   @media(max-width:560px){
     /* keep the area map bleeding to the panel edge at the new guide padding */
