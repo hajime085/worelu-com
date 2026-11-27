@@ -137,20 +137,13 @@
   .btn-rakuten{background:#BF0000;color:#fff;}
   .hero-note{margin-top:16px;font-size:12.5px;color:var(--ink-soft);background:var(--surface-2);border:2px solid var(--line);border-radius:6px;padding:10px 14px;font-weight:500;}
 
-  /* ---------- quick links to published areas (under hero) ---------- */
-  .area-quick{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:20px;}
-  .area-quick-label{font-size:12.5px;font-weight:800;color:var(--ink-soft);margin-right:2px;}
-  .area-quick a{
-    font-size:13.5px;font-weight:800;color:var(--ink);text-decoration:none;background:var(--surface);
-    border:2px solid var(--ink);border-radius:6px;padding:8px 14px;box-shadow:0 3px 0 var(--line);
-  }
-  .area-quick a:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line);}
-  @media(max-width:560px){
-    .area-quick{gap:6px;}
-    .area-quick-label{font-size:11.5px;}
-    .area-quick a{font-size:12px;padding:6px 7px;}
-  }
-  /* phone: tighten the hero stack so the last quick-link row clears the fixed bottom nav */
+  /* ---------- representative areas (under hero) ---------- */
+  .rep-areas{padding-top:20px;}
+  .rep-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  @media(min-width:760px){.rep-grid{grid-template-columns:repeat(3,1fr);gap:12px;}}
+  a.ap-card{text-decoration:none;}
+  .rep-more{display:flex;justify-content:center;margin-top:16px;}
+  /* phone: tighten the hero stack so the first screen clears the fixed bottom nav */
   @media(max-width:759px){
     .hero{padding-top:8px;}
     .hero-head{padding:16px 16px 14px;}
@@ -159,8 +152,7 @@
     .hero-lead{font-size:14.5px;line-height:1.55;margin-bottom:12px;}
     .hero .btn{min-height:44px;padding:10px 18px;}
     .hero-note{margin-top:10px;padding:7px 12px;}
-    .area-quick{margin-top:8px;}
-    .area-quick a{padding:4px 7px;}
+    .rep-areas{padding-top:14px;}
   }
 
   /* ---------- feature carousel ---------- */
@@ -800,30 +792,43 @@
     </div>
   </div>
 
-  <!-- QUICK LINKS: published areas -->
-  <div class="wrap area-quick" aria-label="公開中のエリアへのリンク">
-    <span class="area-quick-label">公開中のエリア</span>
-    <a href="#guide" data-area-link="kusatsu">草津温泉</a>
-    <a href="#guide" data-area-link="hakone">箱根湯本</a>
-    <a href="#guide" data-area-link="dogo">道後温泉</a>
-    <a href="#guide" data-area-link="yamashiro">山代温泉</a>
-    <a href="#guide" data-area-link="wakura">和倉温泉</a>
-    <a href="#guide" data-area-link="yuzawa">越後湯沢</a>
-    <a href="#guide" data-area-link="nozawa">野沢温泉</a>
-    <a href="#guide" data-area-link="ikaho">伊香保温泉</a>
-    <a href="#guide" data-area-link="kinosaki">城崎温泉</a>
-    <a href="#guide" data-area-link="gero">下呂温泉</a>
-    <a href="#guide" data-area-link="beppu">別府温泉</a>
-    <a href="#guide" data-area-link="yufuin">由布院温泉</a>
-    <a href="#guide" data-area-link="kurokawa">黒川温泉</a>
-    <a href="#guide" data-area-link="noboribetsu">登別温泉</a>
-    <a href="#guide" data-area-link="naruko">鳴子温泉</a>
-    <a href="#guide" data-area-link="ginzan">銀山温泉</a>
-    <a href="#guide" data-area-link="tamatsukuri">玉造温泉</a>
-    <a href="#guide" data-area-link="naha">那覇・国際通り</a>
-    <a href="#guide" data-area-link="arima">有馬温泉</a>
-    <a href="#guide" data-area-link="atami">熱海温泉</a>
-  </div>
+  <!-- REPRESENTATIVE AREAS: 6 picks under the hero (all 20 areas live in 温泉地から探す) -->
+  <section class="wrap rep-areas" aria-labelledby="repAreasTitle">
+    <div class="sec-head">
+      <span class="sec-icon" style="background:var(--mint-soft);color:var(--mint)" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+      <h2 id="repAreasTitle">代表エリア</h2>
+    </div>
+    <p class="sec-sub">まずはこの6エリアから。タップすると、その温泉地のガイドが開きます。</p>
+    <div class="rep-grid">
+      <a class="ap-card" href="#guide" data-area-link="kusatsu">
+        <img src="/assets/822dba9913f6eee7.webp" alt="草津温泉の湯畑と雪の温泉街のイラスト" loading="lazy" />
+        <span class="ap-info"><span class="ap-name">草津温泉</span><span class="ap-pref">群馬県</span><span class="ap-counts">宿10軒 ・ ラーメン4軒</span></span>
+      </a>
+      <a class="ap-card" href="#guide" data-area-link="arima">
+        <img src="/assets/616d692db461c377.webp" alt="有馬温泉の湯本坂と紅葉の山、金色に濁る湯と炭酸せんべい屋のイラスト" loading="lazy" />
+        <span class="ap-info"><span class="ap-name">有馬温泉</span><span class="ap-pref">兵庫県</span><span class="ap-counts">宿10軒 ・ ラーメン2軒</span></span>
+      </a>
+      <a class="ap-card" href="#guide" data-area-link="atami">
+        <img src="/assets/ad4c2e105c0897bb.webp" alt="熱海温泉のサンビーチと相模湾、丘の上の熱海城、湯けむりの温泉街とのれんのラーメン屋のイラスト" loading="lazy" />
+        <span class="ap-info"><span class="ap-name">熱海温泉</span><span class="ap-pref">静岡県</span><span class="ap-counts">宿10軒 ・ ラーメン3軒</span></span>
+      </a>
+      <a class="ap-card" href="#guide" data-area-link="kinosaki">
+        <img src="/assets/423e2357a789cafe.webp" alt="雪の城崎温泉で大谿川の柳並木と石橋、浴衣で歩く人とカニのイラスト" loading="lazy" />
+        <span class="ap-info"><span class="ap-name">城崎温泉</span><span class="ap-pref">兵庫県</span><span class="ap-counts">宿10軒 ・ ラーメン3軒</span></span>
+      </a>
+      <a class="ap-card" href="#guide" data-area-link="ginzan">
+        <img src="/assets/f2de06e5869e39c5.webp" alt="雪の銀山温泉で銀山川の両岸に木造旅館が並び、ガス灯と橋、奥に白銀の滝が見えるイラスト" loading="lazy" />
+        <span class="ap-info"><span class="ap-name">銀山温泉</span><span class="ap-pref">山形県</span><span class="ap-counts">宿7軒 ・ 夜の一杯3軒</span></span>
+      </a>
+      <a class="ap-card" href="#guide" data-area-link="beppu">
+        <img src="/assets/d22a625d1aaf40fa.webp" alt="湯けむりの立ちのぼる別府の温泉街と別府タワー、唐破風の竹瓦温泉と別府湾、浴衣の人のイラスト" loading="lazy" />
+        <span class="ap-info"><span class="ap-name">別府温泉</span><span class="ap-pref">大分県</span><span class="ap-counts">宿10軒 ・ ラーメン5軒</span></span>
+      </a>
+    </div>
+    <div class="rep-more">
+      <a class="btn" href="#search"><svg class="ic" aria-hidden="true"><use href="#i-map"/></svg>すべての温泉地を見る<svg class="ic" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+    </div>
+  </section>
 
   <!-- FEATURE CAROUSEL -->
   <div class="wrap features" id="features">
@@ -974,24 +979,24 @@
       </div>
       </div>
     </div>
+    <!-- STEP 2: PREFECTURE POPUP (opens when a STEP 1 region is chosen; kept here so DOM / reading order is STEP 1 -> STEP 2 -> STEP 3) -->
+    <div class="pref-pop" id="prefPop" hidden role="dialog" aria-modal="true" aria-labelledby="prefPopTitle">
+      <div class="pref-pop-backdrop" data-pop-close></div>
+      <div class="pref-pop-box">
+        <div class="pref-pop-head">
+          <h3 id="prefPopTitle">地方の都道府県</h3>
+          <button type="button" class="pref-pop-close" id="prefPopClose" aria-label="都道府県の選択を閉じる"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+        </div>
+        <p class="pref-pop-sub">STEP 2｜都道府県を選んでください。公開中の都道府県は、そのまま温泉地のガイドへ移動します。準備中の都道府県はまだ選べません。</p>
+        <div class="pref-pop-list" id="prefPopList"></div>
+        <p class="pref-pop-note" id="prefPopNote" role="status"></p>
+      </div>
+    </div>
+
     <h3 class="step3-title">STEP 3｜温泉地を選ぶ</h3>
     <p class="step3-sub">公開中のエリアです。都道府県（STEP 2）から選んでも、ここから選んでも、同じエリアガイドが開きます。1エリアずつ深く作っていて、地元・北陸の山代温泉と和倉温泉は掲載を多めにしました。</p>
     <div class="area-grid" id="areaGrid"></div>
   </section>
-
-  <!-- PREFECTURE POPUP -->
-  <div class="pref-pop" id="prefPop" hidden role="dialog" aria-modal="true" aria-labelledby="prefPopTitle">
-    <div class="pref-pop-backdrop" data-pop-close></div>
-    <div class="pref-pop-box">
-      <div class="pref-pop-head">
-        <h3 id="prefPopTitle">地方の都道府県</h3>
-        <button type="button" class="pref-pop-close" id="prefPopClose" aria-label="都道府県の選択を閉じる"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
-      </div>
-      <p class="pref-pop-sub">STEP 2｜都道府県を選んでください。公開中の都道府県は、そのまま温泉地のガイドへ移動します。準備中の都道府県はまだ選べません。</p>
-      <div class="pref-pop-list" id="prefPopList"></div>
-      <p class="pref-pop-note" id="prefPopNote" role="status"></p>
-    </div>
-  </div>
 
   <!-- SPOT POPUP (area map pin detail, opens in place) -->
   <div class="pref-pop spot-pop" id="spotPop" hidden role="dialog" aria-modal="true" aria-labelledby="spotPopTitle">
@@ -2266,9 +2271,14 @@
       .sort(function(x, y){ return x.dist - y.dist; });
   }
   function nearRamenLine(a, inn){
+    /* Card-surface line for the single nearest shop, reusing the same
+       coordinate-based calculation as the inn detail view. Shown only
+       when the inn itself has verified coordinates and at least one
+       shop does too; otherwise nothing is rendered (no guessed times). */
+    if(typeof inn.lat !== "number" || typeof inn.lng !== "number") return "";
     var nr = nearestPlace(inn, a.ramens);
     if(!nr) return "";
-    return '<p class="near-line"><svg aria-hidden="true"><use href="#i-bowl"/></svg><span>'+(a.foodName ? '最寄りの夜の一杯：' : '最寄りのラーメン店：')+'<b>'+esc(nr.item.name)+'</b>（直線距離'+fmtDist(nr.dist)+'・徒歩換算で約'+walkMin(nr.dist)+'分の目安）</span></p>';
+    return '<p class="near-line"><svg aria-hidden="true"><use href="#i-bowl"/></svg><span>'+(a.foodName ? '一番近い夜の一杯：' : '一番近いラーメン：')+'<b>'+esc(nr.item.name)+'</b>まで徒歩約'+walkMin(nr.dist)+'分（直線距離'+fmtDist(nr.dist)+'・徒歩換算の目安）</span></p>';
   }
   function nearInnLine(a, ramen){
     var ni = nearestPlace(ramen, a.inns);
@@ -2782,7 +2792,7 @@
         }).join("")+'</ol>'
 
       + '<h3 class="sub c-pink">泊まる宿</h3>'
-      + '<p class="map-hint" style="margin:0 0 10px">口コミ評価と件数は楽天トラベル（2026年11月確認）の値です。黒い「Threadsで紹介」バッジは、ひよこ（@hiyoko_web）のThreads投稿で取り上げた掲載につく印です。各カードの「'+(a.foodName ? '最寄りの夜の一杯' : '最寄りのラーメン店')+'」は掲載地点の座標から計算した直線距離で、徒歩時間は80m／分の換算による目安です。</p>'
+      + '<p class="map-hint" style="margin:0 0 10px">口コミ評価と件数は楽天トラベル（2026年11月確認）の値です。黒い「Threadsで紹介」バッジは、ひよこ（@hiyoko_web）のThreads投稿で取り上げた掲載につく印です。各カードの「'+(a.foodName ? '一番近い夜の一杯' : '一番近いラーメン')+'」は掲載地点の座標から計算した直線距離をもとに、徒歩時間は80m／分の換算による目安です。</p>'
       + '<div class="filter-row" role="group" aria-label="テーマで絞り込み">'+themeChips+'</div>'
       + (inns.length
           ? '<div class="cards">'+inns.map(function(i){ return innCard(a,i,a.inns.indexOf(i)); }).join("")+'</div>'
