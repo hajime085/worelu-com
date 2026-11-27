@@ -233,6 +233,14 @@
   .japan-map .region:hover path,.japan-map .region:focus path{filter:brightness(1.07);}
   .japan-map .region text{font-family:inherit;font-weight:800;fill:var(--ink);pointer-events:none;}
   .japan-map .region .sub{font-weight:700;fill:var(--ink-soft);}
+  /* selected region: deeper, richer fill + heavier outline (separate from hover) */
+  .japan-map .region.sel path{filter:brightness(.87) saturate(1.5);stroke-width:3.5;}
+  .japan-map .region.sel:hover path,.japan-map .region.sel:focus path{filter:brightness(.93) saturate(1.5);}
+  .japan-map .region:focus-visible{outline:3px solid var(--pink);outline-offset:2px;}
+  /* published-area pins: decoration only, clicks pass through to the region */
+  .japan-map .map-pins{pointer-events:none;}
+  .japan-map .mpin{fill:var(--pink);stroke:#fff;stroke-width:1.5;pointer-events:none;}
+  .japan-map .mpin-halo{fill:#fff;opacity:.85;pointer-events:none;}
   .map-note{
     margin:14px 0 0;font-size:13.5px;font-weight:700;
     background:var(--surface-2);border:2px solid var(--line);border-radius:6px;padding:10px 14px;
@@ -251,6 +259,22 @@
   .region-row .r-status{margin-left:auto;flex:none;font-size:11px;font-weight:800;padding:4px 9px;border-radius:4px;border:1.5px solid var(--ink-soft);color:var(--ink-soft);}
   .region-row.live{border-color:var(--mint);background:var(--mint-soft);}
   .region-row.live .r-status{border-color:var(--mint);color:var(--mint);background:var(--surface);}
+  .region-row.sel{border-color:var(--ink);background:var(--sun-soft);box-shadow:0 3px 0 var(--ink);}
+  .region-row.live.sel .r-status{border-color:var(--ink);color:#fff;background:var(--pink);}
+
+  /* region panel: illustration cards linked to the map selection */
+  .region-panel{margin-top:22px;border-top:2px dashed var(--line);padding-top:16px;}
+  .rp-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .rp-title{font-size:16.5px;font-weight:800;margin:0;line-height:1.4;}
+  .rp-count{font-size:11.5px;font-weight:800;color:#fff;background:var(--mint);padding:3px 9px;border-radius:4px;border:1.5px solid var(--ink);}
+  .rp-sub{font-size:12.5px;font-weight:500;color:var(--ink-soft);margin:5px 0 12px;}
+  .rp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .rp-card .rp-desc{
+    font-size:12.5px;font-weight:500;color:var(--ink-soft);line-height:1.65;margin-top:4px;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .rp-card .rp-go{margin-top:6px;font-size:12.5px;font-weight:800;color:var(--pink);display:inline-flex;align-items:center;gap:5px;}
+  .rp-card .rp-go svg{width:14px;height:14px;}
   .map-side-sub{font-size:13.5px;font-weight:800;margin:18px 0 8px;}
   .map-shortcuts{display:flex;flex-wrap:wrap;gap:8px;}
   .map-shortcuts .btn{font-size:13.5px;padding:9px 14px;min-height:44px;}
@@ -298,7 +322,12 @@
   .inn-pop-box .inn-back{margin-top:18px;}
 
   /* prefecture popup */
-  @media(max-width:879px){.map-side{display:none;}}
+  /* phone: the STEP 1 list stays in the popup flow, but the region panel
+     (linked area cards) shows under the map */
+  @media(max-width:879px){
+    .map-side .map-side-title,.map-side .region-list,.map-side .map-note{display:none;}
+    .region-panel{margin-top:2px;border-top:none;padding-top:0;}
+  }
   .pref-pop{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:16px;}
   .pref-pop[hidden]{display:none;}
   .pref-pop-backdrop{position:absolute;inset:0;background:rgba(67,48,42,.55);}
@@ -898,7 +927,7 @@
       <span class="sec-icon" style="background:var(--sky-soft);color:var(--sky)" aria-hidden="true"><svg><use href="#i-map"/></svg></span>
       <h2>温泉地から探す</h2>
     </div>
-    <p class="sec-sub">行きたい地域を選んで、泊まりたい温泉地を見つけましょう。地方 → 都道府県 → 温泉地の順に選んでください。</p>
+    <p class="sec-sub">日本地図から、次の温泉旅行先を探してみましょう。地方 → 都道府県 → 温泉地の順に選んでください。</p>
     <div class="map-card">
       <ol class="steps" aria-label="温泉地の探し方">
         <li><b>STEP 1</b>地方を選ぶ</li>
@@ -960,6 +989,29 @@
           <circle cx="29" cy="359" r="2.6" fill="#EFB7F0" stroke="#43302A" stroke-width="1.6"/>
           <circle cx="44" cy="364" r="2.2" fill="#EFB7F0" stroke="#43302A" stroke-width="1.6"/>
         </g>
+        <!-- published-area pins (display only; clicks pass through to the region) -->
+        <g class="map-pins" aria-hidden="true">
+          <circle class="mpin-halo" cx="252" cy="58" r="5"/><circle class="mpin" cx="252" cy="58" r="3.4"/>
+          <circle class="mpin-halo" cx="272" cy="140" r="5"/><circle class="mpin" cx="272" cy="140" r="3.4"/>
+          <circle class="mpin-halo" cx="294" cy="152" r="5"/><circle class="mpin" cx="294" cy="152" r="3.4"/>
+          <circle class="mpin-halo" cx="274" cy="181" r="5"/><circle class="mpin" cx="274" cy="181" r="3.4"/>
+          <circle class="mpin-halo" cx="259" cy="194" r="5"/><circle class="mpin" cx="259" cy="194" r="3.4"/>
+          <circle class="mpin-halo" cx="270" cy="197" r="5"/><circle class="mpin" cx="270" cy="197" r="3.4"/>
+          <circle class="mpin-halo" cx="289" cy="231" r="5"/><circle class="mpin" cx="289" cy="231" r="3.4"/>
+          <circle class="mpin-halo" cx="267" cy="232" r="5"/><circle class="mpin" cx="267" cy="232" r="3.4"/>
+          <circle class="mpin-halo" cx="244" cy="162" r="5"/><circle class="mpin" cx="244" cy="162" r="3.4"/>
+          <circle class="mpin-halo" cx="208" cy="185" r="5"/><circle class="mpin" cx="208" cy="185" r="3.4"/>
+          <circle class="mpin-halo" cx="220" cy="206" r="5"/><circle class="mpin" cx="220" cy="206" r="3.4"/>
+          <circle class="mpin-halo" cx="248" cy="234" r="5"/><circle class="mpin" cx="248" cy="234" r="3.4"/>
+          <circle class="mpin-halo" cx="170" cy="208" r="5"/><circle class="mpin" cx="170" cy="208" r="3.4"/>
+          <circle class="mpin-halo" cx="182" cy="248" r="5"/><circle class="mpin" cx="182" cy="248" r="3.4"/>
+          <circle class="mpin-halo" cx="88" cy="218" r="5"/><circle class="mpin" cx="88" cy="218" r="3.4"/>
+          <circle class="mpin-halo" cx="114" cy="268" r="5"/><circle class="mpin" cx="114" cy="268" r="3.4"/>
+          <circle class="mpin-halo" cx="76" cy="260" r="5"/><circle class="mpin" cx="76" cy="260" r="3.4"/>
+          <circle class="mpin-halo" cx="64" cy="272" r="5"/><circle class="mpin" cx="64" cy="272" r="3.4"/>
+          <circle class="mpin-halo" cx="46" cy="322" r="5"/><circle class="mpin" cx="46" cy="322" r="3.4"/>
+          <circle class="mpin-halo" cx="36" cy="350" r="5"/><circle class="mpin" cx="36" cy="350" r="3.4"/>
+        </g>
       </svg>
       </div>
       <div class="map-side">
@@ -976,6 +1028,16 @@
           <button type="button" class="region-row live" data-region-go="kyushu"><span class="r-main"><span class="r-name">九州・沖縄</span><span class="r-areas">別府温泉 ・ 由布院温泉 ・ 黒川温泉 ・ 那覇・国際通り</span></span><span class="r-status">公開中</span></button>
         </div>
         <p class="map-note" id="mapNote">公開中の地方は、北海道（登別温泉）、東北（鳴子温泉・銀山温泉）、関東甲信（草津温泉・箱根湯本・越後湯沢・野沢温泉・伊香保温泉）、北陸（山代温泉・和倉温泉）、東海（下呂温泉・熱海温泉）、四国（道後温泉）、近畿（城崎温泉）、中国（玉造温泉）、九州・沖縄（別府温泉・由布院温泉・黒川温泉・那覇・国際通り）です。地方を選ぶと、その地方の都道府県（STEP 2）が表示されます。</p>
+        <!-- REGION PANEL: illustration cards linked to the selected region.
+             Rendered by JS from AREAS (published areas only). -->
+        <div class="region-panel" id="regionPanel">
+          <div class="rp-head">
+            <h3 class="rp-title" id="regionPanelTitle">関東甲信の温泉地</h3>
+            <span class="rp-count" id="regionPanelCount"></span>
+          </div>
+          <p class="rp-sub">地図のピンクのピンは公開中の温泉地の目安です。地方を切り替えるとカードも切り替わります。カードをタップするとガイドが開きます。</p>
+          <div class="rp-grid" id="regionPanelGrid"></div>
+        </div>
       </div>
       </div>
     </div>
@@ -2463,13 +2525,13 @@
     if(e.key === "Escape") closePrefPop();
   });
   document.querySelectorAll(".japan-map .region").forEach(function(g){
-    g.addEventListener("click", function(){ openPrefPop(g.getAttribute("data-region"), g); });
+    g.addEventListener("click", function(){ chooseRegion(g.getAttribute("data-region"), g); });
     g.addEventListener("keydown", function(e){
-      if(e.key==="Enter" || e.key===" "){ e.preventDefault(); openPrefPop(g.getAttribute("data-region"), g); }
+      if(e.key==="Enter" || e.key===" "){ e.preventDefault(); chooseRegion(g.getAttribute("data-region"), g); }
     });
   });
   document.querySelectorAll("[data-region-go]").forEach(function(b){
-    b.addEventListener("click", function(){ openPrefPop(b.getAttribute("data-region-go"), b); });
+    b.addEventListener("click", function(){ chooseRegion(b.getAttribute("data-region-go"), b); });
   });
   document.querySelectorAll("[data-area-go]").forEach(function(b){
     b.addEventListener("click", function(){
@@ -2477,6 +2539,53 @@
       scrollToGuidePanel();
     });
   });
+
+  /* --- region panel: illustration cards linked to the map selection.
+     One selection state drives the map highlight, the STEP 1 buttons and
+     this panel, whichever entry point the visitor used. The panel lists
+     published areas only (AREAS is published-only data); preparing
+     prefectures stay in the STEP 2 popup as before. --- */
+  var regionPanelGrid = document.getElementById("regionPanelGrid");
+  var regionPanelTitle = document.getElementById("regionPanelTitle");
+  var regionPanelCount = document.getElementById("regionPanelCount");
+  function renderRegionPanel(region){
+    var list = AREAS.filter(function(a){ return a.region === region; });
+    regionPanelTitle.textContent = REGION_NAMES[region]+"の温泉地";
+    regionPanelCount.textContent = "公開中 "+list.length+"エリア";
+    regionPanelGrid.innerHTML = list.map(function(a){
+      return '<button class="ap-card rp-card" type="button" data-area="'+a.id+'">'
+        + '<img src="'+a.img+'" alt="'+esc(a.imgAlt)+'" loading="lazy" />'
+        + '<span class="ap-info"><span class="ap-name">'+esc(a.name)+'</span>'
+        + '<span class="ap-pref">'+esc(a.pref)+'</span>'
+        + '<span class="rp-desc">'+esc(a.desc)+'</span>'
+        + '<span class="ap-counts">宿'+a.innCount+'軒 ・ '+foodWord(a)+a.ramenCount+'軒</span>'
+        + '<span class="rp-go">この温泉地を見る'+icon("i-arrow-r")+'</span></span>'
+        + '</button>';
+    }).join("");
+  }
+  function setRegion(region){
+    document.querySelectorAll(".japan-map .region").forEach(function(g){
+      var on = g.getAttribute("data-region") === region;
+      g.classList.toggle("sel", on);
+      g.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    document.querySelectorAll("[data-region-go]").forEach(function(b){
+      var on = b.getAttribute("data-region-go") === region;
+      b.classList.toggle("sel", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    renderRegionPanel(region);
+  }
+  function chooseRegion(region, trigger){
+    setRegion(region);
+    openPrefPop(region, trigger);
+  }
+  regionPanelGrid.addEventListener("click", function(e){
+    var b = e.target.closest("[data-area]");
+    if(b){ selectArea(b.getAttribute("data-area")); scrollToGuidePanel(); }
+  });
+  /* initial state: Kanto selected, its cards visible before any tap */
+  setRegion("kanto");
 
   /* --- area cards --- */
   var areaGrid = document.getElementById("areaGrid");
