@@ -351,14 +351,32 @@
   .area-card .btn{margin-top:auto;}
 
   /* ---------- guide ---------- */
-  .tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;scrollbar-width:none;}
-  .tabs::-webkit-scrollbar{display:none;}
-  .tab{
-    flex:none;border:2.5px solid var(--ink);background:var(--surface);color:var(--ink);
-    font-weight:800;font-size:15px;padding:11px 20px;border-radius:8px;min-height:48px;
-    box-shadow:0 3px 0 var(--ink);
+  /* area picker: region-grouped 2-column cards (replaces the sliding tab row) */
+  .area-picker{display:grid;gap:22px;margin:2px 0 20px;}
+  .ap-region-name{
+    display:flex;align-items:center;gap:9px;margin:0 0 10px;
+    font-size:16.5px;font-weight:800;line-height:1.4;
   }
-  .tab[aria-selected="true"]{background:var(--sun);transform:rotate(-1deg);}
+  .ap-region-name::before{content:"";width:12px;height:12px;border-radius:3px;flex:none;border:2px solid var(--ink);background:var(--sun);}
+  .ap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  @media(min-width:760px){.ap-grid{grid-template-columns:repeat(3,1fr);gap:12px;}}
+  @media(min-width:1100px){.ap-grid{grid-template-columns:repeat(4,1fr);}}
+  .ap-card{
+    position:relative;text-align:left;padding:0;overflow:hidden;color:var(--ink);
+    background:var(--surface);border:2.5px solid var(--ink);border-radius:8px;box-shadow:0 3px 0 var(--ink);
+    display:flex;flex-direction:column;font-family:inherit;
+  }
+  .ap-card:active{transform:translateY(2px);box-shadow:0 1px 0 var(--ink);}
+  .ap-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+  .ap-info{display:flex;flex-direction:column;gap:1px;padding:9px 11px 11px;}
+  .ap-name{font-size:15.5px;font-weight:800;line-height:1.35;}
+  .ap-pref{font-size:11.5px;font-weight:800;color:var(--sky);}
+  .ap-counts{font-size:11.5px;font-weight:700;color:var(--ink-soft);margin-top:3px;}
+  .ap-card[aria-pressed="true"]{background:var(--sun-soft);}
+  .ap-now{
+    position:absolute;top:8px;right:8px;font-size:11px;font-weight:800;color:#fff;background:var(--pink);
+    padding:3px 9px;border-radius:4px;border:1.5px solid var(--ink);line-height:1.4;
+  }
   .guide-panel{background:var(--surface);border:3px solid var(--ink);border-radius:10px;box-shadow:var(--shadow);overflow:hidden;}
   .guide-hero{position:relative;}
   .guide-hero img{width:100%;aspect-ratio:16/8;object-fit:cover;}
@@ -591,6 +609,27 @@
   .legal-body p{font-size:13.5px;font-weight:500;color:var(--ink-soft);margin:0 0 6px;}
   .legal-pop-box .btn{width:100%;}
   .legal-back{margin-top:18px;}
+
+  /* ---------- phone readability: wider side margins + looser line-height ---------- */
+  @media(max-width:640px){
+    .wrap{padding:0 20px;}
+    .sec-sub,.step3-sub,.guide-about,.area-desc,.about-card p,.card p,.post p,
+    .map-note,.memo-list li,.flow-step p,.legal-body p,.spot-pop-box p,.inn-pop-box .d-text{
+      line-height:1.9;
+    }
+    .guide-in{padding:22px 20px 26px;}
+    .about-card{padding:22px 20px;}
+    .map-card{padding:22px 20px;}
+    /* keep the carousel nav (dots + both arrows) inside the card at phone width */
+    .car-nav{padding:8px 10px;gap:8px;}
+    .car-dots{gap:5px;}
+    .car-dot{width:9px;height:9px;}
+    .car-arrow{width:36px;height:36px;}
+  }
+  @media(max-width:560px){
+    /* keep the area map bleeding to the panel edge at the new guide padding */
+    .area-map-box{margin-left:-20px;margin-right:-20px;}
+  }
 
   /* ---------- bottom nav (mobile) ---------- */
   .bottomnav{
@@ -1059,7 +1098,7 @@
       <h2>エリアガイド</h2>
     </div>
     <p class="sec-sub">見どころ・モデルコース・宿・周辺ラーメン・アクセスを、1ページにまとめました。</p>
-    <div class="tabs" role="tablist" aria-label="エリア切り替え" id="tabs"></div>
+    <div class="area-picker" id="areaPicker" aria-label="地方ごとに分かれたエリア一覧"></div>
     <div class="guide-panel" id="guidePanel"></div>
   </section>
 
@@ -2236,21 +2275,50 @@
     document.getElementById("guide").scrollIntoView({behavior:"smooth"});
   });
 
-  /* --- tabs --- */
-  var tabsEl = document.getElementById("tabs");
-  function renderTabs(){
-    tabsEl.innerHTML = AREAS.map(function(a){
-      return '<button class="tab" role="tab" type="button" data-area="'+a.id+'" aria-selected="'+(a.id===state.area)+'">'+esc(a.name)+'</button>';
+  /* --- area picker: region-grouped 2-column cards --- */
+  var pickerEl = document.getElementById("areaPicker");
+  /* picker grouping: the 10-region split (北海道/東北/関東/中部/北陸/近畿/中国/四国/九州/沖縄).
+     The Japan map above keeps its own region keys; this list only drives the picker. */
+  var PICKER_GROUPS = [
+    { label:"北海道", ids:["noboribetsu"] },
+    { label:"東北", ids:["naruko"] },
+    { label:"関東", ids:["kusatsu","hakone","ikaho"] },
+    { label:"中部", ids:["yuzawa","nozawa","gero"] },
+    { label:"北陸", ids:["yamashiro","wakura"] },
+    { label:"近畿", ids:["kinosaki"] },
+    { label:"中国", ids:["tamatsukuri"] },
+    { label:"四国", ids:["dogo"] },
+    { label:"九州", ids:["beppu"] },
+    { label:"沖縄", ids:["naha"] }
+  ];
+  function renderAreaPicker(){
+    var byId = {};
+    AREAS.forEach(function(a){ byId[a.id] = a; });
+    pickerEl.innerHTML = PICKER_GROUPS.map(function(g){
+      var list = g.ids.map(function(id){ return byId[id]; }).filter(Boolean);
+      if(!list.length) return "";
+      return '<div class="ap-region"><h3 class="ap-region-name">'+esc(g.label)+'</h3><div class="ap-grid">'
+        + list.map(function(a){
+            var on = a.id === state.area;
+            return '<button class="ap-card" type="button" data-area="'+a.id+'" aria-pressed="'+on+'">'
+              + '<img src="'+a.img+'" alt="" loading="lazy" />'
+              + (on ? '<span class="ap-now">表示中</span>' : '')
+              + '<span class="ap-info"><span class="ap-name">'+esc(a.name)+'</span>'
+              + '<span class="ap-pref">'+esc(a.pref)+'</span>'
+              + '<span class="ap-counts">宿'+a.innCount+'軒 ・ ラーメン'+a.ramenCount+'軒</span></span>'
+              + '</button>';
+          }).join("")
+        + '</div></div>';
     }).join("");
   }
-  tabsEl.addEventListener("click", function(e){
+  pickerEl.addEventListener("click", function(e){
     var b = e.target.closest("[data-area]");
     if(b) selectArea(b.getAttribute("data-area"));
   });
 
   function selectArea(id){
     state.area = id; state.theme = "all"; state.nightOnly = false; state.pin = null; state.mapView = "all"; state.mapFree = false;
-    renderTabs(); renderGuide();
+    renderAreaPicker(); renderGuide();
     syncAreaHash(id);
   }
 
@@ -2769,7 +2837,7 @@
      directly and brings it into view */
   var deepArea = areaFromHash();
   if(deepArea) state.area = deepArea;
-  renderTabs();
+  renderAreaPicker();
   renderGuide();
   if(deepArea){
     var guideEl = document.getElementById("guide");
