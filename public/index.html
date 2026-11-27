@@ -65,7 +65,10 @@
     }
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  /* scroll-padding-top: every in-page jump (anchor or scrollIntoView) stops
+     this far above the target so the sticky header never covers the heading
+     it lands on. Header is ~63px tall; 76px leaves a small breathing gap. */
+  html{scroll-behavior:smooth;scroll-padding-top:76px;}
   body{
     margin:0;
     font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif;
@@ -2115,7 +2118,7 @@
   carousel.addEventListener("focusout", carAuto);
   carousel.addEventListener("click", function(e){
     var s = e.target.closest("[data-car-goto]");
-    if(s){ selectArea(s.getAttribute("data-car-goto")); }
+    if(s){ e.preventDefault(); selectArea(s.getAttribute("data-car-goto")); scrollToGuidePanel(); }
   });
   carShow(0); carAuto();
 
@@ -2124,7 +2127,7 @@
     a.addEventListener("click", function(e){
       e.preventDefault();
       selectArea(a.getAttribute("data-area-link"));
-      document.getElementById("guide").scrollIntoView({behavior:"smooth"});
+      scrollToGuidePanel();
     });
   });
 
@@ -2203,7 +2206,7 @@
       closePrefPop();
       selectArea(aid);
       mapNote.textContent = alabel+"ガイドを開きました。下のガイドで見られます。";
-      document.getElementById("guide").scrollIntoView({behavior:"smooth"});
+      scrollToGuidePanel();
       return;
     }
     var b = e.target.closest("[data-pref]");
@@ -2224,7 +2227,7 @@
       closePrefPop();
       selectArea(areas[0].id);
       mapNote.textContent = pref+"の"+areas[0].label+"ガイドを開きました。下のガイドで見られます。";
-      document.getElementById("guide").scrollIntoView({behavior:"smooth"});
+      scrollToGuidePanel();
     } else {
       prefPopNote.textContent = pref+"のガイドは準備中です。公開中のエリアは下のSTEP 3の一覧から選べます。";
     }
@@ -2246,7 +2249,7 @@
   document.querySelectorAll("[data-area-go]").forEach(function(b){
     b.addEventListener("click", function(){
       selectArea(b.getAttribute("data-area-go"));
-      document.getElementById("guide").scrollIntoView({behavior:"smooth"});
+      scrollToGuidePanel();
     });
   });
 
@@ -2272,7 +2275,7 @@
     var b = e.target.closest("[data-goto]");
     if(!b) return;
     selectArea(b.getAttribute("data-goto"));
-    document.getElementById("guide").scrollIntoView({behavior:"smooth"});
+    scrollToGuidePanel();
   });
 
   /* --- area picker: region-grouped 2-column cards --- */
@@ -2313,13 +2316,24 @@
   }
   pickerEl.addEventListener("click", function(e){
     var b = e.target.closest("[data-area]");
-    if(b) selectArea(b.getAttribute("data-area"));
+    if(b){ selectArea(b.getAttribute("data-area")); scrollToGuidePanel(); }
   });
 
   function selectArea(id){
     state.area = id; state.theme = "all"; state.nightOnly = false; state.pin = null; state.mapView = "all"; state.mapFree = false;
     renderAreaPicker(); renderGuide();
     syncAreaHash(id);
+  }
+
+  /* Land on the opened area's content (the guide panel), not the top of
+     the guide section. The region picker sits between the section heading
+     and the panel, so scrolling to the section top left the chosen area's
+     guide far below the fold and the tap felt like it went nowhere.
+     scroll-padding-top on <html> keeps the panel clear of the sticky
+     header. Every area-selection entry point uses this one helper. */
+  function scrollToGuidePanel(){
+    var p = document.getElementById("guidePanel");
+    if(p) p.scrollIntoView({behavior:"smooth", block:"start"});
   }
 
   /* --- deep links: each area guide has its own URL hash (#kusatsu,
@@ -2840,8 +2854,8 @@
   renderAreaPicker();
   renderGuide();
   if(deepArea){
-    var guideEl = document.getElementById("guide");
-    if(guideEl) guideEl.scrollIntoView();
+    var panelEl = document.getElementById("guidePanel");
+    if(panelEl) panelEl.scrollIntoView();
   }
 
   /* re-render the area map when crossing the mobile/desktop breakpoint */
