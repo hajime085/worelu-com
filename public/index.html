@@ -152,15 +152,15 @@
   }
   /* phone: tighten the hero stack so the last quick-link row clears the fixed bottom nav */
   @media(max-width:759px){
-    .hero{padding-top:10px;}
-    .hero-head{padding:18px 18px 20px;}
-    .hero-kicker{margin-bottom:9px;}
-    h1{font-size:26px;line-height:1.24;margin-bottom:10px;}
-    .hero-lead{font-size:14.5px;line-height:1.55;margin-bottom:14px;}
+    .hero{padding-top:8px;}
+    .hero-head{padding:16px 16px 14px;}
+    .hero-kicker{margin-bottom:8px;}
+    h1{font-size:26px;line-height:1.24;margin-bottom:8px;}
+    .hero-lead{font-size:14.5px;line-height:1.55;margin-bottom:12px;}
     .hero .btn{min-height:44px;padding:10px 18px;}
-    .hero-note{margin-top:12px;padding:8px 12px;}
-    .area-quick{margin-top:10px;}
-    .area-quick a{padding:5px 7px;}
+    .hero-note{margin-top:10px;padding:7px 12px;}
+    .area-quick{margin-top:8px;}
+    .area-quick a{padding:4px 7px;}
   }
 
   /* ---------- feature carousel ---------- */
@@ -822,6 +822,7 @@
     <a href="#guide" data-area-link="tamatsukuri">玉造温泉</a>
     <a href="#guide" data-area-link="naha">那覇・国際通り</a>
     <a href="#guide" data-area-link="arima">有馬温泉</a>
+    <a href="#guide" data-area-link="atami">熱海温泉</a>
   </div>
 
   <!-- FEATURE CAROUSEL -->
@@ -963,13 +964,13 @@
           <button type="button" class="region-row live" data-region-go="tohoku"><span class="r-main"><span class="r-name">東北</span><span class="r-areas">鳴子温泉 ・ 銀山温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="kanto"><span class="r-main"><span class="r-name">関東甲信</span><span class="r-areas">草津温泉 ・ 箱根湯本 ・ 越後湯沢 ・ 野沢温泉 ・ 伊香保温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="hokuriku"><span class="r-main"><span class="r-name">北陸</span><span class="r-areas">山代温泉 ・ 和倉温泉</span></span><span class="r-status">公開中</span></button>
-          <button type="button" class="region-row live" data-region-go="tokai"><span class="r-main"><span class="r-name">東海</span><span class="r-areas">下呂温泉</span></span><span class="r-status">公開中</span></button>
+          <button type="button" class="region-row live" data-region-go="tokai"><span class="r-main"><span class="r-name">東海</span><span class="r-areas">下呂温泉 ・ 熱海温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="kinki"><span class="r-main"><span class="r-name">近畿</span><span class="r-areas">城崎温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="chugoku"><span class="r-main"><span class="r-name">中国</span><span class="r-areas">玉造温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="shikoku"><span class="r-main"><span class="r-name">四国</span><span class="r-areas">道後温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="kyushu"><span class="r-main"><span class="r-name">九州・沖縄</span><span class="r-areas">別府温泉 ・ 由布院温泉 ・ 黒川温泉 ・ 那覇・国際通り</span></span><span class="r-status">公開中</span></button>
         </div>
-        <p class="map-note" id="mapNote">公開中の地方は、北海道（登別温泉）、東北（鳴子温泉・銀山温泉）、関東甲信（草津温泉・箱根湯本・越後湯沢・野沢温泉・伊香保温泉）、北陸（山代温泉・和倉温泉）、東海（下呂温泉）、四国（道後温泉）、近畿（城崎温泉）、中国（玉造温泉）、九州・沖縄（別府温泉・由布院温泉・黒川温泉・那覇・国際通り）です。地方を選ぶと、その地方の都道府県（STEP 2）が表示されます。</p>
+        <p class="map-note" id="mapNote">公開中の地方は、北海道（登別温泉）、東北（鳴子温泉・銀山温泉）、関東甲信（草津温泉・箱根湯本・越後湯沢・野沢温泉・伊香保温泉）、北陸（山代温泉・和倉温泉）、東海（下呂温泉・熱海温泉）、四国（道後温泉）、近畿（城崎温泉）、中国（玉造温泉）、九州・沖縄（別府温泉・由布院温泉・黒川温泉・那覇・国際通り）です。地方を選ぶと、その地方の都道府県（STEP 2）が表示されます。</p>
       </div>
       </div>
     </div>
@@ -2115,6 +2116,61 @@
         {name:"有馬ラー麺 青龍居", signature:"有馬（鴨肉）ラーメン", walk:"有馬温泉駅から徒歩約1分", late:"昼11:30〜15:00／夜17:00〜（麺がなくなり次第終了）・木曜定休", addr:"神戸市北区有馬町1298-3", text:"駅から徒歩約1分のラーメン店。看板はレアな鴨肉がのる「有馬ラーメン」です。Google評価4.3（101件）。夜の部は麺がなくなり次第終わるので、〆に使うなら早めの時間が確実です。", night:false, x:122, y:50, lat:34.79894, lng:135.24665},
         {name:"麺所 一心亭", signature:"味噌ラーメン", walk:"月光園 游月山荘の館内（駅から徒歩約9分）", late:"21:00〜24:00（夜のみ）", addr:"神戸市北区有馬町318（月光園 游月山荘内）", text:"月光園 游月山荘の館内にある、夜だけ開く麺処。21時から24時まで営業し、味噌ラーメンが人気です。月光園に泊まった夜の、湯上がりの〆にちょうどいい一杯です。", night:true, x:128, y:236, lat:34.79444, lng:135.24620}
       ]
+    },
+    {
+      id:"atami", name:"熱海温泉", pref:"静岡県", region:"tokai", img:"/assets/ad4c2e105c0897bb.webp",
+      imgAlt:"熱海温泉のサンビーチと相模湾、丘の上の熱海城、湯けむりの温泉街とのれんのラーメン屋のイラスト",
+      desc:"東京駅から新幹線で約45分。日本で一番都心に近い温泉リゾートです。駅前の老舗旅館、サンビーチを見下ろす海沿いのホテル、高台の隠れ宿と、夜まで開くラーメン店を掲載しました。",
+      tags:["新幹線で約45分","サンビーチと花火","海の眺めの宿"],
+      innCount:10, ramenCount:3, realMap:true, mapCenterName:"熱海駅", staticMap:"/assets/111196bc074bebc1.webp",
+      center:{label:"熱海駅", x:215, y:95},
+      mapVB:"0 0 440 300", r5:30, r10:60,
+      mapCaption:"実座標で作図（約10m／px）。円は道のり換算の徒歩5分・10分圏の目安",
+      mapNote:"ピンは実際の緯度経度をもとに、熱海駅を原点・北を上・約10m／pxの同じ縮尺で置いています（中心部はピンが重なるため少しずらして表示）。破線の円は道のり換算の目安で、半径は直線で約300m（徒歩5分圏）と約600m（徒歩10分圏）です。熱海は坂の街で、熱海倶楽部迎賓館（伊豆山の高台）・MOA美術館（桃山町の高台）・熱海城（錦ヶ浦）・熱海梅園は円の外にあります。各ピンの詳細に住所とGoogleマップへのリンクを付けたので、そのまま照合できます。",
+      scenery:'<rect x="0" y="0" width="440" height="300" fill="#FBF3E2"/><path d="M330 0 L440 0 L440 300 L398 300 C388 220 384 160 388 110 C391 66 372 30 330 0 Z" fill="#AEDCF5"/><path d="M392 96 C384 150 388 210 398 262" fill="none" stroke="#F6DDB9" stroke-width="10" stroke-linecap="round"/><path d="M0 0 L440 0 L440 22 C320 12 180 26 0 16 Z" fill="#DCEFD2"/><path d="M120 300 C126 240 118 200 128 160 C136 128 128 92 138 40" fill="none" stroke="#AEDCF5" stroke-width="5" stroke-linecap="round"/><g fill="none" stroke="#C3CED4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 20 C110 44 170 66 215 95 C250 118 300 128 356 122" stroke-width="9"/><path d="M215 95 C205 150 200 210 206 300" stroke-width="7"/><path d="M215 95 C170 130 140 170 128 220" stroke-width="6"/></g><g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"><path d="M40 20 C110 44 170 66 215 95 C250 118 300 128 356 122" stroke-width="5"/><path d="M215 95 C205 150 200 210 206 300" stroke-width="3.5"/><path d="M215 95 C170 130 140 170 128 220" stroke-width="3"/></g><g fill="#F6DDB9" stroke="#DDB98C" stroke-width="1.2"><rect x="238" y="96" width="18" height="12"/><rect x="150" y="180" width="20" height="13"/><rect x="238" y="150" width="16" height="11"/></g><g><rect x="201" y="77" width="28" height="18" rx="3" fill="#FFFFFF" stroke="#43302A" stroke-width="2.2"/><path d="M205 77 L215 67 L225 77" fill="none" stroke="#FF7A4D" stroke-width="3" stroke-linecap="round"/><path d="M210 70 C208 65 212 63 210 58 M219 70 C217 65 221 63 219 58" fill="none" stroke="#3FA7DC" stroke-width="2" stroke-linecap="round"/></g><g transform="translate(352,276)"><rect x="0" y="-4" width="25" height="4" fill="#43302A"/><rect x="25" y="-4" width="25" height="4" fill="#FFFFFF" stroke="#43302A" stroke-width="1"/><text x="25" y="12" text-anchor="middle" font-size="8.5" font-weight="700" fill="#43302A">200m</text></g><text x="404" y="200" font-size="10.5" font-weight="800" fill="#3FA7DC" transform="rotate(90 404 200)">相模湾</text><text class="lbl" x="330" y="88" font-size="8.5">サンビーチ</text><text class="lbl" x="66" y="200" font-size="8.5">糸川</text><text class="lbl" x="196" y="290" font-size="8.5">熱海城方面</text><text class="lbl" x="36" y="26" font-size="8.5">来宮・梅園方面</text>',
+      about:"東京駅から新幹線で約45分と、日本で一番都心に近い温泉リゾートのひとつです。駅前の商店街から糸川沿いに温泉街が広がり、坂を下ればヤシの木が並ぶサンビーチ。湯量が豊富で、熱海七湯をはじめ街のあちこちに源泉が湧いています。宿は駅前の老舗旅館から、海沿いのリゾートホテル、高台の隠れ宿まで幅広く、夜は銀座通りや咲見町でラーメンの〆も楽しめます。熱海海上花火大会が年に10回前後あるのも、熱海ならではです。このページでは、楽天トラベルで掲載を確認できた宿10軒と、駅・温泉街から歩けるラーメン3軒を紹介します。",
+      facts:[
+        {cls:"fact-spring", label:"泉質", val:"ナトリウム・カルシウム塩化物泉（弱食塩泉）が中心"},
+        {cls:"fact-season", label:"ベストシーズン", val:"通年。熱海海上花火大会（年10回前後）と、梅園の梅（1〜3月）・紅葉（11〜12月）"},
+        {cls:"fact-access", label:"アクセス", val:"東京駅から新幹線で約45分／東海道線で約1時間45分"}
+      ],
+      spots:[
+        {name:"熱海駅前商店街（仲見世・平和通り）", meta:"熱海駅から徒歩1分", text:"駅前のアーケード商店街。温泉まんじゅうや干物、食べ歩きの店が並び、旅の始まりと終わりの寄り道にちょうどいい通りです。聚楽ホテルへもこの通りを抜けてすぐです。", x:207, y:105, lat:35.10234, lng:139.07708},
+        {name:"熱海サンビーチ", meta:"熱海駅から徒歩約12分 ・ 夜はライトアップ", text:"ヤシの木が並ぶ、熱海の顔の砂浜です。昼は海水浴、夜は砂浜と波打ち際がライトアップされます。熱海海上花火大会の日は、観覧の特等席になります。", x:217, y:135, lat:35.09961, lng:139.07817},
+        {name:"起雲閣", meta:"熱海駅から徒歩約15分 ・ 入館料 大人610円", addr:"昭和町4-2", text:"大正から昭和に建てられた名邸で、かつては太宰治や谷崎潤一郎ら文豪にも愛された宿でした。今は市の文化施設として公開され、和洋折衷の館と日本庭園が見られます。", x:151, y:210, lat:35.09288, lng:139.07102},
+        {name:"来宮神社", meta:"来宮駅から徒歩約5分 ・ 熱海駅から徒歩約18分", addr:"西山町43-1", text:"熱海の総鎮守。境内の大楠は樹齢2,100年を超えると伝わる巨木で、幹を一周すると寿命が延びると言われます。夜はライトアップされ、昼とは違う静けさがあります。", x:123, y:126, lat:35.10040, lng:139.06788},
+        {name:"MOA美術館", meta:"熱海駅からバス約10分 ・ 9:30〜16:30（木曜休館）", addr:"桃山町26-2", text:"桃山町の高台にある美術館。国宝「紅白梅図屏風」（尾形光琳）などの日本美術に、復元された「黄金の茶室」と能楽堂が看板です。庭園ごしに相模湾が見渡せます。", x:189, y:28, lat:35.10927, lng:139.07512},
+        {name:"熱海城", meta:"錦ヶ浦の高台 ・ 9:00〜17:00", text:"熱海の街と相模湾を見下ろす、天守閣の展望台が看板です。館内には城郭模型や浮世絵の展示があり、足湯もあります。熱海駅からはバスや車で約10分です。", x:231, y:282, lat:35.08639, lng:139.07972},
+        {name:"熱海梅園", meta:"来宮駅から徒歩約10分 ・ 梅まつり期間は入園料300円", text:"梅の名所として知られる庭園です。1〜3月の梅まつりに加えて、11〜12月は「日本一遅い紅葉」とも言われるモミジが見頃になります。園内には足湯もあります。", x:48, y:153, lat:35.09800, lng:139.05964}
+      ],
+      course:[
+        {t:"13:00", w:"新幹線で熱海駅着。<b>駅前商店街</b>で温泉まんじゅうを食べ歩き"},
+        {t:"14:00", w:"<b>起雲閣</b>で文豪ゆかりの邸宅と庭園を見る"},
+        {t:"15:30", w:"チェックインして、まずはひと湯"},
+        {t:"17:00", w:"<b>サンビーチ</b>の夕景とライトアップ"},
+        {t:"18:30", w:"宿で夕食"},
+        {t:"20:30", w:"銀座の<b>一番軒</b>でねぎラーメン（22:30まで）"},
+        {t:"翌 9:30", w:"バスで<b>MOA美術館</b>へ。黄金の茶室と相模湾の眺め"},
+        {t:"翌 11:30", w:"<b>来宮神社</b>の大楠を一周してパワーチャージ"},
+        {t:"翌 13:00", w:"<b>駅前商店街</b>でお土産を買って帰路へ"}
+      ],
+      inns:[
+        {name:"熱海温泉 古屋旅館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F16668%2F16668.html&link_type=text", badges:[], price:"¥53,020", note:"料金は最安プランの目安（2026年11月確認）", state:"創業1806年 ・ 全室部屋食、熱海七湯「清左衛門の湯」の源泉", addr:"東海岸町5-24", rating:"4.82", reviews:"578", text:"1806年創業の老舗で、熱海七湯のひとつ「清左衛門の湯」の源泉を持ちます。全26室、朝夕とも全室部屋食です。サンビーチまで徒歩約3分。楽天トラベルの総合評価4.82は熱海でも最高クラスです。", theme:["roten","heya-shoku"], x:183, y:153, lat:35.09799, lng:139.07453},
+        {name:"ふふ 熱海", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F165597%2F165597.html&link_type=text", badges:[], price:"¥65,450", note:"料金は最安プランの目安（2026年11月確認）", state:"全32室すべて露天風呂つき ・ 水口町の静かな谷あい", addr:"水口町11-48", rating:"4.73", reviews:"178", text:"全32室すべてに露天風呂を備えた、大人のためのリゾートです。水口町の静かな谷あいにあり、サウナのある大浴場も備えます。熱海駅からは送迎があります。", theme:["roten"], x:117, y:177, lat:35.09585, lng:139.06724},
+        {name:"熱海 ホテル渚館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F197709%2F197709.html&link_type=text", badges:[], price:"¥43,560", note:"料金は最安プランの目安（2026年11月確認）", state:"渚町の海沿い ・ 9階の大浴場から相模湾と花火", addr:"渚町11-9", rating:"4.67", reviews:"119", text:"渚町の海沿いに立つ全23室のホテル。9階の大浴場からは相模湾と熱海海上花火が望め、海が見えるビューバスの客室もあります。楽天トラベルの総合評価4.67です。", theme:["roten"], x:188, y:184, lat:35.09524, lng:139.07507},
+        {name:"熱海パールスターホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F181405%2F181405.html&link_type=text", badges:[], price:"¥41,937", note:"料金は最安プランの目安（2026年11月確認）", state:"2022年開業 ・ 全室オーシャンビュー、自家源泉", addr:"東海岸町6-45", rating:"4.64", reviews:"152", text:"2022年に開業した、全室オーシャンビューのホテルです。自家源泉の大浴場とサウナ、露天風呂つき客室があり、目の前はサンビーチです。", theme:["roten"], x:202, y:139, lat:35.09924, lng:139.07652},
+        {name:"横山大観ゆかりの宿 熱海 大観荘", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F7669%2F7669.html&link_type=text", badges:[], price:"¥59,400", note:"料金は最安プランの目安（2026年11月確認）", state:"林ガ丘の高台 ・ 日本庭園と貸切露天風呂", addr:"林が丘町7-1", rating:"4.61", reviews:"549", text:"日本画家・横山大観ゆかりの、全33室の宿です。日本庭園と貸切露天風呂があり、食事の評価も高い一軒。熱海駅からは無料送迎バスで5〜10分です。", theme:["kashikiri","roten"], x:180, y:107, lat:35.10217, lng:139.07411},
+        {name:"熱海温泉 秀花園 湯の花膳", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F7666%2F7666.html&link_type=text", badges:[], price:"¥34,200", note:"料金は最安プランの目安（2026年11月確認）", state:"和田浜南町 ・ 海と夜景の大浴場", addr:"和田浜南町7-13", rating:"4.56", reviews:"1,502", text:"和田浜南町に立つ全23室の宿。大浴場からは熱海の海と夜景がひとりじめできます。口コミ1,502件と利用者の多い一軒です。", theme:["roten"], x:204, y:254, lat:35.08892, lng:139.07676},
+        {name:"熱海倶楽部 迎賓館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F75291%2F75291.html&link_type=text", badges:[], price:"¥31,130", note:"料金は最安プランの目安（2026年11月確認）", state:"伊豆山の高台 ・ 全室に源泉かけ流しの部屋風呂", addr:"伊豆山1171", rating:"4.54", reviews:"4,496", text:"伊豆山の高台に立つ大人の宿。全室に源泉かけ流しの部屋風呂が付き、大浴場からは相模湾のパノラマが広がります。子どもは泊まれない、静かな滞在のための一軒です。口コミ4,496件は熱海最多クラスです。", theme:["roten"], x:154, y:6, lat:35.11217, lng:139.07129},
+        {name:"熱海温泉 熱海後楽園ホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F1656%2F1656.html&link_type=text", badges:[], price:"¥14,080", note:"料金は最安プランの目安（2026年11月確認）", state:"タワー館は全室オーシャンビュー ・ 日帰り温泉「Fuua」隣接", addr:"和田浜南町10-1", rating:"4.41", reviews:"3,331", text:"全189室の大型リゾートホテル。タワー館は全室オーシャンビューで、隣接する日帰り温泉施設「オーシャンスパ Fuua」と合わせて、湯と海をたっぷり楽しめます。熱海駅からは無料シャトルバスで約10分です。", theme:[], x:222, y:252, lat:35.08904, lng:139.07871},
+        {name:"熱海温泉 さくらや旅館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F54665%2F54665.html&link_type=text", badges:[], price:"¥46,200", note:"料金は最安プランの目安（2026年11月確認）", state:"東海岸町 ・ 大浴場が2つ、露天風呂つき特別室", addr:"東海岸町9-11", rating:"4.39", reviews:"724", text:"東海岸町の全20室の旅館。源泉は60度以上の弱アルカリ性塩化物泉で、「海星の湯」「天星の湯」の2つの大浴場と、露天風呂つき特別室があります。", theme:["roten"], x:206, y:124, lat:35.10112, lng:139.07767},
+        {name:"熱海温泉 月の栖 熱海聚楽ホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F859%2F859.html&link_type=text", badges:[], price:"¥45,100", note:"料金は最安プランの目安（2026年11月確認）", state:"熱海駅から徒歩約3分 ・ 部屋食の会席が評判", addr:"田原本町2-19", rating:"4.38", reviews:"2,662", text:"仲見世通りを抜けて徒歩約3分と、熱海駅に一番近い部類の旅館です。全31室で夕食は部屋食、露天風呂つき客室も3室あります。食事の口コミ評価が高い一軒です。", theme:["roten","heya-shoku"], x:222, y:112, lat:35.10118, lng:139.07813}
+      ],
+      ramens:[
+        {name:"ラーメン餃子 一番軒", signature:"ねぎラーメン（ピリ辛）", walk:"銀座通りの角 ・ サンビーチから徒歩約5分", late:"22:30まで（夜の部17:30〜）", addr:"銀座町1-19", text:"銀座町の角にある、昭和の佇まいのラーメン餃子の店。看板は白髪ねぎと細切りチャーシューがのる、ピリ辛のねぎラーメンです。焼き餃子も名物。夜の部は22:30まで開く、湯上がりの〆に歩ける一軒です。", night:true, x:168, y:162, lat:35.09717, lng:139.07279},
+        {name:"和牛らーめん 和輝", signature:"和牛らーめん", walk:"熱海駅から徒歩約7分", late:"22:00まで", addr:"咲見町7-32", text:"2026年3月に開店した、和牛ラーメンの店です。自家製の牛骨スープに和牛がのる一杯が看板。咲見町の駅近にあり、22時まで営業するので、湯上がりの夜の一杯にも使えます。", night:true, x:185, y:128, lat:35.10029, lng:139.07473},
+        {name:"麺や いちゆめ", signature:"豪華魚介豚骨ラーメン", walk:"渚町 ・ サンビーチから徒歩約4分", late:"20:50まで（夜の部17:00〜・金曜定休）", addr:"渚町8-1", text:"熱海の麺処「麺匠うえ田」の流れを汲む店が、2025年に渚町で始めた一軒。看板は魚介と豚骨の濃厚スープの「豪華魚介豚骨ラーメン」で、濃厚魚介つけ麺も人気です。夜の部は20:50までです。", night:true, x:184, y:175, lat:35.09601, lng:139.07461}
+      ]
     }
   ];
 
@@ -2154,6 +2210,7 @@
     "新潟県":{id:"yuzawa", label:"越後湯沢"},
     "長野県":{id:"nozawa", label:"野沢温泉"},
     "岐阜県":{id:"gero", label:"下呂温泉"},
+    "静岡県":{id:"atami", label:"熱海温泉"},
     "大分県":{id:"beppu", label:"別府温泉"},
     "熊本県":{id:"kurokawa", label:"黒川温泉"}
   };
@@ -2444,7 +2501,7 @@
     { label:"北海道", ids:["noboribetsu"] },
     { label:"東北", ids:["naruko","ginzan"] },
     { label:"関東", ids:["kusatsu","hakone","ikaho"] },
-    { label:"中部", ids:["yuzawa","nozawa","gero"] },
+    { label:"中部", ids:["yuzawa","nozawa","gero","atami"] },
     { label:"北陸", ids:["yamashiro","wakura"] },
     { label:"近畿", ids:["kinosaki","arima"] },
     { label:"中国", ids:["tamatsukuri"] },
@@ -2495,7 +2552,7 @@
   }
 
   /* --- deep links: each area guide has its own URL hash (#kusatsu,
-     #hakone, #dogo, #yamashiro, #wakura, #yuzawa, #nozawa, #ikaho, #kinosaki, #gero, #beppu, #noboribetsu, #naruko, #tamatsukuri, #naha, #arima, #yufuin, #kurokawa, #ginzan) so posts can
+     #hakone, #dogo, #yamashiro, #wakura, #yuzawa, #nozawa, #ikaho, #kinosaki, #gero, #beppu, #noboribetsu, #naruko, #tamatsukuri, #naha, #arima, #yufuin, #kurokawa, #ginzan, #atami) so posts can
      link straight to one area. Opening an area rewrites the hash with
      replaceState (no scroll, no extra history entry); the timeout lets a
      clicked <a href="#guide"> finish its own jump first. Section anchors
