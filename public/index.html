@@ -514,7 +514,10 @@
   .card{
     background:var(--surface);border:2.5px solid var(--ink);border-radius:8px;padding:16px;position:relative;
     box-shadow:4px 4px 0 var(--line);
+    display:flex;flex-direction:column;height:100%;
   }
+  .card-foot{margin-top:auto;}
+  @media(min-width:760px){.card .badges{min-height:28px;}}
   .card-top{display:flex;gap:8px;align-items:flex-start;}
   .card h4{margin:0;font-size:16.5px;font-weight:800;line-height:1.45;flex:1;display:flex;align-items:center;gap:8px;}
   .card h4 svg{width:22px;height:22px;flex:none;}
@@ -529,6 +532,8 @@
   .badge.watch{background:var(--ink);}
   .badge.hot{background:var(--pink);}
   .badge.threads{background:#111111;}
+  a.badge{text-decoration:none;}
+  a.badge.threads:hover{background:#333333;text-decoration:underline;text-underline-offset:2px;}
   .rate-line{font-size:13px;font-weight:800;color:var(--ink);margin:0 0 6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
   .rate-line svg{width:16px;height:16px;color:var(--coral);}
   .rate-line span{font-size:11.5px;font-weight:700;color:var(--ink-soft);}
@@ -1130,15 +1135,15 @@
         {t:"11:30", w:"バスターミナルから帰路へ"}
       ],
       inns:[
-        {name:"ホテル一井", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F39705%2F39705.html&link_type=text", badges:[], price:"¥16,500", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"湯畑の真西 ・ 湯畑が見える本館の客室は23室限定", addr:"草津411", rating:"4.65", reviews:"3,310", threads:true, text:"湯畑の真西、目の前に立つ創業300余年の宿。大浴場は白旗源泉、露天風呂は万代鉱源泉と、2つの源泉がどちらもかけ流しです。", theme:["roten"], x:238, y:138, lat:36.622962, lng:138.596225},
+        {name:"ホテル一井", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F39705%2F39705.html&link_type=text", badges:[], price:"¥16,500", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"湯畑の真西 ・ 湯畑が見える本館の客室は23室限定", addr:"草津411", rating:"4.65", reviews:"3,310", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/Df6WX4EFM74", text:"湯畑の真西、目の前に立つ創業300余年の宿。大浴場は白旗源泉、露天風呂は万代鉱源泉と、2つの源泉がどちらもかけ流しです。", theme:["roten"], x:238, y:138, lat:36.622962, lng:138.596225},
         {name:"草津温泉 大東舘", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F129576%2F129576.html&link_type=text", badges:[], price:"¥11,340", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"湯畑の北東 ・ バスターミナルから徒歩5分", addr:"草津126", rating:"3.85", reviews:"3,017", text:"湯畑の北東に立つ、湯畑源泉を引く数少ない宿のひとつ。夕食は地物素材を活かした和洋ビュッフェ。姉妹館との湯めぐりもできます。", theme:[], x:281, y:131, lat:36.623094, lng:138.597546},
-        {name:"草津温泉 奈良屋", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F70807%2F70807.html&link_type=text", badges:[], price:"¥37,000", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"湯畑の北北西 ・ 白旗源泉は24時間かけ流し", addr:"草津396", rating:"4.68", reviews:"953", threads:true, text:"湯畑から北北西へ約70mの、明治10年創業の宿。草津最古とされる白旗源泉を専属の湯守が管理しています。夕食は個室の食事処で約10品の会席、館内は全て畳敷きです。", theme:["roten","kashikiri"], x:243, y:113, lat:36.623354, lng:138.596112},
+        {name:"草津温泉 奈良屋", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F70807%2F70807.html&link_type=text", badges:[], price:"¥37,000", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"湯畑の北北西 ・ 白旗源泉は24時間かけ流し", addr:"草津396", rating:"4.68", reviews:"953", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/Df6WX4EFM74", text:"湯畑から北北西へ約70mの、明治10年創業の宿。草津最古とされる白旗源泉を専属の湯守が管理しています。夕食は個室の食事処で約10品の会席、館内は全て畳敷きです。", theme:["roten","kashikiri"], x:243, y:113, lat:36.623354, lng:138.596112},
         {name:"草津温泉 ホテル櫻井", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F56137%2F56137.html&link_type=text", badges:[], price:"¥15,400", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑まで徒歩約9分 ・ 源泉3種を引く大型宿", addr:"草津465-4", rating:"4.52", reviews:"5,238", text:"万代鉱・西の河原・綿の湯の3源泉を引く、179室の大型宿。長さ約20mの大浴場は草津最大級で、夕食のご馳走バイキングと湯もみ・太鼓ショーが看板です。湯畑までは徒歩約9分、バスターミナルからは無料送迎もあります。", theme:[], x:148, y:180, lat:36.621765, lng:138.593090},
         {name:"草津温泉 望雲", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F4904%2F4904.html&link_type=text", badges:[], price:"¥18,700", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑まで徒歩約3分 ・ 2源泉・6つの湯処は全てかけ流し", addr:"草津433-1", rating:"4.66", reviews:"1,395", text:"慶長3年創業、文人にも愛された老舗。湯畑と西の河原公園の間にあり、西の河原源泉と万代源泉を引く3つの大浴場と3つの露天風呂が全てかけ流しです。夕食は個室食事処で、部屋食プランもあります。", theme:["roten","heya-shoku"], x:190, y:136, lat:36.622971, lng:138.594478},
         {name:"草津温泉 草津舘", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F106048%2F106048.html&link_type=text", badges:[], price:"¥12,100", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑から徒歩圏 ・ 楽天トラベルの食事評価4.88", rating:"4.80", reviews:"895", text:"自家源泉のかけ流しと食事の評価の高さで知られる宿。楽天トラベルの食事評価は4.88と草津でもトップクラスで、貸切風呂もあります。湯畑からは徒歩圏です。", theme:["kashikiri"], x:238, y:148, lat:36.622643, lng:138.596085},
         {name:"草津温泉 中村屋旅館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F31675%2F31675.html&link_type=text", badges:[], price:"¥11,900", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑の東側 ・ 徒歩約2分", rating:"4.70", reviews:"600", text:"湯畑の東側に立つ旅館。食事の評価（楽天トラベル4.79）が高く、湯畑散策の拠点にしやすい立地です。貸切風呂もあります。", theme:["kashikiri"], x:257, y:169, lat:36.622075, lng:138.596740},
         {name:"草津温泉 益成屋旅館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F147469%2F147469.html&link_type=text", badges:[], price:"¥18,850", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑から徒歩約1分 ・ お風呂の評価4.85", addr:"草津406", rating:"4.71", reviews:"300", text:"湯畑の北西にある全6室の旅館。公式サイトでは湯畑まで徒歩約1分と案内されています。楽天トラベルのお風呂評価は4.85と高く、各室に専用の貸切風呂もあります。静かに湯を楽しみたい人向けの一軒です。", theme:["kashikiri"], x:232, y:127, lat:36.623211, lng:138.595940},
-        {name:"草津温泉 湯畑草菴", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F139908%2F139908.html&link_type=text", badges:[], price:"¥11,000", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑の東側 ・ 露天風呂つき客室あり", rating:"4.54", reviews:"467", threads:true, text:"湯畑の東側に立つ、全室に温泉を引いた宿。露天風呂つき客室があり、湯畑まで歩いてすぐの立地で温泉街の散策と両立できます。", theme:["roten"], x:274, y:135, lat:36.622982, lng:138.597305},
+        {name:"草津温泉 湯畑草菴", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F139908%2F139908.html&link_type=text", badges:[], price:"¥11,000", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"湯畑の東側 ・ 露天風呂つき客室あり", rating:"4.54", reviews:"467", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/Df6WX4EFM74", text:"湯畑の東側に立つ、全室に温泉を引いた宿。露天風呂つき客室があり、湯畑まで歩いてすぐの立地で温泉街の散策と両立できます。", theme:["roten"], x:274, y:135, lat:36.622982, lng:138.597305},
         {name:"草津温泉 田島屋旅館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F67910%2F67910.html&link_type=text", badges:[], price:"¥5,060", note:"料金は1名あたりの目安（2026年11月確認）", state:"湯畑から南へ徒歩約6分 ・ 手頃な価格帯の老舗", rating:"4.47", reviews:"520", text:"湯畑から南へ、バスターミナル寄りにある老舗旅館。草津では手頃な価格帯で、源泉かけ流しの湯を気軽に楽しめます。価格を抑えて湯を優先したい旅に。", theme:[], x:276, y:212, lat:36.620900, lng:138.597380}
       ],
       ramens:[
@@ -1241,11 +1246,11 @@
         {name:"道後温泉 大和屋本店", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F13429%2F13429.html&link_type=text", badges:[], price:"¥24,000", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"道後温泉本館まで徒歩約1分", rating:"4.60", reviews:"2,371", text:"本館の二軒隣に立つ、慶応4年創業の純和風数寄屋造りの宿。館内には道後唯一の能舞台「千寿殿」があり、朝食には伊予の鯛めしと蛇口みかんジュースが出ます。", theme:["roten"], x:180, y:126, lat:33.852797, lng:132.786162},
         {name:"ふなや", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F11332%2F11332.html&link_type=text", badges:[], price:"¥33,000", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"庭園「詠風庭」は約1,500坪", rating:"4.73", reviews:"2,065", text:"寛永年間創業の道後一の老舗。約1,500坪の日本庭園「詠風庭」には川が流れ、子規と漱石も句を詠みました。源泉100%で、客室の露天風呂もかけ流しです。", theme:["roten"], x:221, y:219, lat:33.850463, lng:132.787089},
         {name:"道後舘", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F10788%2F10788.html&link_type=text", badges:[], price:"¥24,000", note:"料金は1泊2食・2名1室の1名あたり目安（2026年11月確認）", state:"設計は建築家・黒川紀章", rating:"4.66", reviews:"2,113", text:"高台に建つ和モダンの宿。吹き抜けのロビーには滝が流れ落ちます。7階には庭園露天風呂つき客室があり、夕食・朝食を部屋でいただくプランも。駅から徒歩約7分。", theme:["roten","heya-shoku"], x:148, y:99, lat:33.853699, lng:132.784703},
-        {name:"道後御湯", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F165194%2F165194.html&link_type=text", badges:[], price:"¥32,200", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩圏の高台 ・ 楽天トラベルの総合評価4.94", rating:"4.94", reviews:"331", threads:true, text:"道後の高台にある小規模なラグジュアリー宿。楽天トラベルの総合評価4.94は道後エリア最高で、食事の評価も4.93。全室に露天風呂があり、静かに過ごす大人の旅に。", theme:["roten"], x:296, y:96, lat:33.853345, lng:132.785145},
+        {name:"道後御湯", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F165194%2F165194.html&link_type=text", badges:[], price:"¥32,200", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩圏の高台 ・ 楽天トラベルの総合評価4.94", rating:"4.94", reviews:"331", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/Df64pN2m3h9", text:"道後の高台にある小規模なラグジュアリー宿。楽天トラベルの総合評価4.94は道後エリア最高で、食事の評価も4.93。全室に露天風呂があり、静かに過ごす大人の旅に。", theme:["roten"], x:296, y:96, lat:33.853345, lng:132.785145},
         {name:"道後温泉 八千代", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F166206%2F166206.html&link_type=text", badges:[], price:"¥27,500", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩約3分 ・ 全室露天風呂つき・部屋食", rating:"4.79", reviews:"525", text:"本館の近くに立つ宿。全室に露天風呂が付き、夕食は部屋食でいただけます。楽天トラベルの総合評価4.79、お風呂4.77と高評価です。", theme:["roten","heya-shoku"], x:222, y:104, lat:33.853575, lng:132.787118},
         {name:"道後温泉 ホテル古湧園 遥", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F176808%2F176808.html&link_type=text", badges:[], price:"¥12,870", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩約7分 ・ 最上階に展望露天風呂", rating:"4.64", reviews:"802", text:"最上階の展望露天風呂から道後の街を見渡せるホテル。貸切風呂もあり、朝食バイキングも人気です。本館までは徒歩約7分。", theme:["kashikiri"], x:262, y:142, lat:33.852885, lng:132.785618},
-        {name:"道後hakuro", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F179083%2F179083.html&link_type=text", badges:[], price:"¥7,950", note:"料金は1名あたりの目安（2026年11月確認）", state:"道後温泉本館まで徒歩約3分 ・ 気軽に泊まれる温泉ホテル", rating:"4.56", reviews:"1,445", threads:true, text:"本館まで徒歩約3分の温泉ホテル。露天風呂つき大浴場があり、素泊まりでも気軽に泊まれます。道後温泉駅からも徒歩約5分です。", theme:[], x:172, y:196, lat:33.853805, lng:132.784948},
-        {name:"道後温泉 ホテル椿館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F13653%2F13653.html&link_type=text", badges:[], price:"¥11,000", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩約4分 ・ 部屋食プランあり", rating:"4.53", reviews:"2,253", threads:true, text:"本館から徒歩約4分の老舗ホテル。部屋食プランがあり、食事の評価（楽天トラベル4.67）も高めです。口コミ2,253件と利用者の多い一軒です。", theme:["heya-shoku"], x:238, y:178, lat:33.851575, lng:132.787637},
+        {name:"道後hakuro", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F179083%2F179083.html&link_type=text", badges:[], price:"¥7,950", note:"料金は1名あたりの目安（2026年11月確認）", state:"道後温泉本館まで徒歩約3分 ・ 気軽に泊まれる温泉ホテル", rating:"4.56", reviews:"1,445", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/Df64pN2m3h9", text:"本館まで徒歩約3分の温泉ホテル。露天風呂つき大浴場があり、素泊まりでも気軽に泊まれます。道後温泉駅からも徒歩約5分です。", theme:[], x:172, y:196, lat:33.853805, lng:132.784948},
+        {name:"道後温泉 ホテル椿館", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F13653%2F13653.html&link_type=text", badges:[], price:"¥11,000", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩約4分 ・ 部屋食プランあり", rating:"4.53", reviews:"2,253", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/Df64pN2m3h9", text:"本館から徒歩約4分の老舗ホテル。部屋食プランがあり、食事の評価（楽天トラベル4.67）も高めです。口コミ2,253件と利用者の多い一軒です。", theme:["heya-shoku"], x:238, y:178, lat:33.851575, lng:132.787637},
         {name:"道後プリンスホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F8384%2F8384.html&link_type=text", badges:[], price:"¥7,700", note:"料金は1名あたりの目安（2026年11月確認）", state:"道後温泉駅から徒歩約5分 ・ 庭園と足湯あり", rating:"4.49", reviews:"2,312", text:"庭園と足湯のある大型ホテル。部屋食プランもあり、価格は手頃な部類です。道後温泉駅から徒歩約5分、本館にも歩いて行けます。", theme:["heya-shoku"], x:120, y:224, lat:33.848107, lng:132.790767},
         {name:"道後温泉 道後グランドホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F6001%2F6001.html&link_type=text", badges:[], price:"¥10,450", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"本館から徒歩約6分 ・ 食事は個室で", addr:"道後湯之町16-21", rating:"4.22", reviews:"3,053", text:"道後湯之町にあるホテル。食事を個室でゆっくりいただけるのが好評で、口コミは3,053件と道後でも多い一軒です。本館までは徒歩約6分。", theme:[], x:158, y:238, lat:33.851848, lng:132.783312}
       ],
@@ -1292,7 +1297,7 @@
         {t:"11:30", w:"加賀温泉駅から帰路へ"}
       ],
       inns:[
-        {name:"山代温泉 ゆのくに天祥", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F1616%2F1616.html&link_type=text", badges:[], price:"¥12,980", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"総湯から徒歩圏 ・ 3つの大浴場と庭園露天", rating:"4.53", reviews:"3,805", threads:true, text:"「プロが選ぶ日本のホテル・旅館100選」の常連で、楽天・日本の宿アワード2025も受賞。3つの大浴場と庭園露天、サウナまでそろう山代の看板宿です。", theme:[], x:337, y:50, lat:36.293823, lng:136.364073},
+        {name:"山代温泉 ゆのくに天祥", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F1616%2F1616.html&link_type=text", badges:[], price:"¥12,980", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"総湯から徒歩圏 ・ 3つの大浴場と庭園露天", rating:"4.53", reviews:"3,805", threads:true, tpost:"https://www.threads.com/@hiyoko_web/post/DfzKcpsFVQJ", text:"「プロが選ぶ日本のホテル・旅館100選」の常連で、楽天・日本の宿アワード2025も受賞。3つの大浴場と庭園露天、サウナまでそろう山代の看板宿です。", theme:[], x:337, y:50, lat:36.293823, lng:136.364073},
         {name:"山代温泉 瑠璃光", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F6191%2F6191.html&link_type=text", badges:[], price:"¥9,680", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"貸切風呂5つ ・ 姉妹館の葉渡莉と湯めぐり可", rating:"4.24", reviews:"1,506", text:"四季を映す露天風呂と5つの貸切風呂が看板の宿。姉妹館の葉渡莉とは歩いて湯めぐりができます。", theme:["kashikiri"], x:346, y:24, lat:36.294519, lng:136.364349},
         {name:"山代温泉 葉渡莉", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F10624%2F10624.html&link_type=text", badges:[], price:"¥8,470", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"温泉通り沿い ・ 貸切風呂あり", addr:"山代温泉温泉通り17", rating:"4.37", reviews:"1,033", text:"温泉通りに面した宿。ひのき造りと石造り、趣の異なる2つの温泉があり、貸切風呂も備えます。ラーメン亭の斜め前という立地も、夜の締めに便利です。", theme:["kashikiri"], x:309, y:155, lat:36.290965, lng:136.363113},
         {name:"山代温泉 たちばな四季亭", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F28350%2F28350.html&link_type=text", badges:[], price:"¥22,325", note:"料金は1泊2食・1名あたりの目安（2026年11月確認）", state:"万松園通り ・ 部屋食", rating:"4.63", reviews:"289", text:"食事の評価4.85は山代トップクラス。部屋食で加賀の旬をゆっくり味わえる、総合評価も山代最高の宿です。", theme:["heya-shoku"], x:234, y:260, lat:36.288130, lng:136.360610},
@@ -2288,7 +2293,10 @@
 
   /* --- guide --- */
   var panel = document.getElementById("guidePanel");
-  function badgeHtml(b){ return '<span class="badge '+b[0]+'">'+esc(b[1])+'</span>'; }
+  function badgeHtml(b){
+    if(b[2]) return '<a class="badge '+b[0]+'" href="'+b[2]+'" target="_blank" rel="noopener">'+esc(b[1])+'</a>';
+    return '<span class="badge '+b[0]+'">'+esc(b[1])+'</span>';
+  }
 
   function mapItems(a){
     var items = [];
@@ -2548,21 +2556,19 @@
   }
 
   function innCard(a, i, idx){
-    var key = a.id+"-inn-"+idx, on = favs[key] ? " on" : "";
     var badges = i.badges.slice();
-    if(i.threads) badges.push(["threads","Threadsで紹介"]);
+    if(i.threads) badges.push(["threads","Threadsで紹介", i.tpost || ""]);
     return '<article class="card">'
-      + '<div class="card-top"><h4>'+esc(i.name)+'</h4>'
-      + '<button class="fav'+on+'" type="button" data-fav="'+key+'" aria-label="お気に入りに追加"><svg aria-hidden="true"><use href="#'+(favs[key]?"i-heart-fill":"i-heart")+'"/></svg></button></div>'
+      + '<div class="card-top"><h4>'+esc(i.name)+'</h4></div>'
       + '<div class="badges">'+badges.map(badgeHtml).join("")+'</div>'
       + (i.rating ? '<p class="rate-line"><svg aria-hidden="true"><use href="#i-star"/></svg>★'+esc(i.rating)+' <span>口コミ '+esc(i.reviews)+'件（楽天トラベル・2026年11月確認）</span></p>' : '')
       + '<p>'+esc(i.text)+'</p>'
       + '<div class="price-row"><span class="price">'+esc(i.price)+'<small> 〜／1名（2名1室・目安）</small></span></div>'
       + '<span class="watch-note">'+icon("i-search")+' '+i.note+'<br />'+esc(i.state)+'</span>'
       + nearRamenLine(a, i)
-      + '<button class="btn btn-pink" type="button" data-inn-detail="'+idx+'">詳細・周辺情報を見る</button>'
+      + '<div class="card-foot"><button class="btn btn-pink" type="button" data-inn-detail="'+idx+'">詳細・周辺情報を見る</button>'
       + (i.rt ? '<a class="rt-link" href="'+i.rt+'" target="_blank" rel="sponsored noopener">楽天トラベルで直接見る</a>' : '<a class="rt-link" href="#guide" data-demo-link>楽天トラベルで直接見る</a>')
-      + '</article>';
+      + '</div></article>';
   }
 
   function ramenCard(a, r, idx){
@@ -2592,7 +2598,7 @@
     if(!inn) return;
     lastInnBtn = btn || null;
     var badges = inn.badges.slice();
-    if(inn.threads) badges.push(["threads","Threadsで紹介"]);
+    if(inn.threads) badges.push(["threads","Threadsで紹介", inn.tpost || ""]);
     var ramenList = sortedByDist(inn, a.ramens).map(function(r){
       return '<li><span class="d-main"><span class="d-name">'+esc(r.item.name)+'</span>'
         + '<span class="d-sub">看板の一杯：'+esc(r.item.signature)+' ・ '+esc(r.item.late)+'</span></span>'
