@@ -453,6 +453,58 @@
   h3.sub.c-sky::before{background:var(--sky);}
   h3.sub.c-coral::before{background:var(--coral);}
 
+  /* ---------- guide vertical index tabs (areas with travel goods) ----------
+     File-spine style tabs on the left edge of a bordered block switch the
+     guide between 宿 / 一杯 / グッズ / 見どころ. Only areas that carry a
+     GOODS entry render this block; every other guide keeps the plain
+     stacked layout. The map, model course and access sections always sit
+     below the tab block, outside it, so the map never initialises hidden. */
+  .gtabs{display:flex;align-items:flex-start;margin-top:22px;}
+  .gtab-rail{display:flex;flex-direction:column;gap:6px;flex:none;padding-top:18px;}
+  .gtab{
+    writing-mode:vertical-rl;text-orientation:upright;
+    font-family:inherit;font-size:13.5px;font-weight:800;letter-spacing:.14em;line-height:1;
+    padding:14px 7px;min-height:78px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--surface-2);color:var(--ink-soft);
+    border:2.5px solid var(--ink);border-right:none;border-radius:8px 0 0 8px;
+  }
+  .gtab.on{background:var(--pink);color:#fff;}
+  .gtab:focus-visible{outline:3px solid var(--sky);outline-offset:2px;}
+  .gtab-panels{
+    flex:1;min-width:0;background:var(--surface);
+    border:2.5px solid var(--ink);border-radius:0 8px 8px 8px;
+    box-shadow:4px 4px 0 var(--line);
+    padding:16px 14px 18px;
+  }
+  @media(min-width:760px){.gtab-panels{padding:20px 20px 22px;}}
+  @media(max-width:560px){
+    .gtab{font-size:12.5px;padding:12px 5px;min-height:70px;letter-spacing:.1em;}
+    .gtab-panels{padding:14px 10px 16px;}
+  }
+  .gpanel[hidden]{display:none;}
+  .gpanel > h3.sub{margin-top:2px;}
+  /* goods stay a side shelf next to the 宿×一杯 headline acts: plainer
+     heading, text-only cards, one-column list */
+  h3.sub.sub-goods{font-size:15px;color:var(--ink-soft);}
+  h3.sub.sub-goods::before{background:var(--line);}
+  .goods-list{display:grid;gap:12px;}
+  .gcard{padding:14px 16px;}
+  .g-cat{
+    align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.05em;
+    background:var(--sun-soft);border:1.5px solid var(--ink);border-radius:4px;
+    padding:2px 8px;margin-bottom:8px;line-height:1.6;
+  }
+  .gcard h4{font-size:15.5px;}
+  .g-row{display:flex;align-items:baseline;gap:6px 12px;flex-wrap:wrap;margin:2px 0 4px;}
+  .g-price{font-size:16px;font-weight:800;}
+  .g-rate{font-size:12.5px;font-weight:800;color:var(--coral);}
+  .g-rate span{font-weight:700;color:var(--ink-soft);}
+  .card p.g-shop{font-size:12px;margin-bottom:10px;}
+  .g-btn{font-size:13.5px;font-weight:800;padding:9px 16px;min-height:42px;background:var(--surface-2);box-shadow:0 3px 0 var(--ink);}
+  .goods-note{font-size:11.5px;color:var(--ink-soft);font-weight:500;margin:12px 0 0;line-height:1.7;}
+  .card p.spot-meta{color:var(--ink);font-weight:700;font-size:12.5px;}
+
   .memo-list{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
   @media(min-width:760px){.memo-list{grid-template-columns:1fr 1fr;}}
   .memo-list li{background:var(--bg);border:2px solid var(--line);border-radius:6px;padding:11px 14px;font-size:14px;font-weight:500;}
@@ -2319,6 +2371,49 @@
     }
   ];
 
+  /* Regional travel goods (batch 1, checked 2026-11-28 on the Rakuten
+     Ichiba product pages). Only the areas listed here get the vertical
+     guide tabs and a グッズ panel; areas without an entry keep the plain
+     guide layout with no goods frame at all. Links are the plain product
+     page URLs, not affiliate-converted. Prices, ratings and review counts
+     are the values confirmed on 2026-11-28. */
+  var GOODS = {
+    noboribetsu: [
+      {cat:"滑り止め", name:"スノースパイク 靴用滑り止め（THINK RICH）", price:"498円〜（送料無料）", rate:"4.17", reviews:"115", shop:"THINK RICH STORE", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fthinkrich%2Fq02880%2F&link_type=text", reason:"片足10ピンの着脱式で、登別の凍った坂道でもいつもの靴に付けるだけで転倒対策になる"},
+      {cat:"カイロ", name:"貼るカイロ ぽかぽか家族（アイリスオーヤマ）240枚・480枚", price:"4,980円〜（送料無料）", rate:"4.76", reviews:"526", shop:"ゆにでのこづち", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funidy%2F1894684%2F&link_type=text", reason:"約12時間持続の貼るタイプで、氷点下の屋外歩きでも腰や背中から冷えを防げる"},
+      {cat:"防寒手袋", name:"防寒テムレス No.282（ショーワグローブ）", price:"1,550円（送料無料）", rate:"4.65", reviews:"196", shop:"KG商会", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkgsyoukai%2Fsho-1%2F&link_type=text", reason:"透湿防水と裏起毛で、雪を触っても濡れず冷たくない防寒手袋"}
+    ],
+    naruko: [
+      {cat:"インナー", name:"極厚裏起毛インナー（ドゥモア）", price:"1,499円（送料無料）", rate:"4.5", reviews:"858", shop:"DO-MORE（ドゥモア）", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbargain-style%2F31117a%2F&link_type=text", reason:"裏全面シャギーの極厚インナーで、山あいの朝晩の冷え込みに1枚重ねるだけで体感が変わる"},
+      {cat:"ネックウォーマー", name:"リブ編みネックウォーマー 裏地エコファー", price:"1,000円（送料無料）", rate:"4.67", reviews:"4,948", shop:"アップSTORE", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fapstore-shop%2F193%2F&link_type=text", reason:"裏地エコファーで首元に隙間ができにくく、峡谷沿いの冷たい風から首を守れる"},
+      {cat:"保湿", name:"ニベアクリーム 青缶 大缶169g（花王）", price:"770円（＋送料770円）", rate:"4.59", reviews:"221", shop:"楽天24", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2Fa001256000746%2F&link_type=text", reason:"乾燥した冷気で荒れやすい手や顔の保湿に。温泉上がりの乾燥対策にも使える"}
+    ],
+    nozawa: [
+      {cat:"スノーブーツ", name:"LAD WEATHER スノーブーツ（完全防水・裏ボア）", price:"3,480円（送料無料）", rate:"4.11", reviews:"460", shop:"LAD WEATHER（ラドウェザー）公式", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fvanilla-vague%2Fladshoes017%2F&link_type=text", reason:"地面から約6.5cmまで一体成型の完全防水と全面ボアで、外湯めぐりで深雪を歩く野沢の必需品"},
+      {cat:"滑り止め", name:"スノースパイク 靴用滑り止め（THINK RICH）", price:"498円〜（送料無料）", rate:"4.17", reviews:"115", shop:"THINK RICH STORE", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fthinkrich%2Fq02880%2F&link_type=text", reason:"ブーツを持って行かない人の保険に。携帯できる着脱式で、凍った外湯めぐりの坂道対策になる"}
+    ],
+    yuzawa: [
+      {cat:"カイロ", name:"貼るカイロ ぽかぽか家族（アイリスオーヤマ）240枚・480枚", price:"4,980円〜（送料無料）", rate:"4.76", reviews:"526", shop:"ゆにでのこづち", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Funidy%2F1894684%2F&link_type=text", reason:"駅からの徒歩移動や雪見歩きで、衣類に貼るだけで約12時間あたたかさが続く"},
+      {cat:"防寒手袋", name:"防寒テムレス No.282（ショーワグローブ）", price:"1,550円（送料無料）", rate:"4.65", reviews:"196", shop:"KG商会", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkgsyoukai%2Fsho-1%2F&link_type=text", reason:"防水なので雪に触れる場面でも濡れず、裏起毛で指先の冷えを防げる"},
+      {cat:"ネックウォーマー", name:"リブ編みネックウォーマー 裏地エコファー", price:"1,000円（送料無料）", rate:"4.67", reviews:"4,948", shop:"アップSTORE", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fapstore-shop%2F193%2F&link_type=text", reason:"1,000円で荷物にならず、新幹線移動と現地の雪道歩きの首元防寒にちょうどいい"}
+    ],
+    naha: [
+      {cat:"日焼け止め", name:"アネッサ パーフェクトUV スキンケアミルク NA 60ml", price:"3,058円", rate:"4.77", reviews:"474", shop:"楽天24 コスメ館", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24-cosmetics%2F4909978147105%2F&link_type=text", reason:"年間を通して紫外線が強い沖縄の街歩きやビーチの必需品。汗や水に強いミルクタイプ"},
+      {cat:"防水ケース", name:"スマホ防水ケース 最大7.2インチ対応（OTHERSiDE）", price:"1,000円", rate:"4.44", reviews:"712", shop:"Bridge Store 楽天市場店", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbridge-store%2Fwpc%2F&link_type=text", reason:"国際通りから足を延ばすビーチやマリンアクティビティで、スマホを水濡れから守れる"},
+      {cat:"サンダル", name:"ビーチサンダル 厚底 花柄 トングサンダル", price:"1,680円〜", rate:"4.33", reviews:"1,425", shop:"TeddyShop", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fteddyshop%2Fsandal042%2F&link_type=text", reason:"厚底で街歩きにも使え、ビーチと国際通りの散策を1足で済ませられる"}
+    ],
+    atami: [
+      {cat:"日焼け止め", name:"アネッサ パーフェクトUV スキンケアジェル NB", price:"1,496円〜", rate:"4.62", reviews:"386", shop:"楽天24", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F406689%2F&link_type=text", reason:"熱海サンビーチでの海水浴や海岸散歩向け。ジェルタイプでべたつかず、せっけんで落とせる"},
+      {cat:"速乾タオル", name:"速乾タオル スイミングタオル バイカラー 2枚セット（COREMO+）", price:"1,680円", rate:"4.58", reviews:"738", shop:"COREMO+", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flinofle%2Fly-0499%2F&link_type=text", reason:"温泉と海水浴のはしごでもかさばらない速乾タオル。2枚セットで連泊にも対応"},
+      {cat:"帽子", name:"UVシャルマンハット（完全遮光・つば広・折りたたみ）", price:"3,960円", rate:"4.42", reviews:"6,845", shop:"帽子屋 Loo&c", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fboushiya-looandc%2F002%2F&link_type=text", reason:"坂の多い熱海の温泉街歩きの日差し対策に。折りたためて湯めぐりの荷物に入る"}
+    ],
+    beppu: [
+      {cat:"帽子", name:"クールUVシェードハット（完全遮光・冷感・つば広）", price:"3,580円", rate:"4.31", reviews:"5,064", shop:"帽子屋QUEENHEAD", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fqueenhead%2F0068-1%2F&link_type=text", reason:"地獄めぐりの屋外歩きで湯けむりと日差しの両方に対応。冷感素材で蒸れにくい"},
+      {cat:"防水ケース", name:"防水スマホケース 2wayポケット小物収納付（IPX8）", price:"1,480円", rate:"4.55", reviews:"2,146", shop:"NAGISAYA 楽天市場店", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagisa-ya%2F2way-wp-case%2F&link_type=text", reason:"砂湯や泥湯など水辺の温泉施設で、スマホと小銭をまとめて防水できる"},
+      {cat:"速乾タオル", name:"速乾タオル 超吸水 スポーツタオル 40×80cm", price:"780円", rate:"4.32", reviews:"309", shop:"Neory楽天市場店", url:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fneoryshop%2F10000003%2F&link_type=text", reason:"外湯めぐりで何度も使う前提の速乾タオル。コンパクトで湯めぐりバッグに入る"}
+    ]
+  };
+
   var THEMES = [
     {id:"all", label:"すべて"},
     {id:"roten", label:"露天風呂つき客室"},
@@ -2372,7 +2467,7 @@
     return PREF_AREA[p] ? [PREF_AREA[p]] : null;
   }
 
-  var state = { area:"kusatsu", theme:"all", nightOnly:false, pin:null, mapView:"all", mapFree:false };
+  var state = { area:"kusatsu", theme:"all", nightOnly:false, pin:null, mapView:"all", mapFree:false, gtab:"inn" };
   var favs = {};
   var currentItems = [], currentAreaName = "";
 
@@ -2760,7 +2855,7 @@
   });
 
   function selectArea(id){
-    state.area = id; state.theme = "all"; state.nightOnly = false; state.pin = null; state.mapView = "all"; state.mapFree = false;
+    state.area = id; state.theme = "all"; state.nightOnly = false; state.pin = null; state.mapView = "all"; state.mapFree = false; state.gtab = "inn";
     renderAreaPicker(); renderGuide();
     syncAreaHash(id);
   }
@@ -2983,47 +3078,62 @@
       + '</svg></div>';
     }
 
-    panel.innerHTML =
+    var headHtml =
       '<div class="guide-hero"><img src="'+a.img+'" alt="'+esc(a.imgAlt)+'" />'
       + '<span class="cap">'+icon("i-onsen")+' '+esc(a.name)+'（'+esc(a.pref)+'）</span></div>'
       + '<div class="guide-in">'
       + '<p class="guide-about">'+esc(a.about)+'</p>'
       + '<div class="fact-chips">'+a.facts.map(function(f){
           return '<div class="fact '+f.cls+'"><span class="fact-label">'+esc(f.label)+'</span><span class="fact-val">'+esc(f.val)+'</span></div>';
-        }).join("")+'</div>'
+        }).join("")+'</div>';
 
-      + '<h3 class="sub c-sky"><span><span class="keep">エリアマップ</span><span class="keep">（見どころ・宿・'+foodWord(a)+'）</span></span></h3>'
+    var mapHtml =
+      '<h3 class="sub c-sky"><span><span class="keep">エリアマップ</span><span class="keep">（見どころ・宿・'+foodWord(a)+'）</span></span></h3>'
       + mapBlock
       + '<p class="map-hint">ピンをタップすると、その場所の説明が出ます。<br />'
       + '<span class="dot" style="background:var(--pink)"></span>ピンク：宿'
       + '<span class="dot" style="background:var(--sun)"></span>黄色：'+foodWord(a)
       + '<span class="dot" style="background:var(--sky)"></span>青：見どころ'
       + (a.realMap ? '<br />実地図版です。ピンは実際の位置に置いています。' : '')
-      + '</p>'
+      + '</p>';
 
-      + '<h3 class="sub c-coral">モデルコース（1泊2日）</h3>'
+    var courseHtml =
+      '<h3 class="sub c-coral">モデルコース（1泊2日）</h3>'
       + '<ol class="course">'+a.course.map(function(c){
           return '<li><time>'+esc(c.t)+'</time><span class="what">'+c.w+'</span></li>';
-        }).join("")+'</ol>'
+        }).join("")+'</ol>';
 
-      + '<h3 class="sub c-pink">泊まる宿</h3>'
+    var innsHtml =
+      '<h3 class="sub c-pink">泊まる宿</h3>'
       + '<p class="map-hint" style="margin:0 0 10px">口コミ評価と件数は楽天トラベル（2026年11月確認）の値です。黒い「Threadsで紹介」バッジは、ひよこ（@hiyoko_web）のThreads投稿で取り上げた掲載につく印です。各カードの「'+(a.foodName ? '一番近い夜の一杯' : '一番近いラーメン')+'」は掲載地点の座標から計算した直線距離をもとに、徒歩時間は80m／分の換算による目安です。</p>'
       + '<div class="filter-row" role="group" aria-label="テーマで絞り込み">'+themeChips+'</div>'
       + (inns.length
           ? '<div class="cards">'+inns.map(function(i){ return innCard(a,i,a.inns.indexOf(i)); }).join("")+'</div>'
-          : '<p class="empty-msg" style="display:block">このテーマに合う宿は、このエリアではまだ掲載がありません。</p>')
+          : '<p class="empty-msg" style="display:block">このテーマに合う宿は、このエリアではまだ掲載がありません。</p>');
 
-      + '<h3 class="sub c-sun">宿から歩いて行ける'+foodWord(a)+'</h3>'
+    var foodHtml =
+      '<h3 class="sub c-sun">宿から歩いて行ける'+foodWord(a)+'</h3>'
       + '<div class="filter-row"><button class="chip" type="button" id="nightChip" aria-pressed="'+state.nightOnly+'">'+icon("i-moon")+'夜21時以降も開いている店だけ</button></div>'
       + (ramens.length
           ? '<div class="cards">'+ramens.map(function(r,idx){ return ramenCard(a,r,idx); }).join("")+'</div>'
-          : '<p class="empty-msg" style="display:block">'+(a.foodName ? '条件に合う夜の一杯の店がありません。' : '条件に合うラーメン屋がありません。')+'</p>')
+          : '<p class="empty-msg" style="display:block">'+(a.foodName ? '条件に合う夜の一杯の店がありません。' : '条件に合うラーメン屋がありません。')+'</p>');
 
-      + '<h3 class="sub c-mint">アクセス・季節</h3>'
+    var accessHtml =
+      '<h3 class="sub c-mint">アクセス・季節</h3>'
       + '<ul class="memo-list">'
       + '<li><b>行き方</b>：'+esc(a.facts[2].val)+'</li>'
       + '<li><b>季節</b>：'+esc(a.facts[1].val)+'</li>'
-      + '</ul>'
+      + '</ul>';
+
+    /* Areas with travel goods get the vertical index tabs: 宿・一杯・
+       グッズ・見どころ switch inside the tab block, while the area map,
+       model course and access stay below it, always visible (the map must
+       never initialise inside a hidden panel). All other areas keep the
+       original stacked order untouched. */
+    panel.innerHTML = headHtml
+      + (GOODS[a.id]
+          ? guideTabsHtml(a, innsHtml, foodHtml) + mapHtml + courseHtml + accessHtml
+          : mapHtml + courseHtml + innsHtml + foodHtml + accessHtml)
       + '</div>';
 
     var night = document.getElementById("nightChip");
@@ -3057,6 +3167,74 @@
       mountRealMap(a, items);
       setupCoach();
     }
+  }
+
+  /* --- guide vertical tabs (goods areas only) --- */
+  var GTABS = [["inn","宿"],["food","一杯"],["goods","グッズ"],["spot","見どころ"]];
+  function guideTabsHtml(a, innsHtml, foodHtml){
+    var rail = GTABS.map(function(t){
+      var on = state.gtab === t[0];
+      return '<button type="button" role="tab" class="gtab'+(on ? " on" : "")+'" data-gtab="'+t[0]+'" id="gtab-'+t[0]+'" aria-selected="'+on+'" aria-controls="gpanel-'+t[0]+'" tabindex="'+(on ? "0" : "-1")+'">'+t[1]+'</button>';
+    }).join("");
+    function pane(key, html){
+      var on = state.gtab === key;
+      return '<div class="gpanel" role="tabpanel" id="gpanel-'+key+'" data-gpanel="'+key+'" aria-labelledby="gtab-'+key+'"'+(on ? "" : " hidden")+'>'+html+'</div>';
+    }
+    return '<div class="gtabs">'
+      + '<div class="gtab-rail" role="tablist" aria-label="'+esc(a.name)+'ガイドの項目切り替え">'+rail+'</div>'
+      + '<div class="gtab-panels">'
+      + pane("inn", innsHtml)
+      + pane("food", foodHtml)
+      + pane("goods", goodsHtml(a))
+      + pane("spot", spotsHtml(a))
+      + '</div></div>';
+  }
+  function switchGtab(key){
+    state.gtab = key;
+    panel.querySelectorAll("[data-gtab]").forEach(function(b){
+      var on = b.getAttribute("data-gtab") === key;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-selected", String(on));
+      b.tabIndex = on ? 0 : -1;
+    });
+    panel.querySelectorAll("[data-gpanel]").forEach(function(p){
+      p.hidden = p.getAttribute("data-gpanel") !== key;
+    });
+  }
+
+  /* --- travel goods cards: text only (Rakuten product photos may not be
+     reused), plain product-page links with rel="sponsored noopener" --- */
+  function goodsCard(g){
+    return '<article class="card gcard">'
+      + '<span class="g-cat">'+esc(g.cat)+'</span>'
+      + '<h4>'+esc(g.name)+'</h4>'
+      + '<p>'+esc(g.reason)+'</p>'
+      + '<div class="g-row"><span class="g-price">'+esc(g.price)+'</span>'
+      + '<span class="g-rate">★'+esc(g.rate)+' <span>レビュー'+esc(g.reviews)+'件</span></span></div>'
+      + '<p class="g-shop">'+esc(g.shop)+'</p>'
+      + '<div class="card-foot"><a class="btn g-btn" href="'+g.url+'" target="_blank" rel="sponsored noopener">楽天市場で見る</a></div>'
+      + '</article>';
+  }
+  function goodsHtml(a){
+    var list = GOODS[a.id] || [];
+    return '<h3 class="sub sub-goods">このエリアの旅グッズ</h3>'
+      + '<div class="goods-list">'+list.map(goodsCard).join("")+'</div>'
+      + '<p class="goods-note">価格・評価は2026年11月28日に確認した時点の目安です。最新の価格は楽天市場の商品ページでご確認ください。</p>';
+  }
+
+  /* --- sights panel: the area's spots, same items and text as the map
+     pins and popups carry --- */
+  function spotCard(s){
+    return '<article class="card">'
+      + '<div class="card-top"><h4>'+esc(s.name)+'</h4></div>'
+      + (s.threads ? '<div class="badges"><span class="badge threads">Threadsで紹介</span></div>' : '')
+      + '<p class="spot-meta">'+esc(s.meta + (s.addr ? ' ・ ' + s.addr : ''))+'</p>'
+      + '<p>'+esc(s.text)+'</p>'
+      + '</article>';
+  }
+  function spotsHtml(a){
+    return '<h3 class="sub c-sky">見どころ</h3>'
+      + '<div class="cards">'+a.spots.map(spotCard).join("")+'</div>';
   }
 
   function innCard(a, i, idx){
@@ -3259,6 +3437,8 @@
   });
 
   panel.addEventListener("click", function(e){
+    var gt = e.target.closest("[data-gtab]");
+    if(gt){ switchGtab(gt.getAttribute("data-gtab")); return; }
     var pin = e.target.closest("[data-pin]");
     if(pin){
       openSpotPop(pin.getAttribute("data-pin"), pin);
@@ -3281,6 +3461,19 @@
     if(d){ e.preventDefault(); }
   });
   panel.addEventListener("keydown", function(e){
+    var gt = e.target.closest ? e.target.closest("[data-gtab]") : null;
+    if(gt && (e.key==="ArrowDown" || e.key==="ArrowUp" || e.key==="ArrowRight" || e.key==="ArrowLeft")){
+      e.preventDefault();
+      var keys = GTABS.map(function(t){ return t[0]; });
+      var gi = keys.indexOf(gt.getAttribute("data-gtab"));
+      var next = (e.key==="ArrowDown" || e.key==="ArrowRight")
+        ? keys[(gi + 1) % keys.length]
+        : keys[(gi - 1 + keys.length) % keys.length];
+      switchGtab(next);
+      var nb = panel.querySelector('[data-gtab="'+next+'"]');
+      if(nb) nb.focus();
+      return;
+    }
     var pin = e.target.closest ? e.target.closest("[data-pin]") : null;
     if(pin && (e.key==="Enter" || e.key===" ")){
       e.preventDefault();
