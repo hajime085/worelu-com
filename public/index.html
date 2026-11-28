@@ -1011,6 +1011,7 @@
           <circle class="mpin-halo" cx="64" cy="272" r="5"/><circle class="mpin" cx="64" cy="272" r="3.4"/>
           <circle class="mpin-halo" cx="46" cy="322" r="5"/><circle class="mpin" cx="46" cy="322" r="3.4"/>
           <circle class="mpin-halo" cx="36" cy="350" r="5"/><circle class="mpin" cx="36" cy="350" r="3.4"/>
+          <circle class="mpin-halo" cx="297" cy="168" r="5"/><circle class="mpin" cx="297" cy="168" r="3.4"/>
         </g>
       </svg>
       </div>
@@ -1019,15 +1020,15 @@
         <div class="region-list">
           <button type="button" class="region-row live" data-region-go="hokkaido"><span class="r-main"><span class="r-name">北海道</span><span class="r-areas">登別温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="tohoku"><span class="r-main"><span class="r-name">東北</span><span class="r-areas">鳴子温泉 ・ 銀山温泉</span></span><span class="r-status">公開中</span></button>
-          <button type="button" class="region-row live" data-region-go="kanto"><span class="r-main"><span class="r-name">関東甲信</span><span class="r-areas">草津温泉 ・ 箱根湯本 ・ 越後湯沢 ・ 野沢温泉 ・ 伊香保温泉</span></span><span class="r-status">公開中</span></button>
+          <button type="button" class="region-row live" data-region-go="kanto"><span class="r-main"><span class="r-name">関東甲信</span><span class="r-areas">草津温泉 ・ 箱根湯本 ・ 越後湯沢 ・ 野沢温泉 ・ 伊香保温泉 ・ 鬼怒川温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="hokuriku"><span class="r-main"><span class="r-name">北陸</span><span class="r-areas">山代温泉 ・ 和倉温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="tokai"><span class="r-main"><span class="r-name">東海</span><span class="r-areas">下呂温泉 ・ 熱海温泉</span></span><span class="r-status">公開中</span></button>
-          <button type="button" class="region-row live" data-region-go="kinki"><span class="r-main"><span class="r-name">近畿</span><span class="r-areas">城崎温泉</span></span><span class="r-status">公開中</span></button>
+          <button type="button" class="region-row live" data-region-go="kinki"><span class="r-main"><span class="r-name">近畿</span><span class="r-areas">城崎温泉 ・ 有馬温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="chugoku"><span class="r-main"><span class="r-name">中国</span><span class="r-areas">玉造温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="shikoku"><span class="r-main"><span class="r-name">四国</span><span class="r-areas">道後温泉</span></span><span class="r-status">公開中</span></button>
           <button type="button" class="region-row live" data-region-go="kyushu"><span class="r-main"><span class="r-name">九州・沖縄</span><span class="r-areas">別府温泉 ・ 由布院温泉 ・ 黒川温泉 ・ 那覇・国際通り</span></span><span class="r-status">公開中</span></button>
         </div>
-        <p class="map-note" id="mapNote">公開中の地方は、北海道（登別温泉）、東北（鳴子温泉・銀山温泉）、関東甲信（草津温泉・箱根湯本・越後湯沢・野沢温泉・伊香保温泉）、北陸（山代温泉・和倉温泉）、東海（下呂温泉・熱海温泉）、四国（道後温泉）、近畿（城崎温泉）、中国（玉造温泉）、九州・沖縄（別府温泉・由布院温泉・黒川温泉・那覇・国際通り）です。地方を選ぶと、その地方の都道府県（STEP 2）が表示されます。</p>
+        <p class="map-note" id="mapNote">公開中の地方は、北海道（登別温泉）、東北（鳴子温泉・銀山温泉）、関東甲信（草津温泉・箱根湯本・越後湯沢・野沢温泉・伊香保温泉・鬼怒川温泉）、北陸（山代温泉・和倉温泉）、東海（下呂温泉・熱海温泉）、四国（道後温泉）、近畿（城崎温泉・有馬温泉）、中国（玉造温泉）、九州・沖縄（別府温泉・由布院温泉・黒川温泉・那覇・国際通り）です。地方を選ぶと、その地方の都道府県（STEP 2）が表示されます。</p>
         <!-- REGION PANEL: illustration cards linked to the selected region.
              Rendered by JS from AREAS (published areas only). -->
         <div class="region-panel" id="regionPanel">
@@ -2238,6 +2239,59 @@
         {name:"和牛らーめん 和輝", signature:"和牛らーめん", walk:"熱海駅から徒歩約7分", late:"22:00まで", addr:"咲見町7-32", text:"2026年3月に開店した、和牛ラーメンの店です。自家製の牛骨スープに和牛がのる一杯が看板。咲見町の駅近にあり、22時まで営業するので、湯上がりの夜の一杯にも使えます。", night:true, x:185, y:128, lat:35.10029, lng:139.07473},
         {name:"麺や いちゆめ", signature:"豪華魚介豚骨ラーメン", walk:"渚町 ・ サンビーチから徒歩約4分", late:"20:50まで（夜の部17:00〜・金曜定休）", addr:"渚町8-1", text:"熱海の麺処「麺匠うえ田」の流れを汲む店が、2025年に渚町で始めた一軒。看板は魚介と豚骨の濃厚スープの「豪華魚介豚骨ラーメン」で、濃厚魚介つけ麺も人気です。夜の部は20:50までです。", night:true, x:184, y:175, lat:35.09601, lng:139.07461}
       ]
+    },
+    {
+      id:"kinugawa", name:"鬼怒川温泉", pref:"栃木県", region:"kanto", img:"/assets/119a8591fcd24dbe.webp",
+      imgAlt:"鬼怒川の渓谷とエメラルド色の川、赤い吊橋とライン下りの舟、湯けむりの温泉街と紅葉のイラスト",
+      desc:"浅草から東武特急で約2時間。鬼怒川の渓谷沿いに温泉街が広がる、栃木の名湯です。ライン下りや吊橋の景勝地、駅前の宿から渓谷沿いの老舗まで10軒と、湯上がりに歩けるラーメン2軒を掲載しました。",
+      tags:["特急で約2時間","渓谷とライン下り","紅葉の名所"],
+      innCount:10, ramenCount:2, realMap:true, mapCenterName:"鬼怒川温泉駅", staticMap:"/assets/f218d67ade193c5f.webp",
+      center:{label:"鬼怒川温泉駅", x:220, y:150},
+      mapVB:"0 0 440 300", r5:30, r10:60,
+      mapCaption:"実座標で作図（約10m／px）。円は道のり換算の徒歩5分・10分圏の目安",
+      mapNote:"ピンは実際の緯度経度をもとに、鬼怒川温泉駅を原点・北を上・約10m／pxの同じ縮尺で置いています（中心部はピンが重なるため少しずらして表示）。破線の円は道のり換算の目安で、半径は直線で約300m（徒歩5分圏）と約600m（徒歩10分圏）です。龍王峡・東武ワールドスクウェア・日光江戸村・若竹の庄は円の外にあります。各ピンの詳細に住所とGoogleマップへのリンクを付けたので、そのまま照合できます。",
+      scenery:'<rect x="0" y="0" width="440" height="300" fill="#EFF6EA"/><path d="M0 0 L440 0 L440 26 C330 12 200 30 110 20 C70 16 30 24 0 18 Z" fill="#DCEFD2"/><path d="M0 300 L0 262 C90 248 190 264 280 254 C340 248 400 256 440 250 L440 300 Z" fill="#DCEFD2"/><path d="M158 -10 C176 50 138 110 152 168 C164 218 150 262 162 310" fill="none" stroke="#AEDCF5" stroke-width="20" stroke-linecap="round"/><path d="M158 -10 C176 50 138 110 152 168 C164 218 150 262 162 310" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".55"/><g fill="none" stroke="#C3CED4" stroke-linecap="round" stroke-linejoin="round"><path d="M252 -10 C242 70 258 170 246 310" stroke-width="9"/><path d="M248 148 C310 142 380 146 440 140" stroke-width="7"/><path d="M250 60 C300 52 360 54 440 48" stroke-width="6"/></g><g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"><path d="M252 -10 C242 70 258 170 246 310" stroke-width="5"/><path d="M248 148 C310 142 380 146 440 140" stroke-width="3.5"/><path d="M250 60 C300 52 360 54 440 48" stroke-width="3"/></g><path d="M134 190 L198 184" stroke="#E4573D" stroke-width="5" stroke-linecap="round"/><g fill="#F6DDB9" stroke="#DDB98C" stroke-width="1.2"><rect x="262" y="96" width="18" height="12"/><rect x="286" y="170" width="20" height="13"/><rect x="300" y="36" width="16" height="11"/></g><g><rect x="206" y="132" width="28" height="18" rx="3" fill="#FFFFFF" stroke="#43302A" stroke-width="2.2"/><path d="M210 132 L220 122 L230 132" fill="none" stroke="#FF7A4D" stroke-width="3" stroke-linecap="round"/><path d="M215 125 C213 120 217 118 215 113 M224 125 C222 120 226 118 224 113" fill="none" stroke="#3FA7DC" stroke-width="2" stroke-linecap="round"/></g><g transform="translate(352,276)"><rect x="0" y="-4" width="25" height="4" fill="#43302A"/><rect x="25" y="-4" width="25" height="4" fill="#FFFFFF" stroke="#43302A" stroke-width="1"/><text x="25" y="12" text-anchor="middle" font-size="8.5" font-weight="700" fill="#43302A">200m</text></g><text x="112" y="150" font-size="10.5" font-weight="800" fill="#3FA7DC" transform="rotate(-84 112 150)">鬼怒川</text><text class="lbl" x="292" y="30" font-size="8.5">滝地区</text><text class="lbl" x="330" y="86" font-size="8.5">龍王峡方面</text><text class="lbl" x="36" y="206" font-size="8.5">鬼怒楯岩大吊橋</text><text class="lbl" x="150" y="292" font-size="8.5">東武ワールドスクウェア方面</text>',
+      about:"浅草から東武特急で約2時間、栃木県日光市にある関東を代表する温泉地です。鬼怒川の渓谷に沿って温泉街が南北に広がり、江戸時代から知られる湯は、明治以降「東京の奥座敷」として栄えてきました。泉質はアルカリ性単純温泉で、なめらかで肌にやさしい湯です。見どころは、船頭の櫂さばきで渓谷を下る鬼怒川ライン下り、スリル満点の鬼怒楯岩大吊橋、少し足をのばせば龍王峡の滝めぐりや東武ワールドスクウェア、日光江戸村も楽しめます。秋は渓谷一帯の紅葉が見事です。このページでは、楽天トラベルで掲載を確認できた宿10軒と、温泉街から歩けるラーメン2軒を紹介します。",
+      facts:[
+        {cls:"fact-spring", label:"泉質", val:"アルカリ性単純温泉"},
+        {cls:"fact-season", label:"ベストシーズン", val:"通年。紅葉は龍王峡・楯岩周辺で10月下旬〜11月中旬、ライン下りは4月中旬〜11月下旬"},
+        {cls:"fact-access", label:"アクセス", val:"浅草から東武特急スペーシアX・リバティで約2時間／新宿からJR直通特急もあり。車は今市ICから約20分"}
+      ],
+      spots:[
+        {name:"鬼怒川ライン下り", meta:"鬼怒川温泉駅から徒歩約5分 ・ 4月中旬〜11月下旬（期間中無休）", addr:"大原1414", text:"鬼怒川温泉駅から徒歩約5分の乗船場から、船頭の櫂さばきで渓谷を下る名物アクティビティです。奇岩や滝を眺めながら下り、下船場からは無料シャトルバスで駅に戻れます。運賃は大人3,500円・小人2,400円・幼児800円、出航は9:00〜15:45です。", x:219, y:123, lat:36.82620, lng:139.71520},
+        {name:"鬼怒楯岩大吊橋", meta:"鬼怒川温泉駅から徒歩約10分 ・ 通行無料", text:"鬼怒川に架かる長さ約140mの歩行者専用吊橋です。川面からの高さは約40mで、渡る途中はスリル満点、渓谷と温泉街の眺めが広がります。橋の先には楯岩展望台があり、鬼怒川を上から見下ろせます。", x:162, y:186, lat:36.82060, lng:139.70880},
+        {name:"鬼怒川温泉ロープウェイ", meta:"山麓駅は滝地区 ・ 9:00〜16:00（通年）", addr:"滝834", text:"滝地区の山麓駅から丸山山頂へ上がるロープウェイ。山頂は「おさるの山」で、サルたちに会える展望スポットです。往復は大人1,400円、鬼怒川ライン下りとの共通券（4,300円）もあります。", x:262, y:11, lat:36.83630, lng:139.72000},
+        {name:"東武ワールドスクウェア", meta:"東武ワールドスクウェア駅すぐ ・ 大人2,800円／小人1,400円", addr:"大原209-1", text:"世界の有名な建造物や遺跡を、精巧なミニチュアで再現したテーマパークです。「1日で世界旅行」が楽しめます。営業時間は夏期9:00〜17:00、冬期9:30〜16:00です。", x:189, y:331, lat:36.80754, lng:139.71182},
+        {name:"EDO WONDERLAND 日光江戸村", meta:"鬼怒川温泉駅からバス約20分 ・ 1日券 大人5,800円／小人3,000円", addr:"柄倉470-2", text:"江戸時代の町並みを再現したテーマパーク。忍者や花魁のショー、芝居小屋、体験型のアトラクションで1日遊べます。夏期9:00〜17:00、冬期9:30〜16:00で、水曜を中心に休村日があります。", x:62, y:515, lat:36.79099, lng:139.69755},
+        {name:"龍王峡", meta:"野岩鉄道・龍王峡駅からすぐ ・ 遊歩道は無料", addr:"藤原1357", text:"鬼怒川の上流に約3km続く渓谷です。虹見の滝や竪琴の滝をめぐる遊歩道が整備され、散策は無料。紅葉の見頃は10月下旬〜11月中旬です。最寄りの龍王峡駅へは、鬼怒川温泉駅から野岩鉄道で約10分です。", x:235, y:-251, lat:36.85986, lng:139.71703}
+      ],
+      course:[
+        {t:"13:00", w:"東武特急で鬼怒川温泉駅着。駅前の足湯でひと息"},
+        {t:"13:40", w:"<b>鬼怒川ライン下り</b>へ。船頭の櫂さばきと渓谷美（最終便15:45）"},
+        {t:"15:30", w:"チェックインして、まずはひと湯"},
+        {t:"17:00", w:"<b>鬼怒楯岩大吊橋</b>を渡って、楯岩展望台から渓谷を眺める"},
+        {t:"18:30", w:"宿で夕食"},
+        {t:"20:00", w:"湯上がりに<b>一富士</b>のみそラーメン（24時まで）。駅前の宿なら<b>すーさん</b>へ早めに"},
+        {t:"翌 9:00", w:"<b>鬼怒川温泉ロープウェイ</b>で丸山山頂へ。おさるの山と展望"},
+        {t:"翌 11:00", w:"電車で<b>龍王峡</b>へ。虹見の滝と渓谷の遊歩道を散策"},
+        {t:"翌 13:30", w:"駅前でお土産を買って、特急で帰路へ"}
+      ],
+      inns:[
+        {name:"鬼怒川温泉 ゆらら 丸京", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F12672%2F12672.html&link_type=text", badges:[], price:"¥25,300", note:"料金は最安プランの目安（2026年11月確認）", state:"鬼怒川温泉駅から徒歩約3分 ・ 少人数の静かな宿", addr:"大原1388-3", rating:"4.66", reviews:"827", text:"鬼怒川温泉駅から徒歩約3分の、小規模な旅館です。露天風呂つきの客室や貸切風呂があり、食事は栃木の食材を使った会席。静かに過ごしたい人に向く一軒です。", theme:["roten","heya-shoku"], x:248, y:130, lat:36.82559, lng:139.71847},
+        {name:"鬼怒川温泉 あさや", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F8643%2F8643.html&link_type=text", badges:[], price:"¥23,100", note:"料金は最安プランの目安（2026年11月確認）", state:"明治21年創業 ・ 空中庭園露天風呂", addr:"滝813", rating:"4.62", reviews:"5,877", text:"明治21年創業の老舗ホテル。最上階の空中庭園露天風呂からは鬼怒川の渓谷が望めます。夕食は約100種のバイキングが看板で、貸切風呂のプランもあります。滝地区にあり、鬼怒川温泉駅からはバスやタクシーでの移動です。", theme:["kashikiri"], x:260, y:18, lat:36.83568, lng:139.71979},
+        {name:"鬼怒川温泉 静寂とまごころの宿 七重八重", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F7779%2F7779.html&link_type=text", badges:[], price:"¥22,000", note:"料金は最安プランの目安（2026年11月確認）", state:"1962年創業 ・ 渓谷を望む露天風呂", addr:"大原1060", rating:"4.60", reviews:"1,587", text:"鬼怒川温泉駅から徒歩約5分、川沿いに佇む全29室の宿です。渓谷を望む露天風呂と貸切風呂があり、四季折々の創意工夫を凝らした料理も評判です。", theme:["kashikiri","roten"], x:237, y:117, lat:36.82680, lng:139.71720},
+        {name:"鬼怒川温泉 鬼怒川グランドホテル 夢の季", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F31366%2F31366.html&link_type=text", badges:[], price:"¥14,900", note:"料金は最安プランの目安（2026年11月確認）", state:"鬼怒川温泉駅から徒歩約8分 ・ 9つの湯めぐり", addr:"大原1021", rating:"4.50", reviews:"809", text:"大浴場や露天風呂など、9つの湯をめぐれるのが看板のホテルです。貸切露天風呂「かく恋慕」もあります。鬼怒川温泉駅からは徒歩約8分です。", theme:["kashikiri","roten"], x:270, y:138, lat:36.82491, lng:139.72086},
+        {name:"鬼怒川温泉ホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F15835%2F15835.html&link_type=text", badges:[], price:"¥19,250", note:"料金は最安プランの目安（2026年11月確認）", state:"滝地区 ・ 石窯バイキングと家族風呂", addr:"滝545", rating:"4.49", reviews:"4,188", text:"滝地区に立つ全162室の大型ホテル。石窯料理のバイキングが看板で、貸切の家族風呂もあります。「ウェルカムベビーのお宿」の認定があり、小さな子連れにも向く一軒です。", theme:["kashikiri"], x:253, y:35, lat:36.83414, lng:139.71906},
+        {name:"鬼怒川温泉 日光きぬ川ホテル三日月", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F9086%2F9086.html&link_type=text", badges:[], price:"¥17,402", note:"料金は最安プランの目安（2026年11月確認）", state:"鬼怒川温泉駅から徒歩約3分 ・ 温泉プール「おぷーろ」", addr:"大原1400", rating:"4.48", reviews:"4,850", text:"鬼怒川温泉駅の正面に立つ大型ホテル。温泉とプールが一緒になった「おぷーろ」や、約100mの温泉回廊が名物です。家族連れに人気の一軒です。", theme:[], x:220, y:136, lat:36.82502, lng:139.71525},
+        {name:"鬼怒川金谷ホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F28440%2F28440.html&link_type=text", badges:[], price:"¥46,200", note:"料金は最安プランの目安（2026年11月確認）", state:"鬼怒川温泉駅から徒歩約3分 ・ 渓谷のクラシックホテル", addr:"大原1394", rating:"4.48", reviews:"394", text:"ジョン・カナヤゆかりの「渓谷の別荘」を掲げるクラシックホテル。露天風呂つきの客室があり、食事は部屋食の金谷スタイルです。鬼怒川温泉駅から徒歩約3分です。", theme:["roten","heya-shoku"], x:229, y:128, lat:36.82575, lng:139.71634},
+        {name:"鬼怒川温泉 若竹の庄", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F38518%2F38518.html&link_type=text", badges:[], price:"¥14,000", note:"料金は最安プランの目安（2026年11月確認）", state:"藤原地区の渓谷沿い ・ 全24室", addr:"藤原136", rating:"4.47", reviews:"606", text:"鬼怒川の渓谷沿いに佇む全24室の旅館。貸切風呂と部屋食があり、温泉街の中心からは少し離れた、静かな立地です。川のせせらぎと庭の景色に浸る滞在に向きます。", theme:["kashikiri","heya-shoku"], x:316, y:-90, lat:36.84532, lng:139.72610},
+        {name:"鬼怒川温泉 ホテルサンシャイン鬼怒川", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F5839%2F5839.html&link_type=text", badges:[], price:"¥8,250", note:"料金は最安プランの目安（2026年11月確認）", state:"全室渓谷側 ・ 鬼怒楯岩大吊橋のそば", addr:"大原1437-1", rating:"4.17", reviews:"2,201", text:"14階建て・全117室で、全室が鬼怒川の渓谷側のホテルです。展望風呂からは渓谷と温泉街が見渡せます。鬼怒楯岩大吊橋まで歩いてすぐです。", theme:["roten","kashikiri"], x:171, y:187, lat:36.82052, lng:139.70978},
+        {name:"大江戸温泉物語Premium 鬼怒川観光ホテル", rt:"https://hb.afl.rakuten.co.jp/hgc/59fe7f69.29c8fc8a.59fe7f6a.57c752a6/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2FHOTEL%2F67986%2F67986.html&link_type=text", badges:[], price:"¥15,300", note:"料金は最安プランの目安（2026年11月確認）", state:"鬼怒川温泉駅から徒歩約15分 ・ 8種の湯と貸切風呂", addr:"滝359-2", rating:"4.03", reviews:"3,640", text:"8種類の湯船と2つの貸切風呂を備えた大型ホテル。バイキングの夕食と合わせて、湯めぐりをたっぷり楽しめます。滝地区にあり、鬼怒川温泉駅からは徒歩約15分です。", theme:["kashikiri"], x:240, y:87, lat:36.82947, lng:139.71752}
+      ],
+      ramens:[
+        {name:"ラーメン すーさん", signature:"チャーシューメン", walk:"鬼怒川温泉駅から徒歩約3分", late:"21:00まで（昼11:00〜14:30／夜18:00〜・水曜定休）", addr:"大原1395-101", text:"昔ながらのあっさり醤油ラーメンの店です。看板はチャーシューメンで、自家製の手作り餃子も評判。夜の部は21時までなので、夕食の前か、早めの〆の一杯に向きます。", night:false, x:228, y:134, lat:36.82524, lng:139.71615},
+        {name:"お食事処 一富士", signature:"みそラーメン", walk:"滝地区 ・ 鬼怒川温泉あさやから徒歩約1分", late:"24:00まで（L.O.23:30・木曜と第1・第3水曜定休）", addr:"滝804", text:"滝地区の食事処。醤油・みそ・タンメン・チャーシューメンなど、ラーメンのメニューが一通り揃い、看板はみそラーメンです。夜は24時まで開くので、滝地区の宿に泊まった日の湯上がりの〆に歩けます。", night:true, x:257, y:20, lat:36.83550, lng:139.71940}
+      ]
     }
   ];
 
@@ -2270,6 +2324,7 @@
     "北海道":{id:"noboribetsu", label:"登別温泉"},
     "宮城県":{id:"naruko", label:"鳴子温泉"},
     "山形県":{id:"ginzan", label:"銀山温泉"},
+    "栃木県":{id:"kinugawa", label:"鬼怒川温泉"},
     "島根県":{id:"tamatsukuri", label:"玉造温泉"},
     "沖縄県":{id:"naha", label:"那覇・国際通り"},
     "神奈川県":{id:"hakone", label:"箱根湯本"},
@@ -2619,7 +2674,7 @@
   var PICKER_GROUPS = [
     { label:"北海道", ids:["noboribetsu"] },
     { label:"東北", ids:["naruko","ginzan"] },
-    { label:"関東", ids:["kusatsu","hakone","ikaho"] },
+    { label:"関東", ids:["kusatsu","hakone","ikaho","kinugawa"] },
     { label:"中部", ids:["yuzawa","nozawa","gero","atami"] },
     { label:"北陸", ids:["yamashiro","wakura"] },
     { label:"近畿", ids:["kinosaki","arima"] },
@@ -2671,7 +2726,7 @@
   }
 
   /* --- deep links: each area guide has its own URL hash (#kusatsu,
-     #hakone, #dogo, #yamashiro, #wakura, #yuzawa, #nozawa, #ikaho, #kinosaki, #gero, #beppu, #noboribetsu, #naruko, #tamatsukuri, #naha, #arima, #yufuin, #kurokawa, #ginzan, #atami) so posts can
+     #hakone, #dogo, #yamashiro, #wakura, #yuzawa, #nozawa, #ikaho, #kinosaki, #gero, #beppu, #noboribetsu, #naruko, #tamatsukuri, #naha, #arima, #yufuin, #kurokawa, #ginzan, #atami, #kinugawa) so posts can
      link straight to one area. Opening an area rewrites the hash with
      replaceState (no scroll, no extra history entry); the timeout lets a
      clicked <a href="#guide"> finish its own jump first. Section anchors
