@@ -245,6 +245,19 @@
     margin:14px 0 0;font-size:13.5px;font-weight:700;
     background:var(--surface-2);border:2px solid var(--line);border-radius:6px;padding:10px 14px;
   }
+  /* map legend: what the pink pins mean + regions are tappable */
+  .map-legend{
+    display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;
+    margin:10px auto 0;max-width:470px;
+    font-size:12.5px;font-weight:700;line-height:1.5;
+    background:var(--surface-2);border:2px solid var(--line);border-radius:6px;padding:8px 12px;
+  }
+  @media(min-width:880px){.map-legend{max-width:none;}}
+  .legend-pin{
+    width:11px;height:11px;flex:none;border-radius:50%;
+    background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1.5px var(--ink);
+  }
+  .legend-sep{width:2px;height:14px;flex:none;background:var(--line);border-radius:1px;}
   .map-side-title{font-size:16.5px;font-weight:800;margin:2px 0 10px;}
   .region-list{display:grid;gap:7px;}
   .region-row{
@@ -285,6 +298,13 @@
   .steps li b{color:var(--pink);margin-right:7px;font-size:12px;letter-spacing:.04em;}
   .steps li.steps-arrow{background:none;border:none;padding:0;color:var(--ink-soft);}
   .steps li.steps-arrow svg{width:16px;height:16px;display:block;}
+  /* step progress state: current step stands out in pink; finished steps
+     turn mint with a small check and step back visually */
+  .steps li.step-now{background:var(--pink-soft);border-color:var(--pink);box-shadow:0 2px 0 var(--pink);}
+  .steps li.step-done{background:var(--mint-soft);border-color:var(--mint);color:var(--ink-soft);}
+  .steps li.step-done b{color:var(--mint);}
+  .steps li .step-check{display:none;width:15px;height:15px;vertical-align:-2px;margin-left:5px;color:var(--mint);}
+  .steps li.step-done .step-check{display:inline-block;}
   .step3-title{font-size:18px;font-weight:800;margin:22px 0 4px;}
   .step3-sub{font-size:13.5px;font-weight:500;color:var(--ink-soft);margin:0 0 14px;}
 
@@ -785,6 +805,9 @@
       <circle cx="24" cy="24" r="6" fill="currentColor"/>
       <path d="M24 5 L24 12 M24 36 L24 43 M5 24 L12 24 M36 24 L43 24 M10.5 10.5 L15.5 15.5 M32.5 32.5 L37.5 37.5 M37.5 10.5 L32.5 15.5 M15.5 32.5 L10.5 37.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
     </symbol>
+    <symbol id="i-check" viewBox="0 0 48 48">
+      <path d="M9 26 L20 37 L39 12" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
     <symbol id="i-x" viewBox="0 0 48 48">
       <path d="M13 13 L35 35 M35 13 L13 35" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
     </symbol>
@@ -930,11 +953,11 @@
     <p class="sec-sub">日本地図から、次の温泉旅行先を探してみましょう。地方 → 都道府県 → 温泉地の順に選んでください。</p>
     <div class="map-card">
       <ol class="steps" aria-label="温泉地の探し方">
-        <li><b>STEP 1</b>地方を選ぶ</li>
+        <li data-step="1" class="step-now" aria-current="step"><b>STEP 1</b>地方を選ぶ<svg class="step-check" aria-hidden="true"><use href="#i-check"/></svg></li>
         <li class="steps-arrow" aria-hidden="true"><svg><use href="#i-arrow-r"/></svg></li>
-        <li><b>STEP 2</b>都道府県を選ぶ</li>
+        <li data-step="2"><b>STEP 2</b>都道府県を選ぶ<svg class="step-check" aria-hidden="true"><use href="#i-check"/></svg></li>
         <li class="steps-arrow" aria-hidden="true"><svg><use href="#i-arrow-r"/></svg></li>
-        <li><b>STEP 3</b>温泉地を選ぶ</li>
+        <li data-step="3"><b>STEP 3</b>温泉地を選ぶ<svg class="step-check" aria-hidden="true"><use href="#i-check"/></svg></li>
       </ol>
       <div class="map-layout">
       <div class="map-fig">
@@ -1014,6 +1037,7 @@
           <circle class="mpin-halo" cx="297" cy="168" r="5"/><circle class="mpin" cx="297" cy="168" r="3.4"/>
         </g>
       </svg>
+      <p class="map-legend"><span class="legend-pin" aria-hidden="true"></span>公開中の温泉地（おおよその位置）<span class="legend-sep" aria-hidden="true"></span>地方はタップで選べます</p>
       </div>
       <div class="map-side">
         <h3 class="map-side-title">STEP 1｜地方を選ぶ（一覧からも選べます）</h3>
@@ -1033,10 +1057,10 @@
              Rendered by JS from AREAS (published areas only). -->
         <div class="region-panel" id="regionPanel">
           <div class="rp-head">
-            <h3 class="rp-title" id="regionPanelTitle">関東甲信の温泉地</h3>
-            <span class="rp-count" id="regionPanelCount"></span>
+            <h3 class="rp-title" id="regionPanelTitle">今のおすすめ温泉地</h3>
+            <span class="rp-count" id="regionPanelCount">厳選 5エリア</span>
           </div>
-          <p class="rp-sub">地図のピンクのピンは公開中の温泉地の目安です。地方を切り替えるとカードも切り替わります。カードをタップするとガイドが開きます。</p>
+          <p class="rp-sub">まずは季節のおすすめから。地図や一覧で地方を選ぶと、その地方の温泉地のカードに切り替わります。カードをタップするとガイドが開きます。</p>
           <div class="rp-grid" id="regionPanelGrid"></div>
         </div>
       </div>
@@ -2545,6 +2569,7 @@
     if(pick){
       var aid = pick.getAttribute("data-area-pick");
       var alabel = pick.getAttribute("data-area-label");
+      setStepState(3);
       closePrefPop();
       selectArea(aid);
       mapNote.textContent = alabel+"ガイドを開きました。下のガイドで見られます。";
@@ -2556,6 +2581,7 @@
     var pref = b.getAttribute("data-pref");
     var areas = prefAreas(pref);
     if(areas && areas.length > 1){
+      setStepState(3);
       prefPopTitle.textContent = pref+"の温泉地";
       prefPopNote.textContent = pref+"では"+areas.length+"つの温泉地を公開中です。行きたい温泉地を選んでください。";
       prefPopList.innerHTML = areas.map(function(a){
@@ -2566,6 +2592,7 @@
       return;
     }
     if(areas){
+      setStepState(3);
       closePrefPop();
       selectArea(areas[0].id);
       mapNote.textContent = pref+"の"+areas[0].label+"ガイドを開きました。下のガイドで見られます。";
@@ -2603,20 +2630,42 @@
   var regionPanelGrid = document.getElementById("regionPanelGrid");
   var regionPanelTitle = document.getElementById("regionPanelTitle");
   var regionPanelCount = document.getElementById("regionPanelCount");
+  function rpCardHTML(a){
+    return '<button class="ap-card rp-card" type="button" data-area="'+a.id+'">'
+      + '<img src="'+a.img+'" alt="'+esc(a.imgAlt)+'" loading="lazy" />'
+      + '<span class="ap-info"><span class="ap-name">'+esc(a.name)+'</span>'
+      + '<span class="ap-pref">'+esc(a.pref)+'</span>'
+      + '<span class="rp-desc">'+esc(a.desc)+'</span>'
+      + '<span class="ap-counts">宿'+a.innCount+'軒 ・ '+foodWord(a)+a.ramenCount+'軒</span>'
+      + '<span class="rp-go">この温泉地を見る'+icon("i-arrow-r")+'</span></span>'
+      + '</button>';
+  }
   function renderRegionPanel(region){
     var list = AREAS.filter(function(a){ return a.region === region; });
     regionPanelTitle.textContent = REGION_NAMES[region]+"の温泉地";
     regionPanelCount.textContent = "公開中 "+list.length+"エリア";
-    regionPanelGrid.innerHTML = list.map(function(a){
-      return '<button class="ap-card rp-card" type="button" data-area="'+a.id+'">'
-        + '<img src="'+a.img+'" alt="'+esc(a.imgAlt)+'" loading="lazy" />'
-        + '<span class="ap-info"><span class="ap-name">'+esc(a.name)+'</span>'
-        + '<span class="ap-pref">'+esc(a.pref)+'</span>'
-        + '<span class="rp-desc">'+esc(a.desc)+'</span>'
-        + '<span class="ap-counts">宿'+a.innCount+'軒 ・ '+foodWord(a)+a.ramenCount+'軒</span>'
-        + '<span class="rp-go">この温泉地を見る'+icon("i-arrow-r")+'</span></span>'
-        + '</button>';
-    }).join("");
+    regionPanelGrid.innerHTML = list.map(rpCardHTML).join("");
+  }
+  /* initial panel: the season's 5 featured areas (same picks as the feature
+     carousel), shown while no region is selected yet */
+  var RECOMMENDED_IDS = ["kinosaki", "yamashiro", "noboribetsu", "kusatsu", "dogo"];
+  function renderRecommendedPanel(){
+    var list = RECOMMENDED_IDS.map(function(id){
+      return AREAS.filter(function(a){ return a.id === id; })[0];
+    }).filter(Boolean);
+    regionPanelTitle.textContent = "今のおすすめ温泉地";
+    regionPanelCount.textContent = "厳選 "+list.length+"エリア";
+    regionPanelGrid.innerHTML = list.map(rpCardHTML).join("");
+  }
+  /* step progress: mark which of STEP 1/2/3 the visitor is on */
+  function setStepState(current){
+    document.querySelectorAll(".steps li[data-step]").forEach(function(li){
+      var s = parseInt(li.getAttribute("data-step"), 10);
+      li.classList.toggle("step-now", s === current);
+      li.classList.toggle("step-done", s < current);
+      if(s === current) li.setAttribute("aria-current", "step");
+      else li.removeAttribute("aria-current");
+    });
   }
   function setRegion(region){
     document.querySelectorAll(".japan-map .region").forEach(function(g){
@@ -2633,14 +2682,16 @@
   }
   function chooseRegion(region, trigger){
     setRegion(region);
+    setStepState(2);
     openPrefPop(region, trigger);
   }
   regionPanelGrid.addEventListener("click", function(e){
     var b = e.target.closest("[data-area]");
     if(b){ selectArea(b.getAttribute("data-area")); scrollToGuidePanel(); }
   });
-  /* initial state: Kanto selected, its cards visible before any tap */
-  setRegion("kanto");
+  /* initial state: no region selected; the panel shows the season's
+     recommended areas until the visitor picks a region */
+  renderRecommendedPanel();
 
   /* --- area cards --- */
   var areaGrid = document.getElementById("areaGrid");
