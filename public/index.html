@@ -258,6 +258,10 @@
     background:var(--pink);border:2px solid #fff;box-shadow:0 0 0 1.5px var(--ink);
   }
   .legend-sep{width:2px;height:14px;flex:none;background:var(--line);border-radius:1px;}
+  /* selected-region readout next to the legend: shown only while a
+     region is selected (toggled from setRegion) */
+  .map-legend [hidden]{display:none;}
+  .legend-sel{font-weight:800;color:var(--pink);}
   .map-side-title{font-size:16.5px;font-weight:800;margin:2px 0 10px;}
   .region-list{display:grid;gap:7px;}
   .region-row{
@@ -274,6 +278,22 @@
   .region-row.live .r-status{border-color:var(--mint);color:var(--mint);background:var(--surface);}
   .region-row.sel{border-color:var(--ink);background:var(--sun-soft);box-shadow:0 3px 0 var(--ink);}
   .region-row.live.sel .r-status{border-color:var(--ink);color:#fff;background:var(--pink);}
+
+  /* recommended shortcut: standalone block between the section heading
+     and the map card, independent of the region selection */
+  .reco-panel{
+    background:var(--surface);border:3px solid var(--ink);border-radius:10px;box-shadow:var(--shadow);
+    padding:16px 18px;margin-bottom:18px;
+  }
+  .reco-panel .rp-head{margin-bottom:12px;}
+  @media(min-width:760px){.reco-panel .rp-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(min-width:1100px){.reco-panel .rp-grid{grid-template-columns:repeat(4,1fr);}}
+  /* region panel placeholder: guidance shown until a region is picked */
+  .rp-empty{
+    font-size:13.5px;font-weight:700;color:var(--ink-soft);line-height:1.7;
+    background:var(--bg);border:2px dashed var(--line);border-radius:6px;padding:14px 16px;margin:0;
+  }
+  .rp-empty[hidden]{display:none;}
 
   /* region panel: illustration cards linked to the map selection */
   .region-panel{margin-top:22px;border-top:2px dashed var(--line);padding-top:16px;}
@@ -296,8 +316,8 @@
   .steps{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px;padding:0;}
   .steps li{font-size:13.5px;font-weight:800;background:var(--surface-2);border:2px solid var(--ink);border-radius:6px;padding:8px 12px;}
   .steps li b{color:var(--pink);margin-right:7px;font-size:12px;letter-spacing:.04em;}
-  .steps li.steps-arrow{background:none;border:none;padding:0;color:var(--ink-soft);}
-  .steps li.steps-arrow svg{width:16px;height:16px;display:block;}
+  .steps .steps-arrow{color:var(--ink-soft);display:flex;align-items:center;}
+  .steps .steps-arrow svg{width:16px;height:16px;display:block;}
   /* step progress state: current step stands out in pink; finished steps
      turn mint with a small check and step back visually */
   .steps li.step-now{background:var(--pink-soft);border-color:var(--pink);box-shadow:0 2px 0 var(--pink);}
@@ -1018,12 +1038,21 @@
       <h2>温泉地から探す</h2>
     </div>
     <p class="sec-sub">日本地図から、次の温泉旅行先を探してみましょう。地方 → 都道府県 → 温泉地の順に選んでください。</p>
+    <!-- RECOMMENDED SHORTCUT: the season's 5 featured areas, independent of
+         the map / region selection. Rendered by JS from AREAS. -->
+    <div class="reco-panel">
+      <div class="rp-head">
+        <h3 class="rp-title">今のおすすめ温泉地</h3>
+        <span class="rp-count" id="recoCount">厳選 5エリア</span>
+      </div>
+      <div class="rp-grid" id="recoGrid"></div>
+    </div>
     <div class="map-card">
       <ol class="steps" aria-label="温泉地の探し方">
         <li data-step="1" class="step-now" aria-current="step"><b>STEP 1</b>地方を選ぶ<svg class="step-check" aria-hidden="true"><use href="#i-check"/></svg></li>
-        <li class="steps-arrow" aria-hidden="true"><svg><use href="#i-arrow-r"/></svg></li>
+        <span class="steps-arrow" aria-hidden="true"><svg><use href="#i-arrow-r"/></svg></span>
         <li data-step="2"><b>STEP 2</b>都道府県を選ぶ<svg class="step-check" aria-hidden="true"><use href="#i-check"/></svg></li>
-        <li class="steps-arrow" aria-hidden="true"><svg><use href="#i-arrow-r"/></svg></li>
+        <span class="steps-arrow" aria-hidden="true"><svg><use href="#i-arrow-r"/></svg></span>
         <li data-step="3"><b>STEP 3</b>温泉地を選ぶ<svg class="step-check" aria-hidden="true"><use href="#i-check"/></svg></li>
       </ol>
       <div class="map-layout">
@@ -1104,7 +1133,7 @@
           <circle class="mpin-halo" cx="297" cy="168" r="5"/><circle class="mpin" cx="297" cy="168" r="3.4"/>
         </g>
       </svg>
-      <p class="map-legend"><span class="legend-pin" aria-hidden="true"></span>公開中の温泉地（おおよその位置）<span class="legend-sep" aria-hidden="true"></span>地方はタップで選べます</p>
+      <p class="map-legend"><span class="legend-pin" aria-hidden="true"></span>公開中の温泉地（おおよその位置）<span class="legend-sep" aria-hidden="true"></span>地方はタップで選べます<span class="legend-sep" id="mapSelSep" aria-hidden="true" hidden></span><span class="legend-sel" id="mapSelLabel" hidden>選択中：<span id="mapSelName"></span></span></p>
       </div>
       <div class="map-side">
         <h3 class="map-side-title">STEP 1｜地方を選ぶ（一覧からも選べます）</h3>
@@ -1124,10 +1153,11 @@
              Rendered by JS from AREAS (published areas only). -->
         <div class="region-panel" id="regionPanel">
           <div class="rp-head">
-            <h3 class="rp-title" id="regionPanelTitle">今のおすすめ温泉地</h3>
-            <span class="rp-count" id="regionPanelCount">厳選 5エリア</span>
+            <h3 class="rp-title" id="regionPanelTitle">温泉地</h3>
+            <span class="rp-count" id="regionPanelCount" hidden></span>
           </div>
           <p class="rp-sub">まずは季節のおすすめから。地図や一覧で地方を選ぶと、その地方の温泉地のカードに切り替わります。カードをタップするとガイドが開きます。</p>
+          <p class="rp-empty" id="regionPanelEmpty">地方を選ぶと、その地方の温泉地がここに表示されます。</p>
           <div class="rp-grid" id="regionPanelGrid"></div>
         </div>
       </div>
@@ -2740,6 +2770,12 @@
   var regionPanelGrid = document.getElementById("regionPanelGrid");
   var regionPanelTitle = document.getElementById("regionPanelTitle");
   var regionPanelCount = document.getElementById("regionPanelCount");
+  var regionPanelEmpty = document.getElementById("regionPanelEmpty");
+  var recoGrid = document.getElementById("recoGrid");
+  var recoCount = document.getElementById("recoCount");
+  var mapSelLabel = document.getElementById("mapSelLabel");
+  var mapSelSep = document.getElementById("mapSelSep");
+  var mapSelName = document.getElementById("mapSelName");
   function rpCardHTML(a){
     return '<button class="ap-card rp-card" type="button" data-area="'+a.id+'">'
       + '<img src="'+a.img+'" alt="'+esc(a.imgAlt)+'" loading="lazy" />'
@@ -2754,18 +2790,20 @@
     var list = AREAS.filter(function(a){ return a.region === region; });
     regionPanelTitle.textContent = REGION_NAMES[region]+"の温泉地";
     regionPanelCount.textContent = "公開中 "+list.length+"エリア";
+    regionPanelCount.hidden = false;
+    regionPanelEmpty.hidden = true;
     regionPanelGrid.innerHTML = list.map(rpCardHTML).join("");
   }
-  /* initial panel: the season's 5 featured areas (same picks as the feature
-     carousel), shown while no region is selected yet */
+  /* shortcut block above the map card: the season's 5 featured areas
+     (same picks as the feature carousel). It sits outside the STEP flow
+     and never changes with the region selection. */
   var RECOMMENDED_IDS = ["kinosaki", "yamashiro", "noboribetsu", "kusatsu", "dogo"];
-  function renderRecommendedPanel(){
+  function renderRecommended(){
     var list = RECOMMENDED_IDS.map(function(id){
       return AREAS.filter(function(a){ return a.id === id; })[0];
     }).filter(Boolean);
-    regionPanelTitle.textContent = "今のおすすめ温泉地";
-    regionPanelCount.textContent = "厳選 "+list.length+"エリア";
-    regionPanelGrid.innerHTML = list.map(rpCardHTML).join("");
+    recoCount.textContent = "厳選 "+list.length+"エリア";
+    recoGrid.innerHTML = list.map(rpCardHTML).join("");
   }
   /* step progress: mark which of STEP 1/2/3 the visitor is on */
   function setStepState(current){
@@ -2788,6 +2826,9 @@
       b.classList.toggle("sel", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
     });
+    mapSelName.textContent = REGION_NAMES[region];
+    mapSelLabel.hidden = false;
+    mapSelSep.hidden = false;
     renderRegionPanel(region);
   }
   function chooseRegion(region, trigger){
@@ -2799,9 +2840,14 @@
     var b = e.target.closest("[data-area]");
     if(b){ selectArea(b.getAttribute("data-area")); scrollToGuidePanel(); }
   });
-  /* initial state: no region selected; the panel shows the season's
-     recommended areas until the visitor picks a region */
-  renderRecommendedPanel();
+  recoGrid.addEventListener("click", function(e){
+    var b = e.target.closest("[data-area]");
+    if(b){ selectArea(b.getAttribute("data-area")); scrollToGuidePanel(); }
+  });
+  /* initial state: no region selected. The shortcut block shows the
+     season's recommended areas; the region panel keeps its guidance
+     line until the visitor picks a region. */
+  renderRecommended();
 
   /* --- area cards --- */
   var areaGrid = document.getElementById("areaGrid");
