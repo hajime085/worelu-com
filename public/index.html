@@ -453,12 +453,14 @@
   h3.sub.c-sky::before{background:var(--sky);}
   h3.sub.c-coral::before{background:var(--coral);}
 
-  /* ---------- guide vertical index tabs (areas with travel goods) ----------
+  /* ---------- guide index tabs (areas with travel goods) ----------
      File-spine style tabs on the left edge of a bordered block switch the
-     guide between 宿 / 一杯 / グッズ / 見どころ. Only areas that carry a
-     GOODS entry render this block; every other guide keeps the plain
-     stacked layout. The map, model course and access sections always sit
-     below the tab block, outside it, so the map never initialises hidden. */
+     guide between 宿 / 一杯 / グッズ / 見どころ; at phone widths the same
+     tabs become a horizontal bar on top of the block instead (see the
+     max-width:640px rules below). Only areas that carry a GOODS entry
+     render this block; every other guide keeps the plain stacked layout.
+     The map, model course and access sections always sit below the tab
+     block, outside it, so the map never initialises hidden. */
   .gtabs{display:flex;align-items:flex-start;margin-top:22px;}
   .gtab-rail{display:flex;flex-direction:column;gap:6px;flex:none;padding-top:18px;}
   .gtab{
@@ -478,9 +480,22 @@
     padding:16px 14px 18px;
   }
   @media(min-width:760px){.gtab-panels{padding:20px 20px 22px;}}
-  @media(max-width:560px){
-    .gtab{font-size:12.5px;padding:12px 5px;min-height:70px;letter-spacing:.1em;}
-    .gtab-panels{padding:14px 10px 16px;}
+  /* Phones (<=640px): the file-spine rail becomes a horizontal tab bar at
+     the top of the tab block, in normal flow, so no tab can slide under
+     the panel or clip its label; the four tabs share one row equally and
+     keep a finger-sized height. The panels also drop their own border,
+     shadow and side padding here, leaving the guide panel's frame as the
+     only one, so the text column runs wider than the nested layout did. */
+  @media(max-width:640px){
+    .gtabs{flex-direction:column;align-items:stretch;}
+    .gtab-rail{flex-direction:row;gap:6px;padding-top:0;}
+    .gtab{
+      writing-mode:horizontal-tb;text-orientation:mixed;
+      flex:1 1 0;min-width:0;min-height:48px;
+      padding:10px 2px;font-size:13px;letter-spacing:.03em;
+      border:2.5px solid var(--ink);border-radius:8px;
+    }
+    .gtab-panels{border:none;border-radius:0;box-shadow:none;background:transparent;padding:16px 0 2px;}
   }
   .gpanel[hidden]{display:none;}
   .gpanel > h3.sub{margin-top:2px;}
